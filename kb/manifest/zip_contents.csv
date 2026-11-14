@@ -1,0 +1,365 @@
+accession,category,zip,members,top_ext,zip_mb,raw_mb,examples
+PSI-10,metadata,PSI-10_metadata_PSI-10-ISA.zip,2,txt:2,0.0,0.0,i_Investigation.txt | s_PSI-10.txt
+PSI-10,Raw Data,PSI-10_Raw Data_19189D1_ACME.zip,17,hobj:16 mdipsug:1,26.5,44.7,20190708_164436.955_ACME_19189D1_00000.hobj | 20190708_164437.955_ACME_19189D1_00001.hobj | 20190708_164438.955_ACME_19189D1_00002.hobj
+PSI-10,Raw Data,PSI-10_Raw Data_19196N2_ACME.zip,79,hobj:77 mdipsug:1 next:1,81.6,215.0,20190715_231826.238_ACME_19196N2_00000.hobj | 20190715_231827.238_ACME_19196N2_00001.hobj | 20190715_231828.238_ACME_19196N2_00002.hobj
+PSI-10,Raw Data,PSI-10_Raw Data_22027B2_ACME.zip,18,hobj:17 mdipsug:1,29.9,47.5,20220127_171408.826_ACME_22027B2_00000.hobj | 20220127_171409.826_ACME_22027B2_00001.hobj | 20220127_171410.826_ACME_22027B2_00002.hobj
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_F1C1_BIT_jpeg.zip,600,jpeg:600,43.2,45.7,F1C1-1496607666122.jpeg | F1C1-1496607666156.jpeg | F1C1-1496607666189.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_F1C1_Distortion Grid_1200x920.zip,2,jpg:2,0.2,0.2,SAFFIRE-III_F1C1_DistortionGrid-30mmBlock_1200x920_color.jpg | SAFFIRE-III_F1C1_DistortionGrid-30mmBlock_1200x920_mono.jpg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_F1C1_Distortion Grid_1360x1024.zip,2,jpg:2,0.1,0.1,SAFFIRE-III_F1C1_1360x1024_color.jpg | SAFFIRE-III_F1C1_1360x1024_mono.jpg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_F1C1_F1_jpeg.zip,809,jpeg:809,54.9,56.6,F1C1-1496610544078.jpeg | F1C1-1496610544112.jpeg | F1C1-1496610544142.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_F1C1_JPEG_Mapped.zip,828,jpeg:809 jpg:9 tif:9 m:1,88.2,111.9,CheckSaffireImages_MappedImages_Linux.m | Mapped_F1C1-__dt.jpg | Mapped_F1C1-__dt.tif
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_F1C2_BIT_jpeg.zip,600,jpeg:600,50.3,52.3,F1C2-1496607691137.jpeg | F1C2-1496607691171.jpeg | F1C2-1496607691219.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_F1C2_Distortion Grid_1280x920.zip,2,jpg:2,0.2,0.2,SAFFIRE-III_F1C2_1280x920_color.jpg | SAFFIRE-III_F1C2_1280x920_mono.jpg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_F1C2_Distortion Grid_1360x1024.zip,2,jpg:2,0.1,0.1,SAFFIRE-III_F1C2_1360x1024_color.jpg | SAFFIRE-III_F1C2_1360x1024_mono.jpg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_F1C2_F1_jpeg.zip,810,jpeg:810,65.6,67.1,F1C2-1496610544078.jpeg | F1C2-1496610544111.jpeg | F1C2-1496610544142.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_F2C1_F2_Jpeg.zip,809,jpeg:809,39.8,41.8,F2C1-1496611591243.jpeg | F2C1-1496611591276.jpeg | F2C1-1496611591309.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_F2C1_JPEG_Mapped.zip,828,jpeg:809 jpg:9 tif:9 m:1,65.7,87.5,CheckSaffireImages_MappedImages_Linux.m | Mapped_F2C1-__dt.jpg | Mapped_F2C1-__dt.tif
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_F2C1_RAW2TIFF.zip,1,tif:1,1.3,3.3,F2C1-1496611592009.tif
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_F2C1_Raw2TIFF_Mapped.zip,1,tif:1,1.9,4.8,Mapped_F2C1-1496611592009.tif
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_F2C2_F2_jpeg.zip,810,jpeg:810,44.8,46.6,F2C2-1496611591242.jpeg | F2C2-1496611591276.jpeg | F2C2-1496611591312.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_F2C2_JPEG_Mapped.zip,829,jpeg:810 jpg:9 tif:9 m:1,80.4,102.8,CheckSaffireImages_MappedImages_Linux.m | Mapped_F2C2-__dt.jpg | Mapped_F2C2-__dt.tif
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_F2C2_RAW2TIFF.zip,1,tif:1,1.5,3.5,F2C2-1496611592009.tif
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_F2C2_Raw2TIFF_Mapped.zip,1,tif:1,1.2,5.2,Mapped_F2C2-1496611592009.tif
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_S1C1_BIT_jpeg.zip,300,jpeg:300,4.0,9.1,S1C1-1496607712232.jpeg | S1C1-1496607712266.jpeg | S1C1-1496607712313.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_S1C2_BIT_jpeg.zip,300,jpeg:300,3.8,9.9,S1C2-1496607727263.jpeg | S1C2-1496607727295.jpeg | S1C2-1496607727342.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_S2C1_JPEG_Mapped.zip,3155,jpeg:3136 jpg:9 tif:9 m:1,75.6,163.5,CheckSaffireImages_MappedImages_Linux.m | Mapped_S2C1-__dt.jpg | Mapped_S2C1-__dt.tif
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_S2C1_S2_jpeg.zip,3136,jpeg:3136,44.3,84.3,S2C1-1496610671121.jpeg | S2C1-1496610671155.jpeg | S2C1-1496610671202.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE-III_S2C2_S2_jpeg.zip,3139,jpeg:3139,63.8,102.1,S2C2-1496610671122.jpeg | S2C2-1496610671155.jpeg | S2C2-1496610671202.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE_III_S1C1_JPEG_Mapped_part4.zip,4042,jpeg:4042,82.3,172.4,Mapped_S1C1-1496611366427.jpeg | Mapped_S1C1-1496611366460.jpeg | Mapped_S1C1-1496611366493.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE_III_S1C1_jpeg_part1.zip,5000,jpeg:5000,85.7,142.8,S1C1-1496610866187.jpeg | S1C1-1496610866220.jpeg | S1C1-1496610866254.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE_III_S1C1_jpeg_part2.zip,5000,jpeg:5000,69.5,131.2,S1C1-1496611033372.jpeg | S1C1-1496611033405.jpeg | S1C1-1496611033438.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE_III_S1C1_jpeg_part3.zip,5000,jpeg:5000,63.7,127.4,S1C1-1496611200074.jpeg | S1C1-1496611200108.jpeg | S1C1-1496611200141.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE_III_S1C1_jpeg_part4.zip,4033,jpeg:4033,51.1,102.7,S1C1-1496611366732.jpeg | S1C1-1496611366760.jpeg | S1C1-1496611366793.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE_III_S1C2_JPEG_Mapped_Part4.zip,4027,jpeg:4027,95.7,194.9,Mapped_S1C2-1496611366928.jpeg | Mapped_S1C2-1496611366962.jpeg | Mapped_S1C2-1496611366995.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE_III_S1C2_jpeg_part1.zip,5000,jpeg:5000,81.6,149.6,S1C2-1496610866187.jpeg | S1C2-1496610866220.jpeg | S1C2-1496610866254.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE_III_S1C2_jpeg_part2.zip,5000,jpeg:5000,87.4,151.7,S1C2-1496611003342.jpeg | S1C2-1496611003376.jpeg | S1C2-1496611003409.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE_III_S1C2_jpeg_part3.zip,5000,jpeg:5000,74.2,141.8,S1C2-1496611200575.jpeg | S1C2-1496611200608.jpeg | S1C2-1496611200641.jpeg
+PSI-100,Raw Data,PSI-100_Raw Data_SAFFIRE_III_S1C2_jpeg_part4.zip,4018,jpeg:4018,56.9,112.3,S1C2-1496611367228.jpeg | S1C2-1496611367261.jpeg | S1C2-1496611367295.jpeg
+PSI-101,Engineering Documents,PSI-101_Engineering Documents_SAME-R Flight Ops photos.zip,41,jpg:30 jpe:7 ds_store:2 db:2,41.2,42.2,SAME-R Flight Ops photos/.DS_Store | __MACOSX/SAME-R Flight Ops photos/._.DS_Store | SAME-R Flight Ops photos/ISS015E21820.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_# 52 - 5P Pyrell.zip,7,tif:7,2.4,7.8,52-5p_2 +1x+10y 1350.tif | 52-5p_3 +6x+10y 1350.tif | 52-5p_4 +8x-1y 1350.tif
+PSI-101,Raw Data,PSI-101_Raw Data_# 53 - 65 Silicone.zip,10,tif:10,23.0,44.4,53 6S_1 +1x-8y 1350x.tif | 53 6S_10 +1x+11y 24.5k.tif | 53 6S_2 +1x+1y 1350x.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#100 - 53T Teflon.zip,4,tif:4,8.2,17.8,100 - 53T_1 +1x-5y 1350.tif | 100 - 53T_2 +1x-7y 1350x.tif | 100 - 53T_3 +1x-7y 4400x.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#101 Postage 54K Kapton.zip,4,tif:4,9.2,17.8,101 post 54K_1 +1x-6y 1350.tif | 101 post 54K_2 +2x-8y 1350.tif | 101 post 54K_3 +1x-8y 4400.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#101 Preage 54K Kapton.zip,10,tif:10,23.0,44.4,101 pre 54K_1 195x.tif | 101 pre 54K_10 -5x-4y 10k.tif | 101 pre 54K_2 +1x-4y 1350x.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#105 postage 58T Teflon.zip,8,jpg:8,3.0,3.3,105 post 58T_1 +1x-5y 1350.jpg | 105 post 58T_2 +5x-5y 1350.jpg | 105 post 58T_3 -5x-4y 1350.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#106 - 59L Lampwick.zip,12,tif:12,26.1,53.3,106 59L_1 195.tif | 106 59L_10 +3x-6y 10k.tif | 106 59L_11 +1x-4y 10k.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#107 Postage 60P Pyrell.zip,10,tif:10,20.6,44.4,107 post 60P_1 195x.tif | 107 post 60P_10 +5x-4y 10k.tif | 107 post 60P_2 +1x+1y 1350x.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#107 Preage 60P Pyrell.zip,10,tif:10,22.6,44.4,107 pre 60P_1 195X.tif | 107 pre 60P_10 +1x-5y 4400x.tif | 107 pre 60P_2 +1x-4y 1350x.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#108 Preage 61K Kapton.zip,12,tif:12,26.8,53.3,108 pre 61K_1 +1x-7y 1350x.tif | 108 pre 61K_10 +5x-7y 10k.tif | 108 pre 61K_11 -1x-7y 10k.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#49 - 2L - Lampwick.zip,28,tif:28,13.5,31.1,L13 HR La.tif | L13 HR Ma.tif | L13-1 +1x-1y 1350.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#50 - 3T - Teflon.zip,5,tif:5,2.9,5.6,3T-T01_2 +4x+8y 1350.tif | 3T-T01_3a +1x+8y 10k.tif | 3T-T01_4b +1x+8y 10k.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#54 - 7L - Lampwick.zip,24,tif:24,52.4,106.6,54-7L_1 +1x+1y 1350.tif | 54-7L_10 +3x+2y 1350.tif | 54-7L_11 +3x+3y 1350.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#54 7L Lampwick - new.zip,23,jpg:23,6.8,7.4,54 7L_1 195x.jpg | 54 7L_10 +4x-4y 4400.jpg | 54 7L_11 +4x-4y 4400.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#54 Lampwick linear 5-2-12.zip,25,jpg:25,12.7,13.4,54_1 -2y 1350.jpg | 54_10 -11y.jpg | 54_11 -3y 4400x thr.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#55 - 8L Lampwick High RT_RO.zip,24,tif:24,62.8,106.6,55-8L_1 +1x-3y 4400.tif | 55-8L_10 +4x-6y 4400.tif | 55-8L_11 +4x-6y 4400.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#55 Lampwick linear 5-2-12.zip,22,jpg:22,16.4,16.9,55_1 -3y 1350.jpg | 55_10 -4y.jpg | 55_11 -5y 4400.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#56 - 9T - Teflon.zip,18,tif:18,47.6,80.0,56-9T_1 340 x.tif | 56-9T_10 -6x-4y 4400.tif | 56-9T_11 -6x-4y 10k.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#58 Postage 11T Teflon.zip,10,tif:10,24.0,44.4,58 post 11T_1 +1x-6y 1350x.tif | 58 post 11T_10 -3x-7y 24.5k.tif | 58 post 11T_2 +6x-7y 1350x.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#60 13S Silicone.zip,24,jpg:24,7.4,8.0,60 13S_1 +1x-3y 1350.jpg | 60 13S_10 -3x-5y 4400.jpg | 60 13S_11 -3x-5y 4400.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#63 Postage 16P Pyrell.zip,8,tif:8,17.4,35.5,63 post 16P_1 195x.tif | 63 post 16P_2 +1x-4y 1350x.tif | 63 post 16P_3 +2x-7y 1350x.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#63 Preage 16P Pyrell.zip,8,tif:8,18.0,35.5,63 pre 16P_1 195x.tif | 63 pre 16P_2 +2x-4y 1350x.tif | 63 pre 16P_3 +2x-6y 1350x.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#64 Postage 17P Pyrell.zip,12,tif:12,28.9,53.3,64 post 17P_1 195x.tif | 64 post 17P_10 +1x-6y 10k.tif | 64 post 17P_11 +1x-6y 10k.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#64 preage - 16P - Pyrell.zip,20,tif:20,47.2,88.9,62-pre-15K_1 340x.tif | 64 pre-17P_10 -3x-8y 1350.tif | 64 pre-17P_11 +4x-7y 1350.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#67 - 20S Silicone.zip,10,tif:10,23.2,44.4,67 20S_1 +1x+1y 1350x.tif | 67 20S_10 +1x+5y 24.5k.tif | 67 20S_2 +1x-8y 1350x.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#68 21L Lampwick.zip,8,jpg:8,0.4,0.5,68-21L_1 up 1350.jpg | 68-21L_2 up 1350.jpg | 68-21L_3 up 10k.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#69 - 22T Teflon.zip,10,tif:10,22.8,44.4,69 22T_1 +1x-10y 1350x.tif | 69 22T_10 +1x-10y 24.5k.tif | 69 22T_2 +1x-1y 1350x.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#71 - 24P Pyrell.zip,9,tif:9,19.5,40.0,71 24P_1 +1x-4y 1350x.tif | 71 24P_2 +6x+1y 1350x.tif | 71 24P_3 -6x+1y 1350x.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#72 - 25S Silicone.zip,8,tif:8,17.9,35.5,72 25S_1 +1x-7y 1350x.tif | 72 25S_2 +1x+7y 1350x.tif | 72 25S_3 -5x-5y 1350x.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#73 mis labeled pyrellpreage 26K Kapton.zip,24,tif:24,67.0,106.6,73 pre 26K_1 340 x.tif | 73 pre 26K_10 +1x-9y b.tif | 73 pre 26K_11 +1x-9y c.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#73 mislabeled pyrell postage 26K Kapton.zip,24,tif:24,64.0,106.6,73 post 26K_1 340x.tif | 73 post 26K_10 b.tif | 73 post 26K_11 c.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#74 Postage 27P Pyrell.zip,21,jpg:21,11.5,11.8,74 post 27P_1 340x.jpg | 74 post 27P_10 +1x-3y 4400b.jpg | 74 post 27P_11 +1x-3y 4400c.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#74 Preage 27P Pyrell.zip,3,jpg:3,0.7,0.8,74 pre-27P_1 +4x-1y 1350.jpg | 74 pre-27P_2 +5x-6y 1350.jpg | 74 pre-27P_3 +1x+1y 1350.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#76 postage 29P Pyrell.zip,21,jpg:21,7.9,8.4,76 post-29P_0 340x.jpg | 76 post-29P_1 +1-2 1350.jpg | 76 post-29P_10 +1-5 4400c.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#76 preage 29P Pyrell.zip,4,jpg:4,1.5,1.6,75 pre-28K_1 +1x+1y1350.jpg | 75 pre-28K_2 +3x-6y 1350.jpg | 75 pre-28K_3 +3x-6y 4400.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#78 Postage 31L Lampwick.zip,4,jpg:4,1.6,1.8,78 post 31L_1 +1x+1y 1350.jpg | 78 post 31L_2 +1x-6y 1350.jpg | 78 post 31L_3 +6x-6y 1350.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#78 Preage 31L Lampwick.zip,6,jpg:6,1.2,1.4,78 pre 31L_1 +1x-5y 1350.jpg | 78 pre 31L_2 +1x+5y 1350.jpg | 78 pre 31L_3 +3x+8y 1350.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#79 Postage 32T Teflon.zip,4,jpg:4,1.3,1.4,79 post 32T_1 +1x-6y 1350.jpg | 79 post 32T_2 +4x+1y 1350.jpg | 79 post 32T_3 +5x+5y 1350.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#79 Preage 32T Teflon.zip,3,jpg:3,1.3,1.3,79 pre 32T_1 -5x-11y 1350.jpg | 79 pre 32T_2 -5x-11y 4400.jpg | 79 pre 32T_3 -5x-11y 7800.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#80 Postage 33L Lampwick.zip,2,jpg:2,0.5,0.6,80 post 33L_1 +1x+1y 1350.jpg | 80 post 33L_2 -2x+2y 1350.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#81 post age Teflon (34T).zip,4,tif:4,8.7,17.8,81 post 34T_1 +1x-8y 1350 - Copy.tif | 81 post 34T_2+6x-6y 1350.tif | 81 post 34T_3 150x.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#81 preage Teflon (34T).zip,10,tif:10,21.8,44.4,81 pre 34T_0 340x.tif | 81 pre 34T_1 +1x+1y 1350.tif | 81 pre 34T_2 +1x-6y.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#82 Postage 35L Lampwick.zip,10,jpg:10,3.0,3.3,82 post 35L_1 +1x-5y 1350.jpg | 82 post 35L_10 +1x+10y 10k.jpg | 82 post 35L_2 +1x-10y 1350.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#82 Preage 35L Lampwick.zip,2,jpg:2,0.5,0.6,82 pre 35L_1 +1x-6y 1350.jpg | 82 pre 35L_2 +6x+1y 1350.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#83 post age Teflon (36T).zip,7,tif:7,15.1,31.1,83 post 36T_1 340x.tif | 83 post 36T_2 +1x+1y 1350.tif | 83 post 36T_3 +1x-3t.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#84 post-age 37P Pyrell.zip,24,tif:24,64.0,106.6,84 post_1 340x.tif | 84 post_10 b.tif | 84 post_11 c.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#84 pre-age 37P Pyrell.zip,24,tif:24,67.0,106.6,84 preage_1 340 x.tif | 84 preage_10 +1x-9y b.tif | 84 preage_11 +1x-9y c.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#87 - 40P Pyrell.zip,10,tif:10,24.6,44.4,87 40P_1 195x.tif | 87 40P_10 +1x-5y 24.5k.tif | 87 40P_2 +1x-5y 1350x.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#93 Postage 46K Kapton.zip,6,jpg:6,1.9,2.0,93 post 46K_1 +1x-7y 1350x.jpg | 93 post 46K_2 +1x-7y 4400x.jpg | 93 pre 46K_1 +1x-6t 1350x.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_#93 Preage 46K Kapton.zip,4,tif:4,8.1,17.8,93 pre 46K_1 +1x-6t 1350x.tif | 93 pre 46K_2 +1x+6y 1350x.tif | 93 pre 46K_3 +1x-6y 4400x.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#95 - 48P Pyrell.zip,4,tif:4,7.1,17.8,95 48P_1 +1x-4y 1350.tif | 95 48P_2 +5x-5y 1350.tif | 95 48P_3 -5x-5y 1350.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#96 - 49L Lampwick.zip,9,tif:9,20.5,40.0,96 49_1 195x.tif | 96 49L_2+1x+1y 1350.tif | 96 49L_3+1x-6y 1350.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#97 - 50P Pyrell.zip,10,tif:10,22.6,44.4,97 50P_1 195x.tif | 97 50P_10 +6x-4y 10k.tif | 97 50P_2 +1x-4y 1350x.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#98 Postage 51L Lampwick.zip,8,tif:8,16.1,35.5,98 post 51L_1 +1x+1y 1350x.tif | 98 post 51L_2 +1x-6y 1350x.tif | 98 post 51L_3 +1x-8y 1350.tif
+PSI-101,Raw Data,PSI-101_Raw Data_#98 Preage 51L Lampwick.zip,15,tif:15,32.6,66.6,98 pre 51L_1 195x.tif | 98 pre 51L_10 +5x-3y 4400x.tif | 98 pre 51L_11 +5x-3y 10k.tif
+PSI-101,Raw Data,PSI-101_Raw Data_1 Lampwick vlc-record-2010-09-07-16h18m22s-udp___233.1.14.11 _50300-.zip,1,ts:1,44.8,51.5,1 Lampwick vlc-record-2010-09-07-16h18m22s-udp___233.1.14.11 _50300-.ts
+PSI-101,Raw Data,PSI-101_Raw Data_108 post 61K.zip,10,tif:10,23.0,44.4,108 post 61K_1 195x.tif | 108 post 61K_10 +5x-5y 10k.tif | 108 post 61K_11 +1x+6y 10k.tif
+PSI-101,Raw Data,PSI-101_Raw Data_2 Kapton vlc-record-2010-09-07-17h19m24s-udp___233.1.14.11 _50300-.zip,1,ts:1,28.5,36.3,2 Kapton vlc-record-2010-09-07-17h19m24s-udp___233.1.14.11 _50300-.ts
+PSI-101,Raw Data,PSI-101_Raw Data_3 pyrell vlc-record-2010-09-08-11h37m29s-udp___233.1.14.5 _50000-.zip,1,ts:1,76.9,102.2,3 pyrell vlc-record-2010-09-08-11h37m29s-udp___233.1.14.5 _50000-.ts
+PSI-101,Raw Data,PSI-101_Raw Data_4 lampwick vlc-record-2010-09-08-12h10m02s-udp___233.1.14.5 _50000-.zip,1,ts:1,41.6,49.6,4 lampwick vlc-record-2010-09-08-12h10m02s-udp___233.1.14.5 _50000-.ts
+PSI-101,Raw Data,PSI-101_Raw Data_62 Postage Kapton linear.zip,22,jpg:22,11.2,12.8,62 post_1 -2y 1350.jpg | 62 post_10 -3y.jpg | 62 post_11-4y 4400.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_62-preage 15K Kapton.zip,18,tif:18,41.9,80.0,62-pre-15K_1 +1x+1y 1350.tif | 62-pre-15K_10 +1x-3y 4400.tif | 62-pre-15K_11 +6x-4y 4400.tif
+PSI-101,Raw Data,PSI-101_Raw Data_62_Preage Kapton linear.zip,23,jpg:23,13.4,13.9,62_1 -3y 1350.jpg | 62_10 -3y 4400.jpg | 62_11 -3y.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_7 kapton vlc-record-2010-09-08-14h26m11s-udp___233.1.14.5 _50000-.zip,1,ts:1,41.7,49.0,7 kapton vlc-record-2010-09-08-14h26m11s-udp___233.1.14.5 _50000-.ts
+PSI-101,Raw Data,PSI-101_Raw Data_70-23K Kapton.zip,10,jpg:10,0.5,0.6,70-23K_1 +1x+7y 1350.jpg | 70-23K_10 +1x+7y 10k.jpg | 70-23K_2 +1x+10y 1350.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_73 post 26K Kapton.zip,2,jpg:2,0.8,0.9,73 post 26K_1 +1x-9y 1350.jpg | 73 post 26K_2 +1x+9y 1350.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_73 preage Kapton.zip,5,jpg:5,1.9,2.1,73 pre-26K_1 +1x+1y 1350.jpg | 73 pre-26K_2 +9x+1y 1350.jpg | 73 pre-26K_3 -9x+1y 1350.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_75 postage Kapton.zip,12,jpg:12,7.3,7.5,75 post 28K_1 +1x-4y 1350.jpg | 75 post 28K_10 +1x-4y 17500b.jpg | 75 post 28K_11 +1x-4y 17500c.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_75 preage-28K.zip,4,jpg:4,1.5,1.6,75 pre-28K_1 +1x+1y1350.jpg | 75 pre-28K_2 +3x-6y 1350.jpg | 75 pre-28K_3 +3x-6y 4400.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_77 post-30K_Kapton.zip,21,jpg:21,10.9,11.4,77 post-30K_1 +1-3 1350.jpg | 77 post-30K_10 +1-3 4400b.jpg | 77 post-30K_11 +1-3 4400c.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_77preage Kapton.zip,21,jpg:21,10.0,11.5,77pre-30K_1 +1-5 1350.jpg | 77pre-30K_10 +6-6 4400b.jpg | 77pre-30K_11 +6-6 4400c.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_85-38K Kapton.zip,8,jpg:8,3.1,3.3,85-38K_1 +1x-7y 1350x.jpg | 85-38K_2 +1x+1y 1350x.jpg | 85-38K_3 +6x+1y 1350x.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_94 post 47K.zip,6,tif:6,16.3,26.7,94 post 47K_1 195x.tif | 94 post 47K_2 +5x+1y 1350x.tif | 94 post 47K_3 +5x+1y 4400x.tif
+PSI-101,Raw Data,PSI-101_Raw Data_more 54.zip,9,jpg:9,1.0,1.2,54-7L_21 +3x-2y a qtrs 4400.jpg | 54-7L_21 +3x-2y a qtrs.jpg | 54-7L_21 +3x-2y b qtrs wtsh.jpg
+PSI-101,Raw Data,PSI-101_Raw Data_Run 051 4K Kapton.zip,17,tif:17,10.1,18.9,4K-K01-1 +1x-1y 1350x.tif | 4K-K01-10 -6x-1y 10k.tif | 4K-K01-11 -6x+6y 10k.tif
+PSI-101,Raw Data,PSI-101_Raw Data_vlc-record-2010-07-30-14h12m08s-udp___233.1.14.7 _50100-.zip,1,ts:1,36.1,46.1,vlc-record-2010-07-30-14h12m08s-udp___233.1.14.7 _50100-.ts
+PSI-101,Raw Data,PSI-101_Raw Data_vlc-record-2010-07-30-15h06m31s-udp___233.1.14.7 _50100-.zip,1,ts:1,47.3,70.3,vlc-record-2010-07-30-15h06m31s-udp___233.1.14.7 _50100-.ts
+PSI-102,Engineering Documents,PSI-102_Engineering Documents_SAME OPS images.zip,16,jpg:16,25.0,25.3,cue card cleaned up.jpg | ISS015E26252.jpg | ISS015E26253.jpg
+PSI-102,metadata,PSI-102_metadata_PSI-170_SAME.zip,2,txt:2,0.0,0.0,i_Investigation.txt | s_PSI-102.txt
+PSI-107,Raw Data,PSI-107_Raw Data_062 TP 103 vlcsnap-4272441.zip,2,png:2,0.4,0.4,062 TP 103 vlcsnap-4271721.png | 062 TP 103 vlcsnap-4272441.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grab TP 33a.zip,10,png:10,2.0,3.1,vlcsnap-5767989.png | vlcsnap-5768013.png | vlcsnap-5768038.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs - Ruler.zip,3,png:3,1.0,1.0,vlcsnap-2282443.png | vlcsnap-2282482.png | vlcsnap-2283046.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs - TP 13.zip,6,png:6,1.3,1.3,048 TP 13 vlcsnap-2388925.png | vlcsnap-2388800.png | vlcsnap-2388839.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs - TP 14.zip,9,png:9,2.1,2.1,048 TP 14 vlcsnap-2390085.png | vlcsnap-2389893.png | vlcsnap-2389923.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs - TP 15.zip,12,png:12,1.3,2.4,048 TP 15 vlcsnap-2396041.png | vlcsnap-2395268.png | vlcsnap-2395297.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs - TP 16.zip,69,png:69,15.5,15.5,048 TP 16A vlcsnap-2398801.png | 048 TP 16B vlcsnap-2399083.png | 048 TP 16C vlcsnap-2399526.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs - TP 25.zip,30,png:30,10.0,10.0,052 TP 25 vlcsnap-5741528.png | vlcsnap-5731341.png | vlcsnap-5736327.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs - TP 26.zip,9,png:9,2.6,2.6,052 TP 26 vlcsnap-5741871.png | vlcsnap-5741553.png | vlcsnap-5741599.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs - TP 27.zip,20,png:20,4.8,5.8,052 TP 27 vlcsnap-5743763.png | vlcsnap-5743223.png | vlcsnap-5743252.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs - TP 28.zip,9,png:9,1.4,2.4,052 TP 28 vlcsnap-5744048.png | vlcsnap-5743797.png | vlcsnap-5743819.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs - TP 29.zip,14,png:14,4.1,4.1,052 TP 29 vlcsnap-5747643.png | vlcsnap-5747264.png | vlcsnap-5747298.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs - TP 30.zip,10,png:10,2.7,2.7,052 TP 30 vlcsnap-5747871.png | vlcsnap-5747665.png | vlcsnap-5747711.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs - TP 31_Liftoff.zip,60,png:60,16.1,16.1,vlcsnap-5753196.png | vlcsnap-5753240.png | vlcsnap-5753261.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs 36f.zip,26,png:26,7.4,7.4,vlcsnap-5790738.png | vlcsnap-5790759.png | vlcsnap-5790782.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs Playback Images.zip,154,png:154,37.0,37.0,vlcsnap-843684.png | vlcsnap-843706.png | vlcsnap-843732.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0091.zip,2,png:2,0.5,0.5,062 TP 91 vlcsnap-4244368.png | 062 TP 91 vlcsnap-4244791.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0091_2_1.6Nzl.zip,24,png:24,5.9,5.9,vlcsnap-4242651.png | vlcsnap-4243627.png | vlcsnap-4243657.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0093.zip,2,png:2,0.5,0.5,062 TP 93 vlcsnap-4246224.png | 062 TP 93 vlcsnap-4246499.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0093_4.zip,20,png:20,5.0,5.0,vlcsnap-4245566.png | vlcsnap-4245616.png | vlcsnap-4245675.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0095.zip,2,png:2,0.5,0.5,062 TP 95 vlcsnap-4249215.png | 062 TP 95 vlcsnap-4249402.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0096.zip,3,png:3,0.7,0.7,062 TP 96 vlcsnap-4250530.png | 062 TP 96 vlcsnap-4253224.png | 062 TP 96 vlcsnap-4253515.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0096B_C.zip,11,png:11,2.5,2.5,vlcsnap-4250055.png | vlcsnap-4250082.png | vlcsnap-4250162.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0096D_E.zip,15,png:15,3.5,3.5,vlcsnap-4252991.png | vlcsnap-4253017.png | vlcsnap-4253068.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0097.zip,2,png:2,0.6,0.6,062 TP 97 vlcsnap-4257770.png | 062 TP 97 vlcsnap-4257991.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0097_8_0.8Nzl.zip,16,png:16,3.4,4.5,vlcsnap-4257400.png | vlcsnap-4257425.png | vlcsnap-4257463.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0099.zip,2,png:2,0.5,0.5,062 TP 99 vlcsnap-4258756.png | 062 TP 99 vlcsnap-4258895.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0099_100.zip,12,png:12,2.9,2.9,vlcsnap-4258585.png | vlcsnap-4258613.png | vlcsnap-4258640.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0101.zip,1,png:1,0.3,0.3,062 TP 101 vlcsnap-4261157.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0101_102_end_of 1st bottle.zip,12,png:12,1.8,2.8,vlcsnap-4260969.png | vlcsnap-4261004.png | vlcsnap-4261036.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0102.zip,6,png:6,1.2,1.2,062 TP 102 vlcsnap-4266908.png | 062 TP 102 vlcsnap-4267129.png | 062 TP 102 vlcsnap-4267298.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0102_b_NewBottle_Fumi.zip,45,png:45,9.3,9.3,vlcsnap-4266715.png | vlcsnap-4266741.png | vlcsnap-4266783.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0103a_e_104_0.4Nzl.zip,20,png:20,4.1,4.1,vlcsnap-4271592.png | vlcsnap-4271617.png | vlcsnap-4271667.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0103f_blowoff.zip,8,png:8,2.1,2.1,vlcsnap-4273424.png | vlcsnap-4273456.png | vlcsnap-4273515.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0104.zip,7,png:7,1.5,1.5,vlcsnap-4276325.png | vlcsnap-4276355.png | vlcsnap-4276390.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0104_1.zip,4,png:4,0.9,0.9,062 TP 104 vlcsnap-4277311.png | 062 TP 104 vlcsnap-4277684.png | 062 TP 104 vlcsnap-4277974.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 0104b.zip,41,png:41,9.1,9.1,vlcsnap-4276942.png | vlcsnap-4276968.png | vlcsnap-4276996.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 32a.zip,12,png:12,3.8,3.8,052 TP 32a vlcsnap-5766561.png | vlcsnap-5766294.png | vlcsnap-5766320.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 32b.zip,19,png:19,5.2,5.2,052 TP 32b vlcsnap-5767044.png | vlcsnap-5766587.png | vlcsnap-5766613.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 33b.zip,7,png:7,2.2,2.2,052 TP 33b vlcsnap-5769454.png | vlcsnap-5769272.png | vlcsnap-5769295.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 33c.zip,16,png:16,4.8,4.8,052 TP 33c vlcsnap-5769878.png | vlcsnap-5769493.png | vlcsnap-5769514.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 35_36.zip,41,png:41,12.3,12.3,052 TP 35 vlcsnap-5779388.png | 052 TP 36 vlcsnap-5780143.png | vlcsnap-5770839.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 36b.zip,29,png:29,9.3,9.3,vlcsnap-5775882.png | vlcsnap-5775911.png | vlcsnap-5775943.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 36c.zip,11,png:11,3.6,3.6,vlcsnap-5777527.png | vlcsnap-5777549.png | vlcsnap-5777570.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 36e.zip,30,png:30,9.2,9.2,vlcsnap-5779184.png | vlcsnap-5779207.png | vlcsnap-5779234.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 36g_i.zip,21,png:21,5.9,5.8,052 TO 36g vlcsnap-5791055.png | 052 TP 36h vlcsnap-5791463.png | 052 TP 36i vlcsnap-5792839.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 36j_last_propane.zip,8,png:8,2.0,2.0,052 TP 36j vlcsnap-5793111.png | vlcsnap-5795365.png | vlcsnap-5795393.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 37.zip,7,png:7,2.3,2.3,052 TP 37 vlcsnap-5903169.png | vlcsnap-5903040.png | vlcsnap-5903066.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 38.zip,6,png:6,2.1,2.1,vlcsnap-5903670.png | vlcsnap-5903691.png | vlcsnap-5903713.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 39_40.zip,29,png:29,8.5,8.5,vlcsnap-5905965.png | vlcsnap-5905986.png | vlcsnap-5906007.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 41_42.zip,25,png:25,7.3,7.3,vlcsnap-5910877.png | vlcsnap-5910911.png | vlcsnap-5910976.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 43_44.zip,9,png:9,1.6,2.6,vlcsnap-5912781.png | vlcsnap-5913095.png | vlcsnap-5913577.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 43a_44a.zip,43,png:43,12.4,12.4,052 TP 43b vlcsnap-5940297.png | 052 TP 44 vlcsnap-5940800.png | vlcsnap-5939637.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 45.zip,45,png:45,12.6,12.6,052 TP 45 vlcsnap-5949425.png | 052 TP 45a vlcsnap-5949870.png | 052 TP 45b vlcsnap-5950049.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 46.zip,28,png:28,7.9,7.9,052 TP 46 vlcsnap-5951911.png | 052 TP 46a vlcsnap-5952114.png | 052 TP 46b vlcsnap-5952243.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 49_50.zip,30,png:30,8.6,8.5,052 TP 49 vlcsnap-5962072.png | 052 TP 49a vlcsnap-5962323.png | vlcsnap-5961829.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 51_52.zip,44,png:44,12.5,12.5,052 TP 51 vlcsnap-5964474.png | 052 TP 51a vlcsnap-5964756.png | vlcsnap-5964013.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 53.zip,47,png:47,10.6,10.6,052 TP 53 vlcsnap-5968970.png | 052 TP 53a vlcsnap-5969153.png | 052 TP 53b vlcsnap-5969400.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 55.zip,42,png:42,9.9,9.9,vlcsnap-48031.png | vlcsnap-59114.png | vlcsnap-59147.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 57.zip,37,png:37,8.5,8.5,vlcsnap-61612.png | vlcsnap-61643.png | vlcsnap-61675.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 59.zip,70,png:70,15.8,15.8,vlcsnap-83100.png | vlcsnap-83128.png | vlcsnap-83154.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 61.zip,66,png:66,15.3,15.3,vlcsnap-91315.png | vlcsnap-91339.png | vlcsnap-91362.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 63.zip,32,png:32,7.1,7.1,vlcsnap-97945.png | vlcsnap-97969.png | vlcsnap-98003.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 65.zip,108,png:108,24.9,24.9,vlcsnap-106750.png | vlcsnap-106773.png | vlcsnap-106796.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 67.zip,29,png:29,6.0,6.0,vlcsnap-128723.png | vlcsnap-128743.png | vlcsnap-128770.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 67A.zip,35,png:35,7.0,7.0,vlcsnap-140947.png | vlcsnap-140968.png | vlcsnap-141001.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 73.zip,43,png:43,13.9,13.9,vlcsnap-712635.png | vlcsnap-725285.png | vlcsnap-725318.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 75.zip,27,png:27,8.5,8.5,vlcsnap-732029.png | vlcsnap-732058.png | vlcsnap-732080.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 77.zip,22,png:22,6.9,6.9,vlcsnap-733707.png | vlcsnap-733731.png | vlcsnap-733757.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 79.zip,28,png:28,8.8,8.8,vlcsnap-738548.png | vlcsnap-738630.png | vlcsnap-738652.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 81.zip,23,png:23,7.2,7.2,vlcsnap-749470.png | vlcsnap-749498.png | vlcsnap-749524.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 83.zip,10,png:10,3.0,3.0,vlcsnap-752528.png | vlcsnap-752555.png | vlcsnap-752583.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 85.zip,28,png:28,8.6,8.6,vlcsnap-763239.png | vlcsnap-763261.png | vlcsnap-763284.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 87.zip,23,png:23,7.1,7.1,vlcsnap-766203.png | vlcsnap-766227.png | vlcsnap-766250.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 89.zip,26,png:26,7.5,7.5,vlcsnap-796098.png | vlcsnap-796670.png | vlcsnap-796698.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 90B.zip,44,png:44,12.5,12.5,vlcsnap-798044.png | vlcsnap-798070.png | vlcsnap-798099.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 90C.zip,42,png:42,11.5,11.5,vlcsnap-810789.png | vlcsnap-810817.png | vlcsnap-810841.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 90E Manual Camera 0.8mm.zip,22,png:22,6.6,6.6,vlcsnap-839289.png | vlcsnap-839318.png | vlcsnap-839343.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP 95_6.zip,14,png:14,3.3,3.3,vlcsnap-4248870.png | vlcsnap-4248917.png | vlcsnap-4248979.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP34.zip,4,png:4,1.2,1.2,vlcsnap-5769905.png | vlcsnap-5769949.png | vlcsnap-5769970.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame Grabs TP36d.zip,14,png:14,4.3,4.3,vlcsnap-5778399.png | vlcsnap-5778430.png | vlcsnap-5778453.png
+PSI-107,Raw Data,PSI-107_Raw Data_Downlink Frame GrabsTP 90D Manual Camera 0.4mm.zip,30,png:30,7.9,7.9,vlcsnap-813943.png | vlcsnap-813968.png | vlcsnap-813994.png
+PSI-107,Raw Data,PSI-107_Raw Data_SPICE Day 045 Test Point Images.zip,11,png:11,3.0,3.0,045 TP 1 vlcsnap-9975059.png | 045 TP 10 vlcsnap-10069065.png | 045 TP 11 vlcsnap-10071890.png
+PSI-107,Raw Data,PSI-107_Raw Data_SPICE GMT045 2009 Contact Sheets.zip,57,jpg:57,86.7,93.1,Contactsheet.jpg | Contactsheet_1.jpg | Contactsheet_10.jpg
+PSI-107,Raw Data,PSI-107_Raw Data_SPICE GMT045 2009 jpegs.zip,39,jpg:39,6.8,8.4,ISS018E030336.jpg | ISS018E030337.jpg | ISS018E030338.jpg
+PSI-107,Raw Data,PSI-107_Raw Data_SPICE GMT048 2009 Contact Sheets.zip,61,jpg:61,81.0,88.0,Contactsheet.jpg | Contactsheet_1.jpg | Contactsheet_10.jpg
+PSI-107,Raw Data,PSI-107_Raw Data_SPICE GMT048 2009 jpegs.zip,59,jpg:59,9.0,11.7,ISS018E033325.jpg | ISS018E033326.jpg | ISS018E033327.jpg
+PSI-107,Raw Data,PSI-107_Raw Data_SPICE_GMT2009_055_jpeg.zip,123,jpg:123,77.5,81.0,ISS018E035868.jpg | ISS018E035869.jpg | ISS018E035870.jpg
+PSI-107,Raw Data,PSI-107_Raw Data_SPICE_GMT2009_062_jpegs.zip,96,jpg:96,94.8,96.6,ISS018E037155.jpg | ISS018E037156.jpg | ISS018E037157.jpg
+PSI-107,Raw Data,PSI-107_Raw Data_SPICE_GMT2009_062_Movie Files.zip,11,avi:11,71.8,75.1,GMT62_11.16.avi | GMT62_11.20.avi | GMT62_11.25.avi
+PSI-107,Raw Data,PSI-107_Raw Data_Still Images.zip,145,png:145,32.8,32.9,vlcsnap-5825300.png | vlcsnap-5825336.png | vlcsnap-5825363.png
+PSI-107,Raw Data,PSI-107_Raw Data_vlcsnap downlink frame grabs.zip,178,png:178,48.7,48.7,045 ruler ref image vlcsnap-9947727.png | 045 TP 1 vlcsnap-9975059.png | 045 TP 10 vlcsnap-10069065.png
+PSI-115,metadata,PSI-115_metadata_PSI-185_Utilization of the S.zip,2,txt:2,0.0,0.0,i_Investigation.txt | s_PSI-115.txt
+PSI-159,metadata,PSI-159_metadata_PSI-159-ISA.zip,2,txt:2,0.0,0.0,i_Investigation.txt | s_PSI-159.txt
+PSI-159,Raw Data,PSI-159_Raw Data_Images_21209A1.zip,77,hobj:75 mdipsug:1 next:1,82.4,209.4,20210728_155521.462_ACME_21209A1_00000.hobj | 20210728_155522.462_ACME_21209A1_00001.hobj | 20210728_155523.462_ACME_21209A1_00002.hobj
+PSI-159,Raw Data,PSI-159_Raw Data_Images_21291B1.zip,85,hobj:83 mdipsug:1 next:1,97.5,231.7,20211018_202121.657_ACME_21291B1_00000.hobj | 20211018_202122.657_ACME_21291B1_00001.hobj | 20211018_202123.657_ACME_21291B1_00002.hobj
+PSI-159,Raw Data,PSI-159_Raw Data_Images_21291C1.zip,74,hobj:72 mdipsug:1 next:1,71.2,201.0,20211018_183436.335_ACME_21291C1_00000.hobj | 20211018_183437.334_ACME_21291C1_00001.hobj | 20211018_183438.334_ACME_21291C1_00002.hobj
+PSI-23,Engineering Documents,PSI-23_Engineering Documents_ACME Data interpretation.zip,2,pdf:2,2.0,2.5,ACME Data interpretation/ACME non-imaging data file description 20170217.pdf | ACME Data interpretation/ACME-DOC-010_D.pdf
+PSI-23,Engineering Documents,PSI-23_Engineering Documents_ACME Drawings_QDs and hoses.zip,7,pdf:7,2.4,2.4,ACME_drawings_QDs_&_hoses/s1101mfa0400_A.pdf | ACME_drawings_QDs_&_hoses/s1101mfa0401_A.pdf | ACME_drawings_QDs_&_hoses/s1101mfa0402_A.pdf
+PSI-23,Engineering Documents,PSI-23_Engineering Documents_ACME Gas flow.zip,7,xlsx:3 pdf:2 xls:2,2.4,6.4,ACME Gas flow/ACME flow conversion 20200601.pdf | ACME Gas flow/ACMEFlowAndPressuresRawDataConversion.xlsx | ACME Gas flow/ACMEFlowCalculator.xlsx
+PSI-23,Engineering Documents,PSI-23_Engineering Documents_ACME Imaging.zip,4,pdf:4,5.9,6.4,ACME Imaging/ACME insert and optical layout 20160922.pdf | ACME Imaging/ACME-RPT-010_A.pdf | ACME Imaging/CFI Intensified Camera Characterization Report.pdf
+PSI-23,Engineering Documents,PSI-23_Engineering Documents_ACME Instruments.zip,5,pdf:5,5.6,6.4,ACME Instruments/ACME Radiometer Layouts from ProE.pdf | ACME Instruments/ACME-RPT-011_-.pdf | ACME Instruments/ACME-RPT-012_-.pdf
+PSI-23,Engineering Documents,PSI-23_Engineering Documents_ACME_drawings_analog_camera.zip,7,pdf:7,3.0,3.1,ACME_drawings_analog_camera/S1101EFA1410_A.pdf | ACME_drawings_analog_camera/S1101EFF1410_REV_A.pdf | ACME_drawings_analog_camera/S1101EFL1410_REV_A.pdf
+PSI-23,Engineering Documents,PSI-23_Engineering Documents_ACME_drawings_common_electrical.zip,24,pdf:24,8.2,8.5,ACME_drawings_common_electrical/S1101EFA0300_B.pdf | ACME_drawings_common_electrical/S1101EFA0302_C.pdf | ACME_drawings_common_electrical/S1101EFA0310_C.pdf
+PSI-23,Engineering Documents,PSI-23_Engineering Documents_ACME_drawings_diagnostic_system.zip,34,pdf:34,9.4,9.5,ACME_drawings_diagnostic_system/S1101EFA1524_C.pdf | ACME_drawings_diagnostic_system/S1101EFA1527_D.pdf | ACME_drawings_diagnostic_system/S1101EFA1553_B.pdf
+PSI-23,Engineering Documents,PSI-23_Engineering Documents_ACME_drawings_e-field_system.zip,24,pdf:24,8.6,8.7,ACME_drawings_e-field_system/S1101EFC1721_D.pdf | ACME_drawings_e-field_system/s1101mfa1700_D.pdf | ACME_drawings_e-field_system/s1101mfa1705_-.pdf
+PSI-23,Engineering Documents,PSI-23_Engineering Documents_ACME_drawings_expt_mounting_structure.zip,7,pdf:7,2.9,2.9,ACME_drawings_expt_mounting_structure/s1101mfa1000_A.pdf | ACME_drawings_expt_mounting_structure/s1101mfa1003_B.pdf | ACME_drawings_expt_mounting_structure/s1101mfd1004_B.pdf
+PSI-23,Engineering Documents,PSI-23_Engineering Documents_ACME_drawings_ground_equipment.zip,26,pdf:26,3.7,3.8,ACME_drawings_ground_equipment/S1101EGA4558_A.pdf | ACME_drawings_ground_equipment/S1101EGA4562_A.pdf | ACME_drawings_ground_equipment/S1101EGA4563_rev_A.pdf
+PSI-23,Engineering Documents,PSI-23_Engineering Documents_ACME_drawings_igniter.zip,14,pdf:14,2.9,3.0,ACME_drawings_igniter/s1101mfa1300_C.pdf | ACME_drawings_igniter/s1101mfa1313_F.pdf | ACME_drawings_igniter/s1101mfa1315_F.pdf
+PSI-23,Engineering Documents,PSI-23_Engineering Documents_ACME_drawings_measurement_system.zip,31,pdf:31,5.4,5.5,ACME_drawings_measurement_system/S1101EFA1607_B.pdf | ACME_drawings_measurement_system/s1101mfa1601_C.pdf | ACME_drawings_measurement_system/s1101mfa1605_D.pdf
+PSI-23,Engineering Documents,PSI-23_Engineering Documents_ACME_drawings_shipping_containers.zip,17,pdf:17,5.5,5.5,ACME_drawings_shipping_containers/s1101mga5000_A.pdf | ACME_drawings_shipping_containers/s1101mga5004_A.pdf | ACME_drawings_shipping_containers/s1101mga5009_-.pdf
+PSI-23,Engineering Documents,PSI-23_Engineering Documents_ACME_drawings_trainer.zip,10,pdf:10,1.1,1.1,ACME_drawings_trainer/s1101mga6039_-.pdf | ACME_drawings_trainer/s1101mga6056.pdf | ACME_drawings_trainer/s1101mga6057_-.pdf
+PSI-23,Reference Data,PSI-23_Reference Data_19352Fiber2_Images.zip,12,hobj:10 mdipsug:1 next:1,9.9,27.9,20191218_204137.230_ACME_19352Fiber2_00000.hobj | 20191218_204138.730_ACME_19352Fiber2_00001.hobj | 20191218_204140.229_ACME_19352Fiber2_00002.hobj
+PSI-25,metadata,PSI-25_metadata_PSI_metadata_PSI-101_BASS-II.zip,2,txt:2,0.0,0.0,i_Investigation.txt | s_PSI-25.txt
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT100_sample 131_test T5 original videos.zip,1,ts:1,84.3,92.7,BASS_GMT100_sample 131_test T5.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT100_sample 132_test T6 original videos.zip,1,ts:1,33.6,37.7,BASS_GMT100_sample 132_test T6.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT100_SAMPLE_137_TEST_T13 original videos.zip,1,ts:1,24.5,27.7,BASS_GMT100_SAMPLE_137_TEST_T13.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT175_SAMPLE_133_TEST_T9 original videos.zip,2,ts:2,39.7,47.4,BASS_GMT175_SAMPLE_133_TEST_T9.ts | BASS_GMT175_SAMPLE_133_TEST_T9_2ND_VIEW.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT175_SAMPLE_134_TEST_T10 original videos.zip,2,ts:2,36.7,45.1,BASS_GMT175_SAMPLE_134_TEST_T10.ts | BASS_GMT175_SAMPLE_134_TEST_T10_2ND_VIEW.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT175_SAMPLE_141_TEST_T18 original videos.zip,2,ts:2,40.7,47.5,BASS_GMT175_SAMPLE_141_TEST_T18.ts | BASS_GMT175_SAMPLE_141_TEST_T18_2ND_VIEW.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT178_SAMPLE_135_TEST_T11 original videos.zip,3,ts:3,69.9,81.9,BASS_GMT178_SAMPLE_135_TEST_T11.ts | BASS_GMT178_SAMPLE_135_TEST_T11_2ND_VIEW.ts | BASS_GMT178_SAMPLE_135_TEST_T11_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT178_SAMPLE_136_TEST_T12 original videos.zip,2,ts:2,16.3,18.9,BASS_GMT178_SAMPLE_136_TEST_T12.ts | BASS_GMT178_SAMPLE_136_TEST_T12_2ND_VIEW.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT178_SAMPLE_140_TEST_T14 original videos.zip,3,ts:3,53.7,64.1,BASS_GMT178_SAMPLE_140_TEST_T14.ts | BASS_GMT178_SAMPLE_140_TEST_T14_2ND_VIEW.ts | BASS_GMT178_SAMPLE_140_TEST_T14_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT178_SAMPLE_142_TEST_T17 original videos.zip,3,ts:3,42.7,51.6,BASS_GMT178_SAMPLE_142_TEST_T17.ts | BASS_GMT178_SAMPLE_142_TEST_T17_2ND_VIEW.ts | BASS_GMT178_SAMPLE_142_TEST_T17_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT183_SAMPLE_150_TESTB16 original videos.zip,2,ts:2,48.4,58.9,BASS_GMT183_SAMPLE_150_TESTB16.ts | BASS_GMT183_SAMPLE_150_TESTB16_2ND_VIEW.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT183_SAMPLE_151_TESTB19 original videos.zip,3,ts:3,44.0,51.1,BASS_GMT183_SAMPLE_151_TESTB19.ts | BASS_GMT183_SAMPLE_151_TESTB19_2ND_VIEW.ts | BASS_GMT183_SAMPLE_151_TESTB19_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT183_SAMPLE_152_TESTB20 original videos.zip,3,ts:3,56.3,70.0,BASS_GMT183_SAMPLE_152_TESTB20.ts | BASS_GMT183_SAMPLE_152_TESTB20_2ND_VIEW.ts | BASS_GMT183_SAMPLE_152_TESTB20_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT183_SAMPLE_174_TESTB14 original videos.zip,2,ts:2,26.6,31.1,BASS_GMT183_SAMPLE_174_TESTB14.ts | BASS_GMT183_SAMPLE_174_TESTB14_2ND_VIEW.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT183_SAMPLE_175_TESTB15 original videos.zip,2,ts:2,83.9,106.7,BASS_GMT183_SAMPLE_175_TESTB15.ts | BASS_GMT183_SAMPLE_175_TESTB15_2ND_VIEW.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT183_SAMPLE_176_TESTB18 original videos.zip,3,ts:3,65.8,82.6,BASS_GMT183_SAMPLE_176_TESTB18.ts | BASS_GMT183_SAMPLE_176_TESTB18_2ND_VIEW.ts | BASS_GMT183_SAMPLE_176_TESTB18_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT184_SAMPLE_186_TESTP6 original videos.zip,1,ts:1,80.5,98.4,BASS_GMT184_SAMPLE_186_TESTP6.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT188_SAMPLE_149_TESTB15 original videos.zip,3,ts:3,36.8,41.9,BASS_GMT188_SAMPLE_149_TESTB15.ts | BASS_GMT188_SAMPLE_149_TESTB15_2ND_VIEW.ts | BASS_GMT188_SAMPLE_149_TESTB15_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT188_SAMPLE_153_TESTB6 original videos.zip,3,ts:3,32.8,37.8,BASS_GMT188_SAMPLE_153_TESTB6.ts | BASS_GMT188_SAMPLE_153_TESTB6_2ND_VIEW.ts | BASS_GMT188_SAMPLE_153_TESTB6_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT188_SAMPLE_154_TESTB9 original vidoes.zip,2,ts:2,15.7,18.4,BASS_GMT188_SAMPLE_154_TESTB9.ts | BASS_GMT188_SAMPLE_154_TESTB9_2ND_VIEW.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT188_SAMPLE_157_TESTB8 original videos.zip,3,ts:3,56.3,63.0,BASS_GMT188_SAMPLE_157_TESTB8.ts | BASS_GMT188_SAMPLE_157_TESTB8_2ND_VIEW.ts | BASS_GMT188_SAMPLE_157_TESTB8_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT188_SAMPLE_158_TESTB11 original videos.zip,3,ts:3,62.0,73.2,BASS_GMT188_SAMPLE_158_TESTB11.ts | BASS_GMT188_SAMPLE_158_TESTB11_2ND_VIEW.ts | BASS_GMT188_SAMPLE_158_TESTB11_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT188_SAMPLE_162_TESTB13 original videos.zip,3,ts:3,93.7,108.1,BASS_GMT188_SAMPLE_162_TESTB13.ts | BASS_GMT188_SAMPLE_162_TESTB13_2ND_VIEW.ts | BASS_GMT188_SAMPLE_162_TESTB13_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT188_SAMPLE_173_TESTB10 original videos.zip,3,ts:3,64.5,75.5,BASS_GMT188_SAMPLE_173_TESTB10.ts | BASS_GMT188_SAMPLE_173_TESTB10_2ND_VIEW.ts | BASS_GMT188_SAMPLE_173_TESTB10_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT190_SAMPLE_133_TEST_T23 original videos.zip,6,ts:6,75.7,86.5,BASS_GMT190_SAMPLE_133_TEST_T23.ts | BASS_GMT190_SAMPLE_133_TEST_T23_2ND_VIEW.ts | BASS_GMT190_SAMPLE_133_TEST_T23_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT190_SAMPLE_143_TEST_T19 original videos.zip,3,ts:3,37.1,42.7,BASS_GMT190_SAMPLE_143_TEST_T19.ts | BASS_GMT190_SAMPLE_143_TEST_T19_2ND_VIEW.ts | BASS_GMT190_SAMPLE_143_TEST_T19_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT190_SAMPLE_144_TEST_T20 original videos.zip,3,ts:3,14.7,17.0,BASS_GMT190_SAMPLE_144_TEST_T20.ts | BASS_GMT190_SAMPLE_144_TEST_T20_2ND_VIEW.ts | BASS_GMT190_SAMPLE_144_TEST_T20_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT190_SAMPLE_145_TEST_T21 original videos.zip,3,ts:3,20.0,23.0,BASS_GMT190_SAMPLE_145_TEST_T21.ts | BASS_GMT190_SAMPLE_145_TEST_T21_2ND_VIEW.ts | BASS_GMT190_SAMPLE_145_TEST_T21_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT190_SAMPLE_146_TEST_T22 original videos.zip,3,ts:3,20.8,24.1,BASS_GMT190_SAMPLE_146_TEST_T22.ts | BASS_GMT190_SAMPLE_146_TEST_T22_2ND_VIEW.ts | BASS_GMT190_SAMPLE_146_TEST_T22_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT213_SAMPLE_229_TEST_F3 original videos.zip,2,ts:2,44.7,51.2,BASS_GMT213_SAMPLE_229_TEST_F3.ts | BASS_GMT213_SAMPLE_229_TEST_F3_2ND_VIEW.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT216_SAMPLE_137_TEST_T26 original videos.zip,2,ts:2,57.8,66.0,BASS_GMT216_SAMPLE_137_TEST_T26.ts | BASS_GMT216_SAMPLE_137_TEST_T26_2ND_VIEW.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT216_SAMPLE_138_TEST_T25 original videos.zip,3,ts:3,33.6,38.9,BASS_GMT216_SAMPLE_138_TEST_T25.ts | BASS_GMT216_SAMPLE_138_TEST_T25_2ND_VIEW.ts | BASS_GMT216_SAMPLE_138_TEST_T25_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT216_SAMPLE_144_TEST_T28a original videos.zip,2,ts:2,29.6,34.0,BASS_GMT216_SAMPLE_144_TEST_T28a.ts | BASS_GMT216_SAMPLE_144_TEST_T28a_2ND_VIEW.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT216_SAMPLE_144_TEST_T28b original videos.zip,2,ts:2,26.8,30.7,BASS_GMT216_SAMPLE_144_TEST_T28b.ts | BASS_GMT216_SAMPLE_144_TEST_T28b_2ND_VIEW.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT216_SAMPLE_145_TEST_T29 original videos.zip,2,ts:2,61.7,70.1,BASS_GMT216_SAMPLE_145_TEST_T29.ts | BASS_GMT216_SAMPLE_145_TEST_T29_2ND_VIEW.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT216_SAMPLE_146_TEST_T27 original videos.zip,2,ts:2,42.3,48.6,BASS_GMT216_SAMPLE_146_TEST_T27.ts | BASS_GMT216_SAMPLE_146_TEST_T27_2ND_VIEW.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT216_SAMPLE_174_TEST_B21 original videos.zip,2,ts:2,62.7,72.0,BASS_GMT216_SAMPLE_174_TEST_B21.ts | BASS_GMT216_SAMPLE_174_TEST_B21_2ND_VIEW.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT216_SAMPLE_176_TEST_B22 original videos.zip,2,ts:2,50.4,58.0,BASS_GMT216_SAMPLE_176_TEST_B22.ts | BASS_GMT216_SAMPLE_176_TEST_B22_2ND_VIEW.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT45_SAMPLE_128_TEST_T1 original videos.zip,2,ts:2,22.0,26.3,BASS_GMT45_SAMPLE_128_TEST_T1.ts | BASS_GMT45_SAMPLE_128_TEST_T1_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT45_SAMPLE_129_TEST_T2 original videos.zip,2,ts:2,31.5,37.4,BASS_GMT45_SAMPLE_129_TEST_T2.ts | BASS_GMT45_SAMPLE_129_TEST_T2_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT45_SAMPLE_130_TEST_T4 original videos.zip,2,ts:2,17.8,20.7,BASS_GMT45_SAMPLE_130_TEST_T4.ts | BASS_GMT45_SAMPLE_130_TEST_T4_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT45_SAMPLE_138_TEST_T15 original videos.zip,2,ts:2,12.8,15.0,BASS_GMT45_SAMPLE_138_TEST_T15.ts | BASS_GMT45_SAMPLE_138_TEST_T15_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT49_SAMPLE_204_TEST_O2 original videos.zip,2,ts:2,51.3,56.6,BASS_GMT49_SAMPLE_204_TEST_O2.ts | BASS_GMT49_SAMPLE_204_TEST_O2_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT49_SAMPLE_207_TEST_O1 original videos.zip,2,ts:2,56.9,62.7,BASS_GMT49_SAMPLE_207_TEST_O1.ts | BASS_GMT49_SAMPLE_207_TEST_O1_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT50_SAMPLE_147_TEST_B1 original videos.zip,2,ts:2,14.6,17.7,BASS_GMT50_SAMPLE_147_TEST_B1.ts | BASS_GMT50_SAMPLE_147_TEST_B1_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT50_SAMPLE_148_TEST_B3 original videos.zip,2,ts:2,15.6,18.1,BASS_GMT50_SAMPLE_148_TEST_B3.ts | BASS_GMT50_SAMPLE_148_TEST_B3_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT50_SAMPLE_155_TEST_B2 original videos.zip,1,ts:1,10.8,12.4,BASS_GMT50_SAMPLE_155_TEST_B2.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT50_SAMPLE_156_TEST_B5 original videos.zip,2,ts:2,21.2,24.3,BASS_GMT50_SAMPLE_156_TEST_B5.ts | BASS_GMT50_SAMPLE_156_TEST_B5_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT50_SAMPLE_159_TEST_B4 original videos.zip,2,ts:2,24.7,28.4,BASS_GMT50_SAMPLE_159_TEST_B4.ts | BASS_GMT50_SAMPLE_159_TEST_B4_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT50_SAMPLE_160_TEST_B12 original videos.zip,2,ts:2,25.6,29.5,BASS_GMT50_SAMPLE_160_TEST_B12.ts | BASS_GMT50_SAMPLE_160_TEST_B12_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT50_SAMPLE_161_TEST_B7 original videos.zip,2,ts:2,30.4,35.1,BASS_GMT50_SAMPLE_161_TEST_B7.ts | BASS_GMT50_SAMPLE_161_TEST_B7_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_BASS_GMT50_SAMPLE_227_TEST_F1 original videos.zip,2,ts:2,17.6,20.1,BASS_GMT50_SAMPLE_227_TEST_F1.ts | BASS_GMT50_SAMPLE_227_TEST_F1_Still_Sequence.ts
+PSI-25,Raw Data,PSI-25_Raw Data_GMT2014_202_BASS_S220M_TPO5b.zip,2,nef:2,18.9,23.4,iss040e071088.NEF | iss040e071087.NEF
+PSI-25,Raw Data,PSI-25_Raw Data_GMT2014_202_BASS_S221M_TPO13b.zip,6,nef:6,70.6,75.0,iss040e072574.NEF | iss040e072569.NEF | iss040e072570.NEF
+PSI-25,Raw Data,PSI-25_Raw Data_GMT2014_210_BASS_S219_TPP16.zip,10,jpg:10,13.5,14.2,2014.07.30 17.47.09.iss040e082865.jpg | 2014.07.30 17.47.17.iss040e082866.jpg | 2014.07.30 17.47.19.iss040e082867.jpg
+PSI-25,Raw Data,PSI-25_Raw Data_M10 lab camera LOS original videos.zip,1,ts:1,20.2,30.2,M10 lab camera LOS.ts
+PSI-25,Raw Data,PSI-25_Raw Data_M10experimentvideo LOS original videos.zip,1,ts:1,19.0,45.4,M10experimentvideo LOS.ts
+PSI-25,Raw Data,PSI-25_Raw Data_M3-over the shoulder view during LOS orginal videos.zip,1,ts:1,20.8,26.1,M3-over the shoulder view during LOS.ts
+PSI-25,Raw Data,PSI-25_Raw Data_M3-rack video during LOS original videos.zip,1,ts:1,18.1,24.1,M3-rack video during LOS.ts
+PSI-26,metadata,PSI-26_metadata_PSI-102_BASS.zip,2,txt:2,0.0,0.0,i_Investigation.txt | s_PSI-26.txt
+PSI-26,Raw Data,PSI-26_Raw Data_2012_05_02_xmp.zip,108,xmp:108,0.2,0.4,2012-05-02T09-21-58iss031e006006.xmp | 2012-05-02T09-22-06iss031e006007.xmp | 2012-05-02T09-22-19iss031e006008.xmp
+PSI-26,Raw Data,PSI-26_Raw Data_2012_05_03_xmp.zip,236,xmp:236,0.4,0.8,2012-05-03T10-09-58iss031e006114.xmp | 2012-05-03T10-09-59iss031e006115.xmp | 2012-05-03T10-09-59iss031e006116.xmp
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_06_xmp.zip,264,xmp:264,0.4,1.0,2013_04_06_xmp/2013-04-06T12-15-39iss035e014740.xmp | 2013_04_06_xmp/2013-04-06T12-15-39iss035e014741.xmp | 2013_04_06_xmp/2013-04-06T12-15-56iss035e014742.xmp
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_09_orig.zip,50,jpg:49 db:1,69.4,70.9,2013_04_09_orig/20130409 09.35.49 iss035e016389.jpg | 2013_04_09_orig/20130409 09.35.49 iss035e016390.jpg | 2013_04_09_orig/20130409 09.38.49 iss035e016391.jpg
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_09_txt.zip,49,txt:49,0.0,0.0,2013_04_09_txt/iss035e016389.txt | 2013_04_09_txt/iss035e016390.txt | 2013_04_09_txt/iss035e016391.txt
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_10_txt.zip,329,txt:329,0.2,0.3,2013_04_10_txt/iss035e019050.txt | 2013_04_10_txt/iss035e019051.txt | 2013_04_10_txt/iss035e019052.txt
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_10_xmp.zip,725,xmp:725,1.1,2.6,2013_04_10_xmp/2013-04-10T09-04-30iss035e015594.xmp | 2013_04_10_xmp/2013-04-10T09-04-31iss035e015595.xmp | 2013_04_10_xmp/2013-04-10T09-04-32iss035e015596.xmp
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_13_txt.zip,622,txt:622,0.4,0.6,2013_04_13_txt/iss035e018539.txt | 2013_04_13_txt/iss035e018540.txt | 2013_04_13_txt/iss035e018541.txt
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_13_xmp.zip,622,xmp:622,1.0,2.3,2013_04_13_xmp/2013-04-13T12-37-40iss035e018539.xmp | 2013_04_13_xmp/2013-04-13T12-37-40iss035e018540.xmp | 2013_04_13_xmp/2013-04-13T12-37-40iss035e018541.xmp
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_16_orig.zip,8,jpg:4 nef:4,56.6,57.2,2013_04_16_orig/20130416 10.23.45 iss035e020036.jpg | 2013_04_16_orig/20130416 10.24.04 iss035e020037.jpg | 2013_04_16_orig/20130416 10.24.23 iss035e020038.jpg
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_16_txt.zip,4,txt:4,0.0,0.0,2013_04_16_txt/iss035e020036.txt | 2013_04_16_txt/iss035e020037.txt | 2013_04_16_txt/iss035e020038.txt
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_16_xmp.zip,4,xmp:4,0.0,0.0,2013_04_16_xmp/2013-04-16T10-23-45iss035e020036.xmp | 2013_04_16_xmp/2013-04-16T10-24-04iss035e020037.xmp | 2013_04_16_xmp/2013-04-16T10-24-23iss035e020038.xmp
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_17_txt.zip,331,txt:331,0.2,0.3,2013_04_17_txt/iss035e019854.txt | 2013_04_17_txt/iss035e019855.txt | 2013_04_17_txt/iss035e019856.txt
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_17_xmp.zip,256,xmp:256,0.4,0.9,2013_04_17_xmp/2013-04-17T10-36-41iss035e019854.xmp | 2013_04_17_xmp/2013-04-17T10-37-27iss035e019855.xmp | 2013_04_17_xmp/2013-04-17T10-37-27iss035e019856.xmp
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_24_txt.zip,788,txt:788,0.5,0.7,2013_04_24_txt/iss035e026569.txt | 2013_04_24_txt/iss035e026570.txt | 2013_04_24_txt/iss035e026571.txt
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_24_xmp.zip,773,xmp:773,1.2,2.8,2013_04_24_xmp/2013-04-24T13-00-20iss035e026569.xmp | 2013_04_24_xmp/2013-04-24T13-00-20iss035e026570.xmp | 2013_04_24_xmp/2013-04-24T13-00-20iss035e026571.xmp
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_27_txt.zip,622,txt:622,0.4,0.5,2013_04_27_txt/iss035e029099.txt | 2013_04_27_txt/iss035e029100.txt | 2013_04_27_txt/iss035e029101.txt
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_27_xmp.zip,622,xmp:622,1.0,2.3,2013_04_27_xmp/2013-04-27T09-41-00iss035e029099.xmp | 2013_04_27_xmp/2013-04-27T09-41-00iss035e029100.xmp | 2013_04_27_xmp/2013-04-27T09-41-00iss035e029101.xmp
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_30_txt.zip,336,txt:336,0.2,0.3,2013_04_30_txt/iss035e030342.txt | 2013_04_30_txt/iss035e030343.txt | 2013_04_30_txt/iss035e030344.txt
+PSI-26,Raw Data,PSI-26_Raw Data_2013_04_30_xmp.zip,336,xmp:336,0.5,1.2,2013_04_30_xmp/2013-04-30T12-35-06iss035e030342.xmp | 2013_04_30_xmp/2013-04-30T12-35-06iss035e030343.xmp | 2013_04_30_xmp/2013-04-30T12-35-07iss035e030344.xmp
+PSI-26,Raw Data,PSI-26_Raw Data_2013_05_03_txt.zip,463,txt:463,0.3,0.4,2013_05_02_txt/iss035e032872.txt | 2013_05_02_txt/iss035e032873.txt | 2013_05_02_txt/iss035e032874.txt
+PSI-26,Raw Data,PSI-26_Raw Data_2013_05_03_xmp.zip,463,xmp:463,0.7,1.7,2013_05_03_xmp/2013-05-03T11-36-02iss035e032872.xmp | 2013_05_03_xmp/2013-05-03T11-36-03iss035e032873.xmp | 2013_05_03_xmp/2013-05-03T11-36-03iss035e032874.xmp
+PSI-26,Raw Data,PSI-26_Raw Data_2013_05_16_xmp.zip,271,xmp:271,0.4,1.0,2013_05_16_xmp/2013-05-16T08-33-34iss036e000336.xmp | 2013_05_16_xmp/2013-05-16T08-33-34iss036e000337.xmp | 2013_05_16_xmp/2013-05-16T08-33-35iss036e000338.xmp
+PSI-26,Raw Data,PSI-26_Raw Data_2013_05_18_xmp.zip,788,xmp:788,1.2,2.9,2013_05_18_xmp/2013-05-18T10-27-10iss036e001148.xmp | 2013_05_18_xmp/2013-05-18T10-27-10iss036e001149.xmp | 2013_05_18_xmp/2013-05-18T10-27-10iss036e001150.xmp
+PSI-26,Raw Data,PSI-26_Raw Data_2013_05_31_xmp.zip,149,xmp:149,0.2,0.5,2013_05_31_xmp/2013-05-31T08-56-12iss036e004902.xmp | 2013_05_31_xmp/2013-05-31T08-56-12iss036e004903.xmp | 2013_05_31_xmp/2013-05-31T08-56-12iss036e004904.xmp
+PSI-26,Raw Data,PSI-26_Raw Data_2013_07_09_orig.zip,1,jpg:1,0.2,0.2,2013_07_09_orig/20130709 14.09.32-05.00 iss035e040444.jpg
+PSI-26,Raw Data,PSI-26_Raw Data_2013_07_09_txt.zip,1,txt:1,0.0,0.0,2013_07_09_txt/iss035e040444.txt
+PSI-39,metadata,PSI-39_metadata_PSI-118_CFI.zip,2,txt:2,0.0,0.0,i_Investigation.txt | s_PSI-39.txt
+PSI-39,Raw Data,PSI-39_Raw Data_FLEX-1387-F233D05 Settings.zip,11,txt:11,0.1,0.6,FLEX-1387-F233D05 Settings/F233D05.txt | FLEX-1387-F233D05 Settings/F233D05_Chamber_Readings.txt | FLEX-1387-F233D05 Settings/F233D05_Color_Camera_Settings.txt
+PSI-47,metadata,PSI-47_metadata_PSI-126_DAFT_DAFT-2.zip,2,txt:2,0.0,0.0,i_Investigation.txt | s_PSI-47.txt
+PSI-60,metadata,PSI-60_metadata_NEWID-5_Computational and Ex.zip,2,txt:2,0.0,0.0,i_Investigation.txt | s_PSI-60.txt
+PSI-62,metadata,PSI-62_metadata_NEWID-7_Concurrent Flame Spr.zip,2,txt:2,0.0,0.0,i_Investigation.txt | s_PSI-62.txt
+PSI-98,Raw Data,PSI-98_Raw Data_F1C1-Raw_DistroMaster_originals.zip,2,raw:2,1.8,2.4,F1C1-1465936980497.raw | F1C1-1465936981664.raw
+PSI-98,Raw Data,PSI-98_Raw Data_Mapped_SAFFIRE-1_F1C1_DistortionGrid_1280x920.zip,2,jpg:2,0.2,0.2,Mapped_SAFFIRE-1_F1C1_DistortionGrid-30mmBlock_1280x920.jpg | Mapped_SAFFIRE-1_F1C1_DistortionGrid-30mmBlock_1280x920_mono.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_Mapped_SAFFIRE-1_F1C2_DistortionGrid_1280x920.zip,2,jpg:2,0.2,0.2,Mapped_SAFFIRE-1_F1C2_DistortionGrid-30mmBlock_1280x920.jpg | Mapped_SAFFIRE-1_F1C2_DistortionGrid-30mmBlock_1280x920_mono.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_S2C1-1465938171811_icmad.zip,3,jpg:3,0.2,0.2,S2C1-1465937797343_icmad.jpg | S2C1-1465937797777_icmad.jpg | S2C1-1465938171811_icmad.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE-1_F1C1_DistortionGrids_1280x920_originals.zip,4,jpg:4,0.6,0.6,SAFFIRE-1_DistortionGrids-30mmBlock_Combined_1280x920_color.jpg | SAFFIRE-1_DistortionGrids-30mmBlock_Combined_1280x920_mono.jpg | SAFFIRE-1_F1C1_DistortionGrid-30mmBlock_1280x920.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE-1_F1C1_DistortionGrids_1360x1024_originals.zip,4,jpg:4,0.6,0.6,SAFFIRE-1_DistortionGrids-30mmBlock_Combined_1360x1024_color.jpg | SAFFIRE-1_DistortionGrids-30mmBlock_Combined_1360x1024_mono.jpg | SAFFIRE-1_F1C1_DistortionGrid-30mmBlock_1360x1024.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE-1_F1C2_DistortionGrid_1280x920.zip,4,jpg:4,0.6,0.6,SAFFIRE-1_DistortionGrids-30mmBlock_Combined_1280x920_color.jpg | SAFFIRE-1_DistortionGrids-30mmBlock_Combined_1280x920_mono.jpg | SAFFIRE-1_F1C2_DistortionGrid-30mmBlock_1280x920.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE-1_F1C2_DistortionGrids_1360x1024.zip,4,jpg:4,0.6,0.6,SAFFIRE-1_DistortionGrids-30mmBlock_Combined_1360x1024_color.jpg | SAFFIRE-1_DistortionGrids-30mmBlock_Combined_1360x1024_mono.jpg | SAFFIRE-1_F1C2_DistortionGrid-30mmBlock_1360x1024.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE-I_F2C1_Mapped_jpeg.zip,778,jpeg:778,69.8,76.2,Mapped_F2C1-1465938488552.jpeg | Mapped_F2C1-1465938488585.jpeg | Mapped_F2C1-1465938488618.jpeg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE-I_Mapped_F1C1_Raw2TIFF.zip,2,jpg:2,0.3,0.3,Mapped_F1C1-1465936980497.jpg | Mapped_F1C1-1465936981664.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_F1C1_JPEG_Mapped.zip,764,jpeg:764,84.8,91.0,Mapped_F1C1-1465936971405.jpeg | Mapped_F1C1-1465936971439.jpeg | Mapped_F1C1-1465936971469.jpeg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_F1C1_jpegs.zip,764,jpeg:764,59.2,61.0,F1C1-1465936971405.jpeg | F1C1-1465936971439.jpeg | F1C1-1465936971469.jpeg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_F1C1_Raw2TIFF.zip,2,jpg:2,0.2,0.2,F1C1-1465936980497.jpg | F1C1-1465936981664.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_F1C2-Raw_DistroMaster.zip,2,raw:2,1.8,2.4,F1C2-1465936980498.raw | F1C2-1465936981664.raw
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_F1C2_jpeg.zip,654,jpeg:654,47.8,49.1,F1C2-1465936971405.jpeg | F1C2-1465936971469.jpeg | F1C2-1465936971502.jpeg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_F1C2_JPEG_Mapped.zip,654,jpeg:654,72.0,76.7,Mapped_F1C2-1465936971405.jpeg | Mapped_F1C2-1465936971469.jpeg | Mapped_F1C2-1465936971502.jpeg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_F1C2_Raw2TIFF.zip,2,jpg:2,0.2,0.2,F1C2-1465936980498.jpg | F1C2-1465936981664.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_F2C1_jpeg.zip,778,jpeg:778,47.5,49.3,F2C1-1465938488552.jpeg | F2C1-1465938488585.jpeg | F2C1-1465938488618.jpeg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_F2C2_jpeg.zip,778,jpeg:778,40.0,41.9,F2C2-1465938488551.jpeg | F2C2-1465938488585.jpeg | F2C2-1465938488618.jpeg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_F2C2_Mapped_jpeg.zip,778,jpeg:778,63.7,69.8,Mapped_F2C2-1465938488551.jpeg | Mapped_F2C2-1465938488585.jpeg | Mapped_F2C2-1465938488618.jpeg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_Mapped_F1C2_Raw2TIFF.zip,2,jpg:2,0.3,0.3,Mapped_F1C2-1465936980498.jpg | Mapped_F1C2-1465936981664.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S1C1_jpeg_part1.zip,5000,jpeg:5000,96.4,157.2,S1C1-1465937101465.jpeg | S1C1-1465937101499.jpeg | S1C1-1465937101532.jpeg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S1C1_jpeg_part2.zip,5000,jpeg:5000,83.5,148.0,S1C1-1465937275209.jpeg | S1C1-1465937275243.jpeg | S1C1-1465937275276.jpeg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S1C1_jpeg_part3.zip,4388,jpeg:4388,69.8,129.7,S1C1-1465937442712.jpeg | S1C1-1465937442745.jpeg | S1C1-1465937442778.jpeg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S1C1_Raw2TIFF_Complete.zip,933,jpg:933,19.2,23.1,S1C1-1465937102299.jpg | S1C1-1465937102723.jpg | S1C1-1465937104374.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S1C1_Raw2TIFF_Mapped_JPEGS.zip,933,jpg:933,25.8,33.5,Mapped_S1C1-1465937102299.jpg | Mapped_S1C1-1465937102723.jpg | Mapped_S1C1-1465937104374.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S1C1Raw2TIFF_Complete_icmad.zip,933,jpg:933,26.1,30.2,S1C1-1465937102299_icmad.jpg | S1C1-1465937102723_icmad.jpg | S1C1-1465937104374_icmad.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S1C2_jpeg_part1.zip,5000,jpeg:5000,79.8,148.0,S1C2-1465937098443.jpeg | S1C2-1465937098476.jpeg | S1C2-1465937098523.jpeg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S1C2_jpeg_part2.zip,5000,jpeg:5000,83.6,148.4,S1C2-1465937269029.jpeg | S1C2-1465937269062.jpeg | S1C2-1465937269096.jpeg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S1C2_jpeg_part3.zip,4553,jpeg:4553,75.4,134.6,S1C2-1465937436621.jpeg | S1C2-1465937436647.jpeg | S1C2-1465937436681.jpeg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S1C2_Raw2TIFF_Complete.zip,547,jpg:547,14.7,16.8,S1C2-1465937102297.jpg | S1C2-1465937102727.jpg | S1C2-1465937254405.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S1C2_RAW2TIFF_Complete_icmad.zip,547,jpg:547,18.8,21.0,S1C2-1465937102297_icmad.jpg | S1C2-1465937102727_icmad.jpg | S1C2-1465937254405_icmad.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S2C1_jpeg.zip,4550,jpeg:4550,66.3,130.7,S2C1-1465937796510.jpeg | S2C1-1465937796543.jpeg | S2C1-1465937796577.jpeg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S2C1_Raw2TIFF_Complete_JPEGS.zip,3,jpg:3,0.2,0.2,S2C1-1465937797343.jpg | S2C1-1465937797777.jpg | S2C1-1465938171811.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S2C1_Raw2TIFF_Mapped_JPEGS.zip,3,jpg:3,0.2,0.2,Mapped_S2C1-1465937797343.jpg | Mapped_S2C1-1465937797777.jpg | Mapped_S2C1-1465938171811.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S2C1_Raw_DistroMaster.zip,3,raw:3,1.4,3.5,S2C1-1465937797343.raw | S2C1-1465937797777.raw | S2C1-1465938171811.raw
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S2C2_jpeg.zip,4614,jpeg:4614,71.8,132.1,S2C2-1465937796510.jpeg | S2C2-1465937796543.jpeg | S2C2-1465937796576.jpeg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S2C2_Raw2TIFF_Complete.zip,102,jpg:102,1.3,2.7,S2C2-1465937797343.jpg | S2C2-1465937797776.jpg | S2C2-1465937807442.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S2C2_Raw2TIFF_Complete_icmad.zip,102,jpg:102,3.1,3.5,S2C2-1465937797343_icmad.jpg | S2C2-1465937797776_icmad.jpg | S2C2-1465937807442_icmad.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S2C2_Raw2TIFF_Mapped.zip,102,jpg:102,1.2,4.1,Mapped_S2C2-1465937797343.jpg | Mapped_S2C2-1465937797776.jpg | Mapped_S2C2-1465937807442.jpg
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_I_S2C2_Raw_DistroMaster.zip,102,raw:102,37.4,120.1,S2C2-1465937797343.raw | S2C2-1465937797776.raw | S2C2-1465937807442.raw
+PSI-98,Raw Data,PSI-98_Raw Data_SAFFIRE_S1C2_RAW2TIFF_Mapped_JPEGS.zip,547,jpg:547,19.6,23.9,Mapped_S1C2-1465937102297.jpg | Mapped_S1C2-1465937102727.jpg | Mapped_S1C2-1465937254405.jpg

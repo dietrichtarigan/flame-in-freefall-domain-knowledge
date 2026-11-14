@@ -1,0 +1,8 @@
+
+== flex_K: n=257, hari=80
+  ridge (fitur lama)       per-hari [0.579 0.089]  acak [0.61  0.086]
+  random forest            per-hari [0.484 0.099]  acak [0.58  0.089]
+  extra trees              per-hari [0.459 0.101]  acak [0.574 0.09 ]
+  gradient boosting        per-hari [0.427 0.104]  acak [0.544 0.093]
+  proses Gaussian          per-hari [0.466 0.1  ]  acak [0.595 0.088]
+  MLP (jaringan saraf)     per-hari [-0.013  0.138]  acak [0.193 0.124]

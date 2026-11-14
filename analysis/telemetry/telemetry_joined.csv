@@ -1,0 +1,944 @@
+accession,test_point,match,ignited_tel,burn_duration_s,t_ignite_s,t_extinct_s,tc_burner_rise_v,fuel_flow_mean,record_s,n_samples,ended,table_row,table_granularity,fuel,configuration,o2_mole_frac,pressure_kpa,ignited_table,file
+PSI-10,19115A1,uji,ya,63.25,25.43,88.68,0.0105,1.8964,88.68,11086,rekaman berakhir saat burner masih panas,19115A1,test,C2H4,normal flame,0.207128374,103.145624,,PSI-10_Raw Data_19115A1_data.csv
+PSI-10,19115B1,uji,ya,67.99,29.59,97.58,0.01211,1.2512,97.58,12199,rekaman berakhir saat burner masih panas,19115B1,test,C2H4,normal flame,0.205663073,103.076676,,PSI-10_Raw Data_19115B1_data.csv
+PSI-10,19115B2,uji,ya,66.05,26.46,92.51,0.01224,1.0092,92.51,11564,rekaman berakhir saat burner masih panas,19115B2,test,C2H4,normal flame,0.204939076,103.007729,,PSI-10_Raw Data_19115B2_data.csv
+PSI-10,19115C1,tidak ada,ya,22.62,30.86,53.47,0.001978,0.0039,53.47,6685,rekaman berakhir saat burner masih panas,,,,,,,,PSI-10_Raw Data_19115C1_data.csv
+PSI-10,19115D1,tidak ada,ya,26.5,23.12,49.62,0.001141,-0.0068,49.62,6204,rekaman berakhir saat burner masih panas,,,,,,,,PSI-10_Raw Data_19115D1_data.csv
+PSI-10,19115D2,uji,ya,37.57,26.25,63.82,0.00495,0.9526,63.82,7978,rekaman berakhir saat burner masih panas,19115D2,test,C2H4,normal flame,0.206169206,102.973255,,PSI-10_Raw Data_19115D2_data.csv
+PSI-10,19115F1,uji,ya,49.63,28.59,78.22,0.006005,0.7795,78.22,9779,rekaman berakhir saat burner masih panas,19115F1,test,C2H4,normal flame,0.20431758,103.007729,,PSI-10_Raw Data_19115F1_data.csv
+PSI-10,19115G1,uji,ya,46.74,25.48,72.22,0.006048,0.7238,72.22,9028,rekaman berakhir saat burner masih panas,19115G1,test,C2H4,normal flame,0.203863566,103.007729,,PSI-10_Raw Data_19115G1_data.csv
+PSI-10,19115H1,tidak ada,tidak,,,,0.000301,,45.22,5653,,,,,,,,,PSI-10_Raw Data_19115H1_data.csv
+PSI-10,19115K1,uji,ya,36.23,26.94,63.18,0.001249,-0.015,63.18,7898,rekaman berakhir saat burner masih panas,19115K1,test,C2H4,normal flame,0.203460708,103.11115,,PSI-10_Raw Data_19115K1_data.csv
+PSI-10,19115L1,uji,ya,39.9,30.7,70.59,0.002973,2.4771,70.59,8825,rekaman berakhir saat burner masih panas,19115L1,test,C2H4,normal flame,0.202822015,103.421414,,PSI-10_Raw Data_19115L1_data.csv
+PSI-10,19115M4,uji,ya,53.84,26.88,80.72,0.007842,1.1901,80.72,10091,rekaman berakhir saat burner masih panas,19115M4,test,C2H4,normal flame,0.201357214,103.249045,,PSI-10_Raw Data_19115M4_data.csv
+PSI-10,19115N1,uji,ya,26.34,23.88,50.22,0.001458,-0.0204,50.22,6278,rekaman berakhir saat burner masih panas,19115N1,test,C2H4,normal flame,0.201883189,103.214571,,PSI-10_Raw Data_19115N1_data.csv
+PSI-10,19115P1,tidak ada,ya,22.58,23.49,46.07,0.001493,0.0061,46.07,5760,rekaman berakhir saat burner masih panas,,,,,,,,PSI-10_Raw Data_19115P1_data.csv
+PSI-10,19115Q1,uji,ya,50.08,28.6,78.68,0.006953,0.9848,78.68,9836,rekaman berakhir saat burner masih panas,19115Q1,test,C2H4,normal flame,0.200867151,103.317993,,PSI-10_Raw Data_19115Q1_data.csv
+PSI-10,19123A1,uji,ya,35.18,23.2,58.38,0.003629,0.0034,58.38,7299,rekaman berakhir saat burner masih panas,19123A1,test,C2H4,normal flame,0.209828781,101.870093,,PSI-10_Raw Data_19123A1_data.csv
+PSI-10,19123A2,uji,ya,33.87,26.8,60.67,0.00371,-0.0122,60.67,7585,rekaman berakhir saat burner masih panas,19123A2,test,C2H4,normal flame,0.20919187,102.145883,,PSI-10_Raw Data_19123A2_data.csv
+PSI-10,19123A3,uji,ya,32.46,24.11,56.57,0.003516,-0.0122,56.57,7072,rekaman berakhir saat burner masih panas,19123A3,test,C2H4,normal flame,0.208580728,102.421674,,PSI-10_Raw Data_19123A3_data.csv
+PSI-10,19123A4,uji,ya,32.19,24.38,56.57,0.003466,-0.0073,56.57,7072,rekaman berakhir saat burner masih panas,19123A4,test,C2H4,normal flame,0.207973375,102.456148,,PSI-10_Raw Data_19123A4_data.csv
+PSI-10,19123B1,uji,ya,28.29,27.42,55.71,0.001194,-0.0259,55.71,6965,rekaman berakhir saat burner masih panas,19123B1,test,C2H4,normal flame,0.204429245,103.249045,,PSI-10_Raw Data_19123B1_data.csv
+PSI-10,19123C1,uji,ya,47.17,24.55,71.72,0.002987,1.2671,71.72,8966,rekaman berakhir saat burner masih panas,19123C1,test,C2H4,normal flame,0.207379511,102.3872,,PSI-10_Raw Data_19123C1_data.csv
+PSI-10,19123D1,uji,ya,28.53,24.09,52.62,0.001433,-0.0279,52.62,6578,rekaman berakhir saat burner masih panas,19123D1,test,C2H4,normal flame,0.203807321,103.352467,,PSI-10_Raw Data_19123D1_data.csv
+PSI-10,19123F1,uji,ya,45.96,24.86,70.82,0.003514,1.262,70.82,8853,rekaman berakhir saat burner masih panas,19123F1,test,C2H4,normal flame,0.20666972,102.594043,,PSI-10_Raw Data_19123F1_data.csv
+PSI-10,19123F2,uji,ya,45.83,27.98,73.82,0.003469,1.2619,73.82,9228,rekaman berakhir saat burner masih panas,19123F2,test,C2H4,normal flame,0.206083892,102.662991,,PSI-10_Raw Data_19123F2_data.csv
+PSI-10,19123F3,uji,ya,32.46,24.25,56.71,0.003205,-0.007,56.71,7090,rekaman berakhir saat burner masih panas,19123F3,test,C2H4,normal flame,0.205485391,102.800886,,PSI-10_Raw Data_19123F3_data.csv
+PSI-10,19123H1,tidak ada,tidak,,,,0.000122,,48.71,6090,,,,,,,,,PSI-10_Raw Data_19123H1_data.csv
+PSI-10,19123J1,uji,ya,24.55,28.16,52.71,0.001027,-0.0442,52.71,6590,rekaman berakhir saat burner masih panas,19123J1,test,C2H4,normal flame,0.20322776,103.421414,,PSI-10_Raw Data_19123J1_data.csv
+PSI-10,19123K1,uji,ya,30.03,27.79,57.82,0.001773,-0.0254,57.82,7228,rekaman berakhir saat burner masih panas,19123K1,test,C2H4,normal flame,0.204907733,103.076676,,PSI-10_Raw Data_19123K1_data.csv
+PSI-10,19123L1,uji,ya,39.7,23.86,63.57,0.002154,3.5423,63.57,7947,rekaman berakhir saat burner masih panas,19123L1,test,C2H4,normal flame,0.202550678,103.524836,,PSI-10_Raw Data_19123L1_data.csv
+PSI-10,19123L2,uji,ya,39.66,27.02,66.68,0.002107,3.0774,66.68,8336,rekaman berakhir saat burner masih panas,19123L2,test,C2H4,normal flame,0.201832917,103.559309,,PSI-10_Raw Data_19123L2_data.csv
+PSI-10,19123L3,uji,ya,37.72,22.85,60.57,0.001913,-0.0148,60.57,7572,rekaman berakhir saat burner masih panas,19123L3,test,C2H4,normal flame,0.201123228,103.593783,,PSI-10_Raw Data_19123L3_data.csv
+PSI-10,19123L4,uji,ya,42.16,24.42,66.58,0.00387,1.4647,66.58,8323,rekaman berakhir saat burner masih panas,19123L4,test,C2H4,normal flame,0.200535703,103.628257,,PSI-10_Raw Data_19123L4_data.csv
+PSI-10,19123L5,uji,ya,39.24,24.34,63.58,0.00331,0.2131,63.58,7948,rekaman berakhir saat burner masih panas,19123L5,test,C2H4,normal flame,0.200108197,103.559309,,PSI-10_Raw Data_19123L5_data.csv
+PSI-10,19123L6,uji,ya,41.09,25.49,66.58,0.003622,1.1847,66.58,8323,rekaman berakhir saat burner masih panas,19123L6,test,C2H4,normal flame,0.199796361,103.593783,,PSI-10_Raw Data_19123L6_data.csv
+PSI-10,19123L7,uji,ya,45.51,28.63,74.14,0.007669,0.4703,74.14,9269,rekaman berakhir saat burner masih panas,19123L7,test,C2H4,normal flame,0.199415737,103.490362,,PSI-10_Raw Data_19123L7_data.csv
+PSI-10,19123L8,tidak ada,tidak,,,,9e-06,,60.07,7510,,,,,,,,,PSI-10_Raw Data_19123L8_data.csv
+PSI-10,19137A1,uji,ya,34.02,28.67,62.69,0.002913,-0.0094,62.69,7837,rekaman berakhir saat burner masih panas,19137A1,test,C2H4,normal flame,0.210188478,101.973514,,PSI-10_Raw Data_19137A1_data.csv
+PSI-10,19137B1,uji,ya,41.18,28.43,69.62,0.002737,-0.0045,69.62,8703,rekaman berakhir saat burner masih panas,19137B1,test,C2H4,normal flame,0.209521205,102.007988,,PSI-10_Raw Data_19137B1_data.csv
+PSI-10,19137D1,uji,ya,32.06,25.57,57.62,0.001544,-0.0123,57.62,7204,rekaman berakhir saat burner masih panas,19137D1,test,C2H4,normal flame,0.208021363,102.249305,,PSI-10_Raw Data_19137D1_data.csv
+PSI-10,19137F1,uji,ya,26.19,29.42,55.61,0.001304,-0.0257,55.61,6952,rekaman berakhir saat burner masih panas,19137F1,test,C2H4,normal flame,0.207274975,102.3872,,PSI-10_Raw Data_19137F1_data.csv
+PSI-10,19137F2,uji,ya,31.58,27.04,58.62,0.001306,-0.0122,58.62,7328,rekaman berakhir saat burner masih panas,19137F2,test,C2H4,normal flame,0.206583339,102.421674,,PSI-10_Raw Data_19137F2_data.csv
+PSI-10,19137F3,uji,ya,34.68,25.94,60.62,0.001101,-0.0069,60.62,7578,rekaman berakhir saat burner masih panas,19137F3,test,C2H4,normal flame,0.205935113,102.559569,,PSI-10_Raw Data_19137F3_data.csv
+PSI-10,19137G1,uji,ya,39.38,28.31,67.69,0.003025,-0.0095,67.69,8462,rekaman berakhir saat burner masih panas,19137G1,test,C2H4,normal flame,0.205363297,102.594043,,PSI-10_Raw Data_19137G1_data.csv
+PSI-10,19137H1,uji,ya,38.39,24.28,62.67,0.002973,-0.0119,62.67,7835,rekaman berakhir saat burner masih panas,19137H1,test,C2H4,normal flame,0.204891116,102.628517,,PSI-10_Raw Data_19137H1_data.csv
+PSI-10,19137J1,uji,ya,38.38,25.1,63.48,0.002883,-0.0071,63.48,7936,rekaman berakhir saat burner masih panas,19137J1,test,C2H4,normal flame,0.204441536,102.525095,,PSI-10_Raw Data_19137J1_data.csv
+PSI-10,19137K1,uji,ya,38.4,25.18,63.58,0.003112,-0.0018,63.58,7948,rekaman berakhir saat burner masih panas,19137K1,test,C2H4,normal flame,0.20401684,102.456148,,PSI-10_Raw Data_19137K1_data.csv
+PSI-10,19137K2,uji,ya,37.44,25.03,62.47,0.002875,-0.007,62.47,7810,rekaman berakhir saat burner masih panas,19137K2,test,C2H4,normal flame,0.203628498,102.490622,,PSI-10_Raw Data_19137K2_data.csv
+PSI-10,19137L1,uji,ya,41.25,25.47,66.72,0.003708,0.041,66.72,8341,rekaman berakhir saat burner masih panas,19137L1,test,C2H4,normal flame,0.203230898,102.490622,,PSI-10_Raw Data_19137L1_data.csv
+PSI-10,19137L2,uji,ya,44.02,26.6,70.62,0.005121,1.2836,70.62,8829,rekaman berakhir saat burner masih panas,19137L2,test,C2H4,normal flame,0.202842409,102.525095,,PSI-10_Raw Data_19137L2_data.csv
+PSI-10,19137L3,uji,ya,43.23,28.39,71.62,0.004875,0.414,71.62,8953,rekaman berakhir saat burner masih panas,19137L3,test,C2H4,normal flame,0.202392691,102.628517,,PSI-10_Raw Data_19137L3_data.csv
+PSI-10,19137L4,uji,ya,43.32,27.3,70.62,0.005102,0.3653,70.62,8828,rekaman berakhir saat burner masih panas,19137L4,test,C2H4,normal flame,0.201997282,102.800886,,PSI-10_Raw Data_19137L4_data.csv
+PSI-10,19137L5,uji,ya,42.3,25.34,67.64,0.005004,0.0625,67.64,8456,rekaman berakhir saat burner masih panas,19137L5,test,C2H4,normal flame,0.201642461,102.628517,,PSI-10_Raw Data_19137L5_data.csv
+PSI-10,19137L6,uji,ya,45.15,25.57,70.72,0.004866,1.3796,70.72,8841,rekaman berakhir saat burner masih panas,19137L6,test,C2H4,normal flame,0.201330073,102.662991,,PSI-10_Raw Data_19137L6_data.csv
+PSI-10,19137L7,uji,ya,42.42,25.19,67.62,0.004317,0.0823,67.62,8453,rekaman berakhir saat burner masih panas,19137L7,test,C2H4,normal flame,0.200879825,102.697464,,PSI-10_Raw Data_19137L7_data.csv
+PSI-10,19137L8,uji,ya,44.3,25.31,69.62,0.004865,1.2889,69.62,8703,rekaman berakhir saat burner masih panas,19137L8,test,C2H4,normal flame,0.200458311,102.766412,,PSI-10_Raw Data_19137L8_data.csv
+PSI-10,19142B1,tidak ada,ya,24.06,24.86,48.92,0.002647,0.0035,48.92,6116,rekaman berakhir saat burner masih panas,,,,,,,,PSI-10_Raw Data_19142B1_data.csv
+PSI-10,19142F1,uji,ya,77.72,41.18,118.9,0.009263,1.8181,118.9,14863,rekaman berakhir saat burner masih panas,19142F1,test,C2H4,normal flame,0.378755156,104.455628,,PSI-10_Raw Data_19142F1_data.csv
+PSI-10,19142G1,uji,ya,166.93,35.04,201.97,0.02032,2.571,201.97,25247,rekaman berakhir saat burner masih panas,19142G1,test,C2H4,normal flame,0.396945546,103.180098,,PSI-10_Raw Data_19142G1_data.csv
+PSI-10,19142G2,uji,ya,106.34,41.49,147.83,0.014047,3.406,147.83,18481,rekaman berakhir saat burner masih panas,19142G2,test,C2H4,normal flame,0.389985715,103.662731,,PSI-10_Raw Data_19142G2_data.csv
+PSI-10,19142G3,uji,ya,77.58,44.26,121.84,0.010811,1.9834,121.84,15231,rekaman berakhir saat burner masih panas,19142G3,test,C2H4,normal flame,0.38379786,104.007469,,PSI-10_Raw Data_19142G3_data.csv
+PSI-10,19142G4,uji,ya,102.57,38.07,140.64,0.019773,1.9281,140.64,17581,rekaman berakhir saat burner masih panas,19142G4,test,C2H4,normal flame,0.378720538,100.560088,,PSI-10_Raw Data_19142G4_data.csv
+PSI-10,19142G5,uji,ya,90.99,37.83,128.82,0.025378,1.2783,128.82,16105,rekaman berakhir saat burner masih panas,19142G5,test,C2H4,normal flame,0.375586869,100.525615,,PSI-10_Raw Data_19142G5_data.csv
+PSI-10,19142J2,uji,ya,77.74,32.89,110.63,0.011416,4.9761,110.63,13830,rekaman berakhir saat burner masih panas,19142J2,test,C2H4,normal flame,0.373169325,104.800366,,PSI-10_Raw Data_19142J2_data.csv
+PSI-10,19142J3,uji,ya,71.5,33.3,104.79,0.010528,4.9711,104.79,13102,rekaman berakhir saat burner masih panas,19142J3,test,C2H4,normal flame,0.373429444,100.525615,,PSI-10_Raw Data_19142J3_data.csv
+PSI-10,19150A1,uji,ya,37.93,24.78,62.71,0.004182,-0.004,62.71,7840,rekaman berakhir saat burner masih panas,19150A1,test,C2H4,normal flame,0.398236568,102.180357,,PSI-10_Raw Data_19150A1_data.csv
+PSI-10,19150A3,uji,ya,44.02,37.21,81.22,0.004634,0.057,81.22,10154,rekaman berakhir saat burner masih panas,19150A3,test,C2H4,normal flame,0.397053473,102.628517,,PSI-10_Raw Data_19150A3_data.csv
+PSI-10,19150A4,uji,ya,57.95,34.26,92.22,0.006354,1.9155,92.22,11528,rekaman berakhir saat burner masih panas,19150A4,test,C2H4,normal flame,0.395464744,103.214571,,PSI-10_Raw Data_19150A4_data.csv
+PSI-10,19150A5,uji,ya,70.87,38.35,109.22,0.006342,1.5933,109.22,13654,rekaman berakhir saat burner masih panas,19150A5,test,C2H4,normal flame,0.392640279,103.800626,,PSI-10_Raw Data_19150A5_data.csv
+PSI-10,19150B2,uji,ya,52.44,34.78,87.22,0.005938,2.2379,87.22,10904,rekaman berakhir saat burner masih panas,19150B2,test,C2H4,normal flame,0.388949666,104.283259,,PSI-10_Raw Data_19150B2_data.csv
+PSI-10,19150B3,uji,ya,52.17,31.06,83.22,0.005891,2.238,83.22,10404,rekaman berakhir saat burner masih panas,19150B3,test,C2H4,normal flame,0.382816521,105.110631,,PSI-10_Raw Data_19150B3_data.csv
+PSI-10,19150C1,uji,ya,61.26,36.9,98.17,0.006937,2.566,98.17,12272,rekaman berakhir saat burner masih panas,19150C1,test,C2H4,normal flame,0.386279977,104.800366,,PSI-10_Raw Data_19150C1_data.csv
+PSI-10,19150D2,uji,ya,110.13,36.81,146.94,0.006842,3.8535,146.94,18368,rekaman berakhir saat burner masih panas,19150D2,test,C2H4,normal flame,0.380057661,105.145104,,PSI-10_Raw Data_19150D2_data.csv
+PSI-10,19150F1,uji,ya,107.57,32.06,139.63,0.006025,4.9817,139.63,17455,rekaman berakhir saat burner masih panas,19150F1,test,C2H4,normal flame,0.371068834,106.041423,,PSI-10_Raw Data_19150F1_data.csv
+PSI-10,19150G2,uji,ya,65.56,34.17,99.73,0.00668,4.9759,99.73,12467,rekaman berakhir saat burner masih panas,19150G2,test,C2H4,normal flame,0.370409062,105.869054,,PSI-10_Raw Data_19150G2_data.csv
+PSI-10,19150G3,uji,ya,61.64,33.14,94.78,0.006097,4.9736,94.78,11850,rekaman berakhir saat burner masih panas,19150G3,test,C2H4,normal flame,0.358337895,106.317214,,PSI-10_Raw Data_19150G3_data.csv
+PSI-10,19150H1,uji,ya,66.18,29.54,95.72,0.008023,4.9737,95.72,11966,rekaman berakhir saat burner masih panas,19150H1,test,C2H4,normal flame,0.365614547,105.903528,,PSI-10_Raw Data_19150H1_data.csv
+PSI-10,19150J1,uji,ya,69.0,24.58,93.58,0.009837,4.973,93.58,11699,rekaman berakhir saat burner masih panas,19150J1,test,C2H4,normal flame,0.36174856,106.179319,,PSI-10_Raw Data_19150J1_data.csv
+PSI-10,19150N1,uji,ya,189.34,32.9,222.25,0.012642,1.5979,222.25,27782,rekaman berakhir saat burner masih panas,19150N1,test,C2H4,normal flame,0.300281323,102.525095,,PSI-10_Raw Data_19150N1_data.csv
+PSI-10,19150S1,uji,ya,61.21,30.88,92.09,0.017535,1.587,92.09,11512,rekaman berakhir saat burner masih panas,19150S1,test,C2H4,normal flame,0.294018816,102.525095,,PSI-10_Raw Data_19150S1_data.csv
+PSI-10,19156B2,uji,ya,29.74,23.46,53.21,0.00207,-0.0257,53.21,6652,rekaman berakhir saat burner masih panas,19156B2,test,C2H4,normal flame,0.388965886,102.973255,,PSI-10_Raw Data_19156B2_data.csv
+PSI-10,19156B4,uji,ya,101.5,24.23,125.73,0.006728,2.5654,125.73,15717,rekaman berakhir saat burner masih panas,19156B4,test,C2H4,normal flame,0.38786475,104.421155,,PSI-10_Raw Data_19156B4_data.csv
+PSI-10,19156C1,uji,ya,26.68,24.89,51.57,0.007771,4.9679,51.57,6447,rekaman berakhir saat burner masih panas,19156C1,test,C2H4,normal flame,0.376921633,105.593264,,PSI-10_Raw Data_19156C1_data.csv
+PSI-10,19156C2,uji,ya,79.2,31.48,110.68,0.011482,4.9733,110.68,13836,rekaman berakhir saat burner masih panas,19156C2,test,C2H4,normal flame,0.374961367,105.283,,PSI-10_Raw Data_19156C2_data.csv
+PSI-10,19156C3,uji,ya,77.23,35.35,112.58,0.011391,4.9732,112.58,14074,rekaman berakhir saat burner masih panas,19156C3,test,C2H4,normal flame,0.370676005,105.351947,,PSI-10_Raw Data_19156C3_data.csv
+PSI-10,19156J1,uji,ya,77.82,27.77,105.59,0.015187,2.8185,105.59,13199,rekaman berakhir saat burner masih panas,19156J1,test,C2H4,normal flame,0.373448053,104.938262,,PSI-10_Raw Data_19156J1_data.csv
+PSI-10,19156J2,uji,ya,51.33,31.25,82.58,0.019239,2.2405,82.58,10323,rekaman berakhir saat burner masih panas,19156J2,test,C2H4,normal flame,0.370400179,105.007209,,PSI-10_Raw Data_19156J2_data.csv
+PSI-10,19156J3,uji,ya,84.06,28.42,112.48,0.0182,2.5651,112.48,14061,rekaman berakhir saat burner masih panas,19156J3,test,C2H4,normal flame,0.368534858,104.800366,,PSI-10_Raw Data_19156J3_data.csv
+PSI-10,19156J4,uji,ya,44.87,27.71,72.58,0.019293,2.0402,72.58,9074,rekaman berakhir saat burner masih panas,19156J4,test,C2H4,normal flame,0.365929881,104.869314,,PSI-10_Raw Data_19156J4_data.csv
+PSI-10,19156J5,uji,ya,48.01,30.47,78.47,0.019526,2.0405,78.47,9810,rekaman berakhir saat burner masih panas,19156J5,test,C2H4,normal flame,0.364456988,104.869314,,PSI-10_Raw Data_19156J5_data.csv
+PSI-10,19156J6,uji,ya,51.56,32.03,83.59,0.019176,2.1256,83.59,10450,rekaman berakhir saat burner masih panas,19156J6,test,C2H4,normal flame,0.362735024,104.869314,,PSI-10_Raw Data_19156J6_data.csv
+PSI-10,19156J7,uji,ya,57.34,32.34,89.68,0.019137,2.179,89.68,11211,rekaman berakhir saat burner masih panas,19156J7,test,C2H4,normal flame,0.36092323,104.83484,,PSI-10_Raw Data_19156J7_data.csv
+PSI-10,19156K1,uji,ya,48.61,23.1,71.71,0.005016,4.9225,71.71,8965,rekaman berakhir saat burner masih panas,19156K1,test,C2H4,normal flame,0.379703491,105.214052,,PSI-10_Raw Data_19156K1_data.csv
+PSI-10,19171B1,uji,ya,96.61,31.12,127.73,0.009039,2.8458,127.73,15967,rekaman berakhir saat burner masih panas,19171B1,test,C2H4,normal flame,0.378873529,103.38694,,PSI-10_Raw Data_19171B1_data.csv
+PSI-10,19171B3,uji,ya,93.47,33.26,126.73,0.008057,2.4485,126.73,15842,rekaman berakhir saat burner masih panas,19171B3,test,C2H4,normal flame,0.372135709,104.386681,,PSI-10_Raw Data_19171B3_data.csv
+PSI-10,19171D1,uji,ya,119.42,32.37,151.79,0.014756,4.9791,151.79,18975,rekaman berakhir saat burner masih panas,19171D1,test,C2H4,normal flame,0.394349885,102.800886,,PSI-10_Raw Data_19171D1_data.csv
+PSI-10,19171D2,uji,ya,82.39,39.2,121.59,0.012501,4.9765,121.59,15200,rekaman berakhir saat burner masih panas,19171D2,test,C2H4,normal flame,0.386570926,102.662991,,PSI-10_Raw Data_19171D2_data.csv
+PSI-10,19171D3,uji,ya,49.84,31.83,81.67,0.009509,4.9686,81.67,10210,rekaman berakhir saat burner masih panas,19171D3,test,C2H4,normal flame,0.381344603,102.594043,,PSI-10_Raw Data_19171D3_data.csv
+PSI-10,19171D4,uji,ya,75.99,38.68,114.67,0.01165,4.9764,114.67,14336,rekaman berakhir saat burner masih panas,19171D4,test,C2H4,normal flame,0.378553501,102.490622,,PSI-10_Raw Data_19171D4_data.csv
+PSI-10,19171D5,uji,ya,73.22,38.46,111.69,0.011352,4.976,111.69,13962,rekaman berakhir saat burner masih panas,19171D5,test,C2H4,normal flame,0.373907361,102.559569,,PSI-10_Raw Data_19171D5_data.csv
+PSI-10,19171J1,uji,ya,84.46,28.26,112.72,0.015323,2.0382,112.72,14091,rekaman berakhir saat burner masih panas,19171J1,test,C2H4,normal flame,0.365351771,105.179578,,PSI-10_Raw Data_19171J1_data.csv
+PSI-10,19171J2,uji,ya,53.19,29.4,82.59,0.017094,2.03,82.59,10325,rekaman berakhir saat burner masih panas,19171J2,test,C2H4,normal flame,0.362579633,105.007209,,PSI-10_Raw Data_19171J2_data.csv
+PSI-10,19171J3,uji,ya,59.46,28.17,87.62,0.010533,2.0328,87.62,10954,rekaman berakhir saat burner masih panas,19171J3,test,C2H4,normal flame,0.361426502,105.214052,,PSI-10_Raw Data_19171J3_data.csv
+PSI-10,19171J4,uji,ya,79.32,30.38,109.7,0.013632,2.0381,109.7,13714,rekaman berakhir saat burner masih panas,19171J4,test,C2H4,normal flame,0.35959538,105.420895,,PSI-10_Raw Data_19171J4_data.csv
+PSI-10,19171S1,uji,ya,61.51,36.22,97.73,0.019879,1.913,97.73,12217,rekaman berakhir saat burner masih panas,19171S1,test,C2H4,normal flame,0.369543498,102.662991,,PSI-10_Raw Data_19171S1_data.csv
+PSI-10,19175A2,uji,ya,57.58,31.04,88.62,0.016423,1.4409,88.62,11079,rekaman berakhir saat burner masih panas,19175A2,test,C2H4,normal flame,0.398389773,128.070185,,PSI-10_Raw Data_19175A2_data.csv
+PSI-10,19175A3,uji,ya,147.5,33.0,180.5,0.016131,3.8508,180.5,22563,rekaman berakhir saat burner masih panas,19175A3,test,C2H4,normal flame,0.397248069,129.069925,,PSI-10_Raw Data_19175A3_data.csv
+PSI-10,19175A4,uji,ya,61.64,31.98,93.62,0.013487,3.8426,93.62,11703,rekaman berakhir saat burner masih panas,19175A4,test,C2H4,normal flame,0.390982574,128.621766,,PSI-10_Raw Data_19175A4_data.csv
+PSI-10,19175B1,uji,ya,45.15,27.57,72.72,0.009832,2.5361,72.72,9091,rekaman berakhir saat burner masih panas,19175B1,test,C2H4,normal flame,0.388733316,128.414923,,PSI-10_Raw Data_19175B1_data.csv
+PSI-10,19175B2,tidak ada,ya,24.46,27.26,51.72,0.001499,-0.0014,51.72,6466,rekaman berakhir saat burner masih panas,,,,,,,,PSI-10_Raw Data_19175B2_data.csv
+PSI-10,19175B4,uji,ya,79.42,35.2,114.62,0.014159,2.5656,114.62,14329,rekaman berakhir saat burner masih panas,19175B4,test,C2H4,normal flame,0.387591064,128.035711,,PSI-10_Raw Data_19175B4_data.csv
+PSI-10,19175B5,uji,ya,57.99,40.74,98.73,0.011937,2.5604,98.73,12342,rekaman berakhir saat burner masih panas,19175B5,test,C2H4,normal flame,0.384886695,128.20808,,PSI-10_Raw Data_19175B5_data.csv
+PSI-10,19175B6,uji,ya,44.57,40.16,84.73,0.006729,2.5523,84.73,10592,rekaman berakhir saat burner masih panas,19175B6,test,C2H4,normal flame,0.389437129,127.001497,,PSI-10_Raw Data_19175B6_data.csv
+PSI-10,19175B7,uji,ya,49.34,39.28,88.62,0.007371,2.558,88.62,11078,rekaman berakhir saat burner masih panas,19175B7,test,C2H4,normal flame,0.387849574,127.518604,,PSI-10_Raw Data_19175B7_data.csv
+PSI-10,19175B8,uji,ya,51.12,41.61,92.73,0.007541,2.5601,92.73,11592,rekaman berakhir saat burner masih panas,19175B8,test,C2H4,normal flame,0.385960225,127.139392,,PSI-10_Raw Data_19175B8_data.csv
+PSI-10,19175B9,uji,ya,45.86,38.86,84.72,0.007758,2.5525,84.72,10591,rekaman berakhir saat burner masih panas,19175B9,test,C2H4,normal flame,0.383985713,127.380709,,PSI-10_Raw Data_19175B9_data.csv
+PSI-10,19175N1,uji,ya,79.84,41.9,121.74,0.011011,2.5657,121.74,15218,rekaman berakhir saat burner masih panas,19175N1,test,C2H4,normal flame,0.382547209,127.622025,,PSI-10_Raw Data_19175N1_data.csv
+PSI-10,19175N2,uji,ya,69.96,35.76,105.72,0.015726,2.5652,105.72,13216,rekaman berakhir saat burner masih panas,19175N2,test,C2H4,normal flame,0.379403054,127.794394,,PSI-10_Raw Data_19175N2_data.csv
+PSI-10,19175N3,uji,ya,48.19,38.04,86.23,0.019214,1.926,86.23,10780,rekaman berakhir saat burner masih panas,19175N3,test,C2H4,normal flame,0.377441609,127.794394,,PSI-10_Raw Data_19175N3_data.csv
+PSI-10,19182A1,uji,ya,37.79,30.54,68.32,0.002128,0.0332,68.32,8541,rekaman berakhir saat burner masih panas,19182A1,test,C2H4,normal flame,0.385704463,129.759401,,PSI-10_Raw Data_19182A1_data.csv
+PSI-10,19182C1,uji,ya,61.13,36.3,97.42,0.004869,1.2599,97.42,12179,rekaman berakhir saat burner masih panas,19182C1,test,C2H4,normal flame,0.384814006,130.552299,,PSI-10_Raw Data_19182C1_data.csv
+PSI-10,19182C2,uji,ya,63.12,36.21,99.33,0.004614,1.2599,99.33,12417,rekaman berakhir saat burner masih panas,19182C2,test,C2H4,normal flame,0.382594439,131.034932,,PSI-10_Raw Data_19182C2_data.csv
+PSI-10,19182F1,uji,ya,94.62,42.43,137.05,0.007638,1.5927,137.05,17132,rekaman berakhir saat burner masih panas,19182F1,test,C2H4,normal flame,0.378429675,132.138094,,PSI-10_Raw Data_19182F1_data.csv
+PSI-10,19182G1,uji,ya,58.71,32.41,91.12,0.012669,1.9076,91.12,11391,rekaman berakhir saat burner masih panas,19182G1,test,C2H4,normal flame,0.398542439,128.20808,,PSI-10_Raw Data_19182G1_data.csv
+PSI-10,19182G2,uji,ya,54.5,35.42,89.92,0.011212,2.235,89.92,11241,rekaman berakhir saat burner masih panas,19182G2,test,C2H4,normal flame,0.396833456,128.414923,,PSI-10_Raw Data_19182G2_data.csv
+PSI-10,19182G3,uji,ya,54.64,33.39,88.03,0.011044,2.235,88.03,11005,rekaman berakhir saat burner masih panas,19182G3,test,C2H4,normal flame,0.39522143,128.656239,,PSI-10_Raw Data_19182G3_data.csv
+PSI-10,19182G6,uji,ya,51.69,30.33,82.02,0.009236,1.9046,82.02,10253,rekaman berakhir saat burner masih panas,19182G6,test,C2H4,normal flame,0.393608129,129.069925,,PSI-10_Raw Data_19182G6_data.csv
+PSI-10,19182G7,uji,ya,72.94,40.09,113.02,0.014397,1.3792,113.02,14129,rekaman berakhir saat burner masih panas,19182G7,test,C2H4,normal flame,0.392269326,129.518084,,PSI-10_Raw Data_19182G7_data.csv
+PSI-10,19182G8,uji,ya,73.96,43.07,117.03,0.014585,1.6411,117.03,14630,rekaman berakhir saat burner masih panas,19182G8,test,C2H4,normal flame,0.390189347,129.828349,,PSI-10_Raw Data_19182G8_data.csv
+PSI-10,19182G9,uji,ya,69.78,33.25,103.02,0.014184,1.9126,103.02,12879,rekaman berakhir saat burner masih panas,19182G9,test,C2H4,normal flame,0.388150549,129.966244,,PSI-10_Raw Data_19182G9_data.csv
+PSI-10,19182N1,uji,ya,50.17,33.85,84.02,0.009589,2.2322,84.02,10503,rekaman berakhir saat burner masih panas,19182N1,test,C2H4,normal flame,0.386276376,130.138613,,PSI-10_Raw Data_19182N1_data.csv
+PSI-10,19182N2,uji,ya,50.86,36.28,87.14,0.009721,2.2319,87.14,10893,rekaman berakhir saat burner masih panas,19182N2,test,C2H4,normal flame,0.389021209,129.828349,,PSI-10_Raw Data_19182N2_data.csv
+PSI-10,19182N3,uji,ya,69.56,37.46,107.02,0.013943,1.9127,107.02,13379,rekaman berakhir saat burner masih panas,19182N3,test,C2H4,normal flame,0.38758473,130.069665,,PSI-10_Raw Data_19182N3_data.csv
+PSI-10,19182N4,uji,ya,69.31,37.72,107.03,0.01366,1.9129,107.03,13379,rekaman berakhir saat burner masih panas,19182N4,test,C2H4,normal flame,0.380272275,131.448618,,PSI-10_Raw Data_19182N4_data.csv
+PSI-10,19189A1,uji,ya,73.19,29.22,102.42,0.004963,1.2593,102.42,12804,rekaman berakhir saat burner masih panas,19189A1,test,C2H4,normal flame,0.398598351,128.035711,,PSI-10_Raw Data_19189A1_data.csv
+PSI-10,19189A2,uji,ya,38.43,27.0,65.43,0.002279,0.036,65.43,8180,rekaman berakhir saat burner masih panas,19189A2,test,C2H4,normal flame,0.395841809,128.690713,,PSI-10_Raw Data_19189A2_data.csv
+PSI-10,19189A3,uji,ya,38.44,27.88,66.32,0.002157,0.0488,66.32,8291,rekaman berakhir saat burner masih panas,19189A3,test,C2H4,normal flame,0.394925333,128.725187,,PSI-10_Raw Data_19189A3_data.csv
+PSI-10,19189A4,uji,ya,33.62,25.79,59.42,0.001695,0.0078,59.42,7428,rekaman berakhir saat burner masih panas,19189A4,test,C2H4,normal flame,0.39150599,129.897296,,PSI-10_Raw Data_19189A4_data.csv
+PSI-10,19189D1,uji,ya,67.14,34.39,101.54,0.004595,1.2598,101.54,12693,rekaman berakhir saat burner masih panas,19189D1,test,C2H4,normal flame,0.394012765,129.242294,,PSI-10_Raw Data_19189D1_data.csv
+PSI-10,19189D2,uji,ya,36.42,30.0,66.43,0.001945,0.0142,66.43,8304,rekaman berakhir saat burner masih panas,19189D2,test,C2H4,normal flame,0.390872924,130.173087,,PSI-10_Raw Data_19189D2_data.csv
+PSI-10,19189D3,uji,ya,63.28,33.04,96.32,0.004553,1.2619,96.32,12041,rekaman berakhir saat burner masih panas,19189D3,test,C2H4,normal flame,0.390078032,130.897037,,PSI-10_Raw Data_19189D3_data.csv
+PSI-10,19189H1,uji,ya,63.93,37.5,101.42,0.006832,1.5874,101.42,12679,rekaman berakhir saat burner masih panas,19189H1,test,C2H4,normal flame,0.387709109,131.724408,,PSI-10_Raw Data_19189H1_data.csv
+PSI-10,19189J1,uji,ya,71.12,36.3,107.42,0.009798,4.9737,107.42,13429,rekaman berakhir saat burner masih panas,19189J1,test,C2H4,normal flame,0.387159045,132.10362,,PSI-10_Raw Data_19189J1_data.csv
+PSI-10,19189J2,uji,ya,68.6,35.82,104.42,0.009374,4.9756,104.42,13054,rekaman berakhir saat burner masih panas,19189J2,test,C2H4,normal flame,0.383237392,132.207041,,PSI-10_Raw Data_19189J2_data.csv
+PSI-10,19189J3,uji,ya,70.68,35.85,106.53,0.009327,4.9735,106.53,13317,rekaman berakhir saat burner masih panas,19189J3,test,C2H4,normal flame,0.379651533,132.207041,,PSI-10_Raw Data_19189J3_data.csv
+PSI-10,19189K1,uji,ya,67.78,34.74,102.53,0.009044,4.9734,102.53,12817,rekaman berakhir saat burner masih panas,19189K1,test,C2H4,normal flame,0.375979956,132.310463,,PSI-10_Raw Data_19189K1_data.csv
+PSI-10,19189K2,uji,ya,66.46,36.07,102.54,0.00913,4.2376,102.54,12818,rekaman berakhir saat burner masih panas,19189K2,test,C2H4,normal flame,0.372524632,132.310463,,PSI-10_Raw Data_19189K2_data.csv
+PSI-10,19189K3,uji,ya,92.24,47.2,139.44,0.017385,1.7847,139.44,17432,rekaman berakhir saat burner masih panas,19189K3,test,C2H4,normal flame,0.369301945,132.310463,,PSI-10_Raw Data_19189K3_data.csv
+PSI-10,19189P1,uji,ya,58.63,34.91,93.55,0.006862,3.5203,93.55,11694,rekaman berakhir saat burner masih panas,19189P1,test,C2H4,normal flame,0.365498172,132.793096,,PSI-10_Raw Data_19189P1_data.csv
+PSI-10,19196A1,uji,ya,48.98,28.94,77.92,0.014253,1.902,77.92,9741,rekaman berakhir saat burner masih panas,19196A1,test,C2H4,normal flame,0.395565745,127.311761,,PSI-10_Raw Data_19196A1_data.csv
+PSI-10,19196A2,uji,ya,77.67,31.26,108.93,0.014751,1.9181,108.93,13617,rekaman berakhir saat burner masih panas,19196A2,test,C2H4,normal flame,0.394453826,127.449656,,PSI-10_Raw Data_19196A2_data.csv
+PSI-10,19196A3,uji,ya,56.32,32.71,89.02,0.01221,1.9123,89.02,11129,rekaman berakhir saat burner masih panas,19196A3,test,C2H4,normal flame,0.392202621,127.690973,,PSI-10_Raw Data_19196A3_data.csv
+PSI-10,19196B1,uji,ya,48.03,30.99,79.03,0.012964,1.9045,79.03,9879,rekaman berakhir saat burner masih panas,19196B1,test,C2H4,normal flame,0.390754941,127.794394,,PSI-10_Raw Data_19196B1_data.csv
+PSI-10,19196B2,uji,ya,61.41,32.52,93.93,0.014836,2.0401,93.93,11742,rekaman berakhir saat burner masih panas,19196B2,test,C2H4,normal flame,0.389782968,127.932289,,PSI-10_Raw Data_19196B2_data.csv
+PSI-10,19196B3,uji,ya,61.03,34.99,96.02,0.013511,2.2402,96.02,12004,rekaman berakhir saat burner masih panas,19196B3,test,C2H4,normal flame,0.388258954,128.001237,,PSI-10_Raw Data_19196B3_data.csv
+PSI-10,19196B4,uji,ya,68.14,33.99,102.12,0.014266,2.2405,102.12,12766,rekaman berakhir saat burner masih panas,19196B4,test,C2H4,normal flame,0.3865883,128.070185,,PSI-10_Raw Data_19196B4_data.csv
+PSI-10,19196C1,uji,ya,61.51,32.26,93.77,0.015487,2.4135,93.77,11722,rekaman berakhir saat burner masih panas,19196C1,test,C2H4,normal flame,0.384641571,128.277027,,PSI-10_Raw Data_19196C1_data.csv
+PSI-10,19196C2,uji,ya,73.41,30.42,103.82,0.016677,2.4162,103.82,12979,rekaman berakhir saat burner masih panas,19196C2,test,C2H4,normal flame,0.383088242,128.277027,,PSI-10_Raw Data_19196C2_data.csv
+PSI-10,19196D1,uji,ya,77.14,33.94,111.08,0.01898,2.4137,111.08,13886,rekaman berakhir saat burner masih panas,19196D1,test,C2H4,normal flame,0.386116096,128.863082,,PSI-10_Raw Data_19196D1_data.csv
+PSI-10,19196D2,uji,ya,62.49,22.39,84.88,0.019066,2.4187,84.88,10611,rekaman berakhir saat burner masih panas,19196D2,test,C2H4,normal flame,0.3842703,129.138873,,PSI-10_Raw Data_19196D2_data.csv
+PSI-10,19196F1,uji,ya,31.42,26.99,58.42,0.002138,0.0064,58.42,7303,rekaman berakhir saat burner masih panas,19196F1,test,C2H4,normal flame,0.382214792,128.20808,,PSI-10_Raw Data_19196F1_data.csv
+PSI-10,19196N1,uji,ya,40.06,25.02,65.08,0.019891,1.915,65.08,8136,rekaman berakhir saat burner masih panas,19196N1,test,C2H4,normal flame,0.381649393,128.794135,,PSI-10_Raw Data_19196N1_data.csv
+PSI-10,19196N2,tidak ada,tidak,,,,1e-05,,50.18,6274,,,,,,,,,PSI-10_Raw Data_19196N2_data.csv
+PSI-10,19200A1,uji,ya,37.5,30.21,67.71,0.006418,-0.0148,67.71,8465,rekaman berakhir saat burner masih panas,19200A1,test,C2H4,normal flame,0.394712947,102.421674,,PSI-10_Raw Data_19200A1_data.csv
+PSI-10,19200A2,uji,ya,23.72,34.61,58.33,0.02052,0.99,58.33,7292,rekaman berakhir saat burner masih panas,19200A2,test,C2H4,normal flame,0.392546384,102.11141,,PSI-10_Raw Data_19200A2_data.csv
+PSI-10,19200A3,uji,ya,61.51,29.71,91.22,0.019279,1.5151,91.22,11404,rekaman berakhir saat burner masih panas,19200A3,test,C2H4,normal flame,0.391981265,102.352726,,PSI-10_Raw Data_19200A3_data.csv
+PSI-10,19200A4,uji,ya,60.33,29.99,90.32,0.015967,1.5153,90.32,11291,rekaman berakhir saat burner masih panas,19200A4,test,C2H4,normal flame,0.390565564,102.525095,,PSI-10_Raw Data_19200A4_data.csv
+PSI-10,19200A5,uji,ya,60.0,34.03,94.03,0.012668,1.9155,94.03,11755,rekaman berakhir saat burner masih panas,19200A5,test,C2H4,normal flame,0.388965224,102.697464,,PSI-10_Raw Data_19200A5_data.csv
+PSI-10,19200A6,uji,ya,56.86,37.06,93.92,0.008469,1.9177,93.92,11741,rekaman berakhir saat burner masih panas,19200A6,test,C2H4,normal flame,0.386954381,102.938781,,PSI-10_Raw Data_19200A6_data.csv
+PSI-10,19200A7,uji,ya,58.21,35.71,93.92,0.010675,1.5153,93.92,11741,rekaman berakhir saat burner masih panas,19200A7,test,C2H4,normal flame,0.384496992,103.145624,,PSI-10_Raw Data_19200A7_data.csv
+PSI-10,19200A8,uji,ya,191.65,36.29,227.94,0.013766,1.5235,227.94,28494,rekaman berakhir saat burner masih panas,19200A8,test,C2H4,normal flame,0.382566898,103.8351,,PSI-10_Raw Data_19200A8_data.csv
+PSI-10,19200H1,uji,ya,135.76,35.68,171.44,0.016824,1.523,171.44,21431,rekaman berakhir saat burner masih panas,19200H1,test,C2H4,normal flame,0.297429735,102.421674,,PSI-10_Raw Data_19200H1_data.csv
+PSI-10,19200H2,uji,ya,131.04,37.5,168.54,0.009987,1.5236,168.54,21068,rekaman berakhir saat burner masih panas,19200H2,test,C2H4,normal flame,0.293952369,102.83536,,PSI-10_Raw Data_19200H2_data.csv
+PSI-10,19200H3,uji,ya,350.89,36.69,387.57,0.013707,1.1502,387.57,48450,rekaman berakhir saat burner masih panas,19200H3,test,C2H4,normal flame,0.289422616,103.8351,,PSI-10_Raw Data_19200H3_data.csv
+PSI-10,19200K1,uji,ya,33.9,32.62,66.53,0.003942,-0.0229,66.53,8317,rekaman berakhir saat burner masih panas,19200K1,test,C2H4,normal flame,0.299432834,102.249305,,PSI-10_Raw Data_19200K1_data.csv
+PSI-10,19206L2,uji,ya,31.14,29.38,60.52,0.001444,-0.0149,60.52,7566,rekaman berakhir saat burner masih panas,19206L2,test,C2H4,normal flame,0.20452292,102.283779,,PSI-10_Raw Data_19206L2_data.csv
+PSI-10,19206L3,uji,ya,34.28,29.34,63.62,0.002153,-0.0071,63.62,7953,rekaman berakhir saat burner masih panas,19206L3,test,C2H4,normal flame,0.203933489,102.352726,,PSI-10_Raw Data_19206L3_data.csv
+PSI-10,19206L4,uji,ya,42.13,32.69,74.82,0.004707,0.0917,74.82,9353,rekaman berakhir saat burner masih panas,19206L4,test,C2H4,normal flame,0.203433022,102.421674,,PSI-10_Raw Data_19206L4_data.csv
+PSI-10,19206L6,uji,ya,53.1,29.33,82.43,0.008167,1.1289,82.43,10304,rekaman berakhir saat burner masih panas,19206L6,test,C2H4,normal flame,0.202879725,102.456148,,PSI-10_Raw Data_19206L6_data.csv
+PSI-10,19206N1,uji,ya,39.66,20.32,59.98,0.006443,0.0277,59.98,7498,rekaman berakhir saat burner masih panas,19206N1,test,C2H4,normal flame,0.199858989,102.525095,,PSI-10_Raw Data_19206N1_data.csv
+PSI-10,21301A1,uji,ya,27.39,29.71,57.1,0.017999,1.0325,57.1,7139,rekaman berakhir saat burner masih panas,21301A1,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301A1_data.csv
+PSI-10,21301A2,uji,ya,28.2,27.78,55.98,0.017652,1.0321,55.98,6999,rekaman berakhir saat burner masih panas,21301A2,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301A2_data.csv
+PSI-10,21301A3,uji,ya,45.05,28.03,73.08,0.01224,1.5162,73.08,9138,rekaman berakhir saat burner masih panas,21301A3,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301A3_data.csv
+PSI-10,21301A4,uji,ya,57.9,29.19,87.09,0.013073,1.3739,87.09,10887,rekaman berakhir saat burner masih panas,21301A4,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301A4_data.csv
+PSI-10,21301A5,uji,ya,58.67,28.32,86.99,0.017363,0.9416,86.99,10875,rekaman berakhir saat burner masih panas,21301A5,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301A5_data.csv
+PSI-10,21301A6,uji,ya,44.69,29.45,74.14,0.017612,0.9022,74.14,9268,rekaman berakhir saat burner masih panas,21301A6,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301A6_data.csv
+PSI-10,21301A7,uji,ya,35.64,26.35,61.99,0.011603,1.0302,61.99,7749,rekaman berakhir saat burner masih panas,21301A7,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301A7_data.csv
+PSI-10,21301A8,uji,ya,33.89,25.1,58.98,0.010336,1.1107,58.98,7374,rekaman berakhir saat burner masih panas,21301A8,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301A8_data.csv
+PSI-10,21301A9,uji,ya,46.22,33.78,80.0,0.015808,0.6791,80.0,10001,rekaman berakhir saat burner masih panas,21301A9,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301A9_data.csv
+PSI-10,21301C1,uji,ya,54.9,42.82,97.71,0.013466,0.9011,97.71,12215,rekaman berakhir saat burner masih panas,21301C1,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301C1_data.csv
+PSI-10,21301C2,uji,ya,41.46,38.25,79.71,0.011622,0.9009,79.71,9965,rekaman berakhir saat burner masih panas,21301C2,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301C2_data.csv
+PSI-10,21301D1,uji,ya,50.36,42.15,92.51,0.011642,0.8507,92.51,11565,rekaman berakhir saat burner masih panas,21301D1,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301D1_data.csv
+PSI-10,21301D2,uji,ya,41.36,41.37,82.73,0.010143,0.85,82.73,10342,rekaman berakhir saat burner masih panas,21301D2,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301D2_data.csv
+PSI-10,21301H1,uji,ya,49.58,31.43,81.0,0.017737,0.9089,81.0,10126,rekaman berakhir saat burner masih panas,21301H1,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301H1_data.csv
+PSI-10,21301H2,uji,ya,37.88,28.0,65.88,0.0176,0.8017,65.88,8236,rekaman berakhir saat burner masih panas,21301H2,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301H2_data.csv
+PSI-10,21301H3,uji,ya,46.61,28.49,75.1,0.017585,0.9022,75.1,9388,rekaman berakhir saat burner masih panas,21301H3,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301H3_data.csv
+PSI-10,21301J3,uji,ya,77.13,47.01,124.14,0.017501,0.5519,124.14,15519,rekaman berakhir saat burner masih panas,21301J3,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301J3_data.csv
+PSI-10,21301J4,uji,ya,330.78,43.62,374.4,0.015291,0.552,374.4,46801,rekaman berakhir saat burner masih panas,21301J4,test,C3H8,normal flame,0.4,94.432143,,PSI-10_Raw Data_21301J4_data.csv
+PSI-10,21328A1,uji,ya,27.96,40.74,68.7,0.006392,0.0058,68.7,8588,rekaman berakhir saat burner masih panas,21328A1,test,C2H4,inverse flame,0.37082819,101.732198,,PSI-10_Raw Data_21328A1_data.csv
+PSI-10,21328A2,uji,ya,27.26,40.22,67.48,0.006226,0.0029,67.48,8436,rekaman berakhir saat burner masih panas,21328A2,test,C2H4,inverse flame,0.371286026,102.11141,,PSI-10_Raw Data_21328A2_data.csv
+PSI-10,21328D1,uji,ya,865.5,48.26,913.75,0.014233,0.003,913.75,114220,rekaman berakhir saat burner masih panas,21328D1,test,C2H4,inverse flame,0.212319452,106.213792,,PSI-10_Raw Data_21328D1_data.csv
+PSI-10,21328N1,uji,ya,20.7,28.26,48.97,0.002346,0.0029,48.97,6122,rekaman berakhir saat burner masih panas,21328N1,test,C2H4,inverse flame,0.849977932,96.76797,,PSI-10_Raw Data_21328N1_data.csv
+PSI-10,21328N2,uji,ya,19.6,27.37,46.97,0.002105,0.004,46.97,5872,rekaman berakhir saat burner masih panas,21328N2,test,C2H4,inverse flame,0.849977932,96.76797,,PSI-10_Raw Data_21328N2_data.csv
+PSI-10,21328N3,uji,ya,22.88,28.09,50.96,0.002656,0.0055,50.96,6373,rekaman berakhir saat burner masih panas,21328N3,test,C2H4,inverse flame,0.849977932,96.871391,,PSI-10_Raw Data_21328N3_data.csv
+PSI-10,21328N4,uji,ya,25.07,23.89,48.96,0.003668,0.003,48.96,6121,rekaman berakhir saat burner masih panas,21328N4,test,C2H4,inverse flame,0.849977932,96.871391,,PSI-10_Raw Data_21328N4_data.csv
+PSI-10,21328N5,uji,ya,42.86,30.11,72.98,0.009521,0.0006,72.98,9123,rekaman berakhir saat burner masih panas,21328N5,test,C2H4,inverse flame,0.849977932,96.905865,,PSI-10_Raw Data_21328N5_data.csv
+PSI-10,21328P1,uji,ya,28.26,41.31,69.58,0.004025,0.0029,69.58,8698,rekaman berakhir saat burner masih panas,21328P1,test,C2H4,inverse flame,0.40193315,96.905865,,PSI-10_Raw Data_21328P1_data.csv
+PSI-10,21340A1,uji,ya,37.72,34.37,72.09,0.010116,0.0029,72.09,9012,rekaman berakhir saat burner masih panas,21340A1,test,C2H4,inverse flame,0.849977932,101.766672,,PSI-10_Raw Data_21340A1_data.csv
+PSI-10,21340A2,uji,ya,35.8,29.18,64.99,0.009996,0.003,64.99,8124,rekaman berakhir saat burner masih panas,21340A2,test,C2H4,inverse flame,0.849977932,101.939041,,PSI-10_Raw Data_21340A2_data.csv
+PSI-10,21340B1,uji,ya,36.34,45.27,81.62,0.007353,0.0031,81.62,10203,rekaman berakhir saat burner masih panas,21340B1,test,C2H4,inverse flame,0.564864309,102.249305,,PSI-10_Raw Data_21340B1_data.csv
+PSI-10,21340B2,uji,ya,34.39,40.22,74.61,0.007129,0.0029,74.61,9327,rekaman berakhir saat burner masih panas,21340B2,test,C2H4,inverse flame,0.565263488,102.421674,,PSI-10_Raw Data_21340B2_data.csv
+PSI-10,21340C1,uji,ya,24.66,46.85,71.5,0.00419,0.0027,71.5,8939,rekaman berakhir saat burner masih panas,21340C1,test,C2H4,inverse flame,0.355416217,102.559569,,PSI-10_Raw Data_21340C1_data.csv
+PSI-10,21340C2,uji,ya,22.33,38.37,60.7,0.003866,0.0057,60.7,7588,rekaman berakhir saat burner masih panas,21340C2,test,C2H4,inverse flame,0.355855949,102.628517,,PSI-10_Raw Data_21340C2_data.csv
+PSI-10,21340C3,uji,ya,23.58,42.03,65.61,0.003883,0.0078,65.61,8202,rekaman berakhir saat burner masih panas,21340C3,test,C2H4,inverse flame,0.289768222,102.938781,,PSI-10_Raw Data_21340C3_data.csv
+PSI-10,21340C4,uji,ya,26.66,40.85,67.51,0.004819,0.0027,67.51,8440,rekaman berakhir saat burner masih panas,21340C4,test,C2H4,inverse flame,0.291369888,102.973255,,PSI-10_Raw Data_21340C4_data.csv
+PSI-10,21340C5,uji,ya,27.14,36.46,63.61,0.007753,0.0021,63.61,7952,rekaman berakhir saat burner masih panas,21340C5,test,C2H4,inverse flame,0.293991022,103.042202,,PSI-10_Raw Data_21340C5_data.csv
+PSI-10,21340C6,uji,ya,24.02,36.58,60.6,0.004455,0.0006,60.6,7576,rekaman berakhir saat burner masih panas,21340C6,test,C2H4,inverse flame,0.291244031,103.249045,,PSI-10_Raw Data_21340C6_data.csv
+PSI-10,21340C7,uji,ya,24.58,36.02,60.6,0.007216,0.0012,60.6,7576,rekaman berakhir saat burner masih panas,21340C7,test,C2H4,inverse flame,0.294875805,103.283519,,PSI-10_Raw Data_21340C7_data.csv
+PSI-10,21340M1,uji,ya,47.3,34.6,81.9,0.006156,0.0032,81.9,10238,rekaman berakhir saat burner masih panas,21340M1,test,C2H4,inverse flame,0.849977932,102.214831,,PSI-10_Raw Data_21340M1_data.csv
+PSI-10,21340M2,uji,ya,127.08,48.55,175.63,0.006233,0.0032,175.63,21956,rekaman berakhir saat burner masih panas,21340M2,test,C2H4,inverse flame,0.469396187,103.007729,,PSI-10_Raw Data_21340M2_data.csv
+PSI-10,21349A1,uji,ya,7.13,32.87,40.0,0.022293,-0.0048,40.0,5000,rekaman berakhir saat burner masih panas,21349A1,test,C2H4,inverse flame,0.849977932,43.161204,,PSI-10_Raw Data_21349A1_data.csv
+PSI-10,21349B1,uji,ya,8.33,36.66,44.99,0.023589,0.003,44.99,5625,rekaman berakhir saat burner masih panas,21349B1,test,C2H4,inverse flame,0.849977932,43.368046,,PSI-10_Raw Data_21349B1_data.csv
+PSI-10,21349D2,uji,ya,21.93,39.58,61.5,0.012665,0.0081,61.5,7689,rekaman berakhir saat burner masih panas,21349D2,test,C2H4,inverse flame,0.212288808,43.436994,,PSI-10_Raw Data_21349D2_data.csv
+PSI-10,21349D3,uji,ya,20.7,36.8,57.5,0.013004,0.003,57.5,7189,rekaman berakhir saat burner masih panas,21349D3,test,C2H4,inverse flame,0.252907672,43.609363,,PSI-10_Raw Data_21349D3_data.csv
+PSI-10,21349M1,uji,ya,36.12,49.3,85.42,0.00799,0.0003,85.42,10678,rekaman berakhir saat burner masih panas,21349M1,test,C2H4,inverse flame,0.345371087,101.904567,,PSI-10_Raw Data_21349M1_data.csv
+PSI-10,21349M2,uji,ya,35.3,41.22,76.51,0.011029,0.0006,76.51,9565,rekaman berakhir saat burner masih panas,21349M2,test,C2H4,inverse flame,0.262286322,101.973514,,PSI-10_Raw Data_21349M2_data.csv
+PSI-10,21349M3,uji,ya,123.84,47.8,171.64,0.019,0.0057,171.64,21456,rekaman berakhir saat burner masih panas,21349M3,test,C2H4,inverse flame,0.212467161,102.766412,,PSI-10_Raw Data_21349M3_data.csv
+PSI-10,21349M4,uji,ya,75.14,36.58,111.71,0.01156,0.0003,111.71,13965,rekaman berakhir saat burner masih panas,21349M4,test,C2H4,inverse flame,,103.731678,,PSI-10_Raw Data_21349M4_data.csv
+PSI-10,21349M5,uji,ya,69.38,37.15,106.52,0.006802,0.0006,106.52,13316,rekaman berakhir saat burner masih panas,21349M5,test,C2H4,inverse flame,,104.421155,,PSI-10_Raw Data_21349M5_data.csv
+PSI-10,21349M6,uji,ya,42.13,34.47,76.6,0.004849,0.0008,76.6,9576,rekaman berakhir saat burner masih panas,21349M6,test,C2H4,inverse flame,,105.317474,,PSI-10_Raw Data_21349M6_data.csv
+PSI-10,21349M7,uji,ya,24.0,37.68,61.68,0.004715,0.0004,61.68,7711,rekaman berakhir saat burner masih panas,21349M7,test,C2H4,inverse flame,0.500492181,105.800107,,PSI-10_Raw Data_21349M7_data.csv
+PSI-10,21349N1,uji,ya,28.88,40.62,69.5,0.006943,0.003,69.5,8689,rekaman berakhir saat burner masih panas,21349N1,test,C2H4,inverse flame,0.502028139,51.331495,,PSI-10_Raw Data_21349N1_data.csv
+PSI-10,21349N2,uji,ya,28.35,42.27,70.62,0.006305,0.0032,70.62,8828,rekaman berakhir saat burner masih panas,21349N2,test,C2H4,inverse flame,0.319651909,51.572812,,PSI-10_Raw Data_21349N2_data.csv
+PSI-10,21349N3,uji,ya,88.18,50.44,138.62,0.019601,0.0026,138.62,17329,rekaman berakhir saat burner masih panas,21349N3,test,C2H4,inverse flame,0.212378902,52.19334,,PSI-10_Raw Data_21349N3_data.csv
+PSI-10,21349N4,uji,ya,55.82,47.7,103.52,0.012036,0.0055,103.52,12941,rekaman berakhir saat burner masih panas,21349N4,test,C2H4,inverse flame,0.212017175,52.744921,,PSI-10_Raw Data_21349N4_data.csv
+PSI-10,21361A1,uji,ya,37.61,36.59,74.2,0.012602,0.0056,74.2,9276,rekaman berakhir saat burner masih panas,21361A1,test,C2H4,inverse flame,0.849977932,101.973514,,PSI-10_Raw Data_21361A1_data.csv
+PSI-10,21361B1,uji,ya,45.63,27.35,72.98,0.014685,0.0003,72.98,9124,rekaman berakhir saat burner masih panas,21361B1,test,C2H4,inverse flame,0.849977932,102.214831,,PSI-10_Raw Data_21361B1_data.csv
+PSI-10,21361C1,uji,ya,35.05,50.47,85.52,0.006479,0.0055,85.52,10691,rekaman berakhir saat burner masih panas,21361C1,test,C2H4,inverse flame,0.433408794,102.456148,,PSI-10_Raw Data_21361C1_data.csv
+PSI-10,21361C2,uji,ya,38.47,40.14,78.61,0.007235,0.0005,78.61,9827,rekaman berakhir saat burner masih panas,21361C2,test,C2H4,inverse flame,0.433829814,102.800886,,PSI-10_Raw Data_21361C2_data.csv
+PSI-10,21361D1,uji,ya,32.58,52.02,84.61,0.005278,0.003,84.61,10577,rekaman berakhir saat burner masih panas,21361D1,test,C2H4,inverse flame,0.269972431,103.042202,,PSI-10_Raw Data_21361D1_data.csv
+PSI-10,21361D2,uji,ya,25.99,43.72,69.71,0.004507,0.0034,69.71,8715,rekaman berakhir saat burner masih panas,21361D2,test,C2H4,inverse flame,0.270380954,103.249045,,PSI-10_Raw Data_21361D2_data.csv
+PSI-10,21361F1,uji,ya,36.8,34.18,70.98,0.009903,0.0083,70.98,8874,rekaman berakhir saat burner masih panas,21361F1,test,C2H4,inverse flame,0.849977932,101.904567,,PSI-10_Raw Data_21361F1_data.csv
+PSI-10,21361F2,uji,ya,31.8,25.18,56.98,0.008808,0.0004,56.98,7123,rekaman berakhir saat burner masih panas,21361F2,test,C2H4,inverse flame,0.849977932,101.939041,,PSI-10_Raw Data_21361F2_data.csv
+PSI-10,21361F3,uji,ya,36.72,35.27,71.99,0.01216,0.0056,71.99,8999,rekaman berakhir saat burner masih panas,21361F3,test,C2H4,inverse flame,0.849977932,102.042462,,PSI-10_Raw Data_21361F3_data.csv
+PSI-10,21361F4,uji,ya,28.04,27.85,55.89,0.009915,0.0027,55.89,6987,rekaman berakhir saat burner masih panas,21361F4,test,C2H4,inverse flame,0.849977932,101.973514,,PSI-10_Raw Data_21361F4_data.csv
+PSI-10,21361F5,uji,ya,26.98,26.91,53.89,0.007424,-0.0,53.89,6737,rekaman berakhir saat burner masih panas,21361F5,test,C2H4,inverse flame,0.849977932,102.180357,,PSI-10_Raw Data_21361F5_data.csv
+PSI-10,21361F6,uji,ya,26.78,27.11,53.89,0.011981,0.0033,53.89,6737,rekaman berakhir saat burner masih panas,21361F6,test,C2H4,inverse flame,0.849977932,102.042462,,PSI-10_Raw Data_21361F6_data.csv
+PSI-10,21361G1,uji,ya,28.46,56.15,84.61,0.005439,0.003,84.61,10577,rekaman berakhir saat burner masih panas,21361G1,test,C2H4,inverse flame,0.569603349,102.283779,,PSI-10_Raw Data_21361G1_data.csv
+PSI-10,21361G2,uji,ya,29.14,36.37,65.51,0.008006,0.0026,65.51,8189,rekaman berakhir saat burner masih panas,21361G2,test,C2H4,inverse flame,0.571963123,102.3872,,PSI-10_Raw Data_21361G2_data.csv
+PSI-10,21361G3,uji,ya,29.26,36.35,65.61,0.007905,0.0029,65.61,8202,rekaman berakhir saat burner masih panas,21361G3,test,C2H4,inverse flame,0.572032341,102.490622,,PSI-10_Raw Data_21361G3_data.csv
+PSI-10,21361G4,uji,ya,28.37,37.24,65.61,0.004783,0.0028,65.61,8202,rekaman berakhir saat burner masih panas,21361G4,test,C2H4,inverse flame,0.364248407,102.662991,,PSI-10_Raw Data_21361G4_data.csv
+PSI-10,21361G5,uji,ya,21.05,37.46,58.51,0.003876,0.0029,58.51,7315,rekaman berakhir saat burner masih panas,21361G5,test,C2H4,inverse flame,0.366162786,102.594043,,PSI-10_Raw Data_21361G5_data.csv
+PSI-10,21361M1,uji,ya,28.89,35.71,64.6,0.005908,0.0038,64.6,8076,rekaman berakhir saat burner masih panas,21361M1,test,C2H4,inverse flame,0.434718543,101.870093,,PSI-10_Raw Data_21361M1_data.csv
+PSI-10,21361M2,uji,ya,27.73,40.98,68.7,0.004839,0.0031,68.7,8589,rekaman berakhir saat burner masih panas,21361M2,test,C2H4,inverse flame,0.271103057,101.973514,,PSI-10_Raw Data_21361M2_data.csv
+PSI-10,21361M3,uji,ya,40.1,27.88,67.98,0.008637,0.0032,67.98,8499,rekaman berakhir saat burner masih panas,21361M3,test,C2H4,inverse flame,0.849977932,102.662991,,PSI-10_Raw Data_21361M3_data.csv
+PSI-10,22018A1,uji,ya,32.48,25.51,57.99,0.011322,0.0078,57.99,7250,rekaman berakhir saat burner masih panas,22018A1,test,C2H4,inverse flame,0.849977932,101.66325,,PSI-10_Raw Data_22018A1_data.csv
+PSI-10,22018B1,uji,ya,32.51,25.47,57.98,0.011279,-0.0021,57.98,7249,rekaman berakhir saat burner masih panas,22018B1,test,C2H4,inverse flame,0.849977932,101.766672,,PSI-10_Raw Data_22018B1_data.csv
+PSI-10,22018C1,uji,ya,30.23,40.47,70.7,0.007801,0.0029,70.7,8839,rekaman berakhir saat burner masih panas,22018C1,test,C2H4,inverse flame,0.568658025,101.904567,,PSI-10_Raw Data_22018C1_data.csv
+PSI-10,22018D1,uji,ya,30.01,38.61,68.62,0.006577,0.003,68.62,8578,rekaman berakhir saat burner masih panas,22018D1,test,C2H4,inverse flame,0.455719081,101.939041,,PSI-10_Raw Data_22018D1_data.csv
+PSI-10,22018F1,uji,ya,29.42,38.18,67.61,0.005687,0.0029,67.61,8452,rekaman berakhir saat burner masih panas,22018F1,test,C2H4,inverse flame,0.365417242,102.042462,,PSI-10_Raw Data_22018F1_data.csv
+PSI-10,22018G1,uji,ya,69.35,30.64,99.99,0.010268,0.0056,99.99,12500,rekaman berakhir saat burner masih panas,22018G1,test,C2H4,inverse flame,0.849977932,101.801145,,PSI-10_Raw Data_22018G1_data.csv
+PSI-10,22018G2,uji,ya,37.35,26.63,63.98,0.005238,0.0029,63.98,7998,rekaman berakhir saat burner masih panas,22018G2,test,C2H4,inverse flame,0.849977932,102.007988,,PSI-10_Raw Data_22018G2_data.csv
+PSI-10,22018G3,uji,ya,26.98,26.01,52.98,0.003319,0.0058,52.98,6624,rekaman berakhir saat burner masih panas,22018G3,test,C2H4,inverse flame,0.849977932,102.076936,,PSI-10_Raw Data_22018G3_data.csv
+PSI-10,22018H2,uji,ya,46.34,38.46,84.81,0.005659,0.008,84.81,10602,rekaman berakhir saat burner masih panas,22018H2,test,C2H4,inverse flame,0.497148646,102.249305,,PSI-10_Raw Data_22018H2_data.csv
+PSI-10,22018J1,uji,ya,67.76,43.86,111.62,0.004089,0.0032,111.62,13954,rekaman berakhir saat burner masih panas,22018J1,test,C2H4,inverse flame,0.318171716,102.731938,,PSI-10_Raw Data_22018J1_data.csv
+PSI-10,22018J2,uji,ya,78.97,29.03,107.99,0.013342,0.003,107.99,13500,rekaman berakhir saat burner masih panas,22018J2,test,C2H4,inverse flame,0.849977932,102.938781,,PSI-10_Raw Data_22018J2_data.csv
+PSI-10,22018J4,uji,ya,242.12,48.58,290.7,0.005012,0.0026,345.95,43245,mendingin dalam rekaman,22018J4,test,C2H4,inverse flame,0.460992465,103.731678,,PSI-10_Raw Data_22018J4_data.csv
+PSI-10,22024A1,uji,ya,37.54,33.46,70.99,0.011458,0.0055,70.99,8875,rekaman berakhir saat burner masih panas,22024A1,test,C2H4,inverse flame,0.849977932,101.904567,,PSI-10_Raw Data_22024A1_data.csv
+PSI-10,22024A2,uji,ya,37.36,25.63,62.99,0.011217,0.0026,62.99,7874,rekaman berakhir saat burner masih panas,22024A2,test,C2H4,inverse flame,0.849977932,102.11141,,PSI-10_Raw Data_22024A2_data.csv
+PSI-10,22024B1,uji,ya,33.76,24.22,57.99,0.010687,0.0029,57.99,7249,rekaman berakhir saat burner masih panas,22024B1,test,C2H4,inverse flame,0.849977932,102.145883,,PSI-10_Raw Data_22024B1_data.csv
+PSI-10,22024B2,uji,ya,56.13,25.77,81.9,0.01341,0.0057,81.9,10238,rekaman berakhir saat burner masih panas,22024B2,test,C2H4,inverse flame,,103.145624,,PSI-10_Raw Data_22024B2_data.csv
+PSI-10,22024B3,uji,ya,65.4,25.5,90.9,0.012831,0.0031,90.9,11363,rekaman berakhir saat burner masih panas,22024B3,test,C2H4,inverse flame,,103.524836,,PSI-10_Raw Data_22024B3_data.csv
+PSI-10,22024C1,uji,ya,30.16,39.36,69.52,0.007836,0.0029,69.52,8691,rekaman berakhir saat burner masih panas,22024C1,test,C2H4,inverse flame,0.644458404,102.352726,,PSI-10_Raw Data_22024C1_data.csv
+PSI-10,22024D1,uji,ya,29.55,39.1,68.65,0.005985,0.0055,68.65,8582,rekaman berakhir saat burner masih panas,22024D1,test,C2H4,inverse flame,0.411995618,102.352726,,PSI-10_Raw Data_22024D1_data.csv
+PSI-10,22024F1,uji,ya,25.96,42.74,68.71,0.004145,0.0031,68.71,8589,rekaman berakhir saat burner masih panas,22024F1,test,C2H4,inverse flame,0.256270373,102.559569,,PSI-10_Raw Data_22024F1_data.csv
+PSI-10,22024G1,uji,ya,27.73,37.27,65.0,0.010166,0.003,65.0,8126,rekaman berakhir saat burner masih panas,22024G1,test,C2H4,inverse flame,0.849977932,50.91781,,PSI-10_Raw Data_22024G1_data.csv
+PSI-10,22024H1,uji,ya,32.02,25.97,57.98,0.011399,0.003,57.98,7249,rekaman berakhir saat burner masih panas,22024H1,test,C2H4,inverse flame,0.849977932,51.055705,,PSI-10_Raw Data_22024H1_data.csv
+PSI-10,22024H2,uji,ya,27.11,24.97,52.08,0.009347,0.0035,52.08,6511,rekaman berakhir saat burner masih panas,22024H2,test,C2H4,inverse flame,0.849977932,51.779655,,PSI-10_Raw Data_22024H2_data.csv
+PSI-10,22024J1,uji,ya,25.71,39.02,64.73,0.00725,0.0031,64.73,8094,rekaman berakhir saat burner masih panas,22024J1,test,C2H4,inverse flame,0.643889549,51.090179,,PSI-10_Raw Data_22024J1_data.csv
+PSI-10,22024K1,uji,ya,24.78,35.82,60.6,0.005388,0.0029,60.6,7576,rekaman berakhir saat burner masih panas,22024K1,test,C2H4,inverse flame,0.411583511,51.1936,,PSI-10_Raw Data_22024K1_data.csv
+PSI-10,22024K2,uji,ya,57.95,48.56,106.51,0.00952,0.0056,106.51,13314,rekaman berakhir saat burner masih panas,22024K2,test,C2H4,inverse flame,,52.572552,,PSI-10_Raw Data_22024K2_data.csv
+PSI-10,22024K3,uji,ya,109.67,50.77,160.44,0.017451,0.0029,160.44,20057,rekaman berakhir saat burner masih panas,22024K3,test,C2H4,inverse flame,,53.193081,,PSI-10_Raw Data_22024K3_data.csv
+PSI-10,22024L1,uji,ya,21.07,39.54,60.6,0.003483,0.0029,60.6,7576,rekaman berakhir saat burner masih panas,22024L1,test,C2H4,inverse flame,0.256080232,51.400443,,PSI-10_Raw Data_22024L1_data.csv
+PSI-10,22024L2,uji,ya,23.86,38.75,62.61,0.004822,0.0025,62.61,7827,rekaman berakhir saat burner masih panas,22024L2,test,C2H4,inverse flame,0.327364706,51.503864,,PSI-10_Raw Data_22024L2_data.csv
+PSI-10,22024L3,uji,ya,24.23,35.27,59.5,0.007028,0.0031,59.5,7438,rekaman berakhir saat burner masih panas,22024L3,test,C2H4,inverse flame,0.413276012,51.64176,,PSI-10_Raw Data_22024L3_data.csv
+PSI-10,22024M1,tidak ada,ya,55.18,26.82,82.0,0.015351,0.0032,82.0,10251,rekaman berakhir saat burner masih panas,,,,,,,,PSI-10_Raw Data_22024M1_data.csv
+PSI-10,22024M2,uji,ya,64.23,26.66,90.9,0.015261,0.0004,90.9,11363,rekaman berakhir saat burner masih panas,22024M2,test,C2H4,inverse flame,,52.296762,,PSI-10_Raw Data_22024M2_data.csv
+PSI-10,22027B1,uji,ya,42.46,24.53,66.99,0.008026,0.0038,66.99,8375,rekaman berakhir saat burner masih panas,22027B1,test,C2H4,inverse flame,0.849977932,304.472644,,PSI-10_Raw Data_22027B1_data.csv
+PSI-10,22027B2,uji,ya,50.38,25.6,75.98,0.009135,0.0029,75.98,9499,rekaman berakhir saat burner masih panas,22027B2,test,C2H4,inverse flame,0.849977932,304.576065,,PSI-10_Raw Data_22027B2_data.csv
+PSI-10,22027B3,uji,ya,75.2,29.81,105.01,0.016089,0.0057,105.01,13127,rekaman berakhir saat burner masih panas,22027B3,test,C2H4,inverse flame,0.849977932,304.71396,,PSI-10_Raw Data_22027B3_data.csv
+PSI-10,22027B4,uji,ya,32.43,26.56,58.99,0.004959,0.0026,58.99,7375,rekaman berakhir saat burner masih panas,22027B4,test,C2H4,inverse flame,,304.43817,,PSI-10_Raw Data_22027B4_data.csv
+PSI-10,22027B5,uji,ya,54.48,32.5,86.98,0.012883,0.0055,86.98,10874,rekaman berakhir saat burner masih panas,22027B5,test,C2H4,inverse flame,0.849977932,304.782908,,PSI-10_Raw Data_22027B5_data.csv
+PSI-10,22027B6,uji,ya,59.89,33.21,93.1,0.01341,0.0022,93.1,11638,rekaman berakhir saat burner masih panas,22027B6,test,C2H4,inverse flame,0.849977932,304.920803,,PSI-10_Raw Data_22027B6_data.csv
+PSI-10,22027B7,uji,ya,54.08,28.9,82.98,0.012021,0.0029,82.98,10374,rekaman berakhir saat burner masih panas,22027B7,test,C2H4,inverse flame,0.849977932,304.989751,,PSI-10_Raw Data_22027B7_data.csv
+PSI-10,22027B8,uji,ya,45.18,24.71,69.89,0.007518,0.003,69.89,8737,rekaman berakhir saat burner masih panas,22027B8,test,C2H4,inverse flame,,304.507117,,PSI-10_Raw Data_22027B8_data.csv
+PSI-10,22027C1,uji,ya,40.28,38.34,78.62,0.004957,0.0033,78.62,9828,rekaman berakhir saat burner masih panas,22027C1,test,C2H4,inverse flame,0.498054913,304.782908,,PSI-10_Raw Data_22027C1_data.csv
+PSI-10,22027C2,uji,ya,26.13,38.49,64.62,0.00252,0.0034,64.62,8078,rekaman berakhir saat burner masih panas,22027C2,test,C2H4,inverse flame,0.318569512,304.817382,,PSI-10_Raw Data_22027C2_data.csv
+PSI-10,22027D1,uji,ya,28.53,35.07,63.61,0.003075,0.003,63.61,7952,rekaman berakhir saat burner masih panas,22027D1,test,C2H4,inverse flame,0.491262479,305.472384,,PSI-10_Raw Data_22027D1_data.csv
+PSI-10,22027D2,uji,ya,32.05,24.04,56.09,0.005201,0.0028,56.09,7012,rekaman berakhir saat burner masih panas,22027D2,test,C2H4,inverse flame,0.849977932,305.817122,,PSI-10_Raw Data_22027D2_data.csv
+PSI-10,22027D3,uji,ya,33.98,22.91,56.89,0.005844,0.0028,56.89,7112,rekaman berakhir saat burner masih panas,22027D3,test,C2H4,inverse flame,0.849977932,304.576065,,PSI-10_Raw Data_22027D3_data.csv
+PSI-10,22027D4,uji,ya,33.49,24.5,57.98,0.006763,0.0029,57.98,7249,rekaman berakhir saat burner masih panas,22027D4,test,C2H4,inverse flame,0.849977932,304.576065,,PSI-10_Raw Data_22027D4_data.csv
+PSI-10,22027D5,uji,ya,38.17,24.91,63.08,0.007628,0.0028,63.08,7886,rekaman berakhir saat burner masih panas,22027D5,test,C2H4,inverse flame,0.849977932,304.576065,,PSI-10_Raw Data_22027D5_data.csv
+PSI-10,22027D6,uji,ya,32.86,24.12,56.99,0.006555,0.0029,56.99,7124,rekaman berakhir saat burner masih panas,22027D6,test,C2H4,inverse flame,0.849977932,304.645013,,PSI-10_Raw Data_22027D6_data.csv
+PSI-10,22035A1,uji,ya,29.1,35.01,64.11,0.00868,0.0028,64.11,8015,rekaman berakhir saat burner masih panas,22035A1,test,C2H4,inverse flame,0.849977932,200.361753,,PSI-10_Raw Data_22035A1_data.csv
+PSI-10,22035B1,uji,ya,31.48,24.5,55.98,0.009274,0.0029,55.98,6999,rekaman berakhir saat burner masih panas,22035B1,test,C2H4,inverse flame,0.849977932,200.568596,,PSI-10_Raw Data_22035B1_data.csv
+PSI-10,22035C1,uji,ya,28.41,38.3,66.7,0.007089,0.0004,66.7,8339,rekaman berakhir saat burner masih panas,22035C1,test,C2H4,inverse flame,0.569103938,200.637544,,PSI-10_Raw Data_22035C1_data.csv
+PSI-10,22035D1,uji,ya,26.91,37.6,64.51,0.005716,0.0029,64.51,8065,rekaman berakhir saat burner masih panas,22035D1,test,C2H4,inverse flame,0.455889821,200.706491,,PSI-10_Raw Data_22035D1_data.csv
+PSI-10,22035D3,uji,ya,26.95,37.74,64.7,0.005803,0.0013,64.7,8088,rekaman berakhir saat burner masih panas,22035D3,test,C2H4,inverse flame,0.455328049,200.637544,,PSI-10_Raw Data_22035D3_data.csv
+PSI-10,22035F1,uji,ya,25.94,34.74,60.67,0.004756,0.0033,60.67,7585,rekaman berakhir saat burner masih panas,22035F1,test,C2H4,inverse flame,0.36478772,200.913334,,PSI-10_Raw Data_22035F1_data.csv
+PSI-10,22035G1,uji,ya,25.35,38.12,63.47,0.003893,0.003,63.47,7935,rekaman berakhir saat burner masih panas,22035G1,test,C2H4,inverse flame,0.290628255,200.982282,,PSI-10_Raw Data_22035G1_data.csv
+PSI-10,22035G2,uji,ya,60.19,32.79,92.98,0.009015,-0.0014,92.98,11624,rekaman berakhir saat burner masih panas,22035G2,test,C2H4,inverse flame,0.849977932,202.533603,,PSI-10_Raw Data_22035G2_data.csv
+PSI-10,22035J1,uji,ya,122.73,31.16,153.89,0.013247,0.0082,153.89,19237,rekaman berakhir saat burner masih panas,22035J1,test,C2H4,inverse flame,0.849977932,51.124652,,PSI-10_Raw Data_22035J1_data.csv
+PSI-10,22035J2,uji,ya,76.87,32.1,108.98,0.008281,0.0055,108.98,13623,rekaman berakhir saat burner masih panas,22035J2,test,C2H4,inverse flame,0.849977932,51.46939,,PSI-10_Raw Data_22035J2_data.csv
+PSI-10,22035J3,uji,ya,33.13,28.84,61.97,0.004796,0.0038,61.97,7747,rekaman berakhir saat burner masih panas,22035J3,test,C2H4,inverse flame,0.849977932,51.710707,,PSI-10_Raw Data_22035J3_data.csv
+PSI-10,22035J4,uji,ya,43.96,30.02,73.98,0.006422,-0.0023,73.98,9248,rekaman berakhir saat burner masih panas,22035J4,test,C2H4,inverse flame,0.849977932,51.848602,,PSI-10_Raw Data_22035J4_data.csv
+PSI-10,22035J5,uji,ya,59.82,30.15,89.97,0.010006,0.0029,89.97,11247,rekaman berakhir saat burner masih panas,22035J5,test,C2H4,inverse flame,0.849977932,51.952024,,PSI-10_Raw Data_22035J5_data.csv
+PSI-10,22035J6,uji,ya,87.5,34.48,121.98,0.011603,0.003,121.98,15248,rekaman berakhir saat burner masih panas,22035J6,test,C2H4,inverse flame,0.849977932,52.158867,,PSI-10_Raw Data_22035J6_data.csv
+PSI-10,22035J7,uji,ya,41.57,28.41,69.98,0.008233,0.003,69.98,8748,rekaman berakhir saat burner masih panas,22035J7,test,C2H4,inverse flame,0.849977932,52.19334,,PSI-10_Raw Data_22035J7_data.csv
+PSI-159,21088A1,uji,ya,63.41,38.81,102.22,0.010795,4.8607,102.22,12778,rekaman berakhir saat burner masih panas,21088A1,test,ethane,normal flame (fuel issues into oxidizer),0.3939,94.43956,yes,PSI-159_Raw Data_21088A1_data.csv
+PSI-159,21088B1,uji,ya,57.12,42.2,99.32,0.010187,4.8582,99.32,12416,rekaman berakhir saat burner masih panas,21088 B1,test,ethane,normal flame (fuel issues into oxidizer),0.389822946,94.43956,yes,PSI-159_Raw Data_21088B1_data.csv
+PSI-159,21088C1,uji,ya,55.3,39.39,94.7,0.009792,4.8579,94.7,11838,rekaman berakhir saat burner masih panas,21088 C1,test,ethane,normal flame (fuel issues into oxidizer),0.386321188,94.43956,yes,PSI-159_Raw Data_21088C1_data.csv
+PSI-159,21088D1,uji,ya,67.13,37.86,104.99,0.017737,2.4244,104.99,13126,rekaman berakhir saat burner masih panas,21088 D1,test,ethane,normal flame (fuel issues into oxidizer),0.382905163,94.43956,yes,PSI-159_Raw Data_21088D1_data.csv
+PSI-159,21088F1,uji,ya,25.16,39.97,65.13,0.020853,1.1931,65.13,8142,rekaman berakhir saat burner masih panas,21088 F1,test,ethane,normal flame (fuel issues into oxidizer),0.380426741,94.43956,yes,PSI-159_Raw Data_21088F1_data.csv
+PSI-159,21088G1,uji,ya,54.95,53.78,108.74,0.008179,4.8583,108.74,13593,rekaman berakhir saat burner masih panas,21088 G1,test,ethane,normal flame (fuel issues into oxidizer),0.379858042,94.43956,yes,PSI-159_Raw Data_21088G1_data.csv
+PSI-159,21088H1,uji,ya,67.01,52.62,119.63,0.015952,2.4246,119.63,14955,rekaman berakhir saat burner masih panas,21088 H1,test,ethane,normal flame (fuel issues into oxidizer),0.376135171,94.43956,yes,PSI-159_Raw Data_21088H1_data.csv
+PSI-159,21088H2,uji,ya,130.78,53.97,184.75,0.016259,2.4286,184.75,23095,rekaman berakhir saat burner masih panas,21088 H2,test,ethane,normal flame (fuel issues into oxidizer),0.364549879,94.43956,yes,PSI-159_Raw Data_21088H2_data.csv
+PSI-159,21088J1,uji,ya,48.05,52.58,100.62,0.005672,4.8576,100.62,12579,rekaman berakhir saat burner masih panas,21088 J1,test,ethane,normal flame (fuel issues into oxidizer),0.373391583,94.43956,yes,PSI-159_Raw Data_21088J1_data.csv
+PSI-159,21088K1,uji,ya,98.96,55.83,154.79,0.01278,2.4273,154.79,19350,rekaman berakhir saat burner masih panas,21088 K1,test,ethane,normal flame (fuel issues into oxidizer),0.369578072,94.43956,yes,PSI-159_Raw Data_21088K1_data.csv
+PSI-159,21088L1,uji,ya,27.46,29.43,56.9,0.002277,4.8403,56.9,7113,rekaman berakhir saat burner masih panas,21088 L1,test,ethane,normal flame (fuel issues into oxidizer),0.209638709,101.33,yes,PSI-159_Raw Data_21088L1_data.csv
+PSI-159,21088M4,uji,ya,31.43,25.55,56.98,0.004109,2.4105,56.98,7124,rekaman berakhir saat burner masih panas,21088 M4,test,ethane,normal flame (fuel issues into oxidizer),0.2101,101.33,yes,PSI-159_Raw Data_21088M4_data.csv
+PSI-159,21088N1,uji,ya,22.17,38.43,60.6,0.001147,0.0116,60.6,7577,rekaman berakhir saat burner masih panas,21088 N1,test,ethane,normal flame (fuel issues into oxidizer),0.1802,101.33,yes,PSI-159_Raw Data_21088N1_data.csv
+PSI-159,21088P1,uji,ya,26.44,39.09,65.53,0.002023,2.4006,65.53,8192,rekaman berakhir saat burner masih panas,21088 P1,test,ethane,normal flame (fuel issues into oxidizer),0.179685675,101.33,yes,PSI-159_Raw Data_21088P1_data.csv
+PSI-159,21102A1,uji,ya,77.76,43.78,121.54,0.008396,4.8362,121.54,15193,rekaman berakhir saat burner masih panas,21102A1,test,50% butane,normal flame (fuel issues into oxidizer),0.3957,101.33,yes,PSI-159_Raw Data_21102A1_data.csv
+PSI-159,21102B1,uji,ya,48.59,39.98,88.58,0.006999,3.93,88.58,11073,rekaman berakhir saat burner masih panas,21102 B1,test,50% butane,normal flame (fuel issues into oxidizer),0.390548195,101.33,yes,PSI-159_Raw Data_21102B1_data.csv
+PSI-159,21102C1,uji,ya,52.21,29.79,82.0,0.009948,4.8316,82.0,10251,rekaman berakhir saat burner masih panas,21102 C1,test,50% butane,normal flame (fuel issues into oxidizer),0.393031985,101.33,yes,PSI-159_Raw Data_21102C1_data.csv
+PSI-159,21102C2,uji,ya,58.98,33.02,92.0,0.019828,2.4022,92.0,11501,rekaman berakhir saat burner masih panas,21102 C2,test,50% butane,normal flame (fuel issues into oxidizer),0.388126117,101.33,yes,PSI-159_Raw Data_21102C2_data.csv
+PSI-159,21102C3,uji,ya,90.38,33.54,123.91,0.014873,3.6337,123.91,15490,rekaman berakhir saat burner masih panas,21102 C3,test,50% butane,normal flame (fuel issues into oxidizer),0.386221513,101.33,yes,PSI-159_Raw Data_21102C3_data.csv
+PSI-159,21102C4,uji,tidak,,,,1.4e-05,,46.92,5866,,21102 C4,test,50% butane,normal flame (fuel issues into oxidizer),0.382509153,101.33,no,PSI-159_Raw Data_21102C4_data.csv
+PSI-159,21102C5,uji,ya,48.0,45.18,93.18,0.017346,2.3977,93.18,11650,rekaman berakhir saat burner masih panas,21102 C5,test,50% butane,normal flame (fuel issues into oxidizer),0.382509153,101.33,yes,PSI-159_Raw Data_21102C5_data.csv
+PSI-159,21102C6,uji,tidak,,,,0.000206,,63.33,7917,,21102 C6,test,50% butane,normal flame (fuel issues into oxidizer),0.381212087,101.33,no,PSI-159_Raw Data_21102C6_data.csv
+PSI-159,21102C7,uji,ya,27.46,44.87,72.32,0.011122,2.3938,72.32,9041,rekaman berakhir saat burner masih panas,21102 C7,test,50% butane,normal flame (fuel issues into oxidizer),0.381212087,101.33,yes,PSI-159_Raw Data_21102C7_data.csv
+PSI-159,21102C8,uji,tidak,,,,0.000549,,72.33,9042,,21102 C8,test,50% butane,normal flame (fuel issues into oxidizer),0.380669262,101.33,no,PSI-159_Raw Data_21102C8_data.csv
+PSI-159,21102M1,uji,ya,23.3,28.69,51.99,0.002073,1.1607,51.99,6500,rekaman berakhir saat burner masih panas,21102 M1,test,50% butane,normal flame (fuel issues into oxidizer),0.2341,101.33,yes,PSI-159_Raw Data_21102M1_data.csv
+PSI-159,21102M2,uji,ya,29.3,25.62,54.92,0.004731,2.3813,54.92,6866,rekaman berakhir saat burner masih panas,21102 M2,test,50% butane,normal flame (fuel issues into oxidizer),0.233649188,101.33,yes,PSI-159_Raw Data_21102M2_data.csv
+PSI-159,21102M3,uji,tidak,,,,0.00053,,72.21,9030,,21102 M3,test,50% butane,normal flame (fuel issues into oxidizer),0.233254802,101.33,no,PSI-159_Raw Data_21102M3_data.csv
+PSI-159,21102M4,uji,tidak,,,,0.000504,,72.23,9030,,21102 M4,test,50% butane,normal flame (fuel issues into oxidizer),0.233254802,101.33,no,PSI-159_Raw Data_21102M4_data.csv
+PSI-159,21102M5,uji,tidak,,,,0.000575,,71.22,8904,,21102 M5,test,50% butane,normal flame (fuel issues into oxidizer),0.233254802,101.33,no,PSI-159_Raw Data_21102M5_data.csv
+PSI-159,21106A1,tidak ada,tidak,,,,1.7e-05,,59.72,7466,,,,,,,,,PSI-159_Raw Data_21106A1_data.csv
+PSI-159,21106A2,tidak ada,tidak,,,,2e-05,,58.51,7315,,,,,,,,,PSI-159_Raw Data_21106A2_data.csv
+PSI-159,21106A3,tidak ada,tidak,,,,1.8e-05,,63.53,7942,,,,,,,,,PSI-159_Raw Data_21106A3_data.csv
+PSI-159,21106A4,uji,ya,70.44,48.2,118.64,0.010517,4.8342,118.64,14831,rekaman berakhir saat burner masih panas,21106A4,test,50% butane,normal flame (fuel issues into oxidizer),0.3926,50.665,yes,PSI-159_Raw Data_21106A4_data.csv
+PSI-159,21106B1,uji,ya,72.54,35.56,108.1,0.011872,4.8341,108.1,13514,rekaman berakhir saat burner masih panas,21106 B1,test,50% butane,normal flame (fuel issues into oxidizer),0.384638613,50.665,yes,PSI-159_Raw Data_21106B1_data.csv
+PSI-159,21106C1,uji,ya,64.96,50.58,115.54,0.008855,3.9321,115.54,14443,rekaman berakhir saat burner masih panas,21106 C1,test,50% butane,normal flame (fuel issues into oxidizer),0.377171369,50.665,yes,PSI-159_Raw Data_21106C1_data.csv
+PSI-159,21106D1,uji,ya,126.67,34.74,161.41,0.015562,3.6342,161.41,20177,rekaman berakhir saat burner masih panas,21106 D1,test,50% butane,normal flame (fuel issues into oxidizer),0.369281404,50.665,yes,PSI-159_Raw Data_21106D1_data.csv
+PSI-159,21106F1,uji,ya,64.62,33.29,97.91,0.019846,2.4021,97.91,12224,rekaman berakhir saat burner masih panas,21106 F1,test,50% butane,normal flame (fuel issues into oxidizer),0.358532281,50.665,yes,PSI-159_Raw Data_21106F1_data.csv
+PSI-159,21106F2,uji,ya,40.3,42.92,83.22,0.000852,2.3967,83.22,10404,rekaman berakhir saat burner masih panas,21106 F2,test,50% butane,normal flame (fuel issues into oxidizer),0.35424096,50.665,no,PSI-159_Raw Data_21106F2_data.csv
+PSI-159,21106F3,uji,ya,32.64,40.68,73.32,0.01166,-0.0046,73.32,9166,rekaman berakhir saat burner masih panas,21106 F3,test,50% butane,normal flame (fuel issues into oxidizer),0.35424096,50.665,yes,PSI-159_Raw Data_21106F3_data.csv
+PSI-159,21106F4,uji,ya,30.21,43.11,73.32,0.015357,1.4623,73.32,9166,rekaman berakhir saat burner masih panas,21106 F4,test,50% butane,normal flame (fuel issues into oxidizer),0.353756802,50.665,no,PSI-159_Raw Data_21106F4_data.csv
+PSI-159,21106F5,uji,ya,40.54,42.79,83.33,0.000766,1.4692,83.33,10417,rekaman berakhir saat burner masih panas,21106 F5,test,50% butane,normal flame (fuel issues into oxidizer),0.352937762,50.665,no,PSI-159_Raw Data_21106F5_data.csv
+PSI-159,21106G1,tidak ada,tidak,,,,2.9e-05,,47.99,6000,,,,,,,,,PSI-159_Raw Data_21106G1_data.csv
+PSI-159,21106G2,tidak ada,tidak,,,,9e-06,,51.97,6497,,,,,,,,,PSI-159_Raw Data_21106G2_data.csv
+PSI-159,21106G3,tidak ada,tidak,,,,0.000176,,58.03,7255,,,,,,,,,PSI-159_Raw Data_21106G3_data.csv
+PSI-159,21106G4,tidak ada,tidak,,,,0.000241,,59.02,7379,,,,,,,,,PSI-159_Raw Data_21106G4_data.csv
+PSI-159,21106G5,tidak ada,tidak,,,,0.000253,,58.02,7253,,,,,,,,,PSI-159_Raw Data_21106G5_data.csv
+PSI-159,21106G6,uji,ya,36.54,38.5,75.03,0.006956,1.4646,75.03,9380,rekaman berakhir saat burner masih panas,21106 G6,test,50% butane,normal flame (fuel issues into oxidizer),0.2097,50.665,yes,PSI-159_Raw Data_21106G6_data.csv
+PSI-159,21106G7,uji,ya,36.17,37.86,74.02,0.007305,1.4653,74.02,9254,rekaman berakhir saat burner masih panas,21106 G7,test,50% butane,normal flame (fuel issues into oxidizer),0.208586481,50.665,yes,PSI-159_Raw Data_21106G7_data.csv
+PSI-159,21106G8,tidak ada,ya,24.11,33.82,57.92,0.000868,0.9253,57.92,7241,rekaman berakhir saat burner masih panas,,,,,,,,PSI-159_Raw Data_21106G8_data.csv
+PSI-159,21106G9,uji,ya,31.44,38.58,70.02,0.004335,1.9622,70.02,8754,rekaman berakhir saat burner masih panas,21106 G9,test,50% butane,normal flame (fuel issues into oxidizer),0.207473561,50.665,yes,PSI-159_Raw Data_21106G9_data.csv
+PSI-159,21106H1,uji,tidak,,,,0.000339,,61.95,7744,,21106 H1,test,50% butane,normal flame (fuel issues into oxidizer),0.206694811,50.665,no,PSI-159_Raw Data_21106H1_data.csv
+PSI-159,21106H2,uji,tidak,,,,0.000305,,63.14,7893,,21106 H2,test,50% butane,normal flame (fuel issues into oxidizer),0.206694811,50.665,no,PSI-159_Raw Data_21106H2_data.csv
+PSI-159,21112A1,uji,ya,39.35,31.66,71.01,0.020159,1.8724,71.01,8877,rekaman berakhir saat burner masih panas,21112A1,test,propane,normal flame (fuel issues into oxidizer),0.3954,94.43956,yes,PSI-159_Raw Data_21112A1_data.csv
+PSI-159,21112A2,uji,ya,59.22,33.78,93.0,0.011501,3.7803,93.0,11626,rekaman berakhir saat burner masih panas,21112 A2,test,propane,normal flame (fuel issues into oxidizer),0.3940449,94.43956,yes,PSI-159_Raw Data_21112A2_data.csv
+PSI-159,21112A3,uji,ya,108.23,30.69,138.91,0.016358,2.8317,138.91,17365,rekaman berakhir saat burner masih panas,21112 A3,test,propane,normal flame (fuel issues into oxidizer),0.391274328,94.43956,yes,PSI-159_Raw Data_21112A3_data.csv
+PSI-159,21112A4,uji,ya,189.89,30.04,219.93,0.018424,2.3546,219.93,27492,rekaman berakhir saat burner masih panas,21112 A4,test,propane,normal flame (fuel issues into oxidizer),0.386794842,94.43956,yes,PSI-159_Raw Data_21112A4_data.csv
+PSI-159,21112A5,uji,ya,41.42,27.56,68.99,0.007216,4.729,68.99,8624,rekaman berakhir saat burner masih panas,21112 A5,test,propane,normal flame (fuel issues into oxidizer),0.379543758,94.43956,yes,PSI-159_Raw Data_21112A5_data.csv
+PSI-159,21112A6,uji,ya,160.89,32.14,193.02,0.017931,2.3545,193.02,24129,rekaman berakhir saat burner masih panas,21112 A6,test,propane,normal flame (fuel issues into oxidizer),0.376528047,94.43956,yes,PSI-159_Raw Data_21112A6_data.csv
+PSI-159,21112C1,uji,ya,25.98,39.06,65.04,0.020779,1.169,65.04,8131,rekaman berakhir saat burner masih panas,21112 C1,test,propane,normal flame (fuel issues into oxidizer),0.377663625,94.43956,yes,PSI-159_Raw Data_21112C1_data.csv
+PSI-159,21112C2,uji,ya,25.69,42.25,67.94,0.020808,1.1689,67.94,8493,rekaman berakhir saat burner masih panas,21112 C2,test,propane,normal flame (fuel issues into oxidizer),0.37709578,94.43956,yes,PSI-159_Raw Data_21112C2_data.csv
+PSI-159,21112C3,uji,ya,60.66,1.29,61.94,0.000619,0.004,61.94,7736,rekaman berakhir saat burner masih panas,21112 C3,test,propane,normal flame (fuel issues into oxidizer),0.366422787,94.43956,no,PSI-159_Raw Data_21112C3_data.csv
+PSI-159,21112C4,uji,tidak,,,,0.000183,,64.04,8006,,21112 C4,test,propane,normal flame (fuel issues into oxidizer),0.366422787,94.43956,no,PSI-159_Raw Data_21112C4_data.csv
+PSI-159,21112C5,uji,tidak,,,,0.000248,,64.04,8006,,21112 C5,test,propane,normal flame (fuel issues into oxidizer),0.366422787,94.43956,no,PSI-159_Raw Data_21112C5_data.csv
+PSI-159,21112C6,uji,ya,21.51,39.54,61.05,0.000775,0.0571,61.05,7632,rekaman berakhir saat burner masih panas,21112 C6,test,propane,normal flame (fuel issues into oxidizer),0.366422787,94.43956,no,PSI-159_Raw Data_21112C6_data.csv
+PSI-159,21112F1,uji,tidak,,,,4.9e-05,,45.98,5749,,21112 F1,test,propane,normal flame (fuel issues into oxidizer),0.2125,101.33,no,PSI-159_Raw Data_21112F1_data.csv
+PSI-159,21112F2,uji,ya,28.71,33.3,62.02,0.002925,2.323,62.02,7753,rekaman berakhir saat burner masih panas,21112 F2,test,propane,normal flame (fuel issues into oxidizer),0.2125,101.33,yes,PSI-159_Raw Data_21112F2_data.csv
+PSI-159,21112F3,uji,ya,28.53,37.46,65.98,0.003342,1.8476,65.98,8249,rekaman berakhir saat burner masih panas,21112 F3,test,propane,normal flame (fuel issues into oxidizer),0.212224743,101.33,yes,PSI-159_Raw Data_21112F3_data.csv
+PSI-159,21112F4,uji,ya,30.44,33.47,63.91,0.004625,1.3787,63.91,7990,rekaman berakhir saat burner masih panas,21112 F4,test,propane,normal flame (fuel issues into oxidizer),0.212004554,101.33,yes,PSI-159_Raw Data_21112F4_data.csv
+PSI-159,21112F5,uji,tidak,,,,5.8e-05,,57.9,7239,,21112 F5,test,propane,normal flame (fuel issues into oxidizer),0.211798144,101.33,no,PSI-159_Raw Data_21112F5_data.csv
+PSI-159,21112H1,uji,ya,31.46,36.54,68.01,0.005329,1.1605,68.01,8502,rekaman berakhir saat burner masih panas,21112 H1,test,propane,normal flame (fuel issues into oxidizer),0.211798144,101.33,yes,PSI-159_Raw Data_21112H1_data.csv
+PSI-159,21112H2,uji,ya,31.3,40.71,72.01,0.005366,1.1658,72.01,9002,rekaman berakhir saat burner masih panas,21112 H2,test,propane,normal flame (fuel issues into oxidizer),0.211591749,101.33,yes,PSI-159_Raw Data_21112H2_data.csv
+PSI-159,21112H3,uji,tidak,,,,0.000244,,64.0,8001,,21112 H3,test,propane,normal flame (fuel issues into oxidizer),0.211402567,101.33,no,PSI-159_Raw Data_21112H3_data.csv
+PSI-159,21125A1,uji,tidak,,,,8e-06,,82.55,10320,,21125A1,test,30% butane,normal flame (fuel issues into oxidizer),0.3945,101.33,no,PSI-159_Raw Data_21125A1_data.csv
+PSI-159,21125A2,uji,ya,33.4,48.14,81.54,0.001487,0.7589,81.54,10194,rekaman berakhir saat burner masih panas,21125 A2,test,30% butane,normal flame (fuel issues into oxidizer),0.3945,101.33,yes,PSI-159_Raw Data_21125A2_data.csv
+PSI-159,21125A3,uji,tidak,,,,1.9e-05,,76.65,9582,,21125 A3,test,30% butane,normal flame (fuel issues into oxidizer),0.394118729,101.33,no,PSI-159_Raw Data_21125A3_data.csv
+PSI-159,21125A5,uji,tidak,,,,1.9e-05,,75.53,9442,,21125 A5,test,30% butane,normal flame (fuel issues into oxidizer),0.394118729,101.33,no,PSI-159_Raw Data_21125A5_data.csv
+PSI-159,21125A6,uji,tidak,,,,1.4e-05,,72.55,9070,,21125 A6,test,30% butane,normal flame (fuel issues into oxidizer),0.394118729,101.33,no,PSI-159_Raw Data_21125A6_data.csv
+PSI-159,21125A7,uji,tidak,,,,3.4e-05,,75.64,9456,,21125 A7,test,30% butane,normal flame (fuel issues into oxidizer),0.394118729,101.33,no,PSI-159_Raw Data_21125A7_data.csv
+PSI-159,21125A8,uji,tidak,,,,1.5e-05,,75.55,9445,,21125 A8,test,30% butane,normal flame (fuel issues into oxidizer),0.394118729,101.33,no,PSI-159_Raw Data_21125A8_data.csv
+PSI-159,21125A9,uji,tidak,,,,1.5e-05,,75.55,9444,,21125 A9,test,30% butane,normal flame (fuel issues into oxidizer),0.394118729,101.33,no,PSI-159_Raw Data_21125A9_data.csv
+PSI-159,21125D1,uji,tidak,,,,0.000376,,77.45,9682,,21125 D1,test,30% butane,normal flame (fuel issues into oxidizer),0.2111,101.33,yes,PSI-159_Raw Data_21125D1_data.csv
+PSI-159,21125D2,uji,tidak,,,,0.000303,,75.66,9459,,21125 D2,test,30% butane,normal flame (fuel issues into oxidizer),0.211072309,101.33,yes,PSI-159_Raw Data_21125D2_data.csv
+PSI-159,21125D3,uji,tidak,,,,2.7e-05,,71.64,8956,,21125 D3,test,30% butane,normal flame (fuel issues into oxidizer),0.211044619,101.33,no,PSI-159_Raw Data_21125D3_data.csv
+PSI-159,21125D4,uji,tidak,,,,1.9e-05,,71.66,8957,,21125 D4,test,30% butane,normal flame (fuel issues into oxidizer),0.211044619,101.33,no,PSI-159_Raw Data_21125D4_data.csv
+PSI-159,21125D5,uji,tidak,,,,1.7e-05,,71.53,8944,,21125 D5,test,30% butane,normal flame (fuel issues into oxidizer),0.211044619,101.33,no,PSI-159_Raw Data_21125D5_data.csv
+PSI-159,21125D6,uji,tidak,,,,4.1e-05,,71.54,8944,,21125 D6,test,30% butane,normal flame (fuel issues into oxidizer),0.211044619,101.33,no,PSI-159_Raw Data_21125D6_data.csv
+PSI-159,21125H1,uji,tidak,,,,4.8e-05,,72.35,9044,,21125 H1,test,30% butane,normal flame (fuel issues into oxidizer),0.394118729,101.33,no,PSI-159_Raw Data_21125H1_data.csv
+PSI-159,21125H2,uji,tidak,,,,6.4e-05,,74.85,9357,,21125 H2,test,30% butane,normal flame (fuel issues into oxidizer),0.394118729,101.33,no,PSI-159_Raw Data_21125H2_data.csv
+PSI-159,21125H4,uji,tidak,,,,2.4e-05,,71.66,8958,,21125 H4,test,30% butane,normal flame (fuel issues into oxidizer),0.394118729,101.33,no,PSI-159_Raw Data_21125H4_data.csv
+PSI-159,21125H5,uji,tidak,,,,0.000268,,75.65,9457,,21125 H5,test,30% butane,normal flame (fuel issues into oxidizer),0.394118729,101.33,no,PSI-159_Raw Data_21125H5_data.csv
+PSI-159,21125J1,uji,tidak,,,,1.8e-05,,72.54,9068,,21125 J1,test,30% butane,normal flame (fuel issues into oxidizer),0.394118729,101.33,no,PSI-159_Raw Data_21125J1_data.csv
+PSI-159,21125K1,uji,ya,56.66,38.37,95.03,0.008243,2.3132,95.03,11879,rekaman berakhir saat burner masih panas,21125 K1,test,30% butane,normal flame (fuel issues into oxidizer),0.394118729,101.33,yes,PSI-159_Raw Data_21125K1_data.csv
+PSI-159,21125K2,uji,ya,35.84,41.07,76.91,0.003791,4.6382,76.91,9616,rekaman berakhir saat burner masih panas,21125 K2,test,30% butane,normal flame (fuel issues into oxidizer),0.389156864,101.33,yes,PSI-159_Raw Data_21125K2_data.csv
+PSI-159,21125K3,uji,ya,129.56,42.5,172.06,0.018796,1.1426,172.06,21508,rekaman berakhir saat burner masih panas,21125 K3,test,30% butane,normal flame (fuel issues into oxidizer),0.38437638,101.33,yes,PSI-159_Raw Data_21125K3_data.csv
+PSI-159,21130A1,uji,ya,32.45,48.3,80.74,0.000618,0.839,80.74,10094,rekaman berakhir saat burner masih panas,21130A1,test,30% propane,normal flame (fuel issues into oxidizer),0.2107,202.66,yes,PSI-159_Raw Data_21130A1_data.csv
+PSI-159,21130A2,uji,tidak,,,,0.000411,,76.54,9568,,21130 A2,test,30% propane,normal flame (fuel issues into oxidizer),0.210684692,202.66,yes,PSI-159_Raw Data_21130A2_data.csv
+PSI-159,21130A3,uji,tidak,,,,1.2e-05,,71.64,8956,,21130 A3,test,30% propane,normal flame (fuel issues into oxidizer),0.210654078,202.66,no,PSI-159_Raw Data_21130A3_data.csv
+PSI-159,21130A4,uji,tidak,,,,1.3e-05,,57.5,7188,,21130 A4,test,30% propane,normal flame (fuel issues into oxidizer),0.210654078,202.66,no,PSI-159_Raw Data_21130A4_data.csv
+PSI-159,21130A5,uji,tidak,,,,0.000404,,81.74,10219,,21130 A5,test,30% propane,normal flame (fuel issues into oxidizer),0.210654078,202.66,yes,PSI-159_Raw Data_21130A5_data.csv
+PSI-159,21130A6,uji,tidak,,,,1.3e-05,,75.54,9444,,21130 A6,test,30% propane,normal flame (fuel issues into oxidizer),0.210623465,202.66,no,PSI-159_Raw Data_21130A6_data.csv
+PSI-159,21130A7,uji,tidak,,,,1.5e-05,,73.54,9193,,21130 A7,test,30% propane,normal flame (fuel issues into oxidizer),0.210623465,202.66,no,PSI-159_Raw Data_21130A7_data.csv
+PSI-159,21130A8,uji,tidak,,,,1.5e-05,,71.63,8955,,21130 A8,test,30% propane,normal flame (fuel issues into oxidizer),0.210623465,202.66,no,PSI-159_Raw Data_21130A8_data.csv
+PSI-159,21130G1,uji,tidak,,,,3.5e-05,,73.65,9207,,21130 G1,test,30% propane,normal flame (fuel issues into oxidizer),0.2167,303.99,no,PSI-159_Raw Data_21130G1_data.csv
+PSI-159,21130G2,uji,tidak,,,,0.000467,,70.63,8830,,21130 G2,test,30% propane,normal flame (fuel issues into oxidizer),0.2167,303.99,yes,PSI-159_Raw Data_21130G2_data.csv
+PSI-159,21130G3,uji,tidak,,,,0.000363,,71.65,8957,,21130 G3,test,30% propane,normal flame (fuel issues into oxidizer),0.216689654,303.99,yes,PSI-159_Raw Data_21130G3_data.csv
+PSI-159,21130G4,uji,tidak,,,,1.4e-05,,73.75,9219,,21130 G4,test,30% propane,normal flame (fuel issues into oxidizer),0.216668964,303.99,no,PSI-159_Raw Data_21130G4_data.csv
+PSI-159,21130G5,uji,tidak,,,,1.7e-05,,71.64,8957,,21130 G5,test,30% propane,normal flame (fuel issues into oxidizer),0.216668964,303.99,no,PSI-159_Raw Data_21130G5_data.csv
+PSI-159,21130G6,uji,tidak,,,,0.0004,,72.75,9095,,21130 G6,test,30% propane,normal flame (fuel issues into oxidizer),0.216668964,303.99,yes,PSI-159_Raw Data_21130G6_data.csv
+PSI-159,21130G7,uji,tidak,,,,0.000516,,71.64,8956,,21130 G7,test,30% propane,normal flame (fuel issues into oxidizer),0.216663791,303.99,yes,PSI-159_Raw Data_21130G7_data.csv
+PSI-159,21130M1,uji,ya,30.82,25.19,56.0,0.001686,1.7098,56.0,7000,rekaman berakhir saat burner masih panas,21130 M1,test,30% propane,normal flame (fuel issues into oxidizer),0.210615813,202.66,yes,PSI-159_Raw Data_21130M1_data.csv
+PSI-159,21130M2,uji,ya,28.01,27.98,55.99,0.001328,3.4343,55.99,6999,rekaman berakhir saat burner masih panas,21130 M2,test,30% propane,normal flame (fuel issues into oxidizer),0.21050331,202.66,yes,PSI-159_Raw Data_21130M2_data.csv
+PSI-159,21130M3,uji,ya,28.14,25.85,53.99,0.001865,0.8384,53.99,6749,rekaman berakhir saat burner masih panas,21130 M3,test,30% propane,normal flame (fuel issues into oxidizer),0.210240854,202.66,yes,PSI-159_Raw Data_21130M3_data.csv
+PSI-159,21130N1,uji,ya,27.54,24.45,51.99,0.001997,1.7073,51.99,6500,rekaman berakhir saat burner masih panas,21130 N1,test,30% propane,normal flame (fuel issues into oxidizer),0.216661205,303.99,yes,PSI-159_Raw Data_21130N1_data.csv
+PSI-159,21130N2,uji,ya,25.71,26.27,51.98,0.001343,3.4302,51.98,6499,rekaman berakhir saat burner masih panas,21130 N2,test,30% propane,normal flame (fuel issues into oxidizer),0.216585869,303.99,yes,PSI-159_Raw Data_21130N2_data.csv
+PSI-159,21130N3,uji,ya,26.79,35.13,61.92,0.002679,0.8361,61.92,7741,rekaman berakhir saat burner masih panas,21130 N3,test,30% propane,normal flame (fuel issues into oxidizer),0.216435213,303.99,yes,PSI-159_Raw Data_21130N3_data.csv
+PSI-159,21130N4,uji,ya,30.77,36.26,67.03,0.002695,0.8384,67.03,8380,rekaman berakhir saat burner masih panas,21130 N4,test,30% propane,normal flame (fuel issues into oxidizer),0.216403828,303.99,yes,PSI-159_Raw Data_21130N4_data.csv
+PSI-159,21130N5,uji,tidak,,,,5.3e-05,,63.02,7874,,21130 N5,test,30% propane,normal flame (fuel issues into oxidizer),0.216372442,303.99,no,PSI-159_Raw Data_21130N5_data.csv
+PSI-159,21137A1,uji,ya,40.86,30.13,70.99,0.004474,4.9813,70.99,8871,rekaman berakhir saat burner masih panas,21137A1,test,30% propane,normal flame (fuel issues into oxidizer),0.3996,101.33,yes,PSI-159_Raw Data_21137A1_data.csv
+PSI-159,21137A2,uji,ya,58.84,33.17,92.01,0.008559,2.5754,92.01,11502,rekaman berakhir saat burner masih panas,21137 A2,test,30% propane,normal flame (fuel issues into oxidizer),0.397258964,101.33,yes,PSI-159_Raw Data_21137A2_data.csv
+PSI-159,21137A3,uji,ya,146.42,31.5,177.93,0.015294,1.7147,177.93,22242,rekaman berakhir saat burner masih panas,21137 A3,test,30% propane,normal flame (fuel issues into oxidizer),0.394768875,101.33,yes,PSI-159_Raw Data_21137A3_data.csv
+PSI-159,21137A4,uji,ya,56.31,29.59,85.9,0.008532,2.1429,85.9,10738,rekaman berakhir saat burner masih panas,21137 A4,test,30% propane,normal flame (fuel issues into oxidizer),0.357498988,101.33,yes,PSI-159_Raw Data_21137A4_data.csv
+PSI-159,21137A5,uji,ya,62.9,29.99,92.89,0.010527,1.8826,92.89,11612,rekaman berakhir saat burner masih panas,21137 A5,test,30% propane,normal flame (fuel issues into oxidizer),0.355683743,101.33,yes,PSI-159_Raw Data_21137A5_data.csv
+PSI-159,21137A6,uji,ya,45.83,31.06,76.89,0.006042,2.4038,76.89,9613,rekaman berakhir saat burner masih panas,21137 A6,test,30% propane,normal flame (fuel issues into oxidizer),0.353678232,101.33,yes,PSI-159_Raw Data_21137A6_data.csv
+PSI-159,21137A7,uji,ya,54.9,32.1,87.0,0.008352,2.0541,87.0,10872,rekaman berakhir saat burner masih panas,21137 A7,test,30% propane,normal flame (fuel issues into oxidizer),0.352403076,101.33,yes,PSI-159_Raw Data_21137A7_data.csv
+PSI-159,21137B1,uji,ya,126.07,44.57,170.63,0.00635,4.9844,170.63,21330,rekaman berakhir saat burner masih panas,21137 B1,test,30% propane,normal flame (fuel issues into oxidizer),0.389508666,101.33,yes,PSI-159_Raw Data_21137B1_data.csv
+PSI-159,21137B2,uji,ya,145.84,48.69,194.53,0.005607,2.5764,194.53,24317,rekaman berakhir saat burner masih panas,21137 B2,test,30% propane,normal flame (fuel issues into oxidizer),0.371242231,101.33,yes,PSI-159_Raw Data_21137B2_data.csv
+PSI-159,21137C1,uji,ya,29.73,39.78,69.5,0.003189,0.8387,69.5,8689,rekaman berakhir saat burner masih panas,21137 C1,test,30% propane,normal flame (fuel issues into oxidizer),0.208927834,101.33,yes,PSI-159_Raw Data_21137C1_data.csv
+PSI-159,21137D1,uji,ya,29.23,28.75,57.98,0.001687,4.9787,57.98,7249,rekaman berakhir saat burner masih panas,21137 D1,test,30% propane,normal flame (fuel issues into oxidizer),0.21,101.33,yes,PSI-159_Raw Data_21137D1_data.csv
+PSI-159,21137D2,uji,ya,42.66,25.23,67.89,0.00453,0.8391,67.89,8487,rekaman berakhir saat burner masih panas,21137 D2,test,30% propane,normal flame (fuel issues into oxidizer),0.209133851,101.33,yes,PSI-159_Raw Data_21137D2_data.csv
+PSI-159,21153A1,uji,ya,73.04,37.87,110.91,0.007143,4.9839,110.91,13865,rekaman berakhir saat burner masih panas,21153A1,test,30% ethane,normal flame (fuel issues into oxidizer),0.3887,50.665,yes,PSI-159_Raw Data_21153A1_data.csv
+PSI-159,21153A2,uji,ya,103.62,38.29,141.91,0.009991,3.1585,141.91,17740,rekaman berakhir saat burner masih panas,21153 A2,test,30% ethane,normal flame (fuel issues into oxidizer),0.375900202,50.665,yes,PSI-159_Raw Data_21153A2_data.csv
+PSI-159,21153A3,uji,ya,273.85,33.1,306.96,0.01432,2.0953,306.96,38371,rekaman berakhir saat burner masih panas,21153 A3,test,30% ethane,normal flame (fuel issues into oxidizer),0.363879118,50.665,yes,PSI-159_Raw Data_21153A3_data.csv
+PSI-159,21153A4,uji,ya,49.76,31.23,80.99,0.019987,1.0414,80.99,10124,rekaman berakhir saat burner masih panas,21153 A4,test,30% ethane,normal flame (fuel issues into oxidizer),0.334933586,50.665,yes,PSI-159_Raw Data_21153A4_data.csv
+PSI-159,21153A5,uji,ya,276.56,36.39,312.96,0.016188,1.5737,312.96,39121,rekaman berakhir saat burner masih panas,21153 A5,test,30% ethane,normal flame (fuel issues into oxidizer),0.332446428,50.665,yes,PSI-159_Raw Data_21153A5_data.csv
+PSI-159,21153C1,uji,ya,53.68,30.22,83.9,0.006078,4.9833,83.9,10488,rekaman berakhir saat burner masih panas,21153 C1,test,30% ethane,normal flame (fuel issues into oxidizer),0.3985,202.66,yes,PSI-159_Raw Data_21153C1_data.csv
+PSI-159,21153C2,uji,ya,69.26,29.74,98.99,0.008718,3.1569,98.99,12375,rekaman berakhir saat burner masih panas,21153 C2,test,30% ethane,normal flame (fuel issues into oxidizer),0.396626309,202.66,yes,PSI-159_Raw Data_21153C2_data.csv
+PSI-159,21153C3,uji,ya,141.88,33.15,175.02,0.013615,2.0947,175.02,21878,rekaman berakhir saat burner masih panas,21153 C3,test,30% ethane,normal flame (fuel issues into oxidizer),0.394842385,202.66,yes,PSI-159_Raw Data_21153C3_data.csv
+PSI-159,21153C4,uji,ya,280.62,29.35,309.97,0.01691,1.5741,309.97,38747,rekaman berakhir saat burner masih panas,21153 C4,test,30% ethane,normal flame (fuel issues into oxidizer),0.388939354,202.66,yes,PSI-159_Raw Data_21153C4_data.csv
+PSI-159,21153C5,uji,ya,44.27,28.62,72.89,0.020096,1.0409,72.89,9112,rekaman berakhir saat burner masih panas,21153 C5,test,30% ethane,normal flame (fuel issues into oxidizer),0.384151721,202.66,yes,PSI-159_Raw Data_21153C5_data.csv
+PSI-159,21153C6,uji,ya,64.52,32.49,97.01,0.008094,3.1566,97.01,12127,rekaman berakhir saat burner masih panas,21153 C6,test,30% ethane,normal flame (fuel issues into oxidizer),0.383585316,202.66,yes,PSI-159_Raw Data_21153C6_data.csv
+PSI-159,21153C7,uji,ya,65.33,30.7,96.02,0.012644,2.0942,96.02,12004,rekaman berakhir saat burner masih panas,21153 C7,test,30% ethane,normal flame (fuel issues into oxidizer),0.382061285,202.66,yes,PSI-159_Raw Data_21153C7_data.csv
+PSI-159,21153F1,uji,ya,58.86,33.14,91.99,0.007363,3.1568,91.99,11500,rekaman berakhir saat burner masih panas,21153 F1,test,30% ethane,normal flame (fuel issues into oxidizer),0.34080788,50.665,yes,PSI-159_Raw Data_21153F1_data.csv
+PSI-159,21153G1,uji,ya,148.89,33.13,182.02,0.013685,2.0948,182.02,22753,rekaman berakhir saat burner masih panas,21153 G1,test,30% ethane,normal flame (fuel issues into oxidizer),0.391980391,202.66,yes,PSI-159_Raw Data_21153G1_data.csv
+PSI-159,21162A1,uji,ya,59.76,37.26,97.02,0.006474,4.9815,97.02,12128,rekaman berakhir saat burner masih panas,21162A1,test,30% ethane,normal flame (fuel issues into oxidizer),0.3997,101.33,yes,PSI-159_Raw Data_21162A1_data.csv
+PSI-159,21162A2,uji,ya,84.6,36.31,120.9,0.009668,3.1582,120.9,15114,rekaman berakhir saat burner masih panas,21162 A2,test,30% ethane,normal flame (fuel issues into oxidizer),0.394966671,101.33,yes,PSI-159_Raw Data_21162A2_data.csv
+PSI-159,21162A3,uji,ya,250.04,35.12,285.16,0.014365,2.0954,285.16,35645,rekaman berakhir saat burner masih panas,21162 A3,test,30% ethane,normal flame (fuel issues into oxidizer),0.390017987,101.33,yes,PSI-159_Raw Data_21162A3_data.csv
+PSI-159,21162A4,uji,ya,325.45,32.82,358.26,0.015622,1.7852,358.26,44784,rekaman berakhir saat burner masih panas,21162 A4,test,30% ethane,normal flame (fuel issues into oxidizer),0.372085537,101.33,yes,PSI-159_Raw Data_21162A4_data.csv
+PSI-159,21162B1,uji,ya,180.03,33.1,213.13,0.013766,2.0949,213.13,26642,rekaman berakhir saat burner masih panas,21162 B1,test,30% ethane,normal flame (fuel issues into oxidizer),0.37932621,101.33,yes,PSI-159_Raw Data_21162B1_data.csv
+PSI-159,21162C1,uji,ya,40.97,30.02,70.99,0.005662,1.0403,70.99,8875,rekaman berakhir saat burner masih panas,21162 C1,test,30% ethane,normal flame (fuel issues into oxidizer),0.21,101.33,yes,PSI-159_Raw Data_21162C1_data.csv
+PSI-159,21162C2,uji,ya,33.7,26.3,59.99,0.00292,1.5702,59.99,7500,rekaman berakhir saat burner masih panas,21162 C2,test,30% ethane,normal flame (fuel issues into oxidizer),0.209619681,101.33,yes,PSI-159_Raw Data_21162C2_data.csv
+PSI-159,21162C3,uji,ya,32.38,30.62,63.0,0.002023,2.0916,63.0,7876,rekaman berakhir saat burner masih panas,21162 C3,test,30% ethane,normal flame (fuel issues into oxidizer),0.209289501,101.33,yes,PSI-159_Raw Data_21162C3_data.csv
+PSI-159,21162C4,uji,ya,30.6,31.39,61.99,0.001684,3.1534,61.99,7750,rekaman berakhir saat burner masih panas,21162 C4,test,30% ethane,normal flame (fuel issues into oxidizer),0.20892942,101.33,yes,PSI-159_Raw Data_21162C4_data.csv
+PSI-159,21162C5,uji,ya,28.22,29.76,57.99,0.001601,4.9784,57.99,7249,rekaman berakhir saat burner masih panas,21162 C5,test,30% ethane,normal flame (fuel issues into oxidizer),0.208389559,101.33,yes,PSI-159_Raw Data_21162C5_data.csv
+PSI-159,21162D1,uji,ya,54.37,28.63,83.0,0.004928,1.0407,83.0,10376,rekaman berakhir saat burner masih panas,21162 D1,test,30% ethane,normal flame (fuel issues into oxidizer),0.207540819,101.33,yes,PSI-159_Raw Data_21162D1_data.csv
+PSI-159,21162F1,uji,tidak,,,,0.000132,,72.44,9057,,21162 F1,test,30% ethane,normal flame (fuel issues into oxidizer),0.207221235,101.33,no,PSI-159_Raw Data_21162F1_data.csv
+PSI-159,21162F2,uji,ya,32.68,44.77,77.45,0.001763,3.1539,77.45,9682,rekaman berakhir saat burner masih panas,21162 F2,test,30% ethane,normal flame (fuel issues into oxidizer),0.207221235,101.33,yes,PSI-159_Raw Data_21162F2_data.csv
+PSI-159,21174A1,uji,ya,40.74,32.26,73.0,0.004466,4.9811,73.0,9126,rekaman berakhir saat burner masih panas,21174 A1,test,30% butane,normal flame (fuel issues into oxidizer),0.3886,50.665,yes,PSI-159_Raw Data_21174A1_data.csv
+PSI-159,21174A2,uji,ya,49.25,34.74,83.99,0.006201,3.0863,83.99,10500,rekaman berakhir saat burner masih panas,21174 A2,test,30% butane,normal flame (fuel issues into oxidizer),0.38317216,50.665,yes,PSI-159_Raw Data_21174A2_data.csv
+PSI-159,21174A3,uji,ya,68.62,33.47,102.1,0.010243,2.3148,102.1,12763,rekaman berakhir saat burner masih panas,21174 A3,test,30% butane,normal flame (fuel issues into oxidizer),0.378521822,50.665,yes,PSI-159_Raw Data_21174A3_data.csv
+PSI-159,21174A4,uji,ya,227.08,33.97,261.05,0.016268,1.534,261.05,32632,rekaman berakhir saat burner masih panas,21174 A4,test,30% butane,normal flame (fuel issues into oxidizer),0.372051768,50.665,yes,PSI-159_Raw Data_21174A4_data.csv
+PSI-159,21174B1,uji,ya,126.2,32.82,159.02,0.014883,1.533,159.02,19878,rekaman berakhir saat burner masih panas,21174 B1,test,30% butane,normal flame (fuel issues into oxidizer),0.355439854,50.665,yes,PSI-159_Raw Data_21174B1_data.csv
+PSI-159,21174C1,uji,ya,49.09,28.91,77.99,0.005412,4.9791,77.99,9750,rekaman berakhir saat burner masih panas,21174 C1,test,30% butane,normal flame (fuel issues into oxidizer),0.3985,202.66,yes,PSI-159_Raw Data_21174C1_data.csv
+PSI-159,21174C2,uji,ya,49.93,29.96,79.89,0.006782,3.0846,79.89,9987,rekaman berakhir saat burner masih panas,21174 C2,test,30% butane,normal flame (fuel issues into oxidizer),0.396546482,202.66,yes,PSI-159_Raw Data_21174C2_data.csv
+PSI-159,21174C3,uji,ya,55.14,30.86,86.0,0.009033,2.3146,86.0,10751,rekaman berakhir saat burner masih panas,21174 C3,test,30% butane,normal flame (fuel issues into oxidizer),0.39537253,202.66,yes,PSI-159_Raw Data_21174C3_data.csv
+PSI-159,21174C4,uji,ya,108.78,32.15,140.93,0.015338,1.5327,140.93,17617,rekaman berakhir saat burner masih panas,21174 C4,test,30% butane,normal flame (fuel issues into oxidizer),0.394310549,202.66,yes,PSI-159_Raw Data_21174C4_data.csv
+PSI-159,21174C5,uji,ya,30.23,30.77,61.0,0.020349,0.7607,61.0,7626,rekaman berakhir saat burner masih panas,21174 C5,test,30% butane,normal flame (fuel issues into oxidizer),0.389605939,202.66,yes,PSI-159_Raw Data_21174C5_data.csv
+PSI-159,21174C6,uji,ya,270.06,29.99,300.06,0.019087,1.1423,300.06,37508,rekaman berakhir saat burner masih panas,21174 C6,test,30% butane,normal flame (fuel issues into oxidizer),0.389263058,202.66,yes,PSI-159_Raw Data_21174C6_data.csv
+PSI-159,21174D1,uji,ya,103.94,29.07,133.01,0.015106,1.5325,133.01,16627,rekaman berakhir saat burner masih panas,21174 D1,test,30% butane,normal flame (fuel issues into oxidizer),0.392491915,202.66,yes,PSI-159_Raw Data_21174D1_data.csv
+PSI-159,21174F1,uji,ya,60.05,39.4,99.45,0.009492,2.3124,99.45,12433,rekaman berakhir saat burner masih panas,21174 F1,test,30% butane,normal flame (fuel issues into oxidizer),0.390816348,202.66,yes,PSI-159_Raw Data_21174F1_data.csv
+PSI-159,21174F2,uji,ya,33.99,38.56,72.55,0.007189,2.3018,72.55,9070,rekaman berakhir saat burner masih panas,21174 F2,test,30% butane,normal flame (fuel issues into oxidizer),0.385474447,202.66,yes,PSI-159_Raw Data_21174F2_data.csv
+PSI-159,21174F3,uji,ya,34.05,41.47,75.52,0.007287,2.2961,75.52,9441,rekaman berakhir saat burner masih panas,21174 F3,test,30% butane,normal flame (fuel issues into oxidizer),0.384750235,202.66,yes,PSI-159_Raw Data_21174F3_data.csv
+PSI-159,21174F4,uji,ya,36.78,43.95,80.74,0.008866,2.2744,80.74,10093,rekaman berakhir saat burner masih panas,21174 F4,test,30% butane,normal flame (fuel issues into oxidizer),0.384056477,202.66,yes,PSI-159_Raw Data_21174F4_data.csv
+PSI-159,21196A1,uji,tidak,,,,4.1e-05,,62.67,7834,,21196 A1,test,ethane,inverse flame (oxidizer issues into fuel),0.21,110.0,no,PSI-159_Raw Data_21196A1_data.csv
+PSI-159,21196A2,uji,ya,39.02,45.79,84.82,0.005594,0.0026,84.82,10603,rekaman berakhir saat burner masih panas,21196 A2,test,ethane,inverse flame (oxidizer issues into fuel),0.21,110.0,yes,PSI-159_Raw Data_21196A2_data.csv
+PSI-159,21196F1,uji,ya,39.7,43.91,83.61,0.003748,0.0024,83.61,10452,rekaman berakhir saat burner masih panas,21196 F1,test,ethane,inverse flame (oxidizer issues into fuel),0.15,110.33,yes,PSI-159_Raw Data_21196F1_data.csv
+PSI-159,21196F2,uji,ya,63.03,46.68,109.71,0.005857,0.0058,109.71,13715,rekaman berakhir saat burner masih panas,21196 F2,test,ethane,inverse flame (oxidizer issues into fuel),0.15,110.33,yes,PSI-159_Raw Data_21196F2_data.csv
+PSI-159,21196F3,uji,tidak,,,,0.000463,,72.7,9090,,21196 F3,test,ethane,inverse flame (oxidizer issues into fuel),0.15,110.33,,PSI-159_Raw Data_21196F3_data.csv
+PSI-159,21196F4,uji,ya,33.17,37.44,70.61,0.001429,0.0084,70.61,8827,rekaman berakhir saat burner masih panas,21196 F4,test,ethane,inverse flame (oxidizer issues into fuel),0.15,110.33,,PSI-159_Raw Data_21196F4_data.csv
+PSI-159,21196F5,uji,tidak,,,,9.3e-05,,69.61,8702,,21196 F5,test,ethane,inverse flame (oxidizer issues into fuel),0.15,110.33,,PSI-159_Raw Data_21196F5_data.csv
+PSI-159,21196F6,uji,ya,63.05,50.77,113.82,0.005781,0.003,113.82,14228,rekaman berakhir saat burner masih panas,21196 F6,test,ethane,inverse flame (oxidizer issues into fuel),0.15,110.33,yes,PSI-159_Raw Data_21196F6_data.csv
+PSI-159,21196H1,uji,tidak,,,,2.4e-05,,60.7,7588,,21196 H1,test,ethane,inverse flame (oxidizer issues into fuel),0.12,110.33,no,PSI-159_Raw Data_21196H1_data.csv
+PSI-159,21196J1,uji,tidak,,,,6.6e-05,,64.8,8101,,21196 J1,test,ethane,inverse flame (oxidizer issues into fuel),0.135,110.33,,PSI-159_Raw Data_21196J1_data.csv
+PSI-159,21196K1,uji,ya,24.56,36.66,61.22,0.0013,0.003,80.71,10090,mendingin dalam rekaman,21196 K1,test,ethane,inverse flame (oxidizer issues into fuel),0.15,49.53817,,PSI-159_Raw Data_21196K1_data.csv
+PSI-159,21196L1,uji,ya,44.94,36.67,81.61,0.003596,-0.0028,81.61,10202,rekaman berakhir saat burner masih panas,21196 L1,test,ethane,inverse flame (oxidizer issues into fuel),0.21,49.53817,,PSI-159_Raw Data_21196L1_data.csv
+PSI-159,21196L2,uji,ya,61.1,50.52,111.62,0.010024,0.0062,111.62,13953,rekaman berakhir saat burner masih panas,21196 L2,test,ethane,inverse flame (oxidizer issues into fuel),0.21,49.53817,yes,PSI-159_Raw Data_21196L2_data.csv
+PSI-159,21196M1,uji,ya,33.02,37.7,70.71,0.004302,0.005,70.71,8840,rekaman berakhir saat burner masih panas,21196 M1,test,ethane,inverse flame (oxidizer issues into fuel),0.3,49.53817,,PSI-159_Raw Data_21196M1_data.csv
+PSI-159,21196M2,uji,ya,52.26,48.87,101.13,0.020092,0.0003,101.13,12642,rekaman berakhir saat burner masih panas,21196 M2,test,ethane,inverse flame (oxidizer issues into fuel),0.3,49.53817,yes,PSI-159_Raw Data_21196M2_1_data.csv
+PSI-159,21196M2,uji,ya,64.4,50.71,115.11,0.020081,0.0028,115.11,14391,rekaman berakhir saat burner masih panas,21196 M2,test,ethane,inverse flame (oxidizer issues into fuel),0.3,49.53817,yes,PSI-159_Raw Data_21196M2_data.csv
+PSI-159,21202A1,uji,tidak,,,,8.4e-05,,57.09,7137,,21202 A1,test,ethane,inverse flame (oxidizer issues into fuel),0.85,220.66,no,PSI-159_Raw Data_21202A1_data.csv
+PSI-159,21202A2,uji,ya,34.94,23.15,58.09,0.00151,0.003,58.09,7262,rekaman berakhir saat burner masih panas,21202 A2,test,ethane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21202A2_data.csv
+PSI-159,21202A3,uji,ya,41.78,26.11,67.89,0.001059,0.0003,67.89,8487,rekaman berakhir saat burner masih panas,21202 A3,test,ethane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21202A3_data.csv
+PSI-159,21202A4,uji,ya,57.54,26.67,84.21,0.000807,0.0029,84.21,10527,rekaman berakhir saat burner masih panas,21202 A4,test,ethane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21202A4_data.csv
+PSI-159,21202H1,uji,ya,68.5,23.73,92.23,0.007687,0.0029,92.23,11529,rekaman berakhir saat burner masih panas,21202 H1,test,ethane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21202H1_data.csv
+PSI-159,21202H2,uji,ya,55.17,25.03,80.19,0.003393,0.0029,80.19,10025,rekaman berakhir saat burner masih panas,21202 H2,test,ethane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21202H2_data.csv
+PSI-159,21202H3,uji,ya,71.15,32.05,103.2,0.018193,0.0035,103.2,12901,rekaman berakhir saat burner masih panas,21202 H3,test,ethane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21202H3_data.csv
+PSI-159,21202H4,uji,ya,76.68,29.43,106.1,0.011209,0.0029,106.1,13264,rekaman berakhir saat burner masih panas,21202 H4,test,ethane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21202H4_data.csv
+PSI-159,21202J1,uji,ya,90.87,29.29,120.16,0.012305,0.0026,120.16,15021,rekaman berakhir saat burner masih panas,21202 J1,test,ethane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21202J1_data.csv
+PSI-159,21202K1,uji,ya,91.73,31.43,123.16,0.010173,0.0053,123.16,15396,rekaman berakhir saat burner masih panas,21202 K1,test,ethane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21202K1_data.csv
+PSI-159,21202K2,uji,ya,51.41,28.58,79.99,0.003632,0.003,79.99,10000,rekaman berakhir saat burner masih panas,21202 K2,test,ethane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21202K2_data.csv
+PSI-159,21202L1,uji,ya,93.97,28.03,122.0,0.009348,0.0053,122.0,15251,rekaman berakhir saat burner masih panas,21202 L1,test,ethane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21202L1_data.csv
+PSI-159,21209A1,uji,ya,22.69,28.31,51.0,0.021413,0.0,51.0,6376,rekaman berakhir saat burner masih panas,21209 A1,test,ethane,inverse flame (oxidizer issues into fuel),0.85,55.165,yes,PSI-159_Raw Data_21209A1_data.csv
+PSI-159,21209A3,uji,ya,67.43,35.77,103.2,0.011182,0.0023,103.2,12901,rekaman berakhir saat burner masih panas,21209 A3,test,ethane,inverse flame (oxidizer issues into fuel),0.85,55.165,yes,PSI-159_Raw Data_21209A3_data.csv
+PSI-159,21209A4,uji,ya,70.36,31.64,102.0,0.016042,-0.0023,102.0,12751,rekaman berakhir saat burner masih panas,21209 A4,test,ethane,inverse flame (oxidizer issues into fuel),0.85,55.165,yes,PSI-159_Raw Data_21209A4_data.csv
+PSI-159,21209B1,uji,ya,138.1,35.92,174.02,0.011181,0.0051,174.02,21754,rekaman berakhir saat burner masih panas,21209 B1,test,ethane,inverse flame (oxidizer issues into fuel),0.85,55.165,yes,PSI-159_Raw Data_21209B1_data.csv
+PSI-159,21209B2,uji,ya,43.28,28.7,71.98,0.020133,0.0086,71.98,8999,rekaman berakhir saat burner masih panas,21209 B2,test,ethane,inverse flame (oxidizer issues into fuel),0.85,55.165,yes,PSI-159_Raw Data_21209B2_data.csv
+PSI-159,21209F1,uji,ya,64.44,49.79,114.23,0.007124,0.0009,114.23,14280,rekaman berakhir saat burner masih panas,21209 F1,test,ethane,inverse flame (oxidizer issues into fuel),0.21,55.165,yes,PSI-159_Raw Data_21209F1_data.csv
+PSI-159,21209F2,uji,ya,61.14,58.0,119.14,0.007639,0.0003,119.14,14894,rekaman berakhir saat burner masih panas,21209 F2,test,ethane,inverse flame (oxidizer issues into fuel),0.21,55.165,yes,PSI-159_Raw Data_21209F2_data.csv
+PSI-159,21209F3,uji,ya,64.06,49.26,113.33,0.011806,0.0024,113.33,14167,rekaman berakhir saat burner masih panas,21209 F3,test,ethane,inverse flame (oxidizer issues into fuel),0.21,55.165,yes,PSI-159_Raw Data_21209F3_data.csv
+PSI-159,21209H1,uji,ya,65.92,51.3,117.22,0.010715,-0.0001,117.22,14655,rekaman berakhir saat burner masih panas,21209 H1,test,ethane,inverse flame (oxidizer issues into fuel),0.5,55.165,yes,PSI-159_Raw Data_21209H1_data.csv
+PSI-159,21209J1,uji,ya,62.12,55.11,117.23,0.00903,-0.0022,117.23,14655,rekaman berakhir saat burner masih panas,21209 J1,test,ethane,inverse flame (oxidizer issues into fuel),0.3,55.165,yes,PSI-159_Raw Data_21209J1_data.csv
+PSI-159,21209K1,uji,ya,29.89,49.35,79.24,0.004217,0.0032,79.24,9905,rekaman berakhir saat burner masih panas,21209 K1,test,ethane,inverse flame (oxidizer issues into fuel),0.18,55.165,yes,PSI-159_Raw Data_21209K1_data.csv
+PSI-159,21216A1,uji,ya,46.64,27.36,74.0,0.00553,0.0055,74.0,9251,rekaman berakhir saat burner masih panas,21216 A1,test,ethane,inverse flame (oxidizer issues into fuel),0.85,330.99,yes,PSI-159_Raw Data_21216A1_data.csv
+PSI-159,21216A2,uji,ya,49.89,26.11,76.0,0.003871,0.0024,76.0,9501,rekaman berakhir saat burner masih panas,21216 A2,test,ethane,inverse flame (oxidizer issues into fuel),0.85,330.99,yes,PSI-159_Raw Data_21216A2_data.csv
+PSI-159,21216A3,uji,ya,48.78,24.31,73.09,0.003083,0.0029,73.09,9137,rekaman berakhir saat burner masih panas,21216 A3,test,ethane,inverse flame (oxidizer issues into fuel),0.85,330.99,yes,PSI-159_Raw Data_21216A3_data.csv
+PSI-159,21216A4,uji,ya,67.62,31.59,99.21,0.012413,0.0002,99.21,12402,rekaman berakhir saat burner masih panas,21216 A4,test,ethane,inverse flame (oxidizer issues into fuel),0.85,330.99,yes,PSI-159_Raw Data_21216A4_data.csv
+PSI-159,21216A5,uji,ya,31.09,26.01,57.1,0.001235,0.0026,57.1,7138,rekaman berakhir saat burner masih panas,21216 A5,test,ethane,inverse flame (oxidizer issues into fuel),0.85,330.99,,PSI-159_Raw Data_21216A5_data.csv
+PSI-159,21216A6,uji,ya,70.85,29.14,99.99,0.018281,0.0003,99.99,12500,rekaman berakhir saat burner masih panas,21216 A6,test,ethane,inverse flame (oxidizer issues into fuel),0.85,330.99,yes,PSI-159_Raw Data_21216A6_data.csv
+PSI-159,21216B1,uji,ya,54.27,24.82,79.09,0.00483,0.0028,79.09,9887,rekaman berakhir saat burner masih panas,21216 B1,test,ethane,inverse flame (oxidizer issues into fuel),0.85,330.99,yes,PSI-159_Raw Data_21216B1_data.csv
+PSI-159,21216C1,uji,ya,39.28,44.87,84.14,0.00215,-0.0051,84.14,10519,rekaman berakhir saat burner masih panas,21216 C1,test,ethane,inverse flame (oxidizer issues into fuel),0.5,330.99,yes,PSI-159_Raw Data_21216C1_data.csv
+PSI-159,21216F1,uji,ya,61.78,55.34,117.13,0.004159,0.0003,117.13,14642,rekaman berakhir saat burner masih panas,21216 F1,test,ethane,inverse flame (oxidizer issues into fuel),0.21,330.99,yes,PSI-159_Raw Data_21216F1_data.csv
+PSI-159,21216H1,uji,ya,46.38,26.56,72.94,0.003919,0.0022,72.94,9119,rekaman berakhir saat burner masih panas,21216 H1,test,ethane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21216H1_data.csv
+PSI-159,21216H2,uji,ya,55.08,32.02,87.1,0.003039,0.0029,87.1,10889,rekaman berakhir saat burner masih panas,21216 H2,test,ethane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21216H2_data.csv
+PSI-159,21216J1,uji,ya,58.97,38.26,97.23,0.003539,0.0003,97.23,12155,rekaman berakhir saat burner masih panas,21216 J1,test,ethane,inverse flame (oxidizer issues into fuel),0.5,110.33,yes,PSI-159_Raw Data_21216J1_data.csv
+PSI-159,21216K1,uji,ya,57.75,58.38,116.13,0.004361,0.0029,116.13,14517,rekaman berakhir saat burner masih panas,21216 K1,test,ethane,inverse flame (oxidizer issues into fuel),0.21,110.33,yes,PSI-159_Raw Data_21216K1_data.csv
+PSI-159,21222A1,uji,ya,43.98,24.01,67.99,0.003171,0.003,67.99,8500,rekaman berakhir saat burner masih panas,21222 A1,test,propane,inverse flame (oxidizer issues into fuel),0.85,330.99,yes,PSI-159_Raw Data_21222A1_data.csv
+PSI-159,21222A2,uji,ya,50.66,23.34,74.0,0.00506,0.0051,74.0,9251,rekaman berakhir saat burner masih panas,21222 A2,test,propane,inverse flame (oxidizer issues into fuel),0.85,330.99,yes,PSI-159_Raw Data_21222A2_data.csv
+PSI-159,21222A3,uji,ya,49.54,28.47,78.01,0.003101,0.0049,78.01,9752,rekaman berakhir saat burner masih panas,21222 A3,test,propane,inverse flame (oxidizer issues into fuel),0.85,330.99,yes,PSI-159_Raw Data_21222A3_data.csv
+PSI-159,21222A4,uji,ya,46.26,23.82,70.08,0.00622,0.0032,70.08,8761,rekaman berakhir saat burner masih panas,21222 A4,test,propane,inverse flame (oxidizer issues into fuel),0.85,330.99,yes,PSI-159_Raw Data_21222A4_data.csv
+PSI-159,21222A5,uji,ya,40.83,26.26,67.09,0.002672,0.0002,67.09,8388,rekaman berakhir saat burner masih panas,21222 A5,test,propane,inverse flame (oxidizer issues into fuel),0.85,330.99,yes,PSI-159_Raw Data_21222A5_data.csv
+PSI-159,21222B1,uji,ya,52.36,22.63,74.99,0.003847,0.0051,74.99,9375,rekaman berakhir saat burner masih panas,21222 B1,test,propane,inverse flame (oxidizer issues into fuel),0.85,330.99,yes,PSI-159_Raw Data_21222B1_data.csv
+PSI-159,21222C1,uji,ya,34.87,44.37,79.24,0.001192,0.0029,79.24,9906,rekaman berakhir saat burner masih panas,21222 C1,test,propane,inverse flame (oxidizer issues into fuel),0.5,330.99,yes,PSI-159_Raw Data_21222C1_data.csv
+PSI-159,21222C2,uji,ya,37.47,41.65,79.12,0.001761,0.0028,79.12,9891,rekaman berakhir saat burner masih panas,21222 C2,test,propane,inverse flame (oxidizer issues into fuel),0.5,330.99,yes,PSI-159_Raw Data_21222C2_data.csv
+PSI-159,21222F1,uji,tidak,,,,2.5e-05,,71.03,8880,,21222 F1,test,propane,inverse flame (oxidizer issues into fuel),0.21,330.99,yes,PSI-159_Raw Data_21222F1_data.csv
+PSI-159,21222F2,uji,tidak,,,,5.2e-05,,72.11,9015,,21222 F2,test,propane,inverse flame (oxidizer issues into fuel),0.21,330.99,no,PSI-159_Raw Data_21222F2_data.csv
+PSI-159,21228A1,uji,ya,39.01,26.98,65.99,0.002605,0.0048,65.99,8250,rekaman berakhir saat burner masih panas,21228 A1,test,propane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21228A1_data.csv
+PSI-159,21228A2,uji,ya,44.27,22.71,66.98,0.002319,0.0029,66.98,8374,rekaman berakhir saat burner masih panas,21228 A2,test,propane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21228A2_data.csv
+PSI-159,21228A3,uji,ya,43.53,23.45,66.98,0.004159,0.0027,66.98,8374,rekaman berakhir saat burner masih panas,21228 A3,test,propane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21228A3_data.csv
+PSI-159,21228A4,uji,ya,47.09,24.0,71.09,0.005921,0.0001,71.09,8887,rekaman berakhir saat burner masih panas,21228 A4,test,propane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21228A4_data.csv
+PSI-159,21228B1,uji,ya,47.34,23.65,70.99,0.003568,0.0029,70.99,8874,rekaman berakhir saat burner masih panas,21228 B1,test,propane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21228B1_data.csv
+PSI-159,21228C1,uji,ya,33.95,46.17,80.12,0.001504,0.0054,80.12,10016,rekaman berakhir saat burner masih panas,21228 C1,test,propane,inverse flame (oxidizer issues into fuel),0.5,220.66,yes,PSI-159_Raw Data_21228C1_data.csv
+PSI-159,21228C2,uji,ya,61.96,52.36,114.32,0.00499,0.0027,114.32,14291,rekaman berakhir saat burner masih panas,21228 C2,test,propane,inverse flame (oxidizer issues into fuel),0.5,220.66,yes,PSI-159_Raw Data_21228C2_data.csv
+PSI-159,21228C3,uji,ya,39.14,40.08,79.22,0.001485,0.0036,79.22,9903,rekaman berakhir saat burner masih panas,21228 C3,test,propane,inverse flame (oxidizer issues into fuel),0.5,220.66,yes,PSI-159_Raw Data_21228C3_data.csv
+PSI-159,21228C4,uji,ya,40.27,37.94,78.22,0.004777,0.0027,78.22,9778,rekaman berakhir saat burner masih panas,21228 C4,test,propane,inverse flame (oxidizer issues into fuel),0.5,220.66,yes,PSI-159_Raw Data_21228C4_data.csv
+PSI-159,21228F1,uji,ya,58.77,57.35,116.12,0.003813,0.0056,116.12,14516,rekaman berakhir saat burner masih panas,21228 F1,test,propane,inverse flame (oxidizer issues into fuel),0.21,220.66,yes,PSI-159_Raw Data_21228F1_data.csv
+PSI-159,21228H1,uji,ya,35.49,23.5,58.99,0.002156,0.0029,58.99,7374,rekaman berakhir saat burner masih panas,21228 H1,test,propane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21228H1_data.csv
+PSI-159,21228H2,uji,ya,44.33,27.66,71.99,0.006408,0.0028,71.99,9000,rekaman berakhir saat burner masih panas,21228 H2,test,propane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21228H2_data.csv
+PSI-159,21228J1,uji,ya,44.98,24.1,69.08,0.007055,0.0029,69.08,8636,rekaman berakhir saat burner masih panas,21228 J1,test,propane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21228J1_data.csv
+PSI-159,21228K1,uji,ya,33.69,43.42,77.11,0.001679,0.0029,77.11,9640,rekaman berakhir saat burner masih panas,21228 K1,test,propane,inverse flame (oxidizer issues into fuel),0.5,110.33,yes,PSI-159_Raw Data_21228K1_data.csv
+PSI-159,21228K2,uji,ya,43.62,38.5,82.12,0.005725,0.0031,82.12,10266,rekaman berakhir saat burner masih panas,21228 K2,test,propane,inverse flame (oxidizer issues into fuel),0.5,110.33,yes,PSI-159_Raw Data_21228K2_data.csv
+PSI-159,21228L1,uji,tidak,,,,0.000161,,65.21,8152,,21228 L1,test,propane,inverse flame (oxidizer issues into fuel),0.21,110.33,yes,PSI-159_Raw Data_21228L1_data.csv
+PSI-159,21228L2,uji,ya,18.53,44.58,63.11,0.001739,0.0002,63.11,7890,rekaman berakhir saat burner masih panas,21228 L2,test,propane,inverse flame (oxidizer issues into fuel),0.21,110.33,yes,PSI-159_Raw Data_21228L2_data.csv
+PSI-159,21235A1,uji,ya,72.69,30.41,103.1,0.013816,0.0051,103.1,12888,rekaman berakhir saat burner masih panas,21235 A1,test,propane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21235A1_data.csv
+PSI-159,21235A2,uji,ya,69.53,35.57,105.1,0.009259,0.0003,105.1,13138,rekaman berakhir saat burner masih panas,21235 A2,test,propane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21235A2_data.csv
+PSI-159,21235B1,uji,ya,157.52,32.48,190.01,0.015827,0.0054,190.01,23752,rekaman berakhir saat burner masih panas,21235 B1,test,propane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21235B1_data.csv
+PSI-159,21235C1,uji,ya,71.36,42.84,114.2,0.014489,0.0029,114.2,14278,rekaman berakhir saat burner masih panas,21235 C1,test,propane,inverse flame (oxidizer issues into fuel),0.5,110.33,yes,PSI-159_Raw Data_21235C1_data.csv
+PSI-159,21235F1,uji,ya,65.79,52.62,118.42,0.008972,-0.0001,118.42,14803,rekaman berakhir saat burner masih panas,21235 F1,test,propane,inverse flame (oxidizer issues into fuel),0.21,110.33,yes,PSI-159_Raw Data_21235F1_data.csv
+PSI-159,21235F2,uji,tidak,,,,1.3e-05,,66.1,8263,,21235 F2,test,propane,inverse flame (oxidizer issues into fuel),0.21,110.33,no,PSI-159_Raw Data_21235F2_data.csv
+PSI-159,21235H1,uji,ya,30.77,41.34,72.1,0.001185,0.0032,72.1,9014,rekaman berakhir saat burner masih panas,21235 H1,test,propane,inverse flame (oxidizer issues into fuel),0.18,110.33,yes,PSI-159_Raw Data_21235H1_data.csv
+PSI-159,21235J1,uji,ya,65.06,48.22,113.27,0.006354,0.0003,113.27,14160,rekaman berakhir saat burner masih panas,21235 J1,test,propane,inverse flame (oxidizer issues into fuel),0.19,110.33,yes,PSI-159_Raw Data_21235J1_data.csv
+PSI-159,21235K1,uji,ya,70.66,31.4,102.06,0.01529,0.0055,102.06,12758,rekaman berakhir saat burner masih panas,21235 K1,test,propane,inverse flame (oxidizer issues into fuel),0.85,55.165,yes,PSI-159_Raw Data_21235K1_data.csv
+PSI-159,21235L1,uji,ya,128.01,36.99,165.0,0.010746,0.0032,165.0,20626,rekaman berakhir saat burner masih panas,21235 L1,test,propane,inverse flame (oxidizer issues into fuel),0.85,55.165,yes,PSI-159_Raw Data_21235L1_data.csv
+PSI-159,21242A1,uji,ya,11.23,29.69,40.92,0.025689,0.0027,40.92,5116,rekaman berakhir saat burner masih panas,21242 A1,test,propane,inverse flame (oxidizer issues into fuel),0.85,55.165,yes,PSI-159_Raw Data_21242A1_data.csv
+PSI-159,21242F1,tidak ada,tidak,,,,9e-06,,40.0,5001,,,,,,,,,PSI-159_Raw Data_21242F1_data.csv
+PSI-159,21242F2,uji,tidak,,,,1.1e-05,,84.63,10580,,21242 F2,test,propane,inverse flame (oxidizer issues into fuel),0.21,55.165,no,PSI-159_Raw Data_21242F2_data.csv
+PSI-159,21242F3,uji,tidak,,,,1.3e-05,,63.13,7892,,21242 F3,test,propane,inverse flame (oxidizer issues into fuel),0.21,55.165,no,PSI-159_Raw Data_21242F3_data.csv
+PSI-159,21242F4,uji,tidak,,,,2e-05,,64.12,8016,,21242 F4,test,propane,inverse flame (oxidizer issues into fuel),0.21,55.165,no,PSI-159_Raw Data_21242F4_data.csv
+PSI-159,21242P1,uji,ya,25.64,43.48,69.12,0.006056,0.0035,69.12,8641,rekaman berakhir saat burner masih panas,21242 P1,test,propane,inverse flame (oxidizer issues into fuel),0.3,55.165,yes,PSI-159_Raw Data_21242P1_data.csv
+PSI-159,21242P2,uji,tidak,,,,9e-06,,32.0,4001,,21242 P2,test,propane,inverse flame (oxidizer issues into fuel),0.3,55.165,no,PSI-159_Raw Data_21242P2_data.csv
+PSI-159,21256A1,uji,ya,46.18,22.81,68.99,0.003191,0.0022,68.99,8625,rekaman berakhir saat burner masih panas,21256 A1,test,butane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21256A1_data.csv
+PSI-159,21256A2,uji,ya,54.06,24.94,78.99,0.00435,0.0,78.99,9875,rekaman berakhir saat burner masih panas,21256 A2,test,butane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21256A2_data.csv
+PSI-159,21256A3,uji,ya,46.47,25.64,72.11,0.006089,0.0028,72.11,9014,rekaman berakhir saat burner masih panas,21256 A3,test,butane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21256A3_data.csv
+PSI-159,21256A4,uji,ya,36.61,25.38,61.99,0.004093,0.0029,61.99,7749,rekaman berakhir saat burner masih panas,21256 A4,test,butane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21256A4_data.csv
+PSI-159,21256A5,uji,ya,53.26,22.89,76.15,0.002423,0.0001,76.15,9519,rekaman berakhir saat burner masih panas,21256 A5,test,butane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21256A5_data.csv
+PSI-159,21256B1,uji,ya,53.92,23.07,77.0,0.00356,0.0055,77.0,9627,rekaman berakhir saat burner masih panas,21256 B1,test,butane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21256B1_data.csv
+PSI-159,21256C1,uji,ya,50.86,43.28,94.14,0.001596,0.0058,94.14,11768,rekaman berakhir saat burner masih panas,21256 C1,test,butane,inverse flame (oxidizer issues into fuel),0.5,220.66,yes,PSI-159_Raw Data_21256C1_data.csv
+PSI-159,21256C2,uji,ya,37.48,41.78,79.27,0.005261,0.0081,79.27,9909,rekaman berakhir saat burner masih panas,21256 C2,test,butane,inverse flame (oxidizer issues into fuel),0.5,220.66,yes,PSI-159_Raw Data_21256C2_data.csv
+PSI-159,21256F1,uji,ya,60.34,57.9,118.24,0.004363,-0.0049,118.24,14781,rekaman berakhir saat burner masih panas,21256 F1,test,butane,inverse flame (oxidizer issues into fuel),0.21,220.66,yes,PSI-159_Raw Data_21256F1_data.csv
+PSI-159,21256H1,uji,ya,38.91,26.08,64.99,0.002214,-0.0,64.99,8125,rekaman berakhir saat burner masih panas,21256 H1,test,butane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21256H1_data.csv
+PSI-159,21256H2,uji,ya,36.91,23.07,59.98,0.002609,0.0002,59.98,7499,rekaman berakhir saat burner masih panas,21256 H2,test,butane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21256H2_data.csv
+PSI-159,21256H3,uji,ya,33.82,26.18,60.0,0.003061,0.0052,60.0,7501,rekaman berakhir saat burner masih panas,21256 H3,test,butane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21256H3_data.csv
+PSI-159,21256H4,uji,ya,28.75,26.24,54.99,0.001967,0.003,54.99,6875,rekaman berakhir saat burner masih panas,21256 H4,test,butane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21256H4_data.csv
+PSI-159,21256H5,uji,ya,39.92,26.08,66.0,0.001782,0.0055,66.0,8251,rekaman berakhir saat burner masih panas,21256 H5,test,butane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21256H5_data.csv
+PSI-159,21256J1,uji,ya,37.79,23.28,61.07,0.002057,0.0051,61.07,7636,rekaman berakhir saat burner masih panas,21256 J1,test,butane,inverse flame (oxidizer issues into fuel),0.85,220.66,yes,PSI-159_Raw Data_21256J1_data.csv
+PSI-159,21256K1,uji,ya,30.22,44.02,74.24,0.000697,0.0029,74.24,9281,rekaman berakhir saat burner masih panas,21256 K1,test,butane,inverse flame (oxidizer issues into fuel),0.5,220.66,yes,PSI-159_Raw Data_21256K1_data.csv
+PSI-159,21256M1,uji,tidak,,,,1.6e-05,,67.31,8415,,21256 M1,test,butane,inverse flame (oxidizer issues into fuel),0.21,220.66,yes,PSI-159_Raw Data_21256M1_data.csv
+PSI-159,21265A1,uji,ya,34.99,24.0,58.99,0.002057,0.0083,58.99,7375,rekaman berakhir saat burner masih panas,21265 A1,test,butane,inverse flame (oxidizer issues into fuel),0.85,330.99,yes,PSI-159_Raw Data_21265A1_data.csv
+PSI-159,21265A2,uji,ya,40.0,22.98,62.98,0.002303,0.0029,62.98,7874,rekaman berakhir saat burner masih panas,21265 A2,test,butane,inverse flame (oxidizer issues into fuel),0.85,330.99,yes,PSI-159_Raw Data_21265A2_data.csv
+PSI-159,21265A3,uji,ya,29.88,23.1,52.99,0.001924,0.0028,52.99,6624,rekaman berakhir saat burner masih panas,21265 A3,test,butane,inverse flame (oxidizer issues into fuel),0.85,330.99,yes,PSI-159_Raw Data_21265A3_data.csv
+PSI-159,21265A4,uji,ya,33.93,25.97,59.9,0.002697,0.0027,59.9,7488,rekaman berakhir saat burner masih panas,21265 A4,test,butane,inverse flame (oxidizer issues into fuel),0.85,330.99,yes,PSI-159_Raw Data_21265A4_data.csv
+PSI-159,21265A5,uji,ya,38.78,23.19,61.98,0.001791,0.0029,61.98,7748,rekaman berakhir saat burner masih panas,21265 A5,test,butane,inverse flame (oxidizer issues into fuel),0.85,330.99,yes,PSI-159_Raw Data_21265A5_data.csv
+PSI-159,21265C1,uji,tidak,,,,0.00052,,74.23,9280,,21265 C1,test,butane,inverse flame (oxidizer issues into fuel),0.5,330.99,yes,PSI-159_Raw Data_21265C1_data.csv
+PSI-159,21265C2,uji,ya,33.34,43.68,77.02,0.000804,0.0029,77.02,9629,rekaman berakhir saat burner masih panas,21265 C2,test,butane,inverse flame (oxidizer issues into fuel),0.5,330.99,yes,PSI-159_Raw Data_21265C2_data.csv
+PSI-159,21265C3,uji,tidak,,,,0.00052,,75.02,9379,,21265 C3,test,butane,inverse flame (oxidizer issues into fuel),0.5,330.99,yes,PSI-159_Raw Data_21265C3_data.csv
+PSI-159,21265F1,uji,tidak,,,,1.3e-05,,70.13,8767,,21265 F1,test,butane,inverse flame (oxidizer issues into fuel),0.21,330.99,yes,PSI-159_Raw Data_21265F1_data.csv
+PSI-159,21265F2,uji,ya,64.96,52.1,117.06,0.004036,0.0053,117.06,14633,rekaman berakhir saat burner masih panas,21265 F2,test,butane,inverse flame (oxidizer issues into fuel),0.21,330.99,yes,PSI-159_Raw Data_21265F2_data.csv
+PSI-159,21265F3,uji,tidak,,,,1.5e-05,,69.2,8651,,21265 F3,test,butane,inverse flame (oxidizer issues into fuel),0.21,330.99,no,PSI-159_Raw Data_21265F3_data.csv
+PSI-159,21265F4,uji,tidak,,,,1.3e-05,,64.23,8029,,21265 F4,test,butane,inverse flame (oxidizer issues into fuel),0.21,330.99,no,PSI-159_Raw Data_21265F4_data.csv
+PSI-159,21265H1,uji,tidak,,,,0.000335,,75.02,9379,,21265 H1,test,butane,inverse flame (oxidizer issues into fuel),0.4,330.99,yes,PSI-159_Raw Data_21265H1_data.csv
+PSI-159,21265H2,uji,ya,58.78,55.44,114.22,0.00449,0.0055,114.22,14279,rekaman berakhir saat burner masih panas,21265 H2,test,butane,inverse flame (oxidizer issues into fuel),0.4,330.99,yes,PSI-159_Raw Data_21265H2_data.csv
+PSI-159,21265H3,uji,ya,97.12,57.12,154.24,0.005095,0.0003,154.24,19281,rekaman berakhir saat burner masih panas,21265 H3,test,butane,inverse flame (oxidizer issues into fuel),0.4,330.99,yes,PSI-159_Raw Data_21265H3_data.csv
+PSI-159,21265J1,uji,ya,31.88,43.29,75.17,0.00127,0.0029,75.17,9397,rekaman berakhir saat burner masih panas,21265 J1,test,butane,inverse flame (oxidizer issues into fuel),0.7,330.99,yes,PSI-159_Raw Data_21265J1_data.csv
+PSI-159,21265K1,uji,ya,29.42,44.6,74.03,0.00073,-0.002,74.03,9254,rekaman berakhir saat burner masih panas,21265 K1,test,butane,inverse flame (oxidizer issues into fuel),0.45,330.99,yes,PSI-159_Raw Data_21265K1_data.csv
+PSI-159,21270A1,uji,ya,74.5,26.5,101.0,0.012362,0.0003,101.0,12626,rekaman berakhir saat burner masih panas,21270 A1,test,butane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21270A1_data.csv
+PSI-159,21270A2,uji,ya,99.37,32.64,132.01,0.008747,0.0055,132.01,16502,rekaman berakhir saat burner masih panas,21270 A2,test,butane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21270A2_data.csv
+PSI-159,21270A3,uji,ya,27.5,26.49,53.99,0.017767,0.003,53.99,6750,rekaman berakhir saat burner masih panas,21270 A3,test,butane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21270A3_data.csv
+PSI-159,21270A4,uji,ya,102.07,27.94,130.02,0.01665,0.0035,130.02,16253,rekaman berakhir saat burner masih panas,21270 A4,test,butane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21270A4_data.csv
+PSI-159,21270C1,uji,ya,73.47,49.69,123.16,0.007485,0.0037,123.16,15396,rekaman berakhir saat burner masih panas,21270 C1,test,butane,inverse flame (oxidizer issues into fuel),0.5,110.33,yes,PSI-159_Raw Data_21270C1_data.csv
+PSI-159,21270H1,uji,ya,80.01,25.99,106.0,0.00889,0.0029,106.0,13251,rekaman berakhir saat burner masih panas,21270 H1,test,butane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21270H1_data.csv
+PSI-159,21270H2,uji,ya,52.02,27.98,80.0,0.017569,0.0029,80.0,10001,rekaman berakhir saat burner masih panas,21270 H2,test,butane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21270H2_data.csv
+PSI-159,21270H3,uji,ya,102.1,26.9,129.01,0.013306,0.0082,129.01,16127,rekaman berakhir saat burner masih panas,21270 H3,test,butane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21270H3_data.csv
+PSI-159,21270H4,uji,ya,84.42,35.59,120.02,0.007773,0.0022,120.02,15003,rekaman berakhir saat burner masih panas,21270 H4,test,butane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21270H4_data.csv
+PSI-159,21270H5,uji,ya,86.1,27.9,114.0,0.009512,0.0003,114.0,14251,rekaman berakhir saat burner masih panas,21270 H5,test,butane,inverse flame (oxidizer issues into fuel),0.85,110.33,yes,PSI-159_Raw Data_21270H5_data.csv
+PSI-159,21277A1,uji,ya,11.69,29.44,41.13,0.020574,0.0048,41.13,5142,rekaman berakhir saat burner masih panas,21277 A1,test,butane,inverse flame (oxidizer issues into fuel),0.85,55.165,yes,PSI-159_Raw Data_21277A1_data.csv
+PSI-159,21277C1,uji,ya,29.15,24.83,53.99,0.015442,0.0029,53.99,6749,rekaman berakhir saat burner masih panas,21277 C1,test,butane,inverse flame (oxidizer issues into fuel),0.85,55.165,yes,PSI-159_Raw Data_21277C1_data.csv
+PSI-159,21277C2,uji,ya,42.95,27.14,70.09,0.010694,0.003,70.09,8762,rekaman berakhir saat burner masih panas,21277 C2,test,butane,inverse flame (oxidizer issues into fuel),0.85,55.165,yes,PSI-159_Raw Data_21277C2_data.csv
+PSI-159,21277F1,uji,ya,71.59,28.41,100.0,0.014952,-0.0024,100.0,12501,rekaman berakhir saat burner masih panas,21277 F1,test,butane,inverse flame (oxidizer issues into fuel),0.85,55.165,yes,PSI-159_Raw Data_21277F1_data.csv
+PSI-159,21277F2,uji,ya,69.44,34.66,104.1,0.016978,0.0028,104.1,13013,rekaman berakhir saat burner masih panas,21277 F2,test,butane,inverse flame (oxidizer issues into fuel),0.85,55.165,yes,PSI-159_Raw Data_21277F2_data.csv
+PSI-159,21277H1,uji,ya,17.1,34.4,51.5,0.017704,0.0028,51.5,6438,rekaman berakhir saat burner masih panas,21277 H1,test,butane,inverse flame (oxidizer issues into fuel),0.5,55.165,yes,PSI-159_Raw Data_21277H1_data.csv
+PSI-159,21277J1,uji,tidak,,,,1.1e-05,,63.22,7903,,21277 J1,test,butane,inverse flame (oxidizer issues into fuel),0.21,55.165,no,PSI-159_Raw Data_21277J1_data.csv
+PSI-159,21277J2,uji,tidak,,,,1.4e-05,,62.71,7839,,21277 J2,test,butane,inverse flame (oxidizer issues into fuel),0.21,55.165,no,PSI-159_Raw Data_21277J2_data.csv
+PSI-159,21277K1,uji,tidak,,,,1.6e-05,,64.11,8015,,21277 K1,test,butane,inverse flame (oxidizer issues into fuel),0.3,55.165,no,PSI-159_Raw Data_21277K1_data.csv
+PSI-159,21277K2,uji,ya,25.73,44.81,70.54,0.005494,0.0029,70.54,8818,rekaman berakhir saat burner masih panas,21277 K2,test,butane,inverse flame (oxidizer issues into fuel),0.3,55.165,yes,PSI-159_Raw Data_21277K2_data.csv
+PSI-159,21277L1,uji,ya,67.46,48.7,116.16,0.01466,0.0065,116.16,14521,rekaman berakhir saat burner masih panas,21277 L1,test,butane,inverse flame (oxidizer issues into fuel),0.5,55.165,yes,PSI-159_Raw Data_21277L1_data.csv
+PSI-159,21277M1,uji,ya,73.64,32.35,105.99,0.017602,0.0007,105.99,13250,rekaman berakhir saat burner masih panas,21277 M1,test,butane,inverse flame (oxidizer issues into fuel),0.85,55.165,yes,PSI-159_Raw Data_21277M1_data.csv
+PSI-159,21277N1,uji,ya,52.49,40.12,92.61,0.017661,0.0055,92.61,11577,rekaman berakhir saat burner masih panas,21277 N1,test,butane,inverse flame (oxidizer issues into fuel),0.5,55.165,yes,PSI-159_Raw Data_21277N1_data.csv
+PSI-159,21277P1,uji,ya,36.48,41.66,78.14,0.017653,0.0003,78.14,9768,rekaman berakhir saat burner masih panas,21277 P1,test,butane,inverse flame (oxidizer issues into fuel),0.3,55.165,yes,PSI-159_Raw Data_21277P1_data.csv
+PSI-159,21291A1,uji,ya,174.3,30.73,205.03,0.013756,2.3151,205.03,25630,rekaman berakhir saat burner masih panas,21291 A1,test,30% butane,normal flame (fuel issues into oxidizer),0.3993,202.66,yes,PSI-159_Raw Data_21291A1_data.csv
+PSI-159,21291B1,uji,ya,74.98,27.0,101.98,0.00682,2.6997,101.98,12749,rekaman berakhir saat burner masih panas,21291 B1,test,30% butane,normal flame (fuel issues into oxidizer),0.388318854,202.66,yes,PSI-159_Raw Data_21291B1_data.csv
+PSI-159,21291C1,uji,ya,253.14,29.81,282.95,0.016795,1.5329,282.95,35370,rekaman berakhir saat burner masih panas,21291 C1,test,30% butane,normal flame (fuel issues into oxidizer),0.394233062,202.66,yes,PSI-159_Raw Data_21291C1_data.csv
+PSI-159,21291C2,uji,ya,69.7,27.31,97.0,0.006393,2.7025,97.0,12126,rekaman berakhir saat burner masih panas,21291 C2,test,30% butane,normal flame (fuel issues into oxidizer),0.389271344,202.66,yes,PSI-159_Raw Data_21291C2_data.csv
+PSI-159,21291D1,uji,ya,83.89,33.51,117.4,0.009426,2.3136,117.4,14676,rekaman berakhir saat burner masih panas,21291 D1,test,30% butane,normal flame (fuel issues into oxidizer),0.3978,101.33,yes,PSI-159_Raw Data_21291D1_data.csv
+PSI-159,21291G1,uji,ya,203.32,35.22,238.54,0.016477,1.5327,238.54,29818,rekaman berakhir saat burner masih panas,21291 G1,test,30% butane,normal flame (fuel issues into oxidizer),0.394946781,101.33,yes,PSI-159_Raw Data_21291G1_data.csv
+PSI-159,21291G2,uji,ya,100.92,31.62,132.55,0.01159,1.922,132.55,16571,rekaman berakhir saat burner masih panas,21291 G2,test,30% butane,normal flame (fuel issues into oxidizer),0.38845523,101.33,yes,PSI-159_Raw Data_21291G2_data.csv
+PSI-159,21291H1,uji,ya,73.21,34.4,107.62,0.007732,1.9153,107.62,13453,rekaman berakhir saat burner masih panas,21291 H1,test,30% butane,normal flame (fuel issues into oxidizer),0.387190712,202.66,yes,PSI-159_Raw Data_21291H1_data.csv
+PSI-159,21291H2,uji,ya,152.95,43.54,196.5,0.017526,1.1283,196.5,24563,rekaman berakhir saat burner masih panas,21291 H2,test,30% butane,normal flame (fuel issues into oxidizer),0.386174345,202.66,yes,PSI-159_Raw Data_21291H2_data.csv
+PSI-159,21291J1,uji,ya,73.95,41.68,115.63,0.017505,1.1403,115.63,14455,rekaman berakhir saat burner masih panas,21291 J1,test,30% butane,normal flame (fuel issues into oxidizer),0.385436483,101.33,yes,PSI-159_Raw Data_21291J1_data.csv
+PSI-159,21291J2,uji,ya,67.77,42.85,110.62,0.005143,2.2991,110.62,13828,rekaman berakhir saat burner masih panas,21291 J2,test,30% butane,normal flame (fuel issues into oxidizer),0.382657026,101.33,yes,PSI-159_Raw Data_21291J2_data.csv
+PSI-159,21291J3,uji,ya,122.04,44.6,166.64,0.012389,1.4977,166.64,20831,rekaman berakhir saat burner masih panas,21291 J3,test,30% butane,normal flame (fuel issues into oxidizer),0.380783875,101.33,yes,PSI-159_Raw Data_21291J3_data.csv
+PSI-23,19254A1,hari,ya,34.41,34.47,68.88,0.00377,0.0326,68.88,8611,rekaman berakhir saat burner masih panas,19254,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_19254A1_data.csv
+PSI-23,19254B1,hari,ya,25.45,31.49,56.94,0.001613,0.0031,56.94,7120,rekaman berakhir saat burner masih panas,19254,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_19254B1_data.csv
+PSI-23,19254C1,hari,ya,33.1,31.77,64.87,0.003157,0.0085,64.87,8110,rekaman berakhir saat burner masih panas,19254,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_19254C1_data.csv
+PSI-23,19254D1,hari,ya,24.5,35.27,59.77,0.00175,-0.0153,59.77,7472,rekaman berakhir saat burner masih panas,19254,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_19254D1_data.csv
+PSI-23,19254D2,hari,ya,24.47,30.1,54.58,0.001612,-0.0131,54.58,6823,rekaman berakhir saat burner masih panas,19254,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_19254D2_data.csv
+PSI-23,19254F1,hari,ya,28.82,30.14,58.97,0.002517,-0.0048,58.97,7372,rekaman berakhir saat burner masih panas,19254,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_19254F1_data.csv
+PSI-23,19254G1,hari,ya,24.18,32.6,56.78,0.001472,-0.0157,56.78,7098,rekaman berakhir saat burner masih panas,19254,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_19254G1_data.csv
+PSI-23,19254H1,hari,tidak,,,,0.000291,,46.77,5847,,19254,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_19254H1_data.csv
+PSI-23,19254H2,hari,tidak,,,,0.000229,,54.88,6861,,19254,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_19254H2_data.csv
+PSI-23,19254H3,hari,ya,35.53,37.86,73.39,0.009459,0.5247,73.39,9175,rekaman berakhir saat burner masih panas,19254,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_19254H3_data.csv
+PSI-23,19254J1,hari,ya,27.1,31.28,58.38,0.001983,-0.0073,58.38,7299,rekaman berakhir saat burner masih panas,19254,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_19254J1_data.csv
+PSI-23,19254K1,hari,ya,34.3,26.97,61.27,0.004294,0.0165,61.27,7659,rekaman berakhir saat burner masih panas,19254,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_19254K1_data.csv
+PSI-23,19254L1,hari,ya,33.78,27.5,61.27,0.004216,0.794,61.27,4752,rekaman berakhir saat burner masih panas,19254,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_19254L1_data.csv
+PSI-23,19254M1,hari,ya,40.45,27.96,68.41,0.005604,0.6542,68.41,8552,rekaman berakhir saat burner masih panas,19254,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_19254M1_data.csv
+PSI-23,19254N1,hari,ya,35.34,28.04,63.38,0.00435,0.0568,63.38,7923,rekaman berakhir saat burner masih panas,19254,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_19254N1_data.csv
+PSI-23,19256A1,hari,ya,31.87,37.0,68.87,0.002212,-0.0023,68.87,8610,rekaman berakhir saat burner masih panas,19256,campaign,50% C2H4 with N3,,,,,PSI-23_Raw Data_19256A1_data.csv
+PSI-23,19256B1,hari,ya,26.97,38.9,65.87,0.002271,0.0032,65.87,8235,rekaman berakhir saat burner masih panas,19256,campaign,50% C2H4 with N3,,,,,PSI-23_Raw Data_19256B1_data.csv
+PSI-23,19256B2,hari,tidak,,,,9e-06,,8.09,1012,,19256,campaign,50% C2H4 with N3,,,,,PSI-23_Raw Data_19256B2_1_data.csv
+PSI-23,19256B2,hari,ya,29.39,33.38,62.77,0.002515,0.0029,62.77,7847,rekaman berakhir saat burner masih panas,19256,campaign,50% C2H4 with N3,,,,,PSI-23_Raw Data_19256B2_data.csv
+PSI-23,19256B3,hari,ya,33.1,33.3,66.4,0.004496,0.0113,66.4,8301,rekaman berakhir saat burner masih panas,19256,campaign,50% C2H4 with N3,,,,,PSI-23_Raw Data_19256B3_data.csv
+PSI-23,19256C1,hari,ya,31.15,32.72,63.87,0.002203,-0.0158,63.87,7985,rekaman berakhir saat burner masih panas,19256,campaign,50% C2H4 with N3,,,,,PSI-23_Raw Data_19256C1_data.csv
+PSI-23,19256D1,hari,ya,29.46,34.31,63.77,0.002507,0.0003,63.77,7972,rekaman berakhir saat burner masih panas,19256,campaign,50% C2H4 with N3,,,,,PSI-23_Raw Data_19256D1_data.csv
+PSI-23,19256D2,hari,ya,29.63,32.14,61.77,0.00242,-0.002,61.77,7722,rekaman berakhir saat burner masih panas,19256,campaign,50% C2H4 with N3,,,,,PSI-23_Raw Data_19256D2_data.csv
+PSI-23,19256D3,hari,ya,28.57,39.3,67.87,0.002429,-0.0026,67.87,8485,rekaman berakhir saat burner masih panas,19256,campaign,50% C2H4 with N3,,,,,PSI-23_Raw Data_19256D3_data.csv
+PSI-23,19256D4,hari,ya,37.54,33.83,71.38,0.006064,0.2476,71.38,8923,rekaman berakhir saat burner masih panas,19256,campaign,50% C2H4 with N3,,,,,PSI-23_Raw Data_19256D4_data.csv
+PSI-23,19256F1,hari,ya,37.62,29.66,67.27,0.005051,0.5789,67.27,8410,rekaman berakhir saat burner masih panas,19256,campaign,50% C2H4 with N3,,,,,PSI-23_Raw Data_19256F1_data.csv
+PSI-23,19256G1,hari,ya,38.45,32.93,71.38,0.006215,0.5329,71.38,8923,rekaman berakhir saat burner masih panas,19256,campaign,50% C2H4 with N3,,,,,PSI-23_Raw Data_19256G1_data.csv
+PSI-23,19256J1,hari,ya,21.69,36.18,57.87,0.000752,0.0008,57.87,7235,rekaman berakhir saat burner masih panas,19256,campaign,50% C2H4 with N3,,,,,PSI-23_Raw Data_19256J1_data.csv
+PSI-23,19256J2,hari,ya,22.82,31.62,54.44,0.000932,0.003,54.44,6806,rekaman berakhir saat burner masih panas,19256,campaign,50% C2H4 with N3,,,,,PSI-23_Raw Data_19256J2_data.csv
+PSI-23,19256K1,hari,ya,25.54,37.23,62.77,0.001612,0.0003,62.77,7847,rekaman berakhir saat burner masih panas,19256,campaign,50% C2H4 with N3,,,,,PSI-23_Raw Data_19256K1_data.csv
+PSI-23,19256L1,hari,ya,38.61,36.67,75.27,0.004696,0.5165,75.27,9410,rekaman berakhir saat burner masih panas,19256,campaign,50% C2H4 with N3,,,,,PSI-23_Raw Data_19256L1_data.csv
+PSI-23,19256M1,hari,ya,37.7,42.53,80.23,0.004782,0.643,80.23,10030,rekaman berakhir saat burner masih panas,19256,campaign,50% C2H4 with N3,,,,,PSI-23_Raw Data_19256M1_data.csv
+PSI-23,19304A1,hari,tidak,,,,0.000441,,49.68,6211,,19304,campaign,45% CH4 with N2,,,,,PSI-23_Raw Data_19304A1_data.csv
+PSI-23,19304A2,hari,ya,21.37,29.36,50.73,0.000697,-0.0019,50.73,6342,rekaman berakhir saat burner masih panas,19304,campaign,45% CH4 with N2,,,,,PSI-23_Raw Data_19304A2_data.csv
+PSI-23,19304A3,hari,ya,20.7,28.02,48.72,0.000732,-0.0018,48.72,6091,rekaman berakhir saat burner masih panas,19304,campaign,45% CH4 with N2,,,,,PSI-23_Raw Data_19304A3_data.csv
+PSI-23,19304A7,hari,tidak,,,,0.000558,,49.67,6210,,19304,campaign,45% CH4 with N2,,,,,PSI-23_Raw Data_19304A7_data.csv
+PSI-23,19304B1,hari,ya,23.55,26.07,49.62,0.001209,-0.0665,49.62,6204,rekaman berakhir saat burner masih panas,19304,campaign,45% CH4 with N2,,,,,PSI-23_Raw Data_19304B1_data.csv
+PSI-23,19304B2,hari,ya,21.25,28.48,49.73,0.000695,0.0091,49.73,6217,rekaman berakhir saat burner masih panas,19304,campaign,45% CH4 with N2,,,,,PSI-23_Raw Data_19304B2_data.csv
+PSI-23,19304B3,hari,ya,21.88,27.84,49.72,0.001017,0.0092,49.72,6216,rekaman berakhir saat burner masih panas,19304,campaign,45% CH4 with N2,,,,,PSI-23_Raw Data_19304B3_data.csv
+PSI-23,19304B4,hari,tidak,,,,0.000347,,48.73,6092,,19304,campaign,45% CH4 with N2,,,,,PSI-23_Raw Data_19304B4_data.csv
+PSI-23,19304K1,hari,tidak,,,,0.000422,,47.87,5984,,19304,campaign,45% CH4 with N2,,,,,PSI-23_Raw Data_19304K1_data.csv
+PSI-23,19308A1,hari,ya,27.66,24.99,52.65,0.003063,0.0088,52.65,6582,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308A1_data.csv
+PSI-23,19308A2,hari,ya,30.86,30.78,61.65,0.005796,0.0116,61.65,7707,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308A2_data.csv
+PSI-23,19308A3,hari,ya,32.63,27.02,59.65,0.008089,0.012,59.65,7457,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308A3_data.csv
+PSI-23,19308B1,hari,ya,23.85,28.94,52.79,0.001591,-0.0072,52.79,6599,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308B1_data.csv
+PSI-23,19308C1,hari,tidak,,,,0.000483,,51.74,6469,,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308C1_data.csv
+PSI-23,19308C2,hari,ya,23.58,26.05,49.63,0.003339,0.0064,49.63,6206,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308C2_data.csv
+PSI-23,19308D1,hari,ya,31.97,25.61,57.58,0.007187,0.0115,57.58,7198,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308D1_data.csv
+PSI-23,19308F1,hari,ya,22.52,31.27,53.79,0.001072,-0.0503,53.79,6725,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308F1_data.csv
+PSI-23,19308G1,hari,ya,23.44,28.36,51.8,0.001209,0.0088,51.8,6476,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308G1_data.csv
+PSI-23,19308H1,hari,ya,22.9,29.89,52.79,0.001252,0.0036,52.79,6600,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308H1_data.csv
+PSI-23,19308H2,hari,ya,23.34,29.46,52.79,0.001386,-0.0017,52.79,6600,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308H2_data.csv
+PSI-23,19308H3,hari,ya,27.11,30.69,57.8,0.00249,0.0102,57.8,7226,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308H3_data.csv
+PSI-23,19308H4,hari,ya,27.89,24.06,51.95,0.003163,0.0087,51.95,6495,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308H4_data.csv
+PSI-23,19308H5,hari,ya,25.02,26.78,51.79,0.002706,0.0013,51.79,6475,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308H5_data.csv
+PSI-23,19308J1,hari,ya,25.99,24.9,50.89,0.002345,0.006,50.89,6362,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308J1_data.csv
+PSI-23,19308K1,hari,ya,24.18,33.61,57.79,0.001473,0.001,57.79,7225,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308K1_data.csv
+PSI-23,19308K2,hari,ya,26.85,28.04,54.89,0.002944,0.0036,54.89,6862,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308K2_data.csv
+PSI-23,19308K3,hari,ya,29.07,27.71,56.78,0.004898,0.0089,56.78,7099,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308K3_data.csv
+PSI-23,19308L1,hari,ya,27.7,26.08,53.78,0.00317,0.017,53.78,6724,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308L1_data.csv
+PSI-23,19308L2,hari,ya,27.58,29.22,56.79,0.004268,0.0119,56.79,7100,rekaman berakhir saat burner masih panas,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308L2_data.csv
+PSI-23,19308M1,hari,tidak,,,,0.000496,,52.7,6588,,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308M1_data.csv
+PSI-23,19308N1,hari,tidak,,,,0.000484,,45.89,5737,,19308,campaign,45% CH4 with N3,,,,,PSI-23_Raw Data_19308N1_data.csv
+PSI-23,19352D1,hari,ya,21.92,25.07,46.99,0.002824,-0.0152,46.99,5875,rekaman berakhir saat burner masih panas,19352,campaign,100% H2,,,,,PSI-23_Raw Data_19352D1_data.csv
+PSI-23,19352D4,hari,ya,22.95,29.02,51.98,0.003821,-0.0207,51.98,6498,rekaman berakhir saat burner masih panas,19352,campaign,100% H2,,,,,PSI-23_Raw Data_19352D4_data.csv
+PSI-23,19352D5,hari,ya,31.59,15.83,47.42,0.010437,4.9381,47.42,5920,rekaman berakhir saat burner masih panas,19352,campaign,100% H2,,,,,PSI-23_Raw Data_19352D5_data.csv
+PSI-23,19352D6,hari,ya,17.54,31.01,48.55,0.010511,4.0324,48.55,6070,rekaman berakhir saat burner masih panas,19352,campaign,100% H2,,,,,PSI-23_Raw Data_19352D6_data.csv
+PSI-23,19352K1,hari,ya,13.82,28.67,42.49,0.010633,4.9645,42.49,5312,rekaman berakhir saat burner masih panas,19352,campaign,100% H2,,,,,PSI-23_Raw Data_19352K1_data.csv
+PSI-23,19352M1,hari,ya,13.76,28.72,42.48,0.01083,4.597,42.48,5307,rekaman berakhir saat burner masih panas,19352,campaign,100% H2,,,,,PSI-23_Raw Data_19352M1_data.csv
+PSI-23,19352M2,hari,ya,28.69,27.79,56.48,0.00865,-0.0177,56.48,7061,rekaman berakhir saat burner masih panas,19352,campaign,100% H2,,,,,PSI-23_Raw Data_19352M2_data.csv
+PSI-23,19352M3,hari,ya,31.42,26.97,58.39,0.009315,-0.0099,58.39,7300,rekaman berakhir saat burner masih panas,19352,campaign,100% H2,,,,,PSI-23_Raw Data_19352M3_data.csv
+PSI-23,19352N1,hari,ya,32.36,28.13,60.49,0.008615,-0.0045,60.49,7562,rekaman berakhir saat burner masih panas,19352,campaign,100% H2,,,,,PSI-23_Raw Data_19352N1_data.csv
+PSI-23,19352P2,hari,ya,31.85,27.65,59.5,0.006503,-0.0048,59.5,7439,rekaman berakhir saat burner masih panas,19352,campaign,100% H2,,,,,PSI-23_Raw Data_19352P2_data.csv
+PSI-23,20006A2,hari,ya,23.74,25.15,48.89,0.001117,-0.0079,48.89,6112,rekaman berakhir saat burner masih panas,20006,campaign,44.4% H2 with CH4,,,,,PSI-23_Raw Data_20006A2_data.csv
+PSI-23,20006A3,hari,ya,25.07,25.82,50.88,0.002244,0.0161,50.88,6361,rekaman berakhir saat burner masih panas,20006,campaign,44.4% H2 with CH4,,,,,PSI-23_Raw Data_20006A3_data.csv
+PSI-23,20006A4,hari,ya,26.35,29.53,55.88,0.001548,-0.0078,55.88,6986,rekaman berakhir saat burner masih panas,20006,campaign,44.4% H2 with CH4,,,,,PSI-23_Raw Data_20006A4_data.csv
+PSI-23,20006A5,hari,ya,48.03,3.86,51.89,0.001462,-0.0023,51.89,6475,rekaman berakhir saat burner masih panas,20006,campaign,44.4% H2 with CH4,,,,,PSI-23_Raw Data_20006A5_data.csv
+PSI-23,20006A6,hari,ya,30.3,33.58,63.87,0.00193,-0.0103,63.87,7985,rekaman berakhir saat burner masih panas,20006,campaign,44.4% H2 with CH4,,,,,PSI-23_Raw Data_20006A6_data.csv
+PSI-23,20006B1,hari,ya,25.49,33.41,58.9,0.001493,-0.0052,58.9,7363,rekaman berakhir saat burner masih panas,20006,campaign,44.4% H2 with CH4,,,,,PSI-23_Raw Data_20006B1_data.csv
+PSI-23,20006B2,hari,ya,24.48,31.3,55.78,0.001308,-0.0157,55.78,6974,rekaman berakhir saat burner masih panas,20006,campaign,44.4% H2 with CH4,,,,,PSI-23_Raw Data_20006B2_data.csv
+PSI-23,20006C1,hari,ya,36.22,36.67,72.9,0.002698,0.1027,72.9,9113,rekaman berakhir saat burner masih panas,20006,campaign,44.4% H2 with CH4,,,,,PSI-23_Raw Data_20006C1_data.csv
+PSI-23,20006D1,hari,ya,24.75,31.05,55.8,0.00156,-0.0052,55.8,6976,rekaman berakhir saat burner masih panas,20006,campaign,44.4% H2 with CH4,,,,,PSI-23_Raw Data_20006D1_data.csv
+PSI-23,20006D2,hari,ya,26.33,27.56,53.89,0.001569,-0.0132,53.89,6737,rekaman berakhir saat burner masih panas,20006,campaign,44.4% H2 with CH4,,,,,PSI-23_Raw Data_20006D2_data.csv
+PSI-23,20006F1,hari,ya,27.0,27.89,54.89,0.001724,0.0005,54.89,6862,rekaman berakhir saat burner masih panas,20006,campaign,44.4% H2 with CH4,,,,,PSI-23_Raw Data_20006F1_data.csv
+PSI-23,20006G1,hari,ya,25.18,31.71,56.89,0.001301,0.0001,56.89,7112,rekaman berakhir saat burner masih panas,20006,campaign,44.4% H2 with CH4,,,,,PSI-23_Raw Data_20006G1_data.csv
+PSI-23,20006G2,hari,ya,26.66,30.14,56.8,0.002472,0.0033,56.8,7101,rekaman berakhir saat burner masih panas,20006,campaign,44.4% H2 with CH4,,,,,PSI-23_Raw Data_20006G2_data.csv
+PSI-23,20006G3,hari,ya,24.48,28.41,52.89,0.00178,0.0007,52.89,6612,rekaman berakhir saat burner masih panas,20006,campaign,44.4% H2 with CH4,,,,,PSI-23_Raw Data_20006G3_data.csv
+PSI-23,20006H1,hari,ya,25.14,30.68,55.82,0.001368,-0.0131,55.82,6979,rekaman berakhir saat burner masih panas,20006,campaign,44.4% H2 with CH4,,,,,PSI-23_Raw Data_20006H1_data.csv
+PSI-23,20006J1,hari,ya,27.06,28.82,55.89,0.001546,-0.0024,55.89,6987,rekaman berakhir saat burner masih panas,20006,campaign,44.4% H2 with CH4,,,,,PSI-23_Raw Data_20006J1_data.csv
+PSI-23,20006K1,hari,ya,27.56,31.33,58.89,0.001694,-0.0183,58.89,7362,rekaman berakhir saat burner masih panas,20006,campaign,44.4% H2 with CH4,,,,,PSI-23_Raw Data_20006K1_data.csv
+PSI-23,20013A1,hari,ya,62.58,30.22,92.79,0.005261,1.2209,92.79,11600,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013A1_data.csv
+PSI-23,20013B1,hari,ya,60.96,31.94,92.89,0.003769,2.4604,92.89,11613,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013B1_data.csv
+PSI-23,20013B2,hari,ya,73.74,31.15,104.9,0.003954,2.4604,104.9,13113,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013B2_data.csv
+PSI-23,20013C1,hari,ya,60.58,35.31,95.9,0.003601,3.7001,95.9,11988,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013C1_data.csv
+PSI-23,20013C3,hari,ya,59.93,31.95,91.89,0.003353,2.6674,91.89,11487,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013C3_data.csv
+PSI-23,20013C4,hari,ya,59.82,33.07,92.9,0.003122,1.9475,92.9,11613,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013C4_data.csv
+PSI-23,20013C5,hari,ya,59.35,36.66,96.01,0.002957,1.3132,96.01,12002,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013C5_data.csv
+PSI-23,20013D1,hari,ya,81.96,28.95,110.91,0.003351,3.7,110.91,13865,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013D1_data.csv
+PSI-23,20013F1,hari,ya,80.74,29.17,109.91,0.00366,2.4553,109.91,13740,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013F1_data.csv
+PSI-23,20013G1,hari,ya,48.46,35.44,83.9,0.008022,0.3178,83.9,10489,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013G1_data.csv
+PSI-23,20013G2,hari,ya,38.76,34.12,72.88,0.009393,0.3634,72.88,9113,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013G2_data.csv
+PSI-23,20013G3,hari,ya,46.38,34.53,80.91,0.0072,0.1803,80.91,10115,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013G3_data.csv
+PSI-23,20013H1,hari,ya,45.69,33.21,78.9,0.003727,0.3716,78.9,9863,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013H1_data.csv
+PSI-23,20013H2,hari,ya,44.99,34.9,79.89,0.004356,0.4063,79.89,9988,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013H2_data.csv
+PSI-23,20013J1,hari,ya,37.32,32.58,69.9,0.003016,0.0622,69.9,8738,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013J1_data.csv
+PSI-23,20013K1,hari,ya,42.91,49.88,92.79,0.009324,0.2452,92.79,11600,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013K1_data.csv
+PSI-23,20013M1,hari,ya,51.67,32.13,83.8,0.006851,0.3231,83.8,10476,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013M1_data.csv
+PSI-23,20013N1,hari,ya,51.43,31.47,82.9,0.006474,0.2585,82.9,10364,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013N1_data.csv
+PSI-23,20013P1,hari,ya,50.83,34.18,85.0,0.004886,0.2237,85.0,10626,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013P1_data.csv
+PSI-23,20013Q1,hari,ya,56.39,30.6,86.99,0.008929,0.2158,86.99,10876,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013Q1_data.csv
+PSI-23,20013R1,hari,ya,53.96,28.84,82.8,0.007813,0.2103,82.8,10351,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013R1_data.csv
+PSI-23,20013S1,hari,ya,51.4,28.49,79.89,0.005756,0.1726,79.89,9987,rekaman berakhir saat burner masih panas,20013,campaign,66.7% H2 with CH4,,,,,PSI-23_Raw Data_20013S1_data.csv
+PSI-23,20024A1,hari,ya,22.31,31.09,53.39,0.009723,1.3415,53.39,6675,rekaman berakhir saat burner masih panas,20024,campaign,100% H2,,,,,PSI-23_Raw Data_20024A1_data.csv
+PSI-23,20024B1,hari,ya,59.85,31.64,91.49,0.007198,2.6996,91.49,11437,rekaman berakhir saat burner masih panas,20024,campaign,100% H2,,,,,PSI-23_Raw Data_20024B1_data.csv
+PSI-23,20024B2,hari,ya,58.97,35.41,94.38,0.006118,4.0577,94.38,11800,rekaman berakhir saat burner masih panas,20024,campaign,100% H2,,,,,PSI-23_Raw Data_20024B2_data.csv
+PSI-23,20024D1,hari,ya,56.25,37.05,93.3,0.006614,1.7936,93.3,11663,rekaman berakhir saat burner masih panas,20024,campaign,100% H2,,,,,PSI-23_Raw Data_20024D1_data.csv
+PSI-23,20024D2,hari,ya,56.32,36.18,92.5,0.00597,2.1357,92.5,11564,rekaman berakhir saat burner masih panas,20024,campaign,100% H2,,,,,PSI-23_Raw Data_20024D2_data.csv
+PSI-23,20024F1,hari,ya,44.84,37.54,82.38,0.009478,0.7103,82.38,10300,rekaman berakhir saat burner masih panas,20024,campaign,100% H2,,,,,PSI-23_Raw Data_20024F1_data.csv
+PSI-23,20024F2,hari,ya,27.93,40.47,68.4,0.010307,1.2752,68.4,8551,rekaman berakhir saat burner masih panas,20024,campaign,100% H2,,,,,PSI-23_Raw Data_20024F2_data.csv
+PSI-23,20024G1,hari,ya,41.65,37.84,79.49,0.008509,0.4197,79.49,9937,rekaman berakhir saat burner masih panas,20024,campaign,100% H2,,,,,PSI-23_Raw Data_20024G1_data.csv
+PSI-23,20024H1,hari,ya,34.9,33.59,68.49,0.005246,0.0914,68.49,8562,rekaman berakhir saat burner masih panas,20024,campaign,100% H2,,,,,PSI-23_Raw Data_20024H1_data.csv
+PSI-23,20024K1,hari,ya,55.6,35.69,91.29,0.006012,1.4904,91.29,11412,rekaman berakhir saat burner masih panas,20024,campaign,100% H2,,,,,PSI-23_Raw Data_20024K1_data.csv
+PSI-23,20024M1,hari,ya,55.07,37.22,92.29,0.005278,1.189,92.29,11538,rekaman berakhir saat burner masih panas,20024,campaign,100% H2,,,,,PSI-23_Raw Data_20024M1_data.csv
+PSI-23,20024N2,hari,ya,27.74,31.65,59.39,0.00216,0.0866,59.39,7425,rekaman berakhir saat burner masih panas,20024,campaign,100% H2,,,,,PSI-23_Raw Data_20024N2_data.csv
+PSI-23,20024N3,hari,ya,55.29,37.11,92.4,0.004145,0.867,92.4,11551,rekaman berakhir saat burner masih panas,20024,campaign,100% H2,,,,,PSI-23_Raw Data_20024N3_data.csv
+PSI-23,20024P1,hari,ya,41.45,37.96,79.41,0.007752,0.3526,79.41,9927,rekaman berakhir saat burner masih panas,20024,campaign,100% H2,,,,,PSI-23_Raw Data_20024P1_data.csv
+PSI-23,20024Q1,hari,ya,41.19,39.2,80.39,0.008566,0.1887,80.39,10050,rekaman berakhir saat burner masih panas,20024,campaign,100% H2,,,,,PSI-23_Raw Data_20024Q1_data.csv
+PSI-23,20024R1,hari,ya,37.42,33.97,71.38,0.004093,0.2196,71.38,8924,rekaman berakhir saat burner masih panas,20024,campaign,100% H2,,,,,PSI-23_Raw Data_20024R1_data.csv
+PSI-23,20029A1,hari,ya,40.67,33.73,74.4,0.003456,2.431,74.4,9301,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029A1_data.csv
+PSI-23,20029B1,hari,ya,25.49,37.92,63.42,0.009882,0.5243,63.42,7928,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029B1_data.csv
+PSI-23,20029B2,hari,ya,24.62,38.78,63.39,0.009678,0.5226,63.39,7925,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029B2_data.csv
+PSI-23,20029B3,hari,ya,25.72,41.7,67.42,0.009825,0.5244,67.42,8428,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029B3_data.csv
+PSI-23,20029D1,hari,ya,32.49,30.89,63.38,0.003621,0.0943,63.38,7923,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029D1_data.csv
+PSI-23,20029F1,hari,ya,26.02,30.44,56.46,0.001959,0.0758,56.46,7059,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029F1_data.csv
+PSI-23,20029G1,hari,ya,31.88,30.49,62.37,0.003259,0.0759,62.37,7797,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029G1_data.csv
+PSI-23,20029H1,hari,ya,30.35,29.12,59.47,0.002736,0.0701,59.47,7435,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029H1_data.csv
+PSI-23,20029J1,hari,ya,31.14,33.24,64.38,0.003218,0.0756,64.38,8048,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029J1_data.csv
+PSI-23,20029K1,hari,ya,37.3,34.62,71.93,0.005848,0.2007,71.93,8992,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029K1_data.csv
+PSI-23,20029L1,hari,ya,37.94,31.84,69.78,0.005933,0.4814,69.78,8724,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029L1_data.csv
+PSI-23,20029M1,hari,ya,39.33,31.54,70.87,0.006507,0.5567,70.87,8860,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029M1_data.csv
+PSI-23,20029P1,hari,ya,25.94,28.93,54.87,0.002575,0.0784,54.87,6860,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029P1_data.csv
+PSI-23,20029Q1,hari,ya,41.47,32.41,73.88,0.006453,0.7959,73.88,9236,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029Q1_data.csv
+PSI-23,20029Q2,hari,ya,36.69,34.18,70.87,0.004879,0.2182,70.87,8860,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029Q2_data.csv
+PSI-23,20029R1,hari,ya,25.97,28.9,54.87,0.002583,0.0756,54.87,6860,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029R1_data.csv
+PSI-23,20029R2,hari,ya,25.78,29.19,54.96,0.002641,0.0676,54.96,6873,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029R2_data.csv
+PSI-23,20029S1,hari,ya,41.59,34.49,76.08,0.005684,0.5272,76.08,9511,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029S1_data.csv
+PSI-23,20029S2,hari,ya,38.86,31.1,69.97,0.006244,0.5217,69.97,8747,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029S2_data.csv
+PSI-23,20029T1,hari,ya,39.61,30.26,69.87,0.005538,0.6619,69.87,8735,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029T1_data.csv
+PSI-23,20029T2,hari,ya,39.82,32.06,71.88,0.006112,0.6591,71.88,8986,rekaman berakhir saat burner masih panas,20029,campaign,50% C2H4 with N2,,,,,PSI-23_Raw Data_20029T2_data.csv
+PSI-23,20132A4,hari,ya,22.13,36.12,58.25,0.00135,-0.0081,58.25,7282,rekaman berakhir saat burner masih panas,20132,campaign,"25% H2, 20% CH4, with He",,,,,PSI-23_Raw Data_20132A4_data.csv
+PSI-23,20132B1,hari,tidak,,,,6.6e-05,,57.74,7219,,20132,campaign,"25% H2, 20% CH4, with He",,,,,PSI-23_Raw Data_20132B1_data.csv
+PSI-23,20132B2,hari,tidak,,,,6e-05,,56.75,7095,,20132,campaign,"25% H2, 20% CH4, with He",,,,,PSI-23_Raw Data_20132B2_data.csv
+PSI-23,20132B6,hari,ya,20.98,37.27,58.25,0.00152,-0.0293,58.25,7282,rekaman berakhir saat burner masih panas,20132,campaign,"25% H2, 20% CH4, with He",,,,,PSI-23_Raw Data_20132B6_data.csv
+PSI-23,20132C1,hari,ya,20.94,32.2,53.14,0.001692,-0.0451,53.14,6644,rekaman berakhir saat burner masih panas,20132,campaign,"25% H2, 20% CH4, with He",,,,,PSI-23_Raw Data_20132C1_data.csv
+PSI-23,20132D1,hari,ya,20.64,33.0,53.64,0.000911,-0.0163,53.64,6706,rekaman berakhir saat burner masih panas,20132,campaign,"25% H2, 20% CH4, with He",,,,,PSI-23_Raw Data_20132D1_data.csv
+PSI-23,20132G1,hari,ya,21.94,32.31,54.24,0.000656,-0.0027,54.24,6781,rekaman berakhir saat burner masih panas,20132,campaign,"25% H2, 20% CH4, with He",,,,,PSI-23_Raw Data_20132G1_data.csv
+PSI-23,20132H1,hari,ya,21.5,36.72,58.22,0.001421,-0.0109,58.22,7278,rekaman berakhir saat burner masih panas,20132,campaign,"25% H2, 20% CH4, with He",,,,,PSI-23_Raw Data_20132H1_data.csv
+PSI-23,20132J1,hari,ya,20.79,33.35,54.14,0.001072,-0.0296,54.14,6768,rekaman berakhir saat burner masih panas,20132,campaign,"25% H2, 20% CH4, with He",,,,,PSI-23_Raw Data_20132J1_data.csv
+PSI-23,20136A1,hari,ya,21.11,31.14,52.26,0.000604,-0.0026,52.26,6533,rekaman berakhir saat burner masih panas,20136,campaign,"20% H2, 25% CH4, with He",,,,,PSI-23_Raw Data_20136A1_data.csv
+PSI-23,20136B1,hari,ya,20.75,36.02,56.76,0.000716,-0.0187,56.76,7096,rekaman berakhir saat burner masih panas,20136,campaign,"20% H2, 25% CH4, with He",,,,,PSI-23_Raw Data_20136B1_data.csv
+PSI-23,20136C1,hari,ya,21.41,31.36,52.77,0.00089,-0.0375,52.77,6597,rekaman berakhir saat burner masih panas,20136,campaign,"20% H2, 25% CH4, with He",,,,,PSI-23_Raw Data_20136C1_data.csv
+PSI-23,20136D1,hari,ya,19.71,33.04,52.75,0.000737,-0.008,52.75,6595,rekaman berakhir saat burner masih panas,20136,campaign,"20% H2, 25% CH4, with He",,,,,PSI-23_Raw Data_20136D1_data.csv
+PSI-23,20136F1,hari,ya,20.54,32.11,52.65,0.000751,-0.0029,52.65,6582,rekaman berakhir saat burner masih panas,20136,campaign,"20% H2, 25% CH4, with He",,,,,PSI-23_Raw Data_20136F1_data.csv
+PSI-23,20136G1,hari,ya,21.42,33.35,54.76,0.001708,-0.0507,54.76,6846,rekaman berakhir saat burner masih panas,20136,campaign,"20% H2, 25% CH4, with He",,,,,PSI-23_Raw Data_20136G1_data.csv
+PSI-23,20136G2,hari,ya,21.3,35.45,56.75,0.001664,-0.0484,56.75,7094,rekaman berakhir saat burner masih panas,20136,campaign,"20% H2, 25% CH4, with He",,,,,PSI-23_Raw Data_20136G2_data.csv
+PSI-23,20136H1,hari,ya,20.47,30.3,50.77,0.00078,-0.0269,50.77,6347,rekaman berakhir saat burner masih panas,20136,campaign,"20% H2, 25% CH4, with He",,,,,PSI-23_Raw Data_20136H1_data.csv
+PSI-23,20136J2,hari,ya,20.25,35.0,55.24,0.001227,-0.0188,55.24,6907,rekaman berakhir saat burner masih panas,20136,campaign,"20% H2, 25% CH4, with He",,,,,PSI-23_Raw Data_20136J2_data.csv
+PSI-23,20136K4,hari,ya,20.9,35.34,56.25,0.000646,-0.0081,56.25,7032,rekaman berakhir saat burner masih panas,20136,campaign,"20% H2, 25% CH4, with He",,,,,PSI-23_Raw Data_20136K4_data.csv
+PSI-23,20136M1,hari,ya,20.56,34.09,54.65,0.001625,-0.0403,54.65,6832,rekaman berakhir saat burner masih panas,20136,campaign,"20% H2, 25% CH4, with He",,,,,PSI-23_Raw Data_20136M1_data.csv
+PSI-23,20142A2,hari,ya,23.54,31.7,55.24,0.004083,-0.0107,55.24,6906,rekaman berakhir saat burner masih panas,20142,campaign,"30% H2, 15% CH4, with He",,,,,PSI-23_Raw Data_20142A2_data.csv
+PSI-23,20142B1,hari,ya,25.06,33.69,58.74,0.004572,-0.0291,58.74,7344,rekaman berakhir saat burner masih panas,20142,campaign,"30% H2, 15% CH4, with He",,,,,PSI-23_Raw Data_20142B1_data.csv
+PSI-23,20142B2,hari,ya,24.33,32.78,57.11,0.003355,-0.0293,57.11,7140,rekaman berakhir saat burner masih panas,20142,campaign,"30% H2, 15% CH4, with He",,,,,PSI-23_Raw Data_20142B2_data.csv
+PSI-23,20142C1,hari,ya,29.25,35.49,64.74,0.005022,-0.0375,64.74,8094,rekaman berakhir saat burner masih panas,20142,campaign,"30% H2, 15% CH4, with He",,,,,PSI-23_Raw Data_20142C1_data.csv
+PSI-23,20142C2,hari,ya,28.98,34.21,63.19,0.0048,-0.0425,63.19,7901,rekaman berakhir saat burner masih panas,20142,campaign,"30% H2, 15% CH4, with He",,,,,PSI-23_Raw Data_20142C2_data.csv
+PSI-23,20142D1,hari,ya,24.4,32.44,56.84,0.003791,-0.0162,56.84,7106,rekaman berakhir saat burner masih panas,20142,campaign,"30% H2, 15% CH4, with He",,,,,PSI-23_Raw Data_20142D1_data.csv
+PSI-23,20142F1,hari,ya,25.3,36.44,61.74,0.005183,-0.0055,61.74,7719,rekaman berakhir saat burner masih panas,20142,campaign,"30% H2, 15% CH4, with He",,,,,PSI-23_Raw Data_20142F1_data.csv
+PSI-23,20142G1,hari,ya,34.17,36.47,70.64,0.006465,-0.0291,70.64,8831,rekaman berakhir saat burner masih panas,20142,campaign,"30% H2, 15% CH4, with He",,,,,PSI-23_Raw Data_20142G1_data.csv
+PSI-23,20142G3,hari,ya,32.12,33.12,65.24,0.005759,-0.0348,65.24,8156,rekaman berakhir saat burner masih panas,20142,campaign,"30% H2, 15% CH4, with He",,,,,PSI-23_Raw Data_20142G3_data.csv
+PSI-23,20142H1,hari,ya,26.6,35.02,61.62,0.004325,-0.035,61.62,7703,rekaman berakhir saat burner masih panas,20142,campaign,"30% H2, 15% CH4, with He",,,,,PSI-23_Raw Data_20142H1_data.csv
+PSI-23,20142J1,hari,ya,24.8,33.94,58.74,0.004362,-0.0162,58.74,7344,rekaman berakhir saat burner masih panas,20142,campaign,"30% H2, 15% CH4, with He",,,,,PSI-23_Raw Data_20142J1_data.csv
+PSI-23,20142K1,hari,ya,22.79,35.46,58.25,0.00363,-0.0002,58.25,7282,rekaman berakhir saat burner masih panas,20142,campaign,"30% H2, 15% CH4, with He",,,,,PSI-23_Raw Data_20142K1_data.csv
+PSI-23,20142L1,hari,ya,30.09,36.66,66.75,0.005554,-0.0319,66.75,8344,rekaman berakhir saat burner masih panas,20142,campaign,"30% H2, 15% CH4, with He",,,,,PSI-23_Raw Data_20142L1_data.csv
+PSI-23,20142M1,hari,ya,31.14,33.62,64.76,0.005455,-0.0294,64.76,8096,rekaman berakhir saat burner masih panas,20142,campaign,"30% H2, 15% CH4, with He",,,,,PSI-23_Raw Data_20142M1_data.csv
+PSI-23,20142M3,hari,ya,29.08,36.67,65.75,0.005504,-0.0215,65.75,8220,rekaman berakhir saat burner masih panas,20142,campaign,"30% H2, 15% CH4, with He",,,,,PSI-23_Raw Data_20142M3_data.csv
+PSI-23,20142M4,hari,ya,31.17,33.58,64.74,0.005238,-0.0347,64.74,8094,rekaman berakhir saat burner masih panas,20142,campaign,"30% H2, 15% CH4, with He",,,,,PSI-23_Raw Data_20142M4_data.csv
+PSI-23,20155A1,hari,tidak,,,,0.000518,,50.25,6282,,20155,campaign,45% H2 with He,,,,,PSI-23_Raw Data_20155A1_data.csv
+PSI-23,20155A2,hari,ya,20.65,34.59,55.24,0.004303,0.0032,55.24,6906,rekaman berakhir saat burner masih panas,20155,campaign,45% H2 with He,,,,,PSI-23_Raw Data_20155A2_data.csv
+PSI-23,20155A3,hari,ya,20.94,31.31,52.24,0.004878,-0.005,52.24,6531,rekaman berakhir saat burner masih panas,20155,campaign,45% H2 with He,,,,,PSI-23_Raw Data_20155A3_data.csv
+PSI-23,20155B1,hari,ya,8.87,33.56,42.43,0.012576,3.5952,42.43,5305,rekaman berakhir saat burner masih panas,20155,campaign,45% H2 with He,,,,,PSI-23_Raw Data_20155B1_data.csv
+PSI-23,20155C1,hari,ya,10.25,33.88,44.13,0.012114,5.0364,44.13,5517,rekaman berakhir saat burner masih panas,20155,campaign,45% H2 with He,,,,,PSI-23_Raw Data_20155C1_data.csv
+PSI-23,20155C2,hari,ya,10.26,33.86,44.12,0.011921,5.0361,44.12,5516,rekaman berakhir saat burner masih panas,20155,campaign,45% H2 with He,,,,,PSI-23_Raw Data_20155C2_data.csv
+PSI-23,20155D1,hari,ya,25.21,35.04,60.25,0.01102,-0.0235,60.25,7532,rekaman berakhir saat burner masih panas,20155,campaign,45% H2 with He,,,,,PSI-23_Raw Data_20155D1_data.csv
+PSI-23,20155F1,hari,ya,27.35,35.98,63.33,0.01167,-0.0238,63.33,7919,rekaman berakhir saat burner masih panas,20155,campaign,45% H2 with He,,,,,PSI-23_Raw Data_20155F1_data.csv
+PSI-23,20155F2,hari,ya,9.18,34.16,43.34,0.012223,3.8704,43.34,5419,rekaman berakhir saat burner masih panas,20155,campaign,45% H2 with He,,,,,PSI-23_Raw Data_20155F2_data.csv
+PSI-23,20155G1,hari,tidak,,,,0.000463,,52.64,6581,,20155,campaign,45% H2 with He,,,,,PSI-23_Raw Data_20155G1_data.csv
+PSI-23,20155H1,hari,ya,24.69,31.06,55.74,0.007853,-0.0346,55.74,6969,rekaman berakhir saat burner masih panas,20155,campaign,45% H2 with He,,,,,PSI-23_Raw Data_20155H1_data.csv
+PSI-23,20160A3,hari,ya,21.52,34.14,55.66,0.002003,-0.0127,55.66,6958,rekaman berakhir saat burner masih panas,20160,campaign,45% CH4 with He,,,,,PSI-23_Raw Data_20160A3_data.csv
+PSI-23,20160B4,hari,ya,21.83,34.82,56.65,0.002197,-0.021,56.65,7082,rekaman berakhir saat burner masih panas,20160,campaign,45% CH4 with He,,,,,PSI-23_Raw Data_20160B4_data.csv
+PSI-23,20160C2,hari,ya,21.06,33.58,54.65,0.002175,-0.0428,54.65,6832,rekaman berakhir saat burner masih panas,20160,campaign,45% CH4 with He,,,,,PSI-23_Raw Data_20160C2_data.csv
+PSI-23,20160D1,hari,ya,21.36,37.4,58.76,0.002106,-0.005,58.76,7346,rekaman berakhir saat burner masih panas,20160,campaign,45% CH4 with He,,,,,PSI-23_Raw Data_20160D1_data.csv
+PSI-23,20160G2,hari,ya,21.58,34.16,55.74,0.000911,-0.0077,55.74,6969,rekaman berakhir saat burner masih panas,20160,campaign,45% CH4 with He,,,,,PSI-23_Raw Data_20160G2_data.csv
+PSI-23,20160H7,hari,ya,20.98,36.78,57.76,0.001164,-0.0261,57.76,7221,rekaman berakhir saat burner masih panas,20160,campaign,45% CH4 with He,,,,,PSI-23_Raw Data_20160H7_data.csv
+PSI-23,20160J1,hari,ya,21.24,38.49,59.73,0.00127,-0.0428,59.73,7467,rekaman berakhir saat burner masih panas,20160,campaign,45% CH4 with He,,,,,PSI-23_Raw Data_20160J1_data.csv
+PSI-23,20160M1,hari,ya,21.01,33.74,54.75,0.000972,0.0059,54.75,6845,rekaman berakhir saat burner masih panas,20160,campaign,45% CH4 with He,,,,,PSI-23_Raw Data_20160M1_data.csv
+PSI-23,20160N1,hari,ya,22.22,33.43,55.65,0.002299,-0.0236,55.65,6957,rekaman berakhir saat burner masih panas,20160,campaign,45% CH4 with He,,,,,PSI-23_Raw Data_20160N1_data.csv
+PSI-23,20160P1,hari,ya,22.33,37.32,59.65,0.002159,-0.0129,59.65,7457,rekaman berakhir saat burner masih panas,20160,campaign,45% CH4 with He,,,,,PSI-23_Raw Data_20160P1_data.csv
+PSI-23,20160Q1,hari,ya,21.76,32.89,54.65,0.001545,-0.0044,54.65,6832,rekaman berakhir saat burner masih panas,20160,campaign,45% CH4 with He,,,,,PSI-23_Raw Data_20160Q1_data.csv
+PSI-23,20160T1,hari,ya,21.34,34.42,55.76,0.001113,-0.0153,55.76,6971,rekaman berakhir saat burner masih panas,20160,campaign,45% CH4 with He,,,,,PSI-23_Raw Data_20160T1_data.csv
+PSI-23,20164A2,hari,ya,10.84,33.9,44.74,0.011252,1.6711,44.74,5593,rekaman berakhir saat burner masih panas,20164,campaign,20% C2H4 with He,,,,,PSI-23_Raw Data_20164A2_data.csv
+PSI-23,20164B1,hari,ya,28.09,34.57,62.66,0.007219,-0.0587,62.66,7833,rekaman berakhir saat burner masih panas,20164,campaign,20% C2H4 with He,,,,,PSI-23_Raw Data_20164B1_data.csv
+PSI-23,20164B2,hari,ya,27.99,36.25,64.24,0.007417,-0.0264,64.24,8031,rekaman berakhir saat burner masih panas,20164,campaign,20% C2H4 with He,,,,,PSI-23_Raw Data_20164B2_data.csv
+PSI-23,20164B3,hari,ya,28.57,37.67,66.24,0.007451,-0.0264,66.24,8281,rekaman berakhir saat burner masih panas,20164,campaign,20% C2H4 with He,,,,,PSI-23_Raw Data_20164B3_data.csv
+PSI-23,20164C1,hari,ya,27.02,35.13,62.14,0.005943,-0.0505,62.14,7769,rekaman berakhir saat burner masih panas,20164,campaign,20% C2H4 with He,,,,,PSI-23_Raw Data_20164C1_data.csv
+PSI-23,20164D2,hari,ya,25.27,35.37,60.64,0.005874,-0.0158,60.64,7581,rekaman berakhir saat burner masih panas,20164,campaign,20% C2H4 with He,,,,,PSI-23_Raw Data_20164D2_data.csv
+PSI-23,20164F2,hari,ya,25.58,32.92,58.5,0.007661,-0.0022,58.5,7313,rekaman berakhir saat burner masih panas,20164,campaign,20% C2H4 with He,,,,,PSI-23_Raw Data_20164F2_data.csv
+PSI-23,20164F3,hari,ya,27.24,36.15,63.39,0.00875,-0.0072,63.39,7925,rekaman berakhir saat burner masih panas,20164,campaign,20% C2H4 with He,,,,,PSI-23_Raw Data_20164F3_data.csv
+PSI-23,20164M1,hari,ya,30.06,37.18,67.25,0.009099,-0.0154,67.25,8407,rekaman berakhir saat burner masih panas,20164,campaign,20% C2H4 with He,,,,,PSI-23_Raw Data_20164M1_data.csv
+PSI-23,20164N1,hari,ya,31.15,37.1,68.26,0.010144,-0.0074,68.26,8533,rekaman berakhir saat burner masih panas,20164,campaign,20% C2H4 with He,,,,,PSI-23_Raw Data_20164N1_data.csv
+PSI-23,20164P1,hari,ya,12.26,32.97,45.23,0.010539,1.8414,45.23,5655,rekaman berakhir saat burner masih panas,20164,campaign,20% C2H4 with He,,,,,PSI-23_Raw Data_20164P1_data.csv
+PSI-23,20170A2,hari,ya,11.58,33.16,44.74,0.011677,1.5876,44.74,5594,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170A2_data.csv
+PSI-23,20170B1,hari,ya,29.13,35.11,64.24,0.00782,-0.0239,64.24,8031,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170B1_data.csv
+PSI-23,20170C1,hari,ya,26.15,38.1,64.25,0.005535,-0.0453,64.25,8032,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170C1_data.csv
+PSI-23,20170D1,hari,ya,25.95,36.28,62.23,0.006041,-0.0129,62.23,7782,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170D1_data.csv
+PSI-23,20170F1,hari,ya,27.5,33.14,60.65,0.009,0.0002,60.65,7582,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170F1_data.csv
+PSI-23,20170F2,hari,ya,48.87,14.87,63.74,0.009373,0.0034,63.74,7965,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170F2_data.csv
+PSI-23,20170G2,hari,ya,22.92,32.33,55.25,0.002282,-0.0103,55.25,6907,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170G2_data.csv
+PSI-23,20170H1,hari,ya,22.94,35.41,58.35,0.002525,-0.0238,58.35,7295,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170H1_data.csv
+PSI-23,20170J1,hari,ya,22.28,36.98,59.26,0.002443,-0.0454,59.26,7408,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170J1_data.csv
+PSI-23,20170M1,hari,ya,31.22,34.52,65.75,0.010372,-0.1396,65.75,8219,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170M1_data.csv
+PSI-23,20170N2,hari,ya,30.6,36.25,66.85,0.007835,-0.0211,66.85,8357,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170N2_data.csv
+PSI-23,20170P1,hari,ya,33.1,36.66,69.76,0.009706,-0.0154,69.76,8721,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170P1_data.csv
+PSI-23,20170P2,hari,ya,12.9,33.83,46.74,0.010426,2.2164,46.74,5843,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170P2_data.csv
+PSI-23,20170P3,hari,ya,31.19,34.65,65.84,0.009481,-0.013,65.84,8231,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170P3_data.csv
+PSI-23,20170Q1,hari,ya,31.55,37.2,68.75,0.008379,-0.0263,68.75,8595,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170Q1_data.csv
+PSI-23,20170R1,hari,ya,23.67,32.07,55.74,0.004707,0.0061,55.74,6969,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170R1_data.csv
+PSI-23,20170R2,hari,ya,25.17,32.57,57.74,0.006946,-0.0023,57.74,7218,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170R2_data.csv
+PSI-23,20170S1,hari,ya,12.66,36.09,48.74,0.01022,1.7497,48.74,6094,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170S1_data.csv
+PSI-23,20170T1,hari,ya,28.7,32.04,60.74,0.008172,-0.0156,60.74,7594,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170T1_data.csv
+PSI-23,20170U1,hari,ya,22.43,34.82,57.25,0.002375,-0.0048,57.25,7157,rekaman berakhir saat burner masih panas,20170,campaign,25% C2H4 with He,,,,,PSI-23_Raw Data_20170U1_data.csv
+PSI-23,20176A1,hari,ya,11.65,35.1,46.75,0.011296,1.5171,46.75,5845,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176A1_data.csv
+PSI-23,20176B1,hari,ya,29.04,38.21,67.25,0.007133,-0.0212,67.25,8407,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176B1_data.csv
+PSI-23,20176C1,hari,ya,26.12,38.02,64.14,0.005341,-0.0402,64.14,8019,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176C1_data.csv
+PSI-23,20176D1,hari,ya,26.66,35.58,62.24,0.006123,-0.0077,62.24,7781,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176D1_data.csv
+PSI-23,20176F1,hari,ya,27.7,36.05,63.74,0.009399,-0.002,63.74,7969,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176F1_data.csv
+PSI-23,20176G1,hari,ya,32.94,36.82,69.75,0.00993,-0.013,69.75,8720,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176G1_data.csv
+PSI-23,20176H1,hari,ya,32.33,33.42,65.74,0.008512,-0.0261,65.74,8219,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176H1_data.csv
+PSI-23,20176J1,hari,ya,23.62,32.54,56.15,0.00377,-0.0048,56.15,7020,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176J1_data.csv
+PSI-23,20176K1,hari,ya,23.05,34.19,57.24,0.002785,-0.0452,57.24,7156,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176K1_1_data.csv
+PSI-23,20176K1,hari,ya,22.72,32.52,55.24,0.002881,-0.0238,55.24,6906,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176K1_data.csv
+PSI-23,20176M1,hari,ya,22.82,36.43,59.25,0.002857,-0.0237,59.25,7407,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176M1_data.csv
+PSI-23,20176N1,hari,ya,23.89,32.31,56.2,0.003317,-0.0102,56.2,7026,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176N1_data.csv
+PSI-23,20176P1,hari,ya,23.76,35.49,59.25,0.003931,-0.0129,59.25,7407,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176P1_data.csv
+PSI-23,20176Q1,hari,ya,24.52,34.74,59.26,0.00388,-0.0211,59.26,7408,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176Q1_data.csv
+PSI-23,20176R1,hari,ya,13.75,35.9,49.65,0.01048,2.1489,49.65,6207,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176R1_data.csv
+PSI-23,20176R2,hari,ya,31.64,33.02,64.66,0.00913,-0.0181,64.66,8083,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176R2_data.csv
+PSI-23,20176S1,hari,ya,32.11,33.63,65.74,0.009401,-0.0209,65.74,8219,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176S1_data.csv
+PSI-23,20176S2,hari,ya,31.51,33.13,64.64,0.008286,-0.0238,64.64,8081,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176S2_data.csv
+PSI-23,20176T1,hari,ya,31.29,33.35,64.64,0.009986,-0.0101,64.64,8081,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176T1_data.csv
+PSI-23,20176U1,hari,ya,30.96,33.69,64.65,0.009024,-0.0048,64.65,8082,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176U1_data.csv
+PSI-23,20176V1,hari,ya,22.97,30.27,53.24,0.002183,0.0033,53.24,6656,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176V1_data.csv
+PSI-23,20176W1,hari,ya,22.42,30.82,53.25,0.002029,0.0006,53.25,6657,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176W1_data.csv
+PSI-23,20176X1,hari,ya,22.76,31.39,54.15,0.003185,-0.0074,54.15,6770,rekaman berakhir saat burner masih panas,20176,campaign,30% C2H4 with He,,,,,PSI-23_Raw Data_20176X1_data.csv
+PSI-23,20190A1,hari,ya,20.93,33.34,54.26,0.004928,-0.0023,54.26,6784,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190A1_data.csv
+PSI-23,20190B1,hari,ya,8.9,35.35,44.24,0.012826,3.5982,44.24,5531,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190B1_data.csv
+PSI-23,20190C1,hari,ya,9.46,36.69,46.14,0.011682,5.0417,46.14,5769,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190C1_data.csv
+PSI-23,20190D1,hari,ya,7.95,35.29,43.24,0.012706,2.856,43.24,5406,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190D1_data.csv
+PSI-23,20190D2,hari,ya,25.3,31.84,57.14,0.011204,-0.021,57.14,7143,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190D2_data.csv
+PSI-23,20190F1,hari,ya,7.7,32.63,40.34,0.011878,2.4107,40.34,5043,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190F1_data.csv
+PSI-23,20190G1,hari,ya,8.91,33.33,42.24,0.01141,1.793,42.24,5281,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190G1_data.csv
+PSI-23,20190H1,hari,ya,10.31,33.93,44.24,0.011283,3.5984,44.24,5531,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190H1_data.csv
+PSI-23,20190J1,hari,ya,11.71,33.44,45.15,0.010673,5.0424,45.15,5645,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190J1_data.csv
+PSI-23,20190K1,hari,ya,27.1,32.14,59.24,0.008483,-0.0127,59.24,7406,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190K1_data.csv
+PSI-23,20190K2,hari,ya,26.09,33.06,59.14,0.00869,-0.0154,59.14,7394,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190K2_data.csv
+PSI-23,20190K3,hari,ya,27.7,32.44,60.14,0.00988,-0.0129,60.14,7519,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190K3_data.csv
+PSI-23,20190L1,hari,ya,11.07,31.17,42.24,0.01094,3.2231,42.24,5281,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190L1_data.csv
+PSI-23,20190M1,hari,ya,28.14,36.01,64.15,0.009472,-0.0181,64.15,8020,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190M1_data.csv
+PSI-23,20190M2,hari,ya,10.56,34.58,45.14,0.011036,3.0284,45.14,5644,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190M2_data.csv
+PSI-23,20190M3,hari,ya,26.59,36.56,63.15,0.008047,-0.021,63.15,7895,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190M3_data.csv
+PSI-23,20190N1,hari,ya,22.34,33.82,56.15,0.002432,-0.0128,56.15,7020,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190N1_data.csv
+PSI-23,20190P1,hari,ya,13.7,37.55,51.25,0.01119,3.5986,51.25,6407,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190P1_data.csv
+PSI-23,20190P2,hari,ya,13.69,37.56,51.25,0.010914,3.601,51.25,6407,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190P2_data.csv
+PSI-23,20190Q1,hari,ya,15.19,35.06,50.25,0.010241,5.0447,50.25,6282,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190Q1_data.csv
+PSI-23,20190R1,hari,ya,25.35,31.79,57.14,0.006607,-0.0234,57.14,7144,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190R1_data.csv
+PSI-23,20190S1,hari,tidak,,,,0.000537,,53.26,6658,,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190S1_data.csv
+PSI-23,20190T1,hari,tidak,,,,0.000582,,52.24,6531,,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190T1_data.csv
+PSI-23,20190U1,hari,ya,22.9,29.34,52.24,0.000619,-0.0209,52.24,6531,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190U1_data.csv
+PSI-23,20190V1,hari,ya,22.87,29.37,52.24,0.00063,-0.0205,52.24,6531,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190V1_data.csv
+PSI-23,20190W1,hari,ya,12.78,33.36,46.14,0.010696,3.377,46.14,5768,rekaman berakhir saat burner masih panas,20190,campaign,35% H2 with He,,,,,PSI-23_Raw Data_20190W1_data.csv

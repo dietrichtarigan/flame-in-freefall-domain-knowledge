@@ -1,0 +1,16 @@
+{
+ "id": "gb_telemetry_labels",
+ "n_label_nasa": 320,
+ "n_label_manusia": 0,
+ "metrics_vs_nasa": {
+  "auc": 0.9922,
+  "brier": 0.0291,
+  "acc": 0.9688
+ },
+ "metrics_vs_label_terkini": {
+  "auc": 0.9922,
+  "brier": 0.0291,
+  "acc": 0.9688
+ },
+ "validasi": "GroupKFold per hari pada uji berlabel NASA (himpunan tetap)"
+}

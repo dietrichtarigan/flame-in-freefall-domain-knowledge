@@ -1,0 +1,90 @@
+{
+ "aturan termokopel": {
+  "ign": {
+   "acc": 0.9375,
+   "auc": 0.9707
+  }
+ },
+ "median saja": {
+  "burn_mae_s": 35.1
+ },
+ "fitur+GB": {
+  "ign": {
+   "auc": 0.9922,
+   "brier": 0.0291,
+   "acc": 0.9688
+  },
+  "selfext": {
+   "auc": 0.9295,
+   "brier": 0.0818,
+   "acc": 0.8969
+  },
+  "burn_mae_s": 10.01,
+  "burn_medae_s": 2.47
+ },
+ "CNN": {
+  "ign": {
+   "auc": 0.9854,
+   "brier": 0.0242,
+   "acc": 0.9719
+  },
+  "selfext": {
+   "auc": 0.9876,
+   "brier": 0.0467,
+   "acc": 0.9351
+  },
+  "burn_mae_s": 13.41,
+  "burn_medae_s": 4.58,
+  "oklusi_kanal_auc": {
+   "MFCA2BypassFlow": 0.0053,
+   "PTA3": 0.0043,
+   "PTA2": 0.0034,
+   "TCBurner": 0.0014,
+   "PTA1": 0.001,
+   "PMT2": 0.0005,
+   "TC200A": 0.0004,
+   "MFCA3FuelFlow": 0.0001
+  }
+ },
+ "CNN+pra": {
+  "ign": {
+   "auc": 0.9889,
+   "brier": 0.0308,
+   "acc": 0.9625
+  },
+  "selfext": {
+   "auc": 0.9727,
+   "brier": 0.0647,
+   "acc": 0.916
+  },
+  "burn_mae_s": 15.22,
+  "burn_medae_s": 4.74,
+  "oklusi_kanal_auc": {
+   "PTA3": 0.0089,
+   "MFCA2BypassFlow": 0.0084,
+   "TCBurner": 0.0074,
+   "PMT1": 0.0047,
+   "MFCA1StaticMixerFlow": 0.0038,
+   "PTA2": 0.0029,
+   "EfieldVoltage": 0.0023,
+   "PMT2": 0.0023
+  }
+ },
+ "transfer": {
+  "PSI-10": {
+   "n": 317,
+   "cnn_menyala": 312,
+   "aturan_menyala": 313,
+   "setuju": 0.9968,
+   "ragu_sd>0.2": 3
+  },
+  "PSI-23": {
+   "n": 287,
+   "cnn_menyala": 270,
+   "aturan_menyala": 271,
+   "setuju": 0.9756,
+   "ragu_sd>0.2": 11
+  }
+ },
+ "best": "CNN"
+}

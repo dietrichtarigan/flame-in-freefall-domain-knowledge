@@ -1,0 +1,478 @@
+path,bytes,sha256_12,kategori,isi,pembuat
+.env.example,111,babcfb8f437b,konfigurasi,Contoh isi .env untuk mode Claude (tanpa kunci asli),ditulis tangan
+.gitignore,87,0b1efd1aabef,konfigurasi,Daftar berkas yang tidak boleh masuk git (mis. .env berisi kunci API),ditulis tangan
+.notebook/tmp/.gitignore,2,766e0153d3f7,konfigurasi,Folder kerja ekstensi editor catatan (bukan bagian proyek; dibiarkan),ekstensi editor
+.notebook/tmp/drawIOAppForChrome.html,1188,82e2cc67511e,konfigurasi,Folder kerja ekstensi editor catatan (bukan bagian proyek; dibiarkan),ekstensi editor
+analysis/ml/boundary/boundary.json,217016,20ebccd13b8c,model,Peta batas menyala/padam (proses Gaussian) + rekomendasi uji berikutnya (fungsi-U),ml_boundary.py
+analysis/ml/boundary/cfig_ignition_map.png,175986,1517cff4bbc4,bukti visual,Peta peluang dengan titik uji nyata dan kandidat uji berikutnya,ml_boundary.py
+analysis/ml/boundary/flex_extinction_map.png,71884,8227a901bbf2,bukti visual,Peta peluang dengan titik uji nyata dan kandidat uji berikutnya,ml_boundary.py
+analysis/ml/dl_gpu_w32.log,1772,308a9fc40235,log,Log pelatihan CNN di GPU RTX 3080 (quasi08/09),ml_telemetry_dl.py
+analysis/ml/dl_gpu_w64.log,1768,b031e2816601,log,Log pelatihan CNN di GPU RTX 3080 (quasi08/09),ml_telemetry_dl.py
+analysis/ml/quantile_burn.json,357,a24ccdec83a2,model,Regresi kuantil waktu bakar CFI-G + kalibrasi konformal,ml_quantile.py
+analysis/ml/symreg_flex.json,1781,c438d70e2373,model,Rumus jarang laju bakar FLEX + front Pareto,symreg_flex.py
+analysis/ml/symreg_flex.md,1722,16d1feef61d3,dokumentasi,Laporan regresi simbolik laju bakar droplet,symreg_flex.py
+analysis/ml/tabular_cfig_ign.log,685,2d04f2d6221e,log,Log mentah pelatihan model tabular (cluster quasi09),ml_tabular.py
+analysis/ml/tabular_cfig_selfext.log,689,7abadb2556d4,log,Log mentah pelatihan model tabular (cluster quasi09),ml_tabular.py
+analysis/ml/tabular_flex_ext.log,685,b983a79fa39d,log,Log mentah pelatihan model tabular (cluster quasi09),ml_tabular.py
+analysis/ml/tabular_flex_K.log,449,98de64ebc654,log,Log mentah pelatihan model tabular (cluster quasi09),ml_tabular.py
+analysis/ml/tabular_report.md,4020,ecc9121931fb,dokumentasi,Perbandingan model tabular dan pelajarannya,ml_tabular.py
+analysis/ml/tabular_results.json,4280,5a52cea3a0c3,model,Metrik semua model tabular (validasi per hari & acak),ml_tabular.py
+analysis/ml/telemetry_cnn_ensemble.pt,7863147,6ffedac17c54,model,Bobot ansambel CNN 1-D (ResNet) telemetri,ml_telemetry_dl.py
+analysis/ml/telemetry_cnn_ensemble_gpu_w32.pt,19694588,09c0968c140e,model,Bobot ansambel CNN 1-D (ResNet) telemetri,ml_telemetry_dl.py
+analysis/ml/telemetry_dl.log,1475,e952bb4e4265,log,Log pelatihan CNN (CPU),ml_telemetry_dl.py
+analysis/ml/telemetry_dl_results.json,1542,f3b0fd899e8c,model,"Metrik CNN vs aturan vs fitur+GB, oklusi kanal, transfer ke PSI-10/23",ml_telemetry_dl.py
+analysis/ml/telemetry_dl_results_gpu_w32.json,1544,5775120a09eb,model,"Metrik CNN vs aturan vs fitur+GB, oklusi kanal, transfer ke PSI-10/23",ml_telemetry_dl.py
+analysis/ml/telemetry_dl_results_gpu_w64.json,1535,b9abfb14338a,model,"Metrik CNN vs aturan vs fitur+GB, oklusi kanal, transfer ke PSI-10/23",ml_telemetry_dl.py
+analysis/ml/telemetry_gb_card.json,333,d0e565884e7a,model,Kartu model gradient boosting telemetri,ml_labels.py
+analysis/ml/telemetry_gb_predictions.csv,23152,d6c694398f0d,model,"Prediksi gradient boosting atas fitur telemetri, dilatih ulang dengan label manusia",ml_labels.py
+analysis/ml/telemetry_predictions.csv,33918,2427efe75f15,model,"Prediksi CNN per uji (menyala, padam sendiri, durasi) + simpangan ansambel",ml_telemetry_dl.py
+analysis/ml/telemetry_predictions_gpu_w32.csv,33876,9bd0e85216fb,model,"Prediksi CNN per uji (menyala, padam sendiri, durasi) + simpangan ansambel",ml_telemetry_dl.py
+analysis/ml/telemetry_predictions_gpu_w64.csv,33868,a08d887a0eb5,model,"Prediksi CNN per uji (menyala, padam sendiri, durasi) + simpangan ansambel",ml_telemetry_dl.py
+analysis/ml/telemetry_tensors.npz,18403944,e1200e80e2ff,analisis turunan,Deret telemetri yang diseragamkan menjadi tensor untuk CNN,ml_telemetry_prep.py
+analysis/saffire/proof/saffire1_C1.png,483556,f88fef9e45b5,bukti visual,Lembar bukti Saffire: frame berlabel + garis regresi posisi-waktu,saffire_spread.py
+analysis/saffire/proof/saffire1_C2.png,692444,e9ded73fda8f,bukti visual,Lembar bukti Saffire: frame berlabel + garis regresi posisi-waktu,saffire_spread.py
+analysis/saffire/proof/saffire3_C1.png,523240,1400e8ddc22f,bukti visual,Lembar bukti Saffire: frame berlabel + garis regresi posisi-waktu,saffire_spread.py
+analysis/saffire/proof/saffire3_C2.png,514907,e0da7e8486a7,bukti visual,Lembar bukti Saffire: frame berlabel + garis regresi posisi-waktu,saffire_spread.py
+analysis/saffire/spread_rates.csv,2831,f263e123d5b5,analisis turunan,Ringkasan laju rambat (ujung api & front hangus) + pembanding publikasi,saffire_spread.py
+analysis/saffire/spread_rates.json,5162,460a8476637b,analisis turunan,"Laju rambat api Saffire-I/III per kamera: skala, regresi Theil-Sen, selang bootstrap, gerbang mutu",saffire_spread.py
+analysis/saffire/traces/saffire1_C1.csv,104977,21fc41b63a77,analisis turunan,Posisi ujung api / front hangus per frame,saffire_spread.py
+analysis/saffire/traces/saffire1_C2.csv,60180,0d203abcfe58,analisis turunan,Posisi ujung api / front hangus per frame,saffire_spread.py
+analysis/saffire/traces/saffire3_C1.csv,258160,50cb997b8249,analisis turunan,Posisi ujung api / front hangus per frame,saffire_spread.py
+analysis/saffire/traces/saffire3_C2.csv,257963,2744444f9411,analisis turunan,Posisi ujung api / front hangus per frame,saffire_spread.py
+analysis/stats/uq.json,3943,3c184e94b5cc,analisis turunan,Selang bootstrap cluster per hari dan uji permutasi untuk angka utama,stats_uq.py
+analysis/stats/uq_report.md,3207,4ac2e7822e88,dokumentasi,Laporan ketidakpastian angka utama,stats_uq.py
+analysis/telemetry/acme_telemetry.csv,150262,c63d5295425d,analisis turunan,"Satu baris per uji ACME dari 943 rekaman sensor: menyala, waktu nyala/padam, kenaikan termokopel",telemetry_mine.py
+analysis/telemetry/corridor/anomaly_scores.csv,73292,6a5ce51744c6,analisis turunan,Skor anomali tiap uji terhadap koridornya,telemetry_corridor.py
+analysis/telemetry/corridor/corridors.json,692192,0d9626edec33,analisis turunan,Koridor proses (pita persentil per kanal per kelompok uji),telemetry_corridor.py
+analysis/telemetry/corridor/top_anomalies.png,320984,521c8f5e4052,bukti visual,Kanal uji paling anomali di atas koridornya,telemetry_corridor.py
+analysis/telemetry/README.md,6919,0c46ad98e725,dokumentasi,Metode dan validasi penambangan telemetri ACME,ditulis tangan
+analysis/telemetry/telemetry_calibrated.csv,141584,b504f4c91406,analisis turunan,Tekanan PTA dikalibrasi ke kPa dan aliran MFC ke slpm,telemetry_calibrate.py
+analysis/telemetry/telemetry_joined.csv,184142,5a0e600d41ae,analisis turunan,Telemetri yang dipasangkan ke baris tabel NASA (per uji / per hari / tidak ada),telemetry_join.py
+analysis/video_full/episodes.csv,18731,a153a79db24c,analisis turunan,Satu baris per episode pembakaran dalam video,video_analyze.py
+analysis/video_full/measurements.csv,24014,f71908658667,analisis turunan,Episode video digabung dengan kondisi uji NASA,video_join.py
+analysis/video_full/proof/a_BASS_GMT211_SAMPLE_193_TEST_P18_LOS_Portion_10h52m52s_to_end_of_test.png,33396,bc60170e6b22,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT100_sample139_test-T16-shifted-video.png,23623,5445f318c773,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT100_SAMPLE_131_TEST_T5.png,12404,2be3cd8c5565,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT100_SAMPLE_132_TEST_T6.png,6684,8d11d70f2f81,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT100_SAMPLE_139_TEST_T16.png,25940,2ccc2c9c95e9,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT164_SAMPLE_205_TEST_O3a.png,56842,7164350f19d9,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT164_SAMPLE_205_TEST_O3b.png,64072,c6db98237e5c,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT167_SAMPLE_185_TEST_P1.png,13218,dee9ac3300e4,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT167_SAMPLE_188_TEST_P2.png,10768,bc81e1cc0551,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT167_SAMPLE_215_TEST_P3a.png,21282,a0260848d92e,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_189_TEST_P14.png,42441,2c4b54c8d77c,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_190_TEST_P15.png,38535,6f047c404fbf,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_196_TEST_P21a.png,71868,a8e308dc47ad,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_196_TEST_P21b.png,59760,866d9f1e11ac,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_039_TEST_F4.png,41409,941cadf7eaca,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_133_TEST_T9.png,2628,d6b01162d93b,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_134_TEST_T10.png,36384,32e654331c32,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_141_TEST_T18.png,29628,ddc3bf63494c,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT177_SAMPLE_206_TEST_O6.png,28918,377083147b5b,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT177_SAMPLE_208_TEST_O8a.png,41540,867a19e24bc7,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT177_SAMPLE_208_TEST_O8b.png,30648,1abde883d5a0,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT177_SAMPLE_209_TEST_O9.png,21646,1149170eb3c4,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT177_SAMPLE_214_TEST_O7.png,31830,663cb913742a,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT178_SAMPLE_135_TEST_T11.png,8337,207cb20183cf,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT178_SAMPLE_136_TEST_T12.png,20213,23cbb17fc3f8,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT178_SAMPLE_140_TEST_T14.png,1714,5f2faa9e7e25,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT178_SAMPLE_142_TEST_T17.png,7723,496a923a8e26,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT178_SAMPLE_182_TEST_T3.png,29938,e1db9fb29a0e,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT178_SAMPLE_182_TEST_T3_First_Ignition_Attempts.png,25053,4b9919af745c,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT183_SAMPLE_150_TESTB16.png,25425,771a31494e2f,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT183_SAMPLE_151_TESTB19.png,42004,1d506434f9cb,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT183_SAMPLE_175_TESTB15.png,21715,518b5ec7ed2c,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT184_SAMPLE_186_TESTP6.png,30718,1b5335dd116e,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT188_SAMPLE_149_TESTB15.png,57764,001369b1e053,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT188_SAMPLE_153_TESTB6.png,46572,66d029763a0a,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT188_SAMPLE_154_TESTB9.png,50061,df5caca6ba64,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT188_SAMPLE_157_TESTB8.png,67076,0a799e5747be,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT188_SAMPLE_158_TESTB11.png,46580,5d5e377435cc,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT188_SAMPLE_162_TESTB13.png,47399,e9b761867f15,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT188_SAMPLE_173_TESTB10.png,41998,e054aa10a66d,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT189_SAMPLE_200_TEST_P22a.png,14782,5edf8f52b33f,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT189_SAMPLE_200_TEST_P22b.png,10419,c849a4a9ece1,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT189_SAMPLE_217_TEST_O12.png,32973,dc30c5b0778f,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT190_SAMPLE_133_TEST_T23.png,4158,ea4ef9eaa542,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT190_SAMPLE_133_TEST_T24.png,40771,47ff50c02b27,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT190_SAMPLE_143_TEST_T19.png,13418,46ce0f08e19f,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT190_SAMPLE_145_TEST_T21.png,14568,d6a9985fe4a5,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT190_SAMPLE_146_TEST_T22.png,13095,eeb3b99a5a04,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT190_SAMPLE_182_TEST_T7_First_Ignition_Attempts.png,48499,f30a1e2e7339,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT192_SAMPLE_179_TEST_M9.png,49910,9f5e2fd0b488,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT202_SAMPLE_220_TEST_O5a_Part-1.png,62216,47cb89aa1d26,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT202_SAMPLE_220_TEST_O5a_Part-2.png,40782,f23dc9be5724,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT202_SAMPLE_220_TEST_O5b.png,55751,85184cf19572,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT202_SAMPLE_221_TEST_O13b.png,57265,a444e874666a,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT203_SAMPLE_191_TEST_P16.png,45220,be86dd9bf8f0,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT209_SAMPLE_212_TEST_O18.png,10181,74ed8b8ffbfa,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT209_SAMPLE_218_TEST_O15a.png,12606,d1b9c7dc3281,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT210_SAMPLE_219_TEST_O16_First_Ignition_Attempt.png,56984,e71074649190,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT211_SAMPLE_195_TEST_P20.png,8909,8ef817923ead,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT213_SAMPLE_229_TEST_F3.png,21407,9c6bb65b38d7,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT216_SAMPLE_137_TEST_T26.png,23912,080274f21d84,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT216_SAMPLE_138_TEST_T25.png,35442,cc0277a60a61,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT216_SAMPLE_144_TEST_T28a.png,20318,746c09181d29,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT216_SAMPLE_144_TEST_T28b.png,36318,96d0dccb8546,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT216_SAMPLE_145_TEST_T29.png,7397,5f8092e3cab8,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT216_SAMPLE_146_TEST_T27.png,21975,04ec89b23b99,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT216_SAMPLE_174_TEST_B21.png,9701,b7c53ce5e459,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT216_SAMPLE_176_TEST_B22.png,20352,5652cdcaf641,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT45_SAMPLE_128_TEST_T1.png,16658,e216f44a4d5b,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT45_SAMPLE_129_TEST_T2.png,4799,1def8b3ff96b,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT45_SAMPLE_130_TEST_T4.png,6881,6e595b3b6f5b,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT45_SAMPLE_138_TEST_T15.png,5357,a6fdfd43bd64,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT49_SAMPLE_204_TEST_O2.png,20498,fecc33ba4ad9,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT49_SAMPLE_207_TEST_O1.png,24561,6857121abd0a,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT50_SAMPLE_147_TEST_B1.png,18176,4fd1c7ff9b2d,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT50_SAMPLE_148_TEST_B3.png,17553,690b639506f9,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT50_SAMPLE_155_TEST_B2.png,17523,b83946830766,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT50_SAMPLE_156_TEST_B5.png,14780,5e5a26b4533a,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT50_SAMPLE_159_TEST_B4.png,14737,04a5c6c47504,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT50_SAMPLE_160_TEST_B12.png,10444,f718f31b685d,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT50_SAMPLE_161_TEST_B7.png,5247,8f90acf5b7a9,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT50_SAMPLE_227_TEST_F1.png,29823,9bb44b94ba86,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT51_SAMPLE_222_TEST_M1.png,39077,5620a449c8c6,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_BASS_GMT_100_sample137_test_T13.png,55391,564170dff35f,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/PSI-25_Raw_Data_Flame-Blowoff-BASS-GMT177-Test-O7.png,46384,f272620c0531,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/SI-25_Raw_Data_BASS_GMT190_SAMPLE_182_TEST_T7_Second_Ignition_Attempts.png,18036,adafab875c2b,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/SI-25_Raw_Data_BASS_GMT210_SAMPLE_219_TEST_O16_Second_Ignition_Attempt.png,38598,9b273501491f,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/ta_vlc-record-2014-12-05-17h06m58s-BASS_GMT190_SAMPLE_145_TEST_T21_ts-.png,6701,03590cc3e879,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/ta_vlc-record-2014-12-05-17h07m02s-BASS_GMT190_SAMPLE_145_TEST_T21_ts-.png,14378,281befc76e81,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/proof/ta_vlc-record-2015-06-04-17h20m14s-BASS_GMT190_SAMPLE_145_TEST_T21_ts-.png,1506,af70579d6700,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_full/review.html,33659,3d37022df11f,aplikasi,Halaman pemeriksaan lembar bukti oleh manusia,proof_review.py
+analysis/video_full/summary.csv,23179,e76986484537,analisis turunan,"Satu baris per video BASS: episode nyala, gerbang adegan",video_analyze.py
+analysis/video_full/traces/a_BASS_GMT211_SAMPLE_193_TEST_P18_LOS_Portion_10h52m52s_to_end_of_test.csv,40614,200cd2baa9e8,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/ASS_GMT211_SAMPLE_195_TEST_P20_LOS_Portion_15h33m45s_to_end_of_test_ts.csv,3623,060dc0e8d536,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT100_sample139_test-T16-shifted-video.csv,15879,60a016b87715,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT100_SAMPLE_131_TEST_T5.csv,11671,e205129b67a9,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT100_SAMPLE_132_TEST_T6.csv,6737,314e6c8ecab4,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT100_SAMPLE_139_TEST_T16.csv,14649,1c124f001b58,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT164_SAMPLE_205_TEST_O3a.csv,11780,45097b258100,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT164_SAMPLE_205_TEST_O3b.csv,23899,27dd88264992,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT167_SAMPLE_185_TEST_P1.csv,19880,2fa0f694c71c,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT167_SAMPLE_188_TEST_P2.csv,25876,9d8099a4cb65,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT167_SAMPLE_215_TEST_P3a.csv,27964,f182e0fe7187,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_189_TEST_P14.csv,34409,0487ad165e3e,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_190_TEST_P15.csv,28766,5cbfd88cc3b3,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_196_TEST_P21a.csv,16746,2cdff19fb770,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_196_TEST_P21b.csv,13461,ed00bfc95cd3,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_039_TEST_F4.csv,17050,feaa1f428ee4,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_133_TEST_T9.csv,4276,b60cd7b9544c,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_134_TEST_T10.csv,4317,eac7354af900,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_141_TEST_T18.csv,5472,7bb07278eaa9,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT177_SAMPLE_206_TEST_O6.csv,36813,827d1b80cf6d,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT177_SAMPLE_208_TEST_O8a.csv,21834,aea34b86ded0,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT177_SAMPLE_208_TEST_O8b.csv,21627,0b1f5fa78ae6,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT177_SAMPLE_209_TEST_O9.csv,23952,0fe415b0af89,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT177_SAMPLE_214_TEST_O7.csv,38284,87da85defdba,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT178_SAMPLE_135_TEST_T11.csv,4987,1608d3938853,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT178_SAMPLE_136_TEST_T12.csv,3277,9b63a4eecfb6,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT178_SAMPLE_140_TEST_T14.csv,5275,b30e2ff1b1ee,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT178_SAMPLE_142_TEST_T17.csv,4700,3f100c812f41,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT178_SAMPLE_182_TEST_T3.csv,23720,baade9fa08f1,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT178_SAMPLE_182_TEST_T3_First_Ignition_Attempts.csv,16661,220c76d6ea4e,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT183_SAMPLE_150_TESTB16.csv,6570,0391c7173282,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT183_SAMPLE_151_TESTB19.csv,5299,992ab4c7c8b3,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT183_SAMPLE_175_TESTB15.csv,10283,fa1e49321b34,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT184_SAMPLE_186_TESTP6.csv,27456,7798abc52efe,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT188_SAMPLE_149_TESTB15.csv,5499,571e0cbb3d9f,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT188_SAMPLE_153_TESTB6.csv,3467,1705f1345663,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT188_SAMPLE_154_TESTB9.csv,1983,37300fa9c265,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT188_SAMPLE_157_TESTB8.csv,5898,39e7505406b2,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT188_SAMPLE_158_TESTB11.csv,6462,aa61c05a62d7,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT188_SAMPLE_162_TESTB13.csv,14286,c3f1c3775c25,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT188_SAMPLE_173_TESTB10.csv,6855,d3c58b57e3ca,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT189_SAMPLE_200_TEST_P22a.csv,12458,4774b20f63b7,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT189_SAMPLE_200_TEST_P22b.csv,27124,2e70c064e8be,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT189_SAMPLE_217_TEST_O12.csv,39727,6f251844afd9,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT190_SAMPLE_133_TEST_T23.csv,3004,9973ae444d93,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT190_SAMPLE_133_TEST_T24.csv,5704,2defa5fac656,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT190_SAMPLE_143_TEST_T19.csv,3484,5f5b4376ef87,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT190_SAMPLE_145_TEST_T21.csv,2084,5374bfa516f2,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT190_SAMPLE_146_TEST_T22.csv,2134,7bcf42db2771,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT190_SAMPLE_182_TEST_T7_First_Ignition_Attempts.csv,2810,e3eb23f640a4,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT192_SAMPLE_179_TEST_M9.csv,43230,590a74df3224,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT195_SAMPLE_202_TEST_P5-LOS-portion.csv,4229,4e86eb734abc,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT195_SAMPLE_203_TEST_P13b.csv,18663,0252252253b0,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT202_SAMPLE_220_TEST_O5a_Part-1.csv,25378,fcb662273f59,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT202_SAMPLE_220_TEST_O5a_Part-2.csv,25550,5fc9f86767b9,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT202_SAMPLE_220_TEST_O5b.csv,21384,01400f40bab8,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT202_SAMPLE_221_TEST_O13a_LOS_Portion_1741-1743.csv,3793,fb3b6f18ac74,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT202_SAMPLE_221_TEST_O13b.csv,20564,cf292a3e1db7,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT203_SAMPLE_191_TEST_P16.csv,44076,2ba712b08ebc,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT204_SAMPLE_180_TEST_M10_LOS_Portion_1754-1756.csv,3809,197030c5670e,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT209_SAMPLE_212_TEST_O18.csv,28020,b9cdc5abac58,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT209_SAMPLE_218_TEST_O15a.csv,30332,04841146f9a6,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT210_SAMPLE_199_TEST_P12_LOS_Portion_1132-1133.csv,2274,4bcb1cbaa842,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT210_SAMPLE_219_TEST_O16_First_Ignition_Attempt.csv,20054,5c8dcd020c8d,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT211_SAMPLE_195_TEST_P20.csv,51400,4c5484546d70,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT213_SAMPLE_229_TEST_F3.csv,5484,e4ae75e4912b,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT216_SAMPLE_137_TEST_T26.csv,5179,ef273f50c2bc,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT216_SAMPLE_138_TEST_T25.csv,3579,57ddd85363c6,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT216_SAMPLE_144_TEST_T28a.csv,3319,9becee368d3a,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT216_SAMPLE_144_TEST_T28b.csv,2946,167f6b824f5b,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT216_SAMPLE_145_TEST_T29.csv,6479,44f9cc88ddc4,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT216_SAMPLE_146_TEST_T27.csv,4372,2f3b5712bbaa,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT216_SAMPLE_174_TEST_B21.csv,6676,162832368fa0,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT216_SAMPLE_176_TEST_B22.csv,7912,a3aba0206c29,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT45_SAMPLE_128_TEST_T1.csv,4133,4c7c6ee8477d,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT45_SAMPLE_129_TEST_T2.csv,4590,84edf001c66f,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT45_SAMPLE_130_TEST_T4.csv,2584,4ed4fe4acb1d,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT45_SAMPLE_138_TEST_T15.csv,1843,69fcdafd393e,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT49_SAMPLE_204_TEST_O2.csv,18468,61e74143554a,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT49_SAMPLE_207_TEST_O1.csv,16310,41ad4bdab1f0,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT50_SAMPLE_147_TEST_B1.csv,2046,30b5b82d3c64,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT50_SAMPLE_148_TEST_B3.csv,2464,0ad85d87234f,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT50_SAMPLE_155_TEST_B2.csv,3294,4cc574ad1d8b,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT50_SAMPLE_156_TEST_B5.csv,3725,0090146b7e3d,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT50_SAMPLE_159_TEST_B4.csv,5355,ca39fe9001ab,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT50_SAMPLE_160_TEST_B12.csv,4180,cedbf4b1f99e,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT50_SAMPLE_161_TEST_B7.csv,4964,189b56c87412,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT50_SAMPLE_227_TEST_F1.csv,4485,c47cc006c971,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT51_SAMPLE_222_TEST_M1.csv,19445,f2425b68969d,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_BASS_GMT_100_sample137_test_T13.csv,40167,00b6030e3610,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/PSI-25_Raw_Data_Flame-Blowoff-BASS-GMT177-Test-O7.csv,2676,48599504718b,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/SI-25_Raw_Data_BASS_GMT190_SAMPLE_182_TEST_T7_Second_Ignition_Attempts.csv,24478,d561ec838371,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/SI-25_Raw_Data_BASS_GMT210_SAMPLE_219_TEST_O16_Second_Ignition_Attempt.csv,10616,7e5cb8072ae9,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/ta_vlc-record-2014-12-05-17h06m58s-BASS_GMT190_SAMPLE_145_TEST_T21_ts-.csv,338,bfb950d73c72,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/ta_vlc-record-2014-12-05-17h07m02s-BASS_GMT190_SAMPLE_145_TEST_T21_ts-.csv,698,246759c44944,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_full/traces/ta_vlc-record-2015-06-04-17h20m14s-BASS_GMT190_SAMPLE_145_TEST_T21_ts-.csv,210,5e212278387a,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/episodes.csv,5073,88784a265861,analisis turunan,Satu baris per episode pembakaran dalam video,video_analyze.py
+analysis/video_pilot/measurements.csv,6377,00335ee319b7,analisis turunan,Episode video digabung dengan kondisi uji NASA,video_join.py
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT100_sample139_test-T16-shifted-video.png,23623,5445f318c773,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT100_SAMPLE_131_TEST_T5.png,12404,2be3cd8c5565,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT100_SAMPLE_132_TEST_T6.png,6684,8d11d70f2f81,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT100_SAMPLE_139_TEST_T16.png,25940,2ccc2c9c95e9,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT164_SAMPLE_205_TEST_O3a.png,56842,7164350f19d9,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT164_SAMPLE_205_TEST_O3b.png,64072,c6db98237e5c,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT167_SAMPLE_185_TEST_P1.png,13218,dee9ac3300e4,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT167_SAMPLE_188_TEST_P2.png,10768,bc81e1cc0551,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT167_SAMPLE_215_TEST_P3a.png,21282,a0260848d92e,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_189_TEST_P14.png,42441,2c4b54c8d77c,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_190_TEST_P15.png,38535,6f047c404fbf,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_196_TEST_P21a.png,71868,a8e308dc47ad,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_196_TEST_P21b.png,59760,866d9f1e11ac,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_039_TEST_F4.png,41409,941cadf7eaca,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_133_TEST_T9.png,2628,d6b01162d93b,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_134_TEST_T10.png,36384,32e654331c32,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_141_TEST_T18.png,29628,ddc3bf63494c,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT177_SAMPLE_206_TEST_O6.png,28918,377083147b5b,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/proof/PSI-25_Raw_Data_BASS_GMT177_SAMPLE_208_TEST_O8a.png,41540,867a19e24bc7,bukti visual,Lembar bukti: montase frame dengan kotak deteksi,video_analyze.py --proof
+analysis/video_pilot/README.md,5875,a6ef7f0fc2ed,dokumentasi,"Metode, kegagalan, dan batas analisis video BASS",ditulis tangan
+analysis/video_pilot/summary.csv,6958,e6ae12d1b7e3,analisis turunan,"Satu baris per video BASS: episode nyala, gerbang adegan",video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT100_sample139_test-T16-shifted-video.csv,15879,60a016b87715,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT100_SAMPLE_131_TEST_T5.csv,11671,e205129b67a9,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT100_SAMPLE_132_TEST_T6.csv,6737,314e6c8ecab4,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT100_SAMPLE_139_TEST_T16.csv,14649,1c124f001b58,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT164_SAMPLE_205_TEST_O3a.csv,11780,45097b258100,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT164_SAMPLE_205_TEST_O3a_2ND_VIEW.csv,8106,5261ff73d3c6,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT164_SAMPLE_205_TEST_O3b.csv,23899,27dd88264992,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT164_SAMPLE_205_TEST_O3b_2ND_VIEW.csv,12327,188ca36194cb,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT167_SAMPLE_185_TEST_P1.csv,19880,2fa0f694c71c,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT167_SAMPLE_185_TEST_P1_2ND_VIEW.csv,17703,cb2c0eefffff,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT167_SAMPLE_188_TEST_P2.csv,25876,9d8099a4cb65,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT167_SAMPLE_188_TEST_P2_2ND_VIEW.csv,20076,725ebfbd5ff2,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT167_SAMPLE_215_TEST_P3a.csv,27964,f182e0fe7187,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT167_SAMPLE_215_TEST_P3a_2ND_VIEW.csv,21231,d005aa1864f2,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_189_TEST_P14.csv,34409,0487ad165e3e,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_190_TEST_P15.csv,28766,5cbfd88cc3b3,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_196_TEST_P21a.csv,16746,2cdff19fb770,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_196_TEST_P21a_2ND_VIEW.csv,15729,e2b8aceb0e7c,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_196_TEST_P21b.csv,13461,ed00bfc95cd3,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT174_SAMPLE_196_TEST_P21b_2ND_VIEW.csv,12810,13479fa35489,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_039_TEST_F4.csv,17050,feaa1f428ee4,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_039_TEST_F4_2ND_VIEW.csv,15498,cdeb51b98e6c,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_133_TEST_T9.csv,4276,b60cd7b9544c,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_134_TEST_T10.csv,4317,eac7354af900,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_134_TEST_T10_2ND_VIEW.csv,4179,950b508f1da0,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_141_TEST_T18.csv,5472,7bb07278eaa9,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT175_SAMPLE_141_TEST_T18_2ND_VIEW.csv,4452,ce2ac10e24f2,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT177_SAMPLE_206_TEST_O6.csv,36813,827d1b80cf6d,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT177_SAMPLE_208_TEST_O8a.csv,21834,aea34b86ded0,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+analysis/video_pilot/traces/PSI-25_Raw_Data_BASS_GMT177_SAMPLE_208_TEST_O8a_2ND_VIEW.csv,22092,6fc7e35de687,analisis turunan,Luas dan sentroid nyala per frame untuk satu video,video_analyze.py
+app/freefall_lab.html,173247,bf70c6c12de4,aplikasi,"Simulator Freefall Lab generasi pertama (satu berkas, data tertanam)",build_model.py + lab_template.html
+app/hardware_lab.html,19538,68f6e7f21b30,aplikasi,Penampil 3D perangkat eksperimen (placeholder skematik),ditulis tangan
+app/nerve/index.html,33010,144c506ba3cd,aplikasi,Dashboard cerdas (tahap F: desain visual di atas tulang & saraf),ditulis tangan
+app/nerve/nerve.js,14579,e87656afb8f4,aplikasi,"Sistem saraf dashboard: satu keadaan bersama, aksi, undo, tautan, polling peristiwa",ditulis tangan
+app/nerve/nerve.learn.live.mjs,4470,d31af624333d,uji perangkat lunak,"Uji siklus belajar: anotasi, bangun ulang, ratusan permintaan selama penukaran basis data",ditulis tangan
+app/nerve/nerve.live.mjs,2817,a78797e15af5,uji perangkat lunak,Uji ujung-ke-ujung terhadap server otak sungguhan,ditulis tangan
+app/nerve/nerve.test.mjs,4551,e2d3fc9371d4,uji perangkat lunak,Uji unit sistem saraf (tanpa server),ditulis tangan
+app/nerve/README.md,3823,3df53571f40a,dokumentasi,"Kontrak sistem saraf: keadaan, aksi, peristiwa",ditulis tangan
+app/vendor/GLTFLoader.js,103311,b2edda923572,pustaka pihak ketiga,"three.js (rilis 2022, MIT) beserta pemuat glTF dan OrbitControls untuk hardware_lab.html",disalin dari three.js (MIT)
+app/vendor/OrbitControls.js,26660,b4c6e53f9853,pustaka pihak ketiga,"three.js (rilis 2022, MIT) beserta pemuat glTF dan OrbitControls untuk hardware_lab.html",disalin dari three.js (MIT)
+app/vendor/three.min.js,607784,f34446bf875b,pustaka pihak ketiga,"three.js (rilis 2022, MIT) beserta pemuat glTF dan OrbitControls untuk hardware_lab.html",disalin dari three.js (MIT)
+arsip/README.md,1821,0faa22827f7a,dokumentasi,Daftar isi arsip dan alasan tiap berkas diarsipkan,ditulis tangan
+docs/blender_3d_spec.md,3327,8f014213b78b,dokumentasi,Spesifikasi model 3D perangkat eksperimen untuk pemodel,ditulis tangan
+docs/laporan/build.log,31387,6b07ae83a84d,log,Log kompilasi pdflatex,pdflatex
+docs/laporan/data/angka.tex,1236,77f251fe2edb,dokumentasi,"Tabel dan angka untuk dokumen LaTeX, dihitung dari data",workspace_inventory.py
+docs/laporan/data/inventaris.csv,80392,91572b387173,dokumentasi,"Tabel dan angka untuk dokumen LaTeX, dihitung dari data",workspace_inventory.py
+docs/laporan/data/rule_hits.json,176,4f2a8ef1a971,dokumentasi,"Tabel dan angka untuk dokumen LaTeX, dihitung dari data",workspace_inventory.py
+docs/laporan/data/status_psi.json,120,5a9f403b276f,dokumentasi,"Tabel dan angka untuk dokumen LaTeX, dihitung dari data",workspace_inventory.py
+docs/laporan/data/tab_inventaris.tex,31302,c69b1ca6924a,dokumentasi,"Tabel dan angka untuk dokumen LaTeX, dihitung dari data",workspace_inventory.py
+docs/laporan/data/tab_psi.tex,2808,34e4a999dd7a,dokumentasi,"Tabel dan angka untuk dokumen LaTeX, dihitung dari data",workspace_inventory.py
+docs/laporan/gambar/cfig_ignition_map.png,175986,1517cff4bbc4,bukti visual,Gambar untuk dokumen LaTeX (salinan bukti visual & tangkapan layar dashboard),workspace_inventory.py / tangkapan layar
+docs/laporan/gambar/dashboard_gelap.png,296458,16fafa9e9e51,bukti visual,Gambar untuk dokumen LaTeX (salinan bukti visual & tangkapan layar dashboard),workspace_inventory.py / tangkapan layar
+docs/laporan/gambar/dashboard_terang.png,286247,db35a64f978c,bukti visual,Gambar untuk dokumen LaTeX (salinan bukti visual & tangkapan layar dashboard),workspace_inventory.py / tangkapan layar
+docs/laporan/gambar/saffire1_C2.png,692444,e9ded73fda8f,bukti visual,Gambar untuk dokumen LaTeX (salinan bukti visual & tangkapan layar dashboard),workspace_inventory.py / tangkapan layar
+docs/laporan/gambar/saffire3_C1.png,523240,1400e8ddc22f,bukti visual,Gambar untuk dokumen LaTeX (salinan bukti visual & tangkapan layar dashboard),workspace_inventory.py / tangkapan layar
+docs/laporan/gambar/top_anomalies.png,320984,521c8f5e4052,bukti visual,Gambar untuk dokumen LaTeX (salinan bukti visual & tangkapan layar dashboard),workspace_inventory.py / tangkapan layar
+docs/laporan/gambar/video_bukti_T5.png,12404,2be3cd8c5565,bukti visual,Gambar untuk dokumen LaTeX (salinan bukti visual & tangkapan layar dashboard),workspace_inventory.py / tangkapan layar
+docs/laporan/workspace.aux,19627,32c925b5ab9a,log,Berkas bantu pdflatex (dibuat ulang setiap kompilasi),pdflatex
+docs/laporan/workspace.log,59990,15f6b03fb030,log,Log kompilasi pdflatex,pdflatex
+docs/laporan/workspace.out,12371,5abed0ff395b,log,Berkas bantu pdflatex (dibuat ulang setiap kompilasi),pdflatex
+docs/laporan/workspace.pdf,2134501,be415a7f9788,dokumentasi,Dokumen penjelasan workspace (hasil pdflatex),pdflatex
+docs/laporan/workspace.tex,77752,f8ed05d6a31e,dokumentasi,Sumber LaTeX dokumen penjelasan workspace ini,ditulis tangan
+docs/laporan/workspace.toc,6269,577eda8af014,log,Berkas bantu pdflatex (dibuat ulang setiap kompilasi),pdflatex
+docs/rencana_dashboard_cerdas.md,16049,a01bb25078ea,dokumentasi,Rencana arsitektur dashboard cerdas (lapis L0-L5) dan statusnya,ditulis tangan
+eval/assistant_eval.jsonl,4223,ac1f07f841e9,evaluasi,Set pengembangan asisten (28 pertanyaan + kriteria lulus),ditulis tangan
+eval/assistant_eval_holdout2.jsonl,1657,ff1023baf9df,evaluasi,"Set hold-out 2 (12 pertanyaan), dibekukan sebelum dijalankan",ditulis tangan
+eval/assistant_eval_holdout2.sha1,77,4afe79516260,evaluasi,Sidik SHA-1 hold-out 2 sebagai bukti tidak diubah,sha1sum
+eval/assistant_eval_holdout2_catatan.md,635,68177b278382,evaluasi,Catatan kejujuran yang ikut ditempel ke laporan evaluasi,ditulis tangan
+eval/assistant_eval_holdout2_report.md,1528,0967a792775b,evaluasi,Laporan evaluasi asisten per set,assistant.py eval
+eval/assistant_eval_holdout2_results.json,4668,988d9d5ad540,evaluasi,Hasil evaluasi rinci per pertanyaan,assistant.py eval
+eval/assistant_eval_report.md,1872,2834eb1a985f,evaluasi,Laporan evaluasi asisten per set,assistant.py eval
+eval/assistant_eval_results.json,10604,a6f9fb78c74c,evaluasi,Hasil evaluasi rinci per pertanyaan,assistant.py eval
+kb/clean/PSI-100_Experimental_table_SAFFIRE-3.csv,237,2e87fd1f320b,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-101_Experimental_table_SAME-R.csv,5662,a8ab52f504c8,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-102_Experimental_table_SAME.csv,321,12a5b52ef330,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-106_Experimental_table_Slice.csv,734,ccfbc6ccfc89,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-107_Experimental_table_Spice.csv,31193,5f69f7cb7457,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-10_Experimental_table_Flame_Design_Inverse_Flame.csv,17300,1a935d5877ab,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-10_Experimental_table_Flame_Design_Normal_Flame.csv,26915,586976169f30,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-142_Experimental_table_Data_Summary_Table.csv,724,d729cc608465,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-159_Experimental_table_CFI-G_Inverse_Flames.csv,21324,36e19e4c3ba7,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-159_Experimental_table_CFI-G_Normal_Flames.csv,22152,6918d17f4532,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-20_Experimental_table_ACME_BRE.csv,1109,4fffcb3090ba,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-21_Experimental_table_CLD_Flame.csv,2453,16c7eb3007e1,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-22_Experimental_table_ACME_E-FIELD_Flames.csv,2475,fc237af2a47b,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-23_Experimental_table_ACME_s-Flame.csv,2453,9bfd165b8da1,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-25_Experimental_table_BASS-II.csv,16559,592e648c0235,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-26_Experimental_table_BASS.csv,4717,fc1aff3512df,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-39_Experimental_table_CFI.csv,7790,782e5db20416,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-47_Experimental_table_DAFT.csv,518,c1726dd3a92f,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-68_Experimental_table_Flex2.csv,1017,377ebcd41516,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-69_Experimental_table_FLEX.csv,24833,af0253bf9fc5,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-98_Experimental_table_SAFFIRE-1.csv,453,28a304d8e6e0,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/PSI-99_Experimental_table_SAFFIRE-2.csv,1955,f4e94bfaae94,data bersih,Salinan tabel uji PSI apa adanya dari zip/CSV NASA (sebelum pembersihan),build_kb.py
+kb/clean/tables/PSI-100__SAFFIRE_3.csv,326,61afdc5a8342,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-101__SAME_R.csv,8222,9362faa97698,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-102__SAME.csv,529,4797c7a17223,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-106__Slice.csv,1018,343bbaa90d91,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-107__Spice.csv,41922,f7b3ace259ea,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-10__Flame_Design_Inverse_Flame.csv,22406,c6662d44eba2,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-10__Flame_Design_Normal_Flame.csv,35559,988ad31333d7,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-142__Data_Summary_Table.csv,1035,0b868c9e2a77,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-159__CFI_G_Inverse_Flames.csv,27123,6604c51849ce,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-159__CFI_G_Normal_Flames.csv,28714,921df00d134d,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-20__ACME_BRE.csv,1576,a12fd8fdc5e3,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-21__CLD_Flame.csv,3285,9104baaaee00,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-22__ACME_E_FIELD_Flames.csv,3622,221460135db4,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-23__ACME_s_Flame.csv,2990,68b00af51ba5,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-25__BASS_II.csv,19601,164853de854a,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-26__BASS.csv,7213,e085e44c1edd,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-39__CFI.csv,9387,7efd8ba68e48,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-47__DAFT.csv,596,8d1b7bb38e6d,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-68__Flex2.csv,1219,0d5b6b1815f1,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-69__FLEX.csv,30530,3c91dfe54af1,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-98__SAFFIRE_1.csv,603,37aa8fc9cb88,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/clean/tables/PSI-99__SAFFIRE_2.csv,2377,cd1fc53f9152,data bersih,"Satu tabel uji PSI per berkas, kolom asli, baris kosong dibuang",build_kb.py
+kb/gold/brain.sqlite,10498048,21d3b9567b19,data siap pakai,"Graf pengetahuan 'otak': entitas, artefak, pengukuran bertingkat kebenaran, tautan, aturan, kartu model",build_brain.py
+kb/gold/data_dictionary.md,7009,fac37ff00a1d,dokumentasi,Kamus data lapis gold: arti tiap kolom dan peringatan,ditulis tangan bersama build_kb.py
+kb/gold/freefall.sqlite,82448384,a924b0f62ac8,data siap pakai,"Basis data utama: tests, investigations, publications, files, papers, paper_chunks, indeks FTS5",build_kb.py
+kb/gold/investigations.csv,91384,b1276a3e6215,data siap pakai,"Satu baris per investigasi: judul, DOI, platform, tujuan, hipotesis",build_kb.py
+kb/gold/model_history.jsonl,250364,a5ece638bf9e,status pipeline,Riwayat ringkasan model setiap siklus belajar,learn.py
+kb/gold/model_params.json,2510,2a5a85c71daf,model,"Koefisien model linear/logistik awal (FLEX K, padam; CFI-G menyala, padam sendiri)",build_model.py
+kb/gold/model_report.md,2436,7d74e457ef8e,model,Laporan validasi model awal (validasi acak 5 lipat),build_model.py
+kb/gold/paper_chunks.csv,23616694,8d90c38ecda6,data siap pakai,Teks paper dipotong per halaman (DOI) atau per ~3000 karakter (NTRS),build_kb.py
+kb/gold/pipeline_state.json,1150,e25564c3ce3c,status pipeline,Sidik jari masukan & keluaran tiap langkah pipeline (untuk menentukan langkah basi),learn.py
+kb/gold/publications.csv,68811,ae2e718fd199,data siap pakai,Publikasi yang didaftarkan NASA per investigasi,build_kb.py
+kb/gold/sim_data.json,148026,a19039312005,model,Data ringkas untuk simulator Freefall Lab,build_model.py
+kb/gold/tests.csv,1284390,aba44b192e3e,data siap pakai,Tabel uji berskema seragam (1 baris per uji atau per kampanye),build_kb.py
+kb/manifest/doi_list.csv,13234,43f78b5e91a6,manifest,Daftar DOI masukan untuk pengambil paper (dari publikasi PSI dan NTRS),build_kb.py / disusun tangan
+kb/manifest/ntrs_offtopic.csv,10451,ed2b46e9f039,manifest,Dokumen NTRS yang dikeluarkan karena tidak membahas pembakaran (filter kepadatan istilah),ntrs_relevance.py
+kb/manifest/ntrs_papers.csv,250309,0672207cbda0,manifest,"Dokumen NTRS yang diunduh, dengan tag eksperimen dan status PDF/teks",ntrs_fetch.py
+kb/manifest/paid_papers.csv,2166,73fde9cc936d,manifest,Paper berbayar yang masih harus diambil lewat akses institusi,papers_fetch.py
+kb/manifest/papers_doi.csv,214478,1b3942745941,manifest,"Metadata paper ber-DOI dari OpenAlex: judul, abstrak, status akses dan PDF","papers_fetch.py, integrate_*_papers.py"
+kb/manifest/psi_files.csv,4084603,823d6b1fbb90,manifest,Semua berkas PSI terdaftar + status unduh + sha256 + path lokal,psi_fetch.py
+kb/manifest/psi_publications.json,185433,2eb74d8726fd,manifest,Publikasi dan DOI per investigasi PSI,psi_fetch.py
+kb/manifest/zip_contents.csv,63538,cbe1cfb8618e,manifest,"Isi setiap zip Raw Data (jumlah anggota, ekstensi dominan, ukuran) tanpa mengekstrak",inventory_zips.py
+kb/raw/psi/catalog.json,1058644,a80dc13933c0,data mentah,"Katalog seluruh investigasi PSI (133 investigasi, semua bidang)",psi_fetch.py
+kb/raw/psi/investigations/PSI-10.json,3451273,01104a672a03,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-100.json,179355,dcaf7bf682c9,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-101.json,672613,f66b2e7c0e7f,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-102.json,163490,c0589a9bf14e,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-106.json,11507,64265546fcf9,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-107.json,387555,c6ec5150e9b3,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-115.json,81067,5b451a14bb6c,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-117.json,26329,8d1cb61e23f3,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-142.json,19590,4ff57ba2c337,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-159.json,3368923,a884dc1178a6,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-20.json,20204,85a0e03a8413,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-21.json,20869,9841b42d3702,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-22.json,24615,ec3908469cd8,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-23.json,9931701,0b0e63054d49,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-25.json,818415,28d5ff204bb0,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-26.json,230503,72d2725abd38,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-39.json,5139735,15c83b313405,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-47.json,210512,f1a0bf8a8404,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-60.json,7481,4e63adc55270,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-62.json,9783,07e941217ef0,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-68.json,36212,3a4e1c757e25,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-69.json,37614,4068edaf2146,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-98.json,161358,29cb3a7692b5,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+kb/raw/psi/investigations/PSI-99.json,11785,d697ceb01e6a,data mentah,"Metadata lengkap satu investigasi PSI: tujuan, hipotesis, daftar berkas, publikasi",psi_fetch.py
+logs/brain_serve.log,0,e3b0c44298fc,log,"Log jalannya pengunduhan, server, dan pipeline",berbagai skrip
+logs/brain_serve_test.log,0,e3b0c44298fc,log,"Log jalannya pengunduhan, server, dan pipeline",berbagai skrip
+logs/debug_serve.log,2791,580989f88220,log,"Log jalannya pengunduhan, server, dan pipeline",berbagai skrip
+logs/fetch_saffire3.log,1951,85c19b55e5c0,log,"Log jalannya pengunduhan, server, dan pipeline",berbagai skrip
+logs/fetch_stage1.log,5963,84963a8118c1,log,"Log jalannya pengunduhan, server, dan pipeline",berbagai skrip
+logs/fetch_stage2.log,1951,88551fa964ec,log,"Log jalannya pengunduhan, server, dan pipeline",berbagai skrip
+logs/learn_full.log,408,2e83ef813799,log,"Log jalannya pengunduhan, server, dan pipeline",berbagai skrip
+logs/live_de_tmp.txt,20,415ed8306e32,log,Keluaran uji sementara,berbagai skrip
+logs/ntrs_fetch.log,2984,f66e1bb76633,log,"Log jalannya pengunduhan, server, dan pipeline",berbagai skrip
+logs/saffire_run.log,2927,f7485988b078,log,"Log jalannya pengunduhan, server, dan pipeline",berbagai skrip
+README.md,2423,a43b2b43082d,dokumentasi,Pengantar workspace dan cara menjalankan pipeline,ditulis tangan
+scripts/assistant.py,44439,152e8d54325e,skrip,"Tahap E — asisten yang menjawab LEWAT ALAT, bukan dari ingatan model.",ditulis tangan
+scripts/brain.py,34715,c874b184cc11,skrip,"Lapis penalaran + API otak (docs/rencana_dashboard_cerdas.md, L2 & bagian 3).",ditulis tangan
+scripts/build_brain.py,28263,f756f8ddbba7,skrip,"Tahap A + B(v1) rencana dashboard: bangun ""otak"" — graf pengetahuan dengan tingkat kebenaran.",ditulis tangan
+scripts/build_kb.py,23655,4a4e6e71dc5b,skrip,Bangun lapisan bersih + siap pakai dari data mentah PSI/NTRS.,ditulis tangan
+scripts/build_model.py,15237,f41f6aae0ced,skrip,"Mesin fisika: kalibrasi model dari kb/gold/tests.csv, validasi silang, lalu bangun simulator.",ditulis tangan
+scripts/integrate_manual_papers.py,4926,e7c03b097254,skrip,Integrasikan PDF yang diunduh manual (paper_downloaded/) ke kb/raw/papers/pdf/,ditulis tangan
+scripts/integrate_new_papers.py,4552,fd10d2b622c4,skrip,Integrasikan batch kedua PDF manual (new_paper/ + isi zip-nya) ke kb/raw/papers/pdf/,ditulis tangan
+scripts/inventory_zips.py,2364,9b5f269ecf4b,skrip,Inventaris isi semua arsip zip PSI tanpa mengekstrak.,ditulis tangan
+scripts/lab_template.html,23441,2c7a2ccda59d,skrip,Templat HTML simulator Freefall Lab (diisi build_model.py),ditulis tangan
+scripts/learn.py,22147,5bc5477a2770,skrip,"Tahap D — lapis BELAJAR (docs/rencana_dashboard_cerdas.md, L3).",ditulis tangan
+scripts/ml_boundary.py,12327,95daca53bf82,skrip,Peta batas mudah-terbakar + rekomendasi uji ISS berikutnya (active learning).,ditulis tangan
+scripts/ml_labels.py,5537,41ee07eff483,skrip,Latih ulang model 'menyala' dari telemetri memakai label NASA + label MANUSIA (tahap D).,ditulis tangan
+scripts/ml_quantile.py,4206,18c438ac9ea2,skrip,"Waktu bakar CFI-G sebagai RENTANG (P10/P50/P90), bukan satu angka.",ditulis tangan
+scripts/ml_tabular.py,16265,0d4da3a3722b,skrip,"Model ML lanjutan untuk tabel uji, dibandingkan jujur dengan model logistik/linear yang ada.",ditulis tangan
+scripts/ml_telemetry_dl.py,16284,430850843261,skrip,Deep learning pada telemetri mentah ACME: ResNet-1D multi-tugas + pra-latih swa-awasan.,ditulis tangan
+scripts/ml_telemetry_prep.py,4688,0b5699ff2845,skrip,Praproses telemetri ACME mentah -> tensor berukuran tetap untuk deep learning.,ditulis tangan
+scripts/ntrs_fetch.py,8782,df89239b71d1,skrip,Kumpulkan paper/laporan dari NASA Technical Reports Server (NTRS).,ditulis tangan
+scripts/ntrs_relevance.py,2354,38da10e5d332,skrip,Saring dokumen NTRS yang di luar topik pembakaran sebelum diindeks.,ditulis tangan
+scripts/papers_fetch.py,8986,2f5bcbaee539,skrip,"Ambil metadata, abstrak, dan PDF akses-terbuka untuk daftar DOI.",ditulis tangan
+scripts/proof_review.py,9427,7af8ccb30225,skrip,Lembar periksa manusia untuk bukti video BASS.,ditulis tangan
+scripts/psi_fetch.py,11057,f82c48eaa4a8,skrip,Ambil metadata + file dari NASA PSI (Physical Sciences Informatics).,ditulis tangan
+scripts/saffire_spread.py,16727,1bb8da0738ca,skrip,"Laju rambat api skala besar dari citra Saffire (PSI-98 Saffire-I, PSI-100 Saffire-III).",ditulis tangan
+scripts/stats_uq.py,10654,226aa7164eee,skrip,Ketidakpastian jujur untuk angka-angka utama dashboard.,ditulis tangan
+scripts/symreg_flex.py,8304,1474cabe244a,skrip,Regresi simbolik jarang (SINDy-style STLS) untuk laju bakar droplet FLEX.,ditulis tangan
+scripts/telemetry_calibrate.py,5228,43aa4f941476,skrip,"Ubah sebagian kanal telemetri ACME dari VOLT ke satuan fisis, lalu validasi.",ditulis tangan
+scripts/telemetry_corridor.py,7267,3e6482464763,skrip,"Process corridor untuk telemetri ACME (Neuer, Machine Learning for Engineers, bab 6.5).",ditulis tangan
+scripts/telemetry_join.py,4460,7a4c52f0f903,skrip,"Gabungkan hasil telemetri ACME ke tabel uji, lalu ringkas nilai tambahnya.",ditulis tangan
+scripts/telemetry_mine.py,9023,400e6fd54dd9,skrip,"Tambang telemetri sensor ACME: 943 berkas `*_data.csv` (3,5 GB) jadi satu tabel.",ditulis tangan
+scripts/telemetry_validate.py,3070,12577567951d,skrip,Uji deteksi nyala berbasis suhu burner terhadap catatan NASA.,ditulis tangan
+scripts/test_claude_mode.py,7136,d10ffaa46a94,skrip,Uji jalur mode Claude TANPA biaya: SDK anthropic diarahkan ke API tiruan (MockTransport httpx2).,ditulis tangan
+scripts/test_learning.py,5785,484b566e855c,skrip,Uji ujung-ke-ujung tahap D (siklus belajar) TANPA mencemari log anotasi asli.,ditulis tangan
+scripts/video_analyze.py,15959,244198896b58,skrip,"Ekstrak jejak nyala api dari video eksperimen BASS / BASS-II (PSI-25, PSI-26).",ditulis tangan
+scripts/video_join.py,8986,0a9885875a09,skrip,Gabungkan episode pembakaran hasil video_analyze.py dengan kondisi uji NASA.,ditulis tangan
+scripts/workspace_inventory.py,26638,481a1c78061c,skrip,"Inventaris seluruh workspace: setiap berkas dipetakan ke kategori, isi, dan skrip pembuatnya.",ditulis tangan
+supplement/AISE24 05 Physics-Informed Neural Networks – Introduction.pdf,5661931,2ad8e4cdf3c6,rujukan bacaan,"Buku rujukan metode (visualisasi, ML ilmiah, statistik, sistem cerdas)",diberikan pengguna
+"supplement/Fundamentals of Statistical Inference Foundations of Data Analysis (Konstantin M. Zuev) (z-library.sk, 1lib.sk, z-lib.sk).pdf",15527771,bf3982a0eca5,rujukan bacaan,"Buku rujukan metode (visualisasi, ML ilmiah, statistik, sistem cerdas)",diberikan pengguna
+"supplement/Information Visualization. Perception for Design (Colin Ware) (z-library.sk, 1lib.sk, z-lib.sk).pdf",23451675,fdb519783037,rujukan bacaan,"Buku rujukan metode (visualisasi, ML ilmiah, statistik, sistem cerdas)",diberikan pengguna
+"supplement/Intelligent Systems From Theory to Applications Foundations, Search Algorithms, and Machine Learning (Oleksandr Kuznetsov) (z-library.sk, 1lib.sk, z-lib.sk).pdf",29102559,b3233c79f88b,rujukan bacaan,"Buku rujukan metode (visualisasi, ML ilmiah, statistik, sistem cerdas)",diberikan pengguna
+"supplement/Machine Learning for Engineers Introduction to Physics-Informed, Explainable Learning Methods for AI in Engineering… (Marcus J. Neuer) (z-library.sk, 1lib.sk, z-lib.sk).pdf",27522001,18ccf781a12c,rujukan bacaan,"Buku rujukan metode (visualisasi, ML ilmiah, statistik, sistem cerdas)",diberikan pengguna
+"supplement/Machine Learning in Modeling and Simulation (Bernhard Schmidt) (z-library.sk, 1lib.sk, z-lib.sk).pdf",13384999,ba4fd8af7853,rujukan bacaan,"Buku rujukan metode (visualisasi, ML ilmiah, statistik, sistem cerdas)",diberikan pengguna
+"supplement/Scientific Machine Learning Foundations, Algorithms, and Applications ( etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",11003040,576ee0970132,rujukan bacaan,"Buku rujukan metode (visualisasi, ML ilmiah, statistik, sistem cerdas)",diberikan pengguna
+"supplement/Scientific Machine Learning with Engineering Applications (Timon Rabczuk, Cosmin Anitescu etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",10524974,3a4dbdd3a10c,rujukan bacaan,"Buku rujukan metode (visualisasi, ML ilmiah, statistik, sistem cerdas)",diberikan pengguna
+"supplement/The Big Book Of Dashboards  Visualizing Your Data Using Real-World Business Scenarios (Steve Wexler) (z-library.sk, 1lib.sk, z-lib.sk).pdf",22506926,9842af12508d,rujukan bacaan,"Buku rujukan metode (visualisasi, ML ilmiah, statistik, sistem cerdas)",diberikan pengguna

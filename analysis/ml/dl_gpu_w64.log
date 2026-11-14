@@ -1,0 +1,29 @@
+perangkat cuda; epochs 80, benih 5, lebar 64, pra-latih 100
+berlabel 320 uji, 23 hari; tanpa label (pra-latih/prediksi) 604
+  aturan       {'ign': {'acc': 0.9375, 'auc': 0.9707}}
+  fitur+GB     {"ign": {"auc": 0.9895, "brier": 0.0379, "acc": 0.9563}, "selfext": {"auc": 0.9402, "brier": 0.0815, "acc": 0.9046}, "burn_mae_s": 9.79, "burn_medae_s": 2.54}
+pra-latih encoder pada 604 rekaman tanpa label ...
+    pra-latih epoch 10: mse tertutup 0.1025
+    pra-latih epoch 20: mse tertutup 0.0641
+    pra-latih epoch 30: mse tertutup 0.0675
+    pra-latih epoch 40: mse tertutup 0.0506
+    pra-latih epoch 50: mse tertutup 0.0497
+    pra-latih epoch 60: mse tertutup 0.0478
+    pra-latih epoch 70: mse tertutup 0.0422
+    pra-latih epoch 80: mse tertutup 0.0439
+    pra-latih epoch 90: mse tertutup 0.0375
+    pra-latih epoch 100: mse tertutup 0.0342
+  CNN lipatan 1/5 selesai (53 s)
+  CNN lipatan 2/5 selesai (81 s)
+  CNN lipatan 3/5 selesai (106 s)
+  CNN lipatan 4/5 selesai (132 s)
+  CNN lipatan 5/5 selesai (161 s)
+  CNN          {"ign": {"auc": 0.9904, "brier": 0.028, "acc": 0.9625}, "selfext": {"auc": 0.9785, "brier": 0.0507, "acc": 0.9389}, "burn_mae_s": 12.45, "burn_medae_s": 4.36}
+  CNN+pra lipatan 1/5 selesai (187 s)
+  CNN+pra lipatan 2/5 selesai (215 s)
+  CNN+pra lipatan 3/5 selesai (240 s)
+  CNN+pra lipatan 4/5 selesai (266 s)
+  CNN+pra lipatan 5/5 selesai (294 s)
+  CNN+pra      {"ign": {"auc": 0.9896, "brier": 0.0338, "acc": 0.95}, "selfext": {"auc": 0.9697, "brier": 0.0537, "acc": 0.9313}, "burn_mae_s": 13.85, "burn_medae_s": 4.18}
+{"PSI-10": {"n": 317, "cnn_menyala": 311, "aturan_menyala": 313, "setuju": 0.9937, "ragu_sd>0.2": 3}, "PSI-23": {"n": 287, "cnn_menyala": 272, "aturan_menyala": 271, "setuju": 0.9686, "ragu_sd>0.2": 13}}
+selesai 295 s

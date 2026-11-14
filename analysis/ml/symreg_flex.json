@@ -1,0 +1,127 @@
+{
+ "n": 257,
+ "days": 80,
+ "library": [
+  "1",
+  "heptana",
+  "O2",
+  "O2^2",
+  "sqrt(O2)",
+  "ln(1+2·O2)",
+  "ln(1+5·O2)",
+  "ln(1+10·O2)",
+  "ln(1+20·O2)",
+  "He",
+  "CO2",
+  "ln(p/p0)",
+  "heptana·O2",
+  "He·O2",
+  "CO2·O2",
+  "ln(p/p0)·O2",
+  "heptana·He"
+ ],
+ "formula": "K ≈ 0.111 + 1.8·O2 + 0.611·He",
+ "terms": [
+  [
+   "1",
+   0.11100196344346958
+  ],
+  [
+   "O2",
+   1.7982778693447905
+  ],
+  [
+   "He",
+   0.610905476250549
+  ]
+ ],
+ "r2_fit": 0.551,
+ "cv_rmse_per_hari": 0.0899,
+ "best_cv_rmse": 0.0823,
+ "baseline_mean_rmse": 0.1386,
+ "linear_raw_rmse": 0.0832,
+ "stls_full_library_rmse": 0.0907,
+ "stls_max_abs_coef": 1023799.7150822694,
+ "o2_shape_rank": [
+  [
+   "O2",
+   0.11325592940075109
+  ],
+  [
+   "ln(1+2·O2)",
+   0.11327018259545482
+  ],
+  [
+   "sqrt(O2)",
+   0.11334295945150821
+  ],
+  [
+   "ln(1+5·O2)",
+   0.11336155083006857
+  ],
+  [
+   "ln(1+10·O2)",
+   0.11347631623174008
+  ],
+  [
+   "ln(1+20·O2)",
+   0.11359532540553005
+  ],
+  [
+   "O2^2",
+   0.11420471721570388
+  ]
+ ],
+ "pareto": [
+  {
+   "terms": 0,
+   "cv_rmse": 0.1386,
+   "formula_terms": []
+  },
+  {
+   "terms": 1,
+   "cv_rmse": 0.1133,
+   "formula_terms": [
+    "O2"
+   ]
+  },
+  {
+   "terms": 2,
+   "cv_rmse": 0.0899,
+   "formula_terms": [
+    "O2",
+    "He"
+   ]
+  },
+  {
+   "terms": 3,
+   "cv_rmse": 0.0865,
+   "formula_terms": [
+    "ln(1+2·O2)",
+    "He",
+    "CO2"
+   ]
+  },
+  {
+   "terms": 4,
+   "cv_rmse": 0.0843,
+   "formula_terms": [
+    "O2",
+    "He",
+    "CO2",
+    "heptana·O2"
+   ]
+  },
+  {
+   "terms": 5,
+   "cv_rmse": 0.0823,
+   "formula_terms": [
+    "O2",
+    "He",
+    "CO2",
+    "heptana·O2",
+    "ln(p/p0)·O2"
+   ]
+  }
+ ]
+}

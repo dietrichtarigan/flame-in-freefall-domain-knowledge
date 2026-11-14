@@ -1,0 +1,22 @@
+berlabel 320 uji, 23 hari; tanpa label (pra-latih/prediksi) 604
+  aturan       {'ign': {'acc': 0.9375, 'auc': 0.9707}}
+  fitur+GB     {"ign": {"auc": 0.9922, "brier": 0.0291, "acc": 0.9688}, "selfext": {"auc": 0.9295, "brier": 0.0818, "acc": 0.8969}, "burn_mae_s": 10.01, "burn_medae_s": 2.47}
+pra-latih encoder pada 604 rekaman tanpa label ...
+    pra-latih epoch 10: mse tertutup 0.0953
+    pra-latih epoch 20: mse tertutup 0.0646
+    pra-latih epoch 30: mse tertutup 0.0656
+    pra-latih epoch 40: mse tertutup 0.0496
+  CNN lipatan 1/5 selesai (281 s)
+  CNN lipatan 2/5 selesai (401 s)
+  CNN lipatan 3/5 selesai (523 s)
+  CNN lipatan 4/5 selesai (642 s)
+  CNN lipatan 5/5 selesai (763 s)
+  CNN          {"ign": {"auc": 0.9854, "brier": 0.0242, "acc": 0.9719}, "selfext": {"auc": 0.9876, "brier": 0.0467, "acc": 0.9351}, "burn_mae_s": 13.41, "burn_medae_s": 4.58}
+  CNN+pra lipatan 1/5 selesai (877 s)
+  CNN+pra lipatan 2/5 selesai (1037 s)
+  CNN+pra lipatan 3/5 selesai (1153 s)
+  CNN+pra lipatan 4/5 selesai (1278 s)
+  CNN+pra lipatan 5/5 selesai (1443 s)
+  CNN+pra      {"ign": {"auc": 0.9889, "brier": 0.0308, "acc": 0.9625}, "selfext": {"auc": 0.9727, "brier": 0.0647, "acc": 0.916}, "burn_mae_s": 15.22, "burn_medae_s": 4.74}
+{"PSI-10": {"n": 317, "cnn_menyala": 312, "aturan_menyala": 313, "setuju": 0.9968, "ragu_sd>0.2": 3}, "PSI-23": {"n": 287, "cnn_menyala": 270, "aturan_menyala": 271, "setuju": 0.9756, "ragu_sd>0.2": 11}}
+selesai 1450 s

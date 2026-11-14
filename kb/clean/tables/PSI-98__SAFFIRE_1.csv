@@ -1,0 +1,5 @@
+_accession,_table,_source_row,_row_kind,Sample Number,Material,Sample Thickness (cm),Sample Length (cm),Sample Width (cm),Air Flow (cm/s),Percent O2,Ignition Power (W),Ignition Time (s),Burn Time (s),Flow Direction,Camera 1,Camera 2
+PSI-98,SAFFIRE-1,1,test,S1,SIBAL Fabric,0.37,40.6,94,20,21.5 - 21.7,182,8,420,Concurrent,S1C1,S1C2
+PSI-98,SAFFIRE-1,2,test,S2,SIBAL Fabric,0.37,40.6,94,20,~ 21.5,182,8,70,Opposed,S2C1,S2C2
+PSI-98,SAFFIRE-1,3,note,F1C1/F1C2,Pre-test flow visulation data for sample 1,,,,,,,,,,,
+PSI-98,SAFFIRE-1,4,note,F2C1/F2C2,Pre-test flow visulation data for sample 2,,,,,,,,,,,

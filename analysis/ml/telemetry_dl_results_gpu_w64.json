@@ -1,0 +1,97 @@
+{
+ "aturan termokopel": {
+  "ign": {
+   "acc": 0.9375,
+   "auc": 0.9707
+  }
+ },
+ "median saja": {
+  "burn_mae_s": 35.1
+ },
+ "fitur+GB": {
+  "ign": {
+   "auc": 0.9895,
+   "brier": 0.0379,
+   "acc": 0.9563
+  },
+  "selfext": {
+   "auc": 0.9402,
+   "brier": 0.0815,
+   "acc": 0.9046
+  },
+  "burn_mae_s": 9.79,
+  "burn_medae_s": 2.54
+ },
+ "CNN": {
+  "ign": {
+   "auc": 0.9904,
+   "brier": 0.028,
+   "acc": 0.9625
+  },
+  "selfext": {
+   "auc": 0.9785,
+   "brier": 0.0507,
+   "acc": 0.9389
+  },
+  "burn_mae_s": 12.45,
+  "burn_medae_s": 4.36,
+  "oklusi_kanal_auc": {
+   "PTA3": 0.0079,
+   "MFCA2BypassFlow": 0.0045,
+   "TCBurner": 0.0045,
+   "PTA2": 0.0025,
+   "TCA": 0.0004,
+   "PMT1": 0.0002,
+   "TC200A": 0.0002,
+   "TC200B": -0.0001
+  }
+ },
+ "CNN+pra": {
+  "ign": {
+   "auc": 0.9896,
+   "brier": 0.0338,
+   "acc": 0.95
+  },
+  "selfext": {
+   "auc": 0.9697,
+   "brier": 0.0537,
+   "acc": 0.9313
+  },
+  "burn_mae_s": 13.85,
+  "burn_medae_s": 4.18,
+  "oklusi_kanal_auc": {
+   "PTA2": 0.0064,
+   "PTA3": 0.0064,
+   "MFCA2BypassFlow": 0.0052,
+   "TCBurner": 0.0042,
+   "MFCA1StaticMixerFlow": 0.0034,
+   "TCA": 0.0028,
+   "TCB": 0.0019,
+   "PMT1": 0.0018
+  }
+ },
+ "transfer": {
+  "PSI-10": {
+   "n": 317,
+   "cnn_menyala": 311,
+   "aturan_menyala": 313,
+   "setuju": 0.9937,
+   "ragu_sd>0.2": 3
+  },
+  "PSI-23": {
+   "n": 287,
+   "cnn_menyala": 272,
+   "aturan_menyala": 271,
+   "setuju": 0.9686,
+   "ragu_sd>0.2": 13
+  }
+ },
+ "best": "CNN",
+ "config": {
+  "device": "cuda",
+  "epochs": 80,
+  "seeds": 5,
+  "width": 64,
+  "pre_epochs": 100
+ }
+}

@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flame in Freefall</title>
+<style>
+/* Tahap F (desain). Warna dari palet acuan skill dataviz; pasangan menyala/tidak divalidasi
+   (validate_palette.js: light ΔE CVD 24,7 · dark 26,8 — lolos semua). Status = ikon + label, tak pernah warna saja. */
+:root{
+  color-scheme:light;
+  --page:#f9f9f7; --surface:#fcfcfb; --surface-2:#f3f2ef;
+  --ink:#0b0b0b; --ink-2:#52514e; --mute:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --ring:rgba(11,11,11,.10);
+  --yes:#2a78d6; --no:#eb6834; --unk:#898781;           /* kategori slot 1-2 */
+  --focus:#2a78d6; --sel:#6250d6;
+  --critical:#d03b3b; --serious:#ec835a; --warning:#fab219; --good:#0ca30c; --info:#52514e;
+  --seq-1:#cde2fb; --seq-4:#3987e5;
+  --radius:8px; --gap:12px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --page:#0d0d0d; --surface:#1a1a19; --surface-2:#232321;
+  --ink:#f0efec; --ink-2:#c3c2b7; --mute:#898781;
+  --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10);
+  --yes:#3987e5; --no:#d95926; --focus:#3987e5; --sel:#9085e9; --info:#c3c2b7;
+  --seq-1:#184f95; --seq-4:#86b6ef;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#0d0d0d; --surface:#1a1a19; --surface-2:#232321;
+  --ink:#f0efec; --ink-2:#c3c2b7; --mute:#898781;
+  --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10);
+  --yes:#3987e5; --no:#d95926; --focus:#3987e5; --sel:#9085e9; --info:#c3c2b7;
+  --seq-1:#184f95; --seq-4:#86b6ef;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:13px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+button,select,input,textarea{font:inherit;color:inherit;background:var(--surface);border:1px solid var(--axis);border-radius:6px;padding:4px 8px}
+button{cursor:pointer}button:hover{background:var(--surface-2)}
+button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
+a{color:var(--focus)}
+
+/* --- kepala & ikhtisar --- */
+header{display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;padding:14px 20px 4px}
+header h1{font-size:18px;margin:0;letter-spacing:-.01em}
+header .sub{color:var(--ink-2)}
+header .tools{margin-left:auto;display:flex;gap:6px;align-items:center}
+#loading{color:var(--mute);font-size:12px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--gap);padding:8px 20px}
+.tile{background:var(--surface);border:1px solid var(--ring);border-radius:var(--radius);padding:10px 12px}
+.tile .k{font-size:11px;color:var(--ink-2);text-transform:uppercase;letter-spacing:.04em}
+.tile .v{font-size:24px;font-weight:600;line-height:1.2;margin-top:2px}
+.tile .d{font-size:11px;color:var(--mute)}
+
+/* --- tata letak --- */
+main{display:grid;gap:var(--gap);padding:4px 20px 24px;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr) minmax(0,1.05fr);align-items:start}
+@media (max-width:1180px){main{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){main{grid-template-columns:1fr}.tiles{grid-template-columns:1fr 1fr}}
+.col{display:flex;flex-direction:column;gap:var(--gap);min-width:0}
+section{background:var(--surface);border:1px solid var(--ring);border-radius:var(--radius);padding:12px;min-width:0}
+section h2{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2);margin:0 0 8px;display:flex;gap:8px;align-items:baseline}
+section h2 .hint{font-weight:400;text-transform:none;letter-spacing:0;color:var(--mute)}
+.wide{grid-column:1/-1}
+.scroll{overflow:auto}
+.hint,.tier{font-size:11px;color:var(--mute)}
+
+/* --- tabel uji --- */
+table{border-collapse:collapse;width:100%}
+th{font-size:11px;font-weight:600;color:var(--ink-2);text-align:left;padding:4px 6px;border-bottom:1px solid var(--axis);position:sticky;top:0;background:var(--surface)}
+td{padding:3px 6px;border-bottom:1px solid var(--grid);white-space:nowrap;font-variant-numeric:tabular-nums}
+tr.row{cursor:pointer}tr.row:hover td{background:var(--surface-2)}
+tr.row.sel td{box-shadow:inset 3px 0 0 var(--sel)}
+tr.row.focus td{background:color-mix(in srgb,var(--focus) 12%,transparent)}
+.dim{opacity:.38}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.bar{display:inline-block;height:6px;background:var(--seq-4);vertical-align:middle;border-radius:3px}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+
+/* --- lencana tingkat kebenaran: teks yang membawa makna, warna hanya penegas --- */
+.badge{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.03em;padding:0 5px;border-radius:4px;border:1px solid var(--axis);color:var(--ink-2);vertical-align:1px;white-space:nowrap}
+.b-nasa_table{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.b-nasa_calibrated{border-color:var(--ink);color:var(--ink)}
+.b-human_verified{border-color:var(--good);color:var(--good)}
+.b-derived_auto{border-style:dashed}
+.b-model_prediction{border-style:dotted}
+.b-paper_claim{font-style:italic}
+.chip{display:inline-block;font-size:10px;padding:0 5px;border-radius:9px;background:var(--surface-2);color:var(--ink-2);margin:1px 2px 1px 0}
+
+/* --- status: ikon + label --- */
+.st{display:inline-flex;gap:4px;align-items:center;font-weight:600}
+.st i{font-style:normal;display:inline-block;width:16px;height:16px;line-height:16px;text-align:center;border-radius:4px;color:#fff;font-size:11px}
+.st-kritis i{background:var(--critical)}.st-perhatian i{background:var(--serious)}.st-info i{background:var(--mute)}
+.alert{cursor:pointer;padding:5px 0;border-bottom:1px solid var(--grid);display:flex;gap:8px;align-items:baseline}
+.alert:hover{background:var(--surface-2)}
+
+/* --- peta kondisi --- */
+.chartwrap,#list{position:relative}
+svg text{fill:var(--mute);font-size:10px}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--ink-2);margin-top:4px}
+.pt{cursor:pointer}
+#tip{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--axis);border-radius:6px;padding:6px 8px;font-size:11px;box-shadow:0 2px 8px rgba(0,0,0,.12);display:none;white-space:nowrap;z-index:2}
+
+/* --- what-if --- */
+#whatif label{display:flex;gap:8px;align-items:center;margin:4px 0}#whatif input[type=range]{flex:1}
+.result{margin-top:8px;padding:10px;border-radius:6px;background:var(--surface-2)}
+.result .big{font-size:22px;font-weight:600}
+
+/* --- dosir --- */
+.kv{display:grid;grid-template-columns:minmax(120px,auto) 1fr;gap:4px 10px;align-items:baseline}
+.kv .q{color:var(--ink-2)}
+.vbtn button,.ign{padding:0 6px;font-size:11px;margin-left:2px}
+.verdict{display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding:8px;border-radius:6px;background:var(--surface-2);margin:8px 0}
+.contra{border-left:3px solid var(--critical);padding:4px 8px;margin:6px 0;background:color-mix(in srgb,var(--critical) 8%,transparent)}
+.hyp{margin-bottom:8px}.hyp b{font-weight:600}
+#chat .turn{margin-bottom:12px}.q-me{font-weight:600}
+#chat .ans{white-space:pre-wrap;margin:4px 0}
+#trail li{font-family:ui-monospace,Consolas,monospace;font-size:11px;color:var(--ink-2)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Flame in Freefall</h1>
+  <span class="sub">data pembakaran mikrogravitasi NASA (ISS) · setiap angka bertingkat kebenaran</span>
+  <div class="tools">
+    <span id="loading"></span>
+    <button id="undo" title="batalkan langkah terakhir">↶ undo</button>
+    <button id="share" title="salin tautan yang memulihkan tampilan ini">salin tautan</button>
+  </div>
+</header>
+
+<div class="tiles" role="region" aria-label="ikhtisar">
+  <div class="tile"><div class="k">uji terlihat</div><div class="v" id="tTests">–</div><div class="d" id="status">memuat…</div></div>
+  <div class="tile"><div class="k">peringatan</div><div class="v" id="alertCounts">–</div><div class="d">kritis · perhatian · info</div></div>
+  <div class="tile"><div class="k">diverifikasi manusia</div><div class="v" id="tVerified">–</div><div class="d" id="tQueue">antrean –</div></div>
+  <div class="tile"><div class="k">asisten</div><div class="v" id="tAssist" style="font-size:16px">–</div><div class="d" id="asMode"></div></div>
+</div>
+
+<main>
+  <!-- kolom 1: uji -->
+  <div class="col">
+    <section>
+      <h2>Uji <span class="hint">klik = fokus · shift+klik = pilih (brushing)</span></h2>
+      <div class="filters">
+        <select id="fAcc" aria-label="investigasi"><option value="">semua investigasi</option></select>
+        <select id="fIgn" aria-label="menyala"><option value="">menyala?</option><option value="1">ya</option><option value="0">tidak</option></select>
+        <select id="fFlag" aria-label="tanda"><option value="">semua tanda/aturan</option></select>
+        <input id="fQ" placeholder="cari kode/bahan bakar" size="14" aria-label="cari">
+        <button id="fClear">reset</button>
+      </div>
+      <div id="list" class="scroll" style="max-height:560px"></div>
+    </section>
+  </div>
+
+  <!-- kolom 2: peta kondisi + what-if -->
+  <div class="col">
+    <section>
+      <h2>Ruang kondisi <span class="hint">O₂ × tekanan; terang = relevan dengan fokus</span></h2>
+      <div class="chartwrap"><svg id="scatter" viewBox="0 0 380 280" width="100%" role="img" aria-label="sebaran uji menurut O2 dan tekanan"></svg><div id="tip"></div></div>
+      <div class="legend">
+        <span><span class="dot" style="background:var(--yes)"></span>menyala</span>
+        <span><span class="dot" style="background:var(--no)"></span>tidak menyala</span>
+        <span><span class="dot" style="background:var(--unk)"></span>belum diketahui</span>
+        <span><span class="dot" style="background:transparent;box-shadow:0 0 0 2px var(--sel)"></span>terpilih</span>
+      </div>
+    </section>
+    <section>
+      <h2>What-if <span class="hint">prediksi model; menolak di luar rentang uji</span></h2>
+      <div id="whatif"></div>
+      <div id="whatifOut"></div>
+    </section>
+    <section>
+      <h2>Antrean verifikasi <span class="hint">ketidakpastian × dampak</span></h2>
+      <div id="queue" class="scroll" style="max-height:260px"></div>
+      <h2 style="margin-top:10px">Siklus belajar</h2>
+      <div id="learning" class="hint"></div>
+      <div id="history" class="scroll" style="max-height:120px"></div>
+    </section>
+  </div>
+
+  <!-- kolom 3: fokus -->
+  <div class="col">
+    <section>
+      <h2>Dosir fokus</h2>
+      <div id="dossier" class="scroll" style="max-height:520px"></div>
+    </section>
+    <section>
+      <h2>Kenapa? <span class="hint">hipotesis dari aturan & data, bukan model bahasa</span></h2>
+      <div id="explain" class="scroll" style="max-height:320px"></div>
+    </section>
+    <section>
+      <h2>Relevan dengan fokus</h2>
+      <div id="relevance" class="scroll" style="max-height:320px"></div>
+    </section>
+  </div>
+
+  <section class="wide" style="grid-column:1/3">
+    <h2>Asisten <span class="hint">menjawab lewat alat; setiap angka diperiksa sumbernya</span></h2>
+    <div id="chat" class="scroll" style="max-height:380px"></div>
+    <form id="askForm" style="display:flex;gap:6px;margin-top:8px">
+      <input id="askQ" style="flex:1" placeholder="kenapa 21106G8 dicurigai? · bagaimana jika O2 0.3 pada butana? · uji berikutnya?" aria-label="pertanyaan">
+      <select id="askMode" aria-label="mode"><option value="auto">auto</option><option value="offline">luring</option><option value="claude">claude</option></select>
+      <button>tanya</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Catatan bersama</h2>
+    <div id="notes" class="scroll" style="max-height:120px"></div>
+    <textarea id="noteText" rows="2" style="width:100%;margin-top:6px" placeholder="catatan untuk uji yang difokuskan"></textarea>
+    <button id="noteSave">simpan catatan</button>
+    <h2 style="margin-top:12px">Jejak <span class="hint">manusia, tautan, asisten</span></h2>
+    <ol id="trail" class="scroll" style="max-height:160px;padding-left:18px;margin:0"></ol>
+  </section>
+
+  <section class="wide">
+    <h2>Semua peringatan <span class="hint">klik untuk fokus</span></h2>
+    <div id="alerts" class="scroll" style="max-height:260px"></div>
+  </section>
+</main>
+
+<script type="module">
+import { createNerve } from "./nerve.js";
+const theme = new URLSearchParams(location.search).get("theme");   // ?theme=dark|light memaksa tema
+if (theme) document.documentElement.dataset.theme = theme;
+// disajikan oleh server otak (port berapa pun) -> asal yang sama; dibuka sebagai berkas -> server bawaan
+const api = location.protocol.startsWith("http") ? "" : "http://127.0.0.1:8765";
+const N = createNerve({ api });
+window.nerve = N;                       // pintu yang sama untuk asisten / konsol
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const short = (id) => (id || "").replace(/^test:/, "");
+const TIER = { nasa_table: "NASA", nasa_calibrated: "KALIBRASI", derived_auto: "OTOMATIS", human_verified: "MANUSIA",
+               paper_claim: "PAPER", model_prediction: "MODEL" };
+const badge = (t) => t ? `<span class="badge b-${t}" title="${esc(t)}">${TIER[t] || esc(t)}</span>` : "";
+const STATUS = { kritis: "!", perhatian: "▲", info: "i" };
+const st = (lv, txt = lv) => `<span class="st st-${lv}"><i aria-hidden="true">${STATUS[lv]}</i>${esc(txt)}</span>`;
+const igDot = (v) => `<span class="dot" style="background:var(--${v === true ? "yes" : v === false ? "no" : "unk"})"></span>`;
+
+// ---------------- daftar uji
+function renderList() {
+  const rows = N.state.visible.slice(0, 600).map((t) => {
+    const rel = N.relevanceOf(t.id), w = rel === Infinity ? 48 : Math.min(48, rel * 20);
+    const cls = ["row", N.isSelected(t.id) ? "sel" : "", N.state.focus === t.id ? "focus" : "",
+                 N.state.focus && !rel ? "dim" : ""].join(" ");
+    const ig = t.ignited === true ? "ya" : t.ignited === false ? "tidak" : "?";
+    return `<tr class="${cls}" data-id="${esc(t.id)}"><td>${esc(t.accession)}</td><td><b>${esc(t.label)}</b></td>
+      <td>${igDot(t.ignited)}${ig} ${badge(t.ignited_tier)}</td>
+      <td>${t.o2 != null ? t.o2.toFixed(3) : ""}</td><td>${t.p_kpa != null ? t.p_kpa.toFixed(0) : ""}</td>
+      <td>${(t.rules || []).map((r) => `<span class="chip" title="${esc(r)}">${esc(r.split("_")[0])}</span>`).join("")}</td>
+      <td>${N.state.focus ? `<span class="bar" style="width:${w}px"></span>` : ""}</td></tr>`;
+  }).join("");
+  $("list").innerHTML = `<table><thead><tr><th>inv</th><th>uji</th><th>menyala</th><th>O₂</th><th>kPa</th><th>aturan</th><th title="relevansi terhadap fokus">rel.</th></tr></thead><tbody>${rows}</tbody></table>`
+    + (N.state.visible.length > 600 ? `<div class="hint" style="padding:6px">${N.state.visible.length - 600} uji lagi; persempit filter</div>` : "");
+  // gulir daftar (bukan halaman) ke baris yang difokuskan
+  const fr = $("list").querySelector("tr.focus");
+  if (fr) { const box = $("list"); if (fr.offsetTop < box.scrollTop || fr.offsetTop > box.scrollTop + box.clientHeight - 40) box.scrollTop = fr.offsetTop - 60; }
+}
+$("list").addEventListener("click", (e) => {
+  const tr = e.target.closest("tr.row"); if (!tr) return;
+  if (e.shiftKey) N.dispatch("select", { ids: [tr.dataset.id], mode: "toggle" });
+  else N.dispatch("focus", tr.dataset.id);
+});
+
+// ---------------- peta kondisi
+let ptIndex = new Map();
+function renderScatter() {
+  const pts = N.state.visible.filter((t) => t.o2 != null && t.p_kpa);
+  const W = 380, H = 280, ml = 40, mr = 12, mt = 12, mb = 34;
+  const xs = pts.map((t) => t.o2), ys = pts.map((t) => Math.log10(t.p_kpa));
+  const x0 = Math.min(0.1, ...xs), x1 = Math.max(0.45, ...xs), y0 = Math.min(Math.log10(40), ...ys), y1 = Math.max(Math.log10(350), ...ys);
+  const X = (v) => ml + (v - x0) / (x1 - x0 || 1) * (W - ml - mr), Y = (v) => H - mb - (v - y0) / (y1 - y0 || 1) * (H - mt - mb);
+  let s = "";
+  for (let v = Math.ceil(x0 * 10) / 10; v <= x1 + 1e-9; v += 0.1) {
+    s += `<line x1="${X(v)}" x2="${X(v)}" y1="${mt}" y2="${H - mb}" stroke="var(--grid)"/><text x="${X(v)}" y="${H - mb + 13}" text-anchor="middle">${v.toFixed(1)}</text>`;
+  }
+  for (const kp of [50, 100, 200, 300]) {
+    const y = Y(Math.log10(kp)); if (y < mt || y > H - mb) continue;
+    s += `<line x1="${ml}" x2="${W - mr}" y1="${y}" y2="${y}" stroke="var(--grid)"/><text x="${ml - 5}" y="${y + 3}" text-anchor="end">${kp}</text>`;
+  }
+  s += `<line x1="${ml}" x2="${W - mr}" y1="${H - mb}" y2="${H - mb}" stroke="var(--axis)"/>
+        <text x="${(ml + W - mr) / 2}" y="${H - 4}" text-anchor="middle">O₂ (fraksi mol)</text>
+        <text x="10" y="${(mt + H - mb) / 2}" text-anchor="middle" transform="rotate(-90 10 ${(mt + H - mb) / 2})">tekanan (kPa, log)</text>`;
+  ptIndex = new Map();
+  // gambar yang tidak relevan dulu, supaya yang relevan & fokus ada di atas
+  const order = [...pts].sort((a, b) => (N.relevanceOf(a.id) > 0) - (N.relevanceOf(b.id) > 0));
+  for (const t of order) {
+    const rel = N.relevanceOf(t.id), on = !N.state.focus || rel > 0, f = N.state.focus === t.id;
+    const col = t.ignited === true ? "var(--yes)" : t.ignited === false ? "var(--no)" : "var(--unk)";
+    const cx = X(t.o2), cy = Y(Math.log10(t.p_kpa));
+    ptIndex.set(t.id, t);
+    s += `<circle class="pt" data-id="${esc(t.id)}" cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${f ? 7 : 4}" fill="${col}"
+      opacity="${on ? 1 : 0.15}" stroke="${N.isSelected(t.id) ? "var(--sel)" : f ? "var(--ink)" : "var(--surface)"}" stroke-width="2"/>`;
+  }
+  $("scatter").innerHTML = s;
+}
+$("scatter").addEventListener("click", (e) => {
+  const c = e.target.closest(".pt"); if (!c) return;
+  if (e.shiftKey) N.dispatch("select", { ids: [c.dataset.id], mode: "toggle" }); else N.dispatch("focus", c.dataset.id);
+});
+$("scatter").addEventListener("mousemove", (e) => {
+  const c = e.target.closest(".pt"), tip = $("tip");
+  if (!c) { tip.style.display = "none"; return; }
+  const t = ptIndex.get(c.dataset.id); const box = $("scatter").parentElement.getBoundingClientRect();
+  tip.innerHTML = `<b>${esc(t.label)}</b> · ${esc(t.accession)}<br>O₂ ${t.o2.toFixed(3)} · ${t.p_kpa.toFixed(0)} kPa<br>${igDot(t.ignited)}${t.ignited === true ? "menyala" : t.ignited === false ? "tidak menyala" : "belum diketahui"} ${badge(t.ignited_tier)}`;
+  tip.style.display = "block"; tip.style.left = (e.clientX - box.left + 12) + "px"; tip.style.top = (e.clientY - box.top + 12) + "px";
+});
+$("scatter").addEventListener("mouseleave", () => { $("tip").style.display = "none"; });
+
+// ---------------- what-if
+function renderWhatifControls() {
+  const w = N.state.whatif;
+  const sel = (k, opts) => `<select data-k="${k}" aria-label="${k}">${opts.map((o) => `<option ${w[k] === o ? "selected" : ""}>${o}</option>`).join("")}</select>`;
+  const rng = (k, lab, a, b, st_) => `<label><span style="min-width:96px">${lab}</span><input type="range" data-k="${k}" min="${a}" max="${b}" step="${st_}" value="${w[k] ?? a}"><b style="min-width:44px;text-align:right">${w[k] ?? ""}</b></label>`;
+  $("whatif").innerHTML = w.exp === "cfig"
+    ? `<div class="filters">${sel("exp", ["cfig", "flex"])} ${sel("config", ["normal", "inverse"])} ${sel("fuel", ["ethane", "propane", "butane"])}</div>${rng("o2", "O₂", 0.1, 0.9, 0.005)}${rng("x_fuel", "fraksi bahan bakar", 0, 1, 0.01)}`
+    : `<div class="filters">${sel("exp", ["cfig", "flex"])} ${sel("fuel", ["heptane", "methanol"])}</div>${rng("o2", "O₂", 0.1, 0.4, 0.005)}${rng("pressure_kpa", "tekanan kPa", 50, 300, 1)}${rng("he", "helium", 0, 0.6, 0.01)}`;
+}
+$("whatif").addEventListener("input", (e) => {
+  const k = e.target.dataset.k; if (!k) return;
+  let v = e.target.value; if (e.target.type === "range") v = +v;
+  if (k === "exp") N.dispatch("whatif", v === "flex" ? { exp: "flex", fuel: "heptane", o2: 0.2, pressure_kpa: 101, he: 0 } : { exp: "cfig", config: "normal", fuel: "butane", o2: 0.25, x_fuel: 0.3 });
+  else N.dispatch("whatif", { [k]: v });
+});
+function renderWhatifOut(r) {
+  if (!r) return;
+  const p = r.exp === "cfig" ? r.p_ignite : r.p_extinction;
+  const lab = r.exp === "cfig" ? "P(menyala)" : "P(padam sebelum habis)";
+  $("whatifOut").innerHTML = r.valid
+    ? `<div class="result"><div class="hint">${lab} ${badge("model_prediction")}</div><div class="big">${p}</div>
+         <div class="hint">σ laten ${r.sigma_latent} · ${esc(r.model)} · AUC validasi per hari ${r.metrics?.gp?.auc}</div>
+         ${r.K_mm2_s ? `<div style="margin-top:6px">laju bakar K ≈ <b>${r.K_mm2_s.value}</b> mm²/s <span class="hint">${esc(r.K_mm2_s.formula)}</span></div>` : ""}
+         <div class="hint" style="margin-top:6px">ditahan tetap: ${Object.entries(r.fixed || {}).map(([k, v]) => `${esc(k)} ${esc(v)}`).join(" · ")}</div>
+         <div class="hint">uji nyata terdekat: ${(r.nearest_tests || []).slice(0, 4).map((t) => `O₂ ${(+t.o2).toFixed(3)} → ${"ignited" in t ? (t.ignited ? "menyala" : "tidak") : (t.extinction ? "padam" : "habis")}`).join(" · ")}</div></div>`
+    : `<div class="result">${st("perhatian", "model tidak menjawab")}<div style="margin-top:4px">${esc(r.warning || r.error)}</div>
+         <div class="hint">rentang yang pernah diuji: ${Object.entries(r.range || {}).map(([k, v]) => `${esc(k)} ${v[0]}–${v[1]}`).join(" · ")}</div></div>`;
+}
+
+// ---------------- dosir / kenapa / relevansi
+function renderDossier(d) {
+  if (!d) { $("dossier").innerHTML = N.state.focus ? "<span class='hint'>memuat…</span>" : "<span class='hint'>pilih satu uji dari daftar, peta, peringatan, atau asisten</span>"; return; }
+  const vb = (m) => m.tier === "derived_auto" && !m.flags.includes("ditolak_manusia")
+    ? ` <span class="vbtn" data-m="${esc(m.id)}">${["ok", "salah", "ragu"].map((v) => `<button data-v="${v}" title="putusan manusia untuk angka ini">${v}</button>`).join("")}</span>` : "";
+  const val = (m) => m.value != null ? `<b>${esc(m.value)}</b> ${esc(m.unit)}` : `<b>${esc(m.value_text)}</b>`;
+  const ci = (m) => m.lo != null && m.hi != null ? ` <span class="hint">[${esc(m.lo)}, ${esc(m.hi)}]</span>` : "";
+  const rows = Object.entries(d.measurements).map(([q, ms]) => ms.map((m, i) =>
+    `<div class="q">${i ? "" : esc(q)}</div><div>${val(m)}${ci(m)} ${badge(m.tier)}
+       ${m.flags.map((f) => `<span class="chip">${esc(f)}</span>`).join("")}${m.verified_by ? ` <span class="hint">${esc(m.verified_by)}</span>` : ""}${vb(m)}</div>`).join("")).join("");
+  $("dossier").innerHTML = `<div style="display:flex;gap:8px;align-items:baseline;flex-wrap:wrap"><span style="font-size:18px;font-weight:600">${esc(d.label)}</span>
+      <span class="hint">${esc(d.accession)}${d.attrs.fuel ? " · " + esc(d.attrs.fuel) : ""}${d.attrs.configuration ? " · " + esc(d.attrs.configuration) : ""}${d.attrs.note ? " · " + esc(d.attrs.note) : ""}</span></div>
+    ${d.contradictions.map((c) => `<div class="contra">${st("kritis", "sumber bertentangan")} ${esc(c.detail)}</div>`).join("")}
+    <div class="verdict">putusan manusia, menyala? <button class="ign" data-v="ya">ya</button><button class="ign" data-v="tidak">tidak</button>
+      <input id="annNote" placeholder="alasan singkat" size="22" aria-label="alasan putusan"></div>
+    <div class="kv">${rows}</div>`;
+}
+$("dossier").addEventListener("click", async (e) => {
+  const b = e.target.closest("button"); if (!b || !N.state.focus) return;
+  const note = ($("annNote") && $("annNote").value) || "";
+  if (b.classList.contains("ign")) {
+    await N.dispatch("annotate", { entity: N.state.focus, quantity: "ignited", verdict: "ok", value_text: b.dataset.v, note, author: "ui" });
+  } else if (b.closest(".vbtn")) {
+    await N.dispatch("annotate", { measurement: b.closest(".vbtn").dataset.m, verdict: b.dataset.v, note, author: "ui" });
+  }
+});
+function renderExplain(x) {
+  $("explain").innerHTML = !x ? "" : x.hipotesis.map((h) =>
+    `<div class="hyp"><span class="bar" style="width:${Math.round(h.kekuatan * 44)}px" title="bobot ${h.kekuatan}"></span> <b>${esc(h.hipotesis)}</b>
+     <div class="hint">${esc(h.sumber)}</div><ul style="margin:2px 0 0 18px;padding:0">${h.bukti.filter(Boolean).map((b) => `<li>${esc(b)}</li>`).join("")}</ul></div>`).join("")
+    + (x ? `<div class="hint">${esc(x.catatan)}</div>` : "");
+}
+function renderRelevance(r) {
+  if (!r) { $("relevance").innerHTML = ""; return; }
+  $("relevance").innerHTML =
+    `<table><tbody>${r.related.slice(0, 20).map((o) => `<tr class="row" data-id="${esc(o.id)}"><td>${igDot(o.ignited)}<b>${esc(o.label)}</b></td><td><span class="bar" style="width:${Math.min(48, o.score * 20)}px"></span></td><td class="hint">${esc(o.why.join(", "))}</td></tr>`).join("")}</tbody></table>
+     <h2 style="margin-top:10px">Artefak</h2>${r.artifacts.map((a) => `<div class="hint">${esc(a.id.replace(/^art:/, ""))}</div>`).join("") || "<span class='hint'>tidak ada</span>"}
+     <h2 style="margin-top:10px">Laporan & paper</h2>${r.papers.map((p) => `<div style="margin-bottom:4px"><b>${esc(p.title)}</b> ${badge("paper_claim")}<div class="hint">${esc(p.snippet)}</div></div>`).join("") || "<span class='hint'>tidak ada</span>"}`;
+}
+$("relevance").addEventListener("click", (e) => { const tr = e.target.closest("tr.row"); if (tr) N.dispatch("focus", tr.dataset.id); });
+
+// ---------------- asisten
+function renderChat(chat) {
+  $("chat").innerHTML = chat.map((c, i) => `<div class="turn">
+    <div class="q-me">${esc(c.q)}</div>
+    ${c.pending ? "<div class='hint'>menyusun jawaban…</div>" : `<div class="ans">${esc(c.a).replace(/\[\[(test:[^\]]+)\]\]/g, (m, id) => `<a href="#" data-focus="${id}">${id.replace(/^test:/, "")}</a>`)
+      .replace(/\[\[([^\]]+)\]\]/g, "<span class='chip'>$1</span>")}</div>
+    <div class="hint">mode ${esc(c.mode)}${c.note ? " · " + esc(c.note) : ""} · ${c.ms} ms · alat: ${(c.tool_calls || []).map((t) => esc(t.name)).join(", ") || "tidak ada"}
+      · ${c.grounding?.ok ? "semua angka bersumber" : st("perhatian", "angka tanpa sumber: " + (c.grounding?.ungrounded || []).join(" "))}
+      ${(c.citations || []).length ? " · sitasi: " + c.citations.map((x) => `${esc(x.ref.replace(/^test:/, ""))} ${badge(x.tier)}`).join(" ") : ""}
+      ${c.ui_actions?.length ? " · dashboard digerakkan: " + c.ui_actions.map((u) => esc(u.action)).join(", ") : ""}</div>
+    <div style="margin-top:4px">${c.rating ? `<span class="hint">dinilai ${esc(c.rating)}</span>` : `<button data-fb="${i}" data-r="baik" aria-label="jawaban baik">👍</button> <button data-fb="${i}" data-r="buruk" aria-label="jawaban buruk">👎</button>`}</div>`}
+  </div>`).join("") || "<span class='hint'>belum ada pertanyaan</span>";
+  $("chat").scrollTop = $("chat").scrollHeight;
+}
+$("chat").addEventListener("click", (e) => {
+  const a = e.target.closest("[data-focus]"); if (a) { e.preventDefault(); N.dispatch("focus", a.dataset.focus); return; }
+  const b = e.target.closest("[data-fb]"); if (b) N.dispatch("feedback", { index: +b.dataset.fb, rating: b.dataset.r });
+});
+$("askForm").addEventListener("submit", (e) => {
+  e.preventDefault(); const q = $("askQ").value.trim(); if (!q) return;
+  $("askQ").value = ""; N.dispatch("ask", { question: q, mode: $("askMode").value });
+});
+
+// ---------------- antrean & belajar
+function renderQueue(q) {
+  $("tQueue").textContent = `antrean ${q.n} item`;
+  $("queue").innerHTML = q.items.map((x) => `<div class="alert" data-id="${esc(x.entity || "")}">
+    <span class="badge" title="nilai = ketidakpastian × dampak">${x.value}</span>
+    <span><b>${esc((x.entity || x.artifact || "").replace(/^(test|art):/, ""))}</b> ${esc(x.why)}<div class="hint">${esc(x.action)}</div></span></div>`).join("") || "<span class='hint'>kosong</span>";
+}
+$("queue").addEventListener("click", (e) => { const d = e.target.closest(".alert"); if (d && d.dataset.id) N.dispatch("focus", d.dataset.id); });
+function renderLearning(l) {
+  $("learning").innerHTML = l.running ? "⟳ belajar… " + esc(l.log.at(-1) || "") :
+    l.last ? (l.last.error ? st("kritis", "gagal: " + l.last.error) : `selesai: ${esc((l.last.ran || []).join(", ") || "tidak ada yang basi")} (${l.last.seconds ?? "?"} s)`) : "menunggu putusan manusia";
+}
+function renderHistory(h) {
+  const last = (h || []).at(-1);
+  if (last) $("tVerified").textContent = last.summary.human_verified;
+  $("history").innerHTML = (h || []).slice().reverse().map((x) => `<div class="hint">${esc(x.t.slice(0, 16).replace("T", " "))} · ${esc(x.trigger)} ·
+    terverifikasi ${x.summary.human_verified} · prediksi berubah ${x.summary.prediksi_berubah}</div>`).join("");
+}
+
+// ---------------- peringatan / catatan / jejak
+function renderAlerts(a) {
+  $("alertCounts").innerHTML = `${st("kritis", a.counts.kritis ?? 0)} ${st("perhatian", a.counts.perhatian ?? 0)} ${st("info", a.counts.info ?? 0)}`;
+  $("alerts").innerHTML = a.alerts.slice(0, 250).map((x) => `<div class="alert" data-id="${esc(x.entity || "")}">
+    ${st(x.level)} <span><b>${esc(x.label || "umum")}</b> ${esc(x.title)}<div class="hint">${esc(x.evidence.join(" · "))}</div></span></div>`).join("");
+}
+$("alerts").addEventListener("click", (e) => { const d = e.target.closest(".alert"); if (d && d.dataset.id) N.dispatch("focus", d.dataset.id); });
+$("noteSave").onclick = () => { N.dispatch("note", { text: $("noteText").value }); $("noteText").value = ""; };
+$("undo").onclick = () => N.dispatch("undo");
+$("share").onclick = async () => { const u = location.href.split("#")[0] + N.toHash(); try { await navigator.clipboard.writeText(u); } catch {} history.replaceState(null, "", N.toHash()); };
+
+// ---------------- filter
+const fv = () => ({ acc: $("fAcc").value, ig: $("fIgn").value, flag: $("fFlag").value, q: $("fQ").value });
+$("fAcc").onchange = () => N.dispatch("filter", { dim: "accession", value: fv().acc });
+$("fIgn").onchange = () => N.dispatch("filter", { dim: "ignited", value: fv().ig === "" ? null : fv().ig === "1" });
+$("fFlag").onchange = () => N.dispatch("filter", { dim: "flag", value: fv().flag });
+$("fQ").oninput = () => N.dispatch("filter", { dim: "q", value: fv().q });
+$("fClear").onclick = () => { ["fAcc", "fIgn", "fFlag", "fQ"].forEach((k) => ($(k).value = "")); N.dispatch("clearFilters"); };
+
+// ---------------- kabel: peristiwa -> tampilan
+N.on("tests.loaded", (ts) => {
+  const accs = [...new Set(ts.map((t) => t.accession))].sort();
+  $("fAcc").innerHTML = `<option value="">semua investigasi</option>` + accs.map((a) => `<option>${a}</option>`).join("");
+  const fl = [...new Set(ts.flatMap((t) => [...(t.rules || []), ...(t.flags || [])]))].sort();
+  $("fFlag").innerHTML = `<option value="">semua tanda/aturan</option>` + fl.map((f) => `<option>${f}</option>`).join("");
+});
+// kontrol mengikuti keadaan (bukan sebaliknya); keadaan bisa datang dari tautan, undo, atau asisten
+N.on("filters.changed", (f) => {
+  $("fAcc").value = f.accession || ""; $("fFlag").value = f.flag || ""; $("fQ").value = f.q || "";
+  $("fIgn").value = f.ignited === true ? "1" : f.ignited === false ? "0" : "";
+});
+N.on("visible.changed", (v) => { $("tTests").textContent = v.n; $("status").textContent = `dari ${v.of} uji`; renderList(); renderScatter(); });
+for (const ev of ["selection.changed", "relevance.changed", "focus.changed"]) N.on(ev, () => { renderList(); renderScatter(); });
+N.on("dossier.changed", renderDossier); N.on("focus.changed", () => renderDossier(null));
+N.on("explain.changed", renderExplain); N.on("relevance.changed", renderRelevance);
+N.on("whatif.changed", renderWhatifControls); N.on("whatif.result", renderWhatifOut);
+N.on("alerts.changed", renderAlerts);
+N.on("notes.changed", (ns) => { $("notes").innerHTML = ns.map((n) => `<div>${esc(n.text)} <span class="hint">${esc(n.author)} · ${esc(n.t.slice(0, 16))}</span></div>`).join("") || "<span class='hint'>belum ada</span>"; });
+N.on("trail.changed", (e) => { const li = document.createElement("li"); li.textContent = `${e.t.slice(11, 19)} ${e.actor}: ${e.action} ${JSON.stringify(e.args) ?? ""}`; $("trail").prepend(li); });
+let lastError = "";
+N.on("loading.changed", (l) => { $("loading").textContent = (l.length ? "memuat " + l.join(", ") : "") + (lastError ? " · " + lastError : ""); });
+N.on("error", (e) => { lastError = "galat " + e.kind + ": " + e.message; console.error(lastError); $("loading").textContent = lastError; });
+
+N.on("chat.changed", renderChat);
+N.on("queue.changed", renderQueue);
+N.on("history.changed", renderHistory);
+N.on("learning.changed", renderLearning);
+N.on("annotation.added", () => { $("learning").textContent = "putusan tercatat; siklus belajar dimulai…"; });
+N.on("assistant.status", (s) => { $("tAssist").textContent = s.claude ? "Claude" : "luring"; $("asMode").textContent = s.claude ? s.model : s.why; });
+
+renderWhatifControls(); renderChat([]); renderDossier(null);
+// ?nopoll: untuk tangkapan layar headless (waktu virtual browser "melompati" timer polling)
+N.start({ hash: location.hash, poll: !new URLSearchParams(location.search).has("nopoll") });
+</script>
+</body>
+</html>

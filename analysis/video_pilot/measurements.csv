@@ -1,0 +1,38 @@
+accession,test_id,episode,t_start_s,t_end_s,burn_duration_s,area_max_px,area_median_px,ending,tail_frac_of_peak,drift_px_per_s,matched,fuel,o2_mole_frac,air_display,fan_display,sample,table_outcome,source_video
+PSI-25,T16,1,45.0,53.0,8.0,77,19,padam bertahap,0.307,0.356,ya,2 cm SIBAL,0.176,5  3,,139,,PSI-25_Raw Data_BASS_GMT100_sample139_test-T16-shifted-video.mp4
+PSI-25,T16,2,200.5,289.5,89.0,160,159,berakhir mendadak,1.0,1.328,ya,2 cm SIBAL,0.176,5  3,,139,,PSI-25_Raw Data_BASS_GMT100_sample139_test-T16-shifted-video.mp4
+PSI-25,T5,1,51.0,54.5,3.5,226,87,padam bertahap,0.168,2.286,ya,2 cm SIBAL,0.188,10   2   1,2.72   0.50   0.42,131,,PSI-25_Raw Data_BASS_GMT100_SAMPLE_131_TEST_T5.mp4
+PSI-25,T5,2,217.0,248.0,31.0,161,159,berakhir mendadak,0.983,0.009,ya,2 cm SIBAL,0.188,10   2   1,2.72   0.50   0.42,131,,PSI-25_Raw Data_BASS_GMT100_SAMPLE_131_TEST_T5.mp4
+PSI-25,T6,1,5.0,10.5,5.5,213,49,padam bertahap,0.329,0.696,ya,2 cm SIBAL,0.188,5  2  1   <1,,132,,PSI-25_Raw Data_BASS_GMT100_SAMPLE_132_TEST_T6.mp4
+PSI-25,T16,1,47.0,55.5,8.5,85,20,padam bertahap,0.322,0.409,ya,2 cm SIBAL,0.176,5  3,,139,,PSI-25_Raw Data_BASS_GMT100_SAMPLE_139_TEST_T16.mp4
+PSI-25,T16,2,202.5,276.0,73.5,162,159,berakhir mendadak,0.981,1.54,ya,2 cm SIBAL,0.176,5  3,,139,,PSI-25_Raw Data_BASS_GMT100_SAMPLE_139_TEST_T16.mp4
+PSI-25,O3a,1,41.5,66.0,24.5,1619,1233,padam bertahap,0.282,0.631,ya,"1/4"" clear rod",0.18,5  3,,205M,,PSI-25_Raw Data_BASS_GMT164_SAMPLE_205_TEST_O3a.mp4
+PSI-25,O3a,2,82.0,123.0,41.0,455,94,padam bertahap,0.216,0.374,ya,"1/4"" clear rod",0.18,5  3,,205M,,PSI-25_Raw Data_BASS_GMT164_SAMPLE_205_TEST_O3a.mp4
+PSI-25,O3a,3,170.0,196.0,26.0,122,121,berakhir mendadak,0.997,2.361,ya,"1/4"" clear rod",0.18,5  3,,205M,,PSI-25_Raw Data_BASS_GMT164_SAMPLE_205_TEST_O3a.mp4
+PSI-25,O3b,1,3.0,43.5,40.5,1274,990,padam bertahap,0.353,0.37,ya,"1/4"" clear rod",0.18,5  3  2  1  low,,205M,,PSI-25_Raw Data_BASS_GMT164_SAMPLE_205_TEST_O3b.mp4
+PSI-25,O3b,2,55.5,285.0,229.5,904,563,padam bertahap,0.093,0.257,ya,"1/4"" clear rod",0.18,5  3  2  1  low,,205M,,PSI-25_Raw Data_BASS_GMT164_SAMPLE_205_TEST_O3b.mp4
+PSI-25,P1,1,12.5,41.5,29.0,1754,559,padam bertahap,0.372,0.087,ya,"1/4"" black rod",0.177,5  2   slow decr to ext,,185M,,PSI-25_Raw Data_BASS_GMT167_SAMPLE_185_TEST_P1.mp4
+PSI-25,P1,2,93.5,187.5,94.0,277,186,padam bertahap,0.341,0.054,ya,"1/4"" black rod",0.177,5  2   slow decr to ext,,185M,,PSI-25_Raw Data_BASS_GMT167_SAMPLE_185_TEST_P1.mp4
+PSI-25,P2,1,23.0,60.0,37.0,1911,636,berakhir mendadak,0.611,0.069,ya,"1/4"" black rod",0.174,5   2.5   2 (pot .9   .5   .35.  .33),,188M,,PSI-25_Raw Data_BASS_GMT167_SAMPLE_188_TEST_P2.mp4
+PSI-25,P2,2,80.0,246.5,166.5,310,144,padam bertahap,0.065,0.081,ya,"1/4"" black rod",0.174,5   2.5   2 (pot .9   .5   .35.  .33),,188M,,PSI-25_Raw Data_BASS_GMT167_SAMPLE_188_TEST_P2.mp4
+PSI-25,P3a,1,0.0,28.5,28.5,1118,584,berakhir mendadak,0.962,0.069,ya,"1/4"" clear rod",0.177,5   2.5 (1.15   .5   .35   .33. .32   .315   .31   .3),,215M,,PSI-25_Raw Data_BASS_GMT167_SAMPLE_215_TEST_P3a.mp4
+PSI-25,P3a,2,46.5,200.5,154.0,1626,192,padam bertahap,0.049,0.123,ya,"1/4"" clear rod",0.177,5   2.5 (1.15   .5   .35   .33. .32   .315   .31   .3),,215M,,PSI-25_Raw Data_BASS_GMT167_SAMPLE_215_TEST_P3a.mp4
+PSI-25,P3a,3,494.5,508.5,14.0,151,150,berakhir mendadak,0.996,1.064,ya,"1/4"" clear rod",0.177,5   2.5 (1.15   .5   .35   .33. .32   .315   .31   .3),,215M,,PSI-25_Raw Data_BASS_GMT167_SAMPLE_215_TEST_P3a.mp4
+PSI-25,P14,1,12.0,37.0,25.0,819,396,padam bertahap,0.308,0.116,ya,1/4 blac rod,0.184,5   low (.85   .4   .32),46   41,189M,,PSI-25_Raw Data_BASS_GMT174_SAMPLE_189_TEST_P14.mp4
+PSI-25,P14,2,67.0,167.0,100.0,254,176,peralihan,0.524,0.039,ya,1/4 blac rod,0.184,5   low (.85   .4   .32),46   41,189M,,PSI-25_Raw Data_BASS_GMT174_SAMPLE_189_TEST_P14.mp4
+PSI-25,P15,1,11.5,47.0,35.5,948,342,berakhir mendadak,0.717,0.048,ya,1/4 black rod,0.18,5   (0.36),46   41,190M,,PSI-25_Raw Data_BASS_GMT174_SAMPLE_190_TEST_P15.mp4
+PSI-25,P15,2,71.5,131.0,59.5,203,146,padam bertahap,0.212,0.064,ya,1/4 black rod,0.18,5   (0.36),46   41,190M,,PSI-25_Raw Data_BASS_GMT174_SAMPLE_190_TEST_P15.mp4
+PSI-25,P21a,1,20.0,37.0,17.0,730,373,berakhir mendadak,0.956,0.068,ya,1/4 black rod,0.163,5,46,196M,,PSI-25_Raw Data_BASS_GMT174_SAMPLE_196_TEST_P21a.mp4
+PSI-25,P21a,2,50.5,61.5,11.0,1136,459,peralihan,0.531,0.248,ya,1/4 black rod,0.163,5,46,196M,,PSI-25_Raw Data_BASS_GMT174_SAMPLE_196_TEST_P21a.mp4
+PSI-25,P21a,3,73.0,81.5,8.5,1258,573,peralihan,0.441,0.32,ya,1/4 black rod,0.163,5,46,196M,,PSI-25_Raw Data_BASS_GMT174_SAMPLE_196_TEST_P21a.mp4
+PSI-25,P21b,1,12.0,21.0,9.0,868,806,berakhir mendadak,0.957,0.078,ya,"1/4"" black rod",0.163,5,46,196M,,PSI-25_Raw Data_BASS_GMT174_SAMPLE_196_TEST_P21b.mp4
+PSI-25,P21b,2,85.5,90.5,5.0,844,751,berakhir mendadak,0.981,0.102,ya,"1/4"" black rod",0.163,5,46,196M,,PSI-25_Raw Data_BASS_GMT174_SAMPLE_196_TEST_P21b.mp4
+PSI-25,P21b,3,179.5,182.5,3.0,783,616,berakhir mendadak,0.942,0.25,ya,"1/4"" black rod",0.163,5,46,196M,,PSI-25_Raw Data_BASS_GMT174_SAMPLE_196_TEST_P21b.mp4
+PSI-25,F4,1,107.0,114.0,7.0,25,21,berakhir mendadak,0.893,0.456,ya,Japan Wax candle,0.174,3 ign,see notes,39M,,PSI-25_Raw Data_BASS_GMT175_SAMPLE_039_TEST_F4.mp4
+PSI-25,F4,2,120.5,180.5,60.0,275,58,padam bertahap,0.176,0.476,ya,Japan Wax candle,0.174,3 ign,see notes,39M,,PSI-25_Raw Data_BASS_GMT175_SAMPLE_039_TEST_F4.mp4
+PSI-25,F4,3,362.5,370.0,7.5,246,166,berakhir mendadak,0.678,3.42,ya,Japan Wax candle,0.174,3 ign,see notes,39M,,PSI-25_Raw Data_BASS_GMT175_SAMPLE_039_TEST_F4.mp4
+PSI-25,T10,1,16.0,23.0,7.0,98,64,berakhir mendadak,0.918,1.44,ya,2 cm SIBAL,0.164,5,pot 1.1,134M,,PSI-25_Raw Data_BASS_GMT175_SAMPLE_134_TEST_T10.mp4
+PSI-25,T18,1,22.0,27.5,5.5,107,67,peralihan,0.589,0.404,ya,2 cm SIBAL,0.174,5  2,,141M,,PSI-25_Raw Data_BASS_GMT175_SAMPLE_141_TEST_T18.mp4
+PSI-25,T18,2,84.0,107.0,23.0,168,167,berakhir mendadak,0.994,0.013,ya,2 cm SIBAL,0.174,5  2,,141M,,PSI-25_Raw Data_BASS_GMT175_SAMPLE_141_TEST_T18.mp4
+PSI-25,O6,1,72.5,111.0,38.5,79,33,padam bertahap,0.266,0.371,ya,"1/4"" clear rod",0.167,see fan,5   .36  .32  .31  .305   out .275,206M,,PSI-25_Raw Data_BASS_GMT177_SAMPLE_206_TEST_O6.mp4
+PSI-25,O8a,1,95.5,137.0,41.5,53,17,padam bertahap,0.302,0.428,ya,"1/4"" clear rod",0.157,,5   .36  .32  .31   extinguished,208m,,PSI-25_Raw Data_BASS_GMT177_SAMPLE_208_TEST_O8a.mp4

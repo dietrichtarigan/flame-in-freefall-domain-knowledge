@@ -1,0 +1,228 @@
+{
+ "offline": {
+  "mode": "offline",
+  "n": 12,
+  "aggregate": {
+   "pass": 1.0,
+   "tool_ok": 1.0,
+   "contain_ok": 1.0,
+   "forbid_ok": 1.0,
+   "ui_ok": 1.0,
+   "grounded": 1.0,
+   "cites_ok": 1.0,
+   "ms_median": 8
+  },
+  "rows": [
+   {
+    "id": "k01",
+    "q": "kenapa 21196A1 dianggap janggal?",
+    "mode": "offline",
+    "ms": 4153,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "ui_action",
+     "explain_test"
+    ],
+    "pass": true
+   },
+   {
+    "id": "k02",
+    "q": "apa yang terjadi pada uji 21106A2",
+    "mode": "offline",
+    "ms": 7,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "ui_action",
+     "explain_test"
+    ],
+    "pass": true
+   },
+   {
+    "id": "k03",
+    "q": "andaikan oksigennya 35% dengan etana normal dan fraksi bahan bakar 0.5, menyala tidak?",
+    "mode": "offline",
+    "ms": 6,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "whatif_cfig",
+     "ui_action"
+    ],
+    "pass": true
+   },
+   {
+    "id": "k04",
+    "q": "prediksi peluang padam droplet metanol pada O2 0.2 dan tekanan 80 kPa",
+    "mode": "offline",
+    "ms": 1,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "whatif_flex",
+     "ui_action"
+    ],
+    "pass": true
+   },
+   {
+    "id": "k05",
+    "q": "eksperimen apa yang paling berguna dijalankan NASA selanjutnya untuk FLEX?",
+    "mode": "offline",
+    "ms": 5,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "recommend_next_tests"
+    ],
+    "pass": true
+   },
+   {
+    "id": "k06",
+    "q": "uji mana yang tabel NASA dan telemetrinya tidak cocok?",
+    "mode": "offline",
+    "ms": 17,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "list_alerts",
+     "ui_action"
+    ],
+    "pass": true
+   },
+   {
+    "id": "k07",
+    "q": "bagian data mana yang paling banyak kosong?",
+    "mode": "offline",
+    "ms": 29,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "coverage"
+    ],
+    "pass": true
+   },
+   {
+    "id": "k08",
+    "q": "seberapa akurat model prediksi penyalaan?",
+    "mode": "offline",
+    "ms": 1,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "model_cards"
+    ],
+    "pass": true
+   },
+   {
+    "id": "k09",
+    "q": "berapa selang kepercayaan laju bakar heptana?",
+    "mode": "offline",
+    "ms": 0,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "uncertainty_stats"
+    ],
+    "pass": true
+   },
+   {
+    "id": "k10",
+    "q": "uji lain yang serupa dengan 21106G7",
+    "mode": "offline",
+    "ms": 8,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "ui_action",
+     "related"
+    ],
+    "pass": true
+   },
+   {
+    "id": "k11",
+    "q": "cari dokumen NASA tentang wire insulation flammability",
+    "mode": "offline",
+    "ms": 92,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "search_papers"
+    ],
+    "pass": true
+   },
+   {
+    "id": "k12",
+    "q": "apa yang harus saya periksa dulu sebagai manusia?",
+    "mode": "offline",
+    "ms": 15,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "review_queue"
+    ],
+    "pass": true
+   }
+  ]
+ }
+}

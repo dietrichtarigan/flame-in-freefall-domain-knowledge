@@ -1,0 +1,218 @@
+[
+ {
+  "id": "saffire1_C1",
+  "acc": "PSI-98",
+  "label": "Saffire-I, kamera 1",
+  "zip": "PSI-98_Raw Data_SAFFIRE_I_S1C1_Raw2TIFF_Mapped_JPEGS.zip",
+  "scale_source": "grid 30 mm (Mapped_SAFFIRE-1_F1C1_DistortionGrid-30mmBlock_1280x920.jpg)",
+  "flow_cm_s": 20,
+  "published_mm_s": 1.8,
+  "published_ref": "Flame spread: Effects of microgravity and scale, hlm. 13",
+  "frame_step": 1,
+  "px_per_mm": {
+   "x": 2.213008130081301,
+   "y": 2.2025641025641027,
+   "xy_rel_diff": 0.0047193805459787115
+  },
+  "n_frames": 933,
+  "duration_s": 270.1,
+  "t0_epoch_ms": 1465937102299,
+  "flame_rate": {
+   "mm_per_s": 1.815,
+   "ci95_mm_per_s": [
+    1.794,
+    1.841
+   ],
+   "direction": "kiri",
+   "n": 597,
+   "t_range_s": [
+    17.1,
+    242.1
+   ],
+   "resid_mm_rms": 12.65,
+   "travel_mm": 402.6,
+   "quality": "lolos"
+  },
+  "char_rate": {
+   "mm_per_s": 1.062,
+   "ci95_mm_per_s": [
+    0.034,
+    1.784
+   ],
+   "direction": "kiri",
+   "n": 158,
+   "t_range_s": [
+    0.4,
+    266.5
+   ],
+   "resid_mm_rms": 193.55,
+   "travel_mm": 383.9,
+   "quality": "gagal gerbang mutu"
+  },
+  "n_dark_with_flame": 747,
+  "n_lit": 177,
+  "flame_vs_published_pct": 0.8
+ },
+ {
+  "id": "saffire1_C2",
+  "acc": "PSI-98",
+  "label": "Saffire-I, kamera 2",
+  "zip": "PSI-98_Raw Data_SAFFIRE_S1C2_RAW2TIFF_Mapped_JPEGS.zip",
+  "scale_source": "grid 30 mm (Mapped_SAFFIRE-1_F1C2_DistortionGrid-30mmBlock_1280x920.jpg)",
+  "flow_cm_s": 20,
+  "published_mm_s": 1.8,
+  "published_ref": "Flame spread: Effects of microgravity and scale, hlm. 13",
+  "frame_step": 1,
+  "px_per_mm": {
+   "x": 2.2452674897119342,
+   "y": 2.235294117647059,
+   "xy_rel_diff": 0.004441952734172861
+  },
+  "n_frames": 547,
+  "duration_s": 452.1,
+  "t0_epoch_ms": 1465937102297,
+  "flame_rate": {
+   "mm_per_s": 1.924,
+   "ci95_mm_per_s": [
+    1.896,
+    1.953
+   ],
+   "direction": "kiri",
+   "n": 273,
+   "t_range_s": [
+    195.0,
+    422.1
+   ],
+   "resid_mm_rms": 7.95,
+   "travel_mm": 432.0,
+   "quality": "lolos"
+  },
+  "char_rate": {
+   "mm_per_s": 1.881,
+   "ci95_mm_per_s": [
+    1.814,
+    1.941
+   ],
+   "direction": "kiri",
+   "n": 130,
+   "t_range_s": [
+    208.4,
+    436.4
+   ],
+   "resid_mm_rms": 5.16,
+   "travel_mm": 412.4,
+   "quality": "lolos"
+  },
+  "n_dark_with_flame": 343,
+  "n_lit": 163,
+  "flame_vs_published_pct": 6.9
+ },
+ {
+  "id": "saffire3_C1",
+  "acc": "PSI-100",
+  "label": "Saffire-III, kamera 1",
+  "zip": "PSI-100_Raw Data_SAFFIRE_III_S1C1_JPEG_Mapped_part1.zip; PSI-100_Raw Data_SAFFIRE_III_S1C1_JPEG_Mapped_part2.zip; PSI-100_Raw Data_SAFFIRE_III_S1C1_JPEG_Mapped_part3.zip; PSI-100_Raw Data_SAFFIRE_III_S1C1_JPEG_Mapped_part4.zip",
+  "scale_source": "lebar sampel 406 mm (Flame spread: Effects of microgravity and scale, hlm. 6)",
+  "flow_cm_s": 25,
+  "published_mm_s": 2.3,
+  "published_ref": "Flame spread: Effects of microgravity and scale, hlm. 13",
+  "frame_step": 8,
+  "px_per_mm": {
+   "x": 2.2413793103448274,
+   "y": 2.2413793103448274,
+   "sample_height_px": 910.0
+  },
+  "n_frames": 2380,
+  "duration_s": 634.9,
+  "t0_epoch_ms": 1496610866187,
+  "flame_rate": {
+   "mm_per_s": 2.255,
+   "ci95_mm_per_s": [
+    2.242,
+    2.268
+   ],
+   "direction": "kiri",
+   "n": 626,
+   "t_range_s": [
+    31.8,
+    246.7
+   ],
+   "resid_mm_rms": 11.07,
+   "travel_mm": 488.5,
+   "quality": "lolos"
+  },
+  "char_rate": {
+   "mm_per_s": 2.159,
+   "ci95_mm_per_s": [
+    2.102,
+    2.226
+   ],
+   "direction": "kiri",
+   "n": 144,
+   "t_range_s": [
+    28.1,
+    200.3
+   ],
+   "resid_mm_rms": 12.0,
+   "travel_mm": 394.8,
+   "quality": "lolos"
+  },
+  "n_dark_with_flame": 781,
+  "n_lit": 182,
+  "flame_vs_published_pct": -2.0
+ },
+ {
+  "id": "saffire3_C2",
+  "acc": "PSI-100",
+  "label": "Saffire-III, kamera 2",
+  "zip": "PSI-100_Raw Data_SAFFIRE_III_S1C2_JPEG_Mapped_part1.zip; PSI-100_Raw Data_SAFFIRE_III_S1C2_JPEG_Mapped_Part2.zip; PSI-100_Raw Data_SAFFIRE_III_S1C2_JPEG_Mapped_Part3.zip; PSI-100_Raw Data_SAFFIRE_III_S1C2_JPEG_Mapped_Part4.zip",
+  "scale_source": "lebar sampel 406 mm (Flame spread: Effects of microgravity and scale, hlm. 6)",
+  "flow_cm_s": 25,
+  "published_mm_s": 2.3,
+  "published_ref": "Flame spread: Effects of microgravity and scale, hlm. 13",
+  "frame_step": 8,
+  "px_per_mm": {
+   "x": 2.2413793103448274,
+   "y": 2.2413793103448274,
+   "sample_height_px": 910.0
+  },
+  "n_frames": 2378,
+  "duration_s": 634.9,
+  "t0_epoch_ms": 1496610866187,
+  "flame_rate": {
+   "mm_per_s": 2.421,
+   "ci95_mm_per_s": [
+    2.382,
+    2.451
+   ],
+   "direction": "kiri",
+   "n": 544,
+   "t_range_s": [
+    145.8,
+    365.9
+   ],
+   "resid_mm_rms": 14.48,
+   "travel_mm": 442.1,
+   "quality": "lolos"
+  },
+  "char_rate": {
+   "mm_per_s": 1.373,
+   "ci95_mm_per_s": [
+    0.619,
+    2.0
+   ],
+   "direction": "kiri",
+   "n": 240,
+   "t_range_s": [
+    2.1,
+    294.3
+   ],
+   "resid_mm_rms": 49.62,
+   "travel_mm": 383.7,
+   "quality": "gagal gerbang mutu"
+  },
+  "n_dark_with_flame": 668,
+  "n_lit": 267,
+  "flame_vs_published_pct": 5.3
+ }
+]

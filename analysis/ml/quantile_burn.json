@@ -1,0 +1,20 @@
+{
+ "n": 263,
+ "days": 23,
+ "model": {
+  "coverage_P10_P90": 0.627,
+  "median_width_s": 40.3,
+  "mae_P50_s": 26.3
+ },
+ "model_conformal": {
+  "coverage_P10_P90": 0.859,
+  "median_width_s": 74.5,
+  "mae_P50_s": 26.3
+ },
+ "marginal": {
+  "coverage_P10_P90": 0.795,
+  "median_width_s": 101.0,
+  "mae_P50_s": 37.7
+ },
+ "target_coverage": 0.8
+}

@@ -1,0 +1,10 @@
+
+== flex_ext: n=206, hari=73
+  logistik (fitur lama)    per-hari [0.82  0.089 0.888]  acak [0.81  0.085 0.891]
+  logistik (fitur penuh)   per-hari [0.82  0.089 0.888]  acak [0.81  0.085 0.891]
+  random forest            per-hari [0.813 0.096 0.869]  acak [0.789 0.092 0.879]
+  extra trees              per-hari [0.84  0.094 0.864]  acak [0.827 0.093 0.872]
+  gradient boosting        per-hari [0.81  0.112 0.85 ]  acak [0.766 0.104 0.866]
+  SVM RBF                  per-hari [0.761 0.098 0.864]  acak [0.81  0.089 0.882]
+  proses Gaussian          per-hari [0.802 0.096 0.869]  acak [0.74  0.107 0.863]
+  MLP (jaringan saraf)     per-hari [0.865 0.09  0.888]  acak [0.866 0.085 0.9  ]

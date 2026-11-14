@@ -1,0 +1,12 @@
+{"id": "k01", "q": "kenapa 21196A1 dianggap janggal?", "expect_tools": ["explain_test"], "must_contain": ["21196A1"]}
+{"id": "k02", "q": "apa yang terjadi pada uji 21106A2", "expect_tools": ["get_test", "explain_test"], "must_contain": ["21106A2"]}
+{"id": "k03", "q": "andaikan oksigennya 35% dengan etana normal dan fraksi bahan bakar 0.5, menyala tidak?", "expect_tools": ["whatif_cfig"], "must_contain": ["P(menyala)"]}
+{"id": "k04", "q": "prediksi peluang padam droplet metanol pada O2 0.2 dan tekanan 80 kPa", "expect_tools": ["whatif_flex"], "must_contain": ["P(padam"]}
+{"id": "k05", "q": "eksperimen apa yang paling berguna dijalankan NASA selanjutnya untuk FLEX?", "expect_tools": ["recommend_next_tests"], "must_contain": ["FLEX"]}
+{"id": "k06", "q": "uji mana yang tabel NASA dan telemetrinya tidak cocok?", "expect_tools": ["list_alerts"], "must_contain": ["kritis"]}
+{"id": "k07", "q": "bagian data mana yang paling banyak kosong?", "expect_tools": ["coverage"], "must_contain": ["PSI-"]}
+{"id": "k08", "q": "seberapa akurat model prediksi penyalaan?", "expect_tools": ["model_cards"], "must_contain": ["gp_boundary"]}
+{"id": "k09", "q": "berapa selang kepercayaan laju bakar heptana?", "expect_tools": ["uncertainty_stats"], "must_contain": ["heptana"]}
+{"id": "k10", "q": "uji lain yang serupa dengan 21106G7", "expect_tools": ["related"], "must_contain": ["21106G"]}
+{"id": "k11", "q": "cari dokumen NASA tentang wire insulation flammability", "expect_tools": ["search_papers"], "must_contain": ["paper"]}
+{"id": "k12", "q": "apa yang harus saya periksa dulu sebagai manusia?", "expect_tools": ["review_queue"], "must_contain": ["putusan"]}

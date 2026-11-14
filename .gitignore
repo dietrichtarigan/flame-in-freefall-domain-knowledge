@@ -1,0 +1,35 @@
+# ---------------------------------------------------------------------------
+# Repo ini sengaja berisi LAPISAN HASIL saja, bukan arsip mentah NASA.
+# Yang mentah (~15,6 GB) tidak diunggah karena bisa diunduh ulang dari NASA:
+#   python scripts/psi_fetch.py        (manifest ber-checksum ada di kb/manifest/)
+#   python scripts/ntrs_fetch.py
+# ---------------------------------------------------------------------------
+
+# Arsip mentah NASA (~15,6 GB: video, telemetri 125 Hz, PDF PSI)
+kb/raw/
+
+# Bobot model terlatih & tensor antara — bisa dibangun ulang dari skrip
+*.pt
+*.npz
+
+# Berkas kerja sementara
+.artifact_build/
+.shot/
+arsip/
+logs/
+*.part
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Pustaka pihak ketiga yang diunduh (three.js dll) — lihat docs/ untuk cara ambil
+app/vendor/
+
+# Berkas OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Buku teks berhak cipta (bukan data NASA) — jangan didistribusikan ulang
+supplement/

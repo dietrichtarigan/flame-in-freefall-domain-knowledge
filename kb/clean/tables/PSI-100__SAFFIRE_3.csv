@@ -1,0 +1,3 @@
+_accession,_table,_source_row,_row_kind,Sample Number,Material,Sample Thickness,Sample Length,Sample Width,Air Flow,Direction,Camera 1,Camera 2
+PSI-100,SAFFIRE-3,1,test,S1,SIBAL Fabric,.33 cm,94 cm,40.6 cm,30 cm/s,Concurrent,S1C1,S1C2
+PSI-100,SAFFIRE-3,2,test,S2,SIBAL Fabric,.33 cm,94 cm,40.6 cm,30 cm/s,Opposed,S2C1,S2C2

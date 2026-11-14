@@ -1,0 +1,171 @@
+{
+ "built_from": {
+  "file": "kb/gold/tests.csv",
+  "sha256": "aba44b192e3e08cb",
+  "rows": 1990
+ },
+ "flex_K": {
+  "what": "d^2-law burning-rate constant K (mm^2/s): d^2 = d0^2 - K t",
+  "features": [
+   "1",
+   "heptane",
+   "o2",
+   "x_co2",
+   "x_he",
+   "ln(p/101.325)"
+  ],
+  "beta": [
+   0.12543,
+   0.04386,
+   1.78706,
+   -0.17057,
+   0.56976,
+   0.07674
+  ],
+  "resid_sd": 0.0856,
+  "metrics": {
+   "n": 257,
+   "r2": 0.637,
+   "rmse_fit": 0.0829,
+   "rmse_cv": 0.0856,
+   "rmse_baseline": 0.1375
+  },
+  "unit_check": {
+   "median": 0.75,
+   "p90": 1.01,
+   "n": 256
+  },
+  "range": {
+   "o2": [
+    0.12,
+    0.34
+   ],
+   "p": [
+    70.1674,
+    309.267
+   ],
+   "co2": [
+    0.0,
+    0.7
+   ],
+   "he": [
+    0.0,
+    0.45
+   ],
+   "d0": [
+    1.1,
+    4.67
+   ]
+  }
+ },
+ "flex_ext": {
+  "what": "P(flame extinguishes before droplet is consumed); disrupted tests excluded",
+  "features": [
+   "1",
+   "heptane",
+   "o2",
+   "x_co2",
+   "x_he",
+   "ln(p/101.325)",
+   "d0_mm"
+  ],
+  "beta": [
+   4.16453,
+   -2.01699,
+   -28.16463,
+   3.06996,
+   4.62038,
+   1.8493,
+   1.43528
+  ],
+  "metrics": {
+   "n": 206,
+   "positive_rate": 0.869,
+   "accuracy_cv": 0.893,
+   "accuracy_baseline": 0.869,
+   "brier_cv": 0.0815,
+   "brier_baseline": 0.1139,
+   "auc_cv": 0.826
+  }
+ },
+ "gas_ign": {
+  "what": "P(hot ignition), ACME CFI-G",
+  "features": [
+   "1",
+   "inverse",
+   "propane",
+   "butane",
+   "o2",
+   "x_fuel",
+   "ln(p/101.325)"
+  ],
+  "beta": [
+   0.45898,
+   0.26602,
+   -1.67747,
+   -2.02608,
+   5.93064,
+   0.67547,
+   0.67171
+  ],
+  "metrics": {
+   "n": 325,
+   "positive_rate": 0.809,
+   "accuracy_cv": 0.818,
+   "accuracy_baseline": 0.809,
+   "brier_cv": 0.13,
+   "brier_baseline": 0.1544,
+   "auc_cv": 0.782
+  },
+  "range": {
+   "o2": [
+    0.12,
+    0.85
+   ],
+   "p": [
+    49.5382,
+    330.99
+   ],
+   "xf": [
+    0.0,
+    1.0
+   ]
+  }
+ },
+ "gas_selfext": {
+  "what": "P(self-extinguished | ignited); otherwise ended by flow termination",
+  "features": [
+   "1",
+   "inverse",
+   "propane",
+   "butane",
+   "o2",
+   "x_fuel",
+   "ln(p/101.325)"
+  ],
+  "beta": [
+   1.29917,
+   -2.57709,
+   0.49522,
+   -0.25554,
+   1.79264,
+   -1.61302,
+   1.4963
+  ],
+  "metrics": {
+   "n": 263,
+   "positive_rate": 0.665,
+   "accuracy_cv": 0.776,
+   "accuracy_baseline": 0.665,
+   "brier_cv": 0.1764,
+   "brier_baseline": 0.2226,
+   "auc_cv": 0.726
+  }
+ },
+ "solid": {
+  "what": "no fitted model: too few tabulated outcomes",
+  "n_tests": 264,
+  "n_with_outcome": 9,
+  "n_with_spread_rate": 2
+ }
+}

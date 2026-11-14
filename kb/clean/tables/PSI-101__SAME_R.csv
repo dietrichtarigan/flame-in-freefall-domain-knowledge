@@ -1,0 +1,110 @@
+_accession,_table,_source_row,_row_kind,Sample Type,SAME Test #,Description,Date,Inlet velocity (cm/s),Rt/R0,Duration (sec),Primary aging time (sec),Primary mixing time (sec),Net aging time (sec)
+PSI-101,SAME-R,1,test,Kapton,51,B.L. new formula,21-Jul,8.1,1.38,60,11,8,38
+PSI-101,SAME-R,2,test,Kapton,51a,B.L. new formula,22-Jul,8.1,1.38,60,,,261
+PSI-101,SAME-R,3,test,Kapton,61,Baseline Aging,2-Aug,8.1,1.38,60,11,8,38
+PSI-101,SAME-R,4,test,Kapton,61a,aged,2-Aug,8.1,1.38,,,,807
+PSI-101,SAME-R,5,test,Kapton,62,High Temp aging,2-Aug,8.1,1.48,60,11,8,39
+PSI-101,SAME-R,6,test,Kapton,62a,aged,2-Aug,8.1,1.48,,,,808
+PSI-101,SAME-R,7,test,Kapton,70,High temp aged STS det,24-Aug,8.1,1.48,60,720,8,747
+PSI-101,SAME-R,8,test,Kapton,73,Baseline Aging,26-Aug,8.1,1.38,60,11,8,33
+PSI-101,SAME-R,9,test,Kapton,73a,aged,26-Aug,8.1,1.38,,,,560
+PSI-101,SAME-R,10,test,Kapton,75,Mid Temp aging (no Ptrak),26-Aug,8.1,1.43,60,11,8,32
+PSI-101,SAME-R,11,test,Kapton,75a,aged,26-Aug,8.1,1.43,,,,563
+PSI-101,SAME-R,12,test,Kapton,77,High Temp aging,26-Aug,8.1,1.48,60,11,8,31
+PSI-101,SAME-R,13,test,Kapton,77a,aged,26-Aug,8.1,1.48,,,,559
+PSI-101,SAME-R,14,test,Kapton,85,Mid Temp aging run. Repeat 75,30-Aug,8.1,1.43,60,11,8,33
+PSI-101,SAME-R,15,test,Kapton,85a,aged,30-Aug,8.1,1.43,,,,563
+PSI-101,SAME-R,16,test,Kapton,90,Mid Temp aging reburn 85,30-Aug,8.1,1.43,60,11,8,38
+PSI-101,SAME-R,17,test,Kapton,90a,aged,30-Aug,8.1,1.43,,,,569
+PSI-101,SAME-R,18,test,Kapton,92,Baseline STS det,7-Sep,8.1,1.38,60,11,8,35
+PSI-101,SAME-R,19,test,Kapton,93,Mid Temp aging run 75 repeat,7-Sep,8.1,1.43,60,11,8,36
+PSI-101,SAME-R,20,test,Kapton,93a,aged,7-Sep,8.1,1.43,,,,568
+PSI-101,SAME-R,21,test,Kapton,94,Mid Temp aging run mid high,7-Sep,8.1,1.45,60,11,8,42
+PSI-101,SAME-R,22,test,Kapton,94a,aged,7-Sep,8.1,1.45,,,,567
+PSI-101,SAME-R,23,test,Kapton,101,No flow run w/ aging,8-Sep,0,1.48,60,11,8,29
+PSI-101,SAME-R,24,test,Kapton,101a,aged,8-Sep,0,1.48,,,,561
+PSI-101,SAME-R,25,test,Kapton,102,No flow run w/ aging,8-Sep,0,1.48,120,11,8,28
+PSI-101,SAME-R,26,test,Kapton,102a,aged,8-Sep,0,1.48,,,,563
+PSI-101,SAME-R,27,test,Kapton,108,Low flow run w/aging,9-Sep,1,1.48,60,11,8,30
+PSI-101,SAME-R,28,test,Kapton,108a,aged,9-Sep,1,1.48,,,,560
+PSI-101,SAME-R,29,test,Kapton,114,low flow run w STS no Ptrak,9-Sep,2,1.43,60,11,8,28
+PSI-101,SAME-R,30,test,Silicone,48,Low Temp,16-Jul,8,1.304,60,11,8,62
+PSI-101,SAME-R,31,test,Silicone,53,HighTemp,22-Jul,8.1,1.35,60,1,8,52
+PSI-101,SAME-R,32,test,Silicone,59,baseline aged,30-Jul,8.1,1.327,60,11,8,24
+PSI-101,SAME-R,33,test,Silicone,59a,aged,30-Jul,8.1,1.327,,,,856
+PSI-101,SAME-R,34,test,Silicone,60,Htemp ageing,30-Jul,8.1,1.35,60,11,8,49
+PSI-101,SAME-R,35,test,Silicone,60a,aged,30-Jul,8.1,1.35,,,,856
+PSI-101,SAME-R,36,test,Silicone,65,Baseline long aging,23-Aug,8.1,1.327,60,11,8,50
+PSI-101,SAME-R,37,test,Silicone,65a,aged,23-Aug,8.1,1.327,,,,1923
+PSI-101,SAME-R,38,test,Silicone,66,High T aging,23-Aug,8.1,1.36,60,11,8,42
+PSI-101,SAME-R,39,test,Silicone,66a,aged,23-Aug,8.1,1.36,,,,837
+PSI-101,SAME-R,40,test,Silicone,67,High temp aged,24-Aug,8.1,1.35,60,720,8,751
+PSI-101,SAME-R,41,test,Silicone,72,Baseline STS det,25-Aug,8.1,1.327,60,11,8,42
+PSI-101,SAME-R,42,test,Silicone,86,Mid temp aging,30-Aug,8.1,1.345,60,11,8,50
+PSI-101,SAME-R,43,test,Silicone,86a,aged,30-Aug,8.1,1.345,,,,628
+PSI-101,SAME-R,44,test,Silicone,91,Baseline STS det,7-Sep,8.1,1.327,60,11,8,46
+PSI-101,SAME-R,45,test,Silicone,99,No flow run w/aging,8-Sep,0,1.35,60,11,8,48
+PSI-101,SAME-R,46,test,Silicone,99a,aged,8-Sep,0,1.35,,,,627
+PSI-101,SAME-R,47,test,Silicone,103,low flow run w/ aging,9-Sep,1,1.35,60,11,8,48
+PSI-101,SAME-R,48,test,Silicone,103a,aged,9-Sep,1,1.35,,,,619
+PSI-101,SAME-R,49,test,Silicone,104,No flow run w/ aging,9-Sep,0,1.35,60,11,8,51
+PSI-101,SAME-R,50,test,Silicone,104a,aged,9-Sep,0,1.35,,,,636
+PSI-101,SAME-R,51,test,Silicone,109,low flow run w STS,9-Sep,2,1.35,60,11,8,28
+PSI-101,SAME-R,52,test,Lampwick,49,B.L. High RT/R0,19-Jul,8,1.251,60,11,8,51
+PSI-101,SAME-R,53,test,Lampwick,54,Baseline,29-Jul,8.1,1.245,60,11,8,57
+PSI-101,SAME-R,54,test,Lampwick,55,High RT/R0 test aging,29-Jul,8.1,1.245,60,11,8,47
+PSI-101,SAME-R,55,test,Lampwick,55a,aged,29-Jul,8.1,1.245,,,,218
+PSI-101,SAME-R,56,test,Lampwick,57,High RT/R0 reburn sample,29-Jul,8.1,1.253,60,11,8,n/a
+PSI-101,SAME-R,57,test,Lampwick,68,High temp aged STS det,24-Aug,8.1,1.28,60,720,8,747
+PSI-101,SAME-R,58,test,Lampwick,78,Baseline aging,26-Aug,8.1,1.245,60,11,8,37
+PSI-101,SAME-R,59,test,Lampwick,78a,aged,26-Aug,8.1,1.245,,,,581
+PSI-101,SAME-R,60,test,Lampwick,80,High temp aging,26-Aug,8.1,1.28,60,11,8,40
+PSI-101,SAME-R,61,test,Lampwick,80a,aged,26-Aug,8.1,1.28,,,,580
+PSI-101,SAME-R,62,test,Lampwick,82,Mid temp aging,26-Aug,8.1,1.265,60,11,8,39
+PSI-101,SAME-R,63,test,Lampwick,82a,aged,27-Aug,8.1,1.265,,,,579
+PSI-101,SAME-R,64,test,Lampwick,88,Baseline STS det,30-Aug,8.1,1.245,60,11,8,n/a
+PSI-101,SAME-R,65,test,Lampwick,96,No flow run w/aging,7-Sep,0,1.245,60,11,8,34
+PSI-101,SAME-R,66,test,Lampwick,96a,aged,7-Sep,0,1.245,,,,582
+PSI-101,SAME-R,67,test,Lampwick,98,No flow run w/aging,8-Sep,0,1.28,60,11,8,37
+PSI-101,SAME-R,68,test,Lampwick,98a,aged,8-Sep,0,1.28,,,,585
+PSI-101,SAME-R,69,test,Lampwick,106,No flow run w/aging,9-Sep,0,1.28,60,11,8,30
+PSI-101,SAME-R,70,test,Lampwick,106a,aged,9-Sep,0,1.28,,,,558
+PSI-101,SAME-R,71,test,Lampwick,110,low flow run w/STS,9-Sep,2,1.28,60,11,8,21
+PSI-101,SAME-R,72,test,Teflon,50,B.L. High RT/R0,20-Jul,8.1,1.452,60,11,8,33
+PSI-101,SAME-R,73,test,Teflon,56,Baseline,29-Jul,8.1,1.445,60,11,8,41
+PSI-101,SAME-R,74,test,Teflon,57,High RT/R0 reburn sample,29-Jul,8.1,1.253,60,11,8,n/a
+PSI-101,SAME-R,75,test,Teflon,58,Baseline aging,30-Jul,8.1,1.445,60,11,8,34
+PSI-101,SAME-R,76,test,Teflon,58a,aged,30-Jul,8.1,1.445,,,,805
+PSI-101,SAME-R,77,test,Teflon,69,High temp aged STS det,24-Aug,8.1,1.45,60,720,8,745
+PSI-101,SAME-R,78,test,Teflon,79,Baseline aging,26-Aug,8.1,1.445,60,11,8,33
+PSI-101,SAME-R,79,test,Teflon,79a,aged,26-Aug,8.1,1.445,,,,560
+PSI-101,SAME-R,80,test,Teflon,81,High temp aging,26-Aug,8.1,1.45,60,11,8,30
+PSI-101,SAME-R,81,test,Teflon,81a,aged,27-Aug,8.1,1.45,,,,559
+PSI-101,SAME-R,82,test,Teflon,83,Mid temp aging,26-Aug,8.1,1.448,60,11,8,30
+PSI-101,SAME-R,83,test,Teflon,83a,aged,27-Aug,8.1,1.448,,,,557
+PSI-101,SAME-R,84,test,Teflon,89,Baseline STS det,30-Aug,8.1,1.445,60,11,8,31
+PSI-101,SAME-R,85,test,Teflon,100,No flow run w/ aging,8-Sep,0,1.45,60,11,8,29
+PSI-101,SAME-R,86,test,Teflon,100a,aged,8-Sep,0,1.45,,,,560
+PSI-101,SAME-R,87,test,Teflon,105,No flow run w/ aging,9-Sep,0,1.45,60,11,8,24
+PSI-101,SAME-R,88,test,Teflon,105a,aged,9-Sep,0,1.45,,,,559
+PSI-101,SAME-R,89,test,Teflon,111,low flow run w/ STS,9-Sep,2,1.45,60,11,8,43
+PSI-101,SAME-R,90,test,Pyrell,52,Baseline,22-Jul,8.1,1.22,60,11,8,n/a
+PSI-101,SAME-R,91,test,Pyrell,63,Baseline Aging,23-Aug,8.1,1.22,60,11,8,56
+PSI-101,SAME-R,92,test,Pyrell,63a,aged,23-Aug,8.1,1.22,,,,840
+PSI-101,SAME-R,93,test,Pyrell,64,High Temp aging,23-Aug,8.1,1.23,60,11,8,47
+PSI-101,SAME-R,94,test,Pyrell,64a,aged,23-Aug,8.1,1.23,,,,842
+PSI-101,SAME-R,95,test,Pyrell,71,High temp aged STS det,24-Aug,8.1,1.23,60,720,8,750
+PSI-101,SAME-R,96,test,Pyrell,74,Baseline Aging,26-Aug,8.1,1.22,60,11,8,48
+PSI-101,SAME-R,97,test,Pyrell,74a,aged,26-Aug,8.1,1.22,,,,623
+PSI-101,SAME-R,98,test,Pyrell,76,High Temp aging,26-Aug,8.1,1.23,60,11,8,51
+PSI-101,SAME-R,99,test,Pyrell,76a,aged,26-Aug,8.1,1.23,,,,625
+PSI-101,SAME-R,100,test,Pyrell,84,Mid Temp aging retry,30-Aug,8.1,1.225,60,11,8,53
+PSI-101,SAME-R,101,test,Pyrell,84a,aged,30-Aug,8.1,1.225,,,,632
+PSI-101,SAME-R,102,test,Pyrell,87,Baseline STS det,30-Aug,8.1,1.22,60,11,8,45
+PSI-101,SAME-R,103,test,Pyrell,95,No flow run w/ aging,7-Sep,0,1.22,60,11,8,38
+PSI-101,SAME-R,104,test,Pyrell,95a,aged,7-Sep,0,1.22,,,,n/a
+PSI-101,SAME-R,105,test,Pyrell,97,No flow run w/aging,8-Sep,0,1.23,60,11,8,48
+PSI-101,SAME-R,106,test,Pyrell,97a,aged,8-Sep,0,1.23,,,,624
+PSI-101,SAME-R,107,test,Pyrell,107,Low flow run w/aging,9-Sep,1,1.23,60,11,8,32
+PSI-101,SAME-R,108,test,Pyrell,107a,aged,9-Sep,1,1.23,,,,559
+PSI-101,SAME-R,109,test,Pyrell,113,low flow run w STS,9-Sep,2,1.23,60,11,8,31

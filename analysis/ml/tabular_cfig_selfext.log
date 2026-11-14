@@ -1,0 +1,10 @@
+
+== cfig_selfext: n=263, hari=23
+  logistik (fitur lama)    per-hari [0.69  0.2   0.707]  acak [0.753 0.169 0.774]
+  logistik (fitur penuh)   per-hari [0.854 0.139 0.825]  acak [0.869 0.122 0.857]
+  random forest            per-hari [0.87  0.13  0.852]  acak [0.923 0.1   0.872]
+  extra trees              per-hari [0.877 0.153 0.753]  acak [0.924 0.105 0.846]
+  gradient boosting        per-hari [0.889 0.128 0.84 ]  acak [0.926 0.087 0.894]
+  SVM RBF                  per-hari [0.845 0.151 0.783]  acak [0.906 0.109 0.85 ]
+  proses Gaussian          per-hari [0.832 0.148 0.768]  acak [0.922 0.098 0.869]
+  MLP (jaringan saraf)     per-hari [0.867 0.142 0.795]  acak [0.928 0.088 0.872]

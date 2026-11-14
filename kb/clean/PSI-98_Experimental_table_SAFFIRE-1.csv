@@ -1,0 +1,5 @@
+sample_number,material,sample_thickness_cm,sample_length_cm,sample_width_cm,air_flow_cm_s,percent_o2,ignition_power_w,ignition_time_s,burn_time_s,flow_direction,camera_1,camera_2
+S1,SIBAL Fabric,0.37,40.6,94,20,21.5 - 21.7,182,8,420,Concurrent,S1C1,S1C2
+S2,SIBAL Fabric,0.37,40.6,94,20,~ 21.5,182,8,70,Opposed,S2C1,S2C2
+F1C1/F1C2,Pre-test flow visulation data for sample 1,,,,,,,,,,,
+F2C1/F2C2,Pre-test flow visulation data for sample 2,,,,,,,,,,,

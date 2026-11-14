@@ -1,0 +1,766 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(workspace.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/base\report.
+cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.
+clo))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc
+.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/base\inputen
+c.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/babel\babe
+l.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtb
+abel.def)
+*************************************
+* Local config file bblopts.cfg used
+*
+
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopt
+s.cfg)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/babel/loca
+le/id\babel-indonesian.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/babel-indone
+sian\indonesian.ldf))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.s
+ty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mi
+crotype.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/graphics\key
+val.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\eto
+olbox.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mi
+crotype-pdftex.def)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mi
+crotype.cfg))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geo
+metry.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvt
+ex.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifte
+x.sty))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geo
+metry.cfg))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\boo
+ktabs.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/tools\longta
+ble.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.
+sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabula
+rx.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/multirow\mul
+tirow.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolo
+r.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg
+\color.cfg)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def
+\pdftex.def)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mat
+hcolor.ltx))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/graphics\gra
+phicx.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/graphics\gra
+phics.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/graphics\tri
+g.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg
+\graphics.cfg)))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enu
+mitem.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/caption\capt
+ion.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/caption\capt
+ion3.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltca
+ption.sty))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/float\float.
+sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsm
+ath.sty
+For additional information on amsmath, use the `?' option.
+
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amst
+ext.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsg
+en.sty))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsb
+sy.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amso
+pn.sty))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontend
+layer\tikz.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclay
+er\pgf.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilitie
+s\pgfrcs.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilit
+ies\pgfutil-common.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilit
+ies\pgfutil-latex.def)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilit
+ies\pgfrcs.code.tex
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.re
+vision.tex)))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclay
+er\pgfcore.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemla
+yer\pgfsys.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/system
+layer\pgfsys.code.tex
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilit
+ies\pgfkeys.code.tex
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilit
+ies\pgfkeyslibraryfiltered.code.tex))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/system
+layer\pgf.cfg)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/system
+layer\pgfsys-pdftex.def
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/system
+layer\pgfsys-common-pdf.def)))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/system
+layer\pgfsyssoftpath.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/system
+layer\pgfsysprotocol.code.tex))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcore.code.tex
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmath.code.tex
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathutil.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathparser.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.basic.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.trigonometric.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.random.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.comparison.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.base.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.round.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.misc.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfunctions.integerarithmetics.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathcalc.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmathfloat.code.tex))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfint.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorepoints.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorepathconstruct.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorepathusage.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorescopes.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcoregraphicstate.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcoretransformations.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorequick.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcoreobjects.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorepathprocessing.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorearrows.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcoreshade.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcoreimage.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcoreexternal.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorelayers.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcoretransparency.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorepatterns.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basicl
+ayer\pgfcorerdf.code.tex)))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/module
+s\pgfmoduleshapes.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/module
+s\pgfmoduleplot.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatib
+ility\pgfcomp-version-0-65.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatib
+ility\pgfcomp-version-1-18.sty))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilitie
+s\pgffor.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilitie
+s\pgfkeys.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilit
+ies\pgfkeys.code.tex))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgf
+math.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\p
+gfmath.code.tex))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilit
+ies\pgffor.code.tex))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fronte
+ndlayer/tikz\tikz.code.tex
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/librar
+ies\pgflibraryplothandlers.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/module
+s\pgfmodulematrix.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fronte
+ndlayer/tikz/libraries\tikzlibrarytopaths.code.tex)))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/librar
+ies\pgflibraryarrows.meta.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fronte
+ndlayer/tikz/libraries\tikzlibrarypositioning.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fronte
+ndlayer/tikz/libraries\tikzlibraryfit.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pgf/fronte
+ndlayer/tikz/libraries\tikzlibrarycalc.code.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fan
+cyhdr.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\tit
+lesec.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyp
+erref.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kv
+setkeys.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/kvdefineke
+ys\kvdefinekeys.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\
+pdfescape.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\lt
+xcmds.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds
+\pdftexcmds.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\
+infwarerr.sty)))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hyco
+lor.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nam
+eref.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/refcount\ref
+count.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/gettitlest
+ring\gettitlestring.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kv
+options.sty)))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\
+stringenc.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1
+enc.def)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\in
+tcalc.sty)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pue
+nc.def)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bit
+set.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc
+\bigintcalc.sty)))
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpd
+ftex.def
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/rerunfileche
+ck\rerunfilecheck.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/generic/uniquecoun
+ter\uniquecounter.sty))) (data/angka.tex)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd)
+
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3
+backend-pdftex.def) (workspace.aux)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt
+-cmr.cfg)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\
+supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg
+\epstopdf-base.sty
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\eps
+topdf-sys.cfg)) (workspace.out) (workspace.out)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.f
+d)
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.f
+d) [1{C:/Users/Dietrich Tarigan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.ma
+p}{C:/Users/Dietrich Tarigan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/l
+m-ec.enc}] (workspace.toc
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.35 ...ine {7}Analisis video BASS}{19}{chapter.7}
+                                                  % [1] [2]) [3]
+Bab 1.
+
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
+) [4] [5]
+Bab 2.
+
+Overfull \hbox (24.46954pt too wide) in paragraph at lines 225--227
+ [][] 
+[6]
+(C:\Users\Dietrich Tarigan\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+) [7{C:/Users/Dietrich Tarigan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm
+/lm-ts1.enc}] [8]
+Bab 3.
+[9] [10]
+Bab 4.
+[11{C:/Users/Dietrich Tarigan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/
+lm-mathit.enc}{C:/Users/Dietrich Tarigan/AppData/Local/Programs/MiKTeX/fonts/en
+c/dvips/lm/lm-rm.enc}] [12]
+Bab 5.
+[13{C:/Users/Dietrich Tarigan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/
+lm-mathsy.enc}] [14] [15]
+Bab 6.
+[16] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 686--686
+[]\T1/lmr/bx/n/10 (+20) Gambar 6.1: |\T1/lmr/m/n/10 (+20) Uji de-ngan skor ano-
+ma-li ter-ting-gi di atas ko-ri-dor ke-lom-pok-nya
+[18 <./gambar/top_anomalies.png>]
+Bab 7.
+[19] [20 <./gambar/video_bukti_T5.png (PNG copy)>]
+Bab 8.
+[21] [22] [23 <./gambar/saffire1_C2.png>]
+Bab 9.
+
+Underfull \hbox (badness 10000) in paragraph at lines 899--899
+[]\T1/lmr/bx/n/10 (+20) Tabel 9.2: |\T1/lmr/m/n/10 (+20) Per-ban-ding-an pa-da 
+320 uji PSI-159, va-li-da-si per ha-ri
+
+Overfull \hbox (9.40341pt too wide) in paragraph at lines 900--911
+ [][] 
+[24] [25 <./gambar/cfig_ignition_map.png>] [26]
+Bab 10.
+[27]
+Bab 11.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1080--1080
+[]|\T1/lmr/m/n/10 (+20) tanda
+
+Underfull \hbox (badness 10000) in paragraph at lines 1080--1080
+[]|\T1/lmr/m/n/10 (+20) tanda
+[28] [29]
+Bab 12.
+[30]
+Bab 13.
+[31] [32 <./gambar/dashboard_terang.png (PNG copy)>]
+Bab 14.
+[33] [34]
+Bab 15.
+[35]
+Bab 16.
+[36]
+Bab 17.
+
+Package tabularx Warning: X Columns too narrow (table too wide)
+(tabularx)                 on input line 1364.
+
+
+Overfull \hbox (11.56pt too wide) in paragraph at lines 1364--1364
+[]|\T1/lmr/m/n/10 (-20) Hasil| 
+
+Overfull \hbox (25.08803pt too wide) in paragraph at lines 1364--1364
+[]|\T1/lmr/m/n/10 (-20) Katalog,
+
+Overfull \hbox (4.11862pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) me-
+
+Overfull \hbox (1.94104pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) da-
+
+Overfull \hbox (4.663pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) ma-
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 ni-
+
+Overfull \hbox (6.35904pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) fest,
+
+Overfull \hbox (5.78876pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) dan
+
+Overfull \hbox (5.51279pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) ber-
+
+Overfull \hbox (3.93802pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) kas
+
+Overfull \hbox (5.65254pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) PSI| 
+
+Overfull \hbox (30.96936pt too wide) in paragraph at lines 1364--1364
+[]|\T1/lmr/m/n/10 (-20) Dokumen
+
+Overfull \hbox (17.08572pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) NTRS| 
+
+Overfull \hbox (17.73016pt too wide) in paragraph at lines 1364--1364
+[]|\T1/lmr/m/n/10 (-20) Daftar
+
+Overfull \hbox (1.94104pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) do-
+
+Overfull \hbox (2.21347pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) ku-
+
+Overfull \hbox (7.96634pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) men
+
+Overfull \hbox (17.08572pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) NTRS
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 lu-
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (+20) ar
+
+Overfull \hbox (3.339pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) pik| 
+
+Overfull \hbox (31.10611pt too wide) in paragraph at lines 1364--1364
+[]|\T1/lmr/m/n/10 (-20) Metadata
+
+Overfull \hbox (5.78876pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) dan
+
+Overfull \hbox (10.22304pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) PDF
+
+Overfull \hbox (1.66908pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) ak-
+
+Overfull \hbox (2.08682pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) ses
+
+Overfull \hbox (3.60185pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) ter-
+
+Overfull \hbox (2.48543pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) bu-
+
+Overfull \hbox (1.94104pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) pa-
+
+Overfull \hbox (3.71613pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) per
+
+Overfull \hbox (5.51279pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) ber-
+
+Overfull \hbox (8.64742pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) DOI| 
+
+Overfull \hbox (32.25958pt too wide) in paragraph at lines 1364--1364
+[]|\T1/lmr/m/n/10 (-20) Inventaris
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (+20) isi
+
+Overfull \hbox (2.5222pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) zip| 
+
+Overfull \hbox (4.69995pt too wide) in paragraph at lines 1364--1364
+[]|$\T1/lmtt/m/n/10 kb /
+
+Overfull \hbox (22.8321pt too wide) in paragraph at lines 1364--1364
+\T1/lmtt/m/n/10 clean/$\T1/lmr/m/n/10 (-20) ,
+
+Overfull \hbox (4.69995pt too wide) in paragraph at lines 1364--1364
+\T1/lmtt/m/n/10 kb /
+
+Overfull \hbox (15.19992pt too wide) in paragraph at lines 1364--1364
+\T1/lmtt/m/n/10 gold /
+
+Overfull \hbox (33.57486pt too wide) in paragraph at lines 1364--1364
+\T1/lmtt/m/n/10 freefall .
+
+Overfull \hbox (21.49991pt too wide) in paragraph at lines 1364--1364
+\T1/lmtt/m/n/10 sqlite$| 
+
+Overfull \hbox (16.68364pt too wide) in paragraph at lines 1364--1364
+[]|\T1/lmr/m/n/10 (-20) Model
+
+Overfull \hbox (9.04417pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) awal
+
+Overfull \hbox (5.78876pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) dan
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (+20) si-
+
+Overfull \hbox (4.9296pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) mu-
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (+20) la-
+
+Overfull \hbox (2.54956pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) tor| 
+
+Overfull \hbox (11.56pt too wide) in paragraph at lines 1364--1364
+[]|\T1/lmr/m/n/10 (-20) Hasil
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 te-
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (+20) le-
+
+Overfull \hbox (4.11862pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) me-
+
+Overfull \hbox (11.56pt too wide) in paragraph at lines 1364--1364
+[]|\T1/lmr/m/n/10 (-20) Hasil
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (+20) vi-
+
+Overfull \hbox (4.7pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) deo
+
+Overfull \hbox (5.78876pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) dan
+
+Overfull \hbox (1.94104pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) ha-
+
+Overfull \hbox (7.3852pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) lam-
+
+Overfull \hbox (1.67445pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) pe-
+
+Overfull \hbox (4.11862pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) me-
+
+Overfull \hbox (3.32962pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) rik-
+
+Overfull \hbox (18.44815pt too wide) in paragraph at lines 1364--1364
+[]|\T1/lmr/m/n/10 (-20) Tensor
+
+Overfull \hbox (5.78876pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) dan
+
+Overfull \hbox (11.77757pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) CNN
+
+Overfull \hbox (2.45912pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) (se-
+
+Overfull \hbox (1.94104pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) ba-
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (+20) ik-
+
+Overfull \hbox (4.96123pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) nya
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (+20) di
+
+Overfull \hbox (15.52069pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) GPU)| 
+
+Overfull \hbox (49.22964pt too wide) in paragraph at lines 1364--1364
+[]|\T1/lmr/m/n/10 (-20) Perbandingan
+
+Overfull \hbox (4.663pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) mo-
+
+Overfull \hbox (2.5222pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) del
+
+Overfull \hbox (2.48543pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) bu-
+
+Overfull \hbox (1.26053pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) lar
+
+Overfull \hbox (1.86009pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) (la-
+
+Overfull \hbox (6.87756pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) ma)| 
+
+Overfull \hbox (24.32007pt too wide) in paragraph at lines 1364--1364
+[]|\T1/lmr/m/n/10 (-20) Koridor,
+
+Overfull \hbox (1.94104pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) ba-
+
+Overfull \hbox (3.90903pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) tas,
+
+Overfull \hbox (0.87938pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) ru-
+
+Overfull \hbox (8.53073pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) mus,
+
+Overfull \hbox (2.21347pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) ku-
+
+Overfull \hbox (1.94104pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) an-
+
+Overfull \hbox (0.58783pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) til,
+
+Overfull \hbox (1.94104pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) Sa-
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 ffi-
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (+20) re,
+
+Overfull \hbox (4.1735pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) sta-
+
+Overfull \hbox (1.9957pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) tis-
+
+Overfull \hbox (3.03806pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) tik,
+
+Overfull \hbox (8.78365pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) otak| 
+
+Overfull \hbox (36.22328pt too wide) in paragraph at lines 1364--1364
+[]|\T1/lmr/m/n/10 (-20) Dashboard
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (+20) di
+
+Overfull \hbox (13.62492pt too wide) in paragraph at lines 1364--1364
+[]$\T1/lmtt/m/n/10 http :
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmtt/m/n/10 / /
+
+Overfull \hbox (7.06244pt too wide) in paragraph at lines 1364--1364
+\T1/lmtt/m/n/10 127 .
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmtt/m/n/10 0 .
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmtt/m/n/10 0 .
+
+Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+\T1/lmtt/m/n/10 1 :
+
+Overfull \hbox (15.19992pt too wide) in paragraph at lines 1364--1364
+\T1/lmtt/m/n/10 8765 /
+
+Overfull \hbox (10.99994pt too wide) in paragraph at lines 1364--1364
+\T1/lmtt/m/n/10 app/$[]| 
+
+Overfull \hbox (13.9442pt too wide) in paragraph at lines 1364--1364
+[]|\T1/lmr/m/n/10 (-20) Tabel
+
+Overfull \hbox (5.78876pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) dan
+
+Overfull \hbox (6.84103pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) ang-
+
+Overfull \hbox (2.48543pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) un-
+
+Overfull \hbox (4.16805pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) tuk
+
+Overfull \hbox (1.94104pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) do-
+
+Overfull \hbox (2.21347pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) ku-
+
+Overfull \hbox (7.96634pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) men
+
+Overfull \hbox (0.88878pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) ini| 
+
+Overfull \hbox (30.96936pt too wide) in paragraph at lines 1364--1364
+[]|\T1/lmr/m/n/10 (-20) Dokumen
+
+Overfull \hbox (0.88878pt too wide) in paragraph at lines 1364--1364
+\T1/lmr/m/n/10 (-20) ini| 
+
+Overfull \hbox (88.17899pt too wide) in alignment at lines 1364--1364
+[][][] 
+
+LaTeX Warning: Float too large for page by 796.02052pt on input line 1365.
+
+[37] [38]
+Lampiran A.
+(data/tab_inventaris.tex
+ignored error: Infinite glue shrinkage found in box being split [39]
+ignored error: Infinite glue shrinkage found in box being split [40]
+ignored error: Infinite glue shrinkage found in box being split [41]
+ignored error: Infinite glue shrinkage found in box being split [42]
+ignored error: Infinite glue shrinkage found in box being split [43]
+ignored error: Infinite glue shrinkage found in box being split [44]) [45]
+Lampiran B.
+(data/tab_psi.tex
+ignored error: Infinite glue shrinkage found in box being split [46]) [47]
+Lampiran C.
+[48] (workspace.aux) )
+(see the transcript file for additional information)<C:/Users/Dietrich Tarigan/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Dietri
+ch Tarigan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/U
+sers/Dietrich Tarigan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8
+.pfb><C:/Users/Dietrich Tarigan/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/lm/lmbx9.pfb><C:/Users/Dietrich Tarigan/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/lm/lmmi10.pfb><C:/Users/Dietrich Tarigan/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Dietrich Tarigan/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Dietrich Tarigan/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Dietrich Tarig
+an/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Dietr
+ich Tarigan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Us
+ers/Dietrich Tarigan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.p
+fb><C:/Users/Dietrich Tarigan/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmri10.pfb><C:/Users/Dietrich Tarigan/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/lm/lmri9.pfb><C:/Users/Dietrich Tarigan/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/lm/lmss10.pfb><C:/Users/Dietrich Tarigan/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Dietrich Tarigan/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/Dietrich Tar
+igan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/D
+ietrich Tarigan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
+Output written on workspace.pdf (49 pages, 2134500 bytes).
+Transcript written on workspace.log.
+pdflatex: major issue: So far, you have not checked for MiKTeX updates.

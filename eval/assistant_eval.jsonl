@@ -1,0 +1,28 @@
+{"id": "q01_kenapa_g8", "q": "Kenapa uji 21106G8 dicurigai?", "expect_tools": ["explain_test"], "must_contain": ["positif_palsu"], "expect_ui": "focus"}
+{"id": "q02_dosir_g7", "q": "Tunjukkan data uji 21106G7", "expect_tools": ["get_test"], "must_contain": ["21106G7"], "expect_ui": "focus"}
+{"id": "q03_whatif_cfig", "q": "Bagaimana jika O2 0.30 dan bahan bakar 0.4 pada butana normal?", "expect_tools": ["whatif_cfig"], "must_contain": ["P(menyala)", "prediksi model"], "expect_ui": "whatif"}
+{"id": "q04_whatif_luar", "q": "Bagaimana jika O2 0.70 pada butana normal dengan bahan bakar 0.3?", "expect_tools": ["whatif_cfig"], "must_contain": ["tidak menjawab"], "must_not_contain": ["P(menyala) ="]}
+{"id": "q05_whatif_flex", "q": "Bagaimana jika droplet heptana di O2 0.18, tekanan 100 kPa, helium 0.2?", "expect_tools": ["whatif_flex"], "must_contain": ["P(padam", "mm²/s"], "expect_ui": "whatif"}
+{"id": "q06_next_cfig", "q": "Uji ISS apa yang sebaiknya dilakukan berikutnya?", "expect_tools": ["recommend_next_tests"], "must_contain": ["paling tidak pasti"]}
+{"id": "q07_next_flex", "q": "Rekomendasi eksperimen berikutnya untuk droplet FLEX", "expect_tools": ["recommend_next_tests"], "must_contain": ["FLEX"]}
+{"id": "q08_alerts", "q": "Apa saja peringatan atau anomali yang ada sekarang?", "expect_tools": ["list_alerts"], "must_contain": ["kritis"]}
+{"id": "q09_queue", "q": "Data mana yang perlu diverifikasi manusia lebih dulu?", "expect_tools": ["review_queue"], "must_contain": ["tidak bisa memverifikasi"]}
+{"id": "q10_inverse", "q": "Seberapa yakin kita bahwa nyala inverse lebih mudah menyala?", "expect_tools": ["uncertainty_stats"], "must_contain": ["belum terbukti"]}
+{"id": "q11_flexK_ci", "q": "Seberapa yakin angka laju bakar K droplet FLEX?", "expect_tools": ["uncertainty_stats"], "must_contain": ["hari"]}
+{"id": "q12_coverage", "q": "Apa yang belum kita ketahui dari data ini?", "expect_tools": ["coverage"], "must_contain": ["PSI-"]}
+{"id": "q13_models", "q": "Seberapa bagus model yang dipakai?", "expect_tools": ["model_cards"], "must_contain": ["gp_boundary"]}
+{"id": "q14_related", "q": "Uji apa yang mirip dengan 21196A1?", "expect_tools": ["related"], "must_contain": ["21196A2"]}
+{"id": "q15_paper_saffire", "q": "Apa kata laporan NASA tentang Saffire spacecraft fire?", "expect_tools": ["search_papers"], "must_contain": ["paper"]}
+{"id": "q16_ambigu", "q": "Tunjukkan uji 99999Z9", "expect_tools": ["get_test", "ui_action"], "must_contain": ["tidak ditemukan"]}
+{"id": "q17_focus_kenapa", "q": "Kenapa uji ini begitu?", "state": {"focus": "test:PSI-159:21242F2"}, "expect_tools": ["explain_test"], "must_contain": ["21242F2"]}
+{"id": "q18_suhu", "q": "Berapa kenaikan suhu burner pada uji 21106G7?", "expect_tools": ["get_test"], "must_contain": ["BUKAN suhu"], "must_not_match": ["\\d\\s*(°\\s*C|derajat)"]}
+{"id": "q19_kontradiksi", "q": "Tunjukkan uji 21106F2", "expect_tools": ["get_test"], "must_contain": ["kontradiksi"]}
+{"id": "q20_tekanan", "q": "Tunjukkan data uji 19115A1", "expect_tools": ["get_test"], "must_contain": ["sinyal NASA terkalibrasi", "kPa"]}
+{"id": "h01", "q": "mengapa test 21242F2 aneh", "expect_tools": ["explain_test"], "must_contain": ["21242F2"]}
+{"id": "h02", "q": "what if inverse propane at oxygen 0.5 and fuel fraction 0.2?", "expect_tools": ["whatif_cfig"], "must_contain": ["P(menyala)"]}
+{"id": "h03", "q": "kondisi mana yang paling layak diuji di ISS selanjutnya untuk nyala gas?", "expect_tools": ["recommend_next_tests"], "must_contain": ["CFI-G"]}
+{"id": "h04", "q": "ada data yang saling bertentangan?", "expect_tools": ["list_alerts"], "must_contain": ["kritis"]}
+{"id": "h05", "q": "investigasi mana yang paling sedikit hasil ujinya?", "expect_tools": ["coverage"], "must_contain": ["PSI-"]}
+{"id": "h06", "q": "berapa tekanan ruang saat uji 19115A1 dimulai?", "expect_tools": ["get_test"], "must_contain": ["kPa"]}
+{"id": "h07", "q": "tolong cari literatur soal smoldering di gravitasi mikro", "expect_tools": ["search_papers"], "must_contain": ["paper"]}
+{"id": "h08", "q": "kalau metanol, O2 25%, 150 kPa tanpa helium, apakah dropletnya padam duluan?", "expect_tools": ["whatif_flex"], "must_contain": ["P(padam"]}

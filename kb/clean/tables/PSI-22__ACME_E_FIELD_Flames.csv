@@ -1,0 +1,33 @@
+_accession,_table,_source_row,_row_kind,Test Type,Test Day,Year,Month,Date,Mesh Polarity,Fuel Bottle,Fuel Conc,Flames Ignited,Notes
+PSI-22,ACME E-FIELD Flames,1,test,First round of tests with coflow burner,18073,2018,3,14,negative,100% CH4,100%,10,Test day is formatted YYDDD where YY identifies year and DDD identifies day of year (GMT).
+PSI-22,ACME E-FIELD Flames,2,test,First round of tests with coflow burner,18078,2018,3,19,negative,100% CH4,70%,10,Mesh polarity refers to the polarity of the high-voltage power supply and the copper electrode relative to the burner.
+PSI-22,ACME E-FIELD Flames,3,note,,,,,,,,100%,,"Fuel Conc. (diluted with nitrogen on a volume basis) was varied between tests, but typically matched the bottle. The list only accounts for flames ignited."
+PSI-22,ACME E-FIELD Flames,4,test,First round of tests with coflow burner,18080,2018,3,21,negative,40% CH4,40%,8,Flames Ignited is the number ignited on that day (neglecting the day change on ISS).
+PSI-22,ACME E-FIELD Flames,5,test,First round of tests with coflow burner,18087,2018,3,28,negative,100% C2H4,80%,10,
+PSI-22,ACME E-FIELD Flames,6,note,,,,,,,,100%,,
+PSI-22,ACME E-FIELD Flames,7,test,First round of tests with coflow burner,18092,2018,4,2,negative,30% C2H4,30%,11,
+PSI-22,ACME E-FIELD Flames,8,test,First round of tests with coflow burner,18095,2018,4,5,positive,30% C2H4,30%,10,
+PSI-22,ACME E-FIELD Flames,9,test,First round of tests with coflow burner,18102,2018,4,12,positive,40% CH4,40%,8,
+PSI-22,ACME E-FIELD Flames,10,test,First round of tests with coflow burner,18106,2018,4,16,positive,40% CH4,40%,13,
+PSI-22,ACME E-FIELD Flames,11,test,First round of tests with coflow burner,18113,2018,4,23,positive,100% CH4,100%,15,
+PSI-22,ACME E-FIELD Flames,12,test,First round of tests with coflow burner,18130,2018,5,10,positive,100% CH4,70%,13,
+PSI-22,ACME E-FIELD Flames,13,test,First round of tests with coflow burner,18137,2018,5,17,positive,100% C2H4,80%,12,
+PSI-22,ACME E-FIELD Flames,14,note,,,,,,,,100%,,
+PSI-22,ACME E-FIELD Flames,15,test,Second round of tests with gas-jet burner,18269,2018,9,26,negative,40% CH4,40%,11,
+PSI-22,ACME E-FIELD Flames,16,test,Second round of tests with gas-jet burner,18274,2018,10,1,negative,30% C2H4,30%,11,
+PSI-22,ACME E-FIELD Flames,17,test,Second round of tests with gas-jet burner,18282,2018,10,9,negative,100% CH4,70%,13,
+PSI-22,ACME E-FIELD Flames,18,note,,,,,,,,100%,,
+PSI-22,ACME E-FIELD Flames,19,test,Second round of tests with gas-jet burner,18285,2018,10,12,negative,100% C2H4,100%,10,
+PSI-22,ACME E-FIELD Flames,20,test,Second round of tests with gas-jet burner,18290,2018,10,17,negative,100% C2H4,80%,11,
+PSI-22,ACME E-FIELD Flames,21,test,Second round of tests with gas-jet burner,18298,2018,10,25,positive,40% CH4,40%,9,
+PSI-22,ACME E-FIELD Flames,22,test,Second round of tests with gas-jet burner,18302,2018,10,29,positive,30% C2H4,30%,10,
+PSI-22,ACME E-FIELD Flames,23,test,Second round of tests with gas-jet burner,18312,2018,11,8,positive,100% CH4,70%,13,
+PSI-22,ACME E-FIELD Flames,24,note,,,,,,,,100%,,
+PSI-22,ACME E-FIELD Flames,25,test,Second round of tests with gas-jet burner,18319,2018,11,15,positive,100% C2H4,25%,11,
+PSI-22,ACME E-FIELD Flames,26,note,,,,,,,,50%,,
+PSI-22,ACME E-FIELD Flames,27,note,,,,,,,,80%,,
+PSI-22,ACME E-FIELD Flames,28,note,,,,,,,,100%,,
+PSI-22,ACME E-FIELD Flames,29,test,Second round of tests with gas-jet burner,18319,2018,11,15,positive,100% C2H4,25%,11,
+PSI-22,ACME E-FIELD Flames,30,note,,,,,,,,50%,,
+PSI-22,ACME E-FIELD Flames,31,note,,,,,,,,80%,,
+PSI-22,ACME E-FIELD Flames,32,note,,,,,,,,100%,,

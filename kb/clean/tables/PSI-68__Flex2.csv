@@ -1,0 +1,9 @@
+_accession,_table,_source_row,_row_kind,Sample (Fuel Type),Initial Droplet Diameter (mm),Ambient Gas Mixture,Oxygen Mole Fraction,Ambient Pressure (atm),Ambient Temperature (C),Flow Velocity (cm/s)
+PSI-68,Flex2,1,test,IsoOctane (pure),1.5 - 5,O2/N2 or O2/He,0.17; 0.21;0.25; 0.3,0.5; 1.0; 1.5; 2.0; or 3.0,25,0.1 - 5
+PSI-68,Flex2,2,test,n-Octane (pure),1.5 - 5,O2/N2 or O2/He,0.17; 0.21;0.25; 0.3,0.5; 1.0; 1.5; 2.0; or 3.0,25,0.1 - 5
+PSI-68,Flex2,3,test,Heptane (pure),1.5 - 5,O2/N2 or O2/He,0.17; 0.21;0.25; 0.3,0.5; 1.0; 1.5; 2.0; or 3.0,25,0.1 - 5
+PSI-68,Flex2,4,test,Decane (pure),1.5 - 5,O2/N2 or O2/He,0.17; 0.21;0.25; 0.3,0.5; 1.0; 1.5; 2.0; or 3.0,25,0.1 - 5
+PSI-68,Flex2,5,test,Ethanol (pure),1.5 - 5,O2/N2 or O2/He,0.17; 0.21;0.25; 0.3,0.5; 1.0; 1.5; 2.0; or 3.0,25,0.1 - 5
+PSI-68,Flex2,6,test,Propanol (95%) Glycerol (5%) (mixture),1.5 - 5,O2/N2 or O2/He,0.17; 0.21;0.25; 0.3,0.5; 1.0; 1.5; 2.0; or 3.0,25,0.1 - 5
+PSI-68,Flex2,7,test,Heptane (50%) IsoOctane (50%) (mixture),1.5 - 5,O2/N2 or O2/He,0.17; 0.21;0.25; 0.3,0.5; 1.0; 1.5; 2.0; or 3.0,25,0.1 - 5
+PSI-68,Flex2,8,test,Propanol (80%) Glycerol (20%) (mixture),1.5 - 5,O2/N2 or O2/He,0.17; 0.21;0.25; 0.3,0.5; 1.0; 1.5; 2.0; or 3.0,25,0.1 - 5

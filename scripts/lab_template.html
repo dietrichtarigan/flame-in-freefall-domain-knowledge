@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freefall Lab — microgravity fire simulator</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B0E14;--s1:#121722;--s2:#1C2331;--line:#232B3A;--line2:#3A4558;--tx:#E8ECF3;--mu:#9AA6B8;--tx2:#B9C3D3;--blue:#5FB4FF;--amber:#FFB454;--link:#8CC8FF}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;margin:0}
+.mono{font-family:'JetBrains Mono',monospace}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;padding:18px 28px;border-bottom:1px solid var(--line)}
+header h1{font-size:18px;letter-spacing:.08em}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;color:var(--mu);font-size:13px;margin-left:auto}
+.flow b{color:var(--tx);font-weight:500}
+main{display:flex;flex-wrap:wrap;gap:20px;padding:20px 28px 48px;max-width:1500px;margin:0 auto}
+.panel{background:var(--s1);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+#controls{flex:1 1 300px;min-width:0;max-width:380px}
+#stage{flex:999 1 420px;min-width:0;display:flex;flex-direction:column;gap:16px}
+#results{flex:1 1 340px;min-width:0;max-width:460px;display:flex;flex-direction:column;gap:20px}
+.tabs{display:flex;gap:8px;margin-bottom:18px}
+.tabs button,.presets button,.btn{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--line2);background:transparent;color:var(--tx);font:600 14px Inter,sans-serif;cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--tx);color:var(--bg);border-color:var(--tx)}
+.presets{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 18px}
+.presets button{font-weight:500;border-radius:10px}
+.btn.primary{background:var(--blue);color:#06121F;border-color:var(--blue)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #fff;outline-offset:2px}
+label.f{display:block;margin:14px 0 0;font-size:14px;color:var(--tx2)}
+label.f span.v{float:right;color:var(--tx)}
+input[type=range]{width:100%;height:28px;accent-color:var(--blue)}
+select{width:100%;min-height:44px;margin-top:6px;background:var(--s2);color:var(--tx);border:1px solid var(--line2);border-radius:10px;padding:0 12px;font:16px Inter,sans-serif}
+.cap{font-size:12px;letter-spacing:.1em;color:var(--mu);margin:0 0 6px}
+#view{position:relative;height:440px;border-radius:14px;border:1px solid var(--line);overflow:hidden;background:#06080D}
+#view canvas{display:block;width:100%;height:100%}
+#hud{position:absolute;left:16px;top:14px;font-size:13px;color:var(--tx2);line-height:1.7}
+#hud b{color:var(--tx);font-weight:500}
+#state{position:absolute;right:16px;top:14px;padding:6px 12px;border-radius:8px;border:1px solid var(--line2);font-size:13px;font-weight:600;background:rgba(11,14,20,.7)}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.bar .note{color:var(--mu);font-size:13px;flex:1 1 220px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:14px;margin-top:12px}
+.kpi .n{font:600 28px/1 'Space Grotesk',sans-serif}
+.kpi .l{font-size:13px;color:var(--mu);margin-top:6px}
+#verdict{margin:14px 0 0;font-size:15px;color:var(--tx2)}
+#warn{display:none;margin-top:14px;padding:10px 14px;border:1px solid var(--amber);border-radius:10px;color:var(--amber);font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-weight:500;color:var(--mu);padding:6px 6px 8px;font-size:12px}
+td{padding:7px 6px;border-top:1px solid var(--line);white-space:nowrap}
+td.id{color:var(--link)}
+.tw{overflow-x:auto}
+.small{font-size:13px;color:var(--mu);margin:10px 0 0}
+details{font-size:13px;color:var(--tx2)}
+summary{cursor:pointer;min-height:32px;color:var(--tx)}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <h1>FREEFALL LAB</h1>
+  <span class="mono" style="font-size:12px;color:var(--mu)">calibrated on NASA PSI flight data</span>
+  <div class="flow" aria-label="Method"><b>Preset</b>→<b>Parameters</b>→<b>Compute physics</b>→<b>Simulate</b>→<b>Evidence</b></div>
+</header>
+<main>
+  <section id="controls" class="panel" aria-label="Parameters">
+    <div class="tabs" role="group" aria-label="Fuel type">
+      <button type="button" data-mode="droplet" aria-pressed="true">Droplet</button>
+      <button type="button" data-mode="gas" aria-pressed="false">Gas flame</button>
+      <button type="button" data-mode="solid" aria-pressed="false">Solid</button>
+    </div>
+    <p class="cap">PRESET</p>
+    <div class="presets" id="presets"></div>
+    <div id="fields"></div>
+    <label class="f" style="display:flex;gap:10px;align-items:center;margin-top:18px"><input type="checkbox" id="oneg" style="width:20px;height:20px;accent-color:var(--amber)"> Draw flame as it would look in 1 g (illustration)</label>
+  </section>
+
+  <section id="stage">
+    <div id="view" aria-label="3D view of the experiment">
+      <div id="hud"></div><div id="state" aria-live="polite">Ready</div>
+    </div>
+    <div class="bar">
+      <button type="button" class="btn primary" id="run">Run simulation</button>
+      <button type="button" class="btn" id="reset">Reset</button>
+      <span class="note" id="note"></span>
+    </div>
+    <div class="panel">
+      <p class="cap">COMPUTED FROM THE FITTED MODEL</p>
+      <div class="kpis" id="kpis"></div>
+      <p id="verdict" aria-live="polite"></p>
+      <div id="warn" role="alert"></div>
+    </div>
+  </section>
+
+  <section id="results">
+    <div class="panel">
+      <h2 style="font-size:18px">Closest real tests</h2>
+      <p class="small" style="margin:4px 0 12px">Ranked by distance in the parameters you set. Each row is one flight test.</p>
+      <div class="tw"><table id="evi"></table></div>
+      <p class="small mono" id="prov"></p>
+    </div>
+    <div class="panel">
+      <h2 style="font-size:18px">How far to trust this</h2>
+      <div id="trust" style="margin-top:10px;font-size:14px;color:var(--tx2)"></div>
+      <details style="margin-top:10px"><summary>Model equation</summary><div id="eq" class="mono" style="font-size:12px;line-height:1.7;overflow-wrap:anywhere"></div></details>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const MODEL = /*__MODEL__*/null;
+const DATA = /*__DATA__*/null;
+const P0 = 101.325, $ = s => document.querySelector(s);
+const sig = z => 1 / (1 + Math.exp(-z)), dot = (b, x) => b.reduce((s, v, i) => s + v * x[i], 0);
+const med = a => { const s = a.slice().sort((x, y) => x - y); return s.length ? s[Math.floor(s.length / 2)] : null; };
+const pct = p => Math.round(p * 100) + "%";
+
+const FIELDS = {
+  droplet: [
+    {k:"fuel", label:"Fuel", type:"select", opts:["Methanol","Heptane"]},
+    {k:"o2", label:"Oxygen mole fraction", min:0.10, max:0.40, step:0.01, d:2},
+    {k:"p", label:"Pressure (kPa)", min:40, max:320, step:1, d:0},
+    {k:"dil", label:"Added diluent", type:"select", opts:["None (nitrogen balance)","CO2","Helium"]},
+    {k:"xd", label:"Diluent mole fraction", min:0, max:0.7, step:0.05, d:2},
+    {k:"d0", label:"Droplet diameter (mm)", min:1, max:5, step:0.1, d:1}],
+  gas: [
+    {k:"base", label:"Fuel", type:"select", opts:["ethane","propane","butane"]},
+    {k:"xf", label:"Fuel mole fraction in supply", min:0.1, max:1, step:0.05, d:2},
+    {k:"o2", label:"Oxygen mole fraction", min:0.12, max:0.85, step:0.01, d:2},
+    {k:"p", label:"Pressure (kPa)", min:50, max:330, step:1, d:0},
+    {k:"cfg", label:"Configuration", type:"select", opts:["Normal flame","Inverse flame"]}],
+  solid: [
+    {k:"mat", label:"Material", type:"select", opts:["Any","PMMA","SIBAL","Nomex","Silicone"]},
+    {k:"o2", label:"Oxygen mole fraction", min:0.12, max:0.24, step:0.005, d:3}]
+};
+const PRESETS = {
+  droplet: [
+    ["ISS cabin air", {fuel:"Heptane", o2:0.21, p:101, dil:"None (nitrogen balance)", xd:0, d0:3}],
+    ["Exploration atmosphere", {fuel:"Heptane", o2:0.34, p:57, dil:"None (nitrogen balance)", xd:0, d0:3}],
+    ["CO2 suppression", {fuel:"Heptane", o2:0.18, p:101, dil:"CO2", xd:0.3, d0:3}],
+    ["Helium suppression", {fuel:"Methanol", o2:0.17, p:101, dil:"Helium", xd:0.2, d0:3}]],
+  gas: [
+    ["Air, 1 atm", {base:"ethane", xf:1, o2:0.21, p:101, cfg:"Normal flame"}],
+    ["Oxygen-rich", {base:"propane", xf:0.3, o2:0.40, p:101, cfg:"Normal flame"}],
+    ["Low pressure", {base:"butane", xf:0.3, o2:0.30, p:55, cfg:"Inverse flame"}]],
+  solid: [["Cabin air", {mat:"Any", o2:0.21}], ["Reduced oxygen", {mat:"PMMA", o2:0.16}]]
+};
+let mode = "droplet", S = Object.assign({}, PRESETS.droplet[0][1]), R = null, run = null;
+
+function buildFields() {
+  $("#presets").innerHTML = "";
+  PRESETS[mode].forEach(([name, v]) => { const b = document.createElement("button"); b.type = "button"; b.textContent = name;
+    b.onclick = () => { S = Object.assign({}, v); buildFields(); compute(); }; $("#presets").appendChild(b); });
+  const box = $("#fields"); box.innerHTML = "";
+  FIELDS[mode].forEach(f => {
+    const lab = document.createElement("label"); lab.className = "f"; lab.htmlFor = "f_" + f.k;
+    if (f.type === "select") {
+      lab.textContent = f.label; const s = document.createElement("select"); s.id = "f_" + f.k;
+      f.opts.forEach(o => { const e = document.createElement("option"); e.textContent = o; s.appendChild(e); });
+      s.value = S[f.k]; s.onchange = () => { S[f.k] = s.value; compute(); }; lab.appendChild(s);
+    } else {
+      const v = document.createElement("span"); v.className = "v mono"; v.textContent = (+S[f.k]).toFixed(f.d);
+      lab.append(f.label, v); const r = document.createElement("input"); r.type = "range"; r.id = "f_" + f.k;
+      r.min = f.min; r.max = f.max; r.step = f.step; r.value = S[f.k];
+      r.oninput = () => { S[f.k] = +r.value; v.textContent = (+r.value).toFixed(f.d); compute(); }; lab.appendChild(r);
+    }
+    box.appendChild(lab);
+  });
+}
+
+function outside(checks) { return checks.filter(([n, v, r]) => v < r[0] - 1e-9 || v > r[1] + 1e-9).map(([n, v, r]) => n + " (tested " + r[0] + "–" + r[1] + ")"); }
+
+function compute() {
+  stop(); const out = { kpi: [], warn: [], rows: [], head: [], verdict: "", trust: "", eq: "" };
+  if (mode === "droplet") {
+    const co2 = S.dil === "CO2" ? S.xd : 0, he = S.dil === "Helium" ? S.xd : 0, hep = S.fuel === "Heptane" ? 1 : 0;
+    const x = [1, hep, S.o2, co2, he, Math.log(S.p / P0)], m = MODEL.flex_K, e = MODEL.flex_ext;
+    const K = Math.max(dot(m.beta, x), 0.02), pe = sig(dot(e.beta, x.concat([S.d0])));
+    const near = DATA.flex.filter(t => t.p && t.o2 != null).map(t => {
+      const dist = Math.hypot((t.o2 - S.o2) / 0.22, Math.log(t.p / S.p) / 1.48, (t.co2 - co2) / 0.7, (t.he - he) / 0.45, ((t.d0 || S.d0) - S.d0) / 3.57) + (t.fuel === S.fuel ? 0 : 1);
+      return { t, dist }; }).sort((a, b) => a.dist - b.dist).slice(0, 7);
+    const ratios = near.map(n => n.t.dext && n.t.d0 ? n.t.dext / n.t.d0 : null).filter(v => v != null && v < 1);
+    const rext = med(ratios) || 0.5, tFull = S.d0 * S.d0 / K, ext = pe >= 0.5;
+    const tEnd = ext ? (S.d0 * S.d0 * (1 - rext * rext)) / K : tFull;
+    R = { kind: "droplet", K, pe, ext, rext, tEnd, d0: S.d0 };
+    out.kpi = [[K.toFixed(2) + " mm²/s", "burning-rate constant K (± " + m.resid_sd.toFixed(2) + ")"], [pct(pe), "chance the flame goes out early"], [tEnd.toFixed(1) + " s", ext ? "expected time to extinction" : "expected burn-out time"]];
+    out.verdict = ext ? "Most likely outcome: the flame extinguishes with about " + Math.round(rext * 100) + "% of the droplet diameter left (median of the closest tests)." : "Most likely outcome: the droplet burns to completion.";
+    out.warn = outside([["oxygen", S.o2, m.range.o2], ["pressure", S.p, m.range.p], ["droplet size", S.d0, m.range.d0], ["CO2", co2, m.range.co2], ["helium", he, m.range.he]]);
+    out.head = ["Test", "Fuel", "O₂", "kPa", "Diluent", "d₀", "K", "Ended"];
+    out.rows = near.map(n => { const t = n.t; return { cells: [t.id, t.fuel, t.o2, Math.round(t.p), t.co2 ? "CO₂ " + t.co2 : t.he ? "He " + t.he : "N₂", t.d0 ?? "–", t.K ?? "–", t.end], prov: "PSI-69 · doi:10.60555/mbq8-0451 · PSI-69_Experimental table_FLEX.csv · data row " + t.row }; });
+    out.trust = "K: fitted on " + m.metrics.n + " FLEX tests, R² " + m.metrics.r2 + ", cross-validated error " + m.metrics.rmse_cv + " mm²/s (no-model error " + m.metrics.rmse_baseline + "). Extinction: " + e.metrics.n + " tests, cross-validated AUC " + e.metrics.auc_cv + ", accuracy " + pct(e.metrics.accuracy_cv) + " against " + pct(e.metrics.accuracy_baseline) + " for always guessing extinction. Droplet diameter follows the d² law; flame size on screen is illustrative.";
+    out.eq = "K = " + m.beta.map((b, i) => b + "·" + m.features[i]).join(" + ") + "<br>logit P(ext) = " + e.beta.map((b, i) => b + "·" + e.features[i]).join(" + ");
+  } else if (mode === "gas") {
+    const inv = S.cfg === "Inverse flame" ? 1 : 0, m = MODEL.gas_ign, s = MODEL.gas_selfext;
+    const x = [1, inv, S.base === "propane" ? 1 : 0, S.base === "butane" ? 1 : 0, S.o2, S.xf, Math.log(S.p / P0)];
+    const pi = sig(dot(m.beta, x)), ps = sig(dot(s.beta, x));
+    const near = DATA.gas.filter(t => t.p && t.o2 != null && t.xf != null).map(t => ({ t, dist: Math.hypot((t.o2 - S.o2) / 0.73, (t.xf - S.xf) / 1, Math.log(t.p / S.p) / 1.9) + (t.base === S.base ? 0 : 1) + (t.inv === inv ? 0 : 1) })).sort((a, b) => a.dist - b.dist).slice(0, 7);
+    const tb = med(near.filter(n => n.t.ign === "yes" && n.t.t).map(n => n.t.t)) || 20;
+    R = { kind: "gas", pi, ps, ign: pi >= 0.5, self: ps >= 0.5, tEnd: tb };
+    out.kpi = [[pct(pi), "chance of hot ignition"], [pct(ps), "chance it then self-extinguishes"], [Math.round(tb) + " s", "median burn time, closest tests"]];
+    out.verdict = !R.ign ? "Most likely outcome: no hot ignition." : R.self ? "Most likely outcome: ignites, then goes out on its own." : "Most likely outcome: ignites and burns until the gas flow is stopped.";
+    out.warn = outside([["oxygen", S.o2, m.range.o2], ["pressure", S.p, m.range.p], ["fuel fraction", S.xf, m.range.xf]]);
+    out.head = ["Test", "Fuel", "Type", "O₂", "X fuel", "kPa", "Ignited", "Ended", "s"];
+    out.rows = near.map(n => { const t = n.t; return { cells: [t.id, t.fuel, t.inv ? "inverse" : "normal", (+t.o2).toFixed(2), (+t.xf).toFixed(2), Math.round(t.p), t.ign || "–", t.out || "–", t.t ?? "–"], prov: "PSI-159 · ACME CFI-G · " + t.table + " · data row " + t.row }; });
+    out.trust = "Ignition: fitted on " + m.metrics.n + " CFI-G tests, cross-validated AUC " + m.metrics.auc_cv + ", accuracy " + pct(m.metrics.accuracy_cv) + " against " + pct(m.metrics.accuracy_baseline) + " for always guessing ignition. Self-extinction: " + s.metrics.n + " tests, AUC " + s.metrics.auc_cv + ". These are modest models; read the probabilities as a guide and check the tests on the left.";
+    out.eq = "logit P(ign) = " + m.beta.map((b, i) => b + "·" + m.features[i]).join(" + ") + "<br>logit P(self-ext) = " + s.beta.map((b, i) => b + "·" + s.features[i]).join(" + ");
+  } else {
+    const pool = DATA.solid.filter(t => t.o2 != null && (S.mat === "Any" || (t.fuel || "").toLowerCase().includes(S.mat.toLowerCase())));
+    const near = pool.map(t => ({ t, dist: Math.abs(t.o2 - S.o2) - (t.out ? 0.02 : 0) })).sort((a, b) => a.dist - b.dist).slice(0, 8);
+    R = { kind: "solid" };
+    const so = MODEL.solid;
+    out.kpi = [[so.n_tests, "solid-fuel tests tabulated"], [so.n_with_outcome, "with a recorded outcome"], [so.n_with_spread_rate, "with a flame-spread rate"]];
+    out.verdict = "No prediction is made for solids. The flight tables record what was tested but almost never how it ended, so this view shows evidence only.";
+    out.head = ["Exp.", "Test", "Material", "O₂ start", "O₂ end", "Flow", "Result"];
+    out.rows = near.map(n => { const t = n.t; return { cells: [t.exp, t.id, (t.fuel || "–").slice(0, 26), t.o2.toFixed(3), t.o2f != null ? t.o2f.toFixed(3) : "–", t.flow != null ? t.flow + " cm/s " + (t.dir || "") : "–", t.spread != null ? t.spread + " mm/s" : (t.out || "–")], prov: t.acc + " · " + t.exp + " experimental table · data row " + t.row }; });
+    out.trust = "Flame-spread rates for BASS and BASS-II exist only in video and papers. Until those are extracted, any solid-fuel number shown as a prediction would be invented.";
+    out.eq = "none";
+  }
+  $("#kpis").innerHTML = out.kpi.map(k => '<div class="kpi"><div class="n">' + k[0] + '</div><div class="l">' + k[1] + "</div></div>").join("");
+  $("#verdict").textContent = out.verdict;
+  const w = $("#warn"); w.style.display = out.warn.length ? "block" : "none";
+  w.textContent = out.warn.length ? "Extrapolation: outside the tested range for " + out.warn.join(", ") + ". Treat the numbers above as unsupported." : "";
+  $("#evi").innerHTML = "<thead><tr>" + out.head.map(h => '<th scope="col">' + h + "</th>").join("") + "</tr></thead><tbody>" + out.rows.map((r, i) => '<tr tabindex="0" data-i="' + i + '">' + r.cells.map((c, j) => '<td class="' + (j < 1 ? "id mono" : "") + '">' + c + "</td>").join("") + "</tr>").join("") + "</tbody>";
+  $("#prov").textContent = out.rows.length ? "Select a row to see its source." : "No matching tests.";
+  document.querySelectorAll("#evi tbody tr").forEach(tr => { const show = () => { $("#prov").textContent = out.rows[+tr.dataset.i].prov; }; tr.onclick = show; tr.onfocus = show; });
+  $("#trust").textContent = out.trust; $("#eq").innerHTML = out.eq;
+  $("#run").disabled = mode === "solid"; $("#run").style.opacity = mode === "solid" ? 0.4 : 1;
+  $("#note").textContent = mode === "solid" ? "Nothing to simulate for solids yet." : "Playback is time-compressed to about 8 seconds.";
+  drawIdle();
+}
+
+/* ---------- 3D view ---------- */
+let renderer, scene, camera, drop, flame, glow, sheet, clockT = 0, ok3d = typeof THREE !== "undefined";
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+function init3d() {
+  const el = $("#view");
+  if (!ok3d) { $("#hud").textContent = "3D library did not load; numbers and evidence still work."; return; }
+  renderer = new THREE.WebGLRenderer({ antialias: true }); renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  el.insertBefore(renderer.domElement, el.firstChild);
+  scene = new THREE.Scene(); camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100); camera.position.set(0, 1.2, 9);
+  scene.add(new THREE.AmbientLight(0x8899bb, 0.9)); const l = new THREE.PointLight(0xffffff, 1.1); l.position.set(4, 6, 8); scene.add(l);
+  const cage = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.CylinderGeometry(3.2, 3.2, 5.2, 24, 1, true)), new THREE.LineBasicMaterial({ color: 0x2a3446 })); scene.add(cage);
+  const fib = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-3.2, 0, 0), new THREE.Vector3(3.2, 0, 0)]); scene.add(new THREE.Line(fib, new THREE.LineBasicMaterial({ color: 0x55627a })));
+  drop = new THREE.Mesh(new THREE.SphereGeometry(1, 32, 24), new THREE.MeshStandardMaterial({ color: 0xcfd8e6, roughness: 0.25, metalness: 0.1 })); scene.add(drop);
+  flame = new THREE.Mesh(new THREE.SphereGeometry(1, 40, 28), new THREE.MeshBasicMaterial({ color: 0x5fb4ff, transparent: true, opacity: 0.0, blending: THREE.AdditiveBlending, depthWrite: false })); scene.add(flame);
+  glow = new THREE.Mesh(new THREE.SphereGeometry(1, 32, 20), new THREE.MeshBasicMaterial({ color: 0x2a6fd0, transparent: true, opacity: 0.0, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.BackSide })); scene.add(glow);
+  sheet = new THREE.Mesh(new THREE.BoxGeometry(1.6, 3.6, 0.05), new THREE.MeshStandardMaterial({ color: 0xbfc7d4, roughness: 0.8 })); sheet.visible = false; scene.add(sheet);
+  const fit = () => { const w = el.clientWidth, h = el.clientHeight; renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix(); };
+  fit(); addEventListener("resize", fit); requestAnimationFrame(frame);
+}
+function setFlame(radius, opacity) {
+  if (!ok3d) return; const g = $("#oneg").checked;
+  flame.scale.set(radius * (g ? 0.62 : 1), radius * (g ? 2.3 : 1), radius * (g ? 0.62 : 1)); flame.position.y = g ? radius * 1.5 : 0;
+  flame.material.color.setHex(g ? 0xffb454 : 0x5fb4ff); flame.material.opacity = opacity * (g ? 0.5 : 0.38);
+  glow.scale.copy(flame.scale).multiplyScalar(1.35); glow.position.copy(flame.position);
+  glow.material.color.setHex(g ? 0xc86a10 : 0x2a6fd0); glow.material.opacity = opacity * 0.22;
+}
+function drawIdle() {
+  $("#state").textContent = "Ready"; if (!ok3d) return;
+  drop.visible = R.kind !== "solid"; sheet.visible = R.kind === "solid";
+  if (R.kind === "droplet") { drop.scale.setScalar(R.d0 * 0.16); drop.material.color.setHex(0xcfd8e6); setFlame(0, 0); hud(0, R.d0); }
+  else if (R.kind === "gas") { drop.scale.setScalar(0.42); drop.material.color.setHex(0x8a94a6); setFlame(0, 0); $("#hud").innerHTML = "Porous burner sphere<br>t = <b>0.0 s</b>"; }
+  else { setFlame(0, 0); $("#hud").innerHTML = "Sample sheet (no model)"; }
+}
+function hud(t, d) { $("#hud").innerHTML = "t = <b>" + t.toFixed(1) + " s</b><br>droplet = <b>" + d.toFixed(2) + " mm</b>"; }
+function stop() { run = null; }
+function frame(ts) {
+  requestAnimationFrame(frame); clockT = ts / 1000;
+  if (!reduce) scene.rotation.y = Math.sin(clockT * 0.25) * 0.35;
+  if (run) {
+    const u = Math.min((clockT - run.start) / 8, 1), t = u * R.tEnd, flick = 1 + Math.sin(clockT * 9) * 0.03;
+    if (R.kind === "droplet") {
+      const d = Math.sqrt(Math.max(R.d0 * R.d0 - R.K * t, 0)); drop.scale.setScalar(Math.max(d, 0.02) * 0.16);
+      const rf = (0.9 + d * 0.33) * flick, fade = u > 0.92 ? (1 - u) / 0.08 : 1; setFlame(rf, Math.min(u * 12, 1) * fade); hud(t, d);
+      $("#state").textContent = u < 1 ? "Burning" : R.ext ? "Flame out, fuel left" : "Burned to completion";
+    } else if (R.kind === "gas") {
+      if (!R.ign) { setFlame(0.6, Math.max(0.5 - u * 2, 0)); $("#state").textContent = u < 0.25 ? "Igniter on" : "No ignition"; }
+      else { const grow = Math.min(u * 5, 1), fade = R.self && u > 0.85 ? (1 - u) / 0.15 : 1; setFlame((0.7 + grow * 1.5) * flick, grow * fade);
+        $("#state").textContent = u < 1 ? "Burning" : R.self ? "Self-extinguished" : "Flow stopped"; if (u >= 1 && !R.self) setFlame(0, 0); }
+      $("#hud").innerHTML = "Porous burner sphere<br>t = <b>" + t.toFixed(1) + " s</b>";
+    }
+    if (u >= 1) run = null;
+  }
+  renderer.render(scene, camera);
+}
+$("#run").onclick = () => { if (R && R.kind !== "solid" && ok3d) { drawIdle(); run = { start: clockT }; } };
+$("#reset").onclick = () => { stop(); drawIdle(); };
+$("#oneg").onchange = () => { if (!run) drawIdle(); };
+document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => {
+  mode = b.dataset.mode; document.querySelectorAll(".tabs button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  S = Object.assign({}, PRESETS[mode][0][1]); buildFields(); compute(); });
+if (MODEL && DATA) { init3d(); buildFields(); compute(); } else { document.querySelector("main").innerHTML = '<p style="padding:24px">Model data missing. Run <span class="mono">python scripts/build_model.py</span> to generate this page.</p>'; }
+</script>
+</body>
+</html>

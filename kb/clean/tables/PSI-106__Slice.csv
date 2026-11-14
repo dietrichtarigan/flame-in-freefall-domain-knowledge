@@ -1,0 +1,13 @@
+_accession,_table,_source_row,_row_kind,Test Date,Fuel Type
+PSI-106,Slice,1,test,2012-FEB-09,100% CH4
+PSI-106,Slice,2,test,2012-FEB-13 SLICE testing with,40% CH4 (balance N2) including 2 pyrometry calibration tests and 2 fan calibrations
+PSI-106,Slice,3,test,2012-FEB-17,70% CH4 (balance N2) including 1 pyrometry calibration test
+PSI-106,Slice,4,test,2012-FEB-20,20% C2H4 (balance N2)
+PSI-106,Slice,5,test,2012-FEB-27,100% CH4
+PSI-106,Slice,6,test,2012-MAR-01,40% CH4 (balance N2)
+PSI-106,Slice,7,test,2012-MAR-05 SLICE testing with,70% CH4 (balance N2) where the fuel bottle was not emptied (in contrast to most days)
+PSI-106,Slice,8,test,2012-MAR-09,100% C2H6
+PSI-106,Slice,9,test,2012-MAR-12,100% CH4
+PSI-106,Slice,10,test,2012-MAR-15,20% C2H4 (balance N2)
+PSI-106,Slice,11,test,2012-MAR-19 SLICE testing with,70% CH4 (balance N2) including 1 pyrometry calibration test and 2 fan calibrations
+PSI-106,Slice,12,test,2012-MAR-23 Last day of testing: SPICE testing with 100% C3H8 and then 100%,100% C2H4

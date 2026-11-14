@@ -1,0 +1,944 @@
+test_point,experiment,date,mfca1_gas,mfca2_gas,mfca3_gas,file,accession,n_samples,record_s,tc_burner_rise_v,ion_rise_v,ignited,t_ignite_s,t_extinct_s,burn_duration_s,fuel_flow_mean,ended
+19115A1,0,2019-04-25,0,0,4,PSI-10_Raw Data_19115A1_data.csv,PSI-10,11086,88.68,0.0105,1.8423,ya,25.43,88.68,63.25,1.8964,rekaman berakhir saat burner masih panas
+19115B1,0,2019-04-25,0,0,4,PSI-10_Raw Data_19115B1_data.csv,PSI-10,12199,97.58,0.01211,1.2223,ya,29.59,97.58,67.99,1.2512,rekaman berakhir saat burner masih panas
+19115B2,0,2019-04-25,0,0,4,PSI-10_Raw Data_19115B2_data.csv,PSI-10,11564,92.51,0.01224,1.22,ya,26.46,92.51,66.05,1.0092,rekaman berakhir saat burner masih panas
+19115C1,0,2019-04-25,0,0,4,PSI-10_Raw Data_19115C1_data.csv,PSI-10,6685,53.47,0.001978,0.6263,ya,30.86,53.47,22.62,0.0039,rekaman berakhir saat burner masih panas
+19115D1,0,2019-04-25,0,0,4,PSI-10_Raw Data_19115D1_data.csv,PSI-10,6204,49.62,0.001141,1.8487,ya,23.12,49.62,26.5,-0.0068,rekaman berakhir saat burner masih panas
+19115D2,0,2019-04-25,0,0,4,PSI-10_Raw Data_19115D2_data.csv,PSI-10,7978,63.82,0.00495,1.861,ya,26.25,63.82,37.57,0.9526,rekaman berakhir saat burner masih panas
+19115F1,0,2019-04-25,0,0,4,PSI-10_Raw Data_19115F1_data.csv,PSI-10,9779,78.22,0.006005,1.2617,ya,28.59,78.22,49.63,0.7795,rekaman berakhir saat burner masih panas
+19115G1,0,2019-04-25,0,0,4,PSI-10_Raw Data_19115G1_data.csv,PSI-10,9028,72.22,0.006048,1.2775,ya,25.48,72.22,46.74,0.7238,rekaman berakhir saat burner masih panas
+19115H1,0,2019-04-25,0,0,4,PSI-10_Raw Data_19115H1_data.csv,PSI-10,5653,45.22,0.000301,1.3366,tidak,,,,,
+19115K1,0,2019-04-25,0,0,4,PSI-10_Raw Data_19115K1_data.csv,PSI-10,7898,63.18,0.001249,4.8239,ya,26.94,63.18,36.23,-0.015,rekaman berakhir saat burner masih panas
+19115L1,0,2019-04-25,0,0,4,PSI-10_Raw Data_19115L1_data.csv,PSI-10,8825,70.59,0.002973,4.7463,ya,30.7,70.59,39.9,2.4771,rekaman berakhir saat burner masih panas
+19115M4,0,2019-04-26,0,0,4,PSI-10_Raw Data_19115M4_data.csv,PSI-10,10091,80.72,0.007842,1.2652,ya,26.88,80.72,53.84,1.1901,rekaman berakhir saat burner masih panas
+19115N1,0,2019-04-26,0,0,4,PSI-10_Raw Data_19115N1_data.csv,PSI-10,6278,50.22,0.001458,4.7672,ya,23.88,50.22,26.34,-0.0204,rekaman berakhir saat burner masih panas
+19115P1,0,2019-04-26,0,0,4,PSI-10_Raw Data_19115P1_data.csv,PSI-10,5760,46.07,0.001493,0.9542,ya,23.49,46.07,22.58,0.0061,rekaman berakhir saat burner masih panas
+19115Q1,0,2019-04-26,0,0,4,PSI-10_Raw Data_19115Q1_data.csv,PSI-10,9836,78.68,0.006953,1.5073,ya,28.6,78.68,50.08,0.9848,rekaman berakhir saat burner masih panas
+19123A1,0,2019-05-03,0,0,4,PSI-10_Raw Data_19123A1_data.csv,PSI-10,7299,58.38,0.003629,3.6071,ya,23.2,58.38,35.18,0.0034,rekaman berakhir saat burner masih panas
+19123A2,0,2019-05-03,0,0,4,PSI-10_Raw Data_19123A2_data.csv,PSI-10,7585,60.67,0.00371,3.0862,ya,26.8,60.67,33.87,-0.0122,rekaman berakhir saat burner masih panas
+19123A3,0,2019-05-03,0,0,4,PSI-10_Raw Data_19123A3_data.csv,PSI-10,7072,56.57,0.003516,3.0873,ya,24.11,56.57,32.46,-0.0122,rekaman berakhir saat burner masih panas
+19123A4,0,2019-05-03,0,0,4,PSI-10_Raw Data_19123A4_data.csv,PSI-10,7072,56.57,0.003466,3.0782,ya,24.38,56.57,32.19,-0.0073,rekaman berakhir saat burner masih panas
+19123B1,0,2019-05-04,0,0,4,PSI-10_Raw Data_19123B1_data.csv,PSI-10,6965,55.71,0.001194,4.8643,ya,27.42,55.71,28.29,-0.0259,rekaman berakhir saat burner masih panas
+19123C1,0,2019-05-03,0,0,4,PSI-10_Raw Data_19123C1_data.csv,PSI-10,8966,71.72,0.002987,2.5015,ya,24.55,71.72,47.17,1.2671,rekaman berakhir saat burner masih panas
+19123D1,0,2019-05-04,0,0,4,PSI-10_Raw Data_19123D1_data.csv,PSI-10,6578,52.62,0.001433,4.8136,ya,24.09,52.62,28.53,-0.0279,rekaman berakhir saat burner masih panas
+19123F1,0,2019-05-03,0,0,4,PSI-10_Raw Data_19123F1_data.csv,PSI-10,8853,70.82,0.003514,2.467,ya,24.86,70.82,45.96,1.262,rekaman berakhir saat burner masih panas
+19123F2,0,2019-05-03,0,0,4,PSI-10_Raw Data_19123F2_data.csv,PSI-10,9228,73.82,0.003469,2.4673,ya,27.98,73.82,45.83,1.2619,rekaman berakhir saat burner masih panas
+19123F3,0,2019-05-03,0,0,4,PSI-10_Raw Data_19123F3_data.csv,PSI-10,7090,56.71,0.003205,2.4796,ya,24.25,56.71,32.46,-0.007,rekaman berakhir saat burner masih panas
+19123H1,0,2019-05-03,0,0,4,PSI-10_Raw Data_19123H1_data.csv,PSI-10,6090,48.71,0.000122,2.5044,tidak,,,,,
+19123J1,0,2019-05-04,0,0,4,PSI-10_Raw Data_19123J1_data.csv,PSI-10,6590,52.71,0.001027,4.9344,ya,28.16,52.71,24.55,-0.0442,rekaman berakhir saat burner masih panas
+19123K1,0,2019-05-03,0,0,4,PSI-10_Raw Data_19123K1_data.csv,PSI-10,7228,57.82,0.001773,2.5611,ya,27.79,57.82,30.03,-0.0254,rekaman berakhir saat burner masih panas
+19123L1,0,2019-05-04,0,0,4,PSI-10_Raw Data_19123L1_data.csv,PSI-10,7947,63.57,0.002154,4.7834,ya,23.86,63.57,39.7,3.5423,rekaman berakhir saat burner masih panas
+19123L2,0,2019-05-04,0,0,4,PSI-10_Raw Data_19123L2_data.csv,PSI-10,8336,66.68,0.002107,4.7852,ya,27.02,66.68,39.66,3.0774,rekaman berakhir saat burner masih panas
+19123L3,0,2019-05-04,0,0,4,PSI-10_Raw Data_19123L3_data.csv,PSI-10,7572,60.57,0.001913,4.7607,ya,22.85,60.57,37.72,-0.0148,rekaman berakhir saat burner masih panas
+19123L4,0,2019-05-04,0,0,4,PSI-10_Raw Data_19123L4_data.csv,PSI-10,8323,66.58,0.00387,2.4313,ya,24.42,66.58,42.16,1.4647,rekaman berakhir saat burner masih panas
+19123L5,0,2019-05-04,0,0,4,PSI-10_Raw Data_19123L5_data.csv,PSI-10,7948,63.58,0.00331,2.4096,ya,24.34,63.58,39.24,0.2131,rekaman berakhir saat burner masih panas
+19123L6,0,2019-05-04,0,0,4,PSI-10_Raw Data_19123L6_data.csv,PSI-10,8323,66.58,0.003622,2.4103,ya,25.49,66.58,41.09,1.1847,rekaman berakhir saat burner masih panas
+19123L7,0,2019-05-04,0,0,4,PSI-10_Raw Data_19123L7_data.csv,PSI-10,9269,74.14,0.007669,1.2949,ya,28.63,74.14,45.51,0.4703,rekaman berakhir saat burner masih panas
+19123L8,0,2019-05-04,0,0,4,PSI-10_Raw Data_19123L8_data.csv,PSI-10,7510,60.07,9e-06,1.3095,tidak,,,,,
+19137A1,0,2019-05-17,0,0,4,PSI-10_Raw Data_19137A1_data.csv,PSI-10,7837,62.69,0.002913,6.0313,ya,28.67,62.69,34.02,-0.0094,rekaman berakhir saat burner masih panas
+19137B1,0,2019-05-17,0,0,4,PSI-10_Raw Data_19137B1_data.csv,PSI-10,8703,69.62,0.002737,3.6997,ya,28.43,69.62,41.18,-0.0045,rekaman berakhir saat burner masih panas
+19137D1,0,2019-05-17,0,0,4,PSI-10_Raw Data_19137D1_data.csv,PSI-10,7204,57.62,0.001544,3.7927,ya,25.57,57.62,32.06,-0.0123,rekaman berakhir saat burner masih panas
+19137F1,0,2019-05-17,0,0,4,PSI-10_Raw Data_19137F1_data.csv,PSI-10,6952,55.61,0.001304,3.8403,ya,29.42,55.61,26.19,-0.0257,rekaman berakhir saat burner masih panas
+19137F2,0,2019-05-17,0,0,4,PSI-10_Raw Data_19137F2_data.csv,PSI-10,7328,58.62,0.001306,3.2268,ya,27.04,58.62,31.58,-0.0122,rekaman berakhir saat burner masih panas
+19137F3,0,2019-05-17,0,0,4,PSI-10_Raw Data_19137F3_data.csv,PSI-10,7578,60.62,0.001101,3.1893,ya,25.94,60.62,34.68,-0.0069,rekaman berakhir saat burner masih panas
+19137G1,0,2019-05-17,0,0,4,PSI-10_Raw Data_19137G1_data.csv,PSI-10,8462,67.69,0.003025,3.6857,ya,28.31,67.69,39.38,-0.0095,rekaman berakhir saat burner masih panas
+19137H1,0,2019-05-17,0,0,4,PSI-10_Raw Data_19137H1_data.csv,PSI-10,7835,62.67,0.002973,3.5345,ya,24.28,62.67,38.39,-0.0119,rekaman berakhir saat burner masih panas
+19137J1,0,2019-05-17,0,0,4,PSI-10_Raw Data_19137J1_data.csv,PSI-10,7936,63.48,0.002883,3.0453,ya,25.1,63.48,38.38,-0.0071,rekaman berakhir saat burner masih panas
+19137K1,0,2019-05-17,0,0,4,PSI-10_Raw Data_19137K1_data.csv,PSI-10,7948,63.58,0.003112,3.0227,ya,25.18,63.58,38.4,-0.0018,rekaman berakhir saat burner masih panas
+19137K2,0,2019-05-17,0,0,4,PSI-10_Raw Data_19137K2_data.csv,PSI-10,7810,62.47,0.002875,3.0262,ya,25.03,62.47,37.44,-0.007,rekaman berakhir saat burner masih panas
+19137L1,0,2019-05-17,0,0,4,PSI-10_Raw Data_19137L1_data.csv,PSI-10,8341,66.72,0.003708,1.8327,ya,25.47,66.72,41.25,0.041,rekaman berakhir saat burner masih panas
+19137L2,0,2019-05-17,0,0,4,PSI-10_Raw Data_19137L2_data.csv,PSI-10,8829,70.62,0.005121,1.8903,ya,26.6,70.62,44.02,1.2836,rekaman berakhir saat burner masih panas
+19137L3,0,2019-05-17,0,0,4,PSI-10_Raw Data_19137L3_data.csv,PSI-10,8953,71.62,0.004875,1.8139,ya,28.39,71.62,43.23,0.414,rekaman berakhir saat burner masih panas
+19137L4,0,2019-05-17,0,0,4,PSI-10_Raw Data_19137L4_data.csv,PSI-10,8828,70.62,0.005102,1.8067,ya,27.3,70.62,43.32,0.3653,rekaman berakhir saat burner masih panas
+19137L5,0,2019-05-17,0,0,4,PSI-10_Raw Data_19137L5_data.csv,PSI-10,8456,67.64,0.005004,1.818,ya,25.34,67.64,42.3,0.0625,rekaman berakhir saat burner masih panas
+19137L6,0,2019-05-18,0,0,4,PSI-10_Raw Data_19137L6_data.csv,PSI-10,8841,70.72,0.004866,2.0233,ya,25.57,70.72,45.15,1.3796,rekaman berakhir saat burner masih panas
+19137L7,0,2019-05-18,0,0,4,PSI-10_Raw Data_19137L7_data.csv,PSI-10,8453,67.62,0.004317,1.8346,ya,25.19,67.62,42.42,0.0823,rekaman berakhir saat burner masih panas
+19137L8,0,2019-05-18,0,0,4,PSI-10_Raw Data_19137L8_data.csv,PSI-10,8703,69.62,0.004865,1.8871,ya,25.31,69.62,44.3,1.2889,rekaman berakhir saat burner masih panas
+19142B1,0,2019-05-22,2,0,4,PSI-10_Raw Data_19142B1_data.csv,PSI-10,6116,48.92,0.002647,1.3941,ya,24.86,48.92,24.06,0.0035,rekaman berakhir saat burner masih panas
+19142F1,0,2019-05-22,2,0,4,PSI-10_Raw Data_19142F1_data.csv,PSI-10,14863,118.9,0.009263,4.84,ya,41.18,118.9,77.72,1.8181,rekaman berakhir saat burner masih panas
+19142G1,0,2019-05-22,2,0,4,PSI-10_Raw Data_19142G1_data.csv,PSI-10,25247,201.97,0.02032,2.4852,ya,35.04,201.97,166.93,2.571,rekaman berakhir saat burner masih panas
+19142G2,0,2019-05-22,2,0,4,PSI-10_Raw Data_19142G2_data.csv,PSI-10,18481,147.83,0.014047,3.7136,ya,41.49,147.83,106.34,3.406,rekaman berakhir saat burner masih panas
+19142G3,0,2019-05-22,2,0,4,PSI-10_Raw Data_19142G3_data.csv,PSI-10,15231,121.84,0.010811,4.7959,ya,44.26,121.84,77.58,1.9834,rekaman berakhir saat burner masih panas
+19142G4,0,2019-05-22,2,0,4,PSI-10_Raw Data_19142G4_data.csv,PSI-10,17581,140.64,0.019773,2.4538,ya,38.07,140.64,102.57,1.9281,rekaman berakhir saat burner masih panas
+19142G5,0,2019-05-22,2,0,4,PSI-10_Raw Data_19142G5_data.csv,PSI-10,16105,128.82,0.025378,2.4473,ya,37.83,128.82,90.99,1.2783,rekaman berakhir saat burner masih panas
+19142J2,0,2019-05-22,2,0,4,PSI-10_Raw Data_19142J2_data.csv,PSI-10,13830,110.63,0.011416,4.7546,ya,32.89,110.63,77.74,4.9761,rekaman berakhir saat burner masih panas
+19142J3,0,2019-05-22,2,0,4,PSI-10_Raw Data_19142J3_data.csv,PSI-10,13102,104.79,0.010528,4.7628,ya,33.3,104.79,71.5,4.9711,rekaman berakhir saat burner masih panas
+19150A1,0,2019-05-30,2,0,4,PSI-10_Raw Data_19150A1_data.csv,PSI-10,7840,62.71,0.004182,3.1569,ya,24.78,62.71,37.93,-0.004,rekaman berakhir saat burner masih panas
+19150A3,0,2019-05-30,2,0,4,PSI-10_Raw Data_19150A3_data.csv,PSI-10,10154,81.22,0.004634,2.0416,ya,37.21,81.22,44.02,0.057,rekaman berakhir saat burner masih panas
+19150A4,0,2019-05-30,2,0,4,PSI-10_Raw Data_19150A4_data.csv,PSI-10,11528,92.22,0.006354,2.053,ya,34.26,92.22,57.95,1.9155,rekaman berakhir saat burner masih panas
+19150A5,0,2019-05-30,2,0,4,PSI-10_Raw Data_19150A5_data.csv,PSI-10,13654,109.22,0.006342,2.0129,ya,38.35,109.22,70.87,1.5933,rekaman berakhir saat burner masih panas
+19150B2,0,2019-05-30,2,0,4,PSI-10_Raw Data_19150B2_data.csv,PSI-10,10904,87.22,0.005938,2.3385,ya,34.78,87.22,52.44,2.2379,rekaman berakhir saat burner masih panas
+19150B3,0,2019-05-30,2,0,4,PSI-10_Raw Data_19150B3_data.csv,PSI-10,10404,83.22,0.005891,2.3354,ya,31.06,83.22,52.17,2.238,rekaman berakhir saat burner masih panas
+19150C1,0,2019-05-30,2,0,4,PSI-10_Raw Data_19150C1_data.csv,PSI-10,12272,98.17,0.006937,2.6106,ya,36.9,98.17,61.26,2.566,rekaman berakhir saat burner masih panas
+19150D2,0,2019-05-30,2,0,4,PSI-10_Raw Data_19150D2_data.csv,PSI-10,18368,146.94,0.006842,3.846,ya,36.81,146.94,110.13,3.8535,rekaman berakhir saat burner masih panas
+19150F1,0,2019-05-30,2,0,4,PSI-10_Raw Data_19150F1_data.csv,PSI-10,17455,139.63,0.006025,4.9155,ya,32.06,139.63,107.57,4.9817,rekaman berakhir saat burner masih panas
+19150G2,0,2019-05-30,2,0,4,PSI-10_Raw Data_19150G2_data.csv,PSI-10,12467,99.73,0.00668,4.8771,ya,34.17,99.73,65.56,4.9759,rekaman berakhir saat burner masih panas
+19150G3,0,2019-05-31,2,0,4,PSI-10_Raw Data_19150G3_data.csv,PSI-10,11850,94.78,0.006097,4.8865,ya,33.14,94.78,61.64,4.9736,rekaman berakhir saat burner masih panas
+19150H1,0,2019-05-31,2,0,4,PSI-10_Raw Data_19150H1_data.csv,PSI-10,11966,95.72,0.008023,4.8215,ya,29.54,95.72,66.18,4.9737,rekaman berakhir saat burner masih panas
+19150J1,0,2019-05-31,2,0,4,PSI-10_Raw Data_19150J1_data.csv,PSI-10,11699,93.58,0.009837,4.7804,ya,24.58,93.58,69.0,4.973,rekaman berakhir saat burner masih panas
+19150N1,0,2019-05-31,2,0,4,PSI-10_Raw Data_19150N1_data.csv,PSI-10,27782,222.25,0.012642,1.8749,ya,32.9,222.25,189.34,1.5979,rekaman berakhir saat burner masih panas
+19150S1,0,2019-05-31,2,0,4,PSI-10_Raw Data_19150S1_data.csv,PSI-10,11512,92.09,0.017535,1.8191,ya,30.88,92.09,61.21,1.587,rekaman berakhir saat burner masih panas
+19156B2,0,2019-06-05,2,0,4,PSI-10_Raw Data_19156B2_data.csv,PSI-10,6652,53.21,0.00207,4.7979,ya,23.46,53.21,29.74,-0.0257,rekaman berakhir saat burner masih panas
+19156B4,0,2019-06-05,2,0,4,PSI-10_Raw Data_19156B4_data.csv,PSI-10,15717,125.73,0.006728,2.5463,ya,24.23,125.73,101.5,2.5654,rekaman berakhir saat burner masih panas
+19156C1,0,2019-06-05,2,0,4,PSI-10_Raw Data_19156C1_data.csv,PSI-10,6447,51.57,0.007771,4.6987,ya,24.89,51.57,26.68,4.9679,rekaman berakhir saat burner masih panas
+19156C2,0,2019-06-05,2,0,4,PSI-10_Raw Data_19156C2_data.csv,PSI-10,13836,110.68,0.011482,4.7855,ya,31.48,110.68,79.2,4.9733,rekaman berakhir saat burner masih panas
+19156C3,0,2019-06-05,2,0,4,PSI-10_Raw Data_19156C3_data.csv,PSI-10,14074,112.58,0.011391,4.7686,ya,35.35,112.58,77.23,4.9732,rekaman berakhir saat burner masih panas
+19156J1,0,2019-06-05,2,0,4,PSI-10_Raw Data_19156J1_data.csv,PSI-10,13199,105.59,0.015187,4.7898,ya,27.77,105.59,77.82,2.8185,rekaman berakhir saat burner masih panas
+19156J2,0,2019-06-05,2,0,4,PSI-10_Raw Data_19156J2_data.csv,PSI-10,10323,82.58,0.019239,2.1147,ya,31.25,82.58,51.33,2.2405,rekaman berakhir saat burner masih panas
+19156J3,0,2019-06-06,2,0,4,PSI-10_Raw Data_19156J3_data.csv,PSI-10,14061,112.48,0.0182,2.4567,ya,28.42,112.48,84.06,2.5651,rekaman berakhir saat burner masih panas
+19156J4,0,2019-06-06,2,0,4,PSI-10_Raw Data_19156J4_data.csv,PSI-10,9074,72.58,0.019293,1.9271,ya,27.71,72.58,44.87,2.0402,rekaman berakhir saat burner masih panas
+19156J5,0,2019-06-06,2,0,4,PSI-10_Raw Data_19156J5_data.csv,PSI-10,9810,78.47,0.019526,2.3987,ya,30.47,78.47,48.01,2.0405,rekaman berakhir saat burner masih panas
+19156J6,0,2019-06-06,2,0,4,PSI-10_Raw Data_19156J6_data.csv,PSI-10,10450,83.59,0.019176,2.1375,ya,32.03,83.59,51.56,2.1256,rekaman berakhir saat burner masih panas
+19156J7,0,2019-06-06,2,0,4,PSI-10_Raw Data_19156J7_data.csv,PSI-10,11211,89.68,0.019137,2.152,ya,32.34,89.68,57.34,2.179,rekaman berakhir saat burner masih panas
+19156K1,0,2019-06-05,2,0,4,PSI-10_Raw Data_19156K1_data.csv,PSI-10,8965,71.71,0.005016,4.829,ya,23.1,71.71,48.61,4.9225,rekaman berakhir saat burner masih panas
+19171B1,0,2019-06-20,2,0,4,PSI-10_Raw Data_19171B1_data.csv,PSI-10,15967,127.73,0.009039,2.8143,ya,31.12,127.73,96.61,2.8458,rekaman berakhir saat burner masih panas
+19171B3,0,2019-06-20,2,0,4,PSI-10_Raw Data_19171B3_data.csv,PSI-10,15842,126.73,0.008057,2.5088,ya,33.26,126.73,93.47,2.4485,rekaman berakhir saat burner masih panas
+19171D1,0,2019-06-20,2,0,4,PSI-10_Raw Data_19171D1_data.csv,PSI-10,18975,151.79,0.014756,4.7598,ya,32.37,151.79,119.42,4.9791,rekaman berakhir saat burner masih panas
+19171D2,0,2019-06-20,2,0,4,PSI-10_Raw Data_19171D2_data.csv,PSI-10,15200,121.59,0.012501,4.7682,ya,39.2,121.59,82.39,4.9765,rekaman berakhir saat burner masih panas
+19171D3,0,2019-06-20,2,0,4,PSI-10_Raw Data_19171D3_data.csv,PSI-10,10210,81.67,0.009509,4.7942,ya,31.83,81.67,49.84,4.9686,rekaman berakhir saat burner masih panas
+19171D4,0,2019-06-20,2,0,4,PSI-10_Raw Data_19171D4_data.csv,PSI-10,14336,114.67,0.01165,4.774,ya,38.68,114.67,75.99,4.9764,rekaman berakhir saat burner masih panas
+19171D5,0,2019-06-20,2,0,4,PSI-10_Raw Data_19171D5_data.csv,PSI-10,13962,111.69,0.011352,4.7669,ya,38.46,111.69,73.22,4.976,rekaman berakhir saat burner masih panas
+19171J1,0,2019-06-20,2,0,4,PSI-10_Raw Data_19171J1_data.csv,PSI-10,14091,112.72,0.015323,1.974,ya,28.26,112.72,84.46,2.0382,rekaman berakhir saat burner masih panas
+19171J2,0,2019-06-21,2,0,4,PSI-10_Raw Data_19171J2_data.csv,PSI-10,10325,82.59,0.017094,1.9485,ya,29.4,82.59,53.19,2.03,rekaman berakhir saat burner masih panas
+19171J3,0,2019-06-21,2,0,4,PSI-10_Raw Data_19171J3_data.csv,PSI-10,10954,87.62,0.010533,1.9888,ya,28.17,87.62,59.46,2.0328,rekaman berakhir saat burner masih panas
+19171J4,0,2019-06-21,2,0,4,PSI-10_Raw Data_19171J4_data.csv,PSI-10,13714,109.7,0.013632,1.9733,ya,30.38,109.7,79.32,2.0381,rekaman berakhir saat burner masih panas
+19171S1,0,2019-06-20,2,0,4,PSI-10_Raw Data_19171S1_data.csv,PSI-10,12217,97.73,0.019879,1.821,ya,36.22,97.73,61.51,1.913,rekaman berakhir saat burner masih panas
+19175A2,0,2019-06-24,2,0,4,PSI-10_Raw Data_19175A2_data.csv,PSI-10,11079,88.62,0.016423,2.4351,ya,31.04,88.62,57.58,1.4409,rekaman berakhir saat burner masih panas
+19175A3,0,2019-06-24,2,0,4,PSI-10_Raw Data_19175A3_data.csv,PSI-10,22563,180.5,0.016131,3.6708,ya,33.0,180.5,147.5,3.8508,rekaman berakhir saat burner masih panas
+19175A4,0,2019-06-24,2,0,4,PSI-10_Raw Data_19175A4_data.csv,PSI-10,11703,93.62,0.013487,3.6897,ya,31.98,93.62,61.64,3.8426,rekaman berakhir saat burner masih panas
+19175B1,0,2019-06-24,2,0,4,PSI-10_Raw Data_19175B1_data.csv,PSI-10,9091,72.72,0.009832,2.4716,ya,27.57,72.72,45.15,2.5361,rekaman berakhir saat burner masih panas
+19175B2,0,2019-06-24,2,0,4,PSI-10_Raw Data_19175B2_data.csv,PSI-10,6466,51.72,0.001499,2.3667,ya,27.26,51.72,24.46,-0.0014,rekaman berakhir saat burner masih panas
+19175B4,0,2019-06-24,2,0,4,PSI-10_Raw Data_19175B4_data.csv,PSI-10,14329,114.62,0.014159,2.4663,ya,35.2,114.62,79.42,2.5656,rekaman berakhir saat burner masih panas
+19175B5,0,2019-06-24,2,0,4,PSI-10_Raw Data_19175B5_data.csv,PSI-10,12342,98.73,0.011937,2.4659,ya,40.74,98.73,57.99,2.5604,rekaman berakhir saat burner masih panas
+19175B6,0,2019-06-24,2,0,4,PSI-10_Raw Data_19175B6_data.csv,PSI-10,10592,84.73,0.006729,2.4748,ya,40.16,84.73,44.57,2.5523,rekaman berakhir saat burner masih panas
+19175B7,0,2019-06-25,2,0,4,PSI-10_Raw Data_19175B7_data.csv,PSI-10,11078,88.62,0.007371,2.4798,ya,39.28,88.62,49.34,2.558,rekaman berakhir saat burner masih panas
+19175B8,0,2019-06-25,2,0,4,PSI-10_Raw Data_19175B8_data.csv,PSI-10,11592,92.73,0.007541,2.4783,ya,41.61,92.73,51.12,2.5601,rekaman berakhir saat burner masih panas
+19175B9,0,2019-06-25,2,0,4,PSI-10_Raw Data_19175B9_data.csv,PSI-10,10591,84.72,0.007758,2.4747,ya,38.86,84.72,45.86,2.5525,rekaman berakhir saat burner masih panas
+19175N1,0,2019-06-25,2,0,4,PSI-10_Raw Data_19175N1_data.csv,PSI-10,15218,121.74,0.011011,2.4747,ya,41.9,121.74,79.84,2.5657,rekaman berakhir saat burner masih panas
+19175N2,0,2019-06-25,2,0,4,PSI-10_Raw Data_19175N2_data.csv,PSI-10,13216,105.72,0.015726,2.4569,ya,35.76,105.72,69.96,2.5652,rekaman berakhir saat burner masih panas
+19175N3,0,2019-06-25,2,0,4,PSI-10_Raw Data_19175N3_data.csv,PSI-10,10780,86.23,0.019214,1.8231,ya,38.04,86.23,48.19,1.926,rekaman berakhir saat burner masih panas
+19182A1,0,2019-07-01,2,0,4,PSI-10_Raw Data_19182A1_data.csv,PSI-10,8541,68.32,0.002128,1.3249,ya,30.54,68.32,37.79,0.0332,rekaman berakhir saat burner masih panas
+19182C1,0,2019-07-01,2,0,4,PSI-10_Raw Data_19182C1_data.csv,PSI-10,12179,97.42,0.004869,1.2926,ya,36.3,97.42,61.13,1.2599,rekaman berakhir saat burner masih panas
+19182C2,0,2019-07-01,2,0,4,PSI-10_Raw Data_19182C2_data.csv,PSI-10,12417,99.33,0.004614,1.2931,ya,36.21,99.33,63.12,1.2599,rekaman berakhir saat burner masih panas
+19182F1,0,2019-07-02,2,0,4,PSI-10_Raw Data_19182F1_data.csv,PSI-10,17132,137.05,0.007638,1.5427,ya,42.43,137.05,94.62,1.5927,rekaman berakhir saat burner masih panas
+19182G1,0,2019-07-01,2,0,4,PSI-10_Raw Data_19182G1_data.csv,PSI-10,11391,91.12,0.012669,2.48,ya,32.41,91.12,58.71,1.9076,rekaman berakhir saat burner masih panas
+19182G2,0,2019-07-01,2,0,4,PSI-10_Raw Data_19182G2_data.csv,PSI-10,11241,89.92,0.011212,2.161,ya,35.42,89.92,54.5,2.235,rekaman berakhir saat burner masih panas
+19182G3,0,2019-07-01,2,0,4,PSI-10_Raw Data_19182G3_data.csv,PSI-10,11005,88.03,0.011044,2.1615,ya,33.39,88.03,54.64,2.235,rekaman berakhir saat burner masih panas
+19182G6,0,2019-07-01,2,0,4,PSI-10_Raw Data_19182G6_data.csv,PSI-10,10253,82.02,0.009236,1.8593,ya,30.33,82.02,51.69,1.9046,rekaman berakhir saat burner masih panas
+19182G7,0,2019-07-01,2,0,4,PSI-10_Raw Data_19182G7_data.csv,PSI-10,14129,113.02,0.014397,2.1281,ya,40.09,113.02,72.94,1.3792,rekaman berakhir saat burner masih panas
+19182G8,0,2019-07-01,2,0,4,PSI-10_Raw Data_19182G8_data.csv,PSI-10,14630,117.03,0.014585,1.9438,ya,43.07,117.03,73.96,1.6411,rekaman berakhir saat burner masih panas
+19182G9,0,2019-07-01,2,0,4,PSI-10_Raw Data_19182G9_data.csv,PSI-10,12879,103.02,0.014184,1.851,ya,33.25,103.02,69.78,1.9126,rekaman berakhir saat burner masih panas
+19182N1,0,2019-07-01,2,0,4,PSI-10_Raw Data_19182N1_data.csv,PSI-10,10503,84.02,0.009589,2.1534,ya,33.85,84.02,50.17,2.2322,rekaman berakhir saat burner masih panas
+19182N2,0,2019-07-01,2,0,4,PSI-10_Raw Data_19182N2_data.csv,PSI-10,10893,87.14,0.009721,2.1607,ya,36.28,87.14,50.86,2.2319,rekaman berakhir saat burner masih panas
+19182N3,0,2019-07-01,2,0,4,PSI-10_Raw Data_19182N3_data.csv,PSI-10,13379,107.02,0.013943,1.8606,ya,37.46,107.02,69.56,1.9127,rekaman berakhir saat burner masih panas
+19182N4,0,2019-07-01,2,0,4,PSI-10_Raw Data_19182N4_data.csv,PSI-10,13379,107.03,0.01366,1.8443,ya,37.72,107.03,69.31,1.9129,rekaman berakhir saat burner masih panas
+19189A1,0,2019-07-08,2,0,4,PSI-10_Raw Data_19189A1_data.csv,PSI-10,12804,102.42,0.004963,1.6698,ya,29.22,102.42,73.19,1.2593,rekaman berakhir saat burner masih panas
+19189A2,0,2019-07-08,2,0,4,PSI-10_Raw Data_19189A2_data.csv,PSI-10,8180,65.43,0.002279,1.3642,ya,27.0,65.43,38.43,0.036,rekaman berakhir saat burner masih panas
+19189A3,0,2019-07-08,2,0,4,PSI-10_Raw Data_19189A3_data.csv,PSI-10,8291,66.32,0.002157,1.3455,ya,27.88,66.32,38.44,0.0488,rekaman berakhir saat burner masih panas
+19189A4,0,2019-07-08,2,0,4,PSI-10_Raw Data_19189A4_data.csv,PSI-10,7428,59.42,0.001695,1.2184,ya,25.79,59.42,33.62,0.0078,rekaman berakhir saat burner masih panas
+19189D1,0,2019-07-08,2,0,4,PSI-10_Raw Data_19189D1_data.csv,PSI-10,12693,101.54,0.004595,1.2983,ya,34.39,101.54,67.14,1.2598,rekaman berakhir saat burner masih panas
+19189D2,0,2019-07-08,2,0,4,PSI-10_Raw Data_19189D2_data.csv,PSI-10,8304,66.43,0.001945,1.3008,ya,30.0,66.43,36.42,0.0142,rekaman berakhir saat burner masih panas
+19189D3,0,2019-07-08,2,0,4,PSI-10_Raw Data_19189D3_data.csv,PSI-10,12041,96.32,0.004553,1.2949,ya,33.04,96.32,63.28,1.2619,rekaman berakhir saat burner masih panas
+19189H1,0,2019-07-08,2,0,4,PSI-10_Raw Data_19189H1_data.csv,PSI-10,12679,101.42,0.006832,1.5572,ya,37.5,101.42,63.93,1.5874,rekaman berakhir saat burner masih panas
+19189J1,0,2019-07-08,2,0,4,PSI-10_Raw Data_19189J1_data.csv,PSI-10,13429,107.42,0.009798,4.7801,ya,36.3,107.42,71.12,4.9737,rekaman berakhir saat burner masih panas
+19189J2,0,2019-07-08,2,0,4,PSI-10_Raw Data_19189J2_data.csv,PSI-10,13054,104.42,0.009374,4.776,ya,35.82,104.42,68.6,4.9756,rekaman berakhir saat burner masih panas
+19189J3,0,2019-07-08,2,0,4,PSI-10_Raw Data_19189J3_data.csv,PSI-10,13317,106.53,0.009327,4.7842,ya,35.85,106.53,70.68,4.9735,rekaman berakhir saat burner masih panas
+19189K1,0,2019-07-08,2,0,4,PSI-10_Raw Data_19189K1_data.csv,PSI-10,12817,102.53,0.009044,4.7792,ya,34.74,102.53,67.78,4.9734,rekaman berakhir saat burner masih panas
+19189K2,0,2019-07-08,2,0,4,PSI-10_Raw Data_19189K2_data.csv,PSI-10,12818,102.54,0.00913,4.7727,ya,36.07,102.54,66.46,4.2376,rekaman berakhir saat burner masih panas
+19189K3,0,2019-07-09,2,0,4,PSI-10_Raw Data_19189K3_data.csv,PSI-10,17432,139.44,0.017385,4.7009,ya,47.2,139.44,92.24,1.7847,rekaman berakhir saat burner masih panas
+19189P1,0,2019-07-09,2,0,4,PSI-10_Raw Data_19189P1_data.csv,PSI-10,11694,93.55,0.006862,4.7737,ya,34.91,93.55,58.63,3.5203,rekaman berakhir saat burner masih panas
+19196A1,0,2019-07-15,2,0,4,PSI-10_Raw Data_19196A1_data.csv,PSI-10,9741,77.92,0.014253,1.9005,ya,28.94,77.92,48.98,1.902,rekaman berakhir saat burner masih panas
+19196A2,0,2019-07-15,2,0,4,PSI-10_Raw Data_19196A2_data.csv,PSI-10,13617,108.93,0.014751,1.9033,ya,31.26,108.93,77.67,1.9181,rekaman berakhir saat burner masih panas
+19196A3,0,2019-07-15,2,0,4,PSI-10_Raw Data_19196A3_data.csv,PSI-10,11129,89.02,0.01221,1.9006,ya,32.71,89.02,56.32,1.9123,rekaman berakhir saat burner masih panas
+19196B1,0,2019-07-15,2,0,4,PSI-10_Raw Data_19196B1_data.csv,PSI-10,9879,79.03,0.012964,1.8771,ya,30.99,79.03,48.03,1.9045,rekaman berakhir saat burner masih panas
+19196B2,0,2019-07-15,2,0,4,PSI-10_Raw Data_19196B2_data.csv,PSI-10,11742,93.93,0.014836,1.9843,ya,32.52,93.93,61.41,2.0401,rekaman berakhir saat burner masih panas
+19196B3,0,2019-07-15,2,0,4,PSI-10_Raw Data_19196B3_data.csv,PSI-10,12004,96.02,0.013511,2.1972,ya,34.99,96.02,61.03,2.2402,rekaman berakhir saat burner masih panas
+19196B4,0,2019-07-15,2,0,4,PSI-10_Raw Data_19196B4_data.csv,PSI-10,12766,102.12,0.014266,2.1961,ya,33.99,102.12,68.14,2.2405,rekaman berakhir saat burner masih panas
+19196C1,0,2019-07-15,2,0,4,PSI-10_Raw Data_19196C1_data.csv,PSI-10,11722,93.77,0.015487,2.3329,ya,32.26,93.77,61.51,2.4135,rekaman berakhir saat burner masih panas
+19196C2,0,2019-07-15,2,0,4,PSI-10_Raw Data_19196C2_data.csv,PSI-10,12979,103.82,0.016677,2.3457,ya,30.42,103.82,73.41,2.4162,rekaman berakhir saat burner masih panas
+19196D1,0,2019-07-15,2,0,4,PSI-10_Raw Data_19196D1_data.csv,PSI-10,13886,111.08,0.01898,2.3148,ya,33.94,111.08,77.14,2.4137,rekaman berakhir saat burner masih panas
+19196D2,0,2019-07-15,2,0,4,PSI-10_Raw Data_19196D2_data.csv,PSI-10,10611,84.88,0.019066,2.2868,ya,22.39,84.88,62.49,2.4187,rekaman berakhir saat burner masih panas
+19196F1,0,2019-07-15,2,0,4,PSI-10_Raw Data_19196F1_data.csv,PSI-10,7303,58.42,0.002138,1.2957,ya,26.99,58.42,31.42,0.0064,rekaman berakhir saat burner masih panas
+19196N1,0,2019-07-15,2,0,4,PSI-10_Raw Data_19196N1_data.csv,PSI-10,8136,65.08,0.019891,1.8112,ya,25.02,65.08,40.06,1.915,rekaman berakhir saat burner masih panas
+19196N2,0,2019-07-15,2,0,4,PSI-10_Raw Data_19196N2_data.csv,PSI-10,6274,50.18,1e-05,1.6749,tidak,,,,,
+19200A1,0,2019-07-19,2,0,4,PSI-10_Raw Data_19200A1_data.csv,PSI-10,8465,67.71,0.006418,4.8946,ya,30.21,67.71,37.5,-0.0148,rekaman berakhir saat burner masih panas
+19200A2,0,2019-07-19,2,0,4,PSI-10_Raw Data_19200A2_data.csv,PSI-10,7292,58.33,0.02052,0.9846,ya,34.61,58.33,23.72,0.99,rekaman berakhir saat burner masih panas
+19200A3,0,2019-07-19,2,0,4,PSI-10_Raw Data_19200A3_data.csv,PSI-10,11404,91.22,0.019279,1.489,ya,29.71,91.22,61.51,1.5151,rekaman berakhir saat burner masih panas
+19200A4,0,2019-07-19,2,0,4,PSI-10_Raw Data_19200A4_data.csv,PSI-10,11291,90.32,0.015967,1.5056,ya,29.99,90.32,60.33,1.5153,rekaman berakhir saat burner masih panas
+19200A5,0,2019-07-19,2,0,4,PSI-10_Raw Data_19200A5_data.csv,PSI-10,11755,94.03,0.012668,1.8984,ya,34.03,94.03,60.0,1.9155,rekaman berakhir saat burner masih panas
+19200A6,0,2019-07-19,2,0,4,PSI-10_Raw Data_19200A6_data.csv,PSI-10,11741,93.92,0.008469,1.9458,ya,37.06,93.92,56.86,1.9177,rekaman berakhir saat burner masih panas
+19200A7,0,2019-07-19,2,0,4,PSI-10_Raw Data_19200A7_data.csv,PSI-10,11741,93.92,0.010675,1.5424,ya,35.71,93.92,58.21,1.5153,rekaman berakhir saat burner masih panas
+19200A8,0,2019-07-19,2,0,4,PSI-10_Raw Data_19200A8_data.csv,PSI-10,28494,227.94,0.013766,1.5403,ya,36.29,227.94,191.65,1.5235,rekaman berakhir saat burner masih panas
+19200H1,0,2019-07-20,2,0,4,PSI-10_Raw Data_19200H1_data.csv,PSI-10,21431,171.44,0.016824,1.4843,ya,35.68,171.44,135.76,1.523,rekaman berakhir saat burner masih panas
+19200H2,0,2019-07-20,2,0,4,PSI-10_Raw Data_19200H2_data.csv,PSI-10,21068,168.54,0.009987,1.5417,ya,37.5,168.54,131.04,1.5236,rekaman berakhir saat burner masih panas
+19200H3,0,2019-07-20,2,0,4,PSI-10_Raw Data_19200H3_data.csv,PSI-10,48450,387.57,0.013707,1.1562,ya,36.69,387.57,350.89,1.1502,rekaman berakhir saat burner masih panas
+19200K1,0,2019-07-20,2,0,4,PSI-10_Raw Data_19200K1_data.csv,PSI-10,8317,66.53,0.003942,4.8961,ya,32.62,66.53,33.9,-0.0229,rekaman berakhir saat burner masih panas
+19206L2,0,2019-07-25,2,0,4,PSI-10_Raw Data_19206L2_data.csv,PSI-10,7566,60.52,0.001444,3.7368,ya,29.38,60.52,31.14,-0.0149,rekaman berakhir saat burner masih panas
+19206L3,0,2019-07-25,2,0,4,PSI-10_Raw Data_19206L3_data.csv,PSI-10,7953,63.62,0.002153,2.4888,ya,29.34,63.62,34.28,-0.0071,rekaman berakhir saat burner masih panas
+19206L4,0,2019-07-25,2,0,4,PSI-10_Raw Data_19206L4_data.csv,PSI-10,9353,74.82,0.004707,1.5845,ya,32.69,74.82,42.13,0.0917,rekaman berakhir saat burner masih panas
+19206L6,0,2019-07-25,2,0,4,PSI-10_Raw Data_19206L6_data.csv,PSI-10,10304,82.43,0.008167,1.1776,ya,29.33,82.43,53.1,1.1289,rekaman berakhir saat burner masih panas
+19206N1,0,2019-07-26,2,0,4,PSI-10_Raw Data_19206N1_data.csv,PSI-10,7498,59.98,0.006443,1.1486,ya,20.32,59.98,39.66,0.0277,rekaman berakhir saat burner masih panas
+21301A1,5,2021-10-28,2,0,19,PSI-10_Raw Data_21301A1_data.csv,PSI-10,7139,57.1,0.017999,0.9965,ya,29.71,57.1,27.39,1.0325,rekaman berakhir saat burner masih panas
+21301A2,5,2021-10-28,2,0,19,PSI-10_Raw Data_21301A2_data.csv,PSI-10,6999,55.98,0.017652,0.9947,ya,27.78,55.98,28.2,1.0321,rekaman berakhir saat burner masih panas
+21301A3,5,2021-10-28,2,0,19,PSI-10_Raw Data_21301A3_data.csv,PSI-10,9138,73.08,0.01224,1.4705,ya,28.03,73.08,45.05,1.5162,rekaman berakhir saat burner masih panas
+21301A4,5,2021-10-28,2,0,19,PSI-10_Raw Data_21301A4_data.csv,PSI-10,10887,87.09,0.013073,2.0299,ya,29.19,87.09,57.9,1.3739,rekaman berakhir saat burner masih panas
+21301A5,5,2021-10-28,2,0,19,PSI-10_Raw Data_21301A5_data.csv,PSI-10,10875,86.99,0.017363,2.0959,ya,28.32,86.99,58.67,0.9416,rekaman berakhir saat burner masih panas
+21301A6,5,2021-10-28,2,0,19,PSI-10_Raw Data_21301A6_data.csv,PSI-10,9268,74.14,0.017612,3.3263,ya,29.45,74.14,44.69,0.9022,rekaman berakhir saat burner masih panas
+21301A7,5,2021-10-28,2,0,19,PSI-10_Raw Data_21301A7_data.csv,PSI-10,7749,61.99,0.011603,1.0872,ya,26.35,61.99,35.64,1.0302,rekaman berakhir saat burner masih panas
+21301A8,5,2021-10-28,2,0,19,PSI-10_Raw Data_21301A8_data.csv,PSI-10,7374,58.98,0.010336,2.5021,ya,25.1,58.98,33.89,1.1107,rekaman berakhir saat burner masih panas
+21301A9,5,2021-10-28,2,0,19,PSI-10_Raw Data_21301A9_data.csv,PSI-10,10001,80.0,0.015808,2.7074,ya,33.78,80.0,46.22,0.6791,rekaman berakhir saat burner masih panas
+21301C1,5,2021-10-28,2,0,19,PSI-10_Raw Data_21301C1_data.csv,PSI-10,12215,97.71,0.013466,1.5209,ya,42.82,97.71,54.9,0.9011,rekaman berakhir saat burner masih panas
+21301C2,5,2021-10-28,2,0,19,PSI-10_Raw Data_21301C2_data.csv,PSI-10,9965,79.71,0.011622,2.2822,ya,38.25,79.71,41.46,0.9009,rekaman berakhir saat burner masih panas
+21301D1,5,2021-10-28,2,0,19,PSI-10_Raw Data_21301D1_data.csv,PSI-10,11565,92.51,0.011642,1.644,ya,42.15,92.51,50.36,0.8507,rekaman berakhir saat burner masih panas
+21301D2,5,2021-10-28,2,0,19,PSI-10_Raw Data_21301D2_data.csv,PSI-10,10342,82.73,0.010143,2.8166,ya,41.37,82.73,41.36,0.85,rekaman berakhir saat burner masih panas
+21301H1,5,2021-10-28,2,0,19,PSI-10_Raw Data_21301H1_data.csv,PSI-10,10126,81.0,0.017737,2.8617,ya,31.43,81.0,49.58,0.9089,rekaman berakhir saat burner masih panas
+21301H2,5,2021-10-28,2,0,19,PSI-10_Raw Data_21301H2_data.csv,PSI-10,8236,65.88,0.0176,2.8714,ya,28.0,65.88,37.88,0.8017,rekaman berakhir saat burner masih panas
+21301H3,5,2021-10-28,2,0,19,PSI-10_Raw Data_21301H3_data.csv,PSI-10,9388,75.1,0.017585,1.5989,ya,28.49,75.1,46.61,0.9022,rekaman berakhir saat burner masih panas
+21301J3,5,2021-10-29,2,0,19,PSI-10_Raw Data_21301J3_data.csv,PSI-10,15519,124.14,0.017501,0.91,ya,47.01,124.14,77.13,0.5519,rekaman berakhir saat burner masih panas
+21301J4,5,2021-10-29,2,0,19,PSI-10_Raw Data_21301J4_data.csv,PSI-10,46801,374.4,0.015291,0.5476,ya,43.62,374.4,330.78,0.552,rekaman berakhir saat burner masih panas
+21328A1,0,2021-11-24,3,0,4,PSI-10_Raw Data_21328A1_data.csv,PSI-10,8588,68.7,0.006392,0.2042,ya,40.74,68.7,27.96,0.0058,rekaman berakhir saat burner masih panas
+21328A2,0,2021-11-24,3,0,4,PSI-10_Raw Data_21328A2_data.csv,PSI-10,8436,67.48,0.006226,0.0604,ya,40.22,67.48,27.26,0.0029,rekaman berakhir saat burner masih panas
+21328D1,0,2021-11-24,3,0,4,PSI-10_Raw Data_21328D1_data.csv,PSI-10,114220,913.75,0.014233,0.0345,ya,48.26,913.75,865.5,0.003,rekaman berakhir saat burner masih panas
+21328N1,0,2021-11-24,3,0,4,PSI-10_Raw Data_21328N1_data.csv,PSI-10,6122,48.97,0.002346,0.0633,ya,28.26,48.97,20.7,0.0029,rekaman berakhir saat burner masih panas
+21328N2,0,2021-11-24,3,0,4,PSI-10_Raw Data_21328N2_data.csv,PSI-10,5872,46.97,0.002105,0.0443,ya,27.37,46.97,19.6,0.004,rekaman berakhir saat burner masih panas
+21328N3,0,2021-11-24,3,0,4,PSI-10_Raw Data_21328N3_data.csv,PSI-10,6373,50.96,0.002656,0.0276,ya,28.09,50.96,22.88,0.0055,rekaman berakhir saat burner masih panas
+21328N4,0,2021-11-24,3,0,4,PSI-10_Raw Data_21328N4_data.csv,PSI-10,6121,48.96,0.003668,0.0246,ya,23.89,48.96,25.07,0.003,rekaman berakhir saat burner masih panas
+21328N5,0,2021-11-24,3,0,4,PSI-10_Raw Data_21328N5_data.csv,PSI-10,9123,72.98,0.009521,0.0117,ya,30.11,72.98,42.86,0.0006,rekaman berakhir saat burner masih panas
+21328P1,0,2021-11-24,3,0,4,PSI-10_Raw Data_21328P1_data.csv,PSI-10,8698,69.58,0.004025,0.1819,ya,41.31,69.58,28.26,0.0029,rekaman berakhir saat burner masih panas
+21340A1,0,2021-12-06,3,0,4,PSI-10_Raw Data_21340A1_data.csv,PSI-10,9012,72.09,0.010116,0.0372,ya,34.37,72.09,37.72,0.0029,rekaman berakhir saat burner masih panas
+21340A2,0,2021-12-06,3,0,4,PSI-10_Raw Data_21340A2_data.csv,PSI-10,8124,64.99,0.009996,0.0369,ya,29.18,64.99,35.8,0.003,rekaman berakhir saat burner masih panas
+21340B1,0,2021-12-06,3,0,4,PSI-10_Raw Data_21340B1_data.csv,PSI-10,10203,81.62,0.007353,0.1425,ya,45.27,81.62,36.34,0.0031,rekaman berakhir saat burner masih panas
+21340B2,0,2021-12-06,3,0,4,PSI-10_Raw Data_21340B2_data.csv,PSI-10,9327,74.61,0.007129,0.039,ya,40.22,74.61,34.39,0.0029,rekaman berakhir saat burner masih panas
+21340C1,0,2021-12-06,3,0,4,PSI-10_Raw Data_21340C1_data.csv,PSI-10,8939,71.5,0.00419,0.0704,ya,46.85,71.5,24.66,0.0027,rekaman berakhir saat burner masih panas
+21340C2,0,2021-12-06,3,0,4,PSI-10_Raw Data_21340C2_data.csv,PSI-10,7588,60.7,0.003866,0.058,ya,38.37,60.7,22.33,0.0057,rekaman berakhir saat burner masih panas
+21340C3,0,2021-12-06,3,0,4,PSI-10_Raw Data_21340C3_data.csv,PSI-10,8202,65.61,0.003883,0.0762,ya,42.03,65.61,23.58,0.0078,rekaman berakhir saat burner masih panas
+21340C4,0,2021-12-06,3,0,4,PSI-10_Raw Data_21340C4_data.csv,PSI-10,8440,67.51,0.004819,0.0524,ya,40.85,67.51,26.66,0.0027,rekaman berakhir saat burner masih panas
+21340C5,0,2021-12-06,3,0,4,PSI-10_Raw Data_21340C5_data.csv,PSI-10,7952,63.61,0.007753,0.0415,ya,36.46,63.61,27.14,0.0021,rekaman berakhir saat burner masih panas
+21340C6,0,2021-12-06,3,0,4,PSI-10_Raw Data_21340C6_data.csv,PSI-10,7576,60.6,0.004455,0.0468,ya,36.58,60.6,24.02,0.0006,rekaman berakhir saat burner masih panas
+21340C7,0,2021-12-06,3,0,4,PSI-10_Raw Data_21340C7_data.csv,PSI-10,7576,60.6,0.007216,0.0332,ya,36.02,60.6,24.58,0.0012,rekaman berakhir saat burner masih panas
+21340M1,0,2021-12-06,3,0,4,PSI-10_Raw Data_21340M1_data.csv,PSI-10,10238,81.9,0.006156,0.0565,ya,34.6,81.9,47.3,0.0032,rekaman berakhir saat burner masih panas
+21340M2,0,2021-12-06,3,0,4,PSI-10_Raw Data_21340M2_data.csv,PSI-10,21956,175.63,0.006233,0.0644,ya,48.55,175.63,127.08,0.0032,rekaman berakhir saat burner masih panas
+21349A1,0,2021-12-15,3,0,4,PSI-10_Raw Data_21349A1_data.csv,PSI-10,5000,40.0,0.022293,0.0623,ya,32.87,40.0,7.13,-0.0048,rekaman berakhir saat burner masih panas
+21349B1,0,2021-12-15,3,0,4,PSI-10_Raw Data_21349B1_data.csv,PSI-10,5625,44.99,0.023589,0.0622,ya,36.66,44.99,8.33,0.003,rekaman berakhir saat burner masih panas
+21349D2,0,2021-12-15,3,0,4,PSI-10_Raw Data_21349D2_data.csv,PSI-10,7689,61.5,0.012665,0.0681,ya,39.58,61.5,21.93,0.0081,rekaman berakhir saat burner masih panas
+21349D3,0,2021-12-15,3,0,4,PSI-10_Raw Data_21349D3_data.csv,PSI-10,7189,57.5,0.013004,0.0635,ya,36.8,57.5,20.7,0.003,rekaman berakhir saat burner masih panas
+21349M1,0,2021-12-15,3,0,4,PSI-10_Raw Data_21349M1_data.csv,PSI-10,10678,85.42,0.00799,0.1395,ya,49.3,85.42,36.12,0.0003,rekaman berakhir saat burner masih panas
+21349M2,0,2021-12-15,3,0,4,PSI-10_Raw Data_21349M2_data.csv,PSI-10,9565,76.51,0.011029,0.0463,ya,41.22,76.51,35.3,0.0006,rekaman berakhir saat burner masih panas
+21349M3,0,2021-12-15,3,0,4,PSI-10_Raw Data_21349M3_data.csv,PSI-10,21456,171.64,0.019,0.0487,ya,47.8,171.64,123.84,0.0057,rekaman berakhir saat burner masih panas
+21349M4,0,2021-12-15,3,0,4,PSI-10_Raw Data_21349M4_data.csv,PSI-10,13965,111.71,0.01156,0.1088,ya,36.58,111.71,75.14,0.0003,rekaman berakhir saat burner masih panas
+21349M5,0,2021-12-15,3,0,4,PSI-10_Raw Data_21349M5_data.csv,PSI-10,13316,106.52,0.006802,0.2064,ya,37.15,106.52,69.38,0.0006,rekaman berakhir saat burner masih panas
+21349M6,0,2021-12-15,3,0,4,PSI-10_Raw Data_21349M6_data.csv,PSI-10,9576,76.6,0.004849,0.5176,ya,34.47,76.6,42.13,0.0008,rekaman berakhir saat burner masih panas
+21349M7,0,2021-12-15,3,0,4,PSI-10_Raw Data_21349M7_data.csv,PSI-10,7711,61.68,0.004715,0.077,ya,37.68,61.68,24.0,0.0004,rekaman berakhir saat burner masih panas
+21349N1,0,2021-12-15,3,0,4,PSI-10_Raw Data_21349N1_data.csv,PSI-10,8689,69.5,0.006943,0.0959,ya,40.62,69.5,28.88,0.003,rekaman berakhir saat burner masih panas
+21349N2,0,2021-12-15,3,0,4,PSI-10_Raw Data_21349N2_data.csv,PSI-10,8828,70.62,0.006305,0.0705,ya,42.27,70.62,28.35,0.0032,rekaman berakhir saat burner masih panas
+21349N3,0,2021-12-15,3,0,4,PSI-10_Raw Data_21349N3_data.csv,PSI-10,17329,138.62,0.019601,0.0454,ya,50.44,138.62,88.18,0.0026,rekaman berakhir saat burner masih panas
+21349N4,0,2021-12-15,3,0,4,PSI-10_Raw Data_21349N4_data.csv,PSI-10,12941,103.52,0.012036,0.0509,ya,47.7,103.52,55.82,0.0055,rekaman berakhir saat burner masih panas
+21361A1,0,2021-12-27,3,0,4,PSI-10_Raw Data_21361A1_data.csv,PSI-10,9276,74.2,0.012602,0.0699,ya,36.59,74.2,37.61,0.0056,rekaman berakhir saat burner masih panas
+21361B1,0,2021-12-27,3,0,4,PSI-10_Raw Data_21361B1_data.csv,PSI-10,9124,72.98,0.014685,0.046,ya,27.35,72.98,45.63,0.0003,rekaman berakhir saat burner masih panas
+21361C1,0,2021-12-27,3,0,4,PSI-10_Raw Data_21361C1_data.csv,PSI-10,10691,85.52,0.006479,0.1353,ya,50.47,85.52,35.05,0.0055,rekaman berakhir saat burner masih panas
+21361C2,0,2021-12-27,3,0,4,PSI-10_Raw Data_21361C2_data.csv,PSI-10,9827,78.61,0.007235,0.0591,ya,40.14,78.61,38.47,0.0005,rekaman berakhir saat burner masih panas
+21361D1,0,2021-12-27,3,0,4,PSI-10_Raw Data_21361D1_data.csv,PSI-10,10577,84.61,0.005278,0.0746,ya,52.02,84.61,32.58,0.003,rekaman berakhir saat burner masih panas
+21361D2,0,2021-12-27,3,0,4,PSI-10_Raw Data_21361D2_data.csv,PSI-10,8715,69.71,0.004507,0.0719,ya,43.72,69.71,25.99,0.0034,rekaman berakhir saat burner masih panas
+21361F1,0,2021-12-27,3,0,4,PSI-10_Raw Data_21361F1_data.csv,PSI-10,8874,70.98,0.009903,0.0347,ya,34.18,70.98,36.8,0.0083,rekaman berakhir saat burner masih panas
+21361F2,0,2021-12-27,3,0,4,PSI-10_Raw Data_21361F2_data.csv,PSI-10,7123,56.98,0.008808,0.0264,ya,25.18,56.98,31.8,0.0004,rekaman berakhir saat burner masih panas
+21361F3,0,2021-12-27,3,0,4,PSI-10_Raw Data_21361F3_data.csv,PSI-10,8999,71.99,0.01216,0.0198,ya,35.27,71.99,36.72,0.0056,rekaman berakhir saat burner masih panas
+21361F4,0,2021-12-27,3,0,4,PSI-10_Raw Data_21361F4_data.csv,PSI-10,6987,55.89,0.009915,0.0224,ya,27.85,55.89,28.04,0.0027,rekaman berakhir saat burner masih panas
+21361F5,0,2021-12-27,3,0,4,PSI-10_Raw Data_21361F5_data.csv,PSI-10,6737,53.89,0.007424,0.0227,ya,26.91,53.89,26.98,-0.0,rekaman berakhir saat burner masih panas
+21361F6,0,2021-12-27,3,0,4,PSI-10_Raw Data_21361F6_data.csv,PSI-10,6737,53.89,0.011981,0.0253,ya,27.11,53.89,26.78,0.0033,rekaman berakhir saat burner masih panas
+21361G1,0,2021-12-27,3,0,4,PSI-10_Raw Data_21361G1_data.csv,PSI-10,10577,84.61,0.005439,0.1322,ya,56.15,84.61,28.46,0.003,rekaman berakhir saat burner masih panas
+21361G2,0,2021-12-27,3,0,4,PSI-10_Raw Data_21361G2_data.csv,PSI-10,8189,65.51,0.008006,0.0381,ya,36.37,65.51,29.14,0.0026,rekaman berakhir saat burner masih panas
+21361G3,0,2021-12-27,3,0,4,PSI-10_Raw Data_21361G3_data.csv,PSI-10,8202,65.61,0.007905,0.0382,ya,36.35,65.61,29.26,0.0029,rekaman berakhir saat burner masih panas
+21361G4,0,2021-12-27,3,0,4,PSI-10_Raw Data_21361G4_data.csv,PSI-10,8202,65.61,0.004783,0.0495,ya,37.24,65.61,28.37,0.0028,rekaman berakhir saat burner masih panas
+21361G5,0,2021-12-27,3,0,4,PSI-10_Raw Data_21361G5_data.csv,PSI-10,7315,58.51,0.003876,0.046,ya,37.46,58.51,21.05,0.0029,rekaman berakhir saat burner masih panas
+21361M1,0,2021-12-28,3,0,4,PSI-10_Raw Data_21361M1_data.csv,PSI-10,8076,64.6,0.005908,0.0501,ya,35.71,64.6,28.89,0.0038,rekaman berakhir saat burner masih panas
+21361M2,0,2021-12-28,3,0,4,PSI-10_Raw Data_21361M2_data.csv,PSI-10,8589,68.7,0.004839,0.0533,ya,40.98,68.7,27.73,0.0031,rekaman berakhir saat burner masih panas
+21361M3,0,2021-12-28,3,0,4,PSI-10_Raw Data_21361M3_data.csv,PSI-10,8499,67.98,0.008637,0.0591,ya,27.88,67.98,40.1,0.0032,rekaman berakhir saat burner masih panas
+22018A1,0,2022-01-18,3,0,4,PSI-10_Raw Data_22018A1_data.csv,PSI-10,7250,57.99,0.011322,0.0214,ya,25.51,57.99,32.48,0.0078,rekaman berakhir saat burner masih panas
+22018B1,0,2022-01-18,3,0,4,PSI-10_Raw Data_22018B1_data.csv,PSI-10,7249,57.98,0.011279,0.0251,ya,25.47,57.98,32.51,-0.0021,rekaman berakhir saat burner masih panas
+22018C1,0,2022-01-18,3,0,4,PSI-10_Raw Data_22018C1_data.csv,PSI-10,8839,70.7,0.007801,0.1973,ya,40.47,70.7,30.23,0.0029,rekaman berakhir saat burner masih panas
+22018D1,0,2022-01-18,3,0,4,PSI-10_Raw Data_22018D1_data.csv,PSI-10,8578,68.62,0.006577,0.0442,ya,38.61,68.62,30.01,0.003,rekaman berakhir saat burner masih panas
+22018F1,0,2022-01-18,3,0,4,PSI-10_Raw Data_22018F1_data.csv,PSI-10,8452,67.61,0.005687,0.0408,ya,38.18,67.61,29.42,0.0029,rekaman berakhir saat burner masih panas
+22018G1,0,2022-01-18,3,0,4,PSI-10_Raw Data_22018G1_data.csv,PSI-10,12500,99.99,0.010268,0.0336,ya,30.64,99.99,69.35,0.0056,rekaman berakhir saat burner masih panas
+22018G2,0,2022-01-18,3,0,4,PSI-10_Raw Data_22018G2_data.csv,PSI-10,7998,63.98,0.005238,0.0314,ya,26.63,63.98,37.35,0.0029,rekaman berakhir saat burner masih panas
+22018G3,0,2022-01-18,3,0,4,PSI-10_Raw Data_22018G3_data.csv,PSI-10,6624,52.98,0.003319,0.0441,ya,26.01,52.98,26.98,0.0058,rekaman berakhir saat burner masih panas
+22018H2,0,2022-01-18,3,0,4,PSI-10_Raw Data_22018H2_data.csv,PSI-10,10602,84.81,0.005659,0.0359,ya,38.46,84.81,46.34,0.008,rekaman berakhir saat burner masih panas
+22018J1,0,2022-01-18,3,0,4,PSI-10_Raw Data_22018J1_data.csv,PSI-10,13954,111.62,0.004089,0.052,ya,43.86,111.62,67.76,0.0032,rekaman berakhir saat burner masih panas
+22018J2,0,2022-01-18,3,0,4,PSI-10_Raw Data_22018J2_data.csv,PSI-10,13500,107.99,0.013342,0.0533,ya,29.03,107.99,78.97,0.003,rekaman berakhir saat burner masih panas
+22018J4,0,2022-01-18,3,0,4,PSI-10_Raw Data_22018J4_data.csv,PSI-10,43245,345.95,0.005012,0.0677,ya,48.58,290.7,242.12,0.0026,mendingin dalam rekaman
+22024A1,0,2022-01-24,3,0,4,PSI-10_Raw Data_22024A1_data.csv,PSI-10,8875,70.99,0.011458,0.0686,ya,33.46,70.99,37.54,0.0055,rekaman berakhir saat burner masih panas
+22024A2,0,2022-01-24,3,0,4,PSI-10_Raw Data_22024A2_data.csv,PSI-10,7874,62.99,0.011217,0.0411,ya,25.63,62.99,37.36,0.0026,rekaman berakhir saat burner masih panas
+22024B1,0,2022-01-24,3,0,4,PSI-10_Raw Data_22024B1_data.csv,PSI-10,7249,57.99,0.010687,0.0319,ya,24.22,57.99,33.76,0.0029,rekaman berakhir saat burner masih panas
+22024B2,0,2022-01-24,3,0,4,PSI-10_Raw Data_22024B2_data.csv,PSI-10,10238,81.9,0.01341,0.06,ya,25.77,81.9,56.13,0.0057,rekaman berakhir saat burner masih panas
+22024B3,0,2022-01-24,3,0,4,PSI-10_Raw Data_22024B3_data.csv,PSI-10,11363,90.9,0.012831,0.0543,ya,25.5,90.9,65.4,0.0031,rekaman berakhir saat burner masih panas
+22024C1,0,2022-01-24,3,0,4,PSI-10_Raw Data_22024C1_data.csv,PSI-10,8691,69.52,0.007836,0.2029,ya,39.36,69.52,30.16,0.0029,rekaman berakhir saat burner masih panas
+22024D1,0,2022-01-24,3,0,4,PSI-10_Raw Data_22024D1_data.csv,PSI-10,8582,68.65,0.005985,0.0438,ya,39.1,68.65,29.55,0.0055,rekaman berakhir saat burner masih panas
+22024F1,0,2022-01-24,3,0,4,PSI-10_Raw Data_22024F1_data.csv,PSI-10,8589,68.71,0.004145,0.062,ya,42.74,68.71,25.96,0.0031,rekaman berakhir saat burner masih panas
+22024G1,0,2022-01-24,3,0,4,PSI-10_Raw Data_22024G1_data.csv,PSI-10,8126,65.0,0.010166,0.0438,ya,37.27,65.0,27.73,0.003,rekaman berakhir saat burner masih panas
+22024H1,0,2022-01-24,3,0,4,PSI-10_Raw Data_22024H1_data.csv,PSI-10,7249,57.98,0.011399,0.0405,ya,25.97,57.98,32.02,0.003,rekaman berakhir saat burner masih panas
+22024H2,0,2022-01-25,3,0,4,PSI-10_Raw Data_22024H2_data.csv,PSI-10,6511,52.08,0.009347,0.0307,ya,24.97,52.08,27.11,0.0035,rekaman berakhir saat burner masih panas
+22024J1,0,2022-01-24,3,0,4,PSI-10_Raw Data_22024J1_data.csv,PSI-10,8094,64.73,0.00725,0.2428,ya,39.02,64.73,25.71,0.0031,rekaman berakhir saat burner masih panas
+22024K1,0,2022-01-24,3,0,4,PSI-10_Raw Data_22024K1_data.csv,PSI-10,7576,60.6,0.005388,0.0469,ya,35.82,60.6,24.78,0.0029,rekaman berakhir saat burner masih panas
+22024K2,0,2022-01-25,3,0,4,PSI-10_Raw Data_22024K2_data.csv,PSI-10,13314,106.51,0.00952,0.0558,ya,48.56,106.51,57.95,0.0056,rekaman berakhir saat burner masih panas
+22024K3,0,2022-01-25,3,0,4,PSI-10_Raw Data_22024K3_data.csv,PSI-10,20057,160.44,0.017451,0.0451,ya,50.77,160.44,109.67,0.0029,rekaman berakhir saat burner masih panas
+22024L1,0,2022-01-24,3,0,4,PSI-10_Raw Data_22024L1_data.csv,PSI-10,7576,60.6,0.003483,0.0658,ya,39.54,60.6,21.07,0.0029,rekaman berakhir saat burner masih panas
+22024L2,0,2022-01-25,3,0,4,PSI-10_Raw Data_22024L2_data.csv,PSI-10,7827,62.61,0.004822,0.0571,ya,38.75,62.61,23.86,0.0025,rekaman berakhir saat burner masih panas
+22024L3,0,2022-01-25,3,0,4,PSI-10_Raw Data_22024L3_data.csv,PSI-10,7438,59.5,0.007028,0.0438,ya,35.27,59.5,24.23,0.0031,rekaman berakhir saat burner masih panas
+22024M1,0,2022-01-25,3,0,4,PSI-10_Raw Data_22024M1_data.csv,PSI-10,10251,82.0,0.015351,0.0487,ya,26.82,82.0,55.18,0.0032,rekaman berakhir saat burner masih panas
+22024M2,0,2022-01-25,3,0,4,PSI-10_Raw Data_22024M2_data.csv,PSI-10,11363,90.9,0.015261,0.0439,ya,26.66,90.9,64.23,0.0004,rekaman berakhir saat burner masih panas
+22027B1,0,2022-01-27,3,0,4,PSI-10_Raw Data_22027B1_data.csv,PSI-10,8375,66.99,0.008026,0.0314,ya,24.53,66.99,42.46,0.0038,rekaman berakhir saat burner masih panas
+22027B2,0,2022-01-27,3,0,4,PSI-10_Raw Data_22027B2_data.csv,PSI-10,9499,75.98,0.009135,0.0223,ya,25.6,75.98,50.38,0.0029,rekaman berakhir saat burner masih panas
+22027B3,0,2022-01-27,3,0,4,PSI-10_Raw Data_22027B3_data.csv,PSI-10,13127,105.01,0.016089,0.0216,ya,29.81,105.01,75.2,0.0057,rekaman berakhir saat burner masih panas
+22027B4,0,2022-01-27,3,0,4,PSI-10_Raw Data_22027B4_data.csv,PSI-10,7375,58.99,0.004959,0.0276,ya,26.56,58.99,32.43,0.0026,rekaman berakhir saat burner masih panas
+22027B5,0,2022-01-27,3,0,4,PSI-10_Raw Data_22027B5_data.csv,PSI-10,10874,86.98,0.012883,0.0214,ya,32.5,86.98,54.48,0.0055,rekaman berakhir saat burner masih panas
+22027B6,0,2022-01-27,3,0,4,PSI-10_Raw Data_22027B6_data.csv,PSI-10,11638,93.1,0.01341,0.0341,ya,33.21,93.1,59.89,0.0022,rekaman berakhir saat burner masih panas
+22027B7,0,2022-01-27,3,0,4,PSI-10_Raw Data_22027B7_data.csv,PSI-10,10374,82.98,0.012021,0.0235,ya,28.9,82.98,54.08,0.0029,rekaman berakhir saat burner masih panas
+22027B8,0,2022-01-27,3,0,4,PSI-10_Raw Data_22027B8_data.csv,PSI-10,8737,69.89,0.007518,0.0328,ya,24.71,69.89,45.18,0.003,rekaman berakhir saat burner masih panas
+22027C1,0,2022-01-27,3,0,4,PSI-10_Raw Data_22027C1_data.csv,PSI-10,9828,78.62,0.004957,0.0399,ya,38.34,78.62,40.28,0.0033,rekaman berakhir saat burner masih panas
+22027C2,0,2022-01-27,3,0,4,PSI-10_Raw Data_22027C2_data.csv,PSI-10,8078,64.62,0.00252,0.0508,ya,38.49,64.62,26.13,0.0034,rekaman berakhir saat burner masih panas
+22027D1,0,2022-01-27,3,0,4,PSI-10_Raw Data_22027D1_data.csv,PSI-10,7952,63.61,0.003075,0.1369,ya,35.07,63.61,28.53,0.003,rekaman berakhir saat burner masih panas
+22027D2,0,2022-01-27,3,0,4,PSI-10_Raw Data_22027D2_data.csv,PSI-10,7012,56.09,0.005201,0.0318,ya,24.04,56.09,32.05,0.0028,rekaman berakhir saat burner masih panas
+22027D3,0,2022-01-27,3,0,4,PSI-10_Raw Data_22027D3_data.csv,PSI-10,7112,56.89,0.005844,0.0288,ya,22.91,56.89,33.98,0.0028,rekaman berakhir saat burner masih panas
+22027D4,0,2022-01-27,3,0,4,PSI-10_Raw Data_22027D4_data.csv,PSI-10,7249,57.98,0.006763,0.0284,ya,24.5,57.98,33.49,0.0029,rekaman berakhir saat burner masih panas
+22027D5,0,2022-01-27,3,0,4,PSI-10_Raw Data_22027D5_data.csv,PSI-10,7886,63.08,0.007628,0.0264,ya,24.91,63.08,38.17,0.0028,rekaman berakhir saat burner masih panas
+22027D6,0,2022-01-27,3,0,4,PSI-10_Raw Data_22027D6_data.csv,PSI-10,7124,56.99,0.006555,0.0287,ya,24.12,56.99,32.86,0.0029,rekaman berakhir saat burner masih panas
+22035A1,0,2022-02-04,3,0,4,PSI-10_Raw Data_22035A1_data.csv,PSI-10,8015,64.11,0.00868,0.0436,ya,35.01,64.11,29.1,0.0028,rekaman berakhir saat burner masih panas
+22035B1,0,2022-02-04,3,0,4,PSI-10_Raw Data_22035B1_data.csv,PSI-10,6999,55.98,0.009274,0.0352,ya,24.5,55.98,31.48,0.0029,rekaman berakhir saat burner masih panas
+22035C1,0,2022-02-04,3,0,4,PSI-10_Raw Data_22035C1_data.csv,PSI-10,8339,66.7,0.007089,0.1694,ya,38.3,66.7,28.41,0.0004,rekaman berakhir saat burner masih panas
+22035D1,0,2022-02-04,3,0,4,PSI-10_Raw Data_22035D1_data.csv,PSI-10,8065,64.51,0.005716,0.0429,ya,37.6,64.51,26.91,0.0029,rekaman berakhir saat burner masih panas
+22035D3,0,2022-02-04,3,0,4,PSI-10_Raw Data_22035D3_data.csv,PSI-10,8088,64.7,0.005803,0.039,ya,37.74,64.7,26.95,0.0013,rekaman berakhir saat burner masih panas
+22035F1,0,2022-02-04,3,0,4,PSI-10_Raw Data_22035F1_data.csv,PSI-10,7585,60.67,0.004756,0.0458,ya,34.74,60.67,25.94,0.0033,rekaman berakhir saat burner masih panas
+22035G1,0,2022-02-04,3,0,4,PSI-10_Raw Data_22035G1_data.csv,PSI-10,7935,63.47,0.003893,0.0508,ya,38.12,63.47,25.35,0.003,rekaman berakhir saat burner masih panas
+22035G2,0,2022-02-04,3,0,4,PSI-10_Raw Data_22035G2_data.csv,PSI-10,11624,92.98,0.009015,0.0523,ya,32.79,92.98,60.19,-0.0014,rekaman berakhir saat burner masih panas
+22035J1,0,2022-02-04,3,0,4,PSI-10_Raw Data_22035J1_data.csv,PSI-10,19237,153.89,0.013247,0.0307,ya,31.16,153.89,122.73,0.0082,rekaman berakhir saat burner masih panas
+22035J2,0,2022-02-04,3,0,4,PSI-10_Raw Data_22035J2_data.csv,PSI-10,13623,108.98,0.008281,0.0435,ya,32.1,108.98,76.87,0.0055,rekaman berakhir saat burner masih panas
+22035J3,0,2022-02-04,3,0,4,PSI-10_Raw Data_22035J3_data.csv,PSI-10,7747,61.97,0.004796,0.0361,ya,28.84,61.97,33.13,0.0038,rekaman berakhir saat burner masih panas
+22035J4,0,2022-02-04,3,0,4,PSI-10_Raw Data_22035J4_data.csv,PSI-10,9248,73.98,0.006422,0.054,ya,30.02,73.98,43.96,-0.0023,rekaman berakhir saat burner masih panas
+22035J5,0,2022-02-04,3,0,4,PSI-10_Raw Data_22035J5_data.csv,PSI-10,11247,89.97,0.010006,0.0361,ya,30.15,89.97,59.82,0.0029,rekaman berakhir saat burner masih panas
+22035J6,0,2022-02-04,3,0,4,PSI-10_Raw Data_22035J6_data.csv,PSI-10,15248,121.98,0.011603,0.0402,ya,34.48,121.98,87.5,0.003,rekaman berakhir saat burner masih panas
+22035J7,0,2022-02-04,3,0,4,PSI-10_Raw Data_22035J7_data.csv,PSI-10,8748,69.98,0.008233,0.0427,ya,28.41,69.98,41.57,0.003,rekaman berakhir saat burner masih panas
+21088A1,5,2021-03-29,2,0,21,PSI-159_Raw Data_21088A1_data.csv,PSI-159,12778,102.22,0.010795,4.6818,ya,38.81,102.22,63.41,4.8607,rekaman berakhir saat burner masih panas
+21088B1,5,2021-03-29,2,0,21,PSI-159_Raw Data_21088B1_data.csv,PSI-159,12416,99.32,0.010187,4.6855,ya,42.2,99.32,57.12,4.8582,rekaman berakhir saat burner masih panas
+21088C1,5,2021-03-29,2,0,21,PSI-159_Raw Data_21088C1_data.csv,PSI-159,11838,94.7,0.009792,4.681,ya,39.39,94.7,55.3,4.8579,rekaman berakhir saat burner masih panas
+21088D1,5,2021-03-29,2,0,21,PSI-159_Raw Data_21088D1_data.csv,PSI-159,13126,104.99,0.017737,2.3368,ya,37.86,104.99,67.13,2.4244,rekaman berakhir saat burner masih panas
+21088F1,5,2021-03-29,2,0,21,PSI-159_Raw Data_21088F1_data.csv,PSI-159,8142,65.13,0.020853,1.1368,ya,39.97,65.13,25.16,1.1931,rekaman berakhir saat burner masih panas
+21088G1,5,2021-03-29,2,0,21,PSI-159_Raw Data_21088G1_data.csv,PSI-159,13593,108.74,0.008179,4.6861,ya,53.78,108.74,54.95,4.8583,rekaman berakhir saat burner masih panas
+21088H1,5,2021-03-29,2,0,21,PSI-159_Raw Data_21088H1_data.csv,PSI-159,14955,119.63,0.015952,2.3378,ya,52.62,119.63,67.01,2.4246,rekaman berakhir saat burner masih panas
+21088H2,5,2021-03-29,2,0,21,PSI-159_Raw Data_21088H2_data.csv,PSI-159,23095,184.75,0.016259,2.329,ya,53.97,184.75,130.78,2.4286,rekaman berakhir saat burner masih panas
+21088J1,5,2021-03-29,2,0,21,PSI-159_Raw Data_21088J1_data.csv,PSI-159,12579,100.62,0.005672,4.6958,ya,52.58,100.62,48.05,4.8576,rekaman berakhir saat burner masih panas
+21088K1,5,2021-03-29,2,0,21,PSI-159_Raw Data_21088K1_data.csv,PSI-159,19350,154.79,0.01278,2.3295,ya,55.83,154.79,98.96,2.4273,rekaman berakhir saat burner masih panas
+21088L1,5,2021-03-30,2,0,21,PSI-159_Raw Data_21088L1_data.csv,PSI-159,7113,56.9,0.002277,4.6824,ya,29.43,56.9,27.46,4.8403,rekaman berakhir saat burner masih panas
+21088M4,5,2021-03-29,2,0,21,PSI-159_Raw Data_21088M4_data.csv,PSI-159,7124,56.98,0.004109,2.3344,ya,25.55,56.98,31.43,2.4105,rekaman berakhir saat burner masih panas
+21088N1,5,2021-03-30,2,0,21,PSI-159_Raw Data_21088N1_data.csv,PSI-159,7577,60.6,0.001147,4.6841,ya,38.43,60.6,22.17,0.0116,rekaman berakhir saat burner masih panas
+21088P1,5,2021-03-30,2,0,21,PSI-159_Raw Data_21088P1_data.csv,PSI-159,8192,65.53,0.002023,2.3237,ya,39.09,65.53,26.44,2.4006,rekaman berakhir saat burner masih panas
+21102A1,5,2021-04-12,2,0,24,PSI-159_Raw Data_21102A1_data.csv,PSI-159,15193,121.54,0.008396,4.6602,ya,43.78,121.54,77.76,4.8362,rekaman berakhir saat burner masih panas
+21102B1,5,2021-04-12,2,0,24,PSI-159_Raw Data_21102B1_data.csv,PSI-159,11073,88.58,0.006999,3.7948,ya,39.98,88.58,48.59,3.93,rekaman berakhir saat burner masih panas
+21102C1,5,2021-04-12,2,0,24,PSI-159_Raw Data_21102C1_data.csv,PSI-159,10251,82.0,0.009948,4.6647,ya,29.79,82.0,52.21,4.8316,rekaman berakhir saat burner masih panas
+21102C2,5,2021-04-12,2,0,24,PSI-159_Raw Data_21102C2_data.csv,PSI-159,11501,92.0,0.019828,2.2837,ya,33.02,92.0,58.98,2.4022,rekaman berakhir saat burner masih panas
+21102C3,5,2021-04-12,2,0,24,PSI-159_Raw Data_21102C3_data.csv,PSI-159,15490,123.91,0.014873,3.4826,ya,33.54,123.91,90.38,3.6337,rekaman berakhir saat burner masih panas
+21102C4,5,2021-04-12,2,0,24,PSI-159_Raw Data_21102C4_data.csv,PSI-159,5866,46.92,1.4e-05,2.2306,tidak,,,,,
+21102C5,5,2021-04-12,2,0,24,PSI-159_Raw Data_21102C5_data.csv,PSI-159,11650,93.18,0.017346,2.2959,ya,45.18,93.18,48.0,2.3977,rekaman berakhir saat burner masih panas
+21102C6,5,2021-04-12,2,0,24,PSI-159_Raw Data_21102C6_data.csv,PSI-159,7917,63.33,0.000206,2.2869,tidak,,,,,
+21102C7,5,2021-04-12,2,0,24,PSI-159_Raw Data_21102C7_data.csv,PSI-159,9041,72.32,0.011122,2.3004,ya,44.87,72.32,27.46,2.3938,rekaman berakhir saat burner masih panas
+21102C8,5,2021-04-12,2,0,24,PSI-159_Raw Data_21102C8_data.csv,PSI-159,9042,72.33,0.000549,2.2947,tidak,,,,,
+21102M1,5,2021-04-12,2,0,24,PSI-159_Raw Data_21102M1_data.csv,PSI-159,6500,51.99,0.002073,4.6435,ya,28.69,51.99,23.3,1.1607,rekaman berakhir saat burner masih panas
+21102M2,5,2021-04-12,2,0,24,PSI-159_Raw Data_21102M2_data.csv,PSI-159,6866,54.92,0.004731,2.2873,ya,25.62,54.92,29.3,2.3813,rekaman berakhir saat burner masih panas
+21102M3,5,2021-04-12,2,0,24,PSI-159_Raw Data_21102M3_data.csv,PSI-159,9030,72.21,0.00053,2.2946,tidak,,,,,
+21102M4,5,2021-04-12,2,0,24,PSI-159_Raw Data_21102M4_data.csv,PSI-159,9030,72.23,0.000504,2.2942,tidak,,,,,
+21102M5,5,2021-04-13,2,0,24,PSI-159_Raw Data_21102M5_data.csv,PSI-159,8904,71.22,0.000575,2.2955,tidak,,,,,
+21106A1,5,2021-04-16,2,0,24,PSI-159_Raw Data_21106A1_data.csv,PSI-159,7466,59.72,1.7e-05,4.6372,tidak,,,,,
+21106A2,5,2021-04-16,2,0,24,PSI-159_Raw Data_21106A2_data.csv,PSI-159,7315,58.51,2e-05,4.6317,tidak,,,,,
+21106A3,5,2021-04-16,2,0,24,PSI-159_Raw Data_21106A3_data.csv,PSI-159,7942,63.53,1.8e-05,4.633,tidak,,,,,
+21106A4,5,2021-04-16,2,0,24,PSI-159_Raw Data_21106A4_data.csv,PSI-159,14831,118.64,0.010517,4.6542,ya,48.2,118.64,70.44,4.8342,rekaman berakhir saat burner masih panas
+21106B1,5,2021-04-16,2,0,24,PSI-159_Raw Data_21106B1_data.csv,PSI-159,13514,108.1,0.011872,4.6462,ya,35.56,108.1,72.54,4.8341,rekaman berakhir saat burner masih panas
+21106C1,5,2021-04-16,2,0,24,PSI-159_Raw Data_21106C1_data.csv,PSI-159,14443,115.54,0.008855,3.7866,ya,50.58,115.54,64.96,3.9321,rekaman berakhir saat burner masih panas
+21106D1,5,2021-04-16,2,0,24,PSI-159_Raw Data_21106D1_data.csv,PSI-159,20177,161.41,0.015562,3.4769,ya,34.74,161.41,126.67,3.6342,rekaman berakhir saat burner masih panas
+21106F1,5,2021-04-16,2,0,24,PSI-159_Raw Data_21106F1_data.csv,PSI-159,12224,97.91,0.019846,2.267,ya,33.29,97.91,64.62,2.4021,rekaman berakhir saat burner masih panas
+21106F2,5,2021-04-16,2,0,24,PSI-159_Raw Data_21106F2_data.csv,PSI-159,10404,83.22,0.000852,2.2942,ya,42.92,83.22,40.3,2.3967,rekaman berakhir saat burner masih panas
+21106F3,5,2021-04-16,2,0,24,PSI-159_Raw Data_21106F3_data.csv,PSI-159,9166,73.32,0.01166,1.3994,ya,40.68,73.32,32.64,-0.0046,rekaman berakhir saat burner masih panas
+21106F4,5,2021-04-16,2,0,24,PSI-159_Raw Data_21106F4_data.csv,PSI-159,9166,73.32,0.015357,1.4037,ya,43.11,73.32,30.21,1.4623,rekaman berakhir saat burner masih panas
+21106F5,5,2021-04-16,2,0,24,PSI-159_Raw Data_21106F5_data.csv,PSI-159,10417,83.33,0.000766,1.4085,ya,42.79,83.33,40.54,1.4692,rekaman berakhir saat burner masih panas
+21106G1,5,2021-04-16,2,0,24,PSI-159_Raw Data_21106G1_data.csv,PSI-159,6000,47.99,2.9e-05,4.637,tidak,,,,,
+21106G2,5,2021-04-16,2,0,24,PSI-159_Raw Data_21106G2_data.csv,PSI-159,6497,51.97,9e-06,4.6372,tidak,,,,,
+21106G3,5,2021-04-16,2,0,24,PSI-159_Raw Data_21106G3_data.csv,PSI-159,7255,58.03,0.000176,4.625,tidak,,,,,
+21106G4,5,2021-04-16,2,0,24,PSI-159_Raw Data_21106G4_data.csv,PSI-159,7379,59.02,0.000241,2.2815,tidak,,,,,
+21106G5,5,2021-04-16,2,0,24,PSI-159_Raw Data_21106G5_data.csv,PSI-159,7253,58.02,0.000253,2.278,tidak,,,,,
+21106G6,5,2021-04-17,2,0,24,PSI-159_Raw Data_21106G6_data.csv,PSI-159,9380,75.03,0.006956,1.3992,ya,38.5,75.03,36.54,1.4646,rekaman berakhir saat burner masih panas
+21106G7,5,2021-04-17,2,0,24,PSI-159_Raw Data_21106G7_data.csv,PSI-159,9254,74.02,0.007305,1.4057,ya,37.86,74.02,36.17,1.4653,rekaman berakhir saat burner masih panas
+21106G8,5,2021-04-17,2,0,24,PSI-159_Raw Data_21106G8_data.csv,PSI-159,7241,57.92,0.000868,0.9166,ya,33.82,57.92,24.11,0.9253,rekaman berakhir saat burner masih panas
+21106G9,5,2021-04-17,2,0,24,PSI-159_Raw Data_21106G9_data.csv,PSI-159,8754,70.02,0.004335,1.8806,ya,38.58,70.02,31.44,1.9622,rekaman berakhir saat burner masih panas
+21106H1,5,2021-04-17,2,0,24,PSI-159_Raw Data_21106H1_data.csv,PSI-159,7744,61.95,0.000339,1.3988,tidak,,,,,
+21106H2,5,2021-04-17,2,0,24,PSI-159_Raw Data_21106H2_data.csv,PSI-159,7893,63.14,0.000305,1.8781,tidak,,,,,
+21112A1,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112A1_data.csv,PSI-159,8877,71.01,0.020159,1.7694,ya,31.66,71.01,39.35,1.8724,rekaman berakhir saat burner masih panas
+21112A2,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112A2_data.csv,PSI-159,11626,93.0,0.011501,3.6403,ya,33.78,93.0,59.22,3.7803,rekaman berakhir saat burner masih panas
+21112A3,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112A3_data.csv,PSI-159,17365,138.91,0.016358,2.7275,ya,30.69,138.91,108.23,2.8317,rekaman berakhir saat burner masih panas
+21112A4,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112A4_data.csv,PSI-159,27492,219.93,0.018424,2.2244,ya,30.04,219.93,189.89,2.3546,rekaman berakhir saat burner masih panas
+21112A5,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112A5_data.csv,PSI-159,8624,68.99,0.007216,4.5723,ya,27.56,68.99,41.42,4.729,rekaman berakhir saat burner masih panas
+21112A6,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112A6_data.csv,PSI-159,24129,193.02,0.017931,2.2331,ya,32.14,193.02,160.89,2.3545,rekaman berakhir saat burner masih panas
+21112C1,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112C1_data.csv,PSI-159,8131,65.04,0.020779,1.1117,ya,39.06,65.04,25.98,1.169,rekaman berakhir saat burner masih panas
+21112C2,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112C2_data.csv,PSI-159,8493,67.94,0.020808,1.1075,ya,42.25,67.94,25.69,1.1689,rekaman berakhir saat burner masih panas
+21112C3,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112C3_data.csv,PSI-159,7736,61.94,0.000619,1.112,ya,1.29,61.94,60.66,0.004,rekaman berakhir saat burner masih panas
+21112C4,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112C4_data.csv,PSI-159,8006,64.04,0.000183,1.1143,tidak,,,,,
+21112C5,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112C5_data.csv,PSI-159,8006,64.04,0.000248,1.1155,tidak,,,,,
+21112C6,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112C6_data.csv,PSI-159,7632,61.05,0.000775,1.112,ya,39.54,61.05,21.51,0.0571,rekaman berakhir saat burner masih panas
+21112F1,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112F1_data.csv,PSI-159,5749,45.98,4.9e-05,2.2339,tidak,,,,,
+21112F2,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112F2_data.csv,PSI-159,7753,62.02,0.002925,2.2457,ya,33.3,62.02,28.71,2.323,rekaman berakhir saat burner masih panas
+21112F3,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112F3_data.csv,PSI-159,8249,65.98,0.003342,1.7817,ya,37.46,65.98,28.53,1.8476,rekaman berakhir saat burner masih panas
+21112F4,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112F4_data.csv,PSI-159,7990,63.91,0.004625,1.3368,ya,33.47,63.91,30.44,1.3787,rekaman berakhir saat burner masih panas
+21112F5,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112F5_data.csv,PSI-159,7239,57.9,5.8e-05,0.8988,tidak,,,,,
+21112H1,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112H1_data.csv,PSI-159,8502,68.01,0.005329,1.1366,ya,36.54,68.01,31.46,1.1605,rekaman berakhir saat burner masih panas
+21112H2,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112H2_data.csv,PSI-159,9002,72.01,0.005366,1.1218,ya,40.71,72.01,31.3,1.1658,rekaman berakhir saat burner masih panas
+21112H3,5,2021-04-22,2,0,19,PSI-159_Raw Data_21112H3_data.csv,PSI-159,8001,64.0,0.000244,1.1118,tidak,,,,,
+21125A1,5,2021-05-05,2,0,23,PSI-159_Raw Data_21125A1_data.csv,PSI-159,10320,82.55,8e-06,2.7391,tidak,,,,,
+21125A2,5,2021-05-05,2,0,23,PSI-159_Raw Data_21125A2_data.csv,PSI-159,10194,81.54,0.001487,1.3694,ya,48.14,81.54,33.4,0.7589,rekaman berakhir saat burner masih panas
+21125A3,5,2021-05-05,2,0,23,PSI-159_Raw Data_21125A3_data.csv,PSI-159,9582,76.65,1.9e-05,0.7711,tidak,,,,,
+21125A5,5,2021-05-05,2,0,23,PSI-159_Raw Data_21125A5_data.csv,PSI-159,9442,75.53,1.9e-05,2.7928,tidak,,,,,
+21125A6,5,2021-05-05,2,0,23,PSI-159_Raw Data_21125A6_data.csv,PSI-159,9070,72.55,1.4e-05,1.3889,tidak,,,,,
+21125A7,5,2021-05-05,2,0,23,PSI-159_Raw Data_21125A7_data.csv,PSI-159,9456,75.64,3.4e-05,3.0037,tidak,,,,,
+21125A8,5,2021-05-05,2,0,23,PSI-159_Raw Data_21125A8_data.csv,PSI-159,9445,75.55,1.5e-05,2.361,tidak,,,,,
+21125A9,5,2021-05-05,2,0,23,PSI-159_Raw Data_21125A9_data.csv,PSI-159,9444,75.55,1.5e-05,3.6704,tidak,,,,,
+21125D1,5,2021-05-05,2,0,23,PSI-159_Raw Data_21125D1_data.csv,PSI-159,9682,77.45,0.000376,2.4612,tidak,,,,,
+21125D2,5,2021-05-06,2,0,23,PSI-159_Raw Data_21125D2_data.csv,PSI-159,9459,75.66,0.000303,0.7573,tidak,,,,,
+21125D3,5,2021-05-06,2,0,23,PSI-159_Raw Data_21125D3_data.csv,PSI-159,8956,71.64,2.7e-05,0.7701,tidak,,,,,
+21125D4,5,2021-05-06,2,0,23,PSI-159_Raw Data_21125D4_data.csv,PSI-159,8957,71.66,1.9e-05,1.5247,tidak,,,,,
+21125D5,5,2021-05-06,2,0,23,PSI-159_Raw Data_21125D5_data.csv,PSI-159,8944,71.53,1.7e-05,3.0749,tidak,,,,,
+21125D6,5,2021-05-06,2,0,23,PSI-159_Raw Data_21125D6_data.csv,PSI-159,8944,71.54,4.1e-05,0.75,tidak,,,,,
+21125H1,5,2021-05-05,2,0,23,PSI-159_Raw Data_21125H1_data.csv,PSI-159,9044,72.35,4.8e-05,3.5772,tidak,,,,,
+21125H2,5,2021-05-05,2,0,23,PSI-159_Raw Data_21125H2_data.csv,PSI-159,9357,74.85,6.4e-05,1.6787,tidak,,,,,
+21125H4,5,2021-05-05,2,0,23,PSI-159_Raw Data_21125H4_data.csv,PSI-159,8958,71.66,2.4e-05,2.3736,tidak,,,,,
+21125H5,5,2021-05-05,2,0,23,PSI-159_Raw Data_21125H5_data.csv,PSI-159,9457,75.65,0.000268,0.8592,tidak,,,,,
+21125J1,5,2021-05-05,2,0,23,PSI-159_Raw Data_21125J1_data.csv,PSI-159,9068,72.54,1.8e-05,2.3345,tidak,,,,,
+21125K1,5,2021-05-05,2,0,23,PSI-159_Raw Data_21125K1_data.csv,PSI-159,11879,95.03,0.008243,2.207,ya,38.37,95.03,56.66,2.3132,rekaman berakhir saat burner masih panas
+21125K2,5,2021-05-05,2,0,23,PSI-159_Raw Data_21125K2_data.csv,PSI-159,9616,76.91,0.003791,4.4682,ya,41.07,76.91,35.84,4.6382,rekaman berakhir saat burner masih panas
+21125K3,5,2021-05-05,2,0,23,PSI-159_Raw Data_21125K3_data.csv,PSI-159,21508,172.06,0.018796,1.0936,ya,42.5,172.06,129.56,1.1426,rekaman berakhir saat burner masih panas
+21130A1,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130A1_data.csv,PSI-159,10094,80.74,0.000618,3.4954,ya,48.3,80.74,32.45,0.839,rekaman berakhir saat burner masih panas
+21130A2,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130A2_data.csv,PSI-159,9568,76.54,0.000411,2.4056,tidak,,,,,
+21130A3,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130A3_data.csv,PSI-159,8956,71.64,1.2e-05,4.048,tidak,,,,,
+21130A4,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130A4_data.csv,PSI-159,7188,57.5,1.3e-05,0.1273,tidak,,,,,
+21130A5,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130A5_data.csv,PSI-159,10219,81.74,0.000404,4.0589,tidak,,,,,
+21130A6,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130A6_data.csv,PSI-159,9444,75.54,1.3e-05,3.4199,tidak,,,,,
+21130A7,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130A7_data.csv,PSI-159,9193,73.54,1.5e-05,4.2621,tidak,,,,,
+21130A8,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130A8_data.csv,PSI-159,8955,71.63,1.5e-05,4.9347,tidak,,,,,
+21130G1,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130G1_data.csv,PSI-159,9207,73.65,3.5e-05,3.4054,tidak,,,,,
+21130G2,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130G2_data.csv,PSI-159,8830,70.63,0.000467,2.892,tidak,,,,,
+21130G3,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130G3_data.csv,PSI-159,8957,71.65,0.000363,1.7046,tidak,,,,,
+21130G4,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130G4_data.csv,PSI-159,9219,73.75,1.4e-05,3.3954,tidak,,,,,
+21130G5,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130G5_data.csv,PSI-159,8957,71.64,1.7e-05,4.9164,tidak,,,,,
+21130G6,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130G6_data.csv,PSI-159,9095,72.75,0.0004,0.8969,tidak,,,,,
+21130G7,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130G7_data.csv,PSI-159,8956,71.64,0.000516,2.9963,tidak,,,,,
+21130M1,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130M1_data.csv,PSI-159,7000,56.0,0.001686,4.1729,ya,25.19,56.0,30.82,1.7098,rekaman berakhir saat burner masih panas
+21130M2,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130M2_data.csv,PSI-159,6999,55.99,0.001328,3.3015,ya,27.98,55.99,28.01,3.4343,rekaman berakhir saat burner masih panas
+21130M3,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130M3_data.csv,PSI-159,6749,53.99,0.001865,1.9557,ya,25.85,53.99,28.14,0.8384,rekaman berakhir saat burner masih panas
+21130N1,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130N1_data.csv,PSI-159,6500,51.99,0.001997,4.1162,ya,24.45,51.99,27.54,1.7073,rekaman berakhir saat burner masih panas
+21130N2,5,2021-05-10,2,0,22,PSI-159_Raw Data_21130N2_data.csv,PSI-159,6499,51.98,0.001343,3.2964,ya,26.27,51.98,25.71,3.4302,rekaman berakhir saat burner masih panas
+21130N3,5,2021-05-11,2,0,22,PSI-159_Raw Data_21130N3_data.csv,PSI-159,7741,61.92,0.002679,4.7513,ya,35.13,61.92,26.79,0.8361,rekaman berakhir saat burner masih panas
+21130N4,5,2021-05-11,2,0,22,PSI-159_Raw Data_21130N4_data.csv,PSI-159,8380,67.03,0.002695,3.6551,ya,36.26,67.03,30.77,0.8384,rekaman berakhir saat burner masih panas
+21130N5,5,2021-05-11,2,0,22,PSI-159_Raw Data_21130N5_data.csv,PSI-159,7874,63.02,5.3e-05,4.0787,tidak,,,,,
+21137A1,5,2021-05-17,2,0,22,PSI-159_Raw Data_21137A1_data.csv,PSI-159,8871,70.99,0.004474,5.6525,ya,30.13,70.99,40.86,4.9813,rekaman berakhir saat burner masih panas
+21137A2,5,2021-05-17,2,0,22,PSI-159_Raw Data_21137A2_data.csv,PSI-159,11502,92.01,0.008559,2.4822,ya,33.17,92.01,58.84,2.5754,rekaman berakhir saat burner masih panas
+21137A3,5,2021-05-17,2,0,22,PSI-159_Raw Data_21137A3_data.csv,PSI-159,22242,177.93,0.015294,1.6504,ya,31.5,177.93,146.42,1.7147,rekaman berakhir saat burner masih panas
+21137A4,5,2021-05-17,2,0,22,PSI-159_Raw Data_21137A4_data.csv,PSI-159,10738,85.9,0.008532,3.211,ya,29.59,85.9,56.31,2.1429,rekaman berakhir saat burner masih panas
+21137A5,5,2021-05-17,2,0,22,PSI-159_Raw Data_21137A5_data.csv,PSI-159,11612,92.89,0.010527,1.8123,ya,29.99,92.89,62.9,1.8826,rekaman berakhir saat burner masih panas
+21137A6,5,2021-05-17,2,0,22,PSI-159_Raw Data_21137A6_data.csv,PSI-159,9613,76.89,0.006042,2.3074,ya,31.06,76.89,45.83,2.4038,rekaman berakhir saat burner masih panas
+21137A7,5,2021-05-17,2,0,22,PSI-159_Raw Data_21137A7_data.csv,PSI-159,10872,87.0,0.008352,1.985,ya,32.1,87.0,54.9,2.0541,rekaman berakhir saat burner masih panas
+21137B1,5,2021-05-17,2,0,22,PSI-159_Raw Data_21137B1_data.csv,PSI-159,21330,170.63,0.00635,4.8092,ya,44.57,170.63,126.07,4.9844,rekaman berakhir saat burner masih panas
+21137B2,5,2021-05-17,2,0,22,PSI-159_Raw Data_21137B2_data.csv,PSI-159,24317,194.53,0.005607,2.5025,ya,48.69,194.53,145.84,2.5764,rekaman berakhir saat burner masih panas
+21137C1,5,2021-05-17,2,0,22,PSI-159_Raw Data_21137C1_data.csv,PSI-159,8689,69.5,0.003189,3.0106,ya,39.78,69.5,29.73,0.8387,rekaman berakhir saat burner masih panas
+21137D1,5,2021-05-17,2,0,22,PSI-159_Raw Data_21137D1_data.csv,PSI-159,7249,57.98,0.001687,5.0172,ya,28.75,57.98,29.23,4.9787,rekaman berakhir saat burner masih panas
+21137D2,5,2021-05-17,2,0,22,PSI-159_Raw Data_21137D2_data.csv,PSI-159,8487,67.89,0.00453,2.1321,ya,25.23,67.89,42.66,0.8391,rekaman berakhir saat burner masih panas
+21153A1,5,2021-06-02,2,0,25,PSI-159_Raw Data_21153A1_data.csv,PSI-159,13865,110.91,0.007143,4.7847,ya,37.87,110.91,73.04,4.9839,rekaman berakhir saat burner masih panas
+21153A2,5,2021-06-02,2,0,25,PSI-159_Raw Data_21153A2_data.csv,PSI-159,17740,141.91,0.009991,3.0289,ya,38.29,141.91,103.62,3.1585,rekaman berakhir saat burner masih panas
+21153A3,5,2021-06-02,2,0,25,PSI-159_Raw Data_21153A3_data.csv,PSI-159,38371,306.96,0.01432,1.9896,ya,33.1,306.96,273.85,2.0953,rekaman berakhir saat burner masih panas
+21153A4,5,2021-06-02,2,0,25,PSI-159_Raw Data_21153A4_data.csv,PSI-159,10124,80.99,0.019987,3.0068,ya,31.23,80.99,49.76,1.0414,rekaman berakhir saat burner masih panas
+21153A5,5,2021-06-02,2,0,25,PSI-159_Raw Data_21153A5_data.csv,PSI-159,39121,312.96,0.016188,1.5105,ya,36.39,312.96,276.56,1.5737,rekaman berakhir saat burner masih panas
+21153C1,5,2021-06-02,2,0,25,PSI-159_Raw Data_21153C1_data.csv,PSI-159,10488,83.9,0.006078,4.8101,ya,30.22,83.9,53.68,4.9833,rekaman berakhir saat burner masih panas
+21153C2,5,2021-06-02,2,0,25,PSI-159_Raw Data_21153C2_data.csv,PSI-159,12375,98.99,0.008718,3.0402,ya,29.74,98.99,69.26,3.1569,rekaman berakhir saat burner masih panas
+21153C3,5,2021-06-02,2,0,25,PSI-159_Raw Data_21153C3_data.csv,PSI-159,21878,175.02,0.013615,2.0111,ya,33.15,175.02,141.88,2.0947,rekaman berakhir saat burner masih panas
+21153C4,5,2021-06-02,2,0,25,PSI-159_Raw Data_21153C4_data.csv,PSI-159,38747,309.97,0.01691,1.5036,ya,29.35,309.97,280.62,1.5741,rekaman berakhir saat burner masih panas
+21153C5,5,2021-06-02,2,0,25,PSI-159_Raw Data_21153C5_data.csv,PSI-159,9112,72.89,0.020096,1.5904,ya,28.62,72.89,44.27,1.0409,rekaman berakhir saat burner masih panas
+21153C6,5,2021-06-02,2,0,25,PSI-159_Raw Data_21153C6_data.csv,PSI-159,12127,97.01,0.008094,3.0214,ya,32.49,97.01,64.52,3.1566,rekaman berakhir saat burner masih panas
+21153C7,5,2021-06-02,2,0,25,PSI-159_Raw Data_21153C7_data.csv,PSI-159,12004,96.02,0.012644,2.0045,ya,30.7,96.02,65.33,2.0942,rekaman berakhir saat burner masih panas
+21153F1,5,2021-06-02,2,0,25,PSI-159_Raw Data_21153F1_data.csv,PSI-159,11500,91.99,0.007363,3.0365,ya,33.14,91.99,58.86,3.1568,rekaman berakhir saat burner masih panas
+21153G1,5,2021-06-02,2,0,25,PSI-159_Raw Data_21153G1_data.csv,PSI-159,22753,182.02,0.013685,2.0107,ya,33.13,182.02,148.89,2.0948,rekaman berakhir saat burner masih panas
+21162A1,5,2021-06-11,2,0,25,PSI-159_Raw Data_21162A1_data.csv,PSI-159,12128,97.02,0.006474,4.8227,ya,37.26,97.02,59.76,4.9815,rekaman berakhir saat burner masih panas
+21162A2,5,2021-06-11,2,0,25,PSI-159_Raw Data_21162A2_data.csv,PSI-159,15114,120.9,0.009668,3.0318,ya,36.31,120.9,84.6,3.1582,rekaman berakhir saat burner masih panas
+21162A3,5,2021-06-11,2,0,25,PSI-159_Raw Data_21162A3_data.csv,PSI-159,35645,285.16,0.014365,1.9885,ya,35.12,285.16,250.04,2.0954,rekaman berakhir saat burner masih panas
+21162A4,5,2021-06-11,2,0,25,PSI-159_Raw Data_21162A4_data.csv,PSI-159,44784,358.26,0.015622,1.6859,ya,32.82,358.26,325.45,1.7852,rekaman berakhir saat burner masih panas
+21162B1,5,2021-06-11,2,0,25,PSI-159_Raw Data_21162B1_data.csv,PSI-159,26642,213.13,0.013766,1.9913,ya,33.1,213.13,180.03,2.0949,rekaman berakhir saat burner masih panas
+21162C1,5,2021-06-11,2,0,25,PSI-159_Raw Data_21162C1_data.csv,PSI-159,8875,70.99,0.005662,4.0247,ya,30.02,70.99,40.97,1.0403,rekaman berakhir saat burner masih panas
+21162C2,5,2021-06-11,2,0,25,PSI-159_Raw Data_21162C2_data.csv,PSI-159,7500,59.99,0.00292,2.6061,ya,26.3,59.99,33.7,1.5702,rekaman berakhir saat burner masih panas
+21162C3,5,2021-06-11,2,0,25,PSI-159_Raw Data_21162C3_data.csv,PSI-159,7876,63.0,0.002023,2.0142,ya,30.62,63.0,32.38,2.0916,rekaman berakhir saat burner masih panas
+21162C4,5,2021-06-11,2,0,25,PSI-159_Raw Data_21162C4_data.csv,PSI-159,7750,61.99,0.001684,3.0401,ya,31.39,61.99,30.6,3.1534,rekaman berakhir saat burner masih panas
+21162C5,5,2021-06-11,2,0,25,PSI-159_Raw Data_21162C5_data.csv,PSI-159,7249,57.99,0.001601,4.8015,ya,29.76,57.99,28.22,4.9784,rekaman berakhir saat burner masih panas
+21162D1,5,2021-06-11,2,0,25,PSI-159_Raw Data_21162D1_data.csv,PSI-159,10376,83.0,0.004928,2.0591,ya,28.63,83.0,54.37,1.0407,rekaman berakhir saat burner masih panas
+21162F1,5,2021-06-11,2,0,25,PSI-159_Raw Data_21162F1_data.csv,PSI-159,9057,72.44,0.000132,3.0337,tidak,,,,,
+21162F2,5,2021-06-11,2,0,25,PSI-159_Raw Data_21162F2_data.csv,PSI-159,9682,77.45,0.001763,3.0279,ya,44.77,77.45,32.68,3.1539,rekaman berakhir saat burner masih panas
+21174A1,5,2021-06-23,2,0,20,PSI-159_Raw Data_21174A1_data.csv,PSI-159,9126,73.0,0.004466,4.8098,ya,32.26,73.0,40.74,4.9811,rekaman berakhir saat burner masih panas
+21174A2,5,2021-06-23,2,0,20,PSI-159_Raw Data_21174A2_data.csv,PSI-159,10500,83.99,0.006201,3.0367,ya,34.74,83.99,49.25,3.0863,rekaman berakhir saat burner masih panas
+21174A3,5,2021-06-23,2,0,20,PSI-159_Raw Data_21174A3_data.csv,PSI-159,12763,102.1,0.010243,2.2184,ya,33.47,102.1,68.62,2.3148,rekaman berakhir saat burner masih panas
+21174A4,5,2021-06-23,2,0,20,PSI-159_Raw Data_21174A4_data.csv,PSI-159,32632,261.05,0.016268,1.4566,ya,33.97,261.05,227.08,1.534,rekaman berakhir saat burner masih panas
+21174B1,5,2021-06-23,2,0,20,PSI-159_Raw Data_21174B1_data.csv,PSI-159,19878,159.02,0.014883,1.4677,ya,32.82,159.02,126.2,1.533,rekaman berakhir saat burner masih panas
+21174C1,5,2021-06-23,2,0,20,PSI-159_Raw Data_21174C1_data.csv,PSI-159,9750,77.99,0.005412,4.8016,ya,28.91,77.99,49.09,4.9791,rekaman berakhir saat burner masih panas
+21174C2,5,2021-06-23,2,0,20,PSI-159_Raw Data_21174C2_data.csv,PSI-159,9987,79.89,0.006782,2.9664,ya,29.96,79.89,49.93,3.0846,rekaman berakhir saat burner masih panas
+21174C3,5,2021-06-23,2,0,20,PSI-159_Raw Data_21174C3_data.csv,PSI-159,10751,86.0,0.009033,2.2241,ya,30.86,86.0,55.14,2.3146,rekaman berakhir saat burner masih panas
+21174C4,5,2021-06-23,2,0,20,PSI-159_Raw Data_21174C4_data.csv,PSI-159,17617,140.93,0.015338,1.4738,ya,32.15,140.93,108.78,1.5327,rekaman berakhir saat burner masih panas
+21174C5,5,2021-06-23,2,0,20,PSI-159_Raw Data_21174C5_data.csv,PSI-159,7626,61.0,0.020349,0.7293,ya,30.77,61.0,30.23,0.7607,rekaman berakhir saat burner masih panas
+21174C6,5,2021-06-23,2,0,20,PSI-159_Raw Data_21174C6_data.csv,PSI-159,37508,300.06,0.019087,1.0961,ya,29.99,300.06,270.06,1.1423,rekaman berakhir saat burner masih panas
+21174D1,5,2021-06-23,2,0,20,PSI-159_Raw Data_21174D1_data.csv,PSI-159,16627,133.01,0.015106,1.4716,ya,29.07,133.01,103.94,1.5325,rekaman berakhir saat burner masih panas
+21174F1,5,2021-06-23,2,0,20,PSI-159_Raw Data_21174F1_data.csv,PSI-159,12433,99.45,0.009492,2.2149,ya,39.4,99.45,60.05,2.3124,rekaman berakhir saat burner masih panas
+21174F2,5,2021-06-23,2,0,20,PSI-159_Raw Data_21174F2_data.csv,PSI-159,9070,72.55,0.007189,2.2132,ya,38.56,72.55,33.99,2.3018,rekaman berakhir saat burner masih panas
+21174F3,5,2021-06-23,2,0,20,PSI-159_Raw Data_21174F3_data.csv,PSI-159,9441,75.52,0.007287,2.2004,ya,41.47,75.52,34.05,2.2961,rekaman berakhir saat burner masih panas
+21174F4,5,2021-06-23,2,0,20,PSI-159_Raw Data_21174F4_data.csv,PSI-159,10093,80.74,0.008866,2.1781,ya,43.95,80.74,36.78,2.2744,rekaman berakhir saat burner masih panas
+21196A1,5,2021-07-15,3,0,21,PSI-159_Raw Data_21196A1_data.csv,PSI-159,7834,62.67,4.1e-05,0.0728,tidak,,,,,
+21196A2,5,2021-07-15,3,0,21,PSI-159_Raw Data_21196A2_data.csv,PSI-159,10603,84.82,0.005594,0.0671,ya,45.79,84.82,39.02,0.0026,rekaman berakhir saat burner masih panas
+21196F1,5,2021-07-15,3,0,21,PSI-159_Raw Data_21196F1_data.csv,PSI-159,10452,83.61,0.003748,0.0963,ya,43.91,83.61,39.7,0.0024,rekaman berakhir saat burner masih panas
+21196F2,5,2021-07-15,3,0,21,PSI-159_Raw Data_21196F2_data.csv,PSI-159,13715,109.71,0.005857,0.0557,ya,46.68,109.71,63.03,0.0058,rekaman berakhir saat burner masih panas
+21196F3,5,2021-07-15,3,0,21,PSI-159_Raw Data_21196F3_data.csv,PSI-159,9090,72.7,0.000463,0.0385,tidak,,,,,
+21196F4,5,2021-07-15,3,0,21,PSI-159_Raw Data_21196F4_data.csv,PSI-159,8827,70.61,0.001429,0.0419,ya,37.44,70.61,33.17,0.0084,rekaman berakhir saat burner masih panas
+21196F5,5,2021-07-15,3,0,21,PSI-159_Raw Data_21196F5_data.csv,PSI-159,8702,69.61,9.3e-05,0.1643,tidak,,,,,
+21196F6,5,2021-07-15,3,0,21,PSI-159_Raw Data_21196F6_data.csv,PSI-159,14228,113.82,0.005781,0.0432,ya,50.77,113.82,63.05,0.003,rekaman berakhir saat burner masih panas
+21196H1,5,2021-07-15,3,0,21,PSI-159_Raw Data_21196H1_data.csv,PSI-159,7588,60.7,2.4e-05,0.1155,tidak,,,,,
+21196J1,5,2021-07-15,3,0,21,PSI-159_Raw Data_21196J1_data.csv,PSI-159,8101,64.8,6.6e-05,0.106,tidak,,,,,
+21196K1,5,2021-07-15,3,0,21,PSI-159_Raw Data_21196K1_data.csv,PSI-159,10090,80.71,0.0013,0.0473,ya,36.66,61.22,24.56,0.003,mendingin dalam rekaman
+21196L1,5,2021-07-15,3,0,21,PSI-159_Raw Data_21196L1_data.csv,PSI-159,10202,81.61,0.003596,0.0341,ya,36.67,81.61,44.94,-0.0028,rekaman berakhir saat burner masih panas
+21196L2,5,2021-07-15,3,0,21,PSI-159_Raw Data_21196L2_data.csv,PSI-159,13953,111.62,0.010024,0.0347,ya,50.52,111.62,61.1,0.0062,rekaman berakhir saat burner masih panas
+21196M1,5,2021-07-15,3,0,21,PSI-159_Raw Data_21196M1_data.csv,PSI-159,8840,70.71,0.004302,0.0313,ya,37.7,70.71,33.02,0.005,rekaman berakhir saat burner masih panas
+21196M2,5,2021-07-15,3,0,21,PSI-159_Raw Data_21196M2_1_data.csv,PSI-159,12642,101.13,0.020092,0.0234,ya,48.87,101.13,52.26,0.0003,rekaman berakhir saat burner masih panas
+21196M2,5,2021-07-15,3,0,21,PSI-159_Raw Data_21196M2_data.csv,PSI-159,14391,115.11,0.020081,0.0257,ya,50.71,115.11,64.4,0.0028,rekaman berakhir saat burner masih panas
+21202A1,5,2021-07-21,3,0,21,PSI-159_Raw Data_21202A1_data.csv,PSI-159,7137,57.09,8.4e-05,0.0288,tidak,,,,,
+21202A2,5,2021-07-21,3,0,21,PSI-159_Raw Data_21202A2_data.csv,PSI-159,7262,58.09,0.00151,0.023,ya,23.15,58.09,34.94,0.003,rekaman berakhir saat burner masih panas
+21202A3,5,2021-07-21,3,0,21,PSI-159_Raw Data_21202A3_data.csv,PSI-159,8487,67.89,0.001059,0.0294,ya,26.11,67.89,41.78,0.0003,rekaman berakhir saat burner masih panas
+21202A4,5,2021-07-21,3,0,21,PSI-159_Raw Data_21202A4_data.csv,PSI-159,10527,84.21,0.000807,0.0581,ya,26.67,84.21,57.54,0.0029,rekaman berakhir saat burner masih panas
+21202H1,5,2021-07-21,3,0,21,PSI-159_Raw Data_21202H1_data.csv,PSI-159,11529,92.23,0.007687,0.0496,ya,23.73,92.23,68.5,0.0029,rekaman berakhir saat burner masih panas
+21202H2,5,2021-07-21,3,0,21,PSI-159_Raw Data_21202H2_data.csv,PSI-159,10025,80.19,0.003393,0.0957,ya,25.03,80.19,55.17,0.0029,rekaman berakhir saat burner masih panas
+21202H3,5,2021-07-21,3,0,21,PSI-159_Raw Data_21202H3_data.csv,PSI-159,12901,103.2,0.018193,0.0304,ya,32.05,103.2,71.15,0.0035,rekaman berakhir saat burner masih panas
+21202H4,5,2021-07-21,3,0,21,PSI-159_Raw Data_21202H4_data.csv,PSI-159,13264,106.1,0.011209,0.0293,ya,29.43,106.1,76.68,0.0029,rekaman berakhir saat burner masih panas
+21202J1,5,2021-07-21,3,0,21,PSI-159_Raw Data_21202J1_data.csv,PSI-159,15021,120.16,0.012305,0.0253,ya,29.29,120.16,90.87,0.0026,rekaman berakhir saat burner masih panas
+21202K1,5,2021-07-21,3,0,21,PSI-159_Raw Data_21202K1_data.csv,PSI-159,15396,123.16,0.010173,0.045,ya,31.43,123.16,91.73,0.0053,rekaman berakhir saat burner masih panas
+21202K2,5,2021-07-22,3,0,21,PSI-159_Raw Data_21202K2_data.csv,PSI-159,10000,79.99,0.003632,0.0674,ya,28.58,79.99,51.41,0.003,rekaman berakhir saat burner masih panas
+21202L1,5,2021-07-22,3,0,21,PSI-159_Raw Data_21202L1_data.csv,PSI-159,15251,122.0,0.009348,0.0258,ya,28.03,122.0,93.97,0.0053,rekaman berakhir saat burner masih panas
+21209A1,5,2021-07-28,3,0,21,PSI-159_Raw Data_21209A1_data.csv,PSI-159,6376,51.0,0.021413,0.0275,ya,28.31,51.0,22.69,0.0,rekaman berakhir saat burner masih panas
+21209A3,5,2021-07-28,3,0,21,PSI-159_Raw Data_21209A3_data.csv,PSI-159,12901,103.2,0.011182,0.0668,ya,35.77,103.2,67.43,0.0023,rekaman berakhir saat burner masih panas
+21209A4,5,2021-07-28,3,0,21,PSI-159_Raw Data_21209A4_data.csv,PSI-159,12751,102.0,0.016042,0.0312,ya,31.64,102.0,70.36,-0.0023,rekaman berakhir saat burner masih panas
+21209B1,5,2021-07-28,3,0,21,PSI-159_Raw Data_21209B1_data.csv,PSI-159,21754,174.02,0.011181,0.0743,ya,35.92,174.02,138.1,0.0051,rekaman berakhir saat burner masih panas
+21209B2,5,2021-07-28,3,0,21,PSI-159_Raw Data_21209B2_data.csv,PSI-159,8999,71.98,0.020133,0.0215,ya,28.7,71.98,43.28,0.0086,rekaman berakhir saat burner masih panas
+21209F1,5,2021-07-28,3,0,21,PSI-159_Raw Data_21209F1_data.csv,PSI-159,14280,114.23,0.007124,0.0706,ya,49.79,114.23,64.44,0.0009,rekaman berakhir saat burner masih panas
+21209F2,5,2021-07-28,3,0,21,PSI-159_Raw Data_21209F2_data.csv,PSI-159,14894,119.14,0.007639,0.0544,ya,58.0,119.14,61.14,0.0003,rekaman berakhir saat burner masih panas
+21209F3,5,2021-07-28,3,0,21,PSI-159_Raw Data_21209F3_data.csv,PSI-159,14167,113.33,0.011806,0.0284,ya,49.26,113.33,64.06,0.0024,rekaman berakhir saat burner masih panas
+21209H1,5,2021-07-28,3,0,21,PSI-159_Raw Data_21209H1_data.csv,PSI-159,14655,117.22,0.010715,0.0379,ya,51.3,117.22,65.92,-0.0001,rekaman berakhir saat burner masih panas
+21209J1,5,2021-07-28,3,0,21,PSI-159_Raw Data_21209J1_data.csv,PSI-159,14655,117.23,0.00903,0.0517,ya,55.11,117.23,62.12,-0.0022,rekaman berakhir saat burner masih panas
+21209K1,5,2021-07-28,3,0,21,PSI-159_Raw Data_21209K1_data.csv,PSI-159,9905,79.24,0.004217,0.0462,ya,49.35,79.24,29.89,0.0032,rekaman berakhir saat burner masih panas
+21216A1,5,2021-08-04,3,0,21,PSI-159_Raw Data_21216A1_data.csv,PSI-159,9251,74.0,0.00553,0.0623,ya,27.36,74.0,46.64,0.0055,rekaman berakhir saat burner masih panas
+21216A2,5,2021-08-04,3,0,21,PSI-159_Raw Data_21216A2_data.csv,PSI-159,9501,76.0,0.003871,0.0423,ya,26.11,76.0,49.89,0.0024,rekaman berakhir saat burner masih panas
+21216A3,5,2021-08-04,3,0,21,PSI-159_Raw Data_21216A3_data.csv,PSI-159,9137,73.09,0.003083,0.0606,ya,24.31,73.09,48.78,0.0029,rekaman berakhir saat burner masih panas
+21216A4,5,2021-08-04,3,0,21,PSI-159_Raw Data_21216A4_data.csv,PSI-159,12402,99.21,0.012413,0.0505,ya,31.59,99.21,67.62,0.0002,rekaman berakhir saat burner masih panas
+21216A5,5,2021-08-04,3,0,21,PSI-159_Raw Data_21216A5_data.csv,PSI-159,7138,57.1,0.001235,0.028,ya,26.01,57.1,31.09,0.0026,rekaman berakhir saat burner masih panas
+21216A6,5,2021-08-04,3,0,21,PSI-159_Raw Data_21216A6_data.csv,PSI-159,12500,99.99,0.018281,0.0249,ya,29.14,99.99,70.85,0.0003,rekaman berakhir saat burner masih panas
+21216B1,5,2021-08-04,3,0,21,PSI-159_Raw Data_21216B1_data.csv,PSI-159,9887,79.09,0.00483,0.0283,ya,24.82,79.09,54.27,0.0028,rekaman berakhir saat burner masih panas
+21216C1,5,2021-08-04,3,0,21,PSI-159_Raw Data_21216C1_data.csv,PSI-159,10519,84.14,0.00215,0.0358,ya,44.87,84.14,39.28,-0.0051,rekaman berakhir saat burner masih panas
+21216F1,5,2021-08-04,3,0,21,PSI-159_Raw Data_21216F1_data.csv,PSI-159,14642,117.13,0.004159,0.0636,ya,55.34,117.13,61.78,0.0003,rekaman berakhir saat burner masih panas
+21216H1,5,2021-08-04,3,0,21,PSI-159_Raw Data_21216H1_data.csv,PSI-159,9119,72.94,0.003919,0.036,ya,26.56,72.94,46.38,0.0022,rekaman berakhir saat burner masih panas
+21216H2,5,2021-08-04,3,0,21,PSI-159_Raw Data_21216H2_data.csv,PSI-159,10889,87.1,0.003039,0.0638,ya,32.02,87.1,55.08,0.0029,rekaman berakhir saat burner masih panas
+21216J1,5,2021-08-04,3,0,21,PSI-159_Raw Data_21216J1_data.csv,PSI-159,12155,97.23,0.003539,0.0278,ya,38.26,97.23,58.97,0.0003,rekaman berakhir saat burner masih panas
+21216K1,5,2021-08-04,3,0,21,PSI-159_Raw Data_21216K1_data.csv,PSI-159,14517,116.13,0.004361,0.0485,ya,58.38,116.13,57.75,0.0029,rekaman berakhir saat burner masih panas
+21222A1,5,2021-08-10,3,0,19,PSI-159_Raw Data_21222A1_data.csv,PSI-159,8500,67.99,0.003171,0.063,ya,24.01,67.99,43.98,0.003,rekaman berakhir saat burner masih panas
+21222A2,5,2021-08-10,3,0,19,PSI-159_Raw Data_21222A2_data.csv,PSI-159,9251,74.0,0.00506,0.0201,ya,23.34,74.0,50.66,0.0051,rekaman berakhir saat burner masih panas
+21222A3,5,2021-08-10,3,0,19,PSI-159_Raw Data_21222A3_data.csv,PSI-159,9752,78.01,0.003101,0.0864,ya,28.47,78.01,49.54,0.0049,rekaman berakhir saat burner masih panas
+21222A4,5,2021-08-10,3,0,19,PSI-159_Raw Data_21222A4_data.csv,PSI-159,8761,70.08,0.00622,0.0493,ya,23.82,70.08,46.26,0.0032,rekaman berakhir saat burner masih panas
+21222A5,5,2021-08-10,3,0,19,PSI-159_Raw Data_21222A5_data.csv,PSI-159,8388,67.09,0.002672,0.0441,ya,26.26,67.09,40.83,0.0002,rekaman berakhir saat burner masih panas
+21222B1,5,2021-08-10,3,0,19,PSI-159_Raw Data_21222B1_data.csv,PSI-159,9375,74.99,0.003847,0.0468,ya,22.63,74.99,52.36,0.0051,rekaman berakhir saat burner masih panas
+21222C1,5,2021-08-10,3,0,19,PSI-159_Raw Data_21222C1_data.csv,PSI-159,9906,79.24,0.001192,0.0498,ya,44.37,79.24,34.87,0.0029,rekaman berakhir saat burner masih panas
+21222C2,5,2021-08-10,3,0,19,PSI-159_Raw Data_21222C2_data.csv,PSI-159,9891,79.12,0.001761,0.0275,ya,41.65,79.12,37.47,0.0028,rekaman berakhir saat burner masih panas
+21222F1,5,2021-08-10,3,0,19,PSI-159_Raw Data_21222F1_data.csv,PSI-159,8880,71.03,2.5e-05,0.0683,tidak,,,,,
+21222F2,5,2021-08-10,3,0,19,PSI-159_Raw Data_21222F2_data.csv,PSI-159,9015,72.11,5.2e-05,0.0422,tidak,,,,,
+21228A1,5,2021-08-16,3,0,19,PSI-159_Raw Data_21228A1_data.csv,PSI-159,8250,65.99,0.002605,0.0468,ya,26.98,65.99,39.01,0.0048,rekaman berakhir saat burner masih panas
+21228A2,5,2021-08-16,3,0,19,PSI-159_Raw Data_21228A2_data.csv,PSI-159,8374,66.98,0.002319,0.0601,ya,22.71,66.98,44.27,0.0029,rekaman berakhir saat burner masih panas
+21228A3,5,2021-08-16,3,0,19,PSI-159_Raw Data_21228A3_data.csv,PSI-159,8374,66.98,0.004159,0.0276,ya,23.45,66.98,43.53,0.0027,rekaman berakhir saat burner masih panas
+21228A4,5,2021-08-16,3,0,19,PSI-159_Raw Data_21228A4_data.csv,PSI-159,8887,71.09,0.005921,0.0233,ya,24.0,71.09,47.09,0.0001,rekaman berakhir saat burner masih panas
+21228B1,5,2021-08-16,3,0,19,PSI-159_Raw Data_21228B1_data.csv,PSI-159,8874,70.99,0.003568,0.0304,ya,23.65,70.99,47.34,0.0029,rekaman berakhir saat burner masih panas
+21228C1,5,2021-08-16,3,0,19,PSI-159_Raw Data_21228C1_data.csv,PSI-159,10016,80.12,0.001504,0.0533,ya,46.17,80.12,33.95,0.0054,rekaman berakhir saat burner masih panas
+21228C2,5,2021-08-16,3,0,19,PSI-159_Raw Data_21228C2_data.csv,PSI-159,14291,114.32,0.00499,0.0771,ya,52.36,114.32,61.96,0.0027,rekaman berakhir saat burner masih panas
+21228C3,5,2021-08-16,3,0,19,PSI-159_Raw Data_21228C3_data.csv,PSI-159,9903,79.22,0.001485,0.0224,ya,40.08,79.22,39.14,0.0036,rekaman berakhir saat burner masih panas
+21228C4,5,2021-08-16,3,0,19,PSI-159_Raw Data_21228C4_data.csv,PSI-159,9778,78.22,0.004777,0.0125,ya,37.94,78.22,40.27,0.0027,rekaman berakhir saat burner masih panas
+21228F1,5,2021-08-16,3,0,19,PSI-159_Raw Data_21228F1_data.csv,PSI-159,14516,116.12,0.003813,0.0618,ya,57.35,116.12,58.77,0.0056,rekaman berakhir saat burner masih panas
+21228H1,5,2021-08-16,3,0,19,PSI-159_Raw Data_21228H1_data.csv,PSI-159,7374,58.99,0.002156,0.0284,ya,23.5,58.99,35.49,0.0029,rekaman berakhir saat burner masih panas
+21228H2,5,2021-08-16,3,0,19,PSI-159_Raw Data_21228H2_data.csv,PSI-159,9000,71.99,0.006408,0.0259,ya,27.66,71.99,44.33,0.0028,rekaman berakhir saat burner masih panas
+21228J1,5,2021-08-16,3,0,19,PSI-159_Raw Data_21228J1_data.csv,PSI-159,8636,69.08,0.007055,0.0136,ya,24.1,69.08,44.98,0.0029,rekaman berakhir saat burner masih panas
+21228K1,5,2021-08-16,3,0,19,PSI-159_Raw Data_21228K1_data.csv,PSI-159,9640,77.11,0.001679,0.0375,ya,43.42,77.11,33.69,0.0029,rekaman berakhir saat burner masih panas
+21228K2,5,2021-08-16,3,0,19,PSI-159_Raw Data_21228K2_data.csv,PSI-159,10266,82.12,0.005725,0.0388,ya,38.5,82.12,43.62,0.0031,rekaman berakhir saat burner masih panas
+21228L1,5,2021-08-16,3,0,19,PSI-159_Raw Data_21228L1_data.csv,PSI-159,8152,65.21,0.000161,0.0399,tidak,,,,,
+21228L2,5,2021-08-16,3,0,19,PSI-159_Raw Data_21228L2_data.csv,PSI-159,7890,63.11,0.001739,0.0616,ya,44.58,63.11,18.53,0.0002,rekaman berakhir saat burner masih panas
+21235A1,5,2021-08-23,3,0,19,PSI-159_Raw Data_21235A1_data.csv,PSI-159,12888,103.1,0.013816,0.0337,ya,30.41,103.1,72.69,0.0051,rekaman berakhir saat burner masih panas
+21235A2,5,2021-08-23,3,0,19,PSI-159_Raw Data_21235A2_data.csv,PSI-159,13138,105.1,0.009259,0.0636,ya,35.57,105.1,69.53,0.0003,rekaman berakhir saat burner masih panas
+21235B1,5,2021-08-23,3,0,19,PSI-159_Raw Data_21235B1_data.csv,PSI-159,23752,190.01,0.015827,0.0412,ya,32.48,190.01,157.52,0.0054,rekaman berakhir saat burner masih panas
+21235C1,5,2021-08-23,3,0,19,PSI-159_Raw Data_21235C1_data.csv,PSI-159,14278,114.2,0.014489,0.0312,ya,42.84,114.2,71.36,0.0029,rekaman berakhir saat burner masih panas
+21235F1,5,2021-08-23,3,0,19,PSI-159_Raw Data_21235F1_data.csv,PSI-159,14803,118.42,0.008972,0.0339,ya,52.62,118.42,65.79,-0.0001,rekaman berakhir saat burner masih panas
+21235F2,5,2021-08-23,3,0,19,PSI-159_Raw Data_21235F2_data.csv,PSI-159,8263,66.1,1.3e-05,0.1141,tidak,,,,,
+21235H1,5,2021-08-23,3,0,19,PSI-159_Raw Data_21235H1_data.csv,PSI-159,9014,72.1,0.001185,0.0217,ya,41.34,72.1,30.77,0.0032,rekaman berakhir saat burner masih panas
+21235J1,5,2021-08-23,3,0,19,PSI-159_Raw Data_21235J1_data.csv,PSI-159,14160,113.27,0.006354,0.0267,ya,48.22,113.27,65.06,0.0003,rekaman berakhir saat burner masih panas
+21235K1,5,2021-08-23,3,0,19,PSI-159_Raw Data_21235K1_data.csv,PSI-159,12758,102.06,0.01529,0.0322,ya,31.4,102.06,70.66,0.0055,rekaman berakhir saat burner masih panas
+21235L1,5,2021-08-23,3,0,19,PSI-159_Raw Data_21235L1_data.csv,PSI-159,20626,165.0,0.010746,0.0668,ya,36.99,165.0,128.01,0.0032,rekaman berakhir saat burner masih panas
+21242A1,5,2021-08-30,3,0,19,PSI-159_Raw Data_21242A1_data.csv,PSI-159,5116,40.92,0.025689,0.0805,ya,29.69,40.92,11.23,0.0027,rekaman berakhir saat burner masih panas
+21242F1,5,2021-08-30,3,0,19,PSI-159_Raw Data_21242F1_data.csv,PSI-159,5001,40.0,9e-06,0.0262,tidak,,,,,
+21242F2,5,2021-08-30,3,0,19,PSI-159_Raw Data_21242F2_data.csv,PSI-159,10580,84.63,1.1e-05,0.0744,tidak,,,,,
+21242F3,5,2021-08-30,3,0,19,PSI-159_Raw Data_21242F3_data.csv,PSI-159,7892,63.13,1.3e-05,0.0653,tidak,,,,,
+21242F4,5,2021-08-30,3,0,19,PSI-159_Raw Data_21242F4_data.csv,PSI-159,8016,64.12,2e-05,0.055,tidak,,,,,
+21242P1,5,2021-08-30,3,0,19,PSI-159_Raw Data_21242P1_data.csv,PSI-159,8641,69.12,0.006056,0.0666,ya,43.48,69.12,25.64,0.0035,rekaman berakhir saat burner masih panas
+21242P2,5,2021-08-30,3,0,19,PSI-159_Raw Data_21242P2_data.csv,PSI-159,4001,32.0,9e-06,0.0195,tidak,,,,,
+21256A1,5,2021-09-13,3,0,20,PSI-159_Raw Data_21256A1_data.csv,PSI-159,8625,68.99,0.003191,0.0279,ya,22.81,68.99,46.18,0.0022,rekaman berakhir saat burner masih panas
+21256A2,5,2021-09-13,3,0,20,PSI-159_Raw Data_21256A2_data.csv,PSI-159,9875,78.99,0.00435,0.0299,ya,24.94,78.99,54.06,0.0,rekaman berakhir saat burner masih panas
+21256A3,5,2021-09-13,3,0,20,PSI-159_Raw Data_21256A3_data.csv,PSI-159,9014,72.11,0.006089,0.0226,ya,25.64,72.11,46.47,0.0028,rekaman berakhir saat burner masih panas
+21256A4,5,2021-09-13,3,0,20,PSI-159_Raw Data_21256A4_data.csv,PSI-159,7749,61.99,0.004093,0.0322,ya,25.38,61.99,36.61,0.0029,rekaman berakhir saat burner masih panas
+21256A5,5,2021-09-13,3,0,20,PSI-159_Raw Data_21256A5_data.csv,PSI-159,9519,76.15,0.002423,0.06,ya,22.89,76.15,53.26,0.0001,rekaman berakhir saat burner masih panas
+21256B1,5,2021-09-13,3,0,20,PSI-159_Raw Data_21256B1_data.csv,PSI-159,9627,77.0,0.00356,0.0335,ya,23.07,77.0,53.92,0.0055,rekaman berakhir saat burner masih panas
+21256C1,5,2021-09-13,3,0,20,PSI-159_Raw Data_21256C1_data.csv,PSI-159,11768,94.14,0.001596,0.0594,ya,43.28,94.14,50.86,0.0058,rekaman berakhir saat burner masih panas
+21256C2,5,2021-09-13,3,0,20,PSI-159_Raw Data_21256C2_data.csv,PSI-159,9909,79.27,0.005261,0.0317,ya,41.78,79.27,37.48,0.0081,rekaman berakhir saat burner masih panas
+21256F1,5,2021-09-13,3,0,20,PSI-159_Raw Data_21256F1_data.csv,PSI-159,14781,118.24,0.004363,0.079,ya,57.9,118.24,60.34,-0.0049,rekaman berakhir saat burner masih panas
+21256H1,5,2021-09-13,3,0,20,PSI-159_Raw Data_21256H1_data.csv,PSI-159,8125,64.99,0.002214,0.0482,ya,26.08,64.99,38.91,-0.0,rekaman berakhir saat burner masih panas
+21256H2,5,2021-09-13,3,0,20,PSI-159_Raw Data_21256H2_data.csv,PSI-159,7499,59.98,0.002609,0.0307,ya,23.07,59.98,36.91,0.0002,rekaman berakhir saat burner masih panas
+21256H3,5,2021-09-13,3,0,20,PSI-159_Raw Data_21256H3_data.csv,PSI-159,7501,60.0,0.003061,0.0204,ya,26.18,60.0,33.82,0.0052,rekaman berakhir saat burner masih panas
+21256H4,5,2021-09-13,3,0,20,PSI-159_Raw Data_21256H4_data.csv,PSI-159,6875,54.99,0.001967,0.0233,ya,26.24,54.99,28.75,0.003,rekaman berakhir saat burner masih panas
+21256H5,5,2021-09-13,3,0,20,PSI-159_Raw Data_21256H5_data.csv,PSI-159,8251,66.0,0.001782,0.0616,ya,26.08,66.0,39.92,0.0055,rekaman berakhir saat burner masih panas
+21256J1,5,2021-09-13,3,0,20,PSI-159_Raw Data_21256J1_data.csv,PSI-159,7636,61.07,0.002057,0.0403,ya,23.28,61.07,37.79,0.0051,rekaman berakhir saat burner masih panas
+21256K1,5,2021-09-13,3,0,20,PSI-159_Raw Data_21256K1_data.csv,PSI-159,9281,74.24,0.000697,0.0588,ya,44.02,74.24,30.22,0.0029,rekaman berakhir saat burner masih panas
+21256M1,5,2021-09-13,3,0,20,PSI-159_Raw Data_21256M1_data.csv,PSI-159,8415,67.31,1.6e-05,0.0656,tidak,,,,,
+21265A1,5,2021-09-22,3,0,20,PSI-159_Raw Data_21265A1_data.csv,PSI-159,7375,58.99,0.002057,0.0771,ya,24.0,58.99,34.99,0.0083,rekaman berakhir saat burner masih panas
+21265A2,5,2021-09-22,3,0,20,PSI-159_Raw Data_21265A2_data.csv,PSI-159,7874,62.98,0.002303,0.0166,ya,22.98,62.98,40.0,0.0029,rekaman berakhir saat burner masih panas
+21265A3,5,2021-09-22,3,0,20,PSI-159_Raw Data_21265A3_data.csv,PSI-159,6624,52.99,0.001924,0.0101,ya,23.1,52.99,29.88,0.0028,rekaman berakhir saat burner masih panas
+21265A4,5,2021-09-22,3,0,20,PSI-159_Raw Data_21265A4_data.csv,PSI-159,7488,59.9,0.002697,0.0163,ya,25.97,59.9,33.93,0.0027,rekaman berakhir saat burner masih panas
+21265A5,5,2021-09-22,3,0,20,PSI-159_Raw Data_21265A5_data.csv,PSI-159,7748,61.98,0.001791,0.0565,ya,23.19,61.98,38.78,0.0029,rekaman berakhir saat burner masih panas
+21265C1,5,2021-09-22,3,0,20,PSI-159_Raw Data_21265C1_data.csv,PSI-159,9280,74.23,0.00052,0.0359,tidak,,,,,
+21265C2,5,2021-09-22,3,0,20,PSI-159_Raw Data_21265C2_data.csv,PSI-159,9629,77.02,0.000804,0.063,ya,43.68,77.02,33.34,0.0029,rekaman berakhir saat burner masih panas
+21265C3,5,2021-09-22,3,0,20,PSI-159_Raw Data_21265C3_data.csv,PSI-159,9379,75.02,0.00052,0.0187,tidak,,,,,
+21265F1,5,2021-09-22,3,0,20,PSI-159_Raw Data_21265F1_data.csv,PSI-159,8767,70.13,1.3e-05,0.0553,tidak,,,,,
+21265F2,5,2021-09-22,3,0,20,PSI-159_Raw Data_21265F2_data.csv,PSI-159,14633,117.06,0.004036,0.1118,ya,52.1,117.06,64.96,0.0053,rekaman berakhir saat burner masih panas
+21265F3,5,2021-09-22,3,0,20,PSI-159_Raw Data_21265F3_data.csv,PSI-159,8651,69.2,1.5e-05,0.036,tidak,,,,,
+21265F4,5,2021-09-22,3,0,20,PSI-159_Raw Data_21265F4_data.csv,PSI-159,8029,64.23,1.3e-05,0.0373,tidak,,,,,
+21265H1,5,2021-09-22,3,0,20,PSI-159_Raw Data_21265H1_data.csv,PSI-159,9379,75.02,0.000335,0.0355,tidak,,,,,
+21265H2,5,2021-09-22,3,0,20,PSI-159_Raw Data_21265H2_data.csv,PSI-159,14279,114.22,0.00449,0.0713,ya,55.44,114.22,58.78,0.0055,rekaman berakhir saat burner masih panas
+21265H3,5,2021-09-22,3,0,20,PSI-159_Raw Data_21265H3_data.csv,PSI-159,19281,154.24,0.005095,0.0755,ya,57.12,154.24,97.12,0.0003,rekaman berakhir saat burner masih panas
+21265J1,5,2021-09-22,3,0,20,PSI-159_Raw Data_21265J1_data.csv,PSI-159,9397,75.17,0.00127,0.0565,ya,43.29,75.17,31.88,0.0029,rekaman berakhir saat burner masih panas
+21265K1,5,2021-09-22,3,0,20,PSI-159_Raw Data_21265K1_data.csv,PSI-159,9254,74.03,0.00073,0.0671,ya,44.6,74.03,29.42,-0.002,rekaman berakhir saat burner masih panas
+21270A1,5,2021-09-27,3,0,20,PSI-159_Raw Data_21270A1_data.csv,PSI-159,12626,101.0,0.012362,0.0394,ya,26.5,101.0,74.5,0.0003,rekaman berakhir saat burner masih panas
+21270A2,5,2021-09-27,3,0,20,PSI-159_Raw Data_21270A2_data.csv,PSI-159,16502,132.01,0.008747,0.0655,ya,32.64,132.01,99.37,0.0055,rekaman berakhir saat burner masih panas
+21270A3,5,2021-09-27,3,0,20,PSI-159_Raw Data_21270A3_data.csv,PSI-159,6750,53.99,0.017767,0.0155,ya,26.49,53.99,27.5,0.003,rekaman berakhir saat burner masih panas
+21270A4,5,2021-09-27,3,0,20,PSI-159_Raw Data_21270A4_data.csv,PSI-159,16253,130.02,0.01665,0.0253,ya,27.94,130.02,102.07,0.0035,rekaman berakhir saat burner masih panas
+21270C1,5,2021-09-27,3,0,20,PSI-159_Raw Data_21270C1_data.csv,PSI-159,15396,123.16,0.007485,0.0351,ya,49.69,123.16,73.47,0.0037,rekaman berakhir saat burner masih panas
+21270H1,5,2021-09-27,3,0,20,PSI-159_Raw Data_21270H1_data.csv,PSI-159,13251,106.0,0.00889,0.0333,ya,25.99,106.0,80.01,0.0029,rekaman berakhir saat burner masih panas
+21270H2,5,2021-09-27,3,0,20,PSI-159_Raw Data_21270H2_data.csv,PSI-159,10001,80.0,0.017569,0.0227,ya,27.98,80.0,52.02,0.0029,rekaman berakhir saat burner masih panas
+21270H3,5,2021-09-27,3,0,20,PSI-159_Raw Data_21270H3_data.csv,PSI-159,16127,129.01,0.013306,0.0245,ya,26.9,129.01,102.1,0.0082,rekaman berakhir saat burner masih panas
+21270H4,5,2021-09-27,3,0,20,PSI-159_Raw Data_21270H4_data.csv,PSI-159,15003,120.02,0.007773,0.0589,ya,35.59,120.02,84.42,0.0022,rekaman berakhir saat burner masih panas
+21270H5,5,2021-09-27,3,0,20,PSI-159_Raw Data_21270H5_data.csv,PSI-159,14251,114.0,0.009512,0.0243,ya,27.9,114.0,86.1,0.0003,rekaman berakhir saat burner masih panas
+21277A1,5,2021-10-04,3,0,20,PSI-159_Raw Data_21277A1_data.csv,PSI-159,5142,41.13,0.020574,0.037,ya,29.44,41.13,11.69,0.0048,rekaman berakhir saat burner masih panas
+21277C1,5,2021-10-04,3,0,20,PSI-159_Raw Data_21277C1_data.csv,PSI-159,6749,53.99,0.015442,0.0309,ya,24.83,53.99,29.15,0.0029,rekaman berakhir saat burner masih panas
+21277C2,5,2021-10-04,3,0,20,PSI-159_Raw Data_21277C2_data.csv,PSI-159,8762,70.09,0.010694,0.0504,ya,27.14,70.09,42.95,0.003,rekaman berakhir saat burner masih panas
+21277F1,5,2021-10-04,3,0,20,PSI-159_Raw Data_21277F1_data.csv,PSI-159,12501,100.0,0.014952,0.0273,ya,28.41,100.0,71.59,-0.0024,rekaman berakhir saat burner masih panas
+21277F2,5,2021-10-04,3,0,20,PSI-159_Raw Data_21277F2_data.csv,PSI-159,13013,104.1,0.016978,0.0305,ya,34.66,104.1,69.44,0.0028,rekaman berakhir saat burner masih panas
+21277H1,5,2021-10-04,3,0,20,PSI-159_Raw Data_21277H1_data.csv,PSI-159,6438,51.5,0.017704,0.0945,ya,34.4,51.5,17.1,0.0028,rekaman berakhir saat burner masih panas
+21277J1,5,2021-10-04,3,0,20,PSI-159_Raw Data_21277J1_data.csv,PSI-159,7903,63.22,1.1e-05,0.0578,tidak,,,,,
+21277J2,5,2021-10-04,3,0,20,PSI-159_Raw Data_21277J2_data.csv,PSI-159,7839,62.71,1.4e-05,0.0589,tidak,,,,,
+21277K1,5,2021-10-04,3,0,20,PSI-159_Raw Data_21277K1_data.csv,PSI-159,8015,64.11,1.6e-05,0.0431,tidak,,,,,
+21277K2,5,2021-10-04,3,0,20,PSI-159_Raw Data_21277K2_data.csv,PSI-159,8818,70.54,0.005494,0.0452,ya,44.81,70.54,25.73,0.0029,rekaman berakhir saat burner masih panas
+21277L1,5,2021-10-04,3,0,20,PSI-159_Raw Data_21277L1_data.csv,PSI-159,14521,116.16,0.01466,0.0366,ya,48.7,116.16,67.46,0.0065,rekaman berakhir saat burner masih panas
+21277M1,5,2021-10-04,3,0,20,PSI-159_Raw Data_21277M1_data.csv,PSI-159,13250,105.99,0.017602,0.0186,ya,32.35,105.99,73.64,0.0007,rekaman berakhir saat burner masih panas
+21277N1,5,2021-10-04,3,0,20,PSI-159_Raw Data_21277N1_data.csv,PSI-159,11577,92.61,0.017661,0.0361,ya,40.12,92.61,52.49,0.0055,rekaman berakhir saat burner masih panas
+21277P1,5,2021-10-04,3,0,20,PSI-159_Raw Data_21277P1_data.csv,PSI-159,9768,78.14,0.017653,0.0168,ya,41.66,78.14,36.48,0.0003,rekaman berakhir saat burner masih panas
+21291A1,5,2021-10-18,2,0,23,PSI-159_Raw Data_21291A1_data.csv,PSI-159,25630,205.03,0.013756,2.2211,ya,30.73,205.03,174.3,2.3151,rekaman berakhir saat burner masih panas
+21291B1,5,2021-10-18,2,0,23,PSI-159_Raw Data_21291B1_data.csv,PSI-159,12749,101.98,0.00682,2.5973,ya,27.0,101.98,74.98,2.6997,rekaman berakhir saat burner masih panas
+21291C1,5,2021-10-18,2,0,23,PSI-159_Raw Data_21291C1_data.csv,PSI-159,35370,282.95,0.016795,1.4637,ya,29.81,282.95,253.14,1.5329,rekaman berakhir saat burner masih panas
+21291C2,5,2021-10-18,2,0,23,PSI-159_Raw Data_21291C2_data.csv,PSI-159,12126,97.0,0.006393,2.5863,ya,27.31,97.0,69.7,2.7025,rekaman berakhir saat burner masih panas
+21291D1,5,2021-10-19,2,0,23,PSI-159_Raw Data_21291D1_data.csv,PSI-159,14676,117.4,0.009426,2.2142,ya,33.51,117.4,83.89,2.3136,rekaman berakhir saat burner masih panas
+21291G1,5,2021-10-19,2,0,23,PSI-159_Raw Data_21291G1_data.csv,PSI-159,29818,238.54,0.016477,1.4658,ya,35.22,238.54,203.32,1.5327,rekaman berakhir saat burner masih panas
+21291G2,5,2021-10-19,2,0,23,PSI-159_Raw Data_21291G2_data.csv,PSI-159,16571,132.55,0.01159,1.8455,ya,31.62,132.55,100.92,1.922,rekaman berakhir saat burner masih panas
+21291H1,5,2021-10-18,2,0,23,PSI-159_Raw Data_21291H1_data.csv,PSI-159,13453,107.62,0.007732,1.8513,ya,34.4,107.62,73.21,1.9153,rekaman berakhir saat burner masih panas
+21291H2,5,2021-10-18,2,0,23,PSI-159_Raw Data_21291H2_data.csv,PSI-159,24563,196.5,0.017526,1.0992,ya,43.54,196.5,152.95,1.1283,rekaman berakhir saat burner masih panas
+21291J1,5,2021-10-19,2,0,23,PSI-159_Raw Data_21291J1_data.csv,PSI-159,14455,115.63,0.017505,1.1012,ya,41.68,115.63,73.95,1.1403,rekaman berakhir saat burner masih panas
+21291J2,5,2021-10-19,2,0,23,PSI-159_Raw Data_21291J2_data.csv,PSI-159,13828,110.62,0.005143,2.2211,ya,42.85,110.62,67.77,2.2991,rekaman berakhir saat burner masih panas
+21291J3,5,2021-10-19,2,0,23,PSI-159_Raw Data_21291J3_data.csv,PSI-159,20831,166.64,0.012389,1.4657,ya,44.6,166.64,122.04,1.4977,rekaman berakhir saat burner masih panas
+19254A1,2,2019-09-11,1,0,6,PSI-23_Raw Data_19254A1_data.csv,PSI-23,8611,68.88,0.00377,4.6819,ya,34.47,68.88,34.41,0.0326,rekaman berakhir saat burner masih panas
+19254B1,2,2019-09-11,1,0,6,PSI-23_Raw Data_19254B1_data.csv,PSI-23,7120,56.94,0.001613,3.9762,ya,31.49,56.94,25.45,0.0031,rekaman berakhir saat burner masih panas
+19254C1,2,2019-09-11,1,0,6,PSI-23_Raw Data_19254C1_data.csv,PSI-23,8110,64.87,0.003157,4.2633,ya,31.77,64.87,33.1,0.0085,rekaman berakhir saat burner masih panas
+19254D1,2,2019-09-11,1,0,6,PSI-23_Raw Data_19254D1_data.csv,PSI-23,7472,59.77,0.00175,2.2594,ya,35.27,59.77,24.5,-0.0153,rekaman berakhir saat burner masih panas
+19254D2,2,2019-09-11,1,0,6,PSI-23_Raw Data_19254D2_data.csv,PSI-23,6823,54.58,0.001612,2.2567,ya,30.1,54.58,24.47,-0.0131,rekaman berakhir saat burner masih panas
+19254F1,2,2019-09-11,1,0,6,PSI-23_Raw Data_19254F1_data.csv,PSI-23,7372,58.97,0.002517,2.43,ya,30.14,58.97,28.82,-0.0048,rekaman berakhir saat burner masih panas
+19254G1,2,2019-09-11,1,0,6,PSI-23_Raw Data_19254G1_data.csv,PSI-23,7098,56.78,0.001472,2.664,ya,32.6,56.78,24.18,-0.0157,rekaman berakhir saat burner masih panas
+19254H1,2,2019-09-11,1,0,6,PSI-23_Raw Data_19254H1_data.csv,PSI-23,5847,46.77,0.000291,5.9585,tidak,,,,,
+19254H2,2,2019-09-11,1,0,6,PSI-23_Raw Data_19254H2_data.csv,PSI-23,6861,54.88,0.000229,1.6683,tidak,,,,,
+19254H3,2,2019-09-11,1,0,6,PSI-23_Raw Data_19254H3_data.csv,PSI-23,9175,73.39,0.009459,2.7037,ya,37.86,73.39,35.53,0.5247,rekaman berakhir saat burner masih panas
+19254J1,2,2019-09-11,1,0,6,PSI-23_Raw Data_19254J1_data.csv,PSI-23,7299,58.38,0.001983,3.2342,ya,31.28,58.38,27.1,-0.0073,rekaman berakhir saat burner masih panas
+19254K1,2,2019-09-11,1,0,6,PSI-23_Raw Data_19254K1_data.csv,PSI-23,7659,61.27,0.004294,3.0448,ya,26.97,61.27,34.3,0.0165,rekaman berakhir saat burner masih panas
+19254L1,2,2019-09-12,1,0,6,PSI-23_Raw Data_19254L1_data.csv,PSI-23,4752,61.27,0.004216,2.094,ya,27.5,61.27,33.78,0.794,rekaman berakhir saat burner masih panas
+19254M1,2,2019-09-12,1,0,6,PSI-23_Raw Data_19254M1_data.csv,PSI-23,8552,68.41,0.005604,1.8325,ya,27.96,68.41,40.45,0.6542,rekaman berakhir saat burner masih panas
+19254N1,2,2019-09-12,1,0,6,PSI-23_Raw Data_19254N1_data.csv,PSI-23,7923,63.38,0.00435,3.4778,ya,28.04,63.38,35.34,0.0568,rekaman berakhir saat burner masih panas
+19256A1,2,2019-09-13,1,0,6,PSI-23_Raw Data_19256A1_data.csv,PSI-23,8610,68.87,0.002212,5.6466,ya,37.0,68.87,31.87,-0.0023,rekaman berakhir saat burner masih panas
+19256B1,2,2019-09-13,1,0,6,PSI-23_Raw Data_19256B1_data.csv,PSI-23,8235,65.87,0.002271,1.2769,ya,38.9,65.87,26.97,0.0032,rekaman berakhir saat burner masih panas
+19256B2,2,2019-09-13,1,0,6,PSI-23_Raw Data_19256B2_1_data.csv,PSI-23,1012,8.09,9e-06,0.0059,tidak,,,,,
+19256B2,2,2019-09-13,1,0,6,PSI-23_Raw Data_19256B2_data.csv,PSI-23,7847,62.77,0.002515,0.9263,ya,33.38,62.77,29.39,0.0029,rekaman berakhir saat burner masih panas
+19256B3,2,2019-09-13,1,0,6,PSI-23_Raw Data_19256B3_data.csv,PSI-23,8301,66.4,0.004496,3.6273,ya,33.3,66.4,33.1,0.0113,rekaman berakhir saat burner masih panas
+19256C1,2,2019-09-13,1,0,6,PSI-23_Raw Data_19256C1_data.csv,PSI-23,7985,63.87,0.002203,3.8384,ya,32.72,63.87,31.15,-0.0158,rekaman berakhir saat burner masih panas
+19256D1,2,2019-09-13,1,0,6,PSI-23_Raw Data_19256D1_data.csv,PSI-23,7972,63.77,0.002507,1.1198,ya,34.31,63.77,29.46,0.0003,rekaman berakhir saat burner masih panas
+19256D2,2,2019-09-13,1,0,6,PSI-23_Raw Data_19256D2_data.csv,PSI-23,7722,61.77,0.00242,1.1215,ya,32.14,61.77,29.63,-0.002,rekaman berakhir saat burner masih panas
+19256D3,2,2019-09-13,1,0,6,PSI-23_Raw Data_19256D3_data.csv,PSI-23,8485,67.87,0.002429,1.2956,ya,39.3,67.87,28.57,-0.0026,rekaman berakhir saat burner masih panas
+19256D4,2,2019-09-13,1,0,6,PSI-23_Raw Data_19256D4_data.csv,PSI-23,8923,71.38,0.006064,3.0029,ya,33.83,71.38,37.54,0.2476,rekaman berakhir saat burner masih panas
+19256F1,2,2019-09-14,1,0,6,PSI-23_Raw Data_19256F1_data.csv,PSI-23,8410,67.27,0.005051,1.1051,ya,29.66,67.27,37.62,0.5789,rekaman berakhir saat burner masih panas
+19256G1,2,2019-09-13,1,0,6,PSI-23_Raw Data_19256G1_data.csv,PSI-23,8923,71.38,0.006215,0.8095,ya,32.93,71.38,38.45,0.5329,rekaman berakhir saat burner masih panas
+19256J1,2,2019-09-13,1,0,6,PSI-23_Raw Data_19256J1_data.csv,PSI-23,7235,57.87,0.000752,0.8162,ya,36.18,57.87,21.69,0.0008,rekaman berakhir saat burner masih panas
+19256J2,2,2019-09-14,1,0,6,PSI-23_Raw Data_19256J2_data.csv,PSI-23,6806,54.44,0.000932,4.2601,ya,31.62,54.44,22.82,0.003,rekaman berakhir saat burner masih panas
+19256K1,2,2019-09-13,1,0,6,PSI-23_Raw Data_19256K1_data.csv,PSI-23,7847,62.77,0.001612,2.9469,ya,37.23,62.77,25.54,0.0003,rekaman berakhir saat burner masih panas
+19256L1,2,2019-09-14,1,0,6,PSI-23_Raw Data_19256L1_data.csv,PSI-23,9410,75.27,0.004696,0.9671,ya,36.67,75.27,38.61,0.5165,rekaman berakhir saat burner masih panas
+19256M1,2,2019-09-14,1,0,6,PSI-23_Raw Data_19256M1_data.csv,PSI-23,10030,80.23,0.004782,1.1086,ya,42.53,80.23,37.7,0.643,rekaman berakhir saat burner masih panas
+19304A1,2,2019-10-31,1,0,3,PSI-23_Raw Data_19304A1_data.csv,PSI-23,6211,49.68,0.000441,3.6297,tidak,,,,,
+19304A2,2,2019-10-31,1,0,3,PSI-23_Raw Data_19304A2_data.csv,PSI-23,6342,50.73,0.000697,2.3957,ya,29.36,50.73,21.37,-0.0019,rekaman berakhir saat burner masih panas
+19304A3,2,2019-10-31,1,0,3,PSI-23_Raw Data_19304A3_data.csv,PSI-23,6091,48.72,0.000732,2.3813,ya,28.02,48.72,20.7,-0.0018,rekaman berakhir saat burner masih panas
+19304A7,2,2019-10-31,1,0,3,PSI-23_Raw Data_19304A7_data.csv,PSI-23,6210,49.67,0.000558,2.3952,tidak,,,,,
+19304B1,2,2019-10-31,1,0,3,PSI-23_Raw Data_19304B1_data.csv,PSI-23,6204,49.62,0.001209,1.3511,ya,26.07,49.62,23.55,-0.0665,rekaman berakhir saat burner masih panas
+19304B2,2,2019-10-31,1,0,3,PSI-23_Raw Data_19304B2_data.csv,PSI-23,6217,49.73,0.000695,1.1274,ya,28.48,49.73,21.25,0.0091,rekaman berakhir saat burner masih panas
+19304B3,2,2019-10-31,1,0,3,PSI-23_Raw Data_19304B3_data.csv,PSI-23,6216,49.72,0.001017,1.1584,ya,27.84,49.72,21.88,0.0092,rekaman berakhir saat burner masih panas
+19304B4,2,2019-10-31,1,0,3,PSI-23_Raw Data_19304B4_data.csv,PSI-23,6092,48.73,0.000347,0.988,tidak,,,,,
+19304K1,2,2019-10-31,1,0,3,PSI-23_Raw Data_19304K1_data.csv,PSI-23,5984,47.87,0.000422,2.4574,tidak,,,,,
+19308A1,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308A1_data.csv,PSI-23,6582,52.65,0.003063,3.3094,ya,24.99,52.65,27.66,0.0088,rekaman berakhir saat burner masih panas
+19308A2,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308A2_data.csv,PSI-23,7707,61.65,0.005796,1.0079,ya,30.78,61.65,30.86,0.0116,rekaman berakhir saat burner masih panas
+19308A3,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308A3_data.csv,PSI-23,7457,59.65,0.008089,0.888,ya,27.02,59.65,32.63,0.012,rekaman berakhir saat burner masih panas
+19308B1,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308B1_data.csv,PSI-23,6599,52.79,0.001591,2.3975,ya,28.94,52.79,23.85,-0.0072,rekaman berakhir saat burner masih panas
+19308C1,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308C1_data.csv,PSI-23,6469,51.74,0.000483,0.986,tidak,,,,,
+19308C2,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308C2_data.csv,PSI-23,6206,49.63,0.003339,1.1331,ya,26.05,49.63,23.58,0.0064,rekaman berakhir saat burner masih panas
+19308D1,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308D1_data.csv,PSI-23,7198,57.58,0.007187,0.7793,ya,25.61,57.58,31.97,0.0115,rekaman berakhir saat burner masih panas
+19308F1,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308F1_data.csv,PSI-23,6725,53.79,0.001072,1.3187,ya,31.27,53.79,22.52,-0.0503,rekaman berakhir saat burner masih panas
+19308G1,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308G1_data.csv,PSI-23,6476,51.8,0.001209,1.2641,ya,28.36,51.8,23.44,0.0088,rekaman berakhir saat burner masih panas
+19308H1,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308H1_data.csv,PSI-23,6600,52.79,0.001252,1.5016,ya,29.89,52.79,22.9,0.0036,rekaman berakhir saat burner masih panas
+19308H2,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308H2_data.csv,PSI-23,6600,52.79,0.001386,1.5006,ya,29.46,52.79,23.34,-0.0017,rekaman berakhir saat burner masih panas
+19308H3,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308H3_data.csv,PSI-23,7226,57.8,0.00249,0.8682,ya,30.69,57.8,27.11,0.0102,rekaman berakhir saat burner masih panas
+19308H4,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308H4_data.csv,PSI-23,6495,51.95,0.003163,1.1076,ya,24.06,51.95,27.89,0.0087,rekaman berakhir saat burner masih panas
+19308H5,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308H5_data.csv,PSI-23,6475,51.79,0.002706,0.8695,ya,26.78,51.79,25.02,0.0013,rekaman berakhir saat burner masih panas
+19308J1,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308J1_data.csv,PSI-23,6362,50.89,0.002345,0.9518,ya,24.9,50.89,25.99,0.006,rekaman berakhir saat burner masih panas
+19308K1,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308K1_data.csv,PSI-23,7225,57.79,0.001473,1.77,ya,33.61,57.79,24.18,0.001,rekaman berakhir saat burner masih panas
+19308K2,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308K2_data.csv,PSI-23,6862,54.89,0.002944,0.9217,ya,28.04,54.89,26.85,0.0036,rekaman berakhir saat burner masih panas
+19308K3,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308K3_data.csv,PSI-23,7099,56.78,0.004898,0.8296,ya,27.71,56.78,29.07,0.0089,rekaman berakhir saat burner masih panas
+19308L1,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308L1_data.csv,PSI-23,6724,53.78,0.00317,1.2126,ya,26.08,53.78,27.7,0.017,rekaman berakhir saat burner masih panas
+19308L2,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308L2_data.csv,PSI-23,7100,56.79,0.004268,0.9484,ya,29.22,56.79,27.58,0.0119,rekaman berakhir saat burner masih panas
+19308M1,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308M1_data.csv,PSI-23,6588,52.7,0.000496,1.0913,tidak,,,,,
+19308N1,2,2019-11-04,1,0,3,PSI-23_Raw Data_19308N1_data.csv,PSI-23,5737,45.89,0.000484,1.0719,tidak,,,,,
+19352D1,2,2019-12-18,1,0,7,PSI-23_Raw Data_19352D1_data.csv,PSI-23,5875,46.99,0.002824,4.7565,ya,25.07,46.99,21.92,-0.0152,rekaman berakhir saat burner masih panas
+19352D4,2,2019-12-18,1,0,7,PSI-23_Raw Data_19352D4_data.csv,PSI-23,6498,51.98,0.003821,5.3276,ya,29.02,51.98,22.95,-0.0207,rekaman berakhir saat burner masih panas
+19352D5,2,2019-12-19,1,0,7,PSI-23_Raw Data_19352D5_data.csv,PSI-23,5920,47.42,0.010437,5.1957,ya,15.83,47.42,31.59,4.9381,rekaman berakhir saat burner masih panas
+19352D6,2,2019-12-19,1,0,7,PSI-23_Raw Data_19352D6_data.csv,PSI-23,6070,48.55,0.010511,4.6519,ya,31.01,48.55,17.54,4.0324,rekaman berakhir saat burner masih panas
+19352K1,2,2019-12-19,1,0,7,PSI-23_Raw Data_19352K1_data.csv,PSI-23,5312,42.49,0.010633,5.2176,ya,28.67,42.49,13.82,4.9645,rekaman berakhir saat burner masih panas
+19352M1,2,2019-12-19,1,0,7,PSI-23_Raw Data_19352M1_data.csv,PSI-23,5307,42.48,0.01083,5.7067,ya,28.72,42.48,13.76,4.597,rekaman berakhir saat burner masih panas
+19352M2,2,2019-12-19,1,0,7,PSI-23_Raw Data_19352M2_data.csv,PSI-23,7061,56.48,0.00865,5.2683,ya,27.79,56.48,28.69,-0.0177,rekaman berakhir saat burner masih panas
+19352M3,2,2019-12-19,1,0,7,PSI-23_Raw Data_19352M3_data.csv,PSI-23,7300,58.39,0.009315,5.0835,ya,26.97,58.39,31.42,-0.0099,rekaman berakhir saat burner masih panas
+19352N1,2,2019-12-19,1,0,7,PSI-23_Raw Data_19352N1_data.csv,PSI-23,7562,60.49,0.008615,5.2671,ya,28.13,60.49,32.36,-0.0045,rekaman berakhir saat burner masih panas
+19352P2,2,2019-12-19,1,0,7,PSI-23_Raw Data_19352P2_data.csv,PSI-23,7439,59.5,0.006503,4.3544,ya,27.65,59.5,31.85,-0.0048,rekaman berakhir saat burner masih panas
+20006A2,2,2020-01-06,1,0,8,PSI-23_Raw Data_20006A2_data.csv,PSI-23,6112,48.89,0.001117,3.6156,ya,25.15,48.89,23.74,-0.0079,rekaman berakhir saat burner masih panas
+20006A3,2,2020-01-06,1,0,8,PSI-23_Raw Data_20006A3_data.csv,PSI-23,6361,50.88,0.002244,4.0708,ya,25.82,50.88,25.07,0.0161,rekaman berakhir saat burner masih panas
+20006A4,2,2020-01-06,1,0,8,PSI-23_Raw Data_20006A4_data.csv,PSI-23,6986,55.88,0.001548,3.9444,ya,29.53,55.88,26.35,-0.0078,rekaman berakhir saat burner masih panas
+20006A5,2,2020-01-06,1,0,8,PSI-23_Raw Data_20006A5_data.csv,PSI-23,6475,51.89,0.001462,4.0407,ya,3.86,51.89,48.03,-0.0023,rekaman berakhir saat burner masih panas
+20006A6,2,2020-01-06,1,0,8,PSI-23_Raw Data_20006A6_data.csv,PSI-23,7985,63.87,0.00193,3.0409,ya,33.58,63.87,30.3,-0.0103,rekaman berakhir saat burner masih panas
+20006B1,2,2020-01-06,1,0,8,PSI-23_Raw Data_20006B1_data.csv,PSI-23,7363,58.9,0.001493,4.504,ya,33.41,58.9,25.49,-0.0052,rekaman berakhir saat burner masih panas
+20006B2,2,2020-01-06,1,0,8,PSI-23_Raw Data_20006B2_data.csv,PSI-23,6974,55.78,0.001308,3.2462,ya,31.3,55.78,24.48,-0.0157,rekaman berakhir saat burner masih panas
+20006C1,2,2020-01-06,1,0,8,PSI-23_Raw Data_20006C1_data.csv,PSI-23,9113,72.9,0.002698,4.0497,ya,36.67,72.9,36.22,0.1027,rekaman berakhir saat burner masih panas
+20006D1,2,2020-01-06,1,0,8,PSI-23_Raw Data_20006D1_data.csv,PSI-23,6976,55.8,0.00156,4.3027,ya,31.05,55.8,24.75,-0.0052,rekaman berakhir saat burner masih panas
+20006D2,2,2020-01-06,1,0,8,PSI-23_Raw Data_20006D2_data.csv,PSI-23,6737,53.89,0.001569,4.4149,ya,27.56,53.89,26.33,-0.0132,rekaman berakhir saat burner masih panas
+20006F1,2,2020-01-06,1,0,8,PSI-23_Raw Data_20006F1_data.csv,PSI-23,6862,54.89,0.001724,4.309,ya,27.89,54.89,27.0,0.0005,rekaman berakhir saat burner masih panas
+20006G1,2,2020-01-06,1,0,8,PSI-23_Raw Data_20006G1_data.csv,PSI-23,7112,56.89,0.001301,2.7789,ya,31.71,56.89,25.18,0.0001,rekaman berakhir saat burner masih panas
+20006G2,2,2020-01-06,1,0,8,PSI-23_Raw Data_20006G2_data.csv,PSI-23,7101,56.8,0.002472,4.9632,ya,30.14,56.8,26.66,0.0033,rekaman berakhir saat burner masih panas
+20006G3,2,2020-01-06,1,0,8,PSI-23_Raw Data_20006G3_data.csv,PSI-23,6612,52.89,0.00178,3.908,ya,28.41,52.89,24.48,0.0007,rekaman berakhir saat burner masih panas
+20006H1,2,2020-01-06,1,0,8,PSI-23_Raw Data_20006H1_data.csv,PSI-23,6979,55.82,0.001368,5.5717,ya,30.68,55.82,25.14,-0.0131,rekaman berakhir saat burner masih panas
+20006J1,2,2020-01-06,1,0,8,PSI-23_Raw Data_20006J1_data.csv,PSI-23,6987,55.89,0.001546,3.0164,ya,28.82,55.89,27.06,-0.0024,rekaman berakhir saat burner masih panas
+20006K1,2,2020-01-06,1,0,8,PSI-23_Raw Data_20006K1_data.csv,PSI-23,7362,58.89,0.001694,3.4983,ya,31.33,58.89,27.56,-0.0183,rekaman berakhir saat burner masih panas
+20013A1,2,2020-01-13,1,0,10,PSI-23_Raw Data_20013A1_data.csv,PSI-23,11600,92.79,0.005261,3.8845,ya,30.22,92.79,62.58,1.2209,rekaman berakhir saat burner masih panas
+20013B1,2,2020-01-13,1,0,10,PSI-23_Raw Data_20013B1_data.csv,PSI-23,11613,92.89,0.003769,2.8309,ya,31.94,92.89,60.96,2.4604,rekaman berakhir saat burner masih panas
+20013B2,2,2020-01-13,1,0,10,PSI-23_Raw Data_20013B2_data.csv,PSI-23,13113,104.9,0.003954,2.8166,ya,31.15,104.9,73.74,2.4604,rekaman berakhir saat burner masih panas
+20013C1,2,2020-01-13,1,0,10,PSI-23_Raw Data_20013C1_data.csv,PSI-23,11988,95.9,0.003601,3.9393,ya,35.31,95.9,60.58,3.7001,rekaman berakhir saat burner masih panas
+20013C3,2,2020-01-13,1,0,10,PSI-23_Raw Data_20013C3_data.csv,PSI-23,11487,91.89,0.003353,2.992,ya,31.95,91.89,59.93,2.6674,rekaman berakhir saat burner masih panas
+20013C4,2,2020-01-13,1,0,10,PSI-23_Raw Data_20013C4_data.csv,PSI-23,11613,92.9,0.003122,2.5462,ya,33.07,92.9,59.82,1.9475,rekaman berakhir saat burner masih panas
+20013C5,2,2020-01-13,1,0,10,PSI-23_Raw Data_20013C5_data.csv,PSI-23,12002,96.01,0.002957,2.4106,ya,36.66,96.01,59.35,1.3132,rekaman berakhir saat burner masih panas
+20013D1,2,2020-01-13,1,0,10,PSI-23_Raw Data_20013D1_data.csv,PSI-23,13865,110.91,0.003351,3.6777,ya,28.95,110.91,81.96,3.7,rekaman berakhir saat burner masih panas
+20013F1,2,2020-01-13,1,0,10,PSI-23_Raw Data_20013F1_data.csv,PSI-23,13740,109.91,0.00366,2.4432,ya,29.17,109.91,80.74,2.4553,rekaman berakhir saat burner masih panas
+20013G1,2,2020-01-13,1,0,10,PSI-23_Raw Data_20013G1_data.csv,PSI-23,10489,83.9,0.008022,3.0002,ya,35.44,83.9,48.46,0.3178,rekaman berakhir saat burner masih panas
+20013G2,2,2020-01-13,1,0,10,PSI-23_Raw Data_20013G2_data.csv,PSI-23,9113,72.88,0.009393,3.5529,ya,34.12,72.88,38.76,0.3634,rekaman berakhir saat burner masih panas
+20013G3,2,2020-01-13,1,0,10,PSI-23_Raw Data_20013G3_data.csv,PSI-23,10115,80.91,0.0072,3.1507,ya,34.53,80.91,46.38,0.1803,rekaman berakhir saat burner masih panas
+20013H1,2,2020-01-13,1,0,10,PSI-23_Raw Data_20013H1_data.csv,PSI-23,9863,78.9,0.003727,3.2471,ya,33.21,78.9,45.69,0.3716,rekaman berakhir saat burner masih panas
+20013H2,2,2020-01-14,1,0,10,PSI-23_Raw Data_20013H2_data.csv,PSI-23,9988,79.89,0.004356,3.1335,ya,34.9,79.89,44.99,0.4063,rekaman berakhir saat burner masih panas
+20013J1,2,2020-01-13,1,0,10,PSI-23_Raw Data_20013J1_data.csv,PSI-23,8738,69.9,0.003016,3.7298,ya,32.58,69.9,37.32,0.0622,rekaman berakhir saat burner masih panas
+20013K1,2,2020-01-13,1,0,10,PSI-23_Raw Data_20013K1_data.csv,PSI-23,11600,92.79,0.009324,3.6791,ya,49.88,92.79,42.91,0.2452,rekaman berakhir saat burner masih panas
+20013M1,2,2020-01-13,1,0,10,PSI-23_Raw Data_20013M1_data.csv,PSI-23,10476,83.8,0.006851,2.9963,ya,32.13,83.8,51.67,0.3231,rekaman berakhir saat burner masih panas
+20013N1,2,2020-01-14,1,0,10,PSI-23_Raw Data_20013N1_data.csv,PSI-23,10364,82.9,0.006474,2.9814,ya,31.47,82.9,51.43,0.2585,rekaman berakhir saat burner masih panas
+20013P1,2,2020-01-14,1,0,10,PSI-23_Raw Data_20013P1_data.csv,PSI-23,10626,85.0,0.004886,3.0179,ya,34.18,85.0,50.83,0.2237,rekaman berakhir saat burner masih panas
+20013Q1,2,2020-01-14,1,0,10,PSI-23_Raw Data_20013Q1_data.csv,PSI-23,10876,86.99,0.008929,2.7785,ya,30.6,86.99,56.39,0.2158,rekaman berakhir saat burner masih panas
+20013R1,2,2020-01-14,1,0,10,PSI-23_Raw Data_20013R1_data.csv,PSI-23,10351,82.8,0.007813,3.2927,ya,28.84,82.8,53.96,0.2103,rekaman berakhir saat burner masih panas
+20013S1,2,2020-01-14,1,0,10,PSI-23_Raw Data_20013S1_data.csv,PSI-23,9987,79.89,0.005756,3.0592,ya,28.49,79.89,51.4,0.1726,rekaman berakhir saat burner masih panas
+20024A1,2,2020-01-24,1,0,7,PSI-23_Raw Data_20024A1_data.csv,PSI-23,6675,53.39,0.009723,5.4319,ya,31.09,53.39,22.31,1.3415,rekaman berakhir saat burner masih panas
+20024B1,2,2020-01-24,1,0,7,PSI-23_Raw Data_20024B1_data.csv,PSI-23,11437,91.49,0.007198,3.3895,ya,31.64,91.49,59.85,2.6996,rekaman berakhir saat burner masih panas
+20024B2,2,2020-01-24,1,0,7,PSI-23_Raw Data_20024B2_data.csv,PSI-23,11800,94.38,0.006118,4.1944,ya,35.41,94.38,58.97,4.0577,rekaman berakhir saat burner masih panas
+20024D1,2,2020-01-24,1,0,7,PSI-23_Raw Data_20024D1_data.csv,PSI-23,11663,93.3,0.006614,2.5164,ya,37.05,93.3,56.25,1.7936,rekaman berakhir saat burner masih panas
+20024D2,2,2020-01-24,1,0,7,PSI-23_Raw Data_20024D2_data.csv,PSI-23,11564,92.5,0.00597,2.7124,ya,36.18,92.5,56.32,2.1357,rekaman berakhir saat burner masih panas
+20024F1,2,2020-01-24,1,0,7,PSI-23_Raw Data_20024F1_data.csv,PSI-23,10300,82.38,0.009478,3.1523,ya,37.54,82.38,44.84,0.7103,rekaman berakhir saat burner masih panas
+20024F2,2,2020-01-24,1,0,7,PSI-23_Raw Data_20024F2_data.csv,PSI-23,8551,68.4,0.010307,3.9416,ya,40.47,68.4,27.93,1.2752,rekaman berakhir saat burner masih panas
+20024G1,2,2020-01-24,1,0,7,PSI-23_Raw Data_20024G1_data.csv,PSI-23,9937,79.49,0.008509,3.197,ya,37.84,79.49,41.65,0.4197,rekaman berakhir saat burner masih panas
+20024H1,2,2020-01-24,1,0,7,PSI-23_Raw Data_20024H1_data.csv,PSI-23,8562,68.49,0.005246,4.3157,ya,33.59,68.49,34.9,0.0914,rekaman berakhir saat burner masih panas
+20024K1,2,2020-01-24,1,0,7,PSI-23_Raw Data_20024K1_data.csv,PSI-23,11412,91.29,0.006012,2.6066,ya,35.69,91.29,55.6,1.4904,rekaman berakhir saat burner masih panas
+20024M1,2,2020-01-24,1,0,7,PSI-23_Raw Data_20024M1_data.csv,PSI-23,11538,92.29,0.005278,2.7386,ya,37.22,92.29,55.07,1.189,rekaman berakhir saat burner masih panas
+20024N2,2,2020-01-24,1,0,7,PSI-23_Raw Data_20024N2_data.csv,PSI-23,7425,59.39,0.00216,4.8453,ya,31.65,59.39,27.74,0.0866,rekaman berakhir saat burner masih panas
+20024N3,2,2020-01-24,1,0,7,PSI-23_Raw Data_20024N3_data.csv,PSI-23,11551,92.4,0.004145,2.7701,ya,37.11,92.4,55.29,0.867,rekaman berakhir saat burner masih panas
+20024P1,2,2020-01-24,1,0,7,PSI-23_Raw Data_20024P1_data.csv,PSI-23,9927,79.41,0.007752,3.4378,ya,37.96,79.41,41.45,0.3526,rekaman berakhir saat burner masih panas
+20024Q1,2,2020-01-24,1,0,7,PSI-23_Raw Data_20024Q1_data.csv,PSI-23,10050,80.39,0.008566,3.3073,ya,39.2,80.39,41.19,0.1887,rekaman berakhir saat burner masih panas
+20024R1,2,2020-01-24,1,0,7,PSI-23_Raw Data_20024R1_data.csv,PSI-23,8924,71.38,0.004093,3.6355,ya,33.97,71.38,37.42,0.2196,rekaman berakhir saat burner masih panas
+20029A1,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029A1_data.csv,PSI-23,9301,74.4,0.003456,3.8519,ya,33.73,74.4,40.67,2.431,rekaman berakhir saat burner masih panas
+20029B1,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029B1_data.csv,PSI-23,7928,63.42,0.009882,4.344,ya,37.92,63.42,25.49,0.5243,rekaman berakhir saat burner masih panas
+20029B2,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029B2_data.csv,PSI-23,7925,63.39,0.009678,4.5159,ya,38.78,63.39,24.62,0.5226,rekaman berakhir saat burner masih panas
+20029B3,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029B3_data.csv,PSI-23,8428,67.42,0.009825,4.5258,ya,41.7,67.42,25.72,0.5244,rekaman berakhir saat burner masih panas
+20029D1,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029D1_data.csv,PSI-23,7923,63.38,0.003621,4.3628,ya,30.89,63.38,32.49,0.0943,rekaman berakhir saat burner masih panas
+20029F1,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029F1_data.csv,PSI-23,7059,56.46,0.001959,4.8179,ya,30.44,56.46,26.02,0.0758,rekaman berakhir saat burner masih panas
+20029G1,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029G1_data.csv,PSI-23,7797,62.37,0.003259,4.6213,ya,30.49,62.37,31.88,0.0759,rekaman berakhir saat burner masih panas
+20029H1,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029H1_data.csv,PSI-23,7435,59.47,0.002736,4.5554,ya,29.12,59.47,30.35,0.0701,rekaman berakhir saat burner masih panas
+20029J1,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029J1_data.csv,PSI-23,8048,64.38,0.003218,4.2942,ya,33.24,64.38,31.14,0.0756,rekaman berakhir saat burner masih panas
+20029K1,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029K1_data.csv,PSI-23,8992,71.93,0.005848,3.7779,ya,34.62,71.93,37.3,0.2007,rekaman berakhir saat burner masih panas
+20029L1,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029L1_data.csv,PSI-23,8724,69.78,0.005933,3.8898,ya,31.84,69.78,37.94,0.4814,rekaman berakhir saat burner masih panas
+20029M1,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029M1_data.csv,PSI-23,8860,70.87,0.006507,4.0519,ya,31.54,70.87,39.33,0.5567,rekaman berakhir saat burner masih panas
+20029P1,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029P1_data.csv,PSI-23,6860,54.87,0.002575,4.7704,ya,28.93,54.87,25.94,0.0784,rekaman berakhir saat burner masih panas
+20029Q1,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029Q1_data.csv,PSI-23,9236,73.88,0.006453,3.6289,ya,32.41,73.88,41.47,0.7959,rekaman berakhir saat burner masih panas
+20029Q2,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029Q2_data.csv,PSI-23,8860,70.87,0.004879,3.8298,ya,34.18,70.87,36.69,0.2182,rekaman berakhir saat burner masih panas
+20029R1,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029R1_data.csv,PSI-23,6860,54.87,0.002583,4.7273,ya,28.9,54.87,25.97,0.0756,rekaman berakhir saat burner masih panas
+20029R2,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029R2_data.csv,PSI-23,6873,54.96,0.002641,4.7838,ya,29.19,54.96,25.78,0.0676,rekaman berakhir saat burner masih panas
+20029S1,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029S1_data.csv,PSI-23,9511,76.08,0.005684,3.5308,ya,34.49,76.08,41.59,0.5272,rekaman berakhir saat burner masih panas
+20029S2,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029S2_data.csv,PSI-23,8747,69.97,0.006244,3.8848,ya,31.1,69.97,38.86,0.5217,rekaman berakhir saat burner masih panas
+20029T1,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029T1_data.csv,PSI-23,8735,69.87,0.005538,4.0213,ya,30.26,69.87,39.61,0.6619,rekaman berakhir saat burner masih panas
+20029T2,2,2020-01-29,1,0,6,PSI-23_Raw Data_20029T2_data.csv,PSI-23,8986,71.88,0.006112,3.8564,ya,32.06,71.88,39.82,0.6591,rekaman berakhir saat burner masih panas
+20132A4,2,2020-05-11,4,0,12,PSI-23_Raw Data_20132A4_data.csv,PSI-23,7282,58.25,0.00135,1.382,ya,36.12,58.25,22.13,-0.0081,rekaman berakhir saat burner masih panas
+20132B1,2,2020-05-11,4,0,12,PSI-23_Raw Data_20132B1_data.csv,PSI-23,7219,57.74,6.6e-05,2.8272,tidak,,,,,
+20132B2,2,2020-05-11,4,0,12,PSI-23_Raw Data_20132B2_data.csv,PSI-23,7095,56.75,6e-05,2.8336,tidak,,,,,
+20132B6,2,2020-05-11,4,0,12,PSI-23_Raw Data_20132B6_data.csv,PSI-23,7282,58.25,0.00152,2.8013,ya,37.27,58.25,20.98,-0.0293,rekaman berakhir saat burner masih panas
+20132C1,2,2020-05-12,4,0,12,PSI-23_Raw Data_20132C1_data.csv,PSI-23,6644,53.14,0.001692,4.2294,ya,32.2,53.14,20.94,-0.0451,rekaman berakhir saat burner masih panas
+20132D1,2,2020-05-12,4,0,12,PSI-23_Raw Data_20132D1_data.csv,PSI-23,6706,53.64,0.000911,2.776,ya,33.0,53.64,20.64,-0.0163,rekaman berakhir saat burner masih panas
+20132G1,2,2020-05-12,4,0,12,PSI-23_Raw Data_20132G1_data.csv,PSI-23,6781,54.24,0.000656,0.8089,ya,32.31,54.24,21.94,-0.0027,rekaman berakhir saat burner masih panas
+20132H1,2,2020-05-12,4,0,12,PSI-23_Raw Data_20132H1_data.csv,PSI-23,7278,58.22,0.001421,1.9446,ya,36.72,58.22,21.5,-0.0109,rekaman berakhir saat burner masih panas
+20132J1,2,2020-05-12,4,0,12,PSI-23_Raw Data_20132J1_data.csv,PSI-23,6768,54.14,0.001072,3.6366,ya,33.35,54.14,20.79,-0.0296,rekaman berakhir saat burner masih panas
+20136A1,2,2020-05-15,4,0,12,PSI-23_Raw Data_20136A1_data.csv,PSI-23,6533,52.26,0.000604,1.3263,ya,31.14,52.26,21.11,-0.0026,rekaman berakhir saat burner masih panas
+20136B1,2,2020-05-15,4,0,12,PSI-23_Raw Data_20136B1_data.csv,PSI-23,7096,56.76,0.000716,2.7017,ya,36.02,56.76,20.75,-0.0187,rekaman berakhir saat burner masih panas
+20136C1,2,2020-05-15,4,0,12,PSI-23_Raw Data_20136C1_data.csv,PSI-23,6597,52.77,0.00089,4.0998,ya,31.36,52.77,21.41,-0.0375,rekaman berakhir saat burner masih panas
+20136D1,2,2020-05-15,4,0,12,PSI-23_Raw Data_20136D1_data.csv,PSI-23,6595,52.75,0.000737,2.6769,ya,33.04,52.75,19.71,-0.008,rekaman berakhir saat burner masih panas
+20136F1,2,2020-05-15,4,0,12,PSI-23_Raw Data_20136F1_data.csv,PSI-23,6582,52.65,0.000751,1.3194,ya,32.11,52.65,20.54,-0.0029,rekaman berakhir saat burner masih panas
+20136G1,2,2020-05-15,4,0,12,PSI-23_Raw Data_20136G1_data.csv,PSI-23,6846,54.76,0.001708,4.8156,ya,33.35,54.76,21.42,-0.0507,rekaman berakhir saat burner masih panas
+20136G2,2,2020-05-15,4,0,12,PSI-23_Raw Data_20136G2_data.csv,PSI-23,7094,56.75,0.001664,4.813,ya,35.45,56.75,21.3,-0.0484,rekaman berakhir saat burner masih panas
+20136H1,2,2020-05-15,4,0,12,PSI-23_Raw Data_20136H1_data.csv,PSI-23,6347,50.77,0.00078,3.5306,ya,30.3,50.77,20.47,-0.0269,rekaman berakhir saat burner masih panas
+20136J2,2,2020-05-15,4,0,12,PSI-23_Raw Data_20136J2_data.csv,PSI-23,6907,55.24,0.001227,2.7054,ya,35.0,55.24,20.25,-0.0188,rekaman berakhir saat burner masih panas
+20136K4,2,2020-05-15,4,0,12,PSI-23_Raw Data_20136K4_data.csv,PSI-23,7032,56.25,0.000646,1.8725,ya,35.34,56.25,20.9,-0.0081,rekaman berakhir saat burner masih panas
+20136M1,2,2020-05-16,4,0,12,PSI-23_Raw Data_20136M1_data.csv,PSI-23,6832,54.65,0.001625,4.7809,ya,34.09,54.65,20.56,-0.0403,rekaman berakhir saat burner masih panas
+20142A2,2,2020-05-22,4,0,12,PSI-23_Raw Data_20142A2_data.csv,PSI-23,6906,55.24,0.004083,1.4274,ya,31.7,55.24,23.54,-0.0107,rekaman berakhir saat burner masih panas
+20142B1,2,2020-05-21,4,0,12,PSI-23_Raw Data_20142B1_data.csv,PSI-23,7344,58.74,0.004572,2.9204,ya,33.69,58.74,25.06,-0.0291,rekaman berakhir saat burner masih panas
+20142B2,2,2020-05-22,4,0,12,PSI-23_Raw Data_20142B2_data.csv,PSI-23,7140,57.11,0.003355,2.9134,ya,32.78,57.11,24.33,-0.0293,rekaman berakhir saat burner masih panas
+20142C1,2,2020-05-21,4,0,12,PSI-23_Raw Data_20142C1_data.csv,PSI-23,8094,64.74,0.005022,4.4438,ya,35.49,64.74,29.25,-0.0375,rekaman berakhir saat burner masih panas
+20142C2,2,2020-05-22,4,0,12,PSI-23_Raw Data_20142C2_data.csv,PSI-23,7901,63.19,0.0048,4.4453,ya,34.21,63.19,28.98,-0.0425,rekaman berakhir saat burner masih panas
+20142D1,2,2020-05-21,4,0,12,PSI-23_Raw Data_20142D1_data.csv,PSI-23,7106,56.84,0.003791,2.8722,ya,32.44,56.84,24.4,-0.0162,rekaman berakhir saat burner masih panas
+20142F1,2,2020-05-21,4,0,12,PSI-23_Raw Data_20142F1_data.csv,PSI-23,7719,61.74,0.005183,1.414,ya,36.44,61.74,25.3,-0.0055,rekaman berakhir saat burner masih panas
+20142G1,2,2020-05-21,4,0,12,PSI-23_Raw Data_20142G1_data.csv,PSI-23,8831,70.64,0.006465,4.9111,ya,36.47,70.64,34.17,-0.0291,rekaman berakhir saat burner masih panas
+20142G3,2,2020-05-21,4,0,12,PSI-23_Raw Data_20142G3_data.csv,PSI-23,8156,65.24,0.005759,4.9095,ya,33.12,65.24,32.12,-0.0348,rekaman berakhir saat burner masih panas
+20142H1,2,2020-05-21,4,0,12,PSI-23_Raw Data_20142H1_data.csv,PSI-23,7703,61.62,0.004325,3.8288,ya,35.02,61.62,26.6,-0.035,rekaman berakhir saat burner masih panas
+20142J1,2,2020-05-21,4,0,12,PSI-23_Raw Data_20142J1_data.csv,PSI-23,7344,58.74,0.004362,2.0278,ya,33.94,58.74,24.8,-0.0162,rekaman berakhir saat burner masih panas
+20142K1,2,2020-05-21,4,0,12,PSI-23_Raw Data_20142K1_data.csv,PSI-23,7282,58.25,0.00363,0.8374,ya,35.46,58.25,22.79,-0.0002,rekaman berakhir saat burner masih panas
+20142L1,2,2020-05-21,4,0,12,PSI-23_Raw Data_20142L1_data.csv,PSI-23,8344,66.75,0.005554,4.4065,ya,36.66,66.75,30.09,-0.0319,rekaman berakhir saat burner masih panas
+20142M1,2,2020-05-21,4,0,12,PSI-23_Raw Data_20142M1_data.csv,PSI-23,8096,64.76,0.005455,4.8588,ya,33.62,64.76,31.14,-0.0294,rekaman berakhir saat burner masih panas
+20142M3,2,2020-05-21,4,0,12,PSI-23_Raw Data_20142M3_data.csv,PSI-23,8220,65.75,0.005504,3.8944,ya,36.67,65.75,29.08,-0.0215,rekaman berakhir saat burner masih panas
+20142M4,2,2020-05-21,4,0,12,PSI-23_Raw Data_20142M4_data.csv,PSI-23,8094,64.74,0.005238,4.8743,ya,33.58,64.74,31.17,-0.0347,rekaman berakhir saat burner masih panas
+20155A1,2,2020-06-03,4,0,14,PSI-23_Raw Data_20155A1_data.csv,PSI-23,6282,50.25,0.000518,1.7992,tidak,,,,,
+20155A2,2,2020-06-03,4,0,14,PSI-23_Raw Data_20155A2_data.csv,PSI-23,6906,55.24,0.004303,1.7497,ya,34.59,55.24,20.65,0.0032,rekaman berakhir saat burner masih panas
+20155A3,2,2020-06-03,4,0,14,PSI-23_Raw Data_20155A3_data.csv,PSI-23,6531,52.24,0.004878,1.7686,ya,31.31,52.24,20.94,-0.005,rekaman berakhir saat burner masih panas
+20155B1,2,2020-06-03,4,0,14,PSI-23_Raw Data_20155B1_data.csv,PSI-23,5305,42.43,0.012576,3.39,ya,33.56,42.43,8.87,3.5952,rekaman berakhir saat burner masih panas
+20155C1,2,2020-06-03,4,0,14,PSI-23_Raw Data_20155C1_data.csv,PSI-23,5517,44.13,0.012114,4.7663,ya,33.88,44.13,10.25,5.0364,rekaman berakhir saat burner masih panas
+20155C2,2,2020-06-03,4,0,14,PSI-23_Raw Data_20155C2_data.csv,PSI-23,5516,44.12,0.011921,4.7646,ya,33.86,44.12,10.26,5.0361,rekaman berakhir saat burner masih panas
+20155D1,2,2020-06-03,4,0,14,PSI-23_Raw Data_20155D1_data.csv,PSI-23,7532,60.25,0.01102,3.4659,ya,35.04,60.25,25.21,-0.0235,rekaman berakhir saat burner masih panas
+20155F1,2,2020-06-03,4,0,14,PSI-23_Raw Data_20155F1_data.csv,PSI-23,7919,63.33,0.01167,4.8674,ya,35.98,63.33,27.35,-0.0238,rekaman berakhir saat burner masih panas
+20155F2,2,2020-06-03,4,0,14,PSI-23_Raw Data_20155F2_data.csv,PSI-23,5419,43.34,0.012223,4.7423,ya,34.16,43.34,9.18,3.8704,rekaman berakhir saat burner masih panas
+20155G1,2,2020-06-03,4,0,14,PSI-23_Raw Data_20155G1_data.csv,PSI-23,6581,52.64,0.000463,1.7584,tidak,,,,,
+20155H1,2,2020-06-03,4,0,14,PSI-23_Raw Data_20155H1_data.csv,PSI-23,6969,55.74,0.007853,3.5192,ya,31.06,55.74,24.69,-0.0346,rekaman berakhir saat burner masih panas
+20160A3,2,2020-06-08,4,0,15,PSI-23_Raw Data_20160A3_data.csv,PSI-23,6958,55.66,0.002003,1.4998,ya,34.14,55.66,21.52,-0.0127,rekaman berakhir saat burner masih panas
+20160B4,2,2020-06-08,4,0,15,PSI-23_Raw Data_20160B4_data.csv,PSI-23,7082,56.65,0.002197,3.0094,ya,34.82,56.65,21.83,-0.021,rekaman berakhir saat burner masih panas
+20160C2,2,2020-06-08,4,0,15,PSI-23_Raw Data_20160C2_data.csv,PSI-23,6832,54.65,0.002175,4.5245,ya,33.58,54.65,21.06,-0.0428,rekaman berakhir saat burner masih panas
+20160D1,2,2020-06-08,4,0,15,PSI-23_Raw Data_20160D1_data.csv,PSI-23,7346,58.76,0.002106,1.7946,ya,37.4,58.76,21.36,-0.005,rekaman berakhir saat burner masih panas
+20160G2,2,2020-06-08,4,0,15,PSI-23_Raw Data_20160G2_data.csv,PSI-23,6969,55.74,0.000911,1.5013,ya,34.16,55.74,21.58,-0.0077,rekaman berakhir saat burner masih panas
+20160H7,2,2020-06-08,4,0,15,PSI-23_Raw Data_20160H7_data.csv,PSI-23,7221,57.76,0.001164,2.9898,ya,36.78,57.76,20.98,-0.0261,rekaman berakhir saat burner masih panas
+20160J1,2,2020-06-09,4,0,15,PSI-23_Raw Data_20160J1_data.csv,PSI-23,7467,59.73,0.00127,4.5323,ya,38.49,59.73,21.24,-0.0428,rekaman berakhir saat burner masih panas
+20160M1,2,2020-06-08,4,0,15,PSI-23_Raw Data_20160M1_data.csv,PSI-23,6845,54.75,0.000972,1.0135,ya,33.74,54.75,21.01,0.0059,rekaman berakhir saat burner masih panas
+20160N1,2,2020-06-08,4,0,15,PSI-23_Raw Data_20160N1_data.csv,PSI-23,6957,55.65,0.002299,2.1148,ya,33.43,55.65,22.22,-0.0236,rekaman berakhir saat burner masih panas
+20160P1,2,2020-06-08,4,0,15,PSI-23_Raw Data_20160P1_data.csv,PSI-23,7457,59.65,0.002159,1.8077,ya,37.32,59.65,22.33,-0.0129,rekaman berakhir saat burner masih panas
+20160Q1,2,2020-06-08,4,0,15,PSI-23_Raw Data_20160Q1_data.csv,PSI-23,6832,54.65,0.001545,1.1794,ya,32.89,54.65,21.76,-0.0044,rekaman berakhir saat burner masih panas
+20160T1,2,2020-06-09,4,0,15,PSI-23_Raw Data_20160T1_data.csv,PSI-23,6971,55.76,0.001113,2.0891,ya,34.42,55.76,21.34,-0.0153,rekaman berakhir saat burner masih panas
+20164A2,2,2020-06-12,4,0,16,PSI-23_Raw Data_20164A2_data.csv,PSI-23,5593,44.74,0.011252,1.5766,ya,33.9,44.74,10.84,1.6711,rekaman berakhir saat burner masih panas
+20164B1,2,2020-06-12,4,0,16,PSI-23_Raw Data_20164B1_data.csv,PSI-23,7833,62.66,0.007219,3.3737,ya,34.57,62.66,28.09,-0.0587,rekaman berakhir saat burner masih panas
+20164B2,2,2020-06-12,4,0,16,PSI-23_Raw Data_20164B2_data.csv,PSI-23,8031,64.24,0.007417,3.2996,ya,36.25,64.24,27.99,-0.0264,rekaman berakhir saat burner masih panas
+20164B3,2,2020-06-12,4,0,16,PSI-23_Raw Data_20164B3_data.csv,PSI-23,8281,66.24,0.007451,3.2906,ya,37.67,66.24,28.57,-0.0264,rekaman berakhir saat burner masih panas
+20164C1,2,2020-06-12,4,0,16,PSI-23_Raw Data_20164C1_data.csv,PSI-23,7769,62.14,0.005943,4.9486,ya,35.13,62.14,27.02,-0.0505,rekaman berakhir saat burner masih panas
+20164D2,2,2020-06-12,4,0,16,PSI-23_Raw Data_20164D2_data.csv,PSI-23,7581,60.64,0.005874,3.2616,ya,35.37,60.64,25.27,-0.0158,rekaman berakhir saat burner masih panas
+20164F2,2,2020-06-12,4,0,16,PSI-23_Raw Data_20164F2_data.csv,PSI-23,7313,58.5,0.007661,1.5889,ya,32.92,58.5,25.58,-0.0022,rekaman berakhir saat burner masih panas
+20164F3,2,2020-06-12,4,0,16,PSI-23_Raw Data_20164F3_data.csv,PSI-23,7925,63.39,0.00875,1.5976,ya,36.15,63.39,27.24,-0.0072,rekaman berakhir saat burner masih panas
+20164M1,2,2020-06-12,4,0,16,PSI-23_Raw Data_20164M1_data.csv,PSI-23,8407,67.25,0.009099,2.3143,ya,37.18,67.25,30.06,-0.0154,rekaman berakhir saat burner masih panas
+20164N1,2,2020-06-12,4,0,16,PSI-23_Raw Data_20164N1_data.csv,PSI-23,8533,68.26,0.010144,1.9742,ya,37.1,68.26,31.15,-0.0074,rekaman berakhir saat burner masih panas
+20164P1,2,2020-06-12,4,0,16,PSI-23_Raw Data_20164P1_data.csv,PSI-23,5655,45.23,0.010539,1.7361,ya,32.97,45.23,12.26,1.8414,rekaman berakhir saat burner masih panas
+20170A2,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170A2_data.csv,PSI-23,5594,44.74,0.011677,1.4986,ya,33.16,44.74,11.58,1.5876,rekaman berakhir saat burner masih panas
+20170B1,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170B1_data.csv,PSI-23,8031,64.24,0.00782,3.133,ya,35.11,64.24,29.13,-0.0239,rekaman berakhir saat burner masih panas
+20170C1,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170C1_data.csv,PSI-23,8032,64.25,0.005535,4.697,ya,38.1,64.25,26.15,-0.0453,rekaman berakhir saat burner masih panas
+20170D1,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170D1_data.csv,PSI-23,7782,62.23,0.006041,3.0345,ya,36.28,62.23,25.95,-0.0129,rekaman berakhir saat burner masih panas
+20170F1,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170F1_data.csv,PSI-23,7582,60.65,0.009,1.5039,ya,33.14,60.65,27.5,0.0002,rekaman berakhir saat burner masih panas
+20170F2,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170F2_data.csv,PSI-23,7965,63.74,0.009373,1.5376,ya,14.87,63.74,48.87,0.0034,rekaman berakhir saat burner masih panas
+20170G2,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170G2_data.csv,PSI-23,6907,55.25,0.002282,1.5345,ya,32.33,55.25,22.92,-0.0103,rekaman berakhir saat burner masih panas
+20170H1,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170H1_data.csv,PSI-23,7295,58.35,0.002525,3.0831,ya,35.41,58.35,22.94,-0.0238,rekaman berakhir saat burner masih panas
+20170J1,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170J1_data.csv,PSI-23,7408,59.26,0.002443,4.6444,ya,36.98,59.26,22.28,-0.0454,rekaman berakhir saat burner masih panas
+20170M1,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170M1_data.csv,PSI-23,8219,65.75,0.010372,2.0036,ya,34.52,65.75,31.22,-0.1396,rekaman berakhir saat burner masih panas
+20170N2,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170N2_data.csv,PSI-23,8357,66.85,0.007835,3.0799,ya,36.25,66.85,30.6,-0.0211,rekaman berakhir saat burner masih panas
+20170P1,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170P1_data.csv,PSI-23,8721,69.76,0.009706,3.1371,ya,36.66,69.76,33.1,-0.0154,rekaman berakhir saat burner masih panas
+20170P2,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170P2_data.csv,PSI-23,5843,46.74,0.010426,2.9178,ya,33.83,46.74,12.9,2.2164,rekaman berakhir saat burner masih panas
+20170P3,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170P3_data.csv,PSI-23,8231,65.84,0.009481,3.1251,ya,34.65,65.84,31.19,-0.013,rekaman berakhir saat burner masih panas
+20170Q1,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170Q1_data.csv,PSI-23,8595,68.75,0.008379,4.7007,ya,37.2,68.75,31.55,-0.0263,rekaman berakhir saat burner masih panas
+20170R1,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170R1_data.csv,PSI-23,6969,55.74,0.004707,1.4213,ya,32.07,55.74,23.67,0.0061,rekaman berakhir saat burner masih panas
+20170R2,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170R2_data.csv,PSI-23,7218,57.74,0.006946,1.4725,ya,32.57,57.74,25.17,-0.0023,rekaman berakhir saat burner masih panas
+20170S1,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170S1_data.csv,PSI-23,6094,48.74,0.01022,1.6728,ya,36.09,48.74,12.66,1.7497,rekaman berakhir saat burner masih panas
+20170T1,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170T1_data.csv,PSI-23,7594,60.74,0.008172,2.188,ya,32.04,60.74,28.7,-0.0156,rekaman berakhir saat burner masih panas
+20170U1,2,2020-06-18,4,0,17,PSI-23_Raw Data_20170U1_data.csv,PSI-23,7157,57.25,0.002375,1.4427,ya,34.82,57.25,22.43,-0.0048,rekaman berakhir saat burner masih panas
+20176A1,2,2020-06-24,4,0,18,PSI-23_Raw Data_20176A1_data.csv,PSI-23,5845,46.75,0.011296,1.4373,ya,35.1,46.75,11.65,1.5171,rekaman berakhir saat burner masih panas
+20176B1,2,2020-06-24,4,0,18,PSI-23_Raw Data_20176B1_data.csv,PSI-23,8407,67.25,0.007133,2.9811,ya,38.21,67.25,29.04,-0.0212,rekaman berakhir saat burner masih panas
+20176C1,2,2020-06-24,4,0,18,PSI-23_Raw Data_20176C1_data.csv,PSI-23,8019,64.14,0.005341,4.4712,ya,38.02,64.14,26.12,-0.0402,rekaman berakhir saat burner masih panas
+20176D1,2,2020-06-24,4,0,18,PSI-23_Raw Data_20176D1_data.csv,PSI-23,7781,62.24,0.006123,2.9256,ya,35.58,62.24,26.66,-0.0077,rekaman berakhir saat burner masih panas
+20176F1,2,2020-06-24,4,0,18,PSI-23_Raw Data_20176F1_data.csv,PSI-23,7969,63.74,0.009399,1.4457,ya,36.05,63.74,27.7,-0.002,rekaman berakhir saat burner masih panas
+20176G1,2,2020-06-24,4,0,18,PSI-23_Raw Data_20176G1_data.csv,PSI-23,8720,69.75,0.00993,2.991,ya,36.82,69.75,32.94,-0.013,rekaman berakhir saat burner masih panas
+20176H1,2,2020-06-24,4,0,18,PSI-23_Raw Data_20176H1_data.csv,PSI-23,8219,65.74,0.008512,4.4759,ya,33.42,65.74,32.33,-0.0261,rekaman berakhir saat burner masih panas
+20176J1,2,2020-06-24,4,0,18,PSI-23_Raw Data_20176J1_data.csv,PSI-23,7020,56.15,0.00377,1.4954,ya,32.54,56.15,23.62,-0.0048,rekaman berakhir saat burner masih panas
+20176K1,2,2020-06-24,4,0,18,PSI-23_Raw Data_20176K1_1_data.csv,PSI-23,7156,57.24,0.002785,4.4379,ya,34.19,57.24,23.05,-0.0452,rekaman berakhir saat burner masih panas
+20176K1,2,2020-06-24,4,0,18,PSI-23_Raw Data_20176K1_data.csv,PSI-23,6906,55.24,0.002881,2.9393,ya,32.52,55.24,22.72,-0.0238,rekaman berakhir saat burner masih panas
+20176M1,2,2020-06-25,4,0,18,PSI-23_Raw Data_20176M1_data.csv,PSI-23,7407,59.25,0.002857,2.9186,ya,36.43,59.25,22.82,-0.0237,rekaman berakhir saat burner masih panas
+20176N1,2,2020-06-25,4,0,18,PSI-23_Raw Data_20176N1_data.csv,PSI-23,7026,56.2,0.003317,1.4748,ya,32.31,56.2,23.89,-0.0102,rekaman berakhir saat burner masih panas
+20176P1,2,2020-06-25,4,0,18,PSI-23_Raw Data_20176P1_data.csv,PSI-23,7407,59.25,0.003931,1.9486,ya,35.49,59.25,23.76,-0.0129,rekaman berakhir saat burner masih panas
+20176Q1,2,2020-06-25,4,0,18,PSI-23_Raw Data_20176Q1_data.csv,PSI-23,7408,59.26,0.00388,2.7326,ya,34.74,59.26,24.52,-0.0211,rekaman berakhir saat burner masih panas
+20176R1,2,2020-06-24,4,0,18,PSI-23_Raw Data_20176R1_data.csv,PSI-23,6207,49.65,0.01048,2.8506,ya,35.9,49.65,13.75,2.1489,rekaman berakhir saat burner masih panas
+20176R2,2,2020-06-24,4,0,18,PSI-23_Raw Data_20176R2_data.csv,PSI-23,8083,64.66,0.00913,2.9847,ya,33.02,64.66,31.64,-0.0181,rekaman berakhir saat burner masih panas
+20176S1,2,2020-06-24,4,0,18,PSI-23_Raw Data_20176S1_data.csv,PSI-23,8219,65.74,0.009401,4.4111,ya,33.63,65.74,32.11,-0.0209,rekaman berakhir saat burner masih panas
+20176S2,2,2020-06-24,4,0,18,PSI-23_Raw Data_20176S2_data.csv,PSI-23,8081,64.64,0.008286,4.4645,ya,33.13,64.64,31.51,-0.0238,rekaman berakhir saat burner masih panas
+20176T1,2,2020-06-24,4,0,18,PSI-23_Raw Data_20176T1_data.csv,PSI-23,8081,64.64,0.009986,1.7829,ya,33.35,64.64,31.29,-0.0101,rekaman berakhir saat burner masih panas
+20176U1,2,2020-06-24,4,0,18,PSI-23_Raw Data_20176U1_data.csv,PSI-23,8082,64.65,0.009024,2.0962,ya,33.69,64.65,30.96,-0.0048,rekaman berakhir saat burner masih panas
+20176V1,2,2020-06-25,4,0,18,PSI-23_Raw Data_20176V1_data.csv,PSI-23,6656,53.24,0.002183,1.2367,ya,30.27,53.24,22.97,0.0033,rekaman berakhir saat burner masih panas
+20176W1,2,2020-06-25,4,0,18,PSI-23_Raw Data_20176W1_data.csv,PSI-23,6657,53.25,0.002029,2.5873,ya,30.82,53.25,22.42,0.0006,rekaman berakhir saat burner masih panas
+20176X1,2,2020-06-25,4,0,18,PSI-23_Raw Data_20176X1_data.csv,PSI-23,6770,54.15,0.003185,1.4647,ya,31.39,54.15,22.76,-0.0074,rekaman berakhir saat burner masih panas
+20190A1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190A1_data.csv,PSI-23,6784,54.26,0.004928,1.7243,ya,33.34,54.26,20.93,-0.0023,rekaman berakhir saat burner masih panas
+20190B1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190B1_data.csv,PSI-23,5531,44.24,0.012826,3.3937,ya,35.35,44.24,8.9,3.5982,rekaman berakhir saat burner masih panas
+20190C1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190C1_data.csv,PSI-23,5769,46.14,0.011682,4.7714,ya,36.69,46.14,9.46,5.0417,rekaman berakhir saat burner masih panas
+20190D1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190D1_data.csv,PSI-23,5406,43.24,0.012706,3.3888,ya,35.29,43.24,7.95,2.856,rekaman berakhir saat burner masih panas
+20190D2,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190D2_data.csv,PSI-23,7143,57.14,0.011204,3.4497,ya,31.84,57.14,25.3,-0.021,rekaman berakhir saat burner masih panas
+20190F1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190F1_data.csv,PSI-23,5043,40.34,0.011878,3.8906,ya,32.63,40.34,7.7,2.4107,rekaman berakhir saat burner masih panas
+20190G1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190G1_data.csv,PSI-23,5281,42.24,0.01141,1.7549,ya,33.33,42.24,8.91,1.793,rekaman berakhir saat burner masih panas
+20190H1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190H1_data.csv,PSI-23,5531,44.24,0.011283,3.4184,ya,33.93,44.24,10.31,3.5984,rekaman berakhir saat burner masih panas
+20190J1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190J1_data.csv,PSI-23,5645,45.15,0.010673,4.7877,ya,33.44,45.15,11.71,5.0424,rekaman berakhir saat burner masih panas
+20190K1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190K1_data.csv,PSI-23,7406,59.24,0.008483,3.4586,ya,32.14,59.24,27.1,-0.0127,rekaman berakhir saat burner masih panas
+20190K2,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190K2_data.csv,PSI-23,7394,59.14,0.00869,3.4628,ya,33.06,59.14,26.09,-0.0154,rekaman berakhir saat burner masih panas
+20190K3,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190K3_data.csv,PSI-23,7519,60.14,0.00988,3.459,ya,32.44,60.14,27.7,-0.0129,rekaman berakhir saat burner masih panas
+20190L1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190L1_data.csv,PSI-23,5281,42.24,0.01094,4.8445,ya,31.17,42.24,11.07,3.2231,rekaman berakhir saat burner masih panas
+20190M1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190M1_data.csv,PSI-23,8020,64.15,0.009472,4.8551,ya,36.01,64.15,28.14,-0.0181,rekaman berakhir saat burner masih panas
+20190M2,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190M2_data.csv,PSI-23,5644,45.14,0.011036,4.7422,ya,34.58,45.14,10.56,3.0284,rekaman berakhir saat burner masih panas
+20190M3,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190M3_data.csv,PSI-23,7895,63.15,0.008047,4.8471,ya,36.56,63.15,26.59,-0.021,rekaman berakhir saat burner masih panas
+20190N1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190N1_data.csv,PSI-23,7020,56.15,0.002432,1.7887,ya,33.82,56.15,22.34,-0.0128,rekaman berakhir saat burner masih panas
+20190P1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190P1_data.csv,PSI-23,6407,51.25,0.01119,3.4163,ya,37.55,51.25,13.7,3.5986,rekaman berakhir saat burner masih panas
+20190P2,2,2020-07-09,4,0,14,PSI-23_Raw Data_20190P2_data.csv,PSI-23,6407,51.25,0.010914,3.4068,ya,37.56,51.25,13.69,3.601,rekaman berakhir saat burner masih panas
+20190Q1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190Q1_data.csv,PSI-23,6282,50.25,0.010241,4.7741,ya,35.06,50.25,15.19,5.0447,rekaman berakhir saat burner masih panas
+20190R1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190R1_data.csv,PSI-23,7144,57.14,0.006607,3.4773,ya,31.79,57.14,25.35,-0.0234,rekaman berakhir saat burner masih panas
+20190S1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190S1_data.csv,PSI-23,6658,53.26,0.000537,1.7222,tidak,,,,,
+20190T1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190T1_data.csv,PSI-23,6531,52.24,0.000582,2.4033,tidak,,,,,
+20190U1,2,2020-07-08,4,0,14,PSI-23_Raw Data_20190U1_data.csv,PSI-23,6531,52.24,0.000619,2.7542,ya,29.34,52.24,22.9,-0.0209,rekaman berakhir saat burner masih panas
+20190V1,2,2020-07-09,4,0,14,PSI-23_Raw Data_20190V1_data.csv,PSI-23,6531,52.24,0.00063,3.1111,ya,29.37,52.24,22.87,-0.0205,rekaman berakhir saat burner masih panas
+20190W1,2,2020-07-09,4,0,14,PSI-23_Raw Data_20190W1_data.csv,PSI-23,5768,46.14,0.010696,3.4021,ya,33.36,46.14,12.78,3.377,rekaman berakhir saat burner masih panas
