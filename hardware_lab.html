@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freefall Lab — Hardware</title>
+<style>
+:root{
+  --bg:#0a0c10; --panel:#10131a; --panel2:#161b24; --line:#222a38; --line2:#33405a;
+  --tx:#dde4ef; --tx2:#aab6c8; --mu:#6e7c92; --acc:#e8a33d; --acc2:#5fb4ff;
+  --ok:#3fae6a; --mono:ui-monospace,"Cascadia Mono","Consolas",monospace;
+  --sans:system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box} html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.5 var(--sans);overflow:hidden}
+#app{display:grid;grid-template-columns:1fr 360px;grid-template-rows:auto 1fr;height:100%}
+header{grid-column:1/3;display:flex;align-items:baseline;gap:18px;padding:10px 18px;border-bottom:1px solid var(--line);background:var(--panel)}
+header h1{margin:0;font:600 15px var(--mono);letter-spacing:.14em;color:var(--tx)}
+header .sub{font:12px var(--mono);color:var(--mu);letter-spacing:.06em}
+header .right{margin-left:auto;font:11px var(--mono);color:var(--mu)}
+#viewport{position:relative;min-width:0;min-height:0}
+#viewport canvas{display:block}
+#hw-strip{position:absolute;left:14px;bottom:14px;display:flex;gap:8px;flex-wrap:wrap;max-width:calc(100% - 28px)}
+#hw-strip button{
+  font:600 11px var(--mono);letter-spacing:.08em;color:var(--tx2);
+  background:rgba(16,19,26,.88);border:1px solid var(--line2);border-radius:4px;
+  padding:7px 12px;cursor:pointer;backdrop-filter:blur(4px)
+}
+#hw-strip button[aria-pressed=true]{color:#0a0c10;background:var(--acc);border-color:var(--acc)}
+#hw-strip button:focus-visible{outline:2px solid var(--acc2);outline-offset:2px}
+.hint{position:absolute;top:12px;left:14px;font:11px var(--mono);color:var(--mu);letter-spacing:.05em;pointer-events:none}
+.lbl{position:absolute;transform:translate(-50%,-130%);font:10px var(--mono);letter-spacing:.1em;color:var(--tx2);
+  background:rgba(10,12,16,.75);border:1px solid var(--line);padding:2px 7px;border-radius:3px;
+  pointer-events:none;white-space:nowrap}
+aside{border-left:1px solid var(--line);background:var(--panel);overflow-y:auto;padding:16px 18px 28px;min-height:0}
+aside h2{margin:0;font:600 16px var(--sans);display:flex;align-items:baseline;gap:10px}
+aside h2 .code{font:600 11px var(--mono);color:var(--acc);letter-spacing:.1em}
+aside .full{color:var(--tx2);font-size:12.5px;margin:2px 0 12px}
+.badge{display:inline-block;font:600 10px var(--mono);letter-spacing:.1em;padding:3px 8px;border-radius:3px;margin-bottom:12px}
+.badge.schematic{color:var(--acc);border:1px solid var(--acc)}
+.badge.gltf{color:var(--ok);border:1px solid var(--ok)}
+dl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0 0 14px;font-size:12.5px}
+dt{color:var(--mu);font-family:var(--mono);font-size:11px;letter-spacing:.06em;padding-top:1px}
+dd{margin:0;color:var(--tx2)}
+.desc{font-size:13px;color:var(--tx2);line-height:1.6;margin:0 0 16px}
+.inv-h{font:600 11px var(--mono);letter-spacing:.12em;color:var(--mu);margin:0 0 8px}
+.inv{display:flex;gap:10px;align-items:baseline;padding:7px 0;border-top:1px solid var(--line);font-size:13px}
+.inv .acc{font:600 11px var(--mono);color:var(--acc2);min-width:62px}
+.inv .nm{color:var(--tx)}
+.inv .n{margin-left:auto;font:11px var(--mono);color:var(--mu);white-space:nowrap}
+.note{margin-top:16px;padding:10px 12px;border:1px solid var(--line);border-radius:4px;font-size:11.5px;color:var(--mu);line-height:1.6}
+.note b{color:var(--tx2)}
+@media (max-width:860px){
+  #app{grid-template-columns:1fr;grid-template-rows:auto 55vh 1fr}
+  aside{border-left:none;border-top:1px solid var(--line)}
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>FREEFALL LAB</h1>
+    <span class="sub">HARDWARE / ISS COMBUSTION FACILITIES</span>
+    <span class="right" id="status-line">schematic mode — menunggu model glTF tim</span>
+  </header>
+  <div id="viewport">
+    <span class="hint">seret: orbit &nbsp;·&nbsp; scroll: zoom &nbsp;·&nbsp; klik alat: detail</span>
+    <div id="hw-strip" role="tablist"></div>
+  </div>
+  <aside id="panel"></aside>
+</div>
+
+<script src="vendor/three.min.js"></script>
+<script src="vendor/GLTFLoader.js"></script>
+<script src="vendor/OrbitControls.js"></script>
+<script>
+'use strict';
+/* ========================================================================
+   Registry hardware. Tiap entri: schematic builder (fallback) + slot glTF.
+   Tim Blender cukup menaruh models/<key>.glb — otomatis menggantikan
+   schematic saat halaman dimuat. Spesifikasi: docs/blender_3d_spec.md
+   ======================================================================== */
+const INV = {
+  'PSI-69':['FLEX','274 uji'], 'PSI-68':['FLEX-2','8 ringkasan'], 'PSI-39':['CFI','87 uji'],
+  'PSI-23':['ACME s-Flame','18 ringkasan'], 'PSI-159':['ACME CFI-G','333 uji'],
+  'PSI-10':['ACME Flame Design','327 uji'], 'PSI-22':['ACME E-FIELD','21 uji'],
+  'PSI-20':['ACME BRE','18 ringkasan'], 'PSI-21':['ACME CLD Flame','32 ringkasan'],
+  'PSI-26':['BASS','122 uji'], 'PSI-25':['BASS-II','129 uji'],
+  'PSI-107':['SPICE','469 uji'], 'PSI-106':['SLICE','12 uji'],
+  'PSI-98':['Saffire-I','2 uji'], 'PSI-99':['Saffire-II','9 uji'], 'PSI-100':['Saffire-III','2 uji'],
+  'PSI-102':['SAME','8 uji'], 'PSI-101':['SAME-R','109 uji'], 'PSI-47':['DAFT / DAFT-2','2 sesi'],
+};
+
+const HW = [
+  {
+    key:'cir', code:'CIR', name:'Combustion Integrated Rack',
+    dims:'ISPR rack 2,00 × 1,05 × 0,86 m · chamber silinder ±100 L',
+    desc:'Rak riset pembakaran utama di modul Destiny ISS. Chamber silindernya menampung payload yang bisa ditukar: MDCA untuk droplet, perangkat ACME untuk nyala gas. Semua optik, radiometer, dan kontrol atmosfer chamber ada di rak ini.',
+    invs:['PSI-69','PSI-68','PSI-39','PSI-23','PSI-159','PSI-10','PSI-22','PSI-20','PSI-21'],
+    pos:[-1.35,0,0], focus:[-1.35,1.0,0],
+  },
+  {
+    key:'mdca', code:'MDCA', name:'Multi-user Droplet Combustion Apparatus',
+    dims:'insert chamber CIR · droplet uji 1–5 mm',
+    desc:'Payload CIR untuk membakar droplet bahan bakar cair (heptana, metanol) — ditambatkan pada serat atau dilepas bebas. Dipakai FLEX, FLEX-2, dan CFI. Droplet pada tampilan ini diperbesar agar terlihat; aslinya 1–5 mm.',
+    invs:['PSI-69','PSI-68','PSI-39'],
+    pos:[-0.55,0,1.25], focus:[-0.55,0.55,1.25],
+  },
+  {
+    key:'acme', code:'ACME', name:'ACME burner insert',
+    dims:'insert chamber CIR · burner bola ±25 mm / coflow',
+    desc:'Perangkat modular enam eksperimen ACME untuk nyala gas. Burner bola CFI-G meniupkan campuran hingga 85% O₂ dari dalam, menciptakan nyala “terbalik” — data O₂ tertinggi di PSI, paling relevan untuk atmosfer eksplorasi kaya oksigen.',
+    invs:['PSI-23','PSI-159','PSI-10','PSI-22','PSI-20','PSI-21'],
+    pos:[0.55,0,1.25], focus:[0.55,0.55,1.25],
+  },
+  {
+    key:'msg', code:'MSG', name:'Microgravity Science Glovebox',
+    dims:'enclosure kerja ±0,9 × 1,2 × 0,7 m',
+    desc:'Kotak kerja bertekanan dengan sarung tangan tempat astronot menjalankan eksperimen “tangan langsung”. Duct aliran SPICE dipasang di dalamnya untuk BASS, BASS-II, SPICE, dan SLICE; instrumen asap SAME juga beroperasi di sini.',
+    invs:['PSI-26','PSI-25','PSI-107','PSI-106','PSI-102','PSI-101','PSI-47'],
+    pos:[1.6,0,0], focus:[1.6,1.15,0],
+  },
+  {
+    key:'spice_duct', code:'DUCT', name:'SPICE flow duct',
+    dims:'penampang 76 × 76 mm · kipas aksial di inlet',
+    desc:'Terowongan angin mini modular di dalam MSG. Kipasnya mengatur kecepatan aliran — variabel kunci kedua (setelah O₂) untuk kemudahbakaran di mikrogravitasi. Sampel padat BASS terpasang di seksi ujinya.',
+    invs:['PSI-26','PSI-25','PSI-107','PSI-106'],
+    pos:[2.55,0,0.75], focus:[2.55,0.5,0.75],
+  },
+  {
+    key:'saffire', code:'SAFFIRE', name:'Saffire / kargo Cygnus',
+    dims:'modul Cygnus ±3,1 m × Ø3,0 m · duct sampel internal',
+    desc:'Eksperimen api skala besar satu-satunya: dijalankan di kapal kargo Cygnus TANPA kru, setelah meninggalkan ISS. Sampel kain/akrilik hingga ±1 m dibakar — data rambat api padat skala nyata yang mustahil diuji di dalam stasiun.',
+    invs:['PSI-98','PSI-99','PSI-100'],
+    pos:[0.5,0,-7.0], focus:[0.5,1.3,-7.0],
+  },
+];
+
+/* ---------- scene dasar ---------- */
+const vp = document.getElementById('viewport');
+const renderer = new THREE.WebGLRenderer({antialias:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.outputEncoding = THREE.sRGBEncoding;
+vp.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0a0c10);
+scene.fog = new THREE.Fog(0x0a0c10, 9, 20);
+
+const camera = new THREE.PerspectiveCamera(45, 1, 0.05, 60);
+camera.position.set(4.2, 2.6, 5.2);
+
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.target.set(0, 0.9, 0);
+controls.enableDamping = true; controls.dampingFactor = 0.08;
+controls.minDistance = 0.6; controls.maxDistance = 14;
+
+scene.add(new THREE.HemisphereLight(0x8ea3c0, 0x151a22, 0.85));
+const key = new THREE.DirectionalLight(0xffffff, 0.9); key.position.set(4,6,3); scene.add(key);
+const rim = new THREE.DirectionalLight(0x5fb4ff, 0.25); rim.position.set(-5,2,-4); scene.add(rim);
+
+const grid = new THREE.GridHelper(16, 32, 0x33405a, 0x1a2130);
+grid.material.transparent = true; grid.material.opacity = 0.55;
+scene.add(grid);
+
+/* ---------- material util ---------- */
+const M = {
+  shell: c => new THREE.MeshStandardMaterial({color:c, metalness:.35, roughness:.55}),
+  frame: () => new THREE.MeshStandardMaterial({color:0x3a4558, metalness:.6, roughness:.4}),
+  glass: () => new THREE.MeshStandardMaterial({color:0x5fb4ff, metalness:.1, roughness:.15, transparent:true, opacity:.22}),
+  dark:  () => new THREE.MeshStandardMaterial({color:0x14181f, metalness:.3, roughness:.7}),
+  accent:() => new THREE.MeshStandardMaterial({color:0xe8a33d, metalness:.4, roughness:.45}),
+  flame: () => new THREE.MeshBasicMaterial({color:0x6fb7ff, transparent:true, opacity:.6}),
+};
+function box(w,h,d,mat){ return new THREE.Mesh(new THREE.BoxGeometry(w,h,d), mat); }
+function cyl(r,h,mat,seg=32){ return new THREE.Mesh(new THREE.CylinderGeometry(r,r,h,seg), mat); }
+function sph(r,mat,seg=24){ return new THREE.Mesh(new THREE.SphereGeometry(r,seg,seg), mat); }
+
+/* ---------- schematic builders (fallback bila .glb belum ada) ---------- */
+const BUILDERS = {
+  cir(){
+    const g = new THREE.Group();
+    const body = box(1.05, 2.0, 0.86, M.shell(0x232c3b)); body.position.y = 1.0; g.add(body);
+    const edges = new THREE.LineSegments(
+      new THREE.EdgesGeometry(body.geometry),
+      new THREE.LineBasicMaterial({color:0x4a5a78}));
+    edges.position.copy(body.position); g.add(edges);
+    for (let i=0;i<3;i++){ const d = box(0.9, 0.16, 0.05, M.dark()); d.position.set(0, 0.28+i*0.24, 0.455); g.add(d); }
+    const ch = cyl(0.21, 0.5, M.shell(0x2e3a4e)); ch.rotation.z = Math.PI/2; ch.position.set(0, 1.35, 0.18); g.add(ch);
+    const win = cyl(0.07, 0.52, M.glass()); win.rotation.z = Math.PI/2; win.position.copy(ch.position); g.add(win);
+    const port = cyl(0.075, 0.02, M.frame()); port.rotation.x = Math.PI/2; port.position.set(0, 1.35, 0.44); g.add(port);
+    return g;
+  },
+  mdca(){
+    const g = new THREE.Group();
+    const base = box(0.34, 0.05, 0.34, M.frame()); base.position.y = 0.025; g.add(base);
+    const col = cyl(0.015, 0.5, M.frame()); col.position.set(-0.12, 0.3, 0); g.add(col);
+    const col2 = col.clone(); col2.position.x = 0.12; g.add(col2);
+    [-1,1].forEach(s=>{
+      const needle = cyl(0.004, 0.16, M.frame());
+      needle.rotation.z = Math.PI/2; needle.position.set(s*0.1, 0.55, 0); g.add(needle);
+    });
+    const drop = sph(0.02, M.shell(0x9ec5f4)); drop.position.set(0, 0.55, 0); g.add(drop);
+    const flame = sph(0.05, M.flame()); flame.position.copy(drop.position); flame.name='flame'; g.add(flame);
+    return g;
+  },
+  acme(){
+    const g = new THREE.Group();
+    const base = box(0.34, 0.05, 0.34, M.frame()); base.position.y = 0.025; g.add(base);
+    const stem = cyl(0.012, 0.42, M.frame()); stem.position.y = 0.26; g.add(stem);
+    const burner = sph(0.035, M.accent()); burner.position.y = 0.5; g.add(burner);
+    const flame = sph(0.07, M.flame()); flame.position.y = 0.5; flame.name='flame'; g.add(flame);
+    const mfc = box(0.1, 0.07, 0.14, M.dark()); mfc.position.set(0.1, 0.085, 0.08); g.add(mfc);
+    return g;
+  },
+  msg(){
+    const g = new THREE.Group();
+    const stand = box(0.95, 0.75, 0.65, M.shell(0x232c3b)); stand.position.y = 0.375; g.add(stand);
+    const enc = box(0.9, 0.7, 0.62, M.shell(0x2e3a4e)); enc.position.y = 1.13; g.add(enc);
+    const winG = new THREE.Mesh(new THREE.PlaneGeometry(0.7, 0.42), M.glass());
+    winG.position.set(0, 1.2, 0.315); winG.rotation.x = -0.18; g.add(winG);
+    [-0.2, 0.2].forEach(x=>{
+      const p = cyl(0.075, 0.06, M.dark()); p.rotation.x = Math.PI/2; p.position.set(x, 0.92, 0.32); g.add(p);
+    });
+    return g;
+  },
+  spice_duct(){
+    const g = new THREE.Group();
+    const duct = box(0.08, 0.08, 0.6, M.shell(0x2e3a4e)); duct.position.y = 0.5; g.add(duct);
+    const edges = new THREE.LineSegments(new THREE.EdgesGeometry(duct.geometry),
+      new THREE.LineBasicMaterial({color:0x4a5a78}));
+    edges.position.copy(duct.position); g.add(edges);
+    const fan = cyl(0.035, 0.04, M.dark()); fan.rotation.x = Math.PI/2; fan.position.set(0, 0.5, -0.32); g.add(fan);
+    const winD = new THREE.Mesh(new THREE.PlaneGeometry(0.2, 0.06), M.glass());
+    winD.position.set(0.041, 0.5, 0.05); winD.rotation.y = Math.PI/2; g.add(winD);
+    const sample = box(0.002, 0.04, 0.12, M.accent()); sample.position.set(0, 0.5, 0.05); g.add(sample);
+    const legs = box(0.06, 0.42, 0.06, M.frame()); legs.position.set(0, 0.21, -0.2); g.add(legs);
+    const legs2 = legs.clone(); legs2.position.z = 0.2; g.add(legs2);
+    return g;
+  },
+  saffire(){
+    const g = new THREE.Group();
+    const hull = cyl(1.5, 3.1, M.shell(0x1f2735, 0.9)); hull.rotation.z = Math.PI/2; hull.position.y = 1.55; g.add(hull);
+    const ring = cyl(1.52, 0.08, M.frame()); ring.rotation.z = Math.PI/2; ring.position.set(-1.0, 1.55, 0); g.add(ring);
+    const ring2 = ring.clone(); ring2.position.x = 1.0; g.add(ring2);
+    const duct = box(0.5, 0.45, 1.6, M.shell(0x2e3a4e)); duct.position.set(0, 1.4, 1.35); g.add(duct);
+    const sample = box(0.42, 0.01, 1.0, M.accent()); sample.position.set(0, 1.4, 1.35); g.add(sample);
+    return g;
+  },
+};
+
+/* ---------- muat: coba glTF, fallback schematic ---------- */
+const loader = new THREE.GLTFLoader();
+const assemblies = {}; // key -> {group, mode}
+let gltfCount = 0;
+
+HW.forEach(hw=>{
+  const holder = new THREE.Group();
+  holder.position.set(...hw.pos);
+  holder.userData.key = hw.key;
+  scene.add(holder);
+  const schematic = BUILDERS[hw.key]();
+  holder.add(schematic);
+  assemblies[hw.key] = {holder, mode:'schematic', hw};
+  loader.load('models/'+hw.key+'.glb',
+    gltf=>{
+      holder.remove(schematic);
+      holder.add(gltf.scene);
+      assemblies[hw.key].mode = 'gltf';
+      gltfCount++;
+      document.getElementById('status-line').textContent =
+        gltfCount+'/'+HW.length+' model glTF dimuat';
+      if (state.selected===hw.key) renderPanel(hw.key);
+    },
+    undefined, ()=>{/* belum ada .glb — schematic dipertahankan */});
+});
+
+/* ---------- label HTML terproyeksi ---------- */
+const labels = HW.map(hw=>{
+  const el = document.createElement('span');
+  el.className='lbl'; el.textContent = hw.code;
+  vp.appendChild(el);
+  return {el, hw};
+});
+const v3 = new THREE.Vector3();
+function updateLabels(){
+  const r = renderer.domElement.getBoundingClientRect();
+  labels.forEach(({el,hw})=>{
+    v3.set(hw.focus[0], hw.focus[1]+0.35, hw.focus[2]).project(camera);
+    if (v3.z > 1){ el.style.display='none'; return; }
+    el.style.display='';
+    el.style.left = ((v3.x+1)/2*r.width)+'px';
+    el.style.top = ((1-v3.y)/2*r.height)+'px';
+  });
+}
+
+/* ---------- interaksi ---------- */
+const state = {selected:'cir'};
+const ray = new THREE.Raycaster(), mouse = new THREE.Vector2();
+renderer.domElement.addEventListener('click', e=>{
+  const r = renderer.domElement.getBoundingClientRect();
+  mouse.set((e.clientX-r.left)/r.width*2-1, -((e.clientY-r.top)/r.height*2-1));
+  ray.setFromCamera(mouse, camera);
+  const hits = ray.intersectObjects(scene.children, true);
+  for (const h of hits){
+    let o = h.object;
+    while (o && !o.userData.key) o = o.parent;
+    if (o && o.userData.key){ select(o.userData.key); return; }
+  }
+});
+
+function select(keyName, fly=true){
+  state.selected = keyName;
+  const hw = HW.find(h=>h.key===keyName);
+  document.querySelectorAll('#hw-strip button').forEach(b=>
+    b.setAttribute('aria-pressed', b.dataset.key===keyName));
+  renderPanel(keyName);
+  if (fly){
+    const [fx,fy,fz] = hw.focus;
+    const dir = new THREE.Vector3().subVectors(camera.position, controls.target).normalize();
+    const dist = hw.key==='saffire' ? 5.5 : 2.2;
+    animateTo(new THREE.Vector3(fx,fy,fz),
+      new THREE.Vector3(fx,fy,fz).add(dir.multiplyScalar(dist)).add(new THREE.Vector3(0,0.3,0)));
+  }
+}
+
+let anim = null;
+function animateTo(target, campos){
+  anim = {t0:performance.now(), dur:650,
+    fromT:controls.target.clone(), toT:target,
+    fromC:camera.position.clone(), toC:campos};
+}
+
+/* ---------- panel info ---------- */
+function renderPanel(keyName){
+  const a = assemblies[keyName], hw = a.hw;
+  const invRows = hw.invs.map(acc=>{
+    const [nm, n] = INV[acc] || [acc,''];
+    return `<div class="inv"><span class="acc">${acc}</span><span class="nm">${nm}</span><span class="n">${n}</span></div>`;
+  }).join('');
+  document.getElementById('panel').innerHTML = `
+    <h2><span class="code">${hw.code}</span> ${hw.name}</h2>
+    <p class="full">${hw.dims}</p>
+    <span class="badge ${a.mode}">${a.mode==='gltf' ? 'MODEL GLTF TIM' : 'SCHEMATIC — menunggu models/'+hw.key+'.glb'}</span>
+    <p class="desc">${hw.desc}</p>
+    <p class="inv-h">INVESTIGASI DI ALAT INI — ${hw.invs.length}</p>
+    ${invRows}
+    <div class="note"><b>Pipeline 3D:</b> taruh <code>models/${hw.key}.glb</code> (glTF 2.0 biner,
+    meter, +Y atas, origin di pusat alat) lalu muat ulang halaman — schematic ini otomatis
+    tergantikan. Spesifikasi lengkap: <code>docs/blender_3d_spec.md</code>.</div>`;
+}
+
+/* ---------- strip tombol ---------- */
+const strip = document.getElementById('hw-strip');
+HW.forEach(hw=>{
+  const b = document.createElement('button');
+  b.textContent = hw.code; b.dataset.key = hw.key;
+  b.setAttribute('role','tab');
+  b.addEventListener('click', ()=>select(hw.key));
+  strip.appendChild(b);
+});
+
+/* ---------- loop ---------- */
+function resize(){
+  const w = vp.clientWidth, h = vp.clientHeight;
+  renderer.setSize(w, h, false);
+  camera.aspect = w/h; camera.updateProjectionMatrix();
+}
+new ResizeObserver(resize).observe(vp);
+resize();
+
+const clock = new THREE.Clock();
+function tick(){
+  requestAnimationFrame(tick);
+  const t = clock.getElapsedTime();
+  // nyala api schematic berdenyut halus
+  Object.values(assemblies).forEach(a=>{
+    const f = a.holder.getObjectByName('flame');
+    if (f){ const s = 1 + 0.12*Math.sin(t*2.1); f.scale.set(s,s,s); }
+  });
+  if (anim){
+    const k = Math.min(1, (performance.now()-anim.t0)/anim.dur);
+    const e = 1-Math.pow(1-k,3);
+    controls.target.lerpVectors(anim.fromT, anim.toT, e);
+    camera.position.lerpVectors(anim.fromC, anim.toC, e);
+    if (k>=1) anim = null;
+  }
+  controls.update();
+  renderer.render(scene, camera);
+  updateLabels();
+}
+select('cir', false);
+tick();
+</script>
+</body>
+</html>

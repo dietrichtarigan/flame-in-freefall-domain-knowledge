@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flame in Freefall</title>
+<style>
+/* Insight view: investigation layer + habitat scenario lens. Colours from the validated reference palette
+   (fuel type = categorical slots 1-3, all-pairs validated light and dark; shape repeats the encoding).
+   Status always ships as icon + label. */
+:root{
+  color-scheme:light;
+  --page:#f9f9f7; --surface:#fcfcfb; --surface-2:#f3f2ef;
+  --ink:#0b0b0b; --ink-2:#52514e; --mute:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --ring:rgba(11,11,11,.10);
+  --gas:#2a78d6; --droplet:#eb6834; --solid:#1baf7a;
+  --accent:#2a78d6; --accent-soft:#cde2fb; --band:rgba(42,120,214,.10);
+  --critical:#d03b3b; --serious:#ec835a; --warning:#fab219; --good:#0ca30c;
+  --radius:10px; --gap:14px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --page:#0d0d0d; --surface:#1a1a19; --surface-2:#232321;
+  --ink:#f0efec; --ink-2:#c3c2b7; --mute:#898781;
+  --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10);
+  --gas:#3987e5; --droplet:#d95926; --solid:#199e70;
+  --accent:#3987e5; --accent-soft:#184f95; --band:rgba(57,135,229,.16);
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#0d0d0d; --surface:#1a1a19; --surface-2:#232321;
+  --ink:#f0efec; --ink-2:#c3c2b7; --mute:#898781;
+  --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10);
+  --gas:#3987e5; --droplet:#d95926; --solid:#199e70;
+  --accent:#3987e5; --accent-soft:#184f95; --band:rgba(57,135,229,.16);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+button,select,input{font:inherit;color:inherit}
+button{cursor:pointer;background:var(--surface);border:1px solid var(--axis);border-radius:7px;padding:5px 11px}
+button:hover{background:var(--surface-2)}
+button:focus-visible,input:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+a{color:var(--accent)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+header{padding:18px 0 6px;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+header h1{font-size:20px;margin:0;letter-spacing:-.01em}
+header .sub{color:var(--ink-2)}
+header .right{margin-left:auto;font-size:12px}
+.hint{font-size:12px;color:var(--mute)}
+.seg{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 0}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.hero{background:var(--surface);border:1px solid var(--ring);border-radius:var(--radius);padding:16px 18px;margin:12px 0}
+.hero .q{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2)}
+.hero .a{font-size:20px;font-weight:600;line-height:1.3;margin:4px 0 6px;max-width:60em;text-wrap:balance}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--gap);margin:12px 0}
+.tile{background:var(--surface);border:1px solid var(--ring);border-radius:var(--radius);padding:12px 14px}
+.tile .k{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2)}
+.tile .v{font-size:24px;font-weight:600;line-height:1.2;margin-top:2px}
+.tile .d{font-size:12px;color:var(--mute)}
+nav.tabs{display:flex;gap:4px;border-bottom:1px solid var(--axis);margin-top:6px;flex-wrap:wrap}
+nav.tabs button{border:0;border-bottom:3px solid transparent;border-radius:0;background:none;padding:9px 12px;color:var(--ink-2);font-weight:600}
+nav.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+nav.tabs .n{font-weight:400;color:var(--mute);margin-right:4px}
+section.panel{display:none;padding:16px 0 30px}
+section.panel.on{display:block}
+.card{background:var(--surface);border:1px solid var(--ring);border-radius:var(--radius);padding:14px 16px;min-width:0}
+.card h2{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2);margin:0 0 10px}
+.cols{display:grid;gap:var(--gap);grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);align-items:start}
+@media (max-width:900px){.cols{grid-template-columns:1fr}}
+.stack{display:flex;flex-direction:column;gap:var(--gap);min-width:0}
+table{border-collapse:collapse;width:100%}
+th{font-size:11px;font-weight:600;color:var(--ink-2);text-align:left;padding:5px 6px;border-bottom:1px solid var(--axis)}
+td{padding:5px 6px;border-bottom:1px solid var(--grid);vertical-align:top;font-variant-numeric:tabular-nums}
+td.num,th.num{text-align:right}
+.scroll{overflow:auto}
+.chip{display:inline-block;font-size:11px;padding:1px 7px;border-radius:9px;background:var(--surface-2);color:var(--ink-2);margin:1px 3px 1px 0;white-space:nowrap}
+.badge{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.03em;padding:0 5px;border-radius:4px;border:1px solid var(--axis);color:var(--ink-2);white-space:nowrap}
+.st{display:inline-flex;gap:5px;align-items:center;font-weight:600;white-space:nowrap}
+.st i{font-style:normal;display:inline-block;width:17px;height:17px;line-height:17px;text-align:center;border-radius:4px;color:#fff;font-size:11px}
+.st-critical i{background:var(--critical)}.st-warning i{background:var(--serious)}.st-info i{background:var(--mute)}
+
+/* rank */
+.controls{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.controls label{display:flex;gap:6px;align-items:center;font-size:12px;color:var(--ink-2)}
+.controls input[type=range]{width:90px}
+.rank{display:grid;grid-template-columns:28px minmax(150px,1.1fr) minmax(120px,1fr) repeat(3,minmax(84px,.7fr)) 54px;gap:4px 10px;align-items:center}
+.rank .h{font-size:11px;font-weight:600;color:var(--ink-2);padding-bottom:4px;border-bottom:1px solid var(--axis)}
+.rank .row{display:contents;cursor:pointer}
+.rank .row>div{padding:5px 0;border-bottom:1px solid var(--grid);min-width:0}
+.rank .row:hover>div{background:var(--surface-2)}
+.rank .nm b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.meter{height:8px;background:var(--surface-2);border-radius:4px;position:relative;overflow:hidden}
+.meter>span{position:absolute;inset:0 auto 0 0;background:var(--ink-2);border-radius:4px}
+.meter.total{height:12px}.meter.total>span{background:var(--accent)}
+.mv{font-size:11px;color:var(--mute)}
+@media (max-width:760px){.rank{grid-template-columns:24px 1fr 90px 48px}.rank .c{display:none}}
+
+/* map */
+.chartwrap{position:relative}
+svg text{fill:var(--mute);font-size:11px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink-2);margin-top:6px}
+.legend svg{vertical-align:-2px;margin-right:4px}
+#tip{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--axis);border-radius:6px;padding:6px 9px;font-size:12px;box-shadow:0 2px 10px rgba(0,0,0,.14);display:none;white-space:nowrap;z-index:3}
+.pt{cursor:pointer}
+
+.gap{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--grid)}
+.gap:last-child{border-bottom:0}
+.gap .t{font-weight:600}
+.model{padding:9px 0;border-bottom:1px solid var(--grid)}
+.model:last-child{border-bottom:0}
+.model .big{font-size:18px;font-weight:600}
+
+/* investigation cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:var(--gap)}
+.inv{cursor:pointer}
+.inv h3{font-size:15px;margin:0 0 2px}
+.inv .ttl{font-size:12px;color:var(--ink-2);margin-bottom:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-size:12px}
+.kv .q{color:var(--ink-2)}
+.range{position:relative;height:10px;background:var(--surface-2);border-radius:5px;margin:3px 0}
+.range .b{position:absolute;top:0;bottom:0;background:var(--band);border-left:1px dashed var(--accent);border-right:1px dashed var(--accent)}
+.range .r{position:absolute;top:2px;bottom:2px;background:var(--ink-2);border-radius:3px;min-width:3px}
+.range .tick{position:absolute;top:1px;bottom:1px;width:3px;background:var(--ink-2);border-radius:2px}
+dialog{border:1px solid var(--axis);border-radius:12px;background:var(--surface);color:var(--ink);max-width:760px;width:calc(100% - 32px);padding:20px 22px}
+dialog::backdrop{background:rgba(0,0,0,.45)}
+dialog h3{margin:0 0 2px;font-size:19px}
+.cmp td:first-child,.cmp th:first-child{color:var(--ink-2);width:150px}
+
+/* ask */
+.ask form{display:flex;gap:8px}
+.ask input{flex:1;background:var(--surface);border:1px solid var(--axis);border-radius:7px;padding:8px 10px}
+.turn{padding:12px 0;border-bottom:1px solid var(--grid)}
+.turn .me{font-weight:600}
+.turn .ans{white-space:pre-wrap;margin:6px 0}
+footer{color:var(--mute);font-size:12px;padding:18px 0 40px;border-top:1px solid var(--axis)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Flame in Freefall</h1>
+  <span class="sub">Fire-safety insights from NASA's microgravity combustion data</span>
+  <span class="right"><a href="/app/" id="research">Researcher mode: every test, every source</a></span>
+</header>
+
+<div class="hint">Choose where the crew will live. Everything below re-ranks for that atmosphere.</div>
+<div class="seg" id="scen" role="group" aria-label="Habitat scenario"></div>
+
+<div class="hero">
+  <div class="q" id="heroQ"></div>
+  <div class="a" id="heroA">Loading…</div>
+  <div class="hint" id="heroB"></div>
+</div>
+<div class="tiles" id="tiles"></div>
+
+<nav class="tabs" role="tablist" id="tabs">
+  <button role="tab" data-tab="rank"><span class="n">1</span>Which investigations matter</button>
+  <button role="tab" data-tab="evidence"><span class="n">2</span>What the data says</button>
+  <button role="tab" data-tab="gaps"><span class="n">3</span>Gaps and next tests</button>
+  <button role="tab" data-tab="inv">All 24 investigations</button>
+  <button role="tab" data-tab="ask">Ask</button>
+</nav>
+
+<section class="panel" id="p-rank">
+  <div class="card">
+    <h2>Investigations ranked for this scenario</h2>
+    <div class="controls">
+      <span class="seg" id="pillars" style="margin:0" role="group" aria-label="Fire-safety pillar"></span>
+      <label>Direct link <input type="range" id="wD" min="0" max="100"><b id="wDv"></b></label>
+      <label>Conditions <input type="range" id="wC" min="0" max="100"><b id="wCv"></b></label>
+      <label>Evidence <input type="range" id="wE" min="0" max="100"><b id="wEv"></b></label>
+      <button id="wReset">Reset weights</button>
+    </div>
+    <div class="rank" id="rank"></div>
+    <p class="hint" id="method" style="margin:12px 0 0"></p>
+  </div>
+</section>
+
+<section class="panel" id="p-evidence">
+  <div class="cols">
+    <div class="stack">
+      <div class="card">
+        <h2>Every tabulated test by oxygen and pressure</h2>
+        <div class="chartwrap"><svg id="map" viewBox="0 0 640 420" width="100%" role="img" aria-label="Tests by oxygen fraction and pressure, with the scenario band"></svg><div id="tip"></div></div>
+        <div class="legend" id="legend"></div>
+        <p class="hint" style="margin:8px 0 0">The shaded box is this scenario's atmosphere. Tests with no recorded pressure sit in the strip under the axis. Smoke-aerosol tests record neither value and cannot be drawn.</p>
+      </div>
+      <div class="card">
+        <h2>Real tests inside the band</h2>
+        <div class="scroll" style="max-height:330px" id="near"></div>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="card"><h2>Coverage by fuel type</h2><div id="phase"></div></div>
+      <div class="card"><h2>Model predictions at the band centre</h2><div id="models"></div>
+        <p class="hint" style="margin:8px 0 0">Models are validated per test day and refuse to answer outside the tested range.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="p-gaps">
+  <div class="cols">
+    <div class="stack">
+      <div class="card"><h2>What is not known for this scenario</h2><div id="gaps"></div></div>
+      <div class="card"><h2>Most informative next tests</h2><div class="scroll" id="next"></div>
+        <p class="hint" style="margin:8px 0 0">Ranked by the U-function of a Gaussian-process boundary model: U = |μ|/σ. A small U means the model is least sure whether the flame ignites or goes out there, so one test teaches the most. Candidates stay close to conditions that were actually flown.</p></div>
+    </div>
+    <div class="stack">
+      <div class="card"><h2>Gravity</h2><ul id="pg" style="margin:0;padding-left:18px"></ul></div>
+      <div class="card"><h2>Back on Earth</h2><div id="earth"></div>
+        <p class="hint" style="margin:8px 0 0">Examples are those given in the challenge statement, matched to the investigations that study the same pillar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="p-inv">
+  <div class="controls">
+    <span class="seg" id="fac" style="margin:0" role="group" aria-label="Hardware"></span>
+    <button id="cmpBtn" disabled>Compare selected</button>
+    <span class="hint">Tick two or three cards to compare. The bars place each investigation's oxygen and pressure range on a common axis; the dashed box is the scenario.</span>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="panel ask" id="p-ask">
+  <div class="card">
+    <h2>Ask the data</h2>
+    <form id="askForm"><input id="askQ" aria-label="Question" placeholder="Which investigations matter most for a Moon base?"><button>Ask</button></form>
+    <div class="seg" id="sugg"></div>
+    <div id="chat"></div>
+    <p class="hint" id="askNote" style="margin:10px 0 0"></p>
+  </div>
+</section>
+
+<footer id="foot"></footer>
+</div>
+<dialog id="dlg"></dialog>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const pct = (x, d = 0) => x == null ? "n/a" : (100 * x).toFixed(d).replace(/\.0$/, "") + "%";
+const qs = new URLSearchParams(location.search);
+if (qs.get("theme")) document.documentElement.dataset.theme = qs.get("theme");
+const ICON = { critical: "!", warning: "▲", info: "i" };
+const st = (lv, txt) => `<span class="st st-${lv}"><i aria-hidden="true">${ICON[lv]}</i>${esc(txt)}</span>`;
+const PH = { gas: "Gas flame", droplet: "Liquid droplet", solid: "Solid material", smoke: "Smoke aerosol" };
+// x dan y tiba sebagai string (toFixed), jadi WAJIB dipaksa jadi angka dulu:
+// tanpa +x, ekspresi `x + r` menggabungkan string ("123.4" + 4.14 = "123.44.14")
+// dan menghasilkan koordinat sampah -- itu membuat segitiga droplet melar
+// memenuhi grafik. Operator `-` kebetulan aman, sehingga lingkaran dan kotak
+// tidak ikut rusak dan bug-nya hanya tampak pada satu bentuk.
+const SHAPE = {
+  gas: (x, y, r) => `<circle cx="${+x}" cy="${+y}" r="${r}"`,
+  droplet: (x, y, r) => `<path d="M${+x} ${+y - r * 1.25}L${+x + r * 1.15} ${+y + r * .85}L${+x - r * 1.15} ${+y + r * .85}Z"`,
+  solid: (x, y, r) => `<rect x="${+x - r}" y="${+y - r}" width="${2 * r}" height="${2 * r}"`,
+};
+const S = { sc: "surface", tab: "rank", pillar: null, w: null, sel: new Set(), fac: null, live: false, chat: [] };
+let D = null;
+
+// ---------------------------------------------------------------- load
+async function load() {
+  for (const u of ["/insight_data", "data.json"]) {
+    try { const r = await fetch(u); if (r.ok) { D = await r.json(); S.live = u.startsWith("/"); break; } } catch {}
+  }
+  if (!D) { $("heroA").textContent = "Could not load data. Run: py -3 scripts/investigations.py export"; return; }
+  S.w = { ...D.weights };
+  const h = new URLSearchParams(location.hash.slice(1));
+  if (D.scenario[h.get("s")]) S.sc = h.get("s");
+  if (h.get("t")) S.tab = h.get("t");
+  if (!S.live) $("research").style.display = "none";
+  renderAll();
+}
+const sc = () => D.scenario[S.sc];
+const cardOf = (acc) => D.investigations.find((c) => c.accession === acc);
+function setHash() { history.replaceState(null, "", `#s=${S.sc}&t=${S.tab}`); }
+
+// ---------------------------------------------------------------- scenario + hero
+function renderScen() {
+  $("scen").innerHTML = D.scenarios.map((id) => `<button data-s="${id}" aria-pressed="${id === S.sc}">${esc(D.scenario[id].name)}</button>`).join("");
+  const s = sc(), ph = s.phase, total = Object.values(ph).reduce((a, v) => a + v.n_in_band, 0);
+  $("heroQ").textContent = `What does NASA's microgravity data say about fire in a ${s.name.toLowerCase()}?`;
+  $("heroA").textContent = s.headline;
+  $("heroB").textContent = s.basis;
+  const top = ranked()[0], crit = s.gaps.filter((g) => g.level === "critical").length;
+  $("tiles").innerHTML = `
+    <div class="tile"><div class="k">Atmosphere</div><div class="v">${pct(s.center.o2)} O₂</div><div class="d">${s.center.p_kpa} kPa · ${esc(s.gravity)}</div></div>
+    <div class="tile"><div class="k">Tests inside the band</div><div class="v">${total}</div><div class="d">${ph.solid.n_in_band} solid · ${ph.droplet.n_in_band} droplet · ${ph.gas.n_in_band} gas</div></div>
+    <div class="tile"><div class="k">Most relevant investigation</div><div class="v" style="font-size:19px">${esc(top.name)}</div><div class="d">score ${top.score.toFixed(2)} of 1</div></div>
+    <div class="tile"><div class="k">Open gaps</div><div class="v">${crit ? st("critical", crit + " critical") : st("info", "none critical")}</div><div class="d">${s.gaps.length} findings in tab 3</div></div>`;
+}
+$("scen").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; S.sc = b.dataset.s; setHash(); renderAll(); });
+
+// ---------------------------------------------------------------- 1. rank
+function ranked() {
+  const w = S.w, sum = (w.direct + w.conditions + w.evidence) || 1;
+  return sc().ranking.filter((r) => !S.pillar || r.pillars.includes(S.pillar))
+    .map((r) => ({ ...r, score: (w.direct * r.components.direct + w.conditions * r.components.conditions + w.evidence * r.components.evidence) / sum }))
+    .sort((a, b) => b.score - a.score || a.accession.localeCompare(b.accession, undefined, { numeric: true }));
+}
+function renderRank() {
+  $("pillars").innerHTML = [[null, "All pillars"], ["prevention", "Prevention"], ["detection", "Detection"], ["suppression", "Suppression"]]
+    .map(([k, l]) => `<button data-p="${k ?? ""}" aria-pressed="${S.pillar === k}">${l}</button>`).join("");
+  for (const [id, k] of [["wD", "direct"], ["wC", "conditions"], ["wE", "evidence"]]) { $(id).value = Math.round(S.w[k] * 100); $(id + "v").textContent = S.w[k].toFixed(2); }
+  const m = (v) => `<div class="meter"><span style="width:${Math.round(v * 100)}%"></span></div><div class="mv">${v.toFixed(2)}</div>`;
+  $("rank").innerHTML = `<div class="h">#</div><div class="h">Investigation</div><div class="h">Score</div><div class="h c">Direct link</div><div class="h c">Conditions</div><div class="h c">Evidence</div><div class="h"></div>`
+    + ranked().map((r, i) => `<div class="row" data-acc="${r.accession}" tabindex="0" role="button" aria-label="Open ${esc(r.name)}">
+      <div>${i + 1}</div>
+      <div class="nm"><b>${esc(r.name)}</b>${r.pillars.map((p) => `<span class="chip">${p}</span>`).join("")}<div class="hint">${esc(r.why.conditions)}</div></div>
+      <div><div class="meter total"><span style="width:${Math.round(r.score * 100)}%"></span></div><div class="mv"><b style="color:var(--ink)">${r.score.toFixed(2)}</b></div></div>
+      <div class="c" title="${esc(r.why.direct)}">${m(r.components.direct)}</div>
+      <div class="c" title="${esc(r.why.conditions)}">${m(r.components.conditions)}</div>
+      <div class="c" title="${esc(r.why.evidence)}">${m(r.components.evidence)}</div>
+      <div class="hint">${esc(r.accession)}</div></div>`).join("");
+  $("method").innerHTML = `<b>How the score is built.</b> ${esc(D.method.score)}. <b>Direct link:</b> ${esc(D.method.direct)}. <b>Conditions:</b> ${esc(D.method.conditions)}. <b>Evidence:</b> ${esc(D.method.evidence)}. The score is our transparent rubric, not a NASA judgement; move the sliders to test how robust the order is.`;
+}
+$("pillars").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; S.pillar = b.dataset.p || null; renderRank(); renderScen(); });
+for (const [id, k] of [["wD", "direct"], ["wC", "conditions"], ["wE", "evidence"]]) $(id).addEventListener("input", (e) => { S.w[k] = +e.target.value / 100; renderRank(); renderScen(); });
+$("wReset").onclick = () => { S.w = { ...D.weights }; renderRank(); renderScen(); };
+const openFromRow = (e) => { const r = e.target.closest(".row"); if (r) openCard(r.dataset.acc); };
+$("rank").addEventListener("click", openFromRow);
+$("rank").addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openFromRow(e); } });
+
+// ---------------------------------------------------------------- 2. evidence
+let ptIdx = [];
+function renderMap() {
+  const s = sc(), W = 640, H = 420, ml = 52, mr = 14, mt = 12, mb = 86, lane = 34;
+  const x0 = 0.1, x1 = 1.0, y0 = Math.log10(20), y1 = Math.log10(520), yb = H - mb;
+  const X = (v) => ml + (v - x0) / (x1 - x0) * (W - ml - mr), Y = (v) => yb - (Math.log10(v) - y0) / (y1 - y0) * (yb - mt);
+  let g = "";
+  for (let v = 0.1; v <= 1.0001; v += 0.1) g += `<line x1="${X(v)}" x2="${X(v)}" y1="${mt}" y2="${yb}" stroke="var(--grid)"/><text x="${X(v)}" y="${yb + lane + 26}" text-anchor="middle">${Math.round(v * 100)}%</text>`;
+  for (const k of [20, 50, 100, 200, 500]) g += `<line x1="${ml}" x2="${W - mr}" y1="${Y(k)}" y2="${Y(k)}" stroke="var(--grid)"/><text x="${ml - 6}" y="${Y(k) + 4}" text-anchor="end">${k}</text>`;
+  // scenario band
+  const bx0 = X(Math.max(x0, s.o2[0])), bx1 = X(Math.min(x1, s.o2[1])), by0 = Y(Math.min(520, s.p_kpa[1])), by1 = Y(Math.max(20, s.p_kpa[0]));
+  g += `<rect x="${bx0}" y="${by0}" width="${bx1 - bx0}" height="${by1 - by0}" fill="var(--band)" stroke="var(--accent)" stroke-dasharray="4 3"/>
+        <text x="${(bx0 + bx1) / 2}" y="${by0 - 5}" text-anchor="middle" style="fill:var(--ink-2);font-weight:600">${esc(s.short)}</text>
+        <rect x="${bx0}" y="${yb + 8}" width="${bx1 - bx0}" height="${lane}" fill="var(--band)"/>`;
+  g += `<line x1="${ml}" x2="${W - mr}" y1="${yb}" y2="${yb}" stroke="var(--axis)"/>
+        <rect x="${ml}" y="${yb + 8}" width="${W - ml - mr}" height="${lane}" fill="none" stroke="var(--grid)"/>
+        <text x="${ml - 6}" y="${yb + 22}" text-anchor="end">no</text><text x="${ml - 6}" y="${yb + 35}" text-anchor="end">pressure</text>
+        <text x="${(ml + W - mr) / 2}" y="${H - 6}" text-anchor="middle">oxygen (mole fraction of the oxidizer)</text>
+        <text x="13" y="${(mt + yb) / 2}" text-anchor="middle" transform="rotate(-90 13 ${(mt + yb) / 2})">pressure (kPa, log scale)</text>`;
+  ptIdx = [];
+  const order = { gas: 0, droplet: 1, solid: 2 };
+  [...D.points].sort((a, b) => order[a.ph] - order[b.ph]).forEach((p, i) => {
+    if (!SHAPE[p.ph]) return;
+    const x = X(p.o2), y = p.p == null ? yb + 12 + ((i * 7) % (lane - 8)) : Y(Math.max(20, Math.min(520, p.p)));
+    ptIdx.push(p);
+    g += SHAPE[p.ph](x.toFixed(1), y.toFixed(1), 3.6) + ` class="pt" data-i="${ptIdx.length - 1}" fill="var(--${p.ph})" stroke="var(--surface)" stroke-width="1" opacity=".9"/>`;
+  });
+  $("map").innerHTML = g;
+  const mark = (ph) => `<svg width="12" height="12">${SHAPE[ph](6, 6, 4.2)} fill="var(--${ph})"/></svg>`;
+  $("legend").innerHTML = ["gas", "droplet", "solid"].map((ph) => `<span>${mark(ph)}${PH[ph]} (${D.points.filter((p) => p.ph === ph).length} tests with oxygen recorded)</span>`).join("");
+}
+$("map").addEventListener("mousemove", (e) => {
+  const c = e.target.closest(".pt"), tip = $("tip");
+  if (!c) { tip.style.display = "none"; return; }
+  const p = ptIdx[+c.dataset.i], inv = cardOf(p.acc), box = $("map").parentElement.getBoundingClientRect();
+  tip.innerHTML = `<b>${esc(inv.name)}</b> · test ${esc(p.t)}<br>${PH[p.ph]}: ${esc(p.fuel || "n/a")}<br>O₂ ${pct(p.o2, 1)} · ${p.p == null ? "pressure not recorded" : p.p + " kPa"}${p.out ? "<br>" + esc(p.out) : ""}`;
+  tip.style.display = "block";
+  tip.style.left = Math.min(e.clientX - box.left + 14, box.width - 230) + "px"; tip.style.top = (e.clientY - box.top + 14) + "px";
+});
+$("map").addEventListener("mouseleave", () => { $("tip").style.display = "none"; });
+$("map").addEventListener("click", (e) => { const c = e.target.closest(".pt"); if (c) openCard(ptIdx[+c.dataset.i].acc); });
+
+function renderEvidence() {
+  const s = sc();
+  renderMap();
+  $("phase").innerHTML = `<table><thead><tr><th>Fuel type</th><th class="num">Tests in PSI tables</th><th class="num">With oxygen</th><th class="num">In band</th><th class="num">Oxygen only</th><th class="num">Highest O₂</th></tr></thead><tbody>`
+    + Object.entries(s.phase).map(([k, v]) => `<tr><td>${PH[k]}</td><td class="num">${v.n_tests}</td><td class="num">${v.n_with_o2}</td><td class="num"><b>${v.n_in_band}</b></td><td class="num">${v.n_o2_only}</td><td class="num">${pct(v.o2_max_per_test, 1)}</td></tr>`).join("")
+    + `</tbody></table><p class="hint" style="margin:8px 0 0">"Oxygen only" counts tests whose oxygen is inside the band but whose pressure was never tabulated.</p>`;
+  $("models").innerHTML = s.models.map((m) => `<div class="model"><div>${esc(m.what)} <span class="badge" title="model prediction">MODEL</span></div>
+    ${m.valid ? `<div class="big">${m.p_extinction != null ? "P(goes out before burning up) " + m.p_extinction : "P(ignites) " + m.p_ignite}</div>
+       ${m.K_mm2_s ? `<div>burning rate K ≈ ${m.K_mm2_s} mm²/s</div>` : ""}`
+      : `<div>${st("warning", "model does not answer")} <span class="hint">outside the tested range</span></div>`}
+    <div class="hint">${esc(m.input)} · per-day AUC ${m.auc_per_day} · ${esc(m.caveat)}</div></div>`).join("");
+  const rows = s.near.slice(0, 60);
+  $("near").innerHTML = rows.length ? `<table><thead><tr><th>Investigation</th><th>Test</th><th>Fuel</th><th class="num">O₂</th><th class="num">kPa</th><th>Outcome</th><th>Match</th></tr></thead><tbody>`
+    + rows.map((p) => `<tr><td>${esc(cardOf(p.acc).name)}</td><td>${p.id && S.live ? `<a href="/app/#s=${encodeURIComponent(JSON.stringify({ focus: p.id }))}" title="open in researcher mode">${esc(p.t)}</a>` : esc(p.t)}</td>
+       <td>${esc(p.fuel || "")}</td><td class="num">${pct(p.o2, 1)}</td><td class="num">${p.p ?? ""}</td><td>${esc(p.out || "")}</td><td>${p.match === "full" ? "oxygen + pressure" : "oxygen only"}</td></tr>`).join("")
+    + `</tbody></table>` + (s.n_near > rows.length ? `<p class="hint">${s.n_near - rows.length} more not shown.</p>` : "")
+    : `<p>${st("critical", "No tabulated test matches this atmosphere.")}</p>`;
+}
+
+// ---------------------------------------------------------------- 3. gaps
+function renderGaps() {
+  const s = sc();
+  $("gaps").innerHTML = s.gaps.map((g) => `<div class="gap"><div style="min-width:92px">${st(g.level, g.level)}</div><div><div class="t">${esc(g.title)}</div>${esc(g.text)}</div></div>`).join("");
+  $("next").innerHTML = `<table><thead><tr><th>Experiment</th><th class="num">O₂</th><th class="num">kPa</th><th>Conditions</th><th class="num">U</th><th>In this band</th></tr></thead><tbody>`
+    + s.next_tests.map((n) => `<tr><td>${esc(n.exp)}</td><td class="num">${pct(n.o2, 1)}</td><td class="num">${n.p_kpa}</td><td>${esc(n.detail)}</td><td class="num">${n.U}</td><td>${n.in_band ? "yes" : "no"}</td></tr>`).join("") + `</tbody></table>`
+    + (s.next_tests.some((n) => n.in_band) ? "" : `<p class="hint">None of the model's candidates falls inside this band: the boundary models only cover gas flames and droplets. For solid materials the gap is the absence of data itself.</p>`);
+  $("pg").innerHTML = [`This scenario: ${esc(s.gravity)}. ${esc(s.gravity_data)}.`, ...D.partial_gravity].map((t) => `<li>${esc(t)}</li>`).join("");
+  $("earth").innerHTML = D.earth.map((e) => {
+    const invs = D.investigations.filter((c) => c.direct >= 0.8 && c.pillars.includes(e.pillar)).map((c) => c.name);
+    return `<div class="model"><b>${esc(e.title)}</b> <span class="chip">${e.pillar}</span><div>${esc(e.text)}</div><div class="hint">Same pillar in PSI: ${esc(invs.join(", "))}</div></div>`;
+  }).join("");
+}
+
+// ---------------------------------------------------------------- investigations
+function rangeBar(lo, hi, listed, a, b, band, log) {
+  const f = (v) => 100 * ((log ? Math.log10(v) : v) - a) / (b - a);
+  const cl = (v) => Math.max(0, Math.min(100, v));
+  let h = `<div class="range"><div class="b" style="left:${cl(f(band[0]))}%;width:${cl(f(band[1])) - cl(f(band[0]))}%"></div>`;
+  if (lo != null) h += `<div class="r" style="left:${cl(f(lo))}%;width:${Math.max(0.8, cl(f(hi)) - cl(f(lo)))}%"></div>`;
+  for (const v of listed || []) h += `<div class="tick" style="left:calc(${cl(f(v))}% - 1px)"></div>`;
+  return h + `</div>`;
+}
+const o2Text = (c) => c.o2 ? `${pct(c.o2[0], 1)} to ${pct(c.o2[1], 1)}` : c.o2_listed.length ? c.o2_listed.map((x) => pct(x, 1)).join(", ") + " (listed per day)" : "not tabulated";
+const pText = (c) => c.p_kpa ? `${c.p_kpa[0]} to ${c.p_kpa[1]} kPa` : c.p_listed.length ? c.p_listed.join(", ") + " kPa (listed)" : "not tabulated";
+function renderInv() {
+  const s = sc(), facs = [...new Set(D.investigations.map((c) => c.facility))];
+  $("fac").innerHTML = [[null, "All hardware"], ...facs.map((f) => [f, f])].map(([k, l]) => `<button data-f="${esc(k ?? "")}" aria-pressed="${S.fac === k}">${esc(l)}</button>`).join("");
+  $("grid").innerHTML = D.investigations.filter((c) => !S.fac || c.facility === S.fac).map((c) => `<div class="card inv" data-acc="${c.accession}">
+    <label style="float:right;font-size:12px" onclick="event.stopPropagation()"><input type="checkbox" data-cmp="${c.accession}" ${S.sel.has(c.accession) ? "checked" : ""}> compare</label>
+    <h3>${esc(c.name)}</h3><div class="ttl">${esc(c.title)}</div>
+    <div>${c.pillars.map((p) => `<span class="chip">${p}</span>`).join("")}<span class="chip">${esc(c.facility)}</span>${c.kind === "ground" ? `<span class="chip">ground study</span>` : ""}</div>
+    <div class="kv" style="margin-top:8px">
+      <div class="q">Fuels</div><div>${esc(c.fuels.slice(0, 3).map((f) => f.name).join(", ") || "n/a")}${c.n_fuels > 3 ? ` <span class="hint">+${c.n_fuels - 3}</span>` : ""}</div>
+      <div class="q">Oxygen</div><div>${esc(o2Text(c))}${rangeBar(c.o2?.[0], c.o2?.[1], c.o2_listed, 0.1, 1.0, s.o2)}</div>
+      <div class="q">Pressure</div><div>${esc(pText(c))}${rangeBar(c.p_kpa?.[0], c.p_kpa?.[1], c.p_listed, Math.log10(20), Math.log10(520), s.p_kpa, true)}</div>
+      <div class="q">Tests</div><div>${c.n_tests || c.n_rows} in the NASA table · ${c.n_results} result values</div>
+    </div></div>`).join("");
+  $("cmpBtn").disabled = S.sel.size < 2;
+  $("cmpBtn").textContent = S.sel.size ? `Compare selected (${S.sel.size})` : "Compare selected";
+}
+$("fac").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; S.fac = b.dataset.f || null; renderInv(); });
+$("grid").addEventListener("change", (e) => {
+  const c = e.target.dataset.cmp; if (!c) return;
+  if (e.target.checked) { if (S.sel.size >= 3) { e.target.checked = false; return; } S.sel.add(c); } else S.sel.delete(c);
+  $("cmpBtn").disabled = S.sel.size < 2; $("cmpBtn").textContent = S.sel.size ? `Compare selected (${S.sel.size})` : "Compare selected";
+});
+$("grid").addEventListener("click", (e) => { const d = e.target.closest(".inv"); if (d && !e.target.closest("label")) openCard(d.dataset.acc); });
+$("cmpBtn").onclick = () => openCompare([...S.sel]);
+
+function openCard(acc) {
+  const c = cardOf(acc), r = sc().ranking.find((x) => x.accession === acc);
+  const vr = Object.entries(c.variables);
+  $("dlg").innerHTML = `<form method="dialog" style="float:right"><button>Close</button></form>
+    <h3>${esc(c.name)}</h3><div class="hint">${esc(c.accession)} · ${esc(c.title)}</div>
+    <p>${c.pillars.map((p) => `<span class="chip">${esc(D.pillars[p])}</span>`).join("")}</p>
+    <p><b>Why it ranks here for ${esc(sc().short.toLowerCase())}:</b> score ${r.score.toFixed(2)}. Direct link ${r.components.direct} (${esc(r.why.direct)}). Conditions ${r.components.conditions} (${esc(r.why.conditions)}). Evidence ${r.components.evidence} (${esc(r.why.evidence)}).</p>
+    <p><b>Objective.</b> ${esc(c.objective || "not given in PSI metadata")}</p>
+    <div class="kv">
+      <div class="q">Hardware</div><div>${esc(c.facility)}${c.hardware ? ` <span class="hint">PSI: ${esc(c.hardware)}</span>` : ""}</div>
+      <div class="q">Platform</div><div>${esc(c.platform || (c.kind === "ground" ? "ground study" : "n/a"))}</div>
+      <div class="q">Fuels</div><div>${c.fuels.map((f) => `${esc(f.name)} <span class="hint">(${f.n})</span>`).join(", ") || "n/a"}</div>
+      <div class="q">Sample or burner</div><div>${c.samples.map((f) => esc(f.name)).join("; ") || (c.size_mm ? `initial diameter ${c.size_mm[0]} to ${c.size_mm[1]} mm` : "see measured columns")}</div>
+      <div class="q">Oxygen</div><div>${esc(o2Text(c))}</div>
+      <div class="q">Pressure</div><div>${esc(pText(c))}</div>
+      <div class="q">Air flow</div><div>${c.flow_cm_s ? `${c.flow_cm_s[0]} to ${c.flow_cm_s[1]} cm/s` : "not tabulated"}</div>
+      <div class="q">Diluents</div><div>${esc(c.diluents.join(", ") || "n/a")}</div>
+      <div class="q">Varied between tests</div><div>${esc(vr.filter(([, v]) => v.startsWith("varied")).map(([k]) => k).join(", ") || "n/a")}</div>
+      <div class="q">Held constant</div><div>${esc(vr.filter(([, v]) => v === "constant").map(([k]) => k).join(", ") || "n/a")}</div>
+      <div class="q">Not recorded</div><div>${esc(vr.filter(([, v]) => v === "not recorded").map(([k]) => k).join(", ") || "nothing")}</div>
+      <div class="q">Measured columns</div><div>${c.columns.map((x) => `<span class="chip">${esc(x)}</span>`).join("") || "n/a"}</div>
+      <div class="q">Raw data we mined</div><div>${esc(c.own_data.join("; ") || "none")}</div>
+      <div class="q">Values by trust tier</div><div>${Object.entries(c.tiers).map(([k, v]) => `${v} ${esc(D.tiers[k] || k)}`).join(" · ") || "n/a"}</div>
+      <div class="q">Publications</div><div>${c.n_publications} listed by NASA · ${c.files_local} of ${c.files_listed} files held locally</div>
+    </div>
+    ${c.highlights.length ? `<p><b>Added by our analysis.</b> ${c.highlights.map(esc).join(". ")}.</p>` : ""}
+    ${c.impacts ? `<p class="hint"><b>Impact (PSI):</b> ${esc(c.impacts)}</p>` : ""}
+    <p><a href="${esc(c.psi_url)}" target="_blank" rel="noopener">Open in NASA PSI</a></p>`;
+  $("dlg").showModal();
+}
+function openCompare(accs) {
+  const cs = accs.map(cardOf);
+  const row = (label, f) => `<tr><td>${label}</td>${cs.map((c) => `<td>${f(c)}</td>`).join("")}</tr>`;
+  const same = (f) => new Set(cs.map((c) => JSON.stringify(f(c)))).size === 1;
+  const flag = (label, f) => `${label} ${same(f) ? `<span class="chip">same</span>` : `<span class="chip" style="background:var(--accent-soft);color:var(--ink)">differs</span>`}`;
+  $("dlg").innerHTML = `<form method="dialog" style="float:right"><button>Close</button></form><h3>Side by side</h3>
+    <div class="scroll"><table class="cmp"><thead><tr><th></th>${cs.map((c) => `<th>${esc(c.name)}</th>`).join("")}</tr></thead><tbody>
+    ${row(flag("Hardware", (c) => c.facility), (c) => esc(c.facility))}
+    ${row(flag("Fire-safety pillar", (c) => c.pillars), (c) => esc(c.pillars.join(", ")))}
+    ${row(flag("Fuel type", (c) => c.phases), (c) => esc(c.phases.map((p) => PH[p]).join(", ") || "n/a"))}
+    ${row("Fuels", (c) => esc(c.fuels.slice(0, 4).map((f) => f.name).join(", ") || "n/a"))}
+    ${row("Sample or burner", (c) => esc(c.samples.slice(0, 2).map((f) => f.name).join("; ") || (c.size_mm ? `${c.size_mm[0]} to ${c.size_mm[1]} mm` : "n/a")))}
+    ${row("Oxygen", (c) => esc(o2Text(c)))}
+    ${row("Pressure", (c) => esc(pText(c)))}
+    ${row("Air flow", (c) => c.flow_cm_s ? `${c.flow_cm_s[0]} to ${c.flow_cm_s[1]} cm/s` : "not tabulated")}
+    ${row("Varied between tests", (c) => esc(Object.entries(c.variables).filter(([, v]) => v.startsWith("varied")).map(([k]) => k).join(", ") || "n/a"))}
+    ${row("Tests / result values", (c) => `${c.n_tests || c.n_rows} / ${c.n_results}`)}
+    ${row("Raw data we mined", (c) => esc(c.own_data.join("; ") || "none"))}
+    ${row(`Score for ${esc(sc().short.toLowerCase())}`, (c) => sc().ranking.find((x) => x.accession === c.accession).score.toFixed(2))}
+    </tbody></table></div>`;
+  $("dlg").showModal();
+}
+$("dlg").addEventListener("click", (e) => { if (e.target === $("dlg")) $("dlg").close(); });
+
+// ---------------------------------------------------------------- ask
+function fmtAnswer(a) {
+  return esc(a).replace(/\[\[inv:([^\]]+)\]\]/g, (m, id) => `<a href="#" data-inv="${id}">${id}</a>`)
+    .replace(/\[\[test:([^\]]+)\]\]/g, (m, id) => S.live ? `<a href="/app/#s=${encodeURIComponent(JSON.stringify({ focus: "test:" + id }))}">${id}</a>` : id)
+    .replace(/\[\[(model|paper|m):([^\]]+)\]\]/g, (m, k, v) => `<span class="chip">${k === "model" ? "model: " : k === "paper" ? "paper: " : ""}${v}</span>`);
+}
+function renderAsk() {
+  $("sugg").innerHTML = (D.suggested || []).map((q) => `<button data-q="${esc(q)}">${esc(q)}</button>`).join("");
+  $("askNote").textContent = S.live
+    ? "Answers are assembled from tool results. Every number in an answer is checked against what the tools returned; unsupported numbers are flagged."
+    : "Static copy: the questions above replay answers saved when this page was built. Run the server (py -3 scripts/brain.py serve) to ask anything.";
+  $("askForm").style.display = S.live ? "flex" : "none";
+  $("chat").innerHTML = S.chat.map((c) => `<div class="turn"><div class="me">${esc(c.q)}</div>${c.pending ? `<div class="hint">working…</div>` : `<div class="ans">${fmtAnswer(c.a)}</div>
+    <div class="hint">${c.grounding ? (c.grounding.ok ? `${c.grounding.numbers_checked} numbers checked, all found in tool results` : st("warning", "numbers without a source: " + c.grounding.ungrounded.join(" "))) : ""}
+      ${c.tools ? " · tools: " + esc(c.tools.join(", ")) : ""}${c.mode ? " · mode: " + esc(c.mode === "offline" ? "rule-based planner (no language model)" : c.mode) : ""}</div>`}</div>`).join("");
+}
+async function ask(q) {
+  const turn = { q, pending: true }; S.chat.unshift(turn); renderAsk();
+  try {
+    if (S.live) {
+      const r = await (await fetch("/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question: q, mode: "auto", state: {} }) })).json();
+      Object.assign(turn, { pending: false, a: r.answer, grounding: r.grounding, tools: (r.tool_calls || []).map((t) => t.name), mode: r.mode });
+    } else {
+      const c = (D.canned || []).find((x) => x.q === q);
+      Object.assign(turn, { pending: false, a: c ? c.a : "This static copy only replays the suggested questions.", grounding: c?.grounding, tools: c?.tools, mode: c?.mode });
+    }
+  } catch (e) { Object.assign(turn, { pending: false, a: "The assistant could not be reached: " + e.message }); }
+  renderAsk();
+}
+$("askForm").addEventListener("submit", (e) => { e.preventDefault(); const q = $("askQ").value.trim(); if (q) { $("askQ").value = ""; ask(q); } });
+$("sugg").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) ask(b.dataset.q); });
+$("chat").addEventListener("click", (e) => { const a = e.target.closest("[data-inv]"); if (a) { e.preventDefault(); openCard(a.dataset.inv); } });
+
+// ---------------------------------------------------------------- tabs
+function renderTabs() {
+  for (const b of $("tabs").children) b.setAttribute("aria-selected", b.dataset.tab === S.tab);
+  for (const p of document.querySelectorAll("section.panel")) p.classList.toggle("on", p.id === "p-" + S.tab);
+}
+$("tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; S.tab = b.dataset.tab; setHash(); renderTabs(); });
+function renderAll() {
+  renderScen(); renderTabs(); renderRank(); renderEvidence(); renderGaps(); renderInv(); renderAsk();
+  $("foot").innerHTML = `Data: NASA Physical Sciences Informatics (PSI, CC0), NTRS and cited papers. ${D.investigations.length} combustion investigations, ${D.points.length} tests with recorded oxygen.
+    Brain built ${esc(String(D.built).slice(0, 16).replace("T", " "))} UTC. Interpretive sentences on this page are assembled from the data by fixed rules; no language model writes them.
+    Model outputs are labelled MODEL and are never shown as measurements. This is an independent project and is not endorsed by NASA.`;
+}
+load();
+</script>
+</body>
+</html>
