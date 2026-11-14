@@ -126,12 +126,41 @@ dialog::backdrop{background:rgba(0,0,0,.45)}
 dialog h3{margin:0 0 2px;font-size:19px}
 .cmp td:first-child,.cmp th:first-child{color:var(--ink-2);width:150px}
 
-/* ask */
-.ask form{display:flex;gap:8px}
-.ask input{flex:1;background:var(--surface);border:1px solid var(--axis);border-radius:7px;padding:8px 10px}
-.turn{padding:12px 0;border-bottom:1px solid var(--grid)}
-.turn .me{font-weight:600}
-.turn .ans{white-space:pre-wrap;margin:6px 0}
+/* ask: tombol maskot (kanan bawah) + panel chat yang bergeser dari kanan */
+#chatFab{position:fixed;right:20px;bottom:20px;z-index:40;width:60px;height:60px;padding:0;border:none;border-radius:50%;
+  background:var(--accent);box-shadow:0 6px 20px rgba(0,0,0,.25);display:grid;place-items:center;transition:transform .15s}
+#chatFab:hover{background:var(--accent);transform:scale(1.06)}
+#chatFab .pulse{position:absolute;inset:0;border-radius:50%;border:2px solid var(--accent);animation:ring 2.6s ease-out infinite}
+@keyframes ring{0%{transform:scale(1);opacity:.7}70%,100%{transform:scale(1.45);opacity:0}}
+#chatFab[aria-expanded="true"]{transform:scale(0);pointer-events:none}
+#chatTip{position:fixed;right:90px;bottom:34px;z-index:40;background:var(--surface);border:1px solid var(--axis);
+  border-radius:10px;padding:6px 10px;font-size:13px;box-shadow:0 4px 14px rgba(0,0,0,.12);pointer-events:none}
+#chatPanel{position:fixed;top:0;right:0;bottom:0;z-index:50;width:min(440px,100vw);display:flex;flex-direction:column;
+  background:var(--surface);border-left:1px solid var(--axis);box-shadow:-10px 0 30px rgba(0,0,0,.18);
+  transform:translateX(105%);transition:transform .28s cubic-bezier(.2,.8,.2,1);visibility:hidden}
+#chatPanel.open{transform:none;visibility:visible}
+#chatPanel .head{display:flex;gap:10px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--grid)}
+#chatPanel .head .t{font-weight:650;font-size:15px;line-height:1.2}
+#chatPanel .head .s{color:var(--ink-2);font-size:12px}
+#chatPanel .head button{margin-left:auto;border:none;background:none;font-size:22px;line-height:1;padding:4px 8px}
+#chatPanel .body{flex:1;overflow-y:auto;padding:12px 16px}
+#chatPanel .foot{border-top:1px solid var(--grid);padding:10px 16px 14px}
+#chatPanel form{display:flex;gap:8px}
+#chatPanel input{flex:1;min-width:0;background:var(--page);border:1px solid var(--axis);border-radius:20px;padding:9px 14px}
+#chatPanel form button{border-radius:20px;background:var(--accent);color:#fff;border:none;padding:8px 16px}
+#sugg{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}
+#sugg button{font-size:12.5px;border-radius:16px;text-align:left}
+.turn{margin:12px 0}
+.turn .me{margin-left:auto;max-width:85%;width:fit-content;background:var(--accent);color:#fff;padding:8px 12px;border-radius:14px 14px 4px 14px}
+.turn .row{display:flex;gap:8px;align-items:flex-start;margin-top:8px}
+.turn .ans{white-space:pre-wrap;background:var(--surface-2);padding:9px 12px;border-radius:14px 14px 14px 4px;max-width:calc(100% - 36px)}
+.turn .hint{margin:4px 0 0 36px;font-size:11.5px}
+.mascot{flex:none}
+.dots span{display:inline-block;width:6px;height:6px;margin-right:3px;border-radius:50%;background:var(--mute);animation:dot 1s infinite}
+.dots span:nth-child(2){animation-delay:.15s}.dots span:nth-child(3){animation-delay:.3s}
+@keyframes dot{0%,80%,100%{opacity:.25}40%{opacity:1}}
+@media (prefers-reduced-motion:reduce){#chatFab .pulse,.dots span{animation:none}#chatPanel{transition:none}}
+@media (max-width:640px){#chatTip{display:none}#chatFab{right:16px;bottom:16px}}
 footer{color:var(--mute);font-size:12px;padding:18px 0 40px;border-top:1px solid var(--axis)}
 
 #themeBtn{font-size:12px;padding:3px 10px;margin-right:10px}
@@ -160,7 +189,6 @@ footer{color:var(--mute);font-size:12px;padding:18px 0 40px;border-top:1px solid
   <button role="tab" data-tab="evidence"><span class="n">2</span>What the data says</button>
   <button role="tab" data-tab="gaps"><span class="n">3</span>Gaps and next tests</button>
   <button role="tab" data-tab="inv">All 24 investigations</button>
-  <button role="tab" data-tab="ask">Ask</button>
 </nav>
 
 <section class="panel" id="p-rank">
@@ -225,21 +253,51 @@ footer{color:var(--mute);font-size:12px;padding:18px 0 40px;border-top:1px solid
   <div class="grid" id="grid"></div>
 </section>
 
-<section class="panel ask" id="p-ask">
-  <div class="card">
-    <h2>Ask the data</h2>
-    <form id="askForm"><input id="askQ" aria-label="Question" placeholder="Which investigations matter most for a Moon base?"><button>Ask</button></form>
-    <div class="seg" id="sugg"></div>
-    <div id="chat"></div>
-    <p class="hint" id="askNote" style="margin:10px 0 0"></p>
-  </div>
-</section>
-
 <footer id="foot"></footer>
 </div>
+
+<!-- Maskot: nyala bola biru — bentuk nyala api di mikrogravitasi (tanpa gaya apung, api tidak meruncing ke atas) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="mgFlame" cx="50%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#bfe0ff"/>
+      <stop offset=".75" stop-color="#4c9cf0"/><stop offset="1" stop-color="#1d5fb8"/>
+    </radialGradient>
+    <symbol id="mascot" viewBox="0 0 40 40">
+      <circle cx="20" cy="20" r="17" fill="url(#mgFlame)"/>
+      <circle cx="20" cy="20" r="17" fill="none" stroke="#9fd0ff" stroke-width="1.2" opacity=".8"/>
+      <circle cx="15" cy="19" r="2.3" fill="#0b2a52"/><circle cx="25" cy="19" r="2.3" fill="#0b2a52"/>
+      <circle cx="15.8" cy="18.2" r=".7" fill="#fff"/><circle cx="25.8" cy="18.2" r=".7" fill="#fff"/>
+      <path d="M16 25.2q4 3.2 8 0" fill="none" stroke="#0b2a52" stroke-width="1.6" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+<span id="chatTip" hidden>Ask the data</span>
+<button id="chatFab" type="button" aria-label="Ask the data" aria-controls="chatPanel" aria-expanded="false">
+  <span class="pulse" aria-hidden="true"></span><svg width="46" height="46" aria-hidden="true"><use href="#mascot"/></svg>
+</button>
+<aside id="chatPanel" role="dialog" aria-label="Ask the data" aria-hidden="true">
+  <div class="head">
+    <svg class="mascot" width="36" height="36" aria-hidden="true"><use href="#mascot"/></svg>
+    <div><div class="t">Ask the data</div><div class="s">Answers built from NASA PSI data; every number is checked against its source</div></div>
+    <button type="button" id="chatClose" aria-label="Close chat">×</button>
+  </div>
+  <div class="body" id="chatBody">
+    <div id="sugg"></div>
+    <div id="chat" aria-live="polite"></div>
+  </div>
+  <div class="foot">
+    <form id="askForm"><input id="askQ" aria-label="Question" placeholder="Ask about NASA's microgravity fire tests…" autocomplete="off"><button>Send</button></form>
+    <p class="hint" id="askNote" style="margin:8px 0 0;font-size:11.5px"></p>
+  </div>
+</aside>
 <dialog id="dlg"></dialog>
 
+<script src="config.js"></script>
 <script>
+// Alamat backend (scripts/brain.py serve). Kosong = server yang sama dengan halaman ini.
+// Untuk salinan statis (Netlify), isi window.FIF_API di config.js dengan URL backend.
+const API = String(window.FIF_API || "").replace(/\/+$/, "");
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const pct = (x, d = 0) => x == null ? "n/a" : (100 * x).toFixed(d).replace(/\.0$/, "") + "%";
@@ -274,14 +332,16 @@ let D = null;
 
 // ---------------------------------------------------------------- load
 async function load() {
-  for (const u of ["/insight_data", "data.json"]) {
-    try { const r = await fetch(u); if (r.ok) { D = await r.json(); S.live = u.startsWith("/"); break; } } catch {}
+  for (const u of [API + "/insight_data", "data.json"]) {
+    try { const r = await fetch(u); if (r.ok) { D = await r.json(); S.live = u !== "data.json"; break; } } catch {}
   }
+  $("research").href = API + "/app/";
   if (!D) { $("heroA").textContent = "Could not load data. Run: py -3 scripts/investigations.py export"; return; }
   S.w = { ...D.weights };
   const h = new URLSearchParams(location.hash.slice(1));
   if (D.scenario[h.get("s")]) S.sc = h.get("s");
-  if (h.get("t")) S.tab = h.get("t");
+  if (h.get("t") === "ask") setChat(true);           // tautan lama ke tab Ask -> buka panel chat
+  else if (h.get("t")) S.tab = h.get("t");
   if (!S.live) $("research").style.display = "none";
   renderAll();
 }
@@ -390,7 +450,7 @@ function renderEvidence() {
     <div class="hint">${esc(m.input)} · per-day AUC ${m.auc_per_day} · ${esc(m.caveat)}</div></div>`).join("");
   const rows = s.near.slice(0, 60);
   $("near").innerHTML = rows.length ? `<table><thead><tr><th>Investigation</th><th>Test</th><th>Fuel</th><th class="num">O₂</th><th class="num">kPa</th><th>Outcome</th><th>Match</th></tr></thead><tbody>`
-    + rows.map((p) => `<tr><td>${esc(cardOf(p.acc).name)}</td><td>${p.id && S.live ? `<a href="/app/#s=${encodeURIComponent(JSON.stringify({ focus: p.id }))}" title="open in researcher mode">${esc(p.t)}</a>` : esc(p.t)}</td>
+    + rows.map((p) => `<tr><td>${esc(cardOf(p.acc).name)}</td><td>${p.id && S.live ? `<a href="${API}/app/#s=${encodeURIComponent(JSON.stringify({ focus: p.id }))}" title="open in researcher mode">${esc(p.t)}</a>` : esc(p.t)}</td>
        <td>${esc(p.fuel || "")}</td><td class="num">${pct(p.o2, 1)}</td><td class="num">${p.p ?? ""}</td><td>${esc(p.out || "")}</td><td>${p.match === "full" ? "oxygen + pressure" : "oxygen only"}</td></tr>`).join("")
     + `</tbody></table>` + (s.n_near > rows.length ? `<p class="hint">${s.n_near - rows.length} more not shown.</p>` : "")
     : `<p>${st("critical", "No tabulated test matches this atmosphere.")}</p>`;
@@ -503,25 +563,32 @@ $("dlg").addEventListener("click", (e) => { if (e.target === $("dlg")) $("dlg").
 // ---------------------------------------------------------------- ask
 function fmtAnswer(a) {
   return esc(a).replace(/\[\[inv:([^\]]+)\]\]/g, (m, id) => `<a href="#" data-inv="${id}">${id}</a>`)
-    .replace(/\[\[test:([^\]]+)\]\]/g, (m, id) => S.live ? `<a href="/app/#s=${encodeURIComponent(JSON.stringify({ focus: "test:" + id }))}">${id}</a>` : id)
+    .replace(/\[\[test:([^\]]+)\]\]/g, (m, id) => S.live ? `<a href="${API}/app/#s=${encodeURIComponent(JSON.stringify({ focus: "test:" + id }))}">${id}</a>` : id)
     .replace(/\[\[(model|paper|m):([^\]]+)\]\]/g, (m, k, v) => `<span class="chip">${k === "model" ? "model: " : k === "paper" ? "paper: " : ""}${v}</span>`);
 }
 function renderAsk() {
-  $("sugg").innerHTML = (D.suggested || []).map((q) => `<button data-q="${esc(q)}">${esc(q)}</button>`).join("");
+  // contoh pertanyaan hanya tampil sebelum percakapan dimulai, supaya panel tetap lapang
+  $("sugg").innerHTML = S.chat.length ? "" : (D.suggested || []).map((q) => `<button data-q="${esc(q)}">${esc(q)}</button>`).join("");
   $("askNote").textContent = S.live
-    ? "Answers are assembled from tool results. Every number in an answer is checked against what the tools returned; unsupported numbers are flagged."
-    : "Static copy: the questions above replay answers saved when this page was built. Run the server (py -3 scripts/brain.py serve) to ask anything.";
+    ? "Every number in an answer is checked against what the data tools returned; unsupported numbers are flagged."
+    : "Static copy: the suggested questions replay answers saved when this page was built. Run the server (py -3 scripts/brain.py serve) to ask anything.";
   $("askForm").style.display = S.live ? "flex" : "none";
-  $("chat").innerHTML = S.chat.map((c) => `<div class="turn"><div class="me">${esc(c.q)}</div>${c.pending ? `<div class="hint">working…</div>` : `<div class="ans">${fmtAnswer(c.a)}</div>
-    <div class="hint">${c.grounding ? (c.grounding.ok ? `${c.grounding.numbers_checked} numbers checked, all found in tool results` : st("warning", "numbers without a source: " + c.grounding.ungrounded.join(" "))) : ""}
-      ${c.tools ? " · tools: " + esc(c.tools.join(", ")) : ""}${c.mode ? " · mode: " + esc(c.mode === "offline" ? "rule-based planner (no language model)" : c.mode) : ""}</div>`}</div>`).join("");
+  const avatar = `<svg class="mascot" width="28" height="28" aria-hidden="true"><use href="#mascot"/></svg>`;
+  const who = (c) => c.mode === "offline" ? "rule-based planner (no language model)" : (c.model || c.mode);
+  $("chat").innerHTML = S.chat.map((c) => `<div class="turn"><div class="me">${esc(c.q)}</div>
+    <div class="row">${avatar}${c.pending ? `<div class="ans dots" aria-label="working"><span></span><span></span><span></span></div>`
+      : `<div class="ans">${fmtAnswer(c.a)}</div>`}</div>
+    ${c.pending ? "" : `<div class="hint">${c.grounding ? (c.grounding.ok ? `${c.grounding.numbers_checked} numbers checked, all found in tool results` : st("warning", "numbers without a source: " + c.grounding.ungrounded.join(" "))) : ""}
+      ${c.tools && c.tools.length ? " · tools: " + esc(c.tools.join(", ")) : ""}${c.mode ? " · " + esc(who(c)) : ""}</div>`}</div>`).join("");
+  const b = $("chatBody"); b.scrollTop = b.scrollHeight;
 }
 async function ask(q) {
-  const turn = { q, pending: true }; S.chat.unshift(turn); renderAsk();
+  const turn = { q, pending: true }; S.chat.push(turn); renderAsk();
   try {
     if (S.live) {
-      const r = await (await fetch("/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question: q, mode: "auto", state: {} }) })).json();
-      Object.assign(turn, { pending: false, a: r.answer, grounding: r.grounding, tools: (r.tool_calls || []).map((t) => t.name), mode: r.mode });
+      const history = S.chat.filter((c) => c !== turn && !c.pending && c.a).slice(-6).map((c) => ({ q: c.q, a: c.a }));
+      const r = await (await fetch(API + "/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question: q, mode: "auto", state: {}, history }) })).json();
+      Object.assign(turn, { pending: false, a: r.answer || r.error || "(no answer)", grounding: r.grounding, tools: (r.tool_calls || []).map((t) => t.name), mode: r.mode, model: r.model });
     } else {
       const c = (D.canned || []).find((x) => x.q === q);
       Object.assign(turn, { pending: false, a: c ? c.a : "This static copy only replays the suggested questions.", grounding: c?.grounding, tools: c?.tools, mode: c?.mode });
@@ -529,6 +596,20 @@ async function ask(q) {
   } catch (e) { Object.assign(turn, { pending: false, a: "The assistant could not be reached: " + e.message }); }
   renderAsk();
 }
+// panel chat: buka/tutup, Esc, fokus kembali ke tombol maskot
+function setChat(open) {
+  $("chatPanel").classList.toggle("open", open);
+  $("chatPanel").setAttribute("aria-hidden", String(!open));
+  $("chatFab").setAttribute("aria-expanded", String(open));
+  $("chatTip").hidden = true;
+  if (open) { setTimeout(() => $("askQ").focus(), 250); const b = $("chatBody"); b.scrollTop = b.scrollHeight; }
+  else $("chatFab").focus();
+}
+$("chatFab").addEventListener("click", () => setChat(true));
+$("chatClose").addEventListener("click", () => setChat(false));
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && $("chatPanel").classList.contains("open") && !$("dlg").open) setChat(false); });
+setTimeout(() => { if (!$("chatPanel").classList.contains("open") && !S.chat.length) $("chatTip").hidden = false; }, 1500);
+setTimeout(() => { $("chatTip").hidden = true; }, 9000);
 $("askForm").addEventListener("submit", (e) => { e.preventDefault(); const q = $("askQ").value.trim(); if (q) { $("askQ").value = ""; ask(q); } });
 $("sugg").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) ask(b.dataset.q); });
 $("chat").addEventListener("click", (e) => { const a = e.target.closest("[data-inv]"); if (a) { e.preventDefault(); openCard(a.dataset.inv); } });
