@@ -1,0 +1,413 @@
+{
+ "sumber": {
+  "titik_asap": "PSI-107_Raw Data_SmokePointReview-0g-3.xlsx (lembar 'Smoke Point Datasheet'), dibaca dari xlsx",
+  "pedoman_metode": "Ihme, Chung & Mishra 2022, PECS 91:101010, bagian 5.2-5.5",
+  "klaim_diuji": [
+   "SPICE Final Report: L_SP ~ d^-0.91 u^0.41",
+   "Dotson 2009 (tesis, PSI-107 Reports): urutan berjelaga propana < etilena < 50% < 75% < propilena; L_SP ~ mdot/Zst; efek hari pada propilena 0,41 mm"
+  ]
+ },
+ "n_titik_asap": 55,
+ "hari": 11,
+ "per_bahan_bakar": {
+  "propane": 6,
+  "ethylene": 6,
+  "propylene50": 7,
+  "propylene75": 14,
+  "propylene": 22
+ },
+ "catatan_jumlah": "Laporan akhir menyebut 52 titik asap, Tabel 3.1 tesis 52 (6/6/20/13/7); lembar NASA berisi 55 (propilena 22, 75% 14). Dipakai apa adanya.",
+ "eksponen": {
+  "u": {
+   "nilai": 0.406,
+   "ci95_cluster_hari": [
+    0.299,
+    0.587
+   ],
+   "ci95_naif": [
+    0.306,
+    0.506
+   ],
+   "terbitan": 0.41
+  },
+  "d": {
+   "nilai": -0.756,
+   "ci95_cluster_hari": [
+    -0.903,
+    -0.634
+   ],
+   "ci95_naif": [
+    -0.898,
+    -0.613
+   ],
+   "terbitan": -0.91
+  },
+  "n_boot": 4000
+ },
+ "L_SP_rujukan": {
+  "kondisi": "d = 1.6002 mm, u = 30.0 cm/s",
+  "nilai_mm": {
+   "propane": 53.5,
+   "ethylene": 54.6,
+   "propylene50": 36.5,
+   "propylene75": 21.3,
+   "propylene": 17.8
+  },
+  "ci95_cluster_hari": {
+   "propane": [
+    48.359,
+    56.719
+   ],
+   "ethylene": [
+    51.754,
+    55.191
+   ],
+   "propylene50": [
+    34.034,
+    37.994
+   ],
+   "propylene75": [
+    17.563,
+    24.052
+   ],
+   "propylene": [
+    16.794,
+    18.916
+   ]
+  }
+ },
+ "uji_urutan_berjelaga": {
+  "urutan_terbitan_L_SP_turun": [
+   "propane",
+   "ethylene",
+   "propylene50",
+   "propylene75",
+   "propylene"
+  ],
+  "pasangan": {
+   "propane>ethylene": {
+    "P_bertahan": 0.454,
+    "n": 3146
+   },
+   "ethylene>propylene50": {
+    "P_bertahan": 1.0,
+    "n": 3110
+   },
+   "propylene50>propylene75": {
+    "P_bertahan": 1.0,
+    "n": 3510
+   },
+   "propylene75>propylene": {
+    "P_bertahan": 0.973,
+    "n": 3527
+   }
+  },
+  "P_urutan_penuh_bertahan": 0.405,
+  "n_boot_semua_bb_ada": 2362
+ },
+ "validasi": {
+  "mean": {
+   "model": "rerata per bahan bakar (tanpa fisika)",
+   "per_hari": {
+    "n_dinilai": 55,
+    "n_dilewati_bb_tak_terlihat": 0,
+    "rmse_ln": 0.3982,
+    "galat_tipikal_pct": 48.9,
+    "mae_mm": 11.34,
+    "cakupan_PI90": 0.927,
+    "lebar_PI90_ln": 1.408
+   },
+   "acak_5lipat": {
+    "n_dinilai": 55,
+    "n_dilewati_bb_tak_terlihat": 0,
+    "rmse_ln": 0.3925,
+    "galat_tipikal_pct": 48.1,
+    "mae_mm": 10.6,
+    "cakupan_PI90": 0.927,
+    "lebar_PI90_ln": 1.371
+   }
+  },
+  "pub": {
+   "model": "eksponen terbitan NASA tetap (d^-0.91 u^0.41), intersep per bahan bakar",
+   "per_hari": {
+    "n_dinilai": 55,
+    "n_dilewati_bb_tak_terlihat": 0,
+    "rmse_ln": 0.216,
+    "galat_tipikal_pct": 24.1,
+    "mae_mm": 6.16,
+    "cakupan_PI90": 0.873,
+    "lebar_PI90_ln": 0.747
+   },
+   "acak_5lipat": {
+    "n_dinilai": 55,
+    "n_dilewati_bb_tak_terlihat": 0,
+    "rmse_ln": 0.2135,
+    "galat_tipikal_pct": 23.8,
+    "mae_mm": 5.65,
+    "cakupan_PI90": 0.873,
+    "lebar_PI90_ln": 0.736
+   }
+  },
+  "pow": {
+   "model": "hukum pangkat dipasang: ln L = a_bb + b ln u + c ln d",
+   "per_hari": {
+    "n_dinilai": 55,
+    "n_dilewati_bb_tak_terlihat": 0,
+    "rmse_ln": 0.2133,
+    "galat_tipikal_pct": 23.8,
+    "mae_mm": 5.69,
+    "cakupan_PI90": 0.927,
+    "lebar_PI90_ln": 0.738
+   },
+   "acak_5lipat": {
+    "n_dinilai": 55,
+    "n_dilewati_bb_tak_terlihat": 0,
+    "rmse_ln": 0.2574,
+    "galat_tipikal_pct": 29.4,
+    "mae_mm": 6.45,
+    "cakupan_PI90": 0.855,
+    "lebar_PI90_ln": 0.707
+   }
+  },
+  "pow2": {
+   "model": "hukum pangkat + (ln d)^2",
+   "per_hari": {
+    "n_dinilai": 55,
+    "n_dilewati_bb_tak_terlihat": 0,
+    "rmse_ln": 0.1921,
+    "galat_tipikal_pct": 21.2,
+    "mae_mm": 5.98,
+    "cakupan_PI90": 0.909,
+    "lebar_PI90_ln": 0.539
+   },
+   "acak_5lipat": {
+    "n_dinilai": 55,
+    "n_dilewati_bb_tak_terlihat": 0,
+    "rmse_ln": 0.182,
+    "galat_tipikal_pct": 20.0,
+    "mae_mm": 5.09,
+    "cakupan_PI90": 0.873,
+    "lebar_PI90_ln": 0.531
+   }
+  },
+  "hybrid": {
+   "model": "hukum pangkat + GP pada sisa (hibrida fisika-data)",
+   "per_hari": {
+    "n_dinilai": 55,
+    "n_dilewati_bb_tak_terlihat": 0,
+    "rmse_ln": 0.1488,
+    "galat_tipikal_pct": 16.0,
+    "mae_mm": 3.97,
+    "cakupan_PI90": 0.873,
+    "lebar_PI90_ln": 0.341
+   },
+   "acak_5lipat": {
+    "n_dinilai": 55,
+    "n_dilewati_bb_tak_terlihat": 0,
+    "rmse_ln": 0.2207,
+    "galat_tipikal_pct": 24.7,
+    "mae_mm": 4.68,
+    "cakupan_PI90": 0.836,
+    "lebar_PI90_ln": 0.335
+   }
+  }
+ },
+ "korelasi_panjang": {
+  "slope_mm_per_mg_s": 1.609,
+  "r2": 0.951,
+  "rasio_ukur_per_prediksi_ua_uf_lt_0.08": 1.189,
+  "rasio_ukur_per_prediksi_ua_uf_ge_0.08": 1.007,
+  "n_ua_uf_lt_0.08": 8
+ },
+ "sisa_per_hari": {
+  "45": {
+   "n": 5,
+   "rerata_sisa_pct": 0.5,
+   "bahan_bakar": [
+    "ethylene"
+   ]
+  },
+  "48": {
+   "n": 3,
+   "rerata_sisa_pct": 4.8,
+   "bahan_bakar": [
+    "propane"
+   ]
+  },
+  "52": {
+   "n": 8,
+   "rerata_sisa_pct": 3.0,
+   "bahan_bakar": [
+    "propane",
+    "propylene75"
+   ]
+  },
+  "55": {
+   "n": 3,
+   "rerata_sisa_pct": -4.4,
+   "bahan_bakar": [
+    "propylene50"
+   ]
+  },
+  "58": {
+   "n": 11,
+   "rerata_sisa_pct": 0.4,
+   "bahan_bakar": [
+    "propylene"
+   ]
+  },
+  "119": {
+   "n": 2,
+   "rerata_sisa_pct": -3.2,
+   "bahan_bakar": [
+    "propylene75"
+   ]
+  },
+  "136": {
+   "n": 4,
+   "rerata_sisa_pct": -16.3,
+   "bahan_bakar": [
+    "propylene75"
+   ]
+  },
+  "167": {
+   "n": 4,
+   "rerata_sisa_pct": 3.4,
+   "bahan_bakar": [
+    "propylene50"
+   ]
+  },
+  "168": {
+   "n": 1,
+   "rerata_sisa_pct": -2.7,
+   "bahan_bakar": [
+    "ethylene"
+   ]
+  },
+  "173": {
+   "n": 3,
+   "rerata_sisa_pct": 14.3,
+   "bahan_bakar": [
+    "propylene75"
+   ]
+  },
+  "174": {
+   "n": 11,
+   "rerata_sisa_pct": -0.4,
+   "bahan_bakar": [
+    "propylene"
+   ]
+  }
+ },
+ "sisa_terbesar": [
+  {
+   "tp": "P4-3",
+   "day": 174,
+   "fuel": "propylene",
+   "d_mm": 0.4064,
+   "sisa_pct": 83.4
+  },
+  {
+   "tp": "P4-4",
+   "day": 58,
+   "fuel": "propylene",
+   "d_mm": 0.4064,
+   "sisa_pct": 50.8
+  },
+  {
+   "tp": "P7-5",
+   "day": 174,
+   "fuel": "propylene",
+   "d_mm": 0.762,
+   "sisa_pct": -28.1
+  },
+  {
+   "tp": "75P7-3",
+   "day": 136,
+   "fuel": "propylene75",
+   "d_mm": 0.762,
+   "sisa_pct": -27.9
+  },
+  {
+   "tp": "P7-3",
+   "day": 58,
+   "fuel": "propylene",
+   "d_mm": 0.762,
+   "sisa_pct": -27.7
+  }
+ ],
+ "rentang_berlaku": {
+  "ethylene|1.6002": {
+   "u_min": 18.53,
+   "u_max": 58.02,
+   "n": 5
+  },
+  "ethylene|0.7620": {
+   "u_min": 17.59,
+   "u_max": 17.59,
+   "n": 1
+  },
+  "propane|1.6002": {
+   "u_min": 22.29,
+   "u_max": 44.85,
+   "n": 3
+  },
+  "propane|0.7620": {
+   "u_min": 16.65,
+   "u_max": 33.57,
+   "n": 3
+  },
+  "propylene75|1.6002": {
+   "u_min": 12.89,
+   "u_max": 64.6,
+   "n": 10
+  },
+  "propylene75|0.7620": {
+   "u_min": 14.77,
+   "u_max": 38.27,
+   "n": 4
+  },
+  "propylene50|1.6002": {
+   "u_min": 11.01,
+   "u_max": 48.61,
+   "n": 7
+  },
+  "propylene|1.6002": {
+   "u_min": 9.13,
+   "u_max": 57.08,
+   "n": 10
+  },
+  "propylene|0.7620": {
+   "u_min": 7.24,
+   "u_max": 50.49,
+   "n": 8
+  },
+  "propylene|0.4064": {
+   "u_min": 5.36,
+   "u_max": 26.99,
+   "n": 4
+  }
+ },
+ "tabel_psi_vs_titik_asap": {
+  "penyalaan_titik_asap_ditemukan_di_tabel": "53/55",
+  "median_selisih_laju_relatif": 0.043,
+  "n_selisih_gt_10pct": 14,
+  "mutu_tabel": {
+   "rows": 469,
+   "air_negative": 8,
+   "air_missing": 25,
+   "fuel_rate_missing": 12,
+   "exact_duplicates_consecutive": 14,
+   "fuel_label_variants": [
+    "50 % Propylene",
+    "75 % Propylene",
+    "75% Propylene",
+    "Ethylene",
+    "Methane",
+    "Propane",
+    "Propylene"
+   ],
+   "propylene75_bad_hc_fraction": 36
+  }
+ }
+}

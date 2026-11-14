@@ -282,6 +282,22 @@ def ingest_models(b, sha):
                       "gradient boosting kuantil + conformal per hari", r.get("model_conformal"),
                       {"n": r["n"], "hari": r["days"]}, ["bimodal: padam sendiri vs dihentikan aliran"],
                       ["analysis/ml/quantile_burn.json"]))
+    sp = A / "spice" / "spice_model.json"                  # scripts/spice_smoke_point.py
+    if sp.exists():
+        r = json.loads(sp.read_text(encoding="utf-8"))
+        cards.append(("spice_smoke_point_hybrid", "panjang titik asap L_SP (mm) nyala jet SPICE",
+                      "hukum pangkat ln L = a_bb + b ln u + c ln d, + GP pada sisa (hibrida fisika-data)",
+                      {"per_hari": r["validasi"]["hybrid"]["per_hari"],
+                       "hukum_pangkat_per_hari": r["validasi"]["pow"]["per_hari"],
+                       "eksponen": r["eksponen"], "L_SP_rujukan": r["L_SP_rujukan"]},
+                      {"n": r["n_titik_asap"], "hari": r["hari"], "rentang": r["rentang_berlaku"],
+                       "validasi": "tinggalkan-satu-hari"},
+                      ["tabel uji PSI tidak menandai titik asap; label dari SmokePointReview-0g-3.xlsx",
+                       "eksponen diameter −0,76, angka terbitan −0,91 tepat di luar CI95",
+                       "propana vs etilena tidak terpisahkan",
+                       "efek hari: propilena 0,41 mm (saluran tersumbat), 75 % propilena hari 136/173",
+                       "metana ditolak; kombinasi bahan bakar-nosel baru = ekstrapolasi"],
+                      ["analysis/spice/spice_model.json", "analysis/spice/smoke_points.csv"]))
     for c in cards:
         b.c.execute("INSERT OR REPLACE INTO model_card VALUES (?,?,?,?,?,?,?)",
                     (c[0], c[1], c[2], json.dumps(c[3], ensure_ascii=False), json.dumps(c[4], ensure_ascii=False),

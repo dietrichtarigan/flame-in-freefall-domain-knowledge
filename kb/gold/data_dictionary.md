@@ -93,6 +93,10 @@ bukan nol.**
 6. **Nilai rentang dirata-rata.** "21.5 - 21.7" disimpan 21.6; teks aslinya ada di `raw_json`/`notes`.
 7. **Teks bukan angka dikosongkan.** "RAMPED", "LOW O2", "Insignificant" menjadi kosong di kolom angka.
 8. **Semua data penerbangan adalah mikrogravitasi.** Tidak ada data gravitasi Bulan atau Mars.
+9. **Tabel SPICE (PSI-107) bukan tabel titik asap.** Barisnya kondisi nyala; laju di titik asap bisa
+   berbeda >10 % (14 dari 55). Titik asap yang sebenarnya ada di `analysis/spice/smoke_points.csv`
+   (dari `SmokePointReview-0g-3.xlsx`). Tabel juga memuat 8 coflow negatif dan 36 baris 75 %
+   propilena dengan fraksi hidrokarbon yang salah; lihat `analysis/spice/README.md`.
 
 ## Tabel lain
 

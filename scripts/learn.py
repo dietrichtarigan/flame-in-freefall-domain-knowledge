@@ -65,7 +65,8 @@ def canon(x):
     if not x or x.startswith(("test:", "art:", "m:")):
         return x
     acc, _, t = x.partition(":")
-    return f"test:{acc.upper()}:{re.sub(r'\s+', '', t).upper()}"
+    t = re.sub(r"\s+", "", t)      # di luar f-string: backslash di dalam f-string baru sah sejak Python 3.12
+    return f"test:{acc.upper()}:{t.upper()}"
 
 
 # ================================================================ 1. log anotasi
