@@ -8,8 +8,19 @@ Lisensi data PSI: **CC0**. Repo ini proyek independen, tidak didukung NASA.
 
 ## Mulai dari mana
 
-Satu berkas yang paling berguna: **`kb/gold/freefall.sqlite`** (83 MB, 9 tabel).
-Buka dengan DB Browser for SQLite, DuckDB, atau Python:
+Satu berkas yang paling berguna: **`kb/gold/freefall.sqlite`** (9 tabel).
+
+Yang tersimpan di repo adalah versi terkompresi **`freefall.sqlite.gz`** (34 MB),
+karena berkas aslinya 101 MB dan melewati batas keras GitHub (100 MiB).
+Buka dulu satu kali:
+
+```bash
+gunzip -k kb/gold/freefall.sqlite.gz      # -k menyimpan berkas .gz-nya
+# Windows tanpa gunzip:
+python -c "import gzip,shutil; shutil.copyfileobj(gzip.open(r'kb/gold/freefall.sqlite.gz','rb'), open(r'kb/gold/freefall.sqlite','wb'))"
+```
+
+Setelah itu buka dengan DB Browser for SQLite, DuckDB, atau Python:
 
 ```python
 import sqlite3, pandas as pd
