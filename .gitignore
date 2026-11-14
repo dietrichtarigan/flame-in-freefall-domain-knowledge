@@ -38,3 +38,7 @@ desktop.ini
 
 # Buku teks berhak cipta (bukan data NASA) — jangan didistribusikan ulang
 supplement/
+
+# Basis data mentah 101 MB melewati batas keras GitHub (100 MiB).
+# Yang dilacak versi terkompresinya (34 MB); lihat README untuk membukanya.
+kb/gold/freefall.sqlite
