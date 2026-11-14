@@ -91,6 +91,10 @@ TOOLS = [
     tool("coverage", "What is NOT known: per investigation, number of tests, tests with any outcome, values by tier.", {}),
     tool("search_papers", "Full-text search in NASA NTRS reports and papers. Returns title, page and snippet.",
          {"query": S(), "k": I()}),
+    tool("find_figures", "Original figures (apparatus diagrams, flame photographs, data plots) cropped from NASA reports "
+         "and papers, found by their caption and the sentences that cite them. Returns label, caption, page, paper, DOI or "
+         "link and an image the dashboard shows under your answer. Use it whenever the question is about an experiment, "
+         "its hardware or setup, what a flame looks like, or a plotted trend. Use English keywords.", {"query": S(), "k": I()}),
     tool("model_cards", "All models with per-day validated metrics, validity notes and caveats.", {}),
     tool("uncertainty_stats", "Day-clustered bootstrap confidence intervals and permutation tests.",
          {"topic": {"type": "string", "enum": ["cfig_ign_rate", "cfig_selfext_rate", "flex_K", "telemetry_burn",
@@ -153,6 +157,14 @@ def _slim_entity(d):
 def run_tool(name, args, ctx):
     """Satu-satunya jalan asisten menyentuh data. ctx['ui'] mengumpulkan aksi untuk dashboard."""
     a = args or {}
+    if name == "find_figures":
+        import paper_figures
+        res = paper_figures.search(str(a.get("query") or ""), a.get("k") or 4)
+        have = {f["id"] for f in ctx.setdefault("figures", [])}
+        ctx["figures"] += [f for f in res if f["id"] not in have]
+        return {"figures": [{k: f[k] for k in ("label", "page", "caption", "paper", "doi", "url", "score")} for f in res],
+                "note": "these figures are shown to the user under your answer; refer to them by label and paper"
+                        if res else "no figure caption matches; do not describe figures"}
     if name in ("get_test", "explain_test", "related"):
         e, err = resolve(a.get("test"))
         if err:
@@ -259,6 +271,25 @@ CITE = re.compile(r"\[\[(m:[^\]]+|test:[^\]]+|paper:[^\]]+|model:[^\]]+|inv:[^\]
 NUM = re.compile(r"(?<![\w.])[-−]?\d+(?:[.,]\d+)?(?![\w])")
 
 
+def _paper_link(title):
+    """DOI / tautan sumber untuk judul paper yang disitasi (papers_doi lalu papers NTRS); kosong bila tak dikenal."""
+    if not title:
+        return {}
+    import sqlite3
+    try:
+        con = sqlite3.connect(f"file:{brain.GOLD.as_posix()}?mode=ro", uri=True)
+        t = title.lower()
+        r = con.execute("SELECT doi, doi_url FROM papers_doi WHERE lower(title)=? LIMIT 1", (t,)).fetchone()
+        if r:
+            return {"doi": r[0], "url": r[1] or f"https://doi.org/{r[0]}"}
+        r = con.execute("SELECT record_url FROM papers WHERE lower(title)=? LIMIT 1", (t,)).fetchone()
+        if r and r[0]:
+            return {"url": r[0]}
+    except sqlite3.Error:
+        pass
+    return {}
+
+
 def citations(text):
     out, seen = [], set()
     c = brain.db()
@@ -285,6 +316,7 @@ def citations(text):
         else:
             title, _, page = raw[6:].partition("|")
             item.update({"kind": "paper", "title": title.strip(), "page": page.strip() or None, "tier": "paper_claim"})
+            item.update(_paper_link(title.strip()))
         out.append(item)
     return out
 
@@ -361,6 +393,7 @@ How you work:
 - Every value has a truth tier. Say it in words when it matters: nasa_table (recorded by NASA), nasa_calibrated (NASA raw signal + validated NASA formula), derived_auto (our script, not yet checked by a human), human_verified, paper_claim, model_prediction (always give its uncertainty). Never present derived_auto or model_prediction as established fact.
 - Thermocouple values are raw volts, not temperatures. Never convert them to degrees.
 - If a what-if tool says the input is outside the tested range, say the model does not answer there; do not guess.
+- When the question is about an experiment, its hardware or setup, how a flame looks, or a plotted trend, also call find_figures and name the figures you rely on (label and paper). Never describe a figure you did not get from find_figures.
 - Cite inline with these markers, exactly as the ids appear in tool results: [[m:<measurement id>]] for a value, [[test:<id>]] for a test, [[paper:<title>|<page>]] for a paper, [[model:<card id>]] for a model, [[inv:<PSI accession>]] for an investigation.
 - For questions about whole investigations or about a habitat (cabin, Moon/Mars base, rover, spacesuit, Earth) use rank_investigations, get_investigation, compare_investigations and scenario_evidence. Explain a ranking through its three score components; never present the score as a NASA judgement.
 - When the user asks to look at, show, open or compare something, also call ui_action so the dashboard moves with you (focus a test, select several, filter, set what-if sliders).
@@ -483,7 +516,7 @@ def ask_claude(question, history, state):
         served.add(resp.model)
         fell_back |= any(b.type == "fallback" for b in resp.content)
         if resp.stop_reason == "refusal":            # seluruh rantai (termasuk fallback) menolak
-            return {"answer": "Permintaan ini ditolak oleh model (refusal).", "ui_actions": ctx["ui"], "tool_calls": calls,
+            return {"answer": "Permintaan ini ditolak oleh model (refusal).", "ui_actions": ctx["ui"], "figures": ctx.get("figures", []), "tool_calls": calls,
                     "outputs": outputs, "model": resp.model, "usage": usage, "note": "refusal"}
         if resp.stop_reason == "pause_turn":
             messages.append({"role": "assistant", "content": resp.content})
@@ -514,7 +547,7 @@ def ask_claude(question, history, state):
     text = "".join(b.text for b in (final.content if final else []) if b.type == "text")
     if fell_back:
         note = ((note + "; ") if note else "") + f"dijawab model fallback ({', '.join(sorted(served))})"
-    return {"answer": text or "(tidak ada jawaban teks)", "ui_actions": ctx["ui"], "tool_calls": calls,
+    return {"answer": text or "(tidak ada jawaban teks)", "ui_actions": ctx["ui"], "figures": ctx.get("figures", []), "tool_calls": calls,
             "outputs": outputs, "model": ", ".join(sorted(served)) or llm_model(), "usage": usage, "note": note}
 
 
@@ -597,7 +630,7 @@ def ask_offline(question, history=None, state=None):
     hi = None if tests else inv.answer(q, T)
     if hi:
         parts += hi["parts"]
-        return {"answer": "\n".join(parts), "ui_actions": ctx["ui"], "tool_calls": calls, "outputs": outputs, "model": "offline-planner"}
+        return {"answer": "\n".join(parts), "ui_actions": ctx["ui"], "figures": ctx.get("figures", []), "tool_calls": calls, "outputs": outputs, "model": "offline-planner"}
 
     # --- what-if
     if intent == "whatif":
@@ -748,10 +781,14 @@ def ask_offline(question, history=None, state=None):
         else:
             parts.append("Saya tidak menemukan data atau dokumen yang menjawab ini. Coba sebut kode uji (mis. 21106G8), "
                          "investigasi, atau tanyakan 'bagaimana jika O2 … pada butana …', 'uji berikutnya', 'peringatan', 'seberapa yakin'.")
-    return {"answer": "\n".join(parts), "ui_actions": ctx["ui"], "tool_calls": calls, "outputs": outputs, "model": "offline-planner"}
+    return {"answer": "\n".join(parts), "ui_actions": ctx["ui"], "figures": ctx.get("figures", []), "tool_calls": calls, "outputs": outputs, "model": "offline-planner"}
 
 
 # ================================================================ pintu masuk
+FIG_Q = re.compile(r"figure|gambar|foto|photo|picture|image|diagram|setup|apparatus|hardware|perangkat|look like|seperti apa|"
+                   r"tampilan|plot|grafik|chart", re.I)
+
+
 def ask(question, history=None, state=None, mode="auto"):
     t0 = time.time()
     avail, why = claude_available()
@@ -780,6 +817,16 @@ def ask(question, history=None, state=None, mode="auto"):
             r, use, note = ask_offline(question, history, state), "offline", "koneksi ke API putus; dijawab luring"
         if use != "offline" and r.get("note"):
             note = r["note"]
+    if use == "offline" and not r.get("figures") and FIG_Q.search(question):   # perencana luring: gambar dari caption
+        import paper_figures
+        figs = paper_figures.search(question, 4)
+        if figs:
+            r["figures"] = figs
+            r["tool_calls"].append({"name": "find_figures", "input": {"query": question}, "ms": 0, "error": False})
+    figs = r.setdefault("figures", [])
+    if len(figs) > 6:                                  # panel chat: maks 6, utamakan gambar yang disebut di jawaban
+        said = lambda f: re.search(rf"\b{re.escape(f['label'])}\b(?![.\d])", r["answer"]) is not None
+        r["figures"] = sorted(figs, key=lambda f: (not said(f), -f.get("score", 0)))[:6]
     r["mode"] = use
     r["note"] = note or (None if avail else f"luring: {why}")
     r["citations"] = citations(r["answer"])

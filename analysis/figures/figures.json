@@ -1,0 +1,1115 @@
+[
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 1.1",
+  "label": "Figure 1.1",
+  "page": 19,
+  "caption": "Figure 1.1. Variation of maximum smoke free fuel flow (smoke point) with coflow velocity. Burner inner diameter (ID) of 9 mm. Adapted from Schalla and McDonald.",
+  "mentions": [
+   "Smoke point measurements from unconfined coflow burner…………….71 v List of Figures Figure 1.1.",
+   "A modified plot of their results is shown in Figure 1.1."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p19_Figure1.1.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   393.0,
+   582.0,
+   679.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 1.2",
+  "label": "Figure 1.2",
+  "page": 20,
+  "caption": "Figure 1.2. Dependence of the smoke point of ethylene on coflow velocity. Burner ID of 11.9 mm. Adapted from Berry-Yelverton and Roberts.",
+  "mentions": [
+   "………………………………………….……………………...…9 Figure 1.2.",
+   "40 Berry-Yelverton  and  Roberts showed  that  the  smoke  point  of  ethylene  increased with decreasing initial fuel to air velocity ratio, and therefore with increasing coflow velocity,  as  shown  in  Figure  1.2."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p20_Figure1.2.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   145.0,
+   582.0,
+   455.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 1.3",
+  "label": "Figure 1.3",
+  "page": 21,
+  "caption": "Figure 1.3. Smoke point fuel flow rates as a function of coflow velocity for weakly buoyant propylene flames at a variety of pressures. Burner ID is 6 mm. Adapted from Lin and Faeth.",
+  "mentions": [
+   "Adapted from Berry-Yelverton and Roberts………..............10 Figure 1.3.",
+   "It  was  not  possible  to  obtain  smoke  point  flame  lengths  as  a  function  of coflow velocity; however fuel mass flow rates are shown in Figure 1.3."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p21_Figure1.3.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   393.0,
+   582.0,
+   668.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 3.1",
+  "label": "Figure 3.1",
+  "page": 34,
+  "caption": "Figure 3.1. Diagram of SPICE experimental chamber. Not to scale.",
+  "mentions": [
+   "Adapted from Lin and Faeth……………………………….………………...11 Figure 3.1.",
+   "The  SPICE  module,  sketched  in  Figure  3.1,  contains  a  rectangular  duct  that  has  an approximately  76  x  76  mm  square  cross-section  with  rounded  corners."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p34_Figure3.1.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   34,
+   582.0,
+   273.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 3.2",
+  "label": "Figure 3.2",
+  "page": 35,
+  "caption": "Figure 3.2. Diagram of SPICE module installed in the MSG. Original in color.",
+  "mentions": [
+   "Not to scale………………...24 Figure 3.2.",
+   "The  equipment  is  shown schematically  in  Figure  3.2  and  in  a  photograph  in  Figure  3.3."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p35_Figure3.2.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   421.0,
+   582.0,
+   678.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 3.3",
+  "label": "Figure 3.3",
+  "page": 36,
+  "caption": "Figure 3.3. SPICE module operating on the ISS in the MSG. SPICE module is the black and gold body at the center, the analog camera is the gray body in TM front of the SPICE module and the location of the Nikon camera is seen as the black object above the SPICE module. Original in color.",
+  "mentions": [
+   "Original in color…….25 Figure 3.3.",
+   "The  equipment  is  shown schematically  in  Figure  3.2  and  in  a  photograph  in  Figure  3.3."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p36_Figure3.3.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   145.0,
+   582.0,
+   447.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 3.4",
+  "label": "Figure 3.4",
+  "page": 37,
+  "caption": "Figure 3.4. Correlation between AIR reading (SPICE anemometer reading on SPICE video overlay) and anemometer reading at a height of 13 mm above burner tip. Maximum variation shown as black bars.",
+  "mentions": [
+   "Original in color…………………....26 Figure 3.4.",
+   "Shown in Figure 3.4 is the correlation between this anemometer reading and another, measuring the  air velocity  at 13 mm above the tip of the burner tube and aligned with the centerline of the module."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p37_Figure3.4.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   117.0,
+   582.0,
+   370.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 3.5",
+  "label": "Figure 3.5",
+  "page": 40,
+  "caption": "Figure 3.5. Locating the point of maximum rate of change of grayscale intensity. Minimum, maximum, and mean of intensity along the line profile are given in highlighted boxes. Original in color.",
+  "mentions": [
+   "Maximum variation shown as black bars……………………………......27 Figure 3.5.",
+   "The position  of  the  maximum  rate  of  change  of  grayscale  intensity  is  indicated  by  the arrow in Figure 3.5 and the intensity at this point can be was of the vertical axis."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p40_Figure3.5.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   34,
+   582.0,
+   645.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 3.6",
+  "label": "Figure 3.6",
+  "page": 41,
+  "caption": "Figure 3.6. Location of flame tip obtained from previously determined value of grayscale intensity. Original in color.",
+  "mentions": [
+   "Original in color………………………………………....30 Figure 3.6.",
+   "The  actual  location  of  this  point  can  be found  then  by  dragging  the  line  profile  up  or  down  until  the  end  points  of  the  line profile  is  at  the  previously  determined  mean  intensity  level,  shown  in  Figure  3.6."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p41_Figure3.6.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   34,
+   582.0,
+   664.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 3.7",
+  "label": "Figure 3.7",
+  "page": 43,
+  "caption": "Figure 3.7. SPICE prototype module operating at the University of Maryland FETS Lab. Exhaust and camera systems are visible.",
+  "mentions": [
+   "Original in color…………………………………...........31 Figure 3.7.",
+   "Combustion  product  gases  and  coflow  were  removed  through  an  exhaust  duct,  as shown  in  Figure  3.7."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p43_Figure3.7.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   34,
+   582.0,
+   380.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 3.8",
+  "label": "Figure 3.8",
+  "page": 44,
+  "caption": "Figure 3.8. Coflow burner for unconfined coflow smoke points. Not to scale.",
+  "mentions": [
+   "Exhaust and camera systems are visible………………………………..33 Figure 3.8.",
+   "Coflow Burner A diagram of the coflow burner is shown in Figure 3.8."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p44_Figure3.8.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   172.0,
+   582.0,
+   454.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 3.9",
+  "label": "Figure 3.9",
+  "page": 44,
+  "caption": "Figure 3.9. Coflow burner shroud and location of still camera.",
+  "mentions": [
+   "Not to scale………34 Figure 3.9.",
+   "The  coflow  burner  and  flames  were  protected  from  exterior  flows  by  cardboard  C- channel shroud approximately 0.3 m high, as shown in Figure 3.9."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p44_Figure3.9.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   578.0,
+   582.0,
+   674.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 4.1",
+  "label": "Figure 4.1",
+  "page": 52,
+  "caption": "Figure 4.1. Color still camera images of 75% C H flames with 3 6 (top) decreasing coflow velocity at a constant fuel flow rate, and (bottom) increasing fuel flow rate at a constant coflow velocity. Images were taken at f/11 with a shutter speed of 3.1 ms (except the th rd 4 top and 3 bottom pictures, which involved a shutter speed of 1.3 ms).",
+  "mentions": [
+   "Location of zero datum for flame length measurements……………….38 Figure 4.1.",
+   "Figure  4.1  shows  images  for  representative  flames  near  their  smoke  points."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p52_Figure4.1.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   172.0,
+   582.0,
+   531.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 4.2",
+  "label": "Figure 4.2",
+  "page": 53,
+  "caption": "Figure 4.2. Smoke point luminous flame length plotted with respect to coflow velocity. The lines shown are fits for each pairing of fuel and burner diameter for the present data.",
+  "mentions": [
+   "Images were taken at f/11 with a shutter th rd speed of 3.1 ms (except the 4 top and 3 bottom pictures, which involved a shutter speed of 1.3 ms)…………………………………………………...…42 Figure 4.2.",
+   "In  Figure  4.2  the  measured  smoke  point  lengths  are  plotted  with  respect  to  coflow velocity."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p53_Figure4.2.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   283.0,
+   582.0,
+   566.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 4.3",
+  "label": "Figure 4.3",
+  "page": 55,
+  "caption": "Figure 4.3. Fuel jet exit velocity at the smoke point plotted with respect to coflow velocity.",
+  "mentions": [
+   "The lines shown are fits for each pairing of fuel and burner diameter for the present data……………………………………………………….......43 Figure 4.3.",
+   "Figure  4.3  shows  that  the  fuel  jet  exit velocity at the smoke point condition for the diluted propylene smoke points is not as 44 large  as  it  is  for  the  smaller  diameter  propylene  smoke  points."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p55_Figure4.3.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   145.0,
+   582.0,
+   462.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 4.4",
+  "label": "Figure 4.4",
+  "page": 56,
+  "caption": "Figure 4.4. SPICE data correlation including zero coflow data from Urban et. al.",
+  "mentions": [
+   "Fuel jet exit velocity at the smoke point plotted with respect to coflow velocity…………………………………………………………………….…45 Figure 4.4.",
+   "SPICE and  still  air  data  for  propane  and  ethylene  are  shown  in  Figure  4.4."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p56_Figure4.4.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   283.0,
+   582.0,
+   566.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 4.5",
+  "label": "Figure 4.5",
+  "page": 57,
+  "caption": "Figure 4.5. Smoke point luminous flame length plotted with respect to fuel mass flow rate divided by stoichiometric mixture fraction. A linear fit that intersects the origin is shown.",
+  "mentions": [
+   "SPICE data correlation including zero coflow data from Urban et al…...46 Figure 4.5.",
+   "46 In Figure 4.5 the smoke point flame lengths are plotted with respect to m ˙ / Z ."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p57_Figure4.5.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   310.0,
+   582.0,
+   641.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 4.6",
+  "label": "Figure 4.6",
+  "page": 59,
+  "caption": "Figure 4.6. Smoke point luminous flame lengths corrected by virtual origin. Arrow indicates possible outlier in LSP data.",
+  "mentions": [
+   "A linear fit that intersects the origin is shown……………………………………………………………….47 Figure 4.6.",
+   "Adding in data from the Laminar Soot Processes (LSP) experiment for microgravity flames in still air and correcting  the  SPICE  and  LSP  data  by  a  virtual  origin  correction  factor  produces Figure  4.6."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p59_Figure4.6.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   34,
+   582.0,
+   386.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 4.7",
+  "label": "Figure 4.7",
+  "page": 60,
+  "caption": "Figure 4.7. Variation of normal gravity smoke point with coflow velocity for normal gravity flames obtained with the SPICE module.",
+  "mentions": [
+   "Arrow indicates possible outlier in LSP data…………………………………….….49 vi Figure 4.7.",
+   "Figure 4.7 shows the coflow dependence of the smoke point for these normal gravity flames."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p60_Figure4.7.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   366.0,
+   582.0,
+   675.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 4.8",
+  "label": "Figure 4.8",
+  "page": 61,
+  "caption": "Figure 4.8. Normal gravity smoke point luminous flame length plotted with respect to fuel mass flow over stroichiometric mixture fraction. Linear fit forced to intersect the origin is also shown.",
+  "mentions": [
+   "Variation of normal gravity smoke point with coflow velocity for normal gravity flames obtained with the SPICE module………………………….…50 Figure 4.8.",
+   "Smoke  point  flame  length  correlates  with  fuel  mass  flow  over  the  stoichiometric mixture fraction, as shown in Figure 4.8."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p61_Figure4.8.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   255.0,
+   582.0,
+   545.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 4.9",
+  "label": "Figure 4.9",
+  "page": 63,
+  "caption": "Figure 4.9. Variation of smoke point length with increase in coflow velocity for unconfined coflow burner flames.",
+  "mentions": [
+   "Linear fit forced to intersect the origin is also shown………………………………………….…51 Figure 4.9.",
+   "For propane significant flame flickering occurred at coflow velocities below the range shown  in  Figure  4.9."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p63_Figure4.9.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   366.0,
+   582.0,
+   686.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 4.10",
+  "label": "Figure 4.10",
+  "page": 65,
+  "caption": "Figure 4.10. Smoke point length plotted against fuel mass flow rate over stoichiometric mixture fraction. A linear fit, forced to intersect the origin, is shown also.",
+  "mentions": [
+   "Variation of smoke point length with increase in coflow velocity for unconfined coflow burner flames……………………………………….…...53 Figure 4.10.",
+   "Figure 4.10 shows that despite the buoyant nature of these flames, their flame lengths correlate with mass flow rate."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p65_Figure4.10.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   117.0,
+   582.0,
+   419.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 4.11",
+  "label": "Figure 4.11",
+  "page": 66,
+  "caption": "Figure 4.11. Virtual origin corrected smoke point flame lengths plotted against fuel mass flow over stoichiometric mixture fraction for both normal gravity smoke point tests. Linear fits shown also for purely aesthetic reasons. Virtual origins are 0.5 and 1.88 for SPICE and unconfined smoke points, respectively.",
+  "mentions": [
+   "A linear fit, forced to intersect the origin, is shown also…………………………………………………………………....55 Figure 4.11.",
+   "The  normal  gravity  SPICE  data  can  be  added  to  Figure  4.10  to  create  Figure  4.11."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p66_Figure4.11.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   366.0,
+   582.0,
+   656.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 4.12",
+  "label": "Figure 4.12",
+  "page": 67,
+  "caption": "Figure 4.12. Fuel mass flow at smoke point condition versus coflow velocity. Normal gravity smoke point data from a variety of sources.",
+  "mentions": [
+   "Virtual origins are 0.5 and 1.88 for SPICE and unconfined smoke points, respectively…….56 Figure 4.12.",
+   "34 40 Smoke point data from Schalla and McDonald, Berry-Yelverton and Roberts, and the  current  study  can  be  combined  to  form  Figure  4.12."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p67_Figure4.12.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   310.0,
+   582.0,
+   653.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 4.13",
+  "label": "Figure 4.13",
+  "page": 68,
+  "caption": "Figure 4.13. Flame residence time for SPICE microgravity smoke points estimated with simplified Schlichting predication for nonreacting jets in coflow.",
+  "mentions": [
+   "Normal gravity smoke point data from a variety of sources…………………….……57 Figure 4.13.",
+   "Smoke Point Scaling and COMSOL Results Applying  Equation  (2.23)  to  the  SPICE  microgravity  flames  results  in  Figure  4.13."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p68_Figure4.13.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   343.0,
+   582.0,
+   671.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 4.14",
+  "label": "Figure 4.14",
+  "page": 69,
+  "caption": "Figure 4.14. Ratio of estimated soot formation time to soot oxidation time (residence time ratio) for SPICE microgravity flames.",
+  "mentions": [
+   "Flame residence time for SPICE microgravity smoke points estimated with simplified Schlichting predication for nonreacting jets in coflow……...58 Figure 4.14.",
+   "The  results  are  shown  in  Figure  4.14."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p69_Figure4.14.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   366.0,
+   582.0,
+   691.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 4.15",
+  "label": "Figure 4.15",
+  "page": 72,
+  "caption": "Figure 4.15. Centerline velocity decay of 50 cm/s (mean velocity) air jet in a uniform air coflow of various velocities.",
+  "mentions": [
+   "Ratio of estimated soot formation time to soot oxidation time (residence time ratio) for SPICE microgravity flames……………………………….….59 Figure 4.15.",
+   "To  better  evaluate  the  results  of  Figure  4.14,  consider  the  results  of  the  following COMSOL® simulations shown in Figure 4.15."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p72_Figure4.15.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   34,
+   582.0,
+   579.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 6.1",
+  "label": "Figure 6.1",
+  "page": 78,
+  "caption": "Figure 6.1. Pixel number to length scale distance correlation for all images obtained from Nikon still camera for normal gravity flames obtained with the SPICE module.",
+  "mentions": [
+   "The entire flow field is shown on the left and a close-up of the flow field near the jet exit is shown on the right……….….63 Figure 6.1.",
+   "This single correlation is shown in Figure 6.1."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p78_Figure6.1.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   34,
+   582.0,
+   243.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 6.2",
+  "label": "Figure 6.2",
+  "page": 79,
+  "caption": "Figure 6.2. Correlation between rotameter reading and volumetric flow rate for fuel gases propylene, propane, and ethylene.",
+  "mentions": [
+   "Pixel number to length scale distance correlation for all images obtained from Nikon still camera for normal gravity flames obtained with the SPICE module…………………………………………………………………….….68 Figure 6.2.",
+   "Fuel Rotameter Correlation Figure  6.2."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p79_Figure6.2.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   34,
+   582.0,
+   420.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 6.6",
+  "label": "Figure 6.6",
+  "page": 85,
+  "caption": "Figure 6.6. Stills of smoke points and measurements for 75% propylene, 1.6 mm burner. Ruler image taken for reference is also shown.",
+  "mentions": [
+   "Ruler image taken for reference is also shown………………………………………….…74 Figure 6.6.",
+   "74 Fuel 75% C H 75% C H 75% C H 75% C H 75% C H 75% C H 3 6 3 6 3 6 3 6 3 6 3 6 Nozzle (mm) 1.600 1.600 1.600 1.600 1.600 1.600 Day of Year 119 119 52 52 52 52 GMT 10:29:30 10:38:53 16:09:59 16:23:20 16:26:48 16:14:10 Fuel Rate (mg/s) 0.627 0.922 0.640 1.012 1.498 1.908 Air Rate (cm/s) 12.89 26.99 12.89 28.87 51.34 64.60 Length (mm) 14.16 20.36 14.47 21.14 31.70 37.68 Figure 6.6."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p85_Figure6.6.png",
+  "region": "below",
+  "bbox_pt": [
+   30,
+   384.0,
+   582.0,
+   567.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 6.8",
+  "label": "Figure 6.8",
+  "page": 86,
+  "caption": "Figure 6.8. Stills of smoke points and measurements for 75% propylene, 0.762 mm burner. Rule image taken for reference is also shown.",
+  "mentions": [
+   "Ruler image taken for reference is also shown............75 Figure 6.8.",
+   "75 Fuel 75% C H 75% C H 75% C H 75% C H 3 6 3 6 3 6 3 6 0.762 0.762 0.762 0.762 Nozzle (mm) Day of Year 136 136 52 173 17:21:52 17:23:30 17:30:19 12:40:44 GMT Fuel Rate (mg/s) 0.871 0.896 1.908 1.998 Air Rate (cm/s) 14.77 14.77 37.33 38.27 20.15 21.97 39.52 43.98 Length (mm) Figure 6.8."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p86_Figure6.8.png",
+  "region": "below",
+  "bbox_pt": [
+   30,
+   413.0,
+   582.0,
+   575.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:Figure 6.10",
+  "label": "Figure 6.10",
+  "page": 87,
+  "caption": "Figure 6.10. Stills of smoke points and measurements for additional propylene, 1.6 mm burner points. Ruler image taken for reference is also shown.",
+  "mentions": [
+   "Rule image taken for reference is also shown…………………………….…76 vii Figure 6.10.",
+   "76 Fuel C H C H C H C H C H C H 3 6 3 6 3 6 3 6 3 6 3 6 Nozzle (mm) 1.600 1.600 1.600 1.600 1.600 1.600 Day of Year 174 174 174 174 174 174 GMT 10:49:00  10:46:19  11:05:39  11:25:31  11:22:35  11:14:07 Fuel Rate (mg/s) 0.393 0.572 0.715 0.762 0.965 1.168 Air Rate (cm/s) 10.07 20.41 29.81 40.15 46.73 57.08 Length (mm) 13.42 15.49 17.57 19.40 23.08 26.53 Figure  6.10."
+  ],
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/p87_Figure6.10.png",
+  "region": "below",
+  "bbox_pt": [
+   30,
+   377.0,
+   582.0,
+   546.0
+  ],
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SPICE_FinalReport_5eb4dc:Figure 1",
+  "label": "Figure 1",
+  "page": 8,
+  "caption": "Figure 1. Soot path lines through buoyant and non-buoyant flames",
+  "mentions": [
+   "List of figures Figure 1."
+  ],
+  "png": "PSI_107_Reports_SPICE_FinalReport_5eb4dc/p8_Figure1.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   263.0,
+   582.0,
+   517.0
+  ],
+  "paper": {
+   "title": "SPICE FinalReport (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SPICE_FinalReport.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SPICE_FinalReport_5eb4dc:Figure 2",
+  "label": "Figure 2",
+  "page": 9,
+  "caption": "Figure 2. Schematic of SPICE experiment apparatus and its connection with SMG. The upper-right portion separated by dash lines are the SPICE apparatus.",
+  "mentions": [
+   "Soot path lines through buoyant and non-buoyant flames Figure 2.",
+   "The SPICE apparatus configuration and the connection to the MSG power supply are shown in Figure 2."
+  ],
+  "png": "PSI_107_Reports_SPICE_FinalReport_5eb4dc/p9_Figure2.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   326.0,
+   582.0,
+   675.0
+  ],
+  "paper": {
+   "title": "SPICE FinalReport (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SPICE_FinalReport.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SPICE_FinalReport_5eb4dc:Figure 3",
+  "label": "Figure 3",
+  "page": 10,
+  "caption": "Figure 3. A photo of the SPICE apparatus. Air flows from left to right.",
+  "mentions": [
+   "Experiment Assembly: Figure 3 shows a photo of the Experiment Assembly.",
+   "5 As shown in Fig 3, there are two rectangular boxes attached to the each end of the flow duct."
+  ],
+  "png": "PSI_107_Reports_SPICE_FinalReport_5eb4dc/p10_Figure3.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   343.0,
+   582.0,
+   553.0
+  ],
+  "paper": {
+   "title": "SPICE FinalReport (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SPICE_FinalReport.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SPICE_FinalReport_5eb4dc:Figure 4",
+  "label": "Figure 4",
+  "page": 11,
+  "caption": "Figure 4. This photo shows three nozzles and six igniters are stored in the storage case for being uploaded to the ISS.",
+  "mentions": [
+   "Figure  4  is  a  photo  of  the  igniters  and  nozzles  in  a  storage  box shipped to ISS."
+  ],
+  "png": "PSI_107_Reports_SPICE_FinalReport_5eb4dc/p11_Figure4.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   357.0,
+   582.0,
+   558.0
+  ],
+  "paper": {
+   "title": "SPICE FinalReport (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SPICE_FinalReport.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SPICE_FinalReport_5eb4dc:Figure 5",
+  "label": "Figure 5",
+  "page": 13,
+  "caption": "Figure 5. A sketch of the fuel supply system including a fuel bottle, a pressure regulator and a mass flow controller.",
+  "mentions": [
+   "6 Figure 5."
+  ],
+  "png": "PSI_107_Reports_SPICE_FinalReport_5eb4dc/p13_Figure5.png",
+  "region": "below",
+  "bbox_pt": [
+   30,
+   304.0,
+   582.0,
+   502.0
+  ],
+  "paper": {
+   "title": "SPICE FinalReport (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SPICE_FinalReport.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SPICE_FinalReport_5eb4dc:Figure 6",
+  "label": "Figure 6",
+  "page": 13,
+  "caption": "Figure 6. The photo on the left shows six fuel bottle assemblies in the storage case and the photo on the right shows a single fuel bottle assembly including a diaphragm valve and a quick connect. The green label on the bottle describes the fuel type and pressure.",
+  "mentions": [
+   "The photo on the left of Figure 6 shows one of the fuel bottle containers that holds six fuel bottle assemblies and the photo on the right shows a single assembly."
+  ],
+  "png": "PSI_107_Reports_SPICE_FinalReport_5eb4dc/p13_Figure6.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   34,
+   582.0,
+   503.0
+  ],
+  "paper": {
+   "title": "SPICE FinalReport (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SPICE_FinalReport.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SPICE_FinalReport_5eb4dc:Figure 7",
+  "label": "Figure 7",
+  "page": 14,
+  "caption": "Figure 7. A side view of the SPICE apparatus shows a red connect to the fuel bottle assemblies.",
+  "mentions": [
+   "7 Figure 7.",
+   "Figure 7 is a side view of the Experiment Assembly showing the connector to the gas bottle, a male Swagelok® Quick Connect in red."
+  ],
+  "png": "PSI_107_Reports_SPICE_FinalReport_5eb4dc/p14_Figure7.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   34,
+   582.0,
+   274.0
+  ],
+  "paper": {
+   "title": "SPICE FinalReport (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SPICE_FinalReport.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SPICE_FinalReport_5eb4dc:Figure 8",
+  "label": "Figure 8",
+  "page": 14,
+  "caption": "Figure 8. A front view of SPICE apparatus inside of the MSG and positions of the still camera and the video camera. Note that because of limited space, the video camera views the o flame through a 45 angled mirror.",
+  "mentions": [
+   "Avionic boxes Figure 8.",
+   "8 Figure  8  illustrates  the  installation  of  the  SPICE  apparatus  inside  the  MSG."
+  ],
+  "png": "PSI_107_Reports_SPICE_FinalReport_5eb4dc/p14_Figure8.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   395.0,
+   582.0,
+   656.0
+  ],
+  "paper": {
+   "title": "SPICE FinalReport (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SPICE_FinalReport.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SPICE_FinalReport_5eb4dc:Figure 13",
+  "label": "Figure 13",
+  "page": 17,
+  "caption": "Figure 13. A photo of the SPICE apparatus with flow measurement locations marked on the top and front windows.",
+  "mentions": [
+   "Figure  13  shows  various  hole  locations  through  which  air velocities  were  measured.",
+   "10 Figure 13."
+  ],
+  "png": "PSI_107_Reports_SPICE_FinalReport_5eb4dc/p17_Figure13.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   34,
+   582.0,
+   283.0
+  ],
+  "paper": {
+   "title": "SPICE FinalReport (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SPICE_FinalReport.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SPICE_FinalReport_5eb4dc:Figure 14",
+  "label": "Figure 14",
+  "page": 17,
+  "caption": "Figure 14. Air velocity distribution on the center vertical plane of the flow duct for 6 different fan settings.",
+  "mentions": [
+   "Figure 14 show the air velocities on a vertical plane in parallel with the front window and at the center of the duct.",
+   "SPICE Duct Velocity Profile, Center Vertical Profile Thin lines are for 13 mm station and thick lines 56 mm station 75 Fan Dial Settings 0                 2                4                6               8             10 ) m (m 50 r o lo F ff O n o ti si o P 25 l ca rti e V 0 0 10 20 30 40 50 60 70 80 Velocity (cm/s) Figure 14."
+  ],
+  "png": "PSI_107_Reports_SPICE_FinalReport_5eb4dc/p17_Figure14.png",
+  "region": "below",
+  "bbox_pt": [
+   30,
+   681.0,
+   582.0,
+   758.0
+  ],
+  "paper": {
+   "title": "SPICE FinalReport (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SPICE_FinalReport.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ },
+ {
+  "id": "PSI_107_Reports_SPICE_FinalReport_5eb4dc:Figure 17",
+  "label": "Figure 17",
+  "page": 21,
+  "caption": "Figure 17. Still camera images of 75% C H flames 3 6 with (top) decreasing coflow velocity, and (bottom) increasing fuel flow rate. Images were taken at f/11 with a shutter speed of 3.1 ms, except the rightmost image in rd the top row and 3 image in the bottom row, which used a shutter speed of 1.3 ms in original color.",
+  "mentions": [
+   "14 Figure  17  shows  images  for  representative  flames  near  their  smoke  points."
+  ],
+  "png": "PSI_107_Reports_SPICE_FinalReport_5eb4dc/p21_Figure17.png",
+  "region": "above",
+  "bbox_pt": [
+   30,
+   164.0,
+   582.0,
+   499.0
+  ],
+  "paper": {
+   "title": "SPICE FinalReport (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SPICE_FinalReport.pdf"
+  },
+  "method": "caption-anchored crop (pdftohtml -xml + pdftoppm)"
+ }
+]

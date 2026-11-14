@@ -46,6 +46,7 @@ FROM paper_search WHERE paper_search MATCH 'PMMA AND spread' LIMIT 10;
 | `analysis/video_full/` | Episode nyala dari video + **lembar bukti PNG** |
 | `analysis/saffire/`, `analysis/ml/` | Analisis Saffire dan model |
 | `analysis/spice/` | 55 titik asap SPICE dari berkas mentah NASA + model hukum pangkat/GP |
+| `analysis/figures/` | Gambar asli dari PDF paper + caption, halaman, DOI (`scripts/paper_figures.py`); ditampilkan asisten di chat |
 | `analysis/gbridge/` | Jembatan-g: batas nyala bahan padat terhadap (O₂, aliran, g), titik BASS-II hasil urai |
 | `scripts/` | Seluruh pipeline, dari pengambilan sampai pembangunan basis data |
 | `app/` | Dashboard (buka lewat server lokal, lihat di bawah) |

@@ -680,6 +680,12 @@ class H(BaseHTTPRequestHandler):
             self.send_header("Location", "/insight/")
             self.end_headers()
             return
+        if u.path.startswith("/figures/"):                     # gambar paper hasil scripts/paper_figures.py
+            base = (ROOT / "analysis" / "figures").resolve()
+            f = (base / unquote(u.path[len("/figures/"):])).resolve()
+            if base in f.parents and f.is_file() and f.suffix.lower() == ".png":
+                return self._send(200, f.read_bytes(), "image/png")
+            return self._send(404, b"tidak ada", "text/plain")
         if u.path.startswith("/app/") or u.path.startswith("/insight/"):   # halaman statis: /app/ = mode peneliti, /insight/ = tampilan juri
             base = INSIGHT if u.path.startswith("/insight/") else APP
             rel = u.path[len("/insight/") if base is INSIGHT else len("/app/"):]

@@ -83,7 +83,9 @@ td.num,th.num{text-align:right}
 .controls{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
 .controls label{display:flex;gap:6px;align-items:center;font-size:12px;color:var(--ink-2)}
 .controls input[type=range]{width:90px}
-.rank{display:grid;grid-template-columns:28px minmax(150px,1.1fr) minmax(120px,1fr) repeat(3,minmax(84px,.7fr)) 54px;gap:4px 10px;align-items:center}
+.rank{display:grid;grid-template-columns:28px minmax(150px,1.1fr) minmax(120px,1fr) repeat(3,minmax(84px,.7fr)) minmax(96px,.8fr) 54px;gap:4px 10px;align-items:center}
+.rank .stab b{font-variant-numeric:tabular-nums}
+.rank .stab .hint{font-size:11px;line-height:1.3}
 .rank .h{font-size:11px;font-weight:600;color:var(--ink-2);padding-bottom:4px;border-bottom:1px solid var(--axis)}
 .rank .row{display:contents;cursor:pointer}
 .rank .row>div{padding:5px 0;border-bottom:1px solid var(--grid);min-width:0}
@@ -156,6 +158,13 @@ dialog h3{margin:0 0 2px;font-size:19px}
 .turn .ans{white-space:pre-wrap;background:var(--surface-2);padding:9px 12px;border-radius:14px 14px 14px 4px;max-width:calc(100% - 36px)}
 .turn .hint{margin:4px 0 0 36px;font-size:11.5px}
 .mascot{flex:none}
+.figs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:10px;white-space:normal}
+.figs figure{margin:0;background:var(--surface);border:1px solid var(--grid);border-radius:10px;overflow:hidden}
+.figs img{display:block;width:100%;height:110px;object-fit:contain;background:#fff}
+.figs figcaption{padding:6px 8px;font-size:11.5px;line-height:1.35;color:var(--ink-2)}
+.figs figcaption span{display:block;margin:2px 0 3px;color:var(--ink)}
+.figs figcaption a,.figs figcaption i{font-size:11px}
+a.chip{text-decoration:none}
 .dots span{display:inline-block;width:6px;height:6px;margin-right:3px;border-radius:50%;background:var(--mute);animation:dot 1s infinite}
 .dots span:nth-child(2){animation-delay:.15s}.dots span:nth-child(3){animation-delay:.3s}
 @keyframes dot{0%,80%,100%{opacity:.25}40%{opacity:1}}
@@ -372,21 +381,49 @@ function ranked() {
     .map((r) => ({ ...r, score: (w.direct * r.components.direct + w.conditions * r.components.conditions + w.evidence * r.components.evidence) / sum }))
     .sort((a, b) => b.score - a.score || a.accession.localeCompare(b.accession, undefined, { numeric: true }));
 }
+// Kestabilan peringkat (SMAA, Lahdelma, Hokkanen & Salminen 1998): bobot (direct, conditions, evidence)
+// diacak seragam di simpleks 2000 kali (Dirichlet(1,1,1), benih tetap). Untuk tiap investigasi dicatat seberapa
+// sering ia menempati peringkatnya sekarang atau lebih baik, dan rentang peringkatnya (persentil 5-95).
+// Tidak bergantung pada posisi penggeser: yang diukur adalah seberapa besar urutan ini bergantung pada pilihan bobot.
+const STAB = {};
+function stability(rows) {
+  const key = S.sc + "|" + (S.pillar || "");
+  if (STAB[key]) return STAB[key];
+  let seed = 20261114;
+  const rnd = () => { seed = (seed + 0x6D2B79F5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const N = 2000, ranks = Object.fromEntries(rows.map((r) => [r.accession, []]));
+  for (let s = 0; s < N; s++) {
+    const g = [0, 0, 0].map(() => -Math.log(1 - rnd())), t = g[0] + g[1] + g[2];
+    const sc = rows.map((r) => ({ a: r.accession, v: (g[0] * r.components.direct + g[1] * r.components.conditions + g[2] * r.components.evidence) / t }))
+      .sort((x, y) => y.v - x.v || x.a.localeCompare(y.a, undefined, { numeric: true }));
+    sc.forEach((x, i) => ranks[x.a].push(i + 1));
+  }
+  const out = {};
+  for (const [a, rs] of Object.entries(ranks)) { rs.sort((x, y) => x - y); out[a] = { rs, lo: rs[Math.floor(0.05 * (N - 1))], hi: rs[Math.ceil(0.95 * (N - 1))] }; }
+  return (STAB[key] = out);
+}
 function renderRank() {
   $("pillars").innerHTML = [[null, "All pillars"], ["prevention", "Prevention"], ["detection", "Detection"], ["suppression", "Suppression"]]
     .map(([k, l]) => `<button data-p="${k ?? ""}" aria-pressed="${S.pillar === k}">${l}</button>`).join("");
   for (const [id, k] of [["wD", "direct"], ["wC", "conditions"], ["wE", "evidence"]]) { $(id).value = Math.round(S.w[k] * 100); $(id + "v").textContent = S.w[k].toFixed(2); }
   const m = (v) => `<div class="meter"><span style="width:${Math.round(v * 100)}%"></span></div><div class="mv">${v.toFixed(2)}</div>`;
-  $("rank").innerHTML = `<div class="h">#</div><div class="h">Investigation</div><div class="h">Score</div><div class="h c">Direct link</div><div class="h c">Conditions</div><div class="h c">Evidence</div><div class="h"></div>`
-    + ranked().map((r, i) => `<div class="row" data-acc="${r.accession}" tabindex="0" role="button" aria-label="Open ${esc(r.name)}">
+  const rows = ranked(), stab = stability(rows), w = S.w, ws = (w.direct + w.conditions + w.evidence) || 1;
+  $("rank").innerHTML = `<div class="h">#</div><div class="h">Investigation</div><div class="h">Score</div><div class="h c">Direct link</div><div class="h c">Conditions</div><div class="h c">Evidence</div><div class="h c" title="How often this investigation keeps this rank or better when the three weights are drawn at random (2,000 draws)">Rank stability</div><div class="h"></div>`
+    + rows.map((r, i) => {
+      const st = stab[r.accession], keep = st.rs.filter((x) => x <= i + 1).length / st.rs.length;
+      const formula = `(${(w.direct / ws).toFixed(2)} × ${r.components.direct.toFixed(2)} direct) + (${(w.conditions / ws).toFixed(2)} × ${r.components.conditions.toFixed(2)} conditions) + (${(w.evidence / ws).toFixed(2)} × ${r.components.evidence.toFixed(2)} evidence) = ${r.score.toFixed(3)}`;
+      return `<div class="row" data-acc="${r.accession}" tabindex="0" role="button" aria-label="Open ${esc(r.name)}">
       <div>${i + 1}</div>
       <div class="nm"><b>${esc(r.name)}</b>${r.pillars.map((p) => `<span class="chip">${p}</span>`).join("")}<div class="hint">${esc(r.why.conditions)}</div></div>
-      <div><div class="meter total"><span style="width:${Math.round(r.score * 100)}%"></span></div><div class="mv"><b style="color:var(--ink)">${r.score.toFixed(2)}</b></div></div>
+      <div title="${esc(formula)}"><div class="meter total"><span style="width:${Math.round(r.score * 100)}%"></span></div><div class="mv"><b style="color:var(--ink)">${r.score.toFixed(2)}</b></div></div>
       <div class="c" title="${esc(r.why.direct)}">${m(r.components.direct)}</div>
       <div class="c" title="${esc(r.why.conditions)}">${m(r.components.conditions)}</div>
       <div class="c" title="${esc(r.why.evidence)}">${m(r.components.evidence)}</div>
-      <div class="hint">${esc(r.accession)}</div></div>`).join("");
-  $("method").innerHTML = `<b>How the score is built.</b> ${esc(D.method.score)}. <b>Direct link:</b> ${esc(D.method.direct)}. <b>Conditions:</b> ${esc(D.method.conditions)}. <b>Evidence:</b> ${esc(D.method.evidence)}. The score is our transparent rubric, not a NASA judgement; move the sliders to test how robust the order is.`;
+      <div class="c stab" title="Rank ${st.lo === st.hi ? st.lo : st.lo + " to " + st.hi} in 90% of random weightings"><b>${Math.round(keep * 100)}%</b><div class="hint">rank ${st.lo === st.hi ? st.lo : st.lo + "–" + st.hi}</div></div>
+      <div class="hint">${esc(r.accession)}</div></div>`; }).join("");
+  $("method").innerHTML = `<b>How the score is built.</b> ${esc(D.method.score)}. <b>Direct link:</b> ${esc(D.method.direct)}. <b>Conditions:</b> ${esc(D.method.conditions)}. <b>Evidence:</b> ${esc(D.method.evidence)}.
+    <b>What the number means.</b> The score is a weighted sum on a 0–1 scale: it orders investigations for this scenario. It is not a probability, a quality grade or a NASA judgement; hover a score to see the arithmetic.
+    <b>Rank stability.</b> The weights are a choice, so we redraw them 2,000 times at random (every mix of the three equally likely) and count how often each investigation keeps its place or better; “rank 2–5” is the range it lands in 90% of the time. A high percentage means the order does not hinge on our weights. Method: stochastic multicriteria acceptability analysis (Lahdelma, Hokkanen &amp; Salminen 1998).`;
 }
 $("pillars").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; S.pillar = b.dataset.p || null; renderRank(); renderScen(); });
 for (const [id, k] of [["wD", "direct"], ["wC", "conditions"], ["wE", "evidence"]]) $(id).addEventListener("input", (e) => { S.w[k] = +e.target.value / 100; renderRank(); renderScen(); });
@@ -561,10 +598,25 @@ function openCompare(accs) {
 $("dlg").addEventListener("click", (e) => { if (e.target === $("dlg")) $("dlg").close(); });
 
 // ---------------------------------------------------------------- ask
-function fmtAnswer(a) {
-  return esc(a).replace(/\[\[inv:([^\]]+)\]\]/g, (m, id) => `<a href="#" data-inv="${id}">${id}</a>`)
+function fmtAnswer(a, cites) {
+  // sitasi paper -> tautan DOI / sumber bila backend menemukannya (citations[].url); selain itu tetap chip
+  const link = {};
+  for (const c of cites || []) if (c.kind === "paper" && c.url) link[c.ref] = c;
+  return esc(a).replace(/\*\*([^*\n]+)\*\*/g, "<b>$1</b>").replace(/`([^`\n]+)`/g, "<code>$1</code>")
+    .replace(/\[\[inv:([^\]]+)\]\]/g, (m, id) => `<a href="#" data-inv="${id}">${id}</a>`)
     .replace(/\[\[test:([^\]]+)\]\]/g, (m, id) => S.live ? `<a href="${API}/app/#s=${encodeURIComponent(JSON.stringify({ focus: "test:" + id }))}">${id}</a>` : id)
-    .replace(/\[\[(model|paper|m):([^\]]+)\]\]/g, (m, k, v) => `<span class="chip">${k === "model" ? "model: " : k === "paper" ? "paper: " : ""}${v}</span>`);
+    .replace(/\[\[(model|paper|m):([^\]]+)\]\]/g, (m, k, v) => {
+      const c = k === "paper" && link["paper:" + v.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"')];
+      return c ? `<a class="chip" href="${esc(c.url)}" target="_blank" rel="noopener" title="${esc(c.doi ? "doi:" + c.doi : c.url)}">paper: ${v}</a>`
+        : `<span class="chip">${k === "model" ? "model: " : k === "paper" ? "paper: " : ""}${v}</span>`; });
+}
+// gambar asli dari paper (scripts/paper_figures.py): thumbnail -> ukuran penuh, caption, halaman, sumber
+function figStrip(figs) {
+  if (!figs || !figs.length) return "";
+  return `<div class="figs">${figs.map((f) => `<figure>
+    <a href="${esc(API + f.image)}" target="_blank" rel="noopener"><img src="${esc(API + f.image)}" alt="${esc(f.label + ": " + f.caption)}" loading="lazy"></a>
+    <figcaption><b>${esc(f.label)}</b> · p. ${f.page}<span>${esc(f.caption.replace(/^\s*(fig(ure)?\.?|gambar)\s*[\d.]+[a-z]?\.?\s*/i, "").slice(0, 160))}</span>
+    ${f.url ? `<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.paper.slice(0, 70))}${f.doi ? " · doi" : ""}</a>` : `<i>${esc(f.paper.slice(0, 70))}</i>`}</figcaption></figure>`).join("")}</div>`;
 }
 function renderAsk() {
   // contoh pertanyaan hanya tampil sebelum percakapan dimulai, supaya panel tetap lapang
@@ -577,7 +629,7 @@ function renderAsk() {
   const who = (c) => c.mode === "offline" ? "rule-based planner (no language model)" : (c.model || c.mode);
   $("chat").innerHTML = S.chat.map((c) => `<div class="turn"><div class="me">${esc(c.q)}</div>
     <div class="row">${avatar}${c.pending ? `<div class="ans dots" aria-label="working"><span></span><span></span><span></span></div>`
-      : `<div class="ans">${fmtAnswer(c.a)}</div>`}</div>
+      : `<div class="ans">${fmtAnswer(c.a, c.cites)}${figStrip(c.figures)}</div>`}</div>
     ${c.pending ? "" : `<div class="hint">${c.grounding ? (c.grounding.ok ? `${c.grounding.numbers_checked} numbers checked, all found in tool results` : st("warning", "numbers without a source: " + c.grounding.ungrounded.join(" "))) : ""}
       ${c.tools && c.tools.length ? " · tools: " + esc(c.tools.join(", ")) : ""}${c.mode ? " · " + esc(who(c)) : ""}</div>`}</div>`).join("");
   const b = $("chatBody"); b.scrollTop = b.scrollHeight;
@@ -588,7 +640,7 @@ async function ask(q) {
     if (S.live) {
       const history = S.chat.filter((c) => c !== turn && !c.pending && c.a).slice(-6).map((c) => ({ q: c.q, a: c.a }));
       const r = await (await fetch(API + "/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question: q, mode: "auto", state: {}, history }) })).json();
-      Object.assign(turn, { pending: false, a: r.answer || r.error || "(no answer)", grounding: r.grounding, tools: (r.tool_calls || []).map((t) => t.name), mode: r.mode, model: r.model });
+      Object.assign(turn, { pending: false, a: r.answer || r.error || "(no answer)", grounding: r.grounding, tools: (r.tool_calls || []).map((t) => t.name), mode: r.mode, model: r.model, figures: r.figures, cites: r.citations });
     } else {
       const c = (D.canned || []).find((x) => x.q === q);
       Object.assign(turn, { pending: false, a: c ? c.a : "This static copy only replays the suggested questions.", grounding: c?.grounding, tools: c?.tools, mode: c?.mode });
