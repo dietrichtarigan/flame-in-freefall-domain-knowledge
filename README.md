@@ -57,7 +57,9 @@ FROM paper_search WHERE paper_search MATCH 'PMMA AND spread' LIMIT 10;
 | `analysis/video_full/` | Episode nyala dari video + **lembar bukti PNG** |
 | `analysis/saffire/`, `analysis/ml/` | Analisis Saffire dan model |
 | `analysis/spice/` | 55 titik asap SPICE dari berkas mentah NASA + model hukum pangkat/GP |
-| `analysis/figures/` | Gambar asli dari PDF paper + caption, halaman, DOI (`scripts/paper_figures.py`); ditampilkan asisten di chat |
+| `analysis/figures/` | Gambar dan persamaan bernomor dipotret dari PDF paper + caption/konteks, halaman, DOI (`scripts/paper_figures.py`); ditampilkan asisten di chat |
+| `analysis/retrieval/` | Evaluasi pencarian paper: BM25 berperingkat vs LSA vs hibrida vs cara lama (`scripts/retrieval.py eval`) |
+| `app/insight/research_map.json` | Peta riset paper ↔ investigasi ↔ topik + matriks bukti (`scripts/research_map.py`) |
 | `analysis/gbridge/` | Jembatan-g: batas nyala bahan padat terhadap (O₂, aliran, g), titik BASS-II hasil urai |
 | `scripts/` | Seluruh pipeline, dari pengambilan sampai pembangunan basis data |
 | `app/` | Dashboard (buka lewat server lokal, lihat di bawah) |
@@ -86,6 +88,8 @@ cd app && python -m http.server 8000
 ```
 
 Lalu buka `http://localhost:8000/insight/index.html`.
+
+**Asisten di chat** memakai alat yang membaca data repo ini, bukan ingatan model: pencarian paper berperingkat (`scripts/retrieval.py`), gambar dan persamaan asli dari paper, simulasi bertier dengan selang (batas O₂ di Bulan/Mars lewat `scripts/gbridge.py`, titik asap SPICE) dan grafik dari data (`scripts/chat_tools.py`). Model menandai sendiri jawaban yang ekstrapolasi.
 
 Untuk asisten tanya-jawab bebas (`/ask`), jalankan backend `python scripts/brain.py serve`
 dan buka `http://127.0.0.1:8765/insight/`. Cara menyalakannya di internet (mode publik, batas

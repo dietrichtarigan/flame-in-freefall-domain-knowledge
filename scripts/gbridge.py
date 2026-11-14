@@ -35,7 +35,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DB = ROOT / "kb" / "gold" / "freefall.sqlite"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from kbpaths import gold_db  # noqa: E402
+DB = gold_db()
 OUT = ROOT / "analysis" / "gbridge"
 APP = ROOT / "app" / "gbridge"
 

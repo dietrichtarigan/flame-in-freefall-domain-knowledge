@@ -34,7 +34,9 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-GOLD = ROOT / "kb" / "gold" / "freefall.sqlite"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from kbpaths import gold_db  # noqa: E402
+GOLD = gold_db()
 BRAIN = ROOT / "kb" / "gold" / "brain.sqlite"
 OUT = ROOT / "app" / "insight" / "data.json"
 CHALLENGE = "Space Apps 2026 challenge statement 'Flame in Freefall'"

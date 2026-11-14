@@ -128,6 +128,30 @@ dialog::backdrop{background:rgba(0,0,0,.45)}
 dialog h3{margin:0 0 2px;font-size:19px}
 .cmp td:first-child,.cmp th:first-child{color:var(--ink-2);width:150px}
 
+/* research map */
+.lead{margin:0 0 10px;color:var(--ink-2);font-size:15px}
+.netleg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--ink-2)}
+.netleg i{display:inline-block;width:18px;height:0;border-top:2px solid var(--ink-2);margin-right:5px;vertical-align:3px}
+.netwrap{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:var(--gap);align-items:start}
+@media (max-width:900px){.netwrap{grid-template-columns:1fr}}
+#net{background:var(--surface-2);border-radius:var(--radius)}
+#net .e{stroke:var(--axis);stroke-width:.7}
+#net .e.listed{stroke:var(--ink-2);stroke-opacity:.45}
+#net .e.tag{stroke-dasharray:2 3;stroke-opacity:.6}
+#net .e.similar{stroke-dasharray:6 4;stroke-opacity:.35}
+#net .e.on{stroke:var(--accent);stroke-opacity:1;stroke-width:1.4}
+#net .n{cursor:pointer}
+#net .n.dim{opacity:.15}
+#net .lbl{font-size:12px;font-weight:650;fill:var(--ink);paint-order:stroke;stroke:var(--surface-2);stroke-width:3px;pointer-events:none}
+.netinfo{background:var(--surface);border:1px solid var(--grid);border-radius:var(--radius);padding:12px 14px;font-size:13px;min-height:120px}
+.netinfo h3{margin:0 0 4px;font-size:14px;line-height:1.3}
+.netinfo ul{margin:6px 0 0;padding-left:16px;max-height:260px;overflow:auto}
+table.matrix{border-collapse:collapse;font-size:12.5px;width:100%}
+table.matrix th,table.matrix td{padding:5px 8px;border-bottom:1px solid var(--grid);text-align:center;white-space:nowrap}
+table.matrix th:first-child,table.matrix td:first-child{text-align:left}
+table.matrix tbody tr{cursor:pointer}
+table.matrix tbody tr:hover td{outline:1px solid var(--axis)}
+table.matrix td.c0{color:var(--mute)}
 /* ask: tombol maskot (kanan bawah) + panel chat yang bergeser dari kanan */
 #chatFab{position:fixed;right:20px;bottom:20px;z-index:40;width:60px;height:60px;padding:0;border:none;border-radius:50%;
   background:var(--accent);box-shadow:0 6px 20px rgba(0,0,0,.25);display:grid;place-items:center;transition:transform .15s}
@@ -165,6 +189,13 @@ dialog h3{margin:0 0 2px;font-size:19px}
 .figs figcaption span{display:block;margin:2px 0 3px;color:var(--ink)}
 .figs figcaption a,.figs figcaption i{font-size:11px}
 a.chip{text-decoration:none}
+.plot{margin-top:10px;background:var(--surface);border:1px solid var(--grid);border-radius:10px;padding:8px 8px 6px;white-space:normal}
+.plot .pt{font-weight:600;font-size:12.5px;margin:0 0 4px}
+.plot svg{width:100%;height:auto;display:block}
+.plot svg text{font-size:10px;fill:var(--ink-2)}
+.plot .lg{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:11px;color:var(--ink-2);margin-top:4px}
+.plot .lg i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;vertical-align:-1px}
+.plot .src{font-size:10.5px;color:var(--mute);margin-top:3px}
 .dots span{display:inline-block;width:6px;height:6px;margin-right:3px;border-radius:50%;background:var(--mute);animation:dot 1s infinite}
 .dots span:nth-child(2){animation-delay:.15s}.dots span:nth-child(3){animation-delay:.3s}
 @keyframes dot{0%,80%,100%{opacity:.25}40%{opacity:1}}
@@ -198,6 +229,7 @@ footer{color:var(--mute);font-size:12px;padding:18px 0 40px;border-top:1px solid
   <button role="tab" data-tab="evidence"><span class="n">2</span>What the data says</button>
   <button role="tab" data-tab="gaps"><span class="n">3</span>Gaps and next tests</button>
   <button role="tab" data-tab="inv">All 24 investigations</button>
+  <button role="tab" data-tab="net">Research map</button>
 </nav>
 
 <section class="panel" id="p-rank">
@@ -250,6 +282,27 @@ footer{color:var(--mute);font-size:12px;padding:18px 0 40px;border-top:1px solid
       <div class="card"><h2>Back on Earth</h2><div id="earth"></div>
         <p class="hint" style="margin:8px 0 0">Examples are those given in the challenge statement, matched to the investigations that study the same pillar.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="panel" id="p-net">
+  <div class="card">
+    <h2>Research map</h2>
+    <p class="lead">Every paper in the library, placed by what ties it to NASA's flight investigations.</p>
+    <div class="controls">
+      <span class="netleg" id="netLeg"></span>
+      <label><input type="checkbox" id="netSim" checked> Show topic-similarity links</label>
+      <button id="netReset" type="button">Clear selection</button>
+    </div>
+    <div class="netwrap"><svg id="net" viewBox="0 0 1000 640" width="100%" role="img" aria-label="Network of papers, investigations and topics"></svg>
+      <aside id="netInfo" class="netinfo"></aside></div>
+    <p class="hint" id="netMethod" style="margin:10px 0 0"></p>
+  </div>
+  <div class="card" style="margin-top:var(--gap)">
+    <h2>Evidence matrix</h2>
+    <p class="lead">Which investigations hold tests inside each habitat's atmosphere.</p>
+    <div class="scroll"><table class="matrix" id="matrix"></table></div>
+    <p class="hint" style="margin:8px 0 0">Number = tests inside the scenario's oxygen and pressure band ("O&#8322; only" when pressure was not recorded). Shading follows the conditions score used in the ranking. Click a row to open the investigation.</p>
   </div>
 </section>
 
@@ -610,6 +663,37 @@ function fmtAnswer(a, cites) {
       return c ? `<a class="chip" href="${esc(c.url)}" target="_blank" rel="noopener" title="${esc(c.doi ? "doi:" + c.doi : c.url)}">paper: ${v}</a>`
         : `<span class="chip">${k === "model" ? "model: " : k === "paper" ? "paper: " : ""}${v}</span>`; });
 }
+// grafik dari data/model (alat make_plot): SVG sederhana, sumbu berlabel, sumber + tier di bawahnya
+const SUP = { "-": "⁻", 0: "⁰", 1: "¹", 2: "²", 3: "³", 4: "⁴", 5: "⁵", 6: "⁶", 7: "⁷", 8: "⁸", 9: "⁹" };
+const PAL = ["var(--gas)", "var(--droplet)", "var(--solid)", "#8b6cc9", "#c99a22", "var(--critical)", "#3aa3a3", "#9a6b4b"];
+function plotSVG(pl) {
+  const W = 400, H = 250, ml = 46, mr = 10, mt = 10, mb = 38, all = [];
+  for (const s of pl.series) for (const q of (s.points || []).concat(s.lo || [], s.hi || [])) all.push(q);
+  if (!all.length) return "";
+  const fx = (v) => pl.log_x ? Math.log10(v) : v;
+  let x0 = Math.min(...all.map((q) => fx(q[0]))), x1 = Math.max(...all.map((q) => fx(q[0])));
+  let y0 = Math.min(...all.map((q) => q[1])), y1 = Math.max(...all.map((q) => q[1]));
+  const px = (x1 - x0) * 0.05 || 1, py = (y1 - y0) * 0.08 || 1; x0 -= px; x1 += px; y0 = Math.max(pl.log_x ? y0 - py : Math.min(0, y0 - py), y0 - py); y1 += py;
+  const X = (v) => ml + (fx(v) - x0) / (x1 - x0) * (W - ml - mr), Y = (v) => H - mb - (v - y0) / (y1 - y0) * (H - mt - mb);
+  const nice = (a, b, n) => { const st = Math.pow(10, Math.floor(Math.log10((b - a) / n))); const m = [1, 2, 5, 10].find((k) => (b - a) / (st * k) <= n) * st; const o = []; for (let v = Math.ceil(a / m) * m; v <= b + 1e-9; v += m) o.push(+v.toFixed(6)); return o; };
+  let g = "";
+  const xt = pl.log_x ? nice(x0, x1, 5).filter((e) => Number.isInteger(e)).map((e) => 10 ** e) : nice(x0, x1, 6);
+  for (const v of xt) g += `<line x1="${X(v)}" x2="${X(v)}" y1="${mt}" y2="${H - mb}" stroke="var(--grid)"/><text x="${X(v)}" y="${H - mb + 13}" text-anchor="middle">${pl.log_x ? (v >= 1 ? v : "10" + String(Math.round(Math.log10(v))).split("").map((ch) => SUP[ch]).join("")) : v}</text>`;
+  for (const v of nice(y0, y1, 5)) g += `<line x1="${ml}" x2="${W - mr}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--grid)"/><text x="${ml - 5}" y="${Y(v) + 3}" text-anchor="end">${v}</text>`;
+  let leg = "", ci = 0;
+  for (const s of pl.series) {
+    const col = PAL[ci % PAL.length];
+    if (s.type === "band") { const pts = s.lo.map((q) => `${X(q[0])},${Y(q[1])}`).concat(s.hi.slice().reverse().map((q) => `${X(q[0])},${Y(q[1])}`)); g += `<polygon points="${pts.join(" ")}" fill="var(--band)" stroke="none"/>`; leg += `<span><i style="background:var(--band)"></i>${esc(s.name)}</span>`; continue; }
+    if (s.type === "labels") { for (const q of s.points) g += `<circle cx="${X(q[0])}" cy="${Y(q[1])}" r="3.5" fill="var(--ink)"/><text x="${X(q[0]) + (X(q[0]) > W - 60 ? -5 : 5)}" y="${Y(q[1]) - 6}" text-anchor="${X(q[0]) > W - 60 ? "end" : "start"}" style="fill:var(--ink);font-weight:600">${esc(q[2])}</text>`; continue; }
+    if (s.type === "line") g += `<polyline points="${s.points.map((q) => `${X(q[0])},${Y(q[1])}`).join(" ")}" fill="none" stroke="${col}" stroke-width="2"/>`;
+    else for (const q of s.points) g += `<circle cx="${X(q[0])}" cy="${Y(q[1])}" r="2.6" fill="${col}" fill-opacity=".8"><title>${esc(s.name)}: ${q[0]}, ${q[1]}</title></circle>`;
+    leg += `<span><i style="background:${col}"></i>${esc(s.name)}</span>`; ci++;
+  }
+  return `<div class="plot"><div class="pt">${esc(pl.title)}</div><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(pl.title)}">${g}
+    <line x1="${ml}" x2="${W - mr}" y1="${H - mb}" y2="${H - mb}" stroke="var(--axis)"/><text x="${(ml + W - mr) / 2}" y="${H - 6}" text-anchor="middle">${esc(pl.x)}</text>
+    <text transform="translate(11 ${(mt + H - mb) / 2}) rotate(-90)" text-anchor="middle">${esc(pl.y)}</text></svg>
+    <div class="lg">${leg}</div><div class="src">${esc(pl.source)} · ${esc(pl.tier === "model_prediction" ? "model prediction" : "NASA data")}</div></div>`;
+}
 // gambar asli dari paper (scripts/paper_figures.py): thumbnail -> ukuran penuh, caption, halaman, sumber
 function figStrip(figs) {
   if (!figs || !figs.length) return "";
@@ -629,7 +713,7 @@ function renderAsk() {
   const who = (c) => c.mode === "offline" ? "rule-based planner (no language model)" : (c.model || c.mode);
   $("chat").innerHTML = S.chat.map((c) => `<div class="turn"><div class="me">${esc(c.q)}</div>
     <div class="row">${avatar}${c.pending ? `<div class="ans dots" aria-label="working"><span></span><span></span><span></span></div>`
-      : `<div class="ans">${fmtAnswer(c.a, c.cites)}${figStrip(c.figures)}</div>`}</div>
+      : `<div class="ans">${fmtAnswer(c.a, c.cites)}${(c.plots || []).map(plotSVG).join("")}${figStrip(c.figures)}</div>`}</div>
     ${c.pending ? "" : `<div class="hint">${c.grounding ? (c.grounding.ok ? `${c.grounding.numbers_checked} numbers checked, all found in tool results` : st("warning", "numbers without a source: " + c.grounding.ungrounded.join(" "))) : ""}
       ${c.tools && c.tools.length ? " · tools: " + esc(c.tools.join(", ")) : ""}${c.mode ? " · " + esc(who(c)) : ""}</div>`}</div>`).join("");
   const b = $("chatBody"); b.scrollTop = b.scrollHeight;
@@ -640,7 +724,7 @@ async function ask(q) {
     if (S.live) {
       const history = S.chat.filter((c) => c !== turn && !c.pending && c.a).slice(-6).map((c) => ({ q: c.q, a: c.a }));
       const r = await (await fetch(API + "/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ question: q, mode: "auto", state: {}, history }) })).json();
-      Object.assign(turn, { pending: false, a: r.answer || r.error || "(no answer)", grounding: r.grounding, tools: (r.tool_calls || []).map((t) => t.name), mode: r.mode, model: r.model, figures: r.figures, cites: r.citations });
+      Object.assign(turn, { pending: false, a: r.answer || r.error || "(no answer)", grounding: r.grounding, tools: (r.tool_calls || []).map((t) => t.name), mode: r.mode, model: r.model, figures: r.figures, plots: r.plots, cites: r.citations });
     } else {
       const c = (D.canned || []).find((x) => x.q === q);
       Object.assign(turn, { pending: false, a: c ? c.a : "This static copy only replays the suggested questions.", grounding: c?.grounding, tools: c?.tools, mode: c?.mode });
@@ -666,10 +750,80 @@ $("askForm").addEventListener("submit", (e) => { e.preventDefault(); const q = $
 $("sugg").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) ask(b.dataset.q); });
 $("chat").addEventListener("click", (e) => { const a = e.target.closest("[data-inv]"); if (a) { e.preventDefault(); openCard(a.dataset.inv); } });
 
+// ---------------------------------------------------------------- research map (scripts/research_map.py)
+let NET = null, netSel = null;
+const NETC = { listed: "listed by NASA PSI", tag: "NTRS tag", similar: "topic similarity (not a citation)" };
+const NET_HINT = `<p class="hint">Select a dot. Large dots are investigations, squares are topics, small dots are papers.</p>`;
+async function loadNet() { if (NET !== null) return; try { const r = await fetch("research_map.json"); NET = r.ok ? await r.json() : false; } catch { NET = false; } renderNet(); }
+function renderNet() {
+  if (S.tab !== "net") return;
+  if (NET === null) { loadNet(); return; }
+  if (!NET) { $("net").innerHTML = `<text x="20" y="40">Research map not built. Run: python scripts/research_map.py</text>`; renderMatrix(); return; }
+  const W = 1000, H = 640, m = 24, X = (n) => m + n.x * (W - 2 * m), Y = (n) => m + n.y * (H - 2 * m);
+  const sim = $("netSim").checked, nb = new Set();
+  if (netSel !== null) { nb.add(netSel); for (const e of NET.edges) if ((e.k !== "similar" || sim) && (e.s === netSel || e.t === netSel)) { nb.add(e.s); nb.add(e.t); } }
+  let g = "";
+  for (const e of NET.edges) {
+    if (e.k === "similar" && !sim) continue;
+    const a = NET.nodes[e.s], b = NET.nodes[e.t], on = netSel !== null && (e.s === netSel || e.t === netSel);
+    g += `<line class="e ${e.k}${on ? " on" : ""}" x1="${X(a)}" y1="${Y(a)}" x2="${X(b)}" y2="${Y(b)}"/>`;
+  }
+  const yr = NET.nodes.filter((n) => n.kind === "paper" && +n.year).map((n) => +n.year), y0 = Math.min(...yr), y1 = Math.max(...yr);
+  NET.nodes.forEach((n, i) => {
+    const dim = netSel !== null && !nb.has(i) ? " dim" : "";
+    if (n.kind === "investigation") g += `<circle class="n${dim}" data-i="${i}" cx="${X(n)}" cy="${Y(n)}" r="${6 + Math.sqrt(n.degree) * 1.6}" fill="var(--accent)" stroke="var(--surface)" stroke-width="1.5"><title>${esc(n.label)} · ${n.degree} links</title></circle>`;
+    else if (n.kind === "topic") g += `<rect class="n${dim}" data-i="${i}" x="${X(n) - 6}" y="${Y(n) - 6}" width="12" height="12" fill="var(--droplet)"><title>Topic: ${esc(n.label)}</title></rect>`;
+    else { const t = +n.year ? (+n.year - y0) / ((y1 - y0) || 1) : 0.5; g += `<circle class="n${dim}" data-i="${i}" cx="${X(n)}" cy="${Y(n)}" r="${n.full_text ? 3.2 : 2.4}" fill="var(--ink-2)" fill-opacity="${(0.25 + 0.6 * t).toFixed(2)}"><title>${esc(n.label)}${n.year ? " (" + esc(n.year) + ")" : ""}</title></circle>`; }
+  });
+  // label: utamakan simpul terpilih, lalu investigasi berderajat tinggi; label yang menabrak label lain dilewati
+  const boxes = [], order = NET.nodes.map((n, i) => i).filter((i) => NET.nodes[i].kind !== "paper" || i === netSel)
+    .sort((a, b) => (b === netSel) - (a === netSel) || (NET.nodes[b].kind === "investigation") - (NET.nodes[a].kind === "investigation") || NET.nodes[b].degree - NET.nodes[a].degree);
+  for (const i of order) {
+    const n = NET.nodes[i], txt = n.label.length > 30 ? n.label.slice(0, 29) + "…" : n.label, w = txt.length * 6.6, x = X(n) + 9, y = Y(n) + 4;
+    const left = x + w > W - 4, bx = left ? X(n) - 9 - w : x, box = [bx - 2, y - 11, bx + w + 2, y + 3];
+    if (i !== netSel && boxes.some((b) => box[0] < b[2] && box[2] > b[0] && box[1] < b[3] && box[3] > b[1])) continue;
+    boxes.push(box);
+    g += `<text class="lbl" x="${left ? X(n) - 9 : x}" y="${y}" text-anchor="${left ? "end" : "start"}"${netSel !== null && !nb.has(i) ? ' opacity=".2"' : ""}>${esc(txt)}</text>`;
+  }
+  $("net").innerHTML = g;
+  const st = NET.stats;
+  $("netLeg").innerHTML = Object.entries(NETC).map(([k, v]) => `<span><i style="border-top-style:${k === "listed" ? "solid" : k === "tag" ? "dotted" : "dashed"}"></i>${v} (${st.edges[k] || 0})</span>`).join("");
+  $("netMethod").innerHTML = `<b>How links are made.</b> ${esc(NET.method.listed)}; ${esc(NET.method.tag)}; ${esc(NET.method.similar)}. ${esc(NET.method.not_available)}.
+    ${st.papers} papers shown; ${st.papers_without_any_link_dropped} papers with no link of any kind are left out rather than placed arbitrarily. Darker paper dots are more recent; larger ones have full text indexed.`;
+  if (netSel !== null) {
+    const n = NET.nodes[netSel], links = NET.edges.filter((e) => (e.k !== "similar" || sim) && (e.s === netSel || e.t === netSel)).map((e) => ({ o: NET.nodes[e.s === netSel ? e.t : e.s], k: e.k }));
+    $("netInfo").innerHTML = `<h3>${esc(n.label)}</h3><div class="hint">${n.kind === "paper" ? [n.year, n.journal].filter(Boolean).map(esc).join(" · ") : n.kind === "topic" ? "topic tag" : esc(n.acc) + " · " + (n.pillars || []).join(", ")}</div>
+      ${n.url ? `<p style="margin:6px 0 0"><a href="${esc(n.url)}" target="_blank" rel="noopener">${n.doi ? "doi:" + esc(n.doi) : "Open source"}</a></p>` : ""}
+      ${n.similarity ? `<p class="hint" style="margin:4px 0 0">Placed by topic similarity ${n.similarity.toFixed(2)}, not by a citation.</p>` : ""}
+      <ul>${links.slice(0, 60).map((l) => `<li>${esc(l.o.label.slice(0, 90))} <span class="hint">· ${NETC[l.k]}</span></li>`).join("")}</ul>
+      ${links.length > 60 ? `<p class="hint">and ${links.length - 60} more</p>` : ""}
+      ${n.kind === "investigation" ? `<p style="margin:8px 0 0"><a href="#" data-inv="${esc(n.acc)}">Open investigation card</a></p>` : ""}`;
+  } else $("netInfo").innerHTML = NET_HINT;
+  renderMatrix();
+}
+function renderMatrix() {
+  const scs = Object.keys(D.scenario), byAcc = {};
+  for (const k of scs) for (const r of D.scenario[k].ranking) (byAcc[r.accession] ||= {})[k] = r;
+  const listed = {};
+  if (NET) for (const e of NET.edges) if (e.k === "listed") { const n = NET.nodes[e.t]; listed[n.acc] = (listed[n.acc] || 0) + 1; }
+  const cond = (c) => scs.reduce((t, k) => t + (byAcc[c.accession]?.[k]?.components.conditions || 0), 0);
+  const rows = D.investigations.slice().sort((a, b) => cond(b) - cond(a) || a.accession.localeCompare(b.accession, undefined, { numeric: true }));
+  $("matrix").innerHTML = `<thead><tr><th>Investigation</th>${scs.map((k) => `<th>${esc(D.scenario[k].short)}</th>`).join("")}<th>Papers listed</th><th>Tests</th></tr></thead><tbody>`
+    + rows.map((c) => `<tr data-acc="${c.accession}"><td><b>${esc(c.name)}</b> <span class="hint">${c.accession}</span></td>${scs.map((k) => {
+        const r = byAcc[c.accession]?.[k], v = r ? r.components.conditions : 0, n = r ? (r.n_full || r.n_o2_only) : 0;
+        return `<td class="${n ? "" : "c0"}" style="background:rgba(57,135,229,${(v * 0.55).toFixed(2)})" title="${esc(r ? r.why.conditions : "")}">${n ? n + (r.n_full ? "" : " O₂ only") : "–"}</td>`; }).join("")}<td>${listed[c.accession] || 0}</td><td>${c.n_tests}</td></tr>`).join("") + "</tbody>";
+}
+$("net").addEventListener("click", (e) => { const n = e.target.closest(".n"); netSel = n ? (+n.dataset.i === netSel ? null : +n.dataset.i) : null; renderNet(); });
+$("netSim").addEventListener("change", renderNet);
+$("netReset").onclick = () => { netSel = null; renderNet(); };
+$("netInfo").addEventListener("click", (e) => { const a = e.target.closest("[data-inv]"); if (a) { e.preventDefault(); openCard(a.dataset.inv); } });
+$("matrix").addEventListener("click", (e) => { const r = e.target.closest("tr[data-acc]"); if (r) openCard(r.dataset.acc); });
+
 // ---------------------------------------------------------------- tabs
 function renderTabs() {
   for (const b of $("tabs").children) b.setAttribute("aria-selected", b.dataset.tab === S.tab);
   for (const p of document.querySelectorAll("section.panel")) p.classList.toggle("on", p.id === "p-" + S.tab);
+  if (S.tab === "net") renderNet();
 }
 $("tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; S.tab = b.dataset.tab; setHash(); renderTabs(); });
 function renderAll() {

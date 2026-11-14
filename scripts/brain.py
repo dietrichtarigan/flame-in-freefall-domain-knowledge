@@ -32,7 +32,9 @@ if __name__ == "__main__":        # learn/assistant mengimpor 'brain' -> pakai m
 
 ROOT = Path(__file__).resolve().parent.parent
 BRAIN = ROOT / "kb" / "gold" / "brain.sqlite"
-GOLD = ROOT / "kb" / "gold" / "freefall.sqlite"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from kbpaths import gold_db  # noqa: E402  (freefall.sqlite dibuka dari .gz bila perlu)
+GOLD = gold_db()
 TIER_RANK = {"nasa_table": 1, "nasa_calibrated": 2, "human_verified": 3, "derived_auto": 4,
              "paper_claim": 5, "model_prediction": 6}
 TIER_ID = {"nasa_table": "tabel NASA", "nasa_calibrated": "sinyal NASA terkalibrasi",
@@ -466,17 +468,16 @@ def coverage():
 
 
 def search(q, k=10):
-    g = sqlite3.connect(f"file:{GOLD}?mode=ro", uri=True)
+    # paper: BM25 berperingkat via scripts/retrieval.py (dulu MATCH tanpa ORDER BY = tidak berperingkat)
     try:
-        papers = g.execute("""SELECT title, page, snippet(paper_search, -1, '[', ']', '…', 12)
-                              FROM paper_search WHERE paper_search MATCH ? LIMIT ?""", (q, k)).fetchall()
-        cols = None
-    except sqlite3.OperationalError as e:
-        papers, cols = [], str(e)
+        import retrieval
+        papers, cols = retrieval.search(q, k=k), None
+    except Exception as e:  # noqa: BLE001
+        papers, cols = [], repr(e)
     c = db()
     tests = [dict(r) for r in c.execute("""SELECT DISTINCT entity, quantity, value_text FROM measurement
                       WHERE value_text LIKE ? LIMIT ?""", (f"%{q}%", k))]
-    return {"q": q, "papers": [{"title": t, "page": p, "snippet": s} for t, p, s in papers],
+    return {"q": q, "papers": papers,
             "tests_text_match": tests, "error": cols}
 
 

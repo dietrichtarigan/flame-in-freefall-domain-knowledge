@@ -1,2 +1,5 @@
-# Backend asisten (scripts/brain.py serve). Selain ini hanya pustaka standar Python.
+# Backend asisten (scripts/brain.py serve).
 anthropic==2.8.0
+# pencarian paper (scripts/retrieval.py), simulasi & plot di chat (scripts/chat_tools.py)
+numpy>=2.0,<3
+scipy>=1.13,<2

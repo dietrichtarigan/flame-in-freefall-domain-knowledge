@@ -1,0 +1,26 @@
+{
+ "n_queries": 300,
+ "protocol": "query = paper title; searched in chunk text only; relevant = any chunk of that paper",
+ "results": {
+  "bm25": {
+   "MRR@10": 0.786,
+   "Recall@1": 0.7,
+   "Recall@10": 0.94
+  },
+  "lsa": {
+   "MRR@10": 0.528,
+   "Recall@1": 0.38,
+   "Recall@10": 0.877
+  },
+  "hybrid": {
+   "MRR@10": 0.667,
+   "Recall@1": 0.53,
+   "Recall@10": 0.937
+  },
+  "fts_lama": {
+   "MRR@10": 0.499,
+   "Recall@1": 0.37,
+   "Recall@10": 0.76
+  }
+ }
+}

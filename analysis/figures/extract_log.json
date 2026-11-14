@@ -2,11 +2,13 @@
  {
   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf",
   "figures": 32,
+  "equations": 15,
   "error": null
  },
  {
   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SPICE_FinalReport.pdf",
   "figures": 11,
+  "equations": 0,
   "error": null
  }
 ]

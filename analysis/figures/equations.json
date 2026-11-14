@@ -1,0 +1,257 @@
+[
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:eq2.2",
+  "label": "Equation (2.2)",
+  "page": 23,
+  "raw_text": "r η = , z",
+  "context_before": "",
+  "context_after": "with boundary condition that f = 0 as z , using the integral constraint → ∞ where d is  burner  diameter  and  subscript f,o denote  initial  fuel  stream  properties. Evaluating  the  result  at f = Z ,  the  stoichiometric  mixture  fraction,  results  in  the",
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/eq_p23_2.2.png",
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "numbered-equation crop (pdftohtml -xml + pdftoppm); image of the original, not retyped"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:eq2.4",
+  "label": "Equation (2.4)",
+  "page": 23,
+  "raw_text": "L 3 Re f = , d 32 Z st",
+  "context_before": "where d is  burner  diameter  and  subscript f,o denote  initial  fuel  stream  properties. Evaluating  the  result  at f = Z ,  the  stoichiometric  mixture  fraction,  results  in  the",
+  "context_after": "where Re is the fuel jet Reynolds number. Lin et al. relaxed the assumption of equal diffusivities  by  introducing  the  Schmidt  number, Sc ,  considering  this  number  to primarily  affect  mass  transport  in  the  flame,  adding  a  fine  tuning  coefficient  of C ,",
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/eq_p23_2.4.png",
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "numbered-equation crop (pdftohtml -xml + pdftoppm); image of the original, not retyped"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:eq2.5",
+  "label": "Equation (2.5)",
+  "page": 23,
+  "raw_text": "− L L 3 C Re Sc f o f = . 32 d Z st",
+  "context_before": "primarily  affect  mass  transport  in  the  flame,  adding  a  fine  tuning  coefficient  of C , and including a virtual origin correction factor of L to account for lack of agreement",
+  "context_after": "46 The  approach  of  Mahalingam  et  al. to  nonbuoyant  gas-jet  flames  in  coflow proceeds in the same fashion with similar assumptions.  Additionally, radial velocity",
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/eq_p23_2.5.png",
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "numbered-equation crop (pdftohtml -xml + pdftoppm); image of the original, not retyped"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:eq2.7",
+  "label": "Equation (2.7)",
+  "page": 24,
+  "raw_text": "2 u r a , o η = , ν z",
+  "context_before": "velocity.  The starting equation, as presented by Lin and Faeth, is Here  the  subscript a,o denote  initial  air  stream  properties.  Assuming  the  similarity",
+  "context_after": "with boundary condition that f = 0 as z → ∞ , using the  integral constraint and evaluating the result at f = Z , the stoichiometric mixture fraction, results in Lin  and  Faeth  relaxed  assumptions  in  a  similar  manner  as  described  for  Equation",
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/eq_p24_2.7.png",
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "numbered-equation crop (pdftohtml -xml + pdftoppm); image of the original, not retyped"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:eq2.9",
+  "label": "Equation (2.9)",
+  "page": 24,
+  "raw_text": "L Re f = . d 16 Z st",
+  "context_before": "with boundary condition that f = 0 as z → ∞ , using the  integral constraint and evaluating the result at f = Z , the stoichiometric mixture fraction, results in",
+  "context_after": "Lin  and  Faeth  relaxed  assumptions  in  a  similar  manner  as  described  for  Equation",
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/eq_p24_2.9.png",
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "numbered-equation crop (pdftohtml -xml + pdftoppm); image of the original, not retyped"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:eq2.10",
+  "label": "Equation (2.10)",
+  "page": 24,
+  "raw_text": "− L L C Re Sc f o f = , d 16 Z st",
+  "context_before": "and evaluating the result at f = Z , the stoichiometric mixture fraction, results in Lin  and  Faeth  relaxed  assumptions  in  a  similar  manner  as  described  for  Equation",
+  "context_after": "",
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/eq_p24_2.10.png",
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "numbered-equation crop (pdftohtml -xml + pdftoppm); image of the original, not retyped"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:eq2.13",
+  "label": "Equation (2.13)",
+  "page": 27,
+  "raw_text": "∞ ∫ ( ) ρ 2 π = J u 2 r dr , z 0",
+  "context_before": "As r , u = 0, and at z = 0, u = 0, ∂ u / ∂ r = 0 and u is nonzero only within the → ∞",
+  "context_after": "is assumed to be conserved throughout the flow ( ρ is the jet fluid density and J is the axial  jet  momentum).  The  similarity  solution  matches  the  integral  condition  rather than  the  boundary  conditions  at  the  jet  exit. J can  be  determined  from  the  initial  jet",
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/eq_p27_2.13.png",
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "numbered-equation crop (pdftohtml -xml + pdftoppm); image of the original, not retyped"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:eq2.15",
+  "label": "Equation (2.15)",
+  "page": 27,
+  "raw_text": "2 πρ u d f , o = J . 6",
+  "context_before": "µ where is  the  exterior  fluid  dynamic  viscosity  and z is  axial  direction.  For  fully developed  flow,  the  velocity  profile  is u =  2 u (1- r / r )  at  the  jet  exit  ( r is  the",
+  "context_after": "Recall  that u is  the  initial,  mean  jet  velocity.  The  solution  assumes  a  point  source approximation  for  the  jet  and  a  singularity  is  present  at z =  0.  Typical  approaches",
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/eq_p27_2.15.png",
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "numbered-equation crop (pdftohtml -xml + pdftoppm); image of the original, not retyped"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:eq2.16",
+  "label": "Equation (2.16)",
+  "page": 28,
+  "raw_text": "  3 J 1   − = u u , cl a , o πµ   8 z",
+  "context_before": "This  has  been  shown  to  be  reasonable  for  some  turbulent  jets  in  coflow. Consider the  following  a  simple  approximation  rather  than  a  formal  derivation.  This",
+  "context_after": "but  here,  jet  momentum, J ,  cannot  be  the  entire  jet  momentum,  but  rather  the  jet momentum  relative  to  the  surrounding  coflow.  Many  different  approximations  for J were  considered,  resulting  in  only  minor  differences  in  the  resulting  velocity  decay",
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/eq_p28_2.16.png",
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "numbered-equation crop (pdftohtml -xml + pdftoppm); image of the original, not retyped"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:eq2.18",
+  "label": "Equation (2.18)",
+  "page": 29,
+  "raw_text": "  2 2 u u u u   2 f , o f , o a , o a , o = πρ − + J d ,   3 2 4  ",
+  "context_before": "",
+  "context_after": "with u of a parabolic velocity profile, and neglecting the minor density differences Next  a  virtual  origin  correction  is  applied.  A  virtual  origin  such  that  the  centerline where z is restricted to positive values. The final equation for centerline velocity on",
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/eq_p29_2.18.png",
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "numbered-equation crop (pdftohtml -xml + pdftoppm); image of the original, not retyped"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:eq2.19",
+  "label": "Equation (2.19)",
+  "page": 29,
+  "raw_text": "3 J πµ 8 = z . o 2 − u u f , o a , o",
+  "context_before": "with u of a parabolic velocity profile, and neglecting the minor density differences Next  a  virtual  origin  correction  is  applied.  A  virtual  origin  such  that  the  centerline",
+  "context_after": "where z is restricted to positive values. The final equation for centerline velocity on",
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/eq_p29_2.19.png",
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "numbered-equation crop (pdftohtml -xml + pdftoppm); image of the original, not retyped"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:eq2.24",
+  "label": "Equation (2.24)",
+  "page": 30,
+  "raw_text": "3 J = a . πµ 8",
+  "context_before": "for the residence time to a particular length, L , where",
+  "context_after": "2.3. COMSOL Modeling of Air Jets in Air Coflow Modeling  of  nonreacting  jets  in  coflow  was  performed  in  COMSOL®  Multiphysics 3.5. The model solves the Navier-Stokes equations for incompressible, isothermal and",
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/eq_p30_2.24.png",
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "numbered-equation crop (pdftohtml -xml + pdftoppm); image of the original, not retyped"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:eq3.1",
+  "label": "Equation (3.1)",
+  "page": 38,
+  "raw_text": "= Q KQ , f N 2",
+  "context_before": "",
+  "context_after": "where Q is volumetric flow rate, and subscripts f and N 2 are for fuel gas and nitrogen, respectively.    The  constant K for  a  mixture, K of i components  is  given  by  the where X is the mole fraction of species i . Table 3.2 provides the values of K for the",
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/eq_p38_3.1.png",
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "numbered-equation crop (pdftohtml -xml + pdftoppm); image of the original, not retyped"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:eq3.3",
+  "label": "Equation (3.3)",
+  "page": 46,
+  "raw_text": "dp Mp = g , dz TR",
+  "context_before": "elevation of only 14.6 meters. The difference in pressure was shown to be negligible by  the  following  process.  To  obtain  an  approximation  of  the  actual  pressure,  the",
+  "context_after": "where p is  pressure, z is  altitude, g is  gravitational  acceleration, T is  temperature (assumed  to  be  the  airport  temperature  and  invariant), M is  molecular  weight  of  air, and R is the universal gas constant. The resulting equation is",
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/eq_p46_3.3.png",
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "numbered-equation crop (pdftohtml -xml + pdftoppm); image of the original, not retyped"
+ },
+ {
+  "id": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36:eq4.1",
+  "label": "Equation (4.1)",
+  "page": 66,
+  "raw_text": "2 u = Fr , 2 gL",
+  "context_before": "",
+  "context_after": "where, for a coflow flame system, u can be the air or fuel stream velocity and L is the flame  length.  For  this  case  of  whether  coflow  of  jet  exit  velocity  dominates  is  not immediately  obvious,  so  an  approximate  Froude  number  that  is  the  average  of  the",
+  "png": "PSI_107_Reports_SMOKE_POINTS_OF_MICROGRAVITY_AND_NORMAL_GRAV_b6bf36/eq_p66_4.1.png",
+  "paper": {
+   "title": "SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES DotsonThesis (PSI-107 SPICE)",
+   "doi": "10.60555/9kbh-e962",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+   "source": "psi:PSI-107",
+   "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf"
+  },
+  "method": "numbered-equation crop (pdftohtml -xml + pdftoppm); image of the original, not retyped"
+ }
+]

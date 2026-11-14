@@ -16,8 +16,13 @@ RUN pip install --no-cache-dir -r requirements-server.txt
 # Hanya yang dibaca server saat berjalan (lihat docs/deploy.md)
 COPY scripts/ scripts/
 COPY kb/gold/ kb/gold/
+# freefall.sqlite dilacak git sebagai .gz (>100 MB mentah): buka saat build, buang .gz-nya
+RUN python -c "import gzip,shutil; shutil.copyfileobj(gzip.open('kb/gold/freefall.sqlite.gz','rb'), open('kb/gold/freefall.sqlite','wb'), 1<<20)" \
+    && rm kb/gold/freefall.sqlite.gz
 COPY analysis/ analysis/
 COPY app/ app/
+# indeks pencarian paper (LSA) dibangun sekali saat build, bukan pada permintaan pertama
+RUN python scripts/retrieval.py build
 
 RUN useradd --create-home fif && chown -R fif /srv
 USER fif

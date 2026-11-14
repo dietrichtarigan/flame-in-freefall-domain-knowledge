@@ -124,7 +124,8 @@ class Brain:
 
 # ------------------------------------------------------------------ pemasukan
 def ingest_nasa(b):
-    g = sqlite3.connect(GOLD / "freefall.sqlite")
+    from kbpaths import gold_db                  # .sqlite dibuka dari .gz bila perlu
+    g = sqlite3.connect(gold_db())
     g.row_factory = sqlite3.Row
     for r in g.execute("SELECT accession, acronym, title FROM investigations"):
         b.entity(f"inv:{r['accession']}", "investigation", r["accession"], r["acronym"] or r["accession"],
@@ -298,6 +299,15 @@ def ingest_models(b, sha):
                        "efek hari: propilena 0,41 mm (saluran tersumbat), 75 % propilena hari 136/173",
                        "metana ditolak; kombinasi bahan bakar-nosel baru = ekstrapolasi"],
                       ["analysis/spice/spice_model.json", "analysis/spice/smoke_points.csv"]))
+    gbj = A / "gbridge" / "gbridge.json"                   # scripts/gbridge.py
+    cards.append(("gbridge_pmma", "batas O2 batang PMMA sebagai fungsi gravitasi (Bulan, Mars, ISS, Bumi)",
+                  "X_lim(a) = X0 + A exp(-a/a_q) + B a; aliran apung U_b1 (g/gE)^n (p0/p)^n ditambah aliran paksa",
+                  {"parameter": "fit terbitan Olson & Ferkul 2017 atas BASS-II, diperiksa ulang dengan titik tabel NASA",
+                   "selang": "U_b1 10-30 cm/s, n = 1/3 atau 1/2"},
+                  {"o2_pct": [13.5, 22.2], "u_cm_s": [0, 55], "p_kpa": [99, 103]},
+                  ["tidak ada data pembakaran gravitasi parsial di PSI: gravitasi masuk hanya lewat skala aliran apung",
+                   "di luar 99-103 kPa = ekstrapolasi (mis. pangkalan Bulan 70 kPa)"],
+                  [str(p.relative_to(ROOT)).replace("\\", "/") for p in (gbj,) if p.exists()] or ["scripts/gbridge.py"]))
     for c in cards:
         b.c.execute("INSERT OR REPLACE INTO model_card VALUES (?,?,?,?,?,?,?)",
                     (c[0], c[1], c[2], json.dumps(c[3], ensure_ascii=False), json.dumps(c[4], ensure_ascii=False),

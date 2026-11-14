@@ -42,3 +42,10 @@ supplement/
 # Basis data mentah 101 MB melewati batas keras GitHub (100 MiB).
 # Yang dilacak versi terkompresinya (34 MB); lihat README untuk membukanya.
 kb/gold/freefall.sqlite
+
+# Salinan kerja freefall.sqlite (dibuat scripts/kbpaths.py dari .gz)
+kb/gold/freefall.sqlite.new
+kb/gold/freefall.sqlite.tmp
+
+# Cache indeks pencarian (dibangun ulang otomatis oleh scripts/retrieval.py)
+kb/cache/

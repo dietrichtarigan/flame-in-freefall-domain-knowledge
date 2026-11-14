@@ -89,8 +89,23 @@ TOOLS = [
          "(smallest U = |mu|/sigma), only near conditions the hardware has actually run.",
          {"experiment": {"type": "string", "enum": ["cfig", "flex"]}, "k": I()}),
     tool("coverage", "What is NOT known: per investigation, number of tests, tests with any outcome, values by tier.", {}),
-    tool("search_papers", "Full-text search in NASA NTRS reports and papers. Returns title, page and snippet.",
+    tool("search_papers", "Ranked full-text search (BM25) over 438 NASA reports and papers. Returns title, page, the best-matching sentence, DOI or link, and the rank. Use English keywords.",
          {"query": S(), "k": I()}),
+    tool("gravity_flammability", "Physics model (not a measurement): does a PMMA rod keep burning on the ISS, Moon, Mars or Earth "
+         "at a given oxygen and pressure? Limiting O2 with an uncertainty band from buoyant-flow scaling fitted to BASS-II. "
+         "Always report its flags (e.g. pressure outside the fitted range = extrapolation).",
+         {"body": {"type": "string", "enum": ["iss", "moon", "mars", "earth"]}, "o2_pct": N(), "p_kpa": N(), "u_forced_cm_s": N()}),
+    tool("predict_smoke_point", "Model of the SPICE smoke-point flame length (mm) for a jet flame in microgravity, from fuel "
+         "(ethylene, propane, propylene, 75% or 50% propylene), nozzle diameter (mm) and coflow (cm/s). Returns a 90% interval "
+         "and refuses or flags extrapolation.", {"fuel": S(), "d_mm": N(), "u_cm_s": N()}),
+    tool("make_plot", "Draw a chart from real data under your answer. kind: smoke_point (SPICE smoke-point length vs coflow, "
+         "optional fuel), gravity_loc (limiting O2 vs gravity, model with band), tests_o2_pressure (tests by O2 and pressure, "
+         "optional accession such as PSI-69). Use when a trend or comparison is easier to see than to read.",
+         {"kind": {"type": "string", "enum": ["smoke_point", "gravity_loc", "tests_o2_pressure"]}, "accession": NS(), "fuel": NS()}),
+    tool("find_equations", "Numbered equations from NASA reports and papers, shown to the user as an image of the original "
+         "equation (not retyped), with page, paper and the sentence that defines its variables. Use when the user asks for a "
+         "formula, correlation or scaling law. Never write a paper's equation from memory; show the found one and, if you add "
+         "your own algebra, label it as yours.", {"query": S(), "k": I()}),
     tool("find_figures", "Original figures (apparatus diagrams, flame photographs, data plots) cropped from NASA reports "
          "and papers, found by their caption and the sentences that cite them. Returns label, caption, page, paper, DOI or "
          "link and an image the dashboard shows under your answer. Use it whenever the question is about an experiment, "
@@ -157,6 +172,29 @@ def _slim_entity(d):
 def run_tool(name, args, ctx):
     """Satu-satunya jalan asisten menyentuh data. ctx['ui'] mengumpulkan aksi untuk dashboard."""
     a = args or {}
+    if name in ("gravity_flammability", "predict_smoke_point", "make_plot"):
+        import chat_tools
+        if name == "make_plot":
+            r = chat_tools.make_plot(a.get("kind"), a.get("accession"), a.get("fuel"))
+            if "plot" in r:
+                ctx.setdefault("plots", []).append(r["plot"])
+                pl = r["plot"]
+                return {"shown_to_user": pl["title"], "x": pl["x"], "y": pl["y"], "source": pl["source"], "tier": pl["tier"],
+                        "summary": r.get("summary"), "rule": "describe the chart only from 'summary'",
+                        "series": [{"name": x["name"], "n_points": len(x.get("points") or x.get("lo") or [])} for x in pl["series"]]}
+            return r
+        if name == "gravity_flammability":
+            return chat_tools.gravity_flammability(a.get("body", "moon"), float(a.get("o2_pct") or 21), float(a.get("p_kpa") or 101.3),
+                                                   float(a.get("u_forced_cm_s") or 0))
+        return chat_tools.predict_smoke_point(a.get("fuel", "propylene"), float(a.get("d_mm") or 1.6), float(a.get("u_cm_s") or 30))
+    if name == "find_equations":
+        import paper_figures
+        res = paper_figures.search_equations(str(a.get("query") or ""), a.get("k") or 3)
+        have = {f["id"] for f in ctx.setdefault("figures", [])}
+        ctx["figures"] += [f for f in res if f["id"] not in have]
+        return {"equations": [{k: e[k] for k in ("label", "page", "raw_text", "caption", "paper", "doi", "url", "score")} for e in res],
+                "note": "shown to the user as images under your answer; raw_text is a lossy text extraction, refer to the image by label"
+                        if res else "no numbered equation matches; do not quote a formula from memory as if it came from a paper"}
     if name == "find_figures":
         import paper_figures
         res = paper_figures.search(str(a.get("query") or ""), a.get("k") or 4)
@@ -393,6 +431,9 @@ How you work:
 - Every value has a truth tier. Say it in words when it matters: nasa_table (recorded by NASA), nasa_calibrated (NASA raw signal + validated NASA formula), derived_auto (our script, not yet checked by a human), human_verified, paper_claim, model_prediction (always give its uncertainty). Never present derived_auto or model_prediction as established fact.
 - Thermocouple values are raw volts, not temperatures. Never convert them to degrees.
 - If a what-if tool says the input is outside the tested range, say the model does not answer there; do not guess.
+- For 'what if' questions about gravity (Moon, Mars, ISS, Earth) use gravity_flammability; for jet-flame soot limits use predict_smoke_point. These are models: say so, give the band, and repeat every flag they return. Never invent a simulation result.
+- When a trend or comparison is the point, call make_plot so the user sees the data; describe what the chart shows in one sentence.
+- When the user asks for a formula, correlation or scaling law, call find_equations and refer to the equation IMAGE by its label (e.g. 'Equation (2.5), shown below'). Do not retype a paper's equation from raw_text or from search_papers snippets: PDF text extraction scrambles fractions, sub/superscripts and the order of factors. You may name the variables using the defining sentence. Any algebra you add yourself must be labelled as yours.
 - When the question is about an experiment, its hardware or setup, how a flame looks, or a plotted trend, also call find_figures and name the figures you rely on (label and paper). Never describe a figure you did not get from find_figures.
 - Cite inline with these markers, exactly as the ids appear in tool results: [[m:<measurement id>]] for a value, [[test:<id>]] for a test, [[paper:<title>|<page>]] for a paper, [[model:<card id>]] for a model, [[inv:<PSI accession>]] for an investigation.
 - For questions about whole investigations or about a habitat (cabin, Moon/Mars base, rover, spacesuit, Earth) use rank_investigations, get_investigation, compare_investigations and scenario_evidence. Explain a ranking through its three score components; never present the score as a NASA judgement.
@@ -516,7 +557,7 @@ def ask_claude(question, history, state):
         served.add(resp.model)
         fell_back |= any(b.type == "fallback" for b in resp.content)
         if resp.stop_reason == "refusal":            # seluruh rantai (termasuk fallback) menolak
-            return {"answer": "Permintaan ini ditolak oleh model (refusal).", "ui_actions": ctx["ui"], "figures": ctx.get("figures", []), "tool_calls": calls,
+            return {"answer": "Permintaan ini ditolak oleh model (refusal).", "ui_actions": ctx["ui"], "figures": ctx.get("figures", []), "plots": ctx.get("plots", []), "tool_calls": calls,
                     "outputs": outputs, "model": resp.model, "usage": usage, "note": "refusal"}
         if resp.stop_reason == "pause_turn":
             messages.append({"role": "assistant", "content": resp.content})
@@ -547,7 +588,7 @@ def ask_claude(question, history, state):
     text = "".join(b.text for b in (final.content if final else []) if b.type == "text")
     if fell_back:
         note = ((note + "; ") if note else "") + f"dijawab model fallback ({', '.join(sorted(served))})"
-    return {"answer": text or "(tidak ada jawaban teks)", "ui_actions": ctx["ui"], "figures": ctx.get("figures", []), "tool_calls": calls,
+    return {"answer": text or "(tidak ada jawaban teks)", "ui_actions": ctx["ui"], "figures": ctx.get("figures", []), "plots": ctx.get("plots", []), "tool_calls": calls,
             "outputs": outputs, "model": ", ".join(sorted(served)) or llm_model(), "usage": usage, "note": note}
 
 
@@ -630,7 +671,7 @@ def ask_offline(question, history=None, state=None):
     hi = None if tests else inv.answer(q, T)
     if hi:
         parts += hi["parts"]
-        return {"answer": "\n".join(parts), "ui_actions": ctx["ui"], "figures": ctx.get("figures", []), "tool_calls": calls, "outputs": outputs, "model": "offline-planner"}
+        return {"answer": "\n".join(parts), "ui_actions": ctx["ui"], "figures": ctx.get("figures", []), "plots": ctx.get("plots", []), "tool_calls": calls, "outputs": outputs, "model": "offline-planner"}
 
     # --- what-if
     if intent == "whatif":
@@ -781,7 +822,7 @@ def ask_offline(question, history=None, state=None):
         else:
             parts.append("Saya tidak menemukan data atau dokumen yang menjawab ini. Coba sebut kode uji (mis. 21106G8), "
                          "investigasi, atau tanyakan 'bagaimana jika O2 … pada butana …', 'uji berikutnya', 'peringatan', 'seberapa yakin'.")
-    return {"answer": "\n".join(parts), "ui_actions": ctx["ui"], "figures": ctx.get("figures", []), "tool_calls": calls, "outputs": outputs, "model": "offline-planner"}
+    return {"answer": "\n".join(parts), "ui_actions": ctx["ui"], "figures": ctx.get("figures", []), "plots": ctx.get("plots", []), "tool_calls": calls, "outputs": outputs, "model": "offline-planner"}
 
 
 # ================================================================ pintu masuk
@@ -823,6 +864,7 @@ def ask(question, history=None, state=None, mode="auto"):
         if figs:
             r["figures"] = figs
             r["tool_calls"].append({"name": "find_figures", "input": {"query": question}, "ms": 0, "error": False})
+    r.setdefault("plots", [])
     figs = r.setdefault("figures", [])
     if len(figs) > 6:                                  # panel chat: maks 6, utamakan gambar yang disebut di jawaban
         said = lambda f: re.search(rf"\b{re.escape(f['label'])}\b(?![.\d])", r["answer"]) is not None

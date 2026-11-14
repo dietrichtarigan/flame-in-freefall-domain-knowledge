@@ -32,7 +32,9 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-GOLD = ROOT / "kb" / "gold" / "freefall.sqlite"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from kbpaths import gold_db  # noqa: E402
+GOLD = gold_db()
 OUT = ROOT / "analysis" / "figures"
 INDEX = OUT / "figures.json"
 DPI = 150
@@ -143,9 +145,9 @@ def paper_meta():
         return meta
     con = sqlite3.connect(GOLD)
     for doi, title, path, url in con.execute("SELECT doi, title, pdf_path, doi_url FROM papers_doi WHERE pdf_path IS NOT NULL AND pdf_path != ''"):
-        meta[Path(path).name.lower()] = {"title": title, "doi": doi, "url": url or f"https://doi.org/{doi}", "source": "doi"}
+        meta[Path(path.replace("\\", "/")).name.lower()] = {"title": title, "doi": doi, "url": url or f"https://doi.org/{doi}", "source": "doi"}
     for pid, title, path, url in con.execute("SELECT id, title, pdf_path, record_url FROM papers WHERE pdf_path IS NOT NULL AND pdf_path != ''"):
-        meta.setdefault(Path(path).name.lower(), {"title": title, "doi": None, "url": url, "source": f"ntrs:{pid}"})
+        meta.setdefault(Path(path.replace("\\", "/")).name.lower(), {"title": title, "doi": None, "url": url, "source": f"ntrs:{pid}"})
     meta["_psi"] = {acc: (acr or title, url, doi) for acc, acr, title, url, doi in
                     con.execute("SELECT accession, acronym, title, psi_url, doi FROM investigations")}
     return meta
@@ -168,6 +170,7 @@ def db_pdfs():
                                        "UNION SELECT pdf_path FROM papers WHERE pdf_path IS NOT NULL AND pdf_path != ''")]
     out = []
     for p in paths:
+        p = p.replace("\\", "/")                     # katalog ditulis di Windows: raw\papers\pdf\...
         for cand in (Path(p), ROOT / p, ROOT / "kb" / p):
             if cand.exists():
                 out.append(cand)
@@ -231,8 +234,53 @@ def extract(pdf, meta):
     return figs, None
 
 
+# ---------------------------------------------------------------- persamaan bernomor
+EQNUM = re.compile(r"^\(?\s*(\d+(?:\.\d+)?[a-z]?)\s*\)\s*,?\s*$")
+
+
+def extract_equations(pdf, meta):
+    """Persamaan bernomor: nomor "(N)" sendirian di margin kanan; area = baris non-badan di sekitarnya.
+    Disimpan sebagai POTRET ASLI dari PDF (tidak diketik ulang) + teks mentah + kalimat penjelas."""
+    m = meta.get(pdf.name.lower()) or file_meta(pdf, meta)
+    out, seen = [], set()
+    for page, pw, ph, lines in pages_lines(pdf):
+        if sum(1 for L in lines if CAPTION.match(L["text"])) >= 4:          # halaman daftar isi/gambar
+            continue
+        for i, L in enumerate(lines):
+            mm = EQNUM.match(L["text"])
+            if not mm or L["left"] < 0.7 * pw or mm.group(1) in seen:
+                continue
+            top, bot = L["top"] - 4, L["bottom"] + 4
+            body_above = [x for x in lines if x["bottom"] <= L["top"] and is_body(x, pw)]
+            body_below = [x for x in lines if x["top"] >= L["bottom"] and is_body(x, pw)]
+            lim_top = max((x["bottom"] for x in body_above), default=30) + 1
+            lim_bot = min((x["top"] for x in body_below), default=ph - 30) - 1
+            parts = [x for x in lines if x is not L and x["bottom"] > lim_top and x["top"] < lim_bot
+                     and not is_body(x, pw) and abs((x["top"] + x["bottom"]) / 2 - (L["top"] + L["bottom"]) / 2) < 40]
+            if not parts:
+                continue
+            top = max(lim_top, min([top] + [x["top"] - 3 for x in parts]))
+            bot = min(lim_bot, max([bot] + [x["bottom"] + 3 for x in parts]))
+            raw = " ".join(x["text"] for x in sorted(parts, key=lambda x: (round(x["top"]), x["left"])))
+            if "=" not in raw and "∝" not in raw and "~" not in raw:
+                continue
+            before = " ".join(x["text"] for x in body_above[-2:])
+            after = " ".join(x["text"] for x in body_below[:3])
+            num = mm.group(1)
+            rel = Path(slug(pdf)) / f"eq_p{page}_{num}.png"
+            if not render(pdf, page, (40, top, pw - 30, bot), OUT / rel) or ink(OUT / rel) < 0.005:
+                (OUT / rel).unlink(missing_ok=True)
+                continue
+            seen.add(num)
+            out.append({"id": f"{slug(pdf)}:eq{num}", "label": f"Equation ({num})", "page": page, "raw_text": raw[:300],
+                        "context_before": before[-400:], "context_after": after[:400], "png": rel.as_posix(),
+                        "paper": {"title": m.get("title") or pdf.stem, "doi": m.get("doi"), "url": m.get("url"),
+                                  "source": m.get("source", "file"), "pdf": os.path.relpath(pdf, ROOT).replace("\\", "/")},
+                        "method": "numbered-equation crop (pdftohtml -xml + pdftoppm); image of the original, not retyped"})
+    return out
+
+
 # ---------------------------------------------------------------- pencarian (dipakai asisten)
-_IDX = {"mtime": None, "docs": None}
 STOP = set("the a an of and or in on for to with by from at as is are was were be this that these those it its "
            "figure fig shows shown show using used dan yang di ke dari untuk dengan pada gambar".split())
 
@@ -241,40 +289,59 @@ def _tok(s):
     return [w for w in re.findall(r"[a-z0-9]+", (s or "").lower()) if w not in STOP and len(w) > 1]
 
 
-def search(query, k=4):
-    """BM25 (k1=1.2, b=0.75) atas caption + kalimat yang merujuk gambar + judul paper.
-    Skor dilaporkan apa adanya; 0 berarti tidak ada kata yang cocok (gambar tidak dikembalikan)."""
+EQ_INDEX = OUT / "equations.json"
+_IDXS = {}
+
+
+def _bm25(index, text_of, query, k):
+    """BM25 (k1=1.2, b=0.75) atas teks tiap entri indeks; minimal separuh kata kunci harus cocok."""
     import math
-    if not INDEX.exists():
+    if not index.exists():
         return []
-    mt = INDEX.stat().st_mtime
-    if _IDX["mtime"] != mt:
-        figs = json.loads(INDEX.read_text(encoding="utf-8"))
-        docs = [(f, _tok(f["caption"] + " " + f["caption"] + " " + " ".join(f["mentions"]) + " " + f["paper"]["title"])) for f in figs]
+    mt = index.stat().st_mtime
+    st = _IDXS.get(str(index))
+    if not st or st["mtime"] != mt:
+        items = json.loads(index.read_text(encoding="utf-8"))
+        docs = [(f, _tok(text_of(f))) for f in items]
         df = {}
         for _, toks in docs:
             for w in set(toks):
                 df[w] = df.get(w, 0) + 1
-        _IDX.update(mtime=mt, docs=docs, df=df, avg=sum(len(t) for _, t in docs) / max(1, len(docs)))
-    docs, df, avg, n = _IDX["docs"], _IDX["df"], _IDX["avg"], len(_IDX["docs"])
+        st = _IDXS[str(index)] = {"mtime": mt, "docs": docs, "df": df, "avg": sum(len(t) for _, t in docs) / max(1, len(docs))}
+    docs, df, avg, n = st["docs"], st["df"], st["avg"], len(st["docs"])
     q = set(_tok(query))
-    need = max(1, math.ceil(len(q) / 2))              # minimal separuh kata kunci harus ada di gambar itu
+    need = max(1, math.ceil(len(q) / 2))
     scored = []
     for f, toks in docs:
-        tf, s, hit = {}, 0.0, 0
+        tf, sc, hit = {}, 0.0, 0
         for w in toks:
             tf[w] = tf.get(w, 0) + 1
         for w in q:
             if w in tf:
                 hit += 1
                 idf = math.log(1 + (n - df[w] + 0.5) / (df[w] + 0.5))
-                s += idf * tf[w] * 2.2 / (tf[w] + 1.2 * (0.25 + 0.75 * len(toks) / avg))
-        if s > 0 and hit >= need:
-            scored.append((s, f))
+                sc += idf * tf[w] * 2.2 / (tf[w] + 1.2 * (0.25 + 0.75 * len(toks) / avg))
+        if sc > 0 and hit >= need:
+            scored.append((sc, f))
     scored.sort(key=lambda x: -x[0])
+    return scored[:max(1, min(int(k or 4), 8))]
+
+
+def search(query, k=4):
+    """Gambar: caption (bobot ganda) + kalimat yang merujuknya + judul paper."""
+    res = _bm25(INDEX, lambda f: f["caption"] + " " + f["caption"] + " " + " ".join(f["mentions"]) + " " + f["paper"]["title"], query, k)
     return [{"id": f["id"], "label": f["label"], "page": f["page"], "caption": f["caption"][:400],
-             "image": "/figures/" + f["png"], "score": round(s, 2), "paper": f["paper"]["title"],
-             "doi": f["paper"]["doi"], "url": f["paper"]["url"]} for s, f in scored[:max(1, min(int(k or 4), 8))]]
+             "image": "/figures/" + f["png"], "score": round(sc, 2), "paper": f["paper"]["title"],
+             "doi": f["paper"]["doi"], "url": f["paper"]["url"]} for sc, f in res]
+
+
+def search_equations(query, k=3):
+    """Persamaan bernomor: teks mentah + kalimat sebelum/sesudahnya (definisi variabel) + judul paper."""
+    res = _bm25(EQ_INDEX, lambda e: e["raw_text"] + " " + e["context_before"] + " " + e["context_after"] + " " + e["paper"]["title"], query, k)
+    return [{"id": e["id"], "label": e["label"], "page": e["page"],
+             "caption": (e["context_after"] or e["context_before"])[:400], "raw_text": e["raw_text"],
+             "image": "/figures/" + e["png"], "score": round(sc, 2), "paper": e["paper"]["title"],
+             "doi": e["paper"]["doi"], "url": e["paper"]["url"], "kind": "equation"} for sc, e in res]
 
 
 def main():
@@ -299,20 +366,24 @@ def main():
     if not pdfs:
         sys.exit("Tidak ada PDF. Pakai --pdf, --dir, atau --from-db (PDF mentah ada di kb/raw/, tidak ikut git).")
     old = [] if a.fresh or not INDEX.exists() else json.loads(INDEX.read_text(encoding="utf-8"))
-    done = {f["paper"]["pdf"] for f in old}
-    meta, allf, log = paper_meta(), [f for f in old], []
+    old_eq = [] if a.fresh or not EQ_INDEX.exists() else json.loads(EQ_INDEX.read_text(encoding="utf-8"))
+    done = {f["paper"]["pdf"] for f in old} | {e["paper"]["pdf"] for e in old_eq}
+    meta, allf, alle, log = paper_meta(), [f for f in old], [e for e in old_eq], []
     for k, pdf in enumerate(pdfs, 1):
         rel = os.path.relpath(pdf, ROOT).replace("\\", "/")
         if rel in done:
             continue
         figs, err = extract(pdf, meta)
+        eqs = [] if err else extract_equations(pdf, meta)
         allf += figs
-        log.append({"pdf": rel, "figures": len(figs), "error": err})
-        print(f"[{k}/{len(pdfs)}] {len(figs):3d} gambar  {pdf.name[:80]}" + (f"  ({err})" if err else ""))
+        alle += eqs
+        log.append({"pdf": rel, "figures": len(figs), "equations": len(eqs), "error": err})
+        print(f"[{k}/{len(pdfs)}] {len(figs):3d} gambar {len(eqs):3d} persamaan  {pdf.name[:70]}" + (f"  ({err})" if err else ""))
     OUT.mkdir(parents=True, exist_ok=True)
     INDEX.write_text(json.dumps(allf, ensure_ascii=False, indent=1), encoding="utf-8")
+    EQ_INDEX.write_text(json.dumps(alle, ensure_ascii=False, indent=1), encoding="utf-8")
     (OUT / "extract_log.json").write_text(json.dumps(log, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"total {len(allf)} gambar dari {len({f['paper']['pdf'] for f in allf})} PDF -> {INDEX.relative_to(ROOT)}")
+    print(f"total {len(allf)} gambar, {len(alle)} persamaan dari {len({f['paper']['pdf'] for f in allf})} PDF -> {INDEX.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":
