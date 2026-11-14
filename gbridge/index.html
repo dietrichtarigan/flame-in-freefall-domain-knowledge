@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gravity Bridge</title>
+<style>
+/* Same tokens as app/insight. Rod points (the material the boundary applies to) carry the accent;
+   every other material is muted. Outcome is encoded by marker shape, never by colour alone. */
+:root{
+  color-scheme:light;
+  --page:#f9f9f7; --surface:#fcfcfb; --surface-2:#f3f2ef;
+  --ink:#0b0b0b; --ink-2:#52514e; --mute:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --ring:rgba(11,11,11,.10);
+  --accent:#2a78d6; --accent-soft:#cde2fb; --band:rgba(42,120,214,.10);
+  --flame:rgba(235,104,52,.12); --flame-ink:#eb6834;
+  --critical:#d03b3b; --warning:#b97f00; --good:#0a8a0a;
+  --radius:10px; --gap:14px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --page:#0d0d0d; --surface:#1a1a19; --surface-2:#232321;
+  --ink:#f0efec; --ink-2:#c3c2b7; --mute:#898781;
+  --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10);
+  --accent:#3987e5; --accent-soft:#184f95; --band:rgba(57,135,229,.16);
+  --flame:rgba(217,89,38,.18); --flame-ink:#e8763f;
+  --critical:#e86060; --warning:#fab219; --good:#3fc43f;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#0d0d0d; --surface:#1a1a19; --surface-2:#232321;
+  --ink:#f0efec; --ink-2:#c3c2b7; --mute:#898781;
+  --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10);
+  --accent:#3987e5; --accent-soft:#184f95; --band:rgba(57,135,229,.16);
+  --flame:rgba(217,89,38,.18); --flame-ink:#e8763f;
+  --critical:#e86060; --warning:#fab219; --good:#3fc43f;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+button,select,input{font:inherit;color:inherit}
+button{cursor:pointer;background:var(--surface);border:1px solid var(--axis);border-radius:7px;padding:5px 11px}
+button:hover{background:var(--surface-2)}
+button[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+a{color:var(--accent)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 16px 40px}
+header{padding:18px 0 6px;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+header h1{font-size:20px;margin:0;letter-spacing:-.01em}
+header .sub{color:var(--ink-2)}
+header .right{margin-left:auto;font-size:12px}
+.hint{font-size:12px;color:var(--mute)}
+.card{background:var(--surface);border:1px solid var(--ring);border-radius:var(--radius);padding:14px 16px}
+.hero{margin:12px 0}
+.hero .q{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2)}
+.hero .a{font-size:20px;font-weight:600;line-height:1.3;margin:4px 0 6px;max-width:60em;text-wrap:balance}
+.badge{display:inline-flex;gap:5px;align-items:center;font-size:12px;border:1px solid var(--axis);border-radius:99px;padding:1px 9px;margin:2px 6px 2px 0;white-space:nowrap}
+.badge.crit{border-color:var(--critical);color:var(--critical)}
+.badge.warn{border-color:var(--warning);color:var(--warning)}
+.badge.good{border-color:var(--good);color:var(--good)}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:var(--gap);margin:12px 0}
+.ctl label{display:flex;justify-content:space-between;gap:8px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2)}
+.ctl label b{color:var(--ink);font-variant-numeric:tabular-nums;text-transform:none;letter-spacing:0;font-size:13px}
+.ctl input[type=range]{width:100%;margin:6px 0 4px;accent-color:var(--accent)}
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+.seg button{font-size:12px;padding:3px 9px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:var(--gap);margin:12px 0}
+.tile .k{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2)}
+.tile .v{font-size:24px;font-weight:600;line-height:1.2;margin-top:2px;font-variant-numeric:tabular-nums}
+.tile .d{font-size:12px;color:var(--mute)}
+.grid2{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:var(--gap)}
+@media (max-width:900px){.grid2{grid-template-columns:minmax(0,1fr)}}
+h2{font-size:15px;margin:0 0 2px}
+.card p{margin:4px 0 8px;color:var(--ink-2);max-width:70em}
+svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{fill:var(--ink-2);font-size:11px}
+svg .t-ink{fill:var(--ink)}
+svg .gridl{stroke:var(--grid);stroke-width:1}
+svg .axl{stroke:var(--axis);stroke-width:1}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink-2);margin-top:6px;align-items:center}
+.legend svg{width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-right:4px}
+.legend label{display:inline-flex;align-items:center;gap:5px}
+#tip{position:fixed;pointer-events:none;background:var(--surface);border:1px solid var(--axis);border-radius:8px;padding:8px 10px;font-size:12px;max-width:340px;box-shadow:0 4px 18px rgba(0,0,0,.18);display:none;z-index:5}
+#tip b{display:block}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{text-align:left;padding:5px 8px;border-bottom:1px solid var(--grid);vertical-align:top}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2);font-weight:600}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.scroll{overflow-x:auto}
+ul.tight{margin:6px 0 0;padding-left:18px;color:var(--ink-2)}
+ul.tight li{margin:3px 0}
+code{font-size:12px;background:var(--surface-2);padding:1px 5px;border-radius:4px}
+.eq{font-family:ui-monospace,Consolas,monospace;font-size:13px;background:var(--surface-2);border-radius:7px;padding:8px 10px;margin:6px 0;overflow-x:auto;white-space:nowrap}
+
+#themeBtn{font-size:12px;padding:3px 10px;margin-right:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Gravity Bridge</h1>
+  <span class="sub">Reading microgravity flow tests as equivalent gravity</span>
+  <span class="right"><button id="themeBtn" type="button"></button><a href="../insight/index.html">← Insight dashboard</a></span>
+</header>
+
+<section class="card hero" aria-live="polite">
+  <div class="q">Does a PMMA rod keep burning here?</div>
+  <div class="a" id="heroA">Loading…</div>
+  <div id="heroB"></div>
+</section>
+
+<section class="controls">
+  <div class="card ctl">
+    <label for="g">Gravity <b id="gV"></b></label>
+    <input id="g" type="range" min="-6" max="0.3" step="0.01" value="-0.78">
+    <div class="seg" id="bodies"></div>
+  </div>
+  <div class="card ctl">
+    <label for="uf">Forced flow (ventilation) <b id="ufV"></b></label>
+    <input id="uf" type="range" min="0" max="40" step="0.5" value="0">
+    <div class="hint">Added linearly to the buoyant flow, as in Olson &amp; Ferkul 2017.</div>
+  </div>
+  <div class="card ctl">
+    <label for="o2">Cabin oxygen <b id="o2V"></b></label>
+    <input id="o2" type="range" min="12" max="36" step="0.1" value="21">
+    <div class="seg" id="atms"></div>
+  </div>
+  <div class="card ctl">
+    <label for="p">Pressure <b id="pV"></b></label>
+    <input id="p" type="range" min="40" max="110" step="0.1" value="101.3">
+    <label for="rod" style="margin-top:6px">Rod diameter
+      <select id="rod"><option value="0.3175">1/4 in.</option><option value="0.47625">3/8 in.</option><option value="0.635">1/2 in.</option></select>
+    </label>
+  </div>
+</section>
+
+<section class="tiles" id="tiles"></section>
+
+<section class="grid2">
+  <div class="card">
+    <h2>Flammability map: oxygen against flow</h2>
+    <p>The curve is the published boundary for PMMA rods, fitted to BASS-II tests on the ISS. Above it a flame survives. Gravity moves the vertical line; every point is a real microgravity test.</p>
+    <svg id="map" viewBox="0 0 720 430" role="img" aria-label="Flammability map of oxygen percentage against flow speed"></svg>
+    <div class="legend" id="legend"></div>
+  </div>
+  <div class="card">
+    <h2>Oxygen limit against gravity</h2>
+    <p>The same boundary read along the gravity axis at the chosen ventilation and pressure. The band spans the buoyant-flow prefactor (10–30 cm/s at 1 g) and both scaling exponents (1/3 and 1/2).</p>
+    <svg id="locg" viewBox="0 0 480 430" role="img" aria-label="Limiting oxygen against gravity level"></svg>
+    <div class="legend"><span><svg viewBox="0 0 14 14"><line x1="0" y1="7" x2="14" y2="7" stroke="var(--ink)" stroke-width="2"/></svg>model, central</span><span><svg viewBox="0 0 14 14"><rect width="14" height="14" fill="var(--band)"/></svg>model interval</span><span><svg viewBox="0 0 14 14"><line x1="0" y1="7" x2="14" y2="7" stroke="var(--ink-2)" stroke-dasharray="3 3"/></svg>cabin oxygen</span></div>
+  </div>
+</section>
+
+<section class="card" style="margin-top:var(--gap)">
+  <h2>Where PSI has data along the gravity axis</h2>
+  <p>PSI holds no partial-gravity tests. What it does hold is microgravity tests with forced flow, counted here when the flow falls within ±25 % of each body's buoyant flow.</p>
+  <div class="scroll"><table id="cov"></table></div>
+</section>
+
+<section class="grid2" style="margin-top:var(--gap)">
+  <div class="card">
+    <h2>The model</h2>
+    <div class="eq">U<sub>b</sub>(g, p) = U<sub>b1</sub> · (g/g<sub>E</sub>)<sup>1/3</sup> · (p<sub>0</sub>/p)<sup>1/3</sup> &nbsp;&nbsp; U = U<sub>forced</sub> + U<sub>b</sub></div>
+    <div class="eq">a = (3/2)(U/r)(r/r<sub>0</sub>)<sup>1/2</sup> &nbsp;&nbsp; X<sub>lim</sub>(a) = X<sub>0</sub> + A·e<sup>−a/a<sub>q</sub></sup> + B·a</div>
+    <ul class="tight" id="params"></ul>
+  </div>
+  <div class="card">
+    <h2>Checks and limits</h2>
+    <ul class="tight" id="checks"></ul>
+  </div>
+</section>
+</div>
+<div id="tip" role="status"></div>
+
+<script>
+const qs = new URLSearchParams(location.search);
+// Theme: ?theme= wins, then the saved choice, then the system setting.
+(function () {
+  const KEY = "fif-theme", root = document.documentElement, btn = document.getElementById("themeBtn");
+  let saved = null; try { saved = localStorage.getItem(KEY); } catch {}
+  const fromUrl = new URLSearchParams(location.search).get("theme");
+  if (fromUrl || saved) root.dataset.theme = fromUrl || saved;
+  const current = () => root.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  const paint = () => { const next = current() === "dark" ? "light" : "dark"; btn.textContent = next === "light" ? "☀ Light mode" : "☾ Dark mode"; btn.setAttribute("aria-label", "Switch to " + next + " mode"); };
+  btn.addEventListener("click", () => { const next = current() === "dark" ? "light" : "dark"; root.dataset.theme = next; try { localStorage.setItem(KEY, next); } catch {} paint(); });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", paint);
+  paint();
+})();
+const $ = id => document.getElementById(id);
+const NS = "http://www.w3.org/2000/svg";
+const el = (tag, attrs = {}, text) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; return e; };
+const f1 = v => v.toFixed(1), f2 = v => v.toFixed(2);
+let D, P, M;
+const S = { g: Math.pow(10, -0.78), uf: 0, o2: 21, p: 101.3, r: 0.3175, show: "all" };
+
+/* ---- model (closed form; parameters come from data.json, written by scripts/gbridge.py) ---- */
+const uBuoy = (g, p, ub1 = P.ub1_cm_s, n = P.n) => ub1 * Math.pow(g, n) * Math.pow(P.p0_kpa / p, n);
+const stretch = (u, r) => 1.5 * u / r * Math.sqrt(r / P.r0_cm);
+const xLim = (u, r) => { const a = stretch(u, r); return M.X0 + M.A * Math.exp(-a / M.a_q) + M.B * a; };
+function uRange(g, p) {
+  const v = [uBuoy(g, p)];
+  for (const ub1 of P.ub1_range) for (const n of [P.n, P.n_alt]) v.push(uBuoy(g, p, ub1, n));
+  return [v[0], Math.min(...v), Math.max(...v)];
+}
+function loc(g, uf, p, r) {
+  const [m, lo, hi] = uRange(g, p), xs = [m, lo, hi].map(u => xLim(uf + u, r));
+  // boundary is U-shaped, so the extreme may sit inside the flow interval
+  let mn = Math.min(...xs), mx = Math.max(...xs);
+  for (let i = 0; i <= 24; i++) { const x = xLim(uf + lo + (hi - lo) * i / 24, r); mn = Math.min(mn, x); mx = Math.max(mx, x); }
+  return [xs[0], mn, mx];
+}
+const gLabel = g => g >= 0.01 ? g.toFixed(3) + " g" : g.toExponential(1).replace("e", "×10^") + " g";
+
+/* ---- map ---- */
+const MX = { l: 46, r: 14, t: 26, b: 40, w: 720, h: 430, x0: 0.3, x1: 60 };
+function drawMap() {
+  const svg = $("map"); svg.replaceChildren();
+  const y0 = 12, y1 = Math.max(24, Math.ceil(S.o2 + 1.5));
+  const X = u => MX.l + (Math.log10(Math.min(MX.x1, Math.max(MX.x0, u))) - Math.log10(MX.x0)) / (Math.log10(MX.x1) - Math.log10(MX.x0)) * (MX.w - MX.l - MX.r);
+  const Y = o => MX.t + (y1 - o) / (y1 - y0) * (MX.h - MX.t - MX.b);
+  for (let o = y0; o <= y1; o += (y1 > 28 ? 4 : 2)) { svg.append(el("line", { x1: MX.l, x2: MX.w - MX.r, y1: Y(o), y2: Y(o), class: "gridl" }), el("text", { x: MX.l - 6, y: Y(o) + 4, "text-anchor": "end" }, o)); }
+  for (const u of [0.3, 1, 3, 10, 30, 60]) { svg.append(el("line", { x1: X(u), x2: X(u), y1: MX.t, y2: MX.h - MX.b, class: "gridl" }), el("text", { x: X(u), y: MX.h - MX.b + 15, "text-anchor": "middle" }, u)); }
+  svg.append(el("text", { x: (MX.l + MX.w - MX.r) / 2, y: MX.h - 6, "text-anchor": "middle" }, "Flow at the flame, cm/s (log scale; rods normalised to equal stretch rate)"));
+  svg.append(el("text", { x: 12, y: MX.t - 10 }, "O₂, % by volume"));
+  // flammable region + boundary
+  const us = []; for (let i = 0; i <= 160; i++) us.push(MX.x0 * Math.pow(MX.x1 / MX.x0, i / 160));
+  const rEq = S.r, toEq = u => stretch(u, rEq) / (1.5 / P.r0_cm);          // physical flow -> x-axis flow
+  const pts = us.map(ue => [X(ue), Y(Math.min(y1, xLim(ue, P.r0_cm)))]);
+  svg.append(el("path", { d: "M" + pts.map(p => p.join(",")).join("L") + `L${X(MX.x1)},${Y(y1)}L${X(MX.x0)},${Y(y1)}Z`, fill: "var(--flame)" }));
+  svg.append(el("path", { d: "M" + pts.map(p => p.join(",")).join("L"), fill: "none", stroke: "var(--flame-ink)", "stroke-width": 2 }));
+  svg.append(el("text", { x: X(22), y: Y(y1) + 14, class: "t-ink" }, "flame survives"));
+  svg.append(el("text", { x: X(0.33), y: Y(13.1), class: "t-ink" }, "no flame"));
+  // data points
+  const show = p => S.show === "all" || p.mat === "pmma_rod" || p.mat === S.show;
+  const order = D.points.filter(p => p.o2 != null && show(p)).sort((a, b) => (a.mat === "pmma_rod") - (b.mat === "pmma_rod"));
+  for (const p of order) {
+    const rod = p.mat === "pmma_rod", col = rod ? "var(--accent)" : "var(--mute)";
+    const x = X(p.u_eq), y = Y(p.o2); let m;
+    if (p.kind === "nyala") m = el("circle", { cx: x, cy: y, r: rod ? 3.6 : 3, fill: col, "fill-opacity": rod ? .85 : .55, stroke: "var(--surface)", "stroke-width": .8 });
+    else if (p.kind === "blowoff") m = el("path", { d: `M${x},${y - 6}L${x + 5.5},${y + 4}L${x - 5.5},${y + 4}Z`, fill: col, stroke: "var(--surface)", "stroke-width": .8 });
+    else if (p.kind === "padam") m = el("path", { d: `M${x - 4.5},${y - 4.5}L${x + 4.5},${y + 4.5}M${x - 4.5},${y + 4.5}L${x + 4.5},${y - 4.5}`, stroke: col, "stroke-width": 2.2, fill: "none" });
+    else m = el("circle", { cx: x, cy: y, r: 4, fill: "var(--surface)", stroke: col, "stroke-width": 1.8 });
+    const hit = el("circle", { cx: x, cy: y, r: 8, fill: "transparent", tabindex: -1 });
+    hit.addEventListener("mousemove", e => tip(e, p)); hit.addEventListener("mouseleave", () => $("tip").style.display = "none");
+    svg.append(m, hit);
+  }
+  // gravity line with interval
+  const [ub, ulo, uhi] = uRange(S.g, S.p), ut = toEq(S.uf + ub);
+  svg.append(el("rect", { x: X(toEq(S.uf + ulo)), y: MX.t, width: Math.max(1, X(toEq(S.uf + uhi)) - X(toEq(S.uf + ulo))), height: MX.h - MX.t - MX.b, fill: "var(--band)" }));
+  svg.append(el("line", { x1: X(ut), x2: X(ut), y1: MX.t, y2: MX.h - MX.b, stroke: "var(--ink)", "stroke-width": 1.5 }));
+  svg.append(el("line", { x1: MX.l, x2: MX.w - MX.r, y1: Y(S.o2), y2: Y(S.o2), stroke: "var(--ink-2)", "stroke-dasharray": "4 4" }));
+  svg.append(el("circle", { cx: X(ut), cy: Y(S.o2), r: 6, fill: "var(--ink)", stroke: "var(--surface)", "stroke-width": 2 }));
+  // body ticks along the top
+  for (const b of D.bodies) {
+    const ue = toEq(uBuoy(b.g_rel, S.p)); if (ue < MX.x0 || ue > MX.x1) continue;
+    const x = X(ue);
+    svg.append(el("line", { x1: x, x2: x, y1: MX.t - 5, y2: MX.t, stroke: "var(--ink-2)", "stroke-width": 1.5 }), el("text", { x, y: MX.t - 8, "text-anchor": "middle" }, b.short));
+  }
+  svg.append(el("line", { x1: MX.l, x2: MX.w - MX.r, y1: MX.h - MX.b, y2: MX.h - MX.b, class: "axl" }));
+}
+function tip(e, p) {
+  const t = $("tip"), k = { nyala: "Flame sustained", padam: "Went out at low flow (quench)", blowoff: "Blowoff", tidak_menyala: "Did not ignite", tidak_merambat: "Did not spread" }[p.kind];
+  t.replaceChildren();
+  const b = document.createElement("b"); b.textContent = `${p.test} · ${p.fuel}`; t.append(b);
+  const lines = [`${k}`, `O₂ ${p.o2} % · flow ${p.censored && p.kind === "padam" ? "< 1" : p.censored && p.kind === "blowoff" ? "> " + p.u : p.u} cm/s`, p.censored ? "Flow is a bound, not a measurement" : "", p.src, "Tier: nasa_table, parsed by script (derived_auto)"];
+  for (const l of lines) if (l) { const d = document.createElement("div"); d.textContent = l; t.append(d); }
+  t.style.display = "block";
+  t.style.left = Math.min(innerWidth - 350, e.clientX + 14) + "px"; t.style.top = (e.clientY + 14) + "px";
+}
+
+/* ---- LOC vs g ---- */
+function drawLoc() {
+  const svg = $("locg"); svg.replaceChildren();
+  const m = { l: 44, r: 14, t: 26, b: 40, w: 480, h: 430 }, gx0 = -6, gx1 = 0.3;
+  const N = 110, rows = [];
+  for (let i = 0; i <= N; i++) { const lg = gx0 + (gx1 - gx0) * i / N; rows.push([lg, ...loc(Math.pow(10, lg), S.uf, S.p, S.r)]); }
+  const lo = Math.min(13, ...rows.map(r => r[2])), hi = Math.max(20, ...rows.map(r => r[3]), Math.min(S.o2, 24) + 0.5);
+  const y0 = Math.floor(lo), y1 = Math.ceil(hi);
+  const X = lg => m.l + (lg - gx0) / (gx1 - gx0) * (m.w - m.l - m.r), Y = o => m.t + (y1 - o) / (y1 - y0) * (m.h - m.t - m.b);
+  for (let o = y0; o <= y1; o++) svg.append(el("line", { x1: m.l, x2: m.w - m.r, y1: Y(o), y2: Y(o), class: "gridl" }), el("text", { x: m.l - 6, y: Y(o) + 4, "text-anchor": "end" }, o));
+  for (let k = -6; k <= 0; k++) svg.append(el("text", { x: X(k), y: m.h - m.b + 15, "text-anchor": "middle" }, k === 0 ? "1" : "10" + "⁻" + "⁰¹²³⁴⁵⁶"[-k]));
+  svg.append(el("text", { x: (m.l + m.w - m.r) / 2, y: m.h - 6, "text-anchor": "middle" }, "Gravity, g/g_Earth (log scale)"));
+  svg.append(el("text", { x: 12, y: m.t - 10 }, "Limiting O₂, %"));
+  svg.append(el("path", { d: "M" + rows.map(r => `${X(r[0])},${Y(r[3])}`).join("L") + "L" + rows.slice().reverse().map(r => `${X(r[0])},${Y(r[2])}`).join("L") + "Z", fill: "var(--band)" }));
+  svg.append(el("path", { d: "M" + rows.map(r => `${X(r[0])},${Y(r[1])}`).join("L"), fill: "none", stroke: "var(--ink)", "stroke-width": 2 }));
+  if (S.o2 <= y1) svg.append(el("line", { x1: m.l, x2: m.w - m.r, y1: Y(S.o2), y2: Y(S.o2), stroke: "var(--ink-2)", "stroke-dasharray": "4 4" }));
+  for (const b of D.bodies) {
+    const x = X(Math.log10(b.g_rel));
+    svg.append(el("line", { x1: x, x2: x, y1: m.t, y2: m.h - m.b, stroke: "var(--axis)" }), el("text", { x: 0, y: 0, "text-anchor": "end", transform: `translate(${x + (b.id === "iss" ? 12 : -4)},${m.t + 4}) rotate(-90)` }, b.short));
+  }
+  const c = loc(S.g, S.uf, S.p, S.r), x = X(Math.log10(S.g));
+  svg.append(el("line", { x1: x, x2: x, y1: Y(c[2]), y2: Y(c[1]), stroke: "var(--ink)", "stroke-width": 3, "stroke-opacity": .35 }));
+  svg.append(el("circle", { cx: x, cy: Y(c[0]), r: 6, fill: "var(--ink)", stroke: "var(--surface)", "stroke-width": 2 }));
+  svg.append(el("line", { x1: m.l, x2: m.w - m.r, y1: m.h - m.b, y2: m.h - m.b, class: "axl" }));
+}
+
+/* ---- text ---- */
+function badge(cls, icon, text) { const s = document.createElement("span"); s.className = "badge " + cls; s.textContent = icon + " " + text; return s; }
+function drawText() {
+  const [ub, ulo, uhi] = uRange(S.g, S.p), ut = S.uf + ub, [x, xlo, xhi] = loc(S.g, S.uf, S.p, S.r);
+  $("gV").textContent = gLabel(S.g); $("ufV").textContent = f1(S.uf) + " cm/s"; $("o2V").textContent = f1(S.o2) + " %"; $("pV").textContent = f1(S.p) + " kPa";
+  const v = M.valid, flags = [];
+  if (S.p < v.p_kpa[0] || S.p > v.p_kpa[1]) flags.push("Pressure outside the tested 101 kPa: only the buoyant flow is rescaled, chemistry is not");
+  if (S.o2 > v.o2_pct[1]) flags.push(`Oxygen above the tested ${v.o2_pct[1]} %`);
+  if (ut > v.u_cm_s[1]) flags.push(`Flow above the tested ${v.u_cm_s[1]} cm/s`);
+  let verdict, cls, icon;
+  if (S.o2 > xhi) { verdict = "Yes. The cabin oxygen is above the whole model interval"; cls = "crit"; icon = "▲"; }
+  else if (S.o2 < xlo) { verdict = "No. The cabin oxygen is below the whole model interval"; cls = "good"; icon = "●"; }
+  else { verdict = "Undecided. The cabin oxygen sits inside the model interval"; cls = "warn"; icon = "◆"; }
+  $("heroA").textContent = `${verdict}: at ${gLabel(S.g)} the limit is ${f1(x)} % O₂ (${f1(xlo)}–${f1(xhi)}), the cabin is at ${f1(S.o2)} %.`;
+  const hb = $("heroB"); hb.replaceChildren(badge(cls, icon, cls === "crit" ? "Flammable" : cls === "good" ? "Self-extinguishing" : "Within uncertainty"), badge("", "◇", "Tier: model_prediction, physics extrapolation"));
+  for (const f of flags) hb.append(badge("warn", "⚠", f));
+  const near = D.points.filter(p => !p.censored && p.u >= ut * .75 - .02 && p.u <= ut * 1.25 + .02), nRod = near.filter(p => p.mat === "pmma_rod").length;
+  const tiles = [
+    ["Buoyant flow", f1(ub) + " cm/s", `${f1(ulo)}–${f1(uhi)} across prefactor and exponent`],
+    ["Total flow at the flame", f1(ut) + " cm/s", `stretch rate ${f1(stretch(ut, S.r))} s⁻¹`],
+    ["Limiting oxygen", f1(x) + " %", `interval ${f1(xlo)}–${f1(xhi)} %`],
+    ["Margin to the limit", (S.o2 - x >= 0 ? "+" : "−") + f1(Math.abs(S.o2 - x)) + " pts", S.o2 - x >= 0 ? "cabin oxygen above the limit" : "cabin oxygen below the limit"],
+    ["PSI tests near this flow", String(near.length), `${nRod} on PMMA rods · 0 in partial gravity`],
+  ];
+  $("tiles").replaceChildren(...tiles.map(([k, val, d]) => { const t = document.createElement("div"); t.className = "card tile"; for (const [c, s] of [["k", k], ["v", val], ["d", d]]) { const e = document.createElement("div"); e.className = c; e.textContent = s; t.append(e); } return t; }));
+  // coverage table (recomputed for the current pressure and ventilation)
+  const tb = $("cov"); tb.replaceChildren();
+  const head = document.createElement("tr"); for (const h of ["Body", "g / g_Earth", "Buoyant flow, cm/s", "Limiting O₂, % (interval)", "PSI points within ±25 %", "of which PMMA rod"]) { const th = document.createElement("th"); th.textContent = h; head.append(th); } tb.append(head);
+  for (const b of D.bodies) {
+    const u = uBuoy(b.g_rel, S.p), l = loc(b.g_rel, S.uf, S.p, S.r), n = D.points.filter(p => !p.censored && p.u >= (S.uf + u) * .75 - .02 && p.u <= (S.uf + u) * 1.25 + .02);
+    const tr = document.createElement("tr");
+    for (const [s, num] of [[b.label_en, 0], [b.g_rel < .01 ? b.g_rel.toExponential(0) : b.g_rel.toFixed(3), 1], [f1(u), 1], [`${f1(l[0])} (${f1(l[1])}–${f1(l[2])})`, 1], [n.length ? String(n.length) : "none: empty region", 1], [String(n.filter(p => p.mat === "pmma_rod").length), 1]]) { const td = document.createElement("td"); td.textContent = s; if (num) td.className = "num"; tr.append(td); }
+    tb.append(tr);
+  }
+}
+function render() { drawMap(); drawLoc(); drawText(); document.querySelectorAll("#bodies button").forEach(b => b.setAttribute("aria-pressed", Math.abs(Math.log10(S.g) - Math.log10(+b.dataset.g)) < .006)); document.querySelectorAll("#atms button").forEach(b => b.setAttribute("aria-pressed", +b.dataset.o2 === S.o2 && +b.dataset.p === S.p)); }
+
+function init() {
+  P = D.params; M = P.materials.pmma_rod;
+  const en = { iss: ["ISS", "ISS (microgravity)"], moon: ["Moon", "Moon"], mars: ["Mars", "Mars"], earth: ["Earth", "Earth"] };
+  for (const b of D.bodies) { b.short = en[b.id][0]; b.label_en = en[b.id][1]; const bt = document.createElement("button"); bt.textContent = b.short; bt.dataset.g = b.g_rel; bt.onclick = () => { S.g = b.g_rel; $("g").value = Math.log10(b.g_rel); render(); }; $("bodies").append(bt); }
+  const aen = { iss: "ISS 21 % · 101 kPa", shuttle: "Shuttle pre-EVA 30 % · 70 kPa", explore: "Exploration 34 % · 56.5 kPa" };
+  for (const a of D.atmospheres) { const bt = document.createElement("button"); bt.textContent = aen[a.id]; bt.dataset.o2 = a.o2_pct; bt.dataset.p = a.p_kpa; bt.onclick = () => { S.o2 = a.o2_pct; S.p = a.p_kpa; $("o2").value = S.o2; $("p").value = S.p; render(); }; $("atms").append(bt); }
+  $("g").oninput = e => { S.g = Math.pow(10, +e.target.value); render(); };
+  $("uf").oninput = e => { S.uf = +e.target.value; render(); };
+  $("o2").oninput = e => { S.o2 = +e.target.value; render(); };
+  $("p").oninput = e => { S.p = +e.target.value; render(); };
+  $("rod").onchange = e => { S.r = +e.target.value; render(); };
+  // legend + material filter
+  const lg = $("legend"), ic = (inner) => `<svg viewBox="0 0 14 14">${inner}</svg>`;
+  lg.innerHTML = `<span>${ic('<circle cx="7" cy="7" r="4" fill="var(--accent)"/>')}flame sustained</span><span>${ic('<path d="M2,2L12,12M2,12L12,2" stroke="var(--accent)" stroke-width="2.2"/>')}went out at low flow (&lt; 1 cm/s)</span><span>${ic('<path d="M7,1L13,12L1,12Z" fill="var(--accent)"/>')}blowoff</span><span>${ic('<circle cx="7" cy="7" r="4" fill="none" stroke="var(--mute)" stroke-width="1.8"/>')}no ignition or no spread</span><span>${ic('<rect width="14" height="14" fill="var(--band)"/>')}flow interval at this gravity</span><label>Blue: PMMA rods. Grey: <select id="show"><option value="all">all other materials</option><option value="pmma_flat">PMMA films and slabs</option><option value="sibal">SIBAL fabric</option><option value="saffire">Saffire samples</option><option value="pmma_rod">none</option></select></label>`;
+  $("show").onchange = e => { S.show = e.target.value; render(); };
+  // model parameters and checks
+  const li = (ul, s) => { const e = document.createElement("li"); e.textContent = s; $(ul).append(e); };
+  li("params", `U_b1 = ${P.ub1_cm_s} cm/s at 1 g (range ${P.ub1_range.join("–")}). Scaling theory gives ${D.ub_theory.alpha_ambient} cm/s with ambient diffusivity and ${D.ub_theory.alpha_film_1100K} cm/s at film temperature.`);
+  li("params", `Material parameters for PMMA rods: X₀ = ${M.X0} %, A = ${M.A} %, a_q = ${M.a_q} s⁻¹, B = ${M.B} % s. Source: Olson & Ferkul 2017, eq. (1). Tier: paper_claim.`);
+  li("params", "Gravity enters only through the buoyant flow. It never touches the kinetics, which is why atomistic models cannot supply it.");
+  li("params", "Other materials have no boundary yet: their points are on the map, their four parameters are the next thing to fit.");
+  const c = D.check, a = D.anchors[0], b = c.blowoff_points[0];
+  li("checks", `${c.n_flame_above_boundary} of ${c.n_flame} sustained-flame points parsed from the NASA table lie above the published boundary (worst margin ${c.flame_margin_min_pct_o2} % O₂).`);
+  if (b) li("checks", `Blowoff test ${b.test} at ${b.u} cm/s: observed ${b.o2_obs} % O₂, boundary ${b.o2_model} %.`);
+  li("checks", `1 g anchor: upward limit ${a.observed} % O₂ observed, ${a.model} % from the bridge. One point, and U_b1 is an input, so this is consistency, not independent validation.`);
+  li("checks", `${c.n_quench} quench events are placed at "< 1 cm/s": the anemometer floor. The quench branch cannot be refitted until the fan potentiometer is calibrated to cm/s.`);
+  li("checks", "Buoyant flow accelerates along the flame and always points up; forced flow is uniform. The equivalence is a scaling argument.");
+  li("checks", "PSI cannot validate the gravity axis: it holds microgravity only. Partial-gravity anchors must come from aircraft and centrifuge literature.");
+  render();
+}
+fetch("data.json").then(r => r.json()).then(d => { D = d; init(); }).catch(e => { $("heroA").textContent = "Could not load data.json. Serve the app folder: cd app && python -m http.server 8000"; });
+</script>
+</body>
+</html>
