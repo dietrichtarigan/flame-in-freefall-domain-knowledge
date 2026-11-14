@@ -23,6 +23,11 @@ __pycache__/
 .venv/
 venv/
 
+# Kunci API dan rahasia lain — JANGAN pernah di-commit (.env.example boleh)
+.env
+.env.*
+!.env.example
+
 # Pustaka pihak ketiga yang diunduh (three.js dll) — lihat docs/ untuk cara ambil
 app/vendor/
 

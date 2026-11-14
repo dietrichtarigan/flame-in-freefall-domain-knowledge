@@ -1,0 +1,246 @@
+{
+ "deepseek": {
+  "mode": "deepseek",
+  "n": 12,
+  "aggregate": {
+   "pass": 0.417,
+   "tool_ok": 0.917,
+   "contain_ok": 0.833,
+   "forbid_ok": 1.0,
+   "ui_ok": 1.0,
+   "grounded": 0.75,
+   "cites_ok": 0.917,
+   "ms_median": 10697
+  },
+  "rows": [
+   {
+    "id": "k01",
+    "q": "kenapa 21196A1 dianggap janggal?",
+    "mode": "deepseek",
+    "ms": 18534,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": false,
+    "ungrounded": [
+     "95"
+    ],
+    "cites_ok": true,
+    "tools": [
+     "get_test",
+     "explain_test",
+     "list_alerts",
+     "ui_action",
+     "list_alerts",
+     "list_alerts",
+     "list_alerts"
+    ],
+    "pass": false
+   },
+   {
+    "id": "k02",
+    "q": "apa yang terjadi pada uji 21106A2",
+    "mode": "deepseek",
+    "ms": 8536,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "get_test",
+     "ui_action"
+    ],
+    "pass": true
+   },
+   {
+    "id": "k03",
+    "q": "andaikan oksigennya 35% dengan etana normal dan fraksi bahan bakar 0.5, menyala tidak?",
+    "mode": "deepseek",
+    "ms": 14222,
+    "tool_ok": true,
+    "contain_ok": false,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "whatif_cfig",
+     "whatif_cfig"
+    ],
+    "pass": false
+   },
+   {
+    "id": "k04",
+    "q": "prediksi peluang padam droplet metanol pada O2 0.2 dan tekanan 80 kPa",
+    "mode": "deepseek",
+    "ms": 17375,
+    "tool_ok": false,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "model_cards",
+     "get_investigation"
+    ],
+    "pass": false
+   },
+   {
+    "id": "k05",
+    "q": "eksperimen apa yang paling berguna dijalankan NASA selanjutnya untuk FLEX?",
+    "mode": "deepseek",
+    "ms": 6367,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "recommend_next_tests",
+     "ui_action"
+    ],
+    "pass": true
+   },
+   {
+    "id": "k06",
+    "q": "uji mana yang tabel NASA dan telemetrinya tidak cocok?",
+    "mode": "deepseek",
+    "ms": 12141,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "list_alerts",
+     "find_tests",
+     "ui_action"
+    ],
+    "pass": true
+   },
+   {
+    "id": "k07",
+    "q": "bagian data mana yang paling banyak kosong?",
+    "mode": "deepseek",
+    "ms": 9315,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": false,
+    "ungrounded": [
+     "41",
+     "66"
+    ],
+    "cites_ok": true,
+    "tools": [
+     "coverage"
+    ],
+    "pass": false
+   },
+   {
+    "id": "k08",
+    "q": "seberapa akurat model prediksi penyalaan?",
+    "mode": "deepseek",
+    "ms": 10741,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "model_cards",
+     "uncertainty_stats"
+    ],
+    "pass": true
+   },
+   {
+    "id": "k09",
+    "q": "berapa selang kepercayaan laju bakar heptana?",
+    "mode": "deepseek",
+    "ms": 6420,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": false,
+    "tools": [
+     "uncertainty_stats"
+    ],
+    "pass": false
+   },
+   {
+    "id": "k10",
+    "q": "uji lain yang serupa dengan 21106G7",
+    "mode": "deepseek",
+    "ms": 10697,
+    "tool_ok": true,
+    "contain_ok": false,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "related",
+     "get_test",
+     "ui_action"
+    ],
+    "pass": false
+   },
+   {
+    "id": "k11",
+    "q": "cari dokumen NASA tentang wire insulation flammability",
+    "mode": "deepseek",
+    "ms": 6293,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "search_papers"
+    ],
+    "pass": true
+   },
+   {
+    "id": "k12",
+    "q": "apa yang harus saya periksa dulu sebagai manusia?",
+    "mode": "deepseek",
+    "ms": 9377,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": false,
+    "ungrounded": [
+     "24"
+    ],
+    "cites_ok": true,
+    "tools": [
+     "review_queue",
+     "coverage",
+     "ui_action"
+    ],
+    "pass": false
+   }
+  ]
+ }
+}

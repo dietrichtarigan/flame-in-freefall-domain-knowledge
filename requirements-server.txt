@@ -1,0 +1,2 @@
+# Backend asisten (scripts/brain.py serve). Selain ini hanya pustaka standar Python.
+anthropic==2.8.0

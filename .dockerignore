@@ -1,0 +1,12 @@
+.git
+.env
+.env.*
+kb/raw/
+kb/clean/
+kb/manifest/
+docs/
+eval/
+**/__pycache__
+*.pyc
+*.pt
+*.npz

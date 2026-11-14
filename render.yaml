@@ -1,0 +1,22 @@
+# Blueprint Render: New -> Blueprint -> pilih repo ini. Lihat docs/deploy.md.
+services:
+  - type: web
+    name: flame-in-freefall
+    runtime: docker
+    plan: free
+    healthCheckPath: /model_cards
+    envVars:
+      - key: LLM_PROVIDER           # "deepseek" atau "anthropic"
+        value: deepseek
+      - key: DEEPSEEK_API_KEY       # diisi sendiri di dasbor Render (rahasia, tidak masuk git)
+        sync: false
+      - key: DEEPSEEK_MODEL         # deepseek-v4-pro (lebih kuat) atau deepseek-flash (lebih murah)
+        value: deepseek-v4-pro
+      - key: CORS_ORIGIN            # alamat situs statis yang boleh memanggil /ask
+        value: https://darling-mochi-1139c6.netlify.app
+      - key: ASK_PER_IP             # pertanyaan per IP per jendela
+        value: "8"
+      - key: ASK_WINDOW_S
+        value: "600"
+      - key: ASK_DAILY_CLAUDE       # panggilan model bahasa per hari (penyedia mana pun); sisanya dijawab luring
+        value: "200"

@@ -86,7 +86,8 @@ def canon(x):
     if x.startswith("test:"):
         return x
     acc, _, t = x.partition(":")
-    return f"test:{acc.upper()}:{re.sub(r'\s+', '', t).upper()}"
+    t = re.sub(r"\s+", "", t)      # di luar f-string: backslash di dalam f-string baru sah sejak Python 3.12
+    return f"test:{acc.upper()}:{t.upper()}"
 
 
 def _ms(c, e):
@@ -549,6 +550,62 @@ def trigger_learning(reason):
     return {"started": True}
 
 
+# ---------------------------------------------------------------- mode publik (hosting)
+# FIF_PUBLIC=1 -> server boleh dibuka ke internet: hanya jalur BACA + POST /ask.
+# Jalur tulis (/note, /annotate, /rebuild, /feedback) ditutup: tanpa ini siapa pun bisa mengubah
+# data, memicu latih ulang, atau menyuntikkan teks ke memori kasus asisten (yang masuk ke prompt).
+import os  # noqa: E402
+import time  # noqa: E402
+
+PUBLIC = os.environ.get("FIF_PUBLIC", "") not in ("", "0", "false")
+ASK_PER_IP = int(os.environ.get("ASK_PER_IP", "8"))            # pertanyaan per IP ...
+ASK_WINDOW_S = int(os.environ.get("ASK_WINDOW_S", "600"))      # ... per jendela 10 menit
+ASK_DAILY_CLAUDE = int(os.environ.get("ASK_DAILY_CLAUDE", "200"))  # panggilan Claude per hari (UTC); lebih -> luring
+CORS_ORIGIN = os.environ.get("CORS_ORIGIN", "*")
+_RL_LOCK = threading.Lock()
+_RL = {"ip": defaultdict(list), "day": "", "claude": 0}
+
+
+def _client_ip(h):
+    # Di belakang proksi hosting, IP asli ada di X-Forwarded-For. Bisa dipalsukan, jadi batas per IP
+    # hanya rem pertama; batas harian global (ASK_DAILY_CLAUDE) yang benar-benar membatasi biaya.
+    fwd = h.headers.get("X-Forwarded-For", "")
+    return (fwd.split(",")[0].strip() if fwd else h.client_address[0]) or "?"
+
+
+def ask_gate(ip, mode):
+    """(boleh?, mode_dipakai, catatan). Dipanggil sebelum assistant.ask."""
+    now = time.time()
+    day = time.strftime("%Y-%m-%d", time.gmtime(now))
+    with _RL_LOCK:
+        if _RL["day"] != day:
+            _RL.update(day=day, claude=0)
+        hits = [t for t in _RL["ip"][ip] if now - t < ASK_WINDOW_S]
+        if len(hits) >= ASK_PER_IP:
+            _RL["ip"][ip] = hits
+            wait = int(ASK_WINDOW_S - (now - hits[0])) + 1
+            return False, mode, f"terlalu banyak pertanyaan; coba lagi dalam {wait} detik"
+        hits.append(now)
+        _RL["ip"][ip] = hits
+        if len(_RL["ip"]) > 5000:                     # jangan biarkan tabel IP tumbuh tanpa batas
+            for k in [k for k, v in _RL["ip"].items() if not v or now - v[-1] > ASK_WINDOW_S]:
+                del _RL["ip"][k]
+        if mode != "offline":
+            if _RL["claude"] >= ASK_DAILY_CLAUDE:
+                return True, "offline", f"kuota harian model bahasa ({ASK_DAILY_CLAUDE}) habis; dijawab luring"
+            _RL["claude"] += 1
+    return True, mode, None
+
+
+def clean_history(hist):
+    """Riwayat dikirim klien -> batasi jumlah & panjang supaya tidak bisa membengkakkan biaya."""
+    out = []
+    for h in (hist if isinstance(hist, list) else [])[-6:]:
+        if isinstance(h, dict) and isinstance(h.get("q"), str) and isinstance(h.get("a"), str):
+            out.append({"q": h["q"][:2000], "a": h["a"][:4000]})
+    return out
+
+
 APP = ROOT / "app" / "nerve"
 INSIGHT = ROOT / "app" / "insight"
 MIME = {".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8",
@@ -560,7 +617,7 @@ class H(BaseHTTPRequestHandler):
     def _send(self, code, body, ctype="application/json; charset=utf-8"):
         self.send_response(code)
         self.send_header("Content-Type", ctype)
-        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Origin", CORS_ORIGIN)
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
         self.end_headers()
         self.wfile.write(body)
@@ -574,7 +631,21 @@ class H(BaseHTTPRequestHandler):
             n = min(int(self.headers.get("Content-Length", 0)), 200000)
             data = json.loads(self.rfile.read(n) or b"{}")
             path = u.path.rstrip("/")
-            if path == "/note":
+            if PUBLIC and path != "/ask":
+                return self._send(403, json.dumps({"error": f"{path} ditutup di mode publik (FIF_PUBLIC=1)"}).encode())
+            if path == "/ask":
+                ok, mode, gate_note = ask_gate(_client_ip(self), str(data.get("mode", "auto")))
+                if not ok:
+                    return self._send(429, json.dumps({"error": gate_note, "answer": gate_note, "mode": "dibatasi",
+                                                       "tool_calls": []}, ensure_ascii=False).encode("utf-8"))
+                import assistant
+                res = assistant.ask(str(data.get("question", ""))[:4000], clean_history(data.get("history")),
+                                    data.get("state") if isinstance(data.get("state"), dict) else {}, mode)
+                if gate_note:
+                    res["note"] = gate_note
+                push_event("assistant.answered", {"q": str(data.get("question", ""))[:200], "mode": res["mode"],
+                                                  "tools": [c["name"] for c in res["tool_calls"]]})
+            elif path == "/note":
                 res = add_note(data.get("entity"), data.get("text", ""), data.get("author", "anonim"))
             elif path == "/annotate":                              # tahap D: putusan manusia
                 import learn
@@ -586,21 +657,16 @@ class H(BaseHTTPRequestHandler):
                 res = {"annotation": rec, "learning": trigger_learning(f"anotasi {rec['id']}")}
             elif path == "/rebuild":
                 res = trigger_learning("manual")
-            elif path == "/ask":                                   # tahap E: asisten
-                import assistant
-                res = assistant.ask(str(data.get("question", ""))[:4000], data.get("history") or [],
-                                    data.get("state") or {}, data.get("mode", "auto"))
-                push_event("assistant.answered", {"q": data.get("question", "")[:200], "mode": res["mode"],
-                                                  "tools": [c["name"] for c in res["tool_calls"]]})
             elif path == "/feedback":
                 import assistant
                 res = assistant.feedback(data.get("question", ""), data.get("answer", ""), data.get("rating"),
                                          data.get("mode", ""), data.get("tool_calls"), data.get("note", ""))
             else:
                 res = {"error": "POST: /note, /annotate, /rebuild, /ask, /feedback"}
-            self._send(200, json.dumps(res, ensure_ascii=False).encode("utf-8"))
+            self._send(200, json.dumps(res, ensure_ascii=False, default=str).encode("utf-8"))
         except Exception as e:  # noqa: BLE001
-            self._send(500, json.dumps({"error": repr(e)}).encode())
+            # di mode publik jangan bocorkan detail internal (path, isi exception) ke pengunjung
+            self._send(500, json.dumps({"error": "galat server" if PUBLIC else repr(e)}).encode())
 
     def do_GET(self):
         u = urlparse(self.path)
@@ -644,7 +710,8 @@ class H(BaseHTTPRequestHandler):
             elif fn == "assistant_status":
                 import assistant
                 ok, why = assistant.claude_available()
-                res = {"claude": ok, "why": why, "model": assistant.MODEL, "tools": [t["name"] for t in assistant.TOOLS]}
+                res = {"claude": ok, "llm": ok, "provider": assistant.provider(), "why": why,
+                       "model": assistant.llm_model(), "tools": [t["name"] for t in assistant.TOOLS]}
             elif fn == "insight_data":                              # lapis investigasi + skenario (satu muatan)
                 import investigations
                 res = investigations.build()
@@ -684,7 +751,7 @@ class H(BaseHTTPRequestHandler):
                                      "/notes?entity=", "POST /note", "/coverage", "/search?q=", "/events?since=", "/queue?k=", "/history", "/pipeline", "/model_cards", "/assistant_status", "/insight_data", "/investigations/<PSI-69>", "/rank/<cabin|surface|suit|earth>?pillar=", "/scenario/<id>", "/insight/ (tampilan juri)", "POST /annotate", "POST /rebuild", "POST /ask", "POST /feedback", "/app/ (kerangka)"]}
             body, code = json.dumps(res, ensure_ascii=False, default=str).encode("utf-8"), 200
         except Exception as e:  # noqa: BLE001
-            body, code = json.dumps({"error": repr(e)}).encode(), 500
+            body, code = json.dumps({"error": "galat server" if PUBLIC else repr(e)}).encode(), 500
         self._send(code, body)
 
     def log_message(self, *a):
@@ -697,9 +764,14 @@ def main(argv):
         return 0
     cmd = argv[0]
     if cmd == "serve":
-        port = int(argv[argv.index("--port") + 1]) if "--port" in argv else 8765
-        print(f"otak melayani di http://127.0.0.1:{port}/")
-        ThreadingHTTPServer(("127.0.0.1", port), H).serve_forever()
+        # PORT/HOST dari lingkungan supaya jalan apa adanya di layanan hosting (Render, Fly, Railway, ...)
+        port = int(argv[argv.index("--port") + 1]) if "--port" in argv else int(os.environ.get("PORT", 8765))
+        host = argv[argv.index("--host") + 1] if "--host" in argv else os.environ.get("HOST", "127.0.0.1")
+        if host not in ("127.0.0.1", "localhost") and not PUBLIC:
+            print("PERINGATAN: melayani di luar localhost tanpa FIF_PUBLIC=1 — jalur tulis terbuka untuk siapa pun")
+        print(f"otak melayani di http://{host}:{port}/  (mode publik: {'ya' if PUBLIC else 'tidak'}; "
+              f"/ask: {ASK_PER_IP}/IP/{ASK_WINDOW_S}s, Claude {ASK_DAILY_CLAUDE}/hari)")
+        ThreadingHTTPServer((host, port), H).serve_forever()
         return 0
     fn = {"entity": entity, "explain": explain, "relevance": relevance, "provenance": provenance,
           "coverage": lambda *_: coverage(), "search": search, "alerts": alerts,

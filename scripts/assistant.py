@@ -3,6 +3,8 @@
 
 Dua mesin, satu set alat (docs/rencana_dashboard_cerdas.md, bagian 4):
   claude   claude-opus-5-5 dengan tool use (loop manual), bila SDK `anthropic` + kredensial ada
+  deepseek loop yang SAMA lewat endpoint DeepSeek yang kompatibel Anthropic (LLM_PROVIDER=deepseek,
+           DEEPSEEK_API_KEY, DEEPSEEK_MODEL); dipilih dengan LLM_PROVIDER di .env atau lingkungan
   offline  perencana deterministik berbasis pola pertanyaan — tetap jalan tanpa internet di hari-H,
            dan menjadi pembanding saat evaluasi
 
@@ -16,7 +18,7 @@ Aturan yang ditegakkan KODE, bukan hanya prompt:
     nerve.dispatch(..., "assistant") — pintu yang sama dengan manusia
 
   python scripts/assistant.py ask "kenapa 21106G8 dicurigai?"
-  python scripts/assistant.py eval [--mode offline|claude|both]
+  python scripts/assistant.py eval [--mode offline|claude|deepseek|both]
 """
 import json
 import math
@@ -33,6 +35,20 @@ import brain  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 CASES = Path(os.environ.get("FREEFALL_CASES", ROOT / "kb" / "gold" / "cases.jsonl"))
 MODEL = "claude-opus-5-5"
+# Penyedia model bahasa: "anthropic" (bawaan) atau "deepseek". DeepSeek dipanggil lewat endpoint-nya yang
+# kompatibel dengan Messages API Anthropic (api-docs.deepseek.com/guides/anthropic_api), jadi loop alat,
+# sitasi dan cek grounding yang SAMA dipakai untuk keduanya. Dibaca ulang dari .env saat dipakai.
+DEEPSEEK_BASE_URL = "https://api.deepseek.com/anthropic"
+
+
+def provider():
+    _load_env()
+    p = os.environ.get("LLM_PROVIDER", "anthropic").strip().lower()
+    return p if p in ("anthropic", "deepseek") else "anthropic"
+
+
+def llm_model():
+    return os.environ.get("DEEPSEEK_MODEL", "deepseek-v4-pro") if provider() == "deepseek" else MODEL
 
 # ================================================================ alat
 S = lambda: {"type": "string"}
@@ -349,7 +365,7 @@ How you work:
 - For questions about whole investigations or about a habitat (cabin, Moon/Mars base, rover, spacesuit, Earth) use rank_investigations, get_investigation, compare_investigations and scenario_evidence. Explain a ranking through its three score components; never present the score as a NASA judgement.
 - When the user asks to look at, show, open or compare something, also call ui_action so the dashboard moves with you (focus a test, select several, filter, set what-if sliders).
 - You cannot verify or annotate data. If something needs a human decision, say so and point to the review queue.
-- Answer in the user's language (usually Indonesian), concise: a direct answer first, then the evidence. No headings for short answers."""
+- Write the whole answer in the language of the user's question (English question -> English answer, Indonesian question -> Indonesian answer), even when tool results are in another language. Be concise: a direct answer first, then the evidence. No headings for short answers."""
 
 
 ENV_FILE = ROOT / ".env"
@@ -357,7 +373,7 @@ _AUTH = {"t": 0.0, "ok": None, "why": "", "src": ""}
 
 
 def _load_env():
-    """Baca HANYA baris ANTHROPIC_* dari E:\\nasa\\.env (tidak menimpa variabel yang sudah ada).
+    """Baca HANYA baris ANTHROPIC_*, DEEPSEEK_* dan LLM_PROVIDER dari .env di akar repo (tidak menimpa variabel yang sudah ada).
     Nilai kunci tidak pernah dicetak atau dikirim ke log/peristiwa."""
     if not ENV_FILE.exists():
         return
@@ -367,7 +383,7 @@ def _load_env():
             continue
         k, v = line.split("=", 1)
         k, v = k.strip(), v.strip().strip('"').strip("'")
-        if k.startswith("ANTHROPIC_") and v and k not in os.environ:
+        if (k.startswith(("ANTHROPIC_", "DEEPSEEK_")) or k == "LLM_PROVIDER") and v and k not in os.environ:
             os.environ[k] = v
 
 
@@ -382,16 +398,20 @@ def _cred_source():
 
 
 def claude_available(verify=True, max_age=600):
-    """(siap?, alasan). Dengan verify: panggil models.list() — memverifikasi kunci & jaringan TANPA
-    memakai token; hasilnya di-cache max_age detik supaya tidak membebani setiap pertanyaan."""
+    """(siap?, alasan) untuk penyedia yang aktif. Anthropic + verify: panggil models.list() — memverifikasi
+    kunci & jaringan TANPA memakai token; hasilnya di-cache max_age detik. DeepSeek: cukup cek kuncinya ada;
+    kunci yang salah tertangkap saat bertanya (AuthenticationError -> dijawab luring)."""
     try:
         import anthropic
     except ImportError:
         return False, "paket anthropic belum terpasang (pip install anthropic)"
-    _load_env()
+    if provider() == "deepseek":
+        if not os.environ.get("DEEPSEEK_API_KEY"):
+            return False, "LLM_PROVIDER=deepseek tapi DEEPSEEK_API_KEY kosong — isi di .env repo atau variabel lingkungan"
+        return True, ""
     src = _cred_source()
     if not src:
-        return False, "tidak ada kredensial — isi ANTHROPIC_API_KEY di E:\\nasa\\.env atau variabel lingkungan"
+        return False, f"tidak ada kredensial — isi ANTHROPIC_API_KEY di {ENV_FILE} atau variabel lingkungan"
     if not verify:
         return True, ""
     if _AUTH["ok"] is not None and _AUTH["src"] == src and time.time() - _AUTH["t"] < max_age:
@@ -413,9 +433,31 @@ def claude_available(verify=True, max_age=600):
     return ok, why
 
 
-def ask_claude(question, history, state):
+def _llm_call():
+    """Fungsi pemanggil satu putaran Messages API untuk penyedia aktif (dipakai loop alat di ask_claude)."""
     import anthropic
+    if provider() == "deepseek":
+        # Kunci & base_url diberikan eksplisit supaya kunci DeepSeek tidak pernah terkirim ke api.anthropic.com
+        # (dan ANTHROPIC_BASE_URL/ANTHROPIC_API_KEY di lingkungan tidak ikut terpakai).
+        client = anthropic.Anthropic(api_key=os.environ["DEEPSEEK_API_KEY"], base_url=DEEPSEEK_BASE_URL,
+                                     max_retries=1, timeout=180.0)
+        # Field yang diabaikan/tidak tercantum di endpoint DeepSeek dibuang: strict (alat), cache_control,
+        # betas, fallbacks. Kualitas jalur ini diukur dengan evaluasi yang sama, bukan diasumsikan.
+        tools = [{k: v for k, v in t.items() if k != "strict"} for t in TOOLS]
+        model = llm_model()
+        return lambda messages: client.messages.create(
+            model=model, max_tokens=16000, system=SYSTEM, tools=tools, messages=messages)
     client = anthropic.Anthropic()
+    return lambda messages: client.beta.messages.create(
+        model=MODEL, max_tokens=16000,
+        betas=["server-side-fallback-2026-07-01"], fallbacks="default",   # rescue on refusal (see claude-api skill)
+        output_config={"effort": "medium"},
+        system=[{"type": "text", "text": SYSTEM, "cache_control": {"type": "ephemeral"}}],
+        tools=TOOLS, messages=messages)
+
+
+def ask_claude(question, history, state):
+    call = _llm_call()
     ctx = {"ui": []}
     calls, outputs = [], []
     hint = ""
@@ -435,12 +477,7 @@ def ask_claude(question, history, state):
     usage = {"input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}
     served, fell_back = set(), False
     for _ in range(10):
-        resp = client.beta.messages.create(
-            model=MODEL, max_tokens=16000,
-            betas=["server-side-fallback-2026-07-01"], fallbacks="default",   # rescue on refusal (see claude-api skill)
-            output_config={"effort": "medium"},
-            system=[{"type": "text", "text": SYSTEM, "cache_control": {"type": "ephemeral"}}],
-            tools=TOOLS, messages=messages)
+        resp = call(messages)
         for k in usage:
             usage[k] += getattr(resp.usage, k, 0) or 0
         served.add(resp.model)
@@ -478,7 +515,7 @@ def ask_claude(question, history, state):
     if fell_back:
         note = ((note + "; ") if note else "") + f"dijawab model fallback ({', '.join(sorted(served))})"
     return {"answer": text or "(tidak ada jawaban teks)", "ui_actions": ctx["ui"], "tool_calls": calls,
-            "outputs": outputs, "model": ", ".join(sorted(served)) or MODEL, "usage": usage, "note": note}
+            "outputs": outputs, "model": ", ".join(sorted(served)) or llm_model(), "usage": usage, "note": note}
 
 
 # ================================================================ mesin luring (deterministik)
@@ -718,10 +755,12 @@ def ask_offline(question, history=None, state=None):
 def ask(question, history=None, state=None, mode="auto"):
     t0 = time.time()
     avail, why = claude_available()
-    use = "claude" if (mode == "claude" or (mode == "auto" and avail)) else "offline"
+    # "claude" / "deepseek" / "llm" = pakai model bahasa penyedia aktif (LLM_PROVIDER); label mode = nama penyedia
+    want_llm = mode in ("claude", "deepseek", "llm") or (mode == "auto" and avail)
+    use = ("deepseek" if provider() == "deepseek" else "claude") if want_llm else "offline"
     note = None
-    if use == "claude" and not avail:
-        use, note = "offline", f"mode claude tidak tersedia: {why}"
+    if use != "offline" and not avail:
+        use, note = "offline", f"mode {provider()} tidak tersedia: {why}"
     if use == "offline":
         r = ask_offline(question, history, state)
     else:
@@ -739,7 +778,7 @@ def ask(question, history=None, state=None, mode="auto"):
         except anthropic.APIConnectionError:
             _AUTH.update(ok=None)
             r, use, note = ask_offline(question, history, state), "offline", "koneksi ke API putus; dijawab luring"
-        if use == "claude" and r.get("note"):
+        if use != "offline" and r.get("note"):
             note = r["note"]
     r["mode"] = use
     r["note"] = note or (None if avail else f"luring: {why}")

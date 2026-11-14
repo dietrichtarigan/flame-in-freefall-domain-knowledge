@@ -1,0 +1,548 @@
+{
+ "deepseek": {
+  "mode": "deepseek",
+  "n": 28,
+  "aggregate": {
+   "pass": 0.464,
+   "tool_ok": 1.0,
+   "contain_ok": 0.714,
+   "forbid_ok": 1.0,
+   "ui_ok": 1.0,
+   "grounded": 0.786,
+   "cites_ok": 0.893,
+   "ms_median": 8992
+  },
+  "rows": [
+   {
+    "id": "q01_kenapa_g8",
+    "q": "Kenapa uji 21106G8 dicurigai?",
+    "mode": "deepseek",
+    "ms": 22708,
+    "tool_ok": true,
+    "contain_ok": false,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "get_test",
+     "explain_test",
+     "list_alerts",
+     "ui_action"
+    ],
+    "pass": false
+   },
+   {
+    "id": "q02_dosir_g7",
+    "q": "Tunjukkan data uji 21106G7",
+    "mode": "deepseek",
+    "ms": 8557,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "get_test",
+     "ui_action"
+    ],
+    "pass": true
+   },
+   {
+    "id": "q03_whatif_cfig",
+    "q": "Bagaimana jika O2 0.30 dan bahan bakar 0.4 pada butana normal?",
+    "mode": "deepseek",
+    "ms": 6755,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "whatif_cfig",
+     "ui_action"
+    ],
+    "pass": true
+   },
+   {
+    "id": "q04_whatif_luar",
+    "q": "Bagaimana jika O2 0.70 pada butana normal dengan bahan bakar 0.3?",
+    "mode": "deepseek",
+    "ms": 6055,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "whatif_cfig",
+     "ui_action"
+    ],
+    "pass": true
+   },
+   {
+    "id": "q05_whatif_flex",
+    "q": "Bagaimana jika droplet heptana di O2 0.18, tekanan 100 kPa, helium 0.2?",
+    "mode": "deepseek",
+    "ms": 7252,
+    "tool_ok": true,
+    "contain_ok": false,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "whatif_flex",
+     "ui_action"
+    ],
+    "pass": false
+   },
+   {
+    "id": "q06_next_cfig",
+    "q": "Uji ISS apa yang sebaiknya dilakukan berikutnya?",
+    "mode": "deepseek",
+    "ms": 14686,
+    "tool_ok": true,
+    "contain_ok": false,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "recommend_next_tests",
+     "recommend_next_tests",
+     "coverage",
+     "ui_action"
+    ],
+    "pass": false
+   },
+   {
+    "id": "q07_next_flex",
+    "q": "Rekomendasi eksperimen berikutnya untuk droplet FLEX",
+    "mode": "deepseek",
+    "ms": 7959,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "recommend_next_tests",
+     "ui_action"
+    ],
+    "pass": true
+   },
+   {
+    "id": "q08_alerts",
+    "q": "Apa saja peringatan atau anomali yang ada sekarang?",
+    "mode": "deepseek",
+    "ms": 7917,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": false,
+    "ungrounded": [
+     "200",
+     "19"
+    ],
+    "cites_ok": true,
+    "tools": [
+     "list_alerts"
+    ],
+    "pass": false
+   },
+   {
+    "id": "q09_queue",
+    "q": "Data mana yang perlu diverifikasi manusia lebih dulu?",
+    "mode": "deepseek",
+    "ms": 8786,
+    "tool_ok": true,
+    "contain_ok": false,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "review_queue",
+     "ui_action"
+    ],
+    "pass": false
+   },
+   {
+    "id": "q10_inverse",
+    "q": "Seberapa yakin kita bahwa nyala inverse lebih mudah menyala?",
+    "mode": "deepseek",
+    "ms": 14282,
+    "tool_ok": true,
+    "contain_ok": false,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": false,
+    "tools": [
+     "uncertainty_stats",
+     "uncertainty_stats",
+     "find_tests"
+    ],
+    "pass": false
+   },
+   {
+    "id": "q11_flexK_ci",
+    "q": "Seberapa yakin angka laju bakar K droplet FLEX?",
+    "mode": "deepseek",
+    "ms": 22925,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "uncertainty_stats",
+     "coverage",
+     "model_cards",
+     "get_investigation"
+    ],
+    "pass": true
+   },
+   {
+    "id": "q12_coverage",
+    "q": "Apa yang belum kita ketahui dari data ini?",
+    "mode": "deepseek",
+    "ms": 15133,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": false,
+    "ungrounded": [
+     "568",
+     "1.928",
+     "2.149"
+    ],
+    "cites_ok": true,
+    "tools": [
+     "coverage"
+    ],
+    "pass": false
+   },
+   {
+    "id": "q13_models",
+    "q": "Seberapa bagus model yang dipakai?",
+    "mode": "deepseek",
+    "ms": 13970,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": false,
+    "tools": [
+     "model_cards",
+     "uncertainty_stats"
+    ],
+    "pass": false
+   },
+   {
+    "id": "q14_related",
+    "q": "Uji apa yang mirip dengan 21196A1?",
+    "mode": "deepseek",
+    "ms": 7554,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "related",
+     "get_test",
+     "ui_action"
+    ],
+    "pass": true
+   },
+   {
+    "id": "q15_paper_saffire",
+    "q": "Apa kata laporan NASA tentang Saffire spacecraft fire?",
+    "mode": "deepseek",
+    "ms": 18166,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": false,
+    "ungrounded": [
+     "2024"
+    ],
+    "cites_ok": true,
+    "tools": [
+     "search_papers",
+     "get_investigation",
+     "search_papers",
+     "search_papers"
+    ],
+    "pass": false
+   },
+   {
+    "id": "q16_ambigu",
+    "q": "Tunjukkan uji 99999Z9",
+    "mode": "deepseek",
+    "ms": 3283,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": false,
+    "ungrounded": [
+     "159"
+    ],
+    "cites_ok": false,
+    "tools": [
+     "get_test",
+     "ui_action"
+    ],
+    "pass": false
+   },
+   {
+    "id": "q17_focus_kenapa",
+    "q": "Kenapa uji ini begitu?",
+    "mode": "deepseek",
+    "ms": 16776,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "explain_test",
+     "get_test"
+    ],
+    "pass": true
+   },
+   {
+    "id": "q18_suhu",
+    "q": "Berapa kenaikan suhu burner pada uji 21106G7?",
+    "mode": "deepseek",
+    "ms": 5646,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "get_test"
+    ],
+    "pass": true
+   },
+   {
+    "id": "q19_kontradiksi",
+    "q": "Tunjukkan uji 21106F2",
+    "mode": "deepseek",
+    "ms": 7557,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "get_test",
+     "ui_action"
+    ],
+    "pass": true
+   },
+   {
+    "id": "q20_tekanan",
+    "q": "Tunjukkan data uji 19115A1",
+    "mode": "deepseek",
+    "ms": 7791,
+    "tool_ok": true,
+    "contain_ok": false,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "get_test",
+     "ui_action"
+    ],
+    "pass": false
+   },
+   {
+    "id": "h01",
+    "q": "mengapa test 21242F2 aneh",
+    "mode": "deepseek",
+    "ms": 9850,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "get_test",
+     "explain_test",
+     "ui_action"
+    ],
+    "pass": true
+   },
+   {
+    "id": "h02",
+    "q": "what if inverse propane at oxygen 0.5 and fuel fraction 0.2?",
+    "mode": "deepseek",
+    "ms": 6574,
+    "tool_ok": true,
+    "contain_ok": false,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "whatif_cfig",
+     "ui_action"
+    ],
+    "pass": false
+   },
+   {
+    "id": "h03",
+    "q": "kondisi mana yang paling layak diuji di ISS selanjutnya untuk nyala gas?",
+    "mode": "deepseek",
+    "ms": 9276,
+    "tool_ok": true,
+    "contain_ok": false,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "recommend_next_tests"
+    ],
+    "pass": false
+   },
+   {
+    "id": "h04",
+    "q": "ada data yang saling bertentangan?",
+    "mode": "deepseek",
+    "ms": 8992,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": false,
+    "ungrounded": [
+     "15"
+    ],
+    "cites_ok": true,
+    "tools": [
+     "list_alerts"
+    ],
+    "pass": false
+   },
+   {
+    "id": "h05",
+    "q": "investigasi mana yang paling sedikit hasil ujinya?",
+    "mode": "deepseek",
+    "ms": 13529,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "coverage",
+     "get_investigation",
+     "get_investigation",
+     "get_investigation"
+    ],
+    "pass": true
+   },
+   {
+    "id": "h06",
+    "q": "berapa tekanan ruang saat uji 19115A1 dimulai?",
+    "mode": "deepseek",
+    "ms": 3884,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "get_test"
+    ],
+    "pass": true
+   },
+   {
+    "id": "h07",
+    "q": "tolong cari literatur soal smoldering di gravitasi mikro",
+    "mode": "deepseek",
+    "ms": 18288,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "search_papers",
+     "search_papers",
+     "search_papers",
+     "search_papers",
+     "search_papers",
+     "ui_action"
+    ],
+    "pass": true
+   },
+   {
+    "id": "h08",
+    "q": "kalau metanol, O2 25%, 150 kPa tanpa helium, apakah dropletnya padam duluan?",
+    "mode": "deepseek",
+    "ms": 13247,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": false,
+    "ungrounded": [
+     "71"
+    ],
+    "cites_ok": true,
+    "tools": [
+     "whatif_flex",
+     "ui_action"
+    ],
+    "pass": false
+   }
+  ]
+ }
+}
