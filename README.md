@@ -45,6 +45,7 @@ FROM paper_search WHERE paper_search MATCH 'PMMA AND spread' LIMIT 10;
 | `analysis/telemetry/` | Hasil tambang telemetri ACME + catatan metode |
 | `analysis/video_full/` | Episode nyala dari video + **lembar bukti PNG** |
 | `analysis/saffire/`, `analysis/ml/` | Analisis Saffire dan model |
+| `analysis/gbridge/` | Jembatan-g: batas nyala bahan padat terhadap (O₂, aliran, g), titik BASS-II hasil urai |
 | `scripts/` | Seluruh pipeline, dari pengambilan sampai pembangunan basis data |
 | `app/` | Dashboard (buka lewat server lokal, lihat di bawah) |
 | `docs/` | Spesifikasi, termasuk pipeline model 3D |
@@ -72,6 +73,7 @@ cd app && python -m http.server 8000
 ```
 
 Lalu buka `http://localhost:8000/insight/index.html`.
+Jembatan-g ada di `http://localhost:8000/gbridge/index.html`.
 
 ## Yang perlu diketahui sebelum memakai angkanya
 

@@ -133,6 +133,8 @@ dialog h3{margin:0 0 2px;font-size:19px}
 .turn .me{font-weight:600}
 .turn .ans{white-space:pre-wrap;margin:6px 0}
 footer{color:var(--mute);font-size:12px;padding:18px 0 40px;border-top:1px solid var(--axis)}
+
+#themeBtn{font-size:12px;padding:3px 10px;margin-right:10px}
 </style>
 </head>
 <body>
@@ -140,7 +142,7 @@ footer{color:var(--mute);font-size:12px;padding:18px 0 40px;border-top:1px solid
 <header>
   <h1>Flame in Freefall</h1>
   <span class="sub">Fire-safety insights from NASA's microgravity combustion data</span>
-  <span class="right"><a href="/app/" id="research">Researcher mode: every test, every source</a></span>
+  <span class="right"><button id="themeBtn" type="button"></button><a href="/app/" id="research">Researcher mode: every test, every source</a></span>
 </header>
 
 <div class="hint">Choose where the crew will live. Everything below re-ranks for that atmosphere.</div>
@@ -206,7 +208,8 @@ footer{color:var(--mute);font-size:12px;padding:18px 0 40px;border-top:1px solid
         <p class="hint" style="margin:8px 0 0">Ranked by the U-function of a Gaussian-process boundary model: U = |μ|/σ. A small U means the model is least sure whether the flame ignites or goes out there, so one test teaches the most. Candidates stay close to conditions that were actually flown.</p></div>
     </div>
     <div class="stack">
-      <div class="card"><h2>Gravity</h2><ul id="pg" style="margin:0;padding-left:18px"></ul></div>
+      <div class="card"><h2>Gravity</h2><ul id="pg" style="margin:0;padding-left:18px"></ul>
+        <p class="hint" style="margin:8px 0 0"><a href="../gbridge/index.html">Open the gravity bridge</a>: microgravity flow tests read as equivalent Moon, Mars and Earth gravity.</p></div>
       <div class="card"><h2>Back on Earth</h2><div id="earth"></div>
         <p class="hint" style="margin:8px 0 0">Examples are those given in the challenge statement, matched to the investigations that study the same pillar.</p></div>
     </div>
@@ -241,7 +244,18 @@ const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const pct = (x, d = 0) => x == null ? "n/a" : (100 * x).toFixed(d).replace(/\.0$/, "") + "%";
 const qs = new URLSearchParams(location.search);
-if (qs.get("theme")) document.documentElement.dataset.theme = qs.get("theme");
+// Theme: ?theme= wins, then the saved choice, then the system setting.
+(function () {
+  const KEY = "fif-theme", root = document.documentElement, btn = document.getElementById("themeBtn");
+  let saved = null; try { saved = localStorage.getItem(KEY); } catch {}
+  const fromUrl = new URLSearchParams(location.search).get("theme");
+  if (fromUrl || saved) root.dataset.theme = fromUrl || saved;
+  const current = () => root.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  const paint = () => { const next = current() === "dark" ? "light" : "dark"; btn.textContent = next === "light" ? "☀ Light mode" : "☾ Dark mode"; btn.setAttribute("aria-label", "Switch to " + next + " mode"); };
+  btn.addEventListener("click", () => { const next = current() === "dark" ? "light" : "dark"; root.dataset.theme = next; try { localStorage.setItem(KEY, next); } catch {} paint(); });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", paint);
+  paint();
+})();
 const ICON = { critical: "!", warning: "▲", info: "i" };
 const st = (lv, txt) => `<span class="st st-${lv}"><i aria-hidden="true">${ICON[lv]}</i>${esc(txt)}</span>`;
 const PH = { gas: "Gas flame", droplet: "Liquid droplet", solid: "Solid material", smoke: "Smoke aerosol" };
