@@ -94,7 +94,7 @@ export function Tests() {
         index="05"
         overline="TEST-LEVEL EVIDENCE"
         title="Test Explorer"
-        description="Every test row NASA tabulated, plus telemetry-only runs we mined. Open a test to see its measurements, where each number came from, why it is flagged, and which tests resemble it."
+        description="Every recorded test and telemetry run in the archive. Open a test to see its measurements, where each number came from, why it is flagged, and which tests resemble it."
       />
       <div className="tests-layout">
         <Panel title="Tests" meta={all.data ? `${rows.length.toLocaleString("en-US")} OF ${all.data.n.toLocaleString("en-US")}` : "LOADING"}>
@@ -193,7 +193,7 @@ export function Tests() {
           {focus ? <Dossier id={focus} names={names} onOpen={setFocus} /> : (
             <Panel title="Test dossier" meta="SELECT A TEST">
               <p className="chart-note">
-                Pick a row to open its dossier: every measurement with its evidence tier and source file, the rule-based
+                Pick a row to open its dossier: every measurement with its source file, the rule-based
                 explanation of any flag, and the tests most like it.
               </p>
             </Panel>

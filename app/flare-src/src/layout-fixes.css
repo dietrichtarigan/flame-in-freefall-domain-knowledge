@@ -447,6 +447,21 @@
   min-width: 0;
 }
 
+/* Safety net for stale markup from older static bundles. */
+.data-notice,
+.source-card,
+.side-caption,
+.visual-credit,
+.evidence-badge,
+.tier-nasa_table,
+.tier-nasa_calibrated,
+.tier-derived_auto,
+.tier-human_verified,
+.tier-paper_claim,
+.tier-model_prediction {
+  display: none !important;
+}
+
 @media (max-width: 900px) {
   .net-body {
     grid-template-columns: 1fr;

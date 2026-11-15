@@ -140,6 +140,12 @@ const WHY_EN: Record<string, string> = {
 /** Terjemahkan satu kalimat backend; kembalikan apa adanya bila tak ada aturan yang cocok. */
 export function en(text: unknown): string {
   if (text === null || text === undefined) return "";
+  if (Array.isArray(text)) return text.map(en).filter(Boolean).join(", ");
+  if (typeof text === "object") {
+    return Object.entries(text as Record<string, unknown>)
+      .map(([key, value]) => `${key.replaceAll("_", " ")}: ${en(value)}`)
+      .join(" · ");
+  }
   let s = String(text);
   if (FLAG_EN[s]) return FLAG_EN[s];
   if (RULE_EN[s]) return RULE_EN[s];
