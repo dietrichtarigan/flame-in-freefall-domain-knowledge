@@ -616,6 +616,7 @@ MIME = {".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=ut
         # Tanpa baris ini WebP dan JPEG dikirim berlabel image/png (bawaan _send
         # untuk /figures/). Terdeteksi saat menguji gambar hasil figures_optimize.py.
         ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp"}
+IMG_EXT = {".png", ".jpg", ".jpeg", ".webp", ".svg"}   # yang boleh disajikan lewat /figures/
 
 
 class H(BaseHTTPRequestHandler):
@@ -688,8 +689,11 @@ class H(BaseHTTPRequestHandler):
         if u.path.startswith("/figures/"):                     # gambar paper hasil scripts/paper_figures.py
             base = (ROOT / "analysis" / "figures").resolve()
             f = (base / unquote(u.path[len("/figures/"):])).resolve()
-            if base in f.parents and f.is_file() and f.suffix.lower() == ".png":
-                return self._send(200, f.read_bytes(), "image/png")
+            # Suffix tidak lagi dikunci ke .png: sejak scripts/figures_optimize.py
+            # gambar disimpan WebP (487 MB -> 46 MB) supaya muat di repo dan ikut
+            # ter-deploy. Mengunci .png membuat semuanya 404 di produksi.
+            if base in f.parents and f.is_file() and f.suffix.lower() in IMG_EXT:
+                return self._send(200, f.read_bytes(), MIME[f.suffix.lower()])
             return self._send(404, b"tidak ada", "text/plain")
         if u.path.startswith(("/app/", "/insight/", "/flare/")):   # halaman statis: /app/ = mode peneliti, /insight/ + /flare/ = tampilan juri
             base = (FLARE if u.path.startswith("/flare/")
