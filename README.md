@@ -2,7 +2,7 @@
 
 A derived evidence layer built from NASA's microgravity combustion data (Physical Sciences Informatics / PSI, NASA Technical Reports Server / NTRS, and peer-reviewed journal papers). This repository contains **analysis-ready datasets and the reproducible scripts that built them** — not the raw ~15.6 GB archive.
 
-* **Live Interactive App:**https://flame-in-freefall-wfbl.onrender.com/flare/
+* **Live Interactive App:** https://flame-in-freefall-wfbl.onrender.com/flare/
 * **Data License:** PSI source data is **CC0** (Public Domain). This repository is an independent project and is not affiliated with or endorsed by NASA.
 
 ---
