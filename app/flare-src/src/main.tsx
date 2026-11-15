@@ -102,6 +102,7 @@ import { Investigations } from "./viewInvestigations";
 import { WhatIf } from "./viewWhatIf";
 import { Quality } from "./viewQuality";
 import { Docs } from "./viewDocs";
+import { Gaps } from "./viewGaps";
 import { Replay } from "./viewReplay";
 import { STUDY_BY_ACCESSION, STUDY_HTML } from "./motion";
 
@@ -654,129 +655,6 @@ function Scenario({ onEvidence }: { onEvidence: (record: EvidenceRecord) => void
 }
 
 /** Celah bukti dan uji berikutnya yang paling informatif, dari data yang sama. */
-function Gaps() {
-  const { data, error, retry } = useInsight();
-  const [sid, setSid] = useState<string>("surface");
-  const focusSid = useFocus("Gaps");
-  useEffect(() => {
-    if (focusSid) setSid(focusSid);
-  }, [focusSid]);
-  if (error && !data) return <ViewError what="gap analysis" detail={error} onRetry={retry} />;
-  if (!data) return <ViewLoading />;
-  const sc: any = data.scenario[sid];
-  const gaps = (sc?.gaps ?? []) as { level: string; title: string; text: string }[];
-  const next = (sc?.next_tests ?? []) as any[];
-
-  return (
-    <div className="page">
-      <PageTitle
-        index="03"
-        overline="EVIDENCE COVERAGE"
-        title="Gaps Analysis"
-        description="What the archive cannot answer for this habitat, and which experiment would teach the most."
-      />
-      <div className="segmented objective-switch">
-        {data.scenarios.map((id) => (
-          <button key={id} className={id === sid ? "active" : ""} onClick={() => setSid(id)}>
-            {data.scenario[id]?.short || id}
-          </button>
-        ))}
-      </div>
-
-      <div className="gaps-grid aligned">
-        <Panel title="What is not known here" meta={gaps.length + " FINDINGS"} className="quality-panel">
-          <div className="gap-list">
-            {gaps.map((g, i) => (
-              <article key={i} className="quality-facts">
-                <span className={"gap-level " + g.level}>{g.level}</span>
-                <strong>{g.title}</strong>
-                <p>{g.text}</p>
-              </article>
-            ))}
-          </div>
-        </Panel>
-
-        <div className="side-stack">
-        <Panel title="Gravity" meta="KNOWN LIMIT" className="quality-panel">
-          <ul className="gap-list">
-            {(data.partial_gravity ?? []).map((t: string, i: number) => (
-              <li key={i}>{t}</li>
-            ))}
-          </ul>
-          <button className="text-button" onClick={() => go("WhatIf")}>
-            BOUND IT WITH THE GRAVITY BRIDGE →
-          </button>
-        </Panel>
-        <Panel title="Back on Earth" meta="SPINOFF" className="quality-panel">
-          <div className="gap-list">
-            {(data.earth ?? []).map((e: any, i: number) => {
-              const invs = (data.investigations ?? []).filter((c: any) => c.direct >= 0.8 && (c.pillars ?? []).includes(e.pillar));
-              return (
-                <article key={i} className="quality-facts">
-                  <strong>{e.title || e.name}</strong>
-                  <p>{e.text || e.detail}</p>
-                  {invs.length > 0 && (
-                    <small>
-                      Same pillar in PSI ({e.pillar}):{" "}
-                      {invs.map((c: any, j: number) => (
-                        <React.Fragment key={c.accession}>
-                          {j > 0 && ", "}
-                          <button className="link-button" onClick={() => go("Investigations", c.accession)}>
-                            {c.name}
-                          </button>
-                        </React.Fragment>
-                      ))}
-                    </small>
-                  )}
-                </article>
-              );
-            })}
-          </div>
-        </Panel>
-        </div>
-      </div>
-
-        <Panel title="Most informative next tests" meta="ACTIVE LEARNING" className="heat-panel">
-          <div className="table-scroll">
-            <table className="next-tests">
-              <thead>
-                <tr>
-                  <th>Experiment</th>
-                  <th>O2</th>
-                  <th>kPa</th>
-                  <th>Conditions</th>
-                  <th>U</th>
-                  <th>In band</th>
-                </tr>
-              </thead>
-              <tbody>
-                {next.map((n, i) => (
-                  <tr key={i}>
-                    <td>{n.exp}</td>
-                    <td>{(n.o2 * 100).toFixed(1)}%</td>
-                    <td>{n.p_kpa}</td>
-                    <td>{n.detail}</td>
-                    <td>{n.U}</td>
-                    <td>{n.in_band ? "yes" : "no"}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="panel-footnote">
-            Ranked by the U-function of a Gaussian-process boundary model: a small U means the model
-            is least sure whether the flame ignites there, so one test teaches the most. Candidates
-            stay close to conditions that were actually flown.
-          </p>
-          <button className="text-button" onClick={() => go("WhatIf")}>
-            TRY THESE CONDITIONS IN WHAT-IF →
-          </button>
-        </Panel>
-
-    </div>
-  );
-}
-
 /** Satu komponen skor: nilai 0-1, lebar bar = nilai, dan sumbangannya ke skor
  *  akhir (nilai x bobot) -- supaya pembaca melihat dari mana angka total berasal. */
 function Bar({ label, value, weight }: { label: string; value: number; weight: number }) {
