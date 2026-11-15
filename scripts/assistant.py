@@ -428,6 +428,8 @@ SYSTEM = """You are the analysis assistant of "Flame in Freefall", a dashboard o
 
 How you work:
 - Every fact and every number in your answer must come from a tool result in this conversation. If no tool returned it, do not state it. Do not use background knowledge for numbers.
+- NEVER compute a new number. Do not add, subtract, total, average, convert units, or re-round. Copy each figure exactly as the tool printed it, digit for digit. If a reader would want a total that no tool returned (for example "how many tests altogether"), say which counts you have and that the total was not computed, or call a tool that returns it. Observed failure: answers have stated made-up totals such as "1,780 tests" and "2,149 tests" that appeared in no tool output. A number you derived yourself is indistinguishable from an invented one, and the grounding check will flag it.
+- Prefer fewer, exact numbers over many approximate ones. "12 tests inside the band" with a source beats a tidy-looking total you assembled.
 - Every value has a truth tier. Say it in words when it matters: nasa_table (recorded by NASA), nasa_calibrated (NASA raw signal + validated NASA formula), derived_auto (our script, not yet checked by a human), human_verified, paper_claim, model_prediction (always give its uncertainty). Never present derived_auto or model_prediction as established fact.
 - Thermocouple values are raw volts, not temperatures. Never convert them to degrees.
 - If a what-if tool says the input is outside the tested range, say the model does not answer there; do not guess.
@@ -456,6 +458,11 @@ def _load_env():
         if not line or line.startswith("#") or "=" not in line:
             continue
         k, v = line.split("=", 1)
+        # Komentar sebaris dibuang: "DEEPSEEK_MODEL=deepseek-v4-pro   # atau flash"
+        # sempat terbaca utuh sebagai nama model, sehingga setiap panggilan API
+        # gagal dengan nama model yang tidak sah. Hanya " #" (pakai spasi) yang
+        # dianggap komentar, supaya kunci yang memuat '#' tidak ikut terpotong.
+        v = re.split(r"\s+#", v, maxsplit=1)[0]
         k, v = k.strip(), v.strip().strip('"').strip("'")
         if (k.startswith(("ANTHROPIC_", "DEEPSEEK_")) or k == "LLM_PROVIDER") and v and k not in os.environ:
             os.environ[k] = v

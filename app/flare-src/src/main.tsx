@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
+import "./motion.css";
 
 type View = "Overview" | "Scenario" | "Gaps" | "Compare" | "Map" | "Assistant";
 type IconName = "orbit" | "target" | "grid" | "compare" | "spark" | "arrow" | "check";
@@ -130,6 +131,7 @@ const heatmap = [
 
 import { ask as askApi, figureUrl, TIER_LABEL, type AskReply } from "./api";
 import { useInsight, useStatus, fmt } from "./useData";
+import { STUDY_BY_ACCESSION, STUDY_HTML } from "./motion";
 
 /** Rute hash sederhana: #Scenario, #Assistant, ... supaya setiap tampilan bisa
  *  ditautkan langsung (berguna saat demo dan saat juri membuka ulang halaman). */
@@ -647,6 +649,7 @@ function Scenario({ onEvidence }: { onEvidence: (record: EvidenceRecord) => void
               <article key={r.accession} className="rank-card">
                 <header>
                   <span className="rank-no">{String(i + 1).padStart(2, "0")}</span>
+                  <StudyMark accession={r.accession} title={r.name} />
                   <div className="rank-id">
                     <strong>{r.name}</strong>
                     <small>{r.pillars.join(" / ") || "—"}</small>
@@ -869,6 +872,20 @@ function Bar({ label, value, weight }: { label: string; value: number; weight: n
   );
 }
 
+/** Penanda visual tiap investigasi: animasi konseptual, diberi label "concept"
+ *  supaya tidak pernah disalahartikan sebagai rekaman eksperimen atau data. */
+function StudyMark({ accession, title }: { accession: string; title?: string }) {
+  const key = STUDY_BY_ACCESSION[accession];
+  const markup = key ? STUDY_HTML[key] : undefined;
+  if (!markup) return null;
+  return (
+    <div className="study-mark" role="img" aria-label={(title || accession) + " — conceptual illustration"}>
+      <div className={"stage " + key} dangerouslySetInnerHTML={{ __html: markup }} />
+      <span className="study-tag">concept</span>
+    </div>
+  );
+}
+
 function ViewLoading() {
   return (
     <div className="page">
@@ -887,286 +904,234 @@ function ViewError({ what, detail }: { what: string; detail: string }) {
   );
 }
 
+/** Banding investigasi berdampingan, dari kartu /insight_data.
+ *  Mockup membandingkan dua nama tetap; ini membiarkan pengguna memilih,
+ *  dan menandai lapangan yang memang tidak ditabulasi NASA. */
+const named = (xs: any, total?: number) => {
+  if (!Array.isArray(xs) || !xs.length) return null;
+  const head = xs.slice(0, 4).map((x: any) => (x?.name ? `${x.name} (${x.n})` : String(x)));
+  const rest = (total ?? xs.length) - head.length;
+  return head.join(", ") + (rest > 0 ? ` +${rest}` : "");
+};
+
+/** Variabel yang diubah-ubah vs dijaga tetap -- pertanyaan eksplisit di brief
+ *  tantangan ("how did tests from the same investigation differ?"). */
+const varied = (v: any) => {
+  if (!v || typeof v !== "object") return null;
+  const on = Object.entries(v).filter(([, k]) => k === "varied").map(([k]) => k);
+  const off = Object.entries(v).filter(([, k]) => k === "constant").map(([k]) => k);
+  const parts = [];
+  if (on.length) parts.push("varied: " + on.join(", "));
+  if (off.length) parts.push("constant: " + off.join(", "));
+  return parts.join(" · ") || null;
+};
+
 function Comparison() {
-  const [selected, setSelected] = useState<string[]>(["BASS-II", "ACME / CFI-G"]);
-  const toggle = (name: string) =>
-    setSelected((current) =>
-      current.includes(name)
-        ? current.filter((x) => x !== name)
-        : current.length < 3
-          ? [...current, name]
-          : current,
-    );
+  const { data, error } = useInsight();
+  const [sel, setSel] = useState<string[]>([]);
+  if (error) return <ViewError what="comparison" detail={error} />;
+  if (!data) return <ViewLoading />;
+
+  const cards: any[] = data.investigations;
+  const picked = sel.length ? sel : cards.slice(0, 3).map((c) => c.accession);
+  const chosen = picked.map((acc) => cards.find((c) => c.accession === acc)).filter(Boolean);
+
+  const toggle = (acc: string) =>
+    setSel((cur) => {
+      const base = cur.length ? cur : cards.slice(0, 3).map((c) => c.accession);
+      return base.includes(acc) ? base.filter((x) => x !== acc) : [...base, acc].slice(-4);
+    });
+
+  const rows: [string, (c: any) => any][] = [
+    ["Full title", (c) => c.title],
+    ["Pillars", (c) => (c.pillars || []).join(" / ")],
+    ["Facility", (c) => c.facility || c.hardware],
+    ["Platform", (c) => c.platform],
+    ["Years", (c) => (Array.isArray(c.years) ? c.years.join("–") : c.years)],
+    ["Fuel phases", (c) => (c.phases || []).join(", ")],
+    // fuels/samples adalah [{name, n}], bukan string: tanpa .name hasilnya "[object Object]".
+    ["Fuels", (c) => named(c.fuels, c.n_fuels)],
+    ["Samples", (c) => named(c.samples)],
+    ["Sample size", (c) => c.size_mm],
+    ["Variables", (c) => varied(c.variables)],
+    ["Oxygen range", (c) => (c.o2 ? `${(c.o2[0] * 100).toFixed(0)}–${(c.o2[1] * 100).toFixed(0)}%` : null)],
+    ["Pressure range", (c) => (c.p_kpa ? `${c.p_kpa[0]}–${c.p_kpa[1]} kPa` : null)],
+    ["Flow", (c) => (c.flow_cm_s ? `${c.flow_cm_s[0]}–${c.flow_cm_s[1]} cm/s` : null)],
+    ["Diluents", (c) => (c.diluents || []).join(", ")],
+    ["Rows in NASA table", (c) => c.n_rows],
+    ["Result values", (c) => c.n_results],
+    ["Publications", (c) => c.n_publications],
+    ["Files listed / local", (c) => `${c.files_listed} / ${c.files_local}`],
+  ];
+
   return (
     <div className="page">
       <PageTitle
         index="04"
-        overline="SCIENTIFIC COMPARISON"
-        title="Comparison & Analysis"
-        description="Compare objectives, test configurations, reported measurements, findings, and limitations at the appropriate evidence level."
+        overline="SCIENTIFIC ANALYSIS"
+        title="Comparison"
+        description="Put investigations side by side on the attributes the challenge asks about: fuels, conditions, variables and sensors."
       />
-      <Panel
-        title="Select investigations"
-        meta={`${selected.length} SELECTED`}
-        className="selector-panel"
-      >
-        <div className="investigation-pills">
-          {investigations.map((item) => (
+      <Panel title="Pick investigations" meta={`${chosen.length} SELECTED`}>
+        <div className="pick-grid">
+          {cards.map((c) => (
             <button
-              key={item.name}
-              onClick={() => toggle(item.name)}
-              className={selected.includes(item.name) ? "active" : ""}
+              key={c.accession}
+              className={picked.includes(c.accession) ? "pick on" : "pick"}
+              onClick={() => toggle(c.accession)}
             >
-              <span className="tiny-check">
-                {selected.includes(item.name) && <Icon name="check" size={10} />}
-              </span>
-              {item.name}
-              <small>{item.tests} TESTS</small>
+              {c.name || c.accession}
             </button>
           ))}
         </div>
       </Panel>
-      <div className="comparison-grid">
-        {investigations
-          .filter((item) => selected.includes(item.name))
-          .map((item) => (
-            <article className="comparison-card" key={item.name}>
-              <header>
-                <span>INVESTIGATION PROFILE</span>
-                <b>{item.match}%</b>
-              </header>
-              <h2>{item.name}</h2>
-              <p>{item.note}</p>
-              <dl>
-                <div>
-                  <dt>Primary objective</dt>
-                  <dd>{item.objective}</dd>
-                </div>
-                <div>
-                  <dt>Indexed tests</dt>
-                  <dd>{item.tests}</dd>
-                </div>
-                <div>
-                  <dt>Gravity regime</dt>
-                  <dd>Microgravity</dd>
-                </div>
-                <div>
-                  <dt>Evidence layer</dt>
-                  <dd>PSI + derived analysis</dd>
-                </div>
-              </dl>
-              <div className="card-limit">
-                <span>KNOWN LIMITATION</span>Cross-investigation measurements may use different
-                definitions and units.
-              </div>
-            </article>
-          ))}
-        {selected.length < 2 && (
-          <div className="add-card">Select at least two profiles for a meaningful comparison.</div>
-        )}
-      </div>
-      {selected.length >= 2 && (
-        <div className="interpretation">
-          <Icon name="spark" size={20} />
-          <div>
-            <span>COMPARATIVE INTERPRETATION</span>
-            <p>
-              <strong>{selected.join(" and ")}</strong> address complementary parts of spacecraft
-              fire safety. Compare test conditions before comparing outcomes; no causal equivalence
-              is implied by shared keywords.
-            </p>
-          </div>
+      <Panel title="Side by side" meta="NASA TABLE + DERIVED">
+        <div className="cmp-wrap">
+          <table className="cmp">
+            <thead>
+              <tr>
+                <th />
+                {chosen.map((c: any) => (
+                  <th key={c.accession}>
+                    {c.name}
+                    <small>{c.accession}</small>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map(([label, get]) => (
+                <tr key={label}>
+                  <th>{label}</th>
+                  {chosen.map((c: any) => {
+                    const v = get(c);
+                    const empty = v === null || v === undefined || v === "" || v === "–";
+                    return (
+                      <td key={c.accession} className={empty ? "na" : ""}>
+                        {empty ? "not tabulated" : String(v)}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-      )}
+        <p className="panel-footnote">
+          "not tabulated" means NASA did not record that field for the investigation. It is never a
+          zero and never a judgement about the experiment.
+        </p>
+      </Panel>
     </div>
   );
 }
 
+/** Peta riset: 465 simpul, 516 tautan. Jenis tautan ditampilkan apa adanya --
+ *  termasuk bahwa kemiripan topik BUKAN sitasi. */
 function ResearchMap({ onEvidence }: { onEvidence: (record: EvidenceRecord) => void }) {
+  const [map, setMap] = useState<any>(null);
+  const [err, setErr] = useState<string | null>(null);
+  const [kind, setKind] = useState<string>("all");
+
+  useEffect(() => {
+    const ac = new AbortController();
+    fetch("research_map.json", { signal: ac.signal })
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error("HTTP " + r.status))))
+      .then(setMap)
+      .catch((e) => {
+        if (e.name !== "AbortError") setErr(String(e));
+      });
+    return () => ac.abort();
+  }, []);
+
+  if (err) return <ViewError what="research map" detail={err} />;
+  if (!map) return <ViewLoading />;
+
+  const nodes: any[] = map.nodes || [];
+  const edges: any[] = (map.edges || []).filter((e: any) => kind === "all" || e.k === kind);
+  const invs = nodes.filter((n) => n.kind === "investigation");
+  const kinds = Array.from(new Set((map.edges || []).map((e: any) => e.k))) as string[];
+
+  // Hitung tautan per investigasi untuk sorotan sederhana (tanpa grafik gaya pegas:
+  // 465 simpul akan jadi bola benang yang tidak terbaca).
+  const deg: Record<number, number> = {};
+  edges.forEach((e: any) => {
+    deg[e.s] = (deg[e.s] || 0) + 1;
+    deg[e.t] = (deg[e.t] || 0) + 1;
+  });
+
   return (
-    <div className="page map-page">
+    <div className="page">
       <PageTitle
         index="05"
-        overline="RESEARCH CONNECTIONS"
+        overline="EVIDENCE NETWORK"
         title="Research Map"
-        description="Explore how investigations, papers, and topics connect. Relation types remain explicit: similarity is not citation."
+        description="How investigations, papers and topics connect — and how that connection was established."
       />
-      <div className="map-summary">
-        <span>
-          <b>429</b> papers
-        </span>
-        <span>
-          <b>24</b> investigations
-        </span>
-        <span>
-          <b>12</b> research topics
-        </span>
-        <span>
-          <b>82</b> unlinked papers excluded
-        </span>
+      <div className="segmented objective-switch">
+        <button className={kind === "all" ? "active" : ""} onClick={() => setKind("all")}>
+          all links
+        </button>
+        {kinds.map((k) => (
+          <button key={k} className={kind === k ? "active" : ""} onClick={() => setKind(k)}>
+            {k}
+          </button>
+        ))}
       </div>
-      <div className="research-map-layout">
-        <Panel
-          title="Evidence network"
-          meta="FILTERED RELATION VIEW"
-          className="research-map-panel"
-        >
-          <div className="relation-legend">
-            <span>
-              <i className="psi-link" /> Listed by NASA PSI
-            </span>
-            <span>
-              <i className="ntrs-link" /> NTRS topic tag
-            </span>
-            <span>
-              <i className="similarity-link" /> LSA similarity · not citation
-            </span>
+
+      <div className="gaps-grid">
+        <Panel title="Link types" meta="HOW THE EDGE WAS MADE" className="quality-panel">
+          <div className="gap-list">
+            {Object.entries(map.method || {}).map(([k, v]) => (
+              <article key={k} className="quality-facts">
+                <strong>{k}</strong>
+                <p>{String(v)}</p>
+              </article>
+            ))}
           </div>
-          <svg
-            className="research-map-svg"
-            viewBox="0 0 820 440"
-            aria-label="Research relationship map"
-          >
-            <g className="map-links psi">
-              <path d="M166 206 348 102M166 206l210 15M166 206l158 142M376 221l192-123M376 221l222 74M324 348l274-53" />
-            </g>
-            <g className="map-links ntrs">
-              <path d="M348 102 568 98M376 221l210-2M324 348l137 12M586 219l112-90" />
-            </g>
-            <g className="map-links similarity">
-              <path d="M348 102 586 219M376 221l85 139M568 98l130 31M598 295l-137 65" />
-            </g>
-            <g className="map-nodes investigations">
-              <g transform="translate(166 206)">
-                <circle r="45" />
-                <text y="4">BASS-II</text>
-              </g>
-              <g transform="translate(376 221)">
-                <circle r="50" />
-                <text y="4">ACME</text>
-              </g>
-              <g transform="translate(324 348)">
-                <circle r="39" />
-                <text y="4">SPICE</text>
-              </g>
-            </g>
-            <g className="map-nodes topics">
-              <g transform="translate(348 102)">
-                <circle r="32" />
-                <text y="3">Flame spread</text>
-              </g>
-              <g transform="translate(568 98)">
-                <circle r="29" />
-                <text y="3">Extinction</text>
-              </g>
-              <g transform="translate(586 219)">
-                <circle r="34" />
-                <text y="3">Ignition</text>
-              </g>
-              <g transform="translate(598 295)">
-                <circle r="31" />
-                <text y="3">Smoke</text>
-              </g>
-              <g transform="translate(461 360)">
-                <circle r="28" />
-                <text y="3">Detection</text>
-              </g>
-              <g transform="translate(698 129)">
-                <circle r="23" />
-                <text y="3">Droplets</text>
-              </g>
-            </g>
-          </svg>
-          <p className="map-caveat">
-            No citation network is claimed: reference lists are not available in the indexed PSI
-            records. Similarity edges represent LSA topic proximity only.
+          <p className="panel-footnote">
+            Topic similarity is not a citation. No citation network is built because the papers'
+            reference lists are not available to us.
           </p>
         </Panel>
-        <div className="map-side">
-          <Panel title="Connection inventory" meta="RELATION COUNTS">
-            <div className="connection-list">
-              <span>
-                <i className="psi-link" />
-                <b>284</b> Listed by NASA PSI
-              </span>
-              <span>
-                <i className="ntrs-link" />
-                <b>164</b> NTRS topic tags
-              </span>
-              <span>
-                <i className="similarity-link" />
-                <b>68</b> LSA similarities ≥ 0.55
-              </span>
-            </div>
-          </Panel>
-          <Panel title="Source figures" meta="ORIGINAL PAPER ASSETS" className="figure-panel">
-            <button
-              className="figure-card"
-              onClick={() =>
-                onEvidence({
-                  label: "SPICE smoke-point figure",
-                  value: "Figure asset",
-                  tier: "paper_claim",
-                  source: "SPICE paper · DOI-linked source",
-                  path: "analysis/figures → anchored caption → source page",
-                  note: "Original figure crop; caption and page retained. Not redrawn.",
-                })
-              }
-            >
-              <span className="figure-preview">
-                <i />
-                <i />
-                <i />
-              </span>
-              <span>
-                <strong>Smoke-point response</strong>
-                <small>SPICE · page 8 · original figure</small>
-              </span>
-              <EvidenceBadge tier="paper_claim" />
-            </button>
-            <button
-              className="figure-card"
-              onClick={() =>
-                onEvidence({
-                  label: "SPICE scaling relation",
-                  value: "coflow +0.41 · diameter −0.76",
-                  tier: "human_verified",
-                  source: "SPICE paper equation and extracted smoke-point data",
-                  path: "paper equation image → variable definition → daily validation",
-                  note: "Equation is displayed as a source image in production; coefficients remain tied to their validation record.",
-                })
-              }
-            >
-              <span className="equation-preview" aria-label="Source equation image placeholder">
-                <i />
-                <i />
-                <i />
-              </span>
-              <span>
-                <strong>Equation 4 · scaling relation</strong>
-                <small>Original equation crop · variables defined in source</small>
-              </span>
-              <EvidenceBadge tier="human_verified" />
-            </button>
-          </Panel>
-        </div>
+
+        <Panel title="Investigations by evidence attached" meta={`${edges.length} LINKS SHOWN`} className="quality-panel">
+          <div className="gap-list">
+            {invs
+              .map((n) => ({ n, d: deg[nodes.indexOf(n)] || 0 }))
+              .sort((x, y) => y.d - x.d)
+              .slice(0, 12)
+              .map(({ n, d }) => (
+                <div key={n.id} className="rank-bar">
+                  <span>{n.label}</span>
+                  <i>
+                    <b style={{ width: Math.max(2, (d / Math.max(1, Math.max(...Object.values(deg)))) * 100) + "%" }} />
+                  </i>
+                  <small>{d} links</small>
+                </div>
+              ))}
+          </div>
+          <button
+            className="text-button"
+            onClick={() =>
+              onEvidence({
+                label: "Research map",
+                value: `${nodes.length} nodes / ${map.edges.length} links`,
+                tier: "derived_auto",
+                source: "Built from PSI publication lists, NTRS tags and LSA topic similarity",
+                path: "app/insight/research_map.json",
+                note: JSON.stringify(map.stats),
+              })
+            }
+          >
+            HOW THIS MAP WAS BUILT
+          </button>
+        </Panel>
       </div>
     </div>
   );
 }
 
-type Msg = {
-  role: "user" | "assistant";
-  text: string;
-  reply?: AskReply;
-  pending?: boolean;
-  failed?: boolean;
-};
-
-/** Percakapan sungguhan dengan backend: /ask memanggil alat, lalu setiap angka
- *  dalam jawaban diperiksa terhadap keluaran alat (grounding). Yang ditampilkan
- *  di bawah jawaban adalah hasil pemeriksaan itu apa adanya -- termasuk ketika
- *  ada angka yang tidak bersumber. */
 function Assistant() {
   const [question, setQuestion] = useState("");
   const [busy, setBusy] = useState(false);
@@ -1349,16 +1314,27 @@ function FloatingAssistant({
   onOpenFull: () => void;
 }) {
   const [question, setQuestion] = useState("");
+  const [busy, setBusy] = useState(false);
   const [exchange, setExchange] = useState<{ question: string; answer: string } | null>(null);
 
-  const submit = () => {
-    if (!question.trim()) return;
-    setExchange({
-      question,
-      answer:
-        "I can trace that through the indexed evidence. Open the full assistant to inspect tools, sources, and numerical grounding.",
-    });
+  // Panel kecil ini memanggil backend yang SAMA dengan asisten penuh; sebelumnya
+  // ia selalu membalas kalimat tetap, sehingga terlihat berfungsi padahal tidak.
+  const submit = async () => {
+    const q = question.trim();
+    if (!q || busy) return;
     setQuestion("");
+    setBusy(true);
+    setExchange({ question: q, answer: "Calling tools…" });
+    try {
+      const r = await askApi(q, []);
+      const g = r.grounding;
+      const flag = g && g.ungrounded.length ? ` [${g.ungrounded.length} number(s) unsupported]` : "";
+      setExchange({ question: q, answer: (r.answer || "(empty answer)") + flag });
+    } catch (e) {
+      setExchange({ question: q, answer: "Backend did not answer (" + String(e) + ")." });
+    } finally {
+      setBusy(false);
+    }
   };
 
   return (
