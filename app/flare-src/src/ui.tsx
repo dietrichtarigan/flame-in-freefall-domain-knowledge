@@ -25,6 +25,7 @@ export type View =
   | "Investigations"
   | "Tests"
   | "WhatIf"
+  | "Replay"
   | "Map"
   | "Quality"
   | "Assistant"

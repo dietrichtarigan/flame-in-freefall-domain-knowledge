@@ -211,6 +211,11 @@ export function Investigations() {
                     {card.n_tests || card.n_rows || 0} tests · {card.n_results} result values · {card.n_publications} publications
                   </p>
                   <div className="inv-actions">
+                    {(card.accession === "PSI-69" || card.accession === "PSI-68") && (
+                      <button className="primary-button" onClick={() => go("Replay", "flex:FLEX-035")}>
+                        ▶ WATCH A BURN IN 3D
+                      </button>
+                    )}
                     <button className="primary-button" onClick={() => go("Tests", `acc:${card.accession}`)}>
                       OPEN ITS TESTS →
                     </button>

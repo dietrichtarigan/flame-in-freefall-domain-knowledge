@@ -5,7 +5,7 @@ import "./motion.css";
 import "./features.css";
 import "./layout-fixes.css";
 
-type IconName = "orbit" | "target" | "grid" | "compare" | "spark" | "arrow" | "check" | "list" | "flask" | "shield";
+type IconName = "orbit" | "target" | "grid" | "compare" | "spark" | "arrow" | "check" | "list" | "flask" | "shield" | "play";
 const iconPaths: Record<IconName, React.ReactNode> = {
   orbit: (
     <>
@@ -42,6 +42,12 @@ const iconPaths: Record<IconName, React.ReactNode> = {
   list: <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />,
   flask: <path d="M9 3h6M10 3v6L4.5 19a1.5 1.5 0 0 0 1.3 2h12.4a1.5 1.5 0 0 0 1.3-2L14 9V3M7 15h10" />,
   shield: <path d="M12 3 4 6v6c0 4.4 3.4 8 8 9 4.6-1 8-4.6 8-9V6l-8-3Zm-3 9 2 2 4-4" />,
+  play: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="m10 8 6 4-6 4V8Z" />
+    </>
+  ),
 };
 
 function Icon({ name, size = 18 }: { name: IconName; size?: number }) {
@@ -69,6 +75,7 @@ const navigation: { id: View; label: string; sub: string; icon: IconName }[] = [
   { id: "Investigations", label: "Investigations", sub: "Catalog & compare", icon: "compare" },
   { id: "Tests", label: "Test Explorer", sub: "Every test, traced", icon: "list" },
   { id: "WhatIf", label: "What-if", sub: "Predictive models", icon: "flask" },
+  { id: "Replay", label: "Burn Replay", sub: "FLEX droplets in 3D", icon: "play" },
   { id: "Map", label: "Research Map", sub: "Citation network", icon: "orbit" },
   { id: "Quality", label: "Quality", sub: "Alerts & verification", icon: "shield" },
   { id: "Assistant", label: "AI Assistant", sub: "Knowledge query", icon: "spark" },
@@ -95,11 +102,12 @@ import { Investigations } from "./viewInvestigations";
 import { WhatIf } from "./viewWhatIf";
 import { Quality } from "./viewQuality";
 import { Docs } from "./viewDocs";
+import { Replay } from "./viewReplay";
 import { STUDY_BY_ACCESSION, STUDY_HTML } from "./motion";
 
 /** Rute hash sederhana: #Scenario, #Assistant, ... supaya setiap tampilan bisa
  *  ditautkan langsung (berguna saat demo dan saat juri membuka ulang halaman). */
-const VIEWS: View[] = ["Overview", "Scenario", "Gaps", "Investigations", "Tests", "WhatIf", "Map", "Quality", "Assistant", "Docs"];
+const VIEWS: View[] = ["Overview", "Scenario", "Gaps", "Investigations", "Tests", "WhatIf", "Replay", "Map", "Quality", "Assistant", "Docs"];
 const viewFromHash = (): View => {
   let raw = "";
   try {
@@ -150,6 +158,7 @@ function App() {
         {view === "Investigations" && <Investigations />}
         {view === "Tests" && <Tests />}
         {view === "WhatIf" && <WhatIf />}
+        {view === "Replay" && <Replay />}
         {view === "Quality" && <Quality />}
         {view === "Map" && <ResearchMap onEvidence={setEvidence} />}
         {view === "Assistant" && <Assistant />}

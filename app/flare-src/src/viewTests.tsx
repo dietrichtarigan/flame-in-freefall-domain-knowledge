@@ -213,10 +213,18 @@ function Dossier({ id, names, onOpen }: { id: string; names: Record<string, stri
   const e = ent.data;
   const label = e?.label ?? id.split(":").pop();
   const acc = e?.accession ?? id.split(":")[1];
+  // uji FLEX yang ada di Tabel IX laporan NASA bisa diputar ulang di Burn Replay (Open FLEX)
+  const cirMap = useJSON<Record<string, string>>(acc === "PSI-69" || acc === "PSI-68" ? "openflex/cir_map.json" : null);
+  const flexId = cirMap.data ? cirMap.data[String(label)] : undefined;
 
   return (
     <>
       <Panel title={`Test ${label}`} meta={names[acc] ? `${names[acc]} · ${acc}` : acc}>
+        {flexId && (
+          <button className="primary-button replay-cta" onClick={() => go("Replay", id)}>
+            ▶ REPLAY THIS BURN IN 3D · {flexId}
+          </button>
+        )}
         {ent.loading && <p className="chart-note">Loading…</p>}
         {ent.error && <p className="chart-note">Unavailable ({ent.error}).</p>}
         {e && (

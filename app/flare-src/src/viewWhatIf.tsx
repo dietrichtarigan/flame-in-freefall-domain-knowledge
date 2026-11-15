@@ -9,7 +9,7 @@
  */
 import React, { useEffect, useState } from "react";
 import { API } from "./api";
-import { EvidenceBadge, PageTitle, Panel, pct, useJSON } from "./ui";
+import { EvidenceBadge, PageTitle, Panel, go, pct, useJSON } from "./ui";
 import { en } from "./i18n";
 import { PlotView } from "./chatRender";
 import { TEX, Tex, plainFormulaToTex } from "./math";
@@ -294,6 +294,9 @@ function FlexSim() {
             </p>
           )}
           <Nearest rows={d.nearest_tests} xKey="pressure_kpa" xLabel="kPa" outKey="extinction" />
+          <button className="text-button" onClick={() => go("Replay", "flex:FLEX-035")}>
+            ▶ WATCH REAL FLEX BURNS IN 3D →
+          </button>
         </>
       ) : (
         <p className="chart-note">{r.loading ? "Computing…" : r.error}</p>

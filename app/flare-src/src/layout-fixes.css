@@ -509,3 +509,11 @@
 .weight-sliders .text-button { justify-self: start; }
 .rank-controls .segmented { flex-wrap: wrap; }
 .rank-controls .segmented button { white-space: nowrap; flex: 1 0 auto; }
+
+/* ---- Burn Replay (Open FLEX disematkan) ---- */
+.replay-panel > .panel-body { padding: 12px 14px 14px; }
+.replay-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; margin-bottom: 10px; font-size: 12px; }
+.replay-bar .muted { flex: 1 1 320px; }
+.replay-frame { display: block; width: 100%; height: calc(100vh - 230px); min-height: 620px; border: 1px solid var(--line); background: #0d0d0b; }
+.replay-cta { margin-bottom: 12px; }
+@media (max-width: 780px) { .replay-frame { height: 78vh; min-height: 520px; } }

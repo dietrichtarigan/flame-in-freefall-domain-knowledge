@@ -50,6 +50,16 @@ const GUIDE: { view: View; title: string; answers: string; steps: string[] }[] =
     steps: ["Move the sliders; results update with an uncertainty band.", "Compare with the closest real ISS tests listed underneath.", "Outside the tested range the models refuse to answer instead of guessing."],
   },
   {
+    view: "Replay",
+    title: "Burn Replay",
+    answers: "What did a FLEX droplet burn actually look like, second by second?",
+    steps: [
+      "Open it from a FLEX test in Test Explorer (“Replay this burn in 3D”), or pick any of the 276 tests in the lab.",
+      "Press play: the procedure, ignition, burn and extinction run in real time (0.25×–4×).",
+      "Open Transparency to see whether each frame comes from digitized data or is reconstructed from the printed D₀ and K.",
+    ],
+  },
+  {
     view: "Map",
     title: "Research Map",
     answers: "Which papers stand behind each investigation, and what are their intellectual roots?",
