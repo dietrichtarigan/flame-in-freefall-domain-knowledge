@@ -1,13 +1,4351 @@
 [
  {
-  "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SMOKE POINTS OF MICROGRAVITY AND  NORMAL GRAVITY COFLOW DIFFUSION  FLAMES_DotsonThesis.pdf",
-  "figures": 32,
-  "equations": 15,
+  "pdf": "kb/raw/ntrs/pdf/19710003606.pdf",
+  "figures": 0,
+  "equations": 0,
   "error": null
  },
  {
-  "pdf": "kb/raw/psi/files/PSI-107/Reports/PSI-107_Reports_SPICE_FinalReport.pdf",
+  "pdf": "kb/raw/ntrs/pdf/19710013837.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19710021280.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19720008759.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19720017778.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19720020916.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19730006211.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19730064278.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19750018595.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19790025117.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19810013786.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19850026549.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19850026620.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19870006579.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19870010909.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19880003138.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19880003141.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19880003143.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19880003144.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19880003145.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19880006471.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19880009228.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19880010969.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19880014518.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19890000740.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19890014130.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19890014267.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19890015042.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19890015982.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19900001880.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19900003329.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19900004363.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19900004364.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19900004946.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19910005065.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19920004363.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19920006938.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930003763.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930004527.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930009198.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930010989.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930011002.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930011006.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930011012.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930011015.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930011016.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930011017.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930011018.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930011019.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930011020.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930011022.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930011024.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930011027.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930011028.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930011030.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930013454.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930015566.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930015757.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19930019549.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19940004468.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19940022933.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19950026508.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008386.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008387.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008388.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008389.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008390.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008391.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008392.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008393.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008394.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008395.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008398.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008399.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008400.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008403.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008404.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008406.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008407.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008413.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008415.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008417.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008418.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008420.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008423.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008429.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008430.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008432.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008435.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008449.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008453.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960008456.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19960009915.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970001777.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970003005.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970003276.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970003658.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970003746.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970003810.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970020547.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970020568.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970020580.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970020585.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970020607.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970020608.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970020609.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970020610.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970020613.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970020617.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970024857.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19970027479.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19980169294.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19980201335.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19980218879.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19980237801.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19990009671.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19990018868.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19990019805.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19990019814.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19990020826.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19990040241.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19990053965.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19990053968.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19990063738.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19990079845.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/19990116925.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000002799.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000003005.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000005011.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000005015.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000005016.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000007141.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000010691.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000024924.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000027567.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000030678.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000030722.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000032189.pdf",
+  "figures": 12,
+  "equations": 27,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000034017.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000056096.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000056910.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000070853.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000120278.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000120369.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20000120376.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010049383.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010050136.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010066768.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010073993.pdf",
+  "figures": 17,
+  "equations": 6,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010073994.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010073995.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010073996.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010073997.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010073999.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074001.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074003.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074009.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074014.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074015.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074017.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074019.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074022.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074025.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074032.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074038.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074042.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074048.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074052.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074053.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074055.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074057.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074059.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074064.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074068.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074074.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074080.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074085.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074090.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074091.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074094.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074095.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074096.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20010074098.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20020024455.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20020024460.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20020027073.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20020027088.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20020027090.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20020027542.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20020028408.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20020028886.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20020036240.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20020038560.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20020063594.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20020064975.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20020071119.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20020081329.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20030005478.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20030005705.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20030032248.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20030032527.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20030053425.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20030053426.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20030053427.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20030068100.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20030075796.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20030075804.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20030075805.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20030111831.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20030111833.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040000941.pdf",
+  "figures": 13,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053504.pdf",
   "figures": 11,
+  "equations": 7,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053507.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053508.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053515.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053516.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053519.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053520.pdf",
+  "figures": 2,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053528.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053529.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053530.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053531.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053543.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053547.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053548.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053549.pdf",
+  "figures": 1,
+  "equations": 2,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053552.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053553.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053555.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053557.pdf",
+  "figures": 1,
+  "equations": 5,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053558.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053565.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053567.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053569.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053570.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053576.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053578.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053579.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053580.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053586.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053589.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053594.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053595.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053597.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040053602.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040083973.pdf",
+  "figures": 21,
+  "equations": 9,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040084137.pdf",
+  "figures": 4,
+  "equations": 2,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040084155.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040084156.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040084193.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040111428.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040112018.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040142368.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040142387.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040161185.pdf",
+  "figures": 9,
+  "equations": 5,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040161188.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040161199.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040161200.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040161216.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040161223.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040161241.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040161244.pdf",
+  "figures": 8,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040161246.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040161262.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040200716.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20040201042.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050169992.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050172091.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050176400.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050177167.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050177216.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050177911.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050179434.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050181408.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050181429.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050192122.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050192124.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050195842.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050195844.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050199445.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050199447.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050199456.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050199458.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050199467.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050206358.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050215015.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050215025.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050215103.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050215297.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050215300.pdf",
+  "figures": 37,
+  "equations": 28,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050215394.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050215407.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050215542.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050215648.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20050217028.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20060000025.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20060003630.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20060008649.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20060021980.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20060022045.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20060050783.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20060051730.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20070010443.pdf",
+  "figures": 6,
+  "equations": 2,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20070010766.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20070011621.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20070013692.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20070013892.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20070017854.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20070017858.pdf",
+  "figures": 5,
+  "equations": 4,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20070017900.pdf",
+  "figures": 5,
+  "equations": 4,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20070017909.pdf",
+  "figures": 2,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20070021234.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20070031686.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20070031687.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20080012607.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20080012612.pdf",
+  "figures": 5,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20080013149.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20080013594.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20080014308.pdf",
+  "figures": 4,
+  "equations": 4,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20080034883.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20090014812.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20090043255.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20100011222.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20110001653.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20110007095.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20110008636.pdf",
+  "figures": 0,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20120013117.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20120015228.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20120015928.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20120016262.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20120016855.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20120017940.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20130000582.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20130000677.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20130001695.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20130001713.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20130003189.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20130004397.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20130008174.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20130010979.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20130010991.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20130012832.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20130013749.pdf",
+  "figures": 50,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20130013793.pdf",
+  "figures": 12,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20130014061.pdf",
+  "figures": 4,
+  "equations": 3,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20130014735.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20140002231.pdf",
+  "figures": 9,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20140004923.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20140004929.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20140006578.pdf",
+  "figures": 8,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20140006579.pdf",
+  "figures": 11,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20140006580.pdf",
+  "figures": 1,
+  "equations": 6,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20140006584.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20140006585.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20140006750.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20140009169.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20140011015.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20140011099.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20140011433.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20140011630.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20140017780.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20150000894.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20150002322.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20150003025.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20150003264.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20150008961.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20150008962.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20150010719.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20150011070.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20150018213.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20150018397.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20150019858.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20150021283.pdf",
+  "figures": 0,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20150022123.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20150022421.pdf",
+  "figures": 10,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20150023105.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20150023456.pdf",
+  "figures": 197,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20150023467.pdf",
+  "figures": 15,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20160000344.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20160000593.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20160005209.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20160008911.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20160010073.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20160010264.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20160010292.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20160012298.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20160012389.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20160012691.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20160013384.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20160014637.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170000230.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170000248.pdf",
+  "figures": 4,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170000298.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170000302.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170000835.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170001535.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170001636.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170002268.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170002628.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170002629.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170006615.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170007283.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170008805.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170009141.pdf",
+  "figures": 9,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170009556.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170010366.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170011213.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20170011548.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20180000857.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20180000859.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20180002834.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20180004258.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20180004700.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20180004708.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20180005168.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20180008606.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20190000279.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20190000460.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20190002784.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20190002838.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20190011699.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20190027226.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20190027619.pdf",
+  "figures": 4,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20190028872.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20190030735.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20190033110.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20190033433.pdf",
+  "figures": 6,
+  "equations": 3,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20190034111.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20200000361.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20200000365.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20200000557.pdf",
+  "figures": 13,
+  "equations": 3,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20200001516.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20205000063.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20205003817.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20205004657.pdf",
+  "figures": 8,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20205007829.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20205008167.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20205008449.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20205010965.pdf",
+  "figures": 107,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210010621.pdf",
+  "figures": 9,
+  "equations": 3,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210011385.pdf",
+  "figures": 73,
+  "equations": 13,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210011521.pdf",
+  "figures": 9,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210012606.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210015722.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": "pdftohtml gagal / tidak ada teks (PDF hasil scan?)"
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210015913.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210017343.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210017780.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210017785.pdf",
+  "figures": 12,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210017787.pdf",
+  "figures": 11,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210017789.pdf",
+  "figures": 4,
+  "equations": 3,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210017835.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210017837.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210017838.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210018206.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210020446.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210020516.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210021318.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210021781.pdf",
+  "figures": 10,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210022143.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210022542.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210022617.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210022932.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210023340.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20210024008.pdf",
+  "figures": 2,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20220002714.pdf",
+  "figures": 11,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20220004425.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20220005205.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20220005792.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20220007045.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20220007191.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20220008140.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20220009086.pdf",
+  "figures": 4,
+  "equations": 3,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20220012861.pdf",
+  "figures": 7,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20220015203.pdf",
+  "figures": 8,
+  "equations": 3,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20220015583.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20220015640.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20220018498.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20230002269.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20230002967.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20230004106.pdf",
+  "figures": 80,
+  "equations": 11,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20230009908.pdf",
+  "figures": 10,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20230013826.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20240002981.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20240003229.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20240007488.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20240007628.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20240007877.pdf",
+  "figures": 2,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20240008602.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": "pdftohtml gagal / tidak ada teks (PDF hasil scan?)"
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20240008623.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20240013401.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20240014955.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20240015018.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20240015307.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20250001364.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20250002114.pdf",
+  "figures": 8,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20250002347.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20250002675.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": "pdftohtml gagal / tidak ada teks (PDF hasil scan?)"
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20250006779.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20250010537.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20250010653.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20250010975.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20260000646.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20260001600.pdf",
+  "figures": 14,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20260001966.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20260001992.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20260002014.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20260002050.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20260002236.pdf",
+  "figures": 6,
+  "equations": 4,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20260003546.pdf",
+  "figures": 11,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20260004946.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20260009371.pdf",
+  "figures": 9,
+  "equations": 4,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/ntrs/pdf/20260009882.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1002_fam.2896.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1007_978-81-322-2211-8_16.pdf",
+  "figures": 11,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1007_s00348-005-0062-0.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1007_s00348-016-2218-5.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1007_s10694-019-00863-3.pdf",
+  "figures": 13,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1007_s10694-019-00884-y.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1007_s10694-023-01507-3.pdf",
+  "figures": 12,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1007_s12217-008-9096-2.pdf",
+  "figures": 9,
+  "equations": 3,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1007_s12217-014-9372-2.pdf",
+  "figures": 8,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1007_s12217-014-9377-x.pdf",
+  "figures": 4,
+  "equations": 8,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1007_s12217-024-10106-y.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.actaastro.2014.11.025.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.actaastro.2022.01.021.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.camwa.2013.01.008.pdf",
+  "figures": 8,
+  "equations": 4,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.carbon.2011.07.050.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.combust.pdf",
+  "figures": 6,
+  "equations": 3,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.combustflame.2005.01.007.pdf",
+  "figures": 8,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.combustflame.2007.08.009.pdf",
+  "figures": 2,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.combustflame.2012.07.012.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.combustflame.2013.09.011.pdf",
+  "figures": 14,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.combustflame.2015.01.012.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.combustflame.2017.03.001.pdf",
+  "figures": 9,
+  "equations": 2,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.combustflame.2018.01.044.pdf",
+  "figures": 9,
+  "equations": 6,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.combustflame.2018.10.012.pdf",
+  "figures": 8,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.combustflame.2018.10.016.pdf",
+  "figures": 13,
+  "equations": 3,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.combustflame.2019.03.022.pdf",
+  "figures": 10,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.combustflame.2020.12.042.pdf",
+  "figures": 10,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.combustflame.2021.111637.pdf",
+  "figures": 13,
+  "equations": 6,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.combustflame.2025.114244.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.combustflame.2026.114803.pdf",
+  "figures": 11,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.comp.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.elstat.2005.09.005.pdf",
+  "figures": 3,
+  "equations": 2,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.elstat.2007.04.003.pdf",
+  "figures": 4,
+  "equations": 3,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.firesaf.2015.04.004.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.firesaf.2015.11.011.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.firesaf.2020.102977.pdf",
+  "figures": 8,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.firesaf.2024.104137.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.firesaf.2025.104625.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.firesaf.2026.104719.pdf",
+  "figures": 6,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.firesaf.2026.104952.pdf",
+  "figures": 6,
+  "equations": 2,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.fuel.2013.02.025.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.fuel.2014.08.063.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.fuel.2015.11.025.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.icheatmasstransfer.2009.10.006.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.icheatmasstransfer.2017.06.016.pdf",
+  "figures": 0,
+  "equations": 4,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.ijheatmasstransfer.2004.07.008.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.ijheatmasstransfer.2006.12.014.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.ijheatmasstransfer.2010.08.005.pdf",
+  "figures": 8,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.ijheatmasstransfer.2020.119358.pdf",
+  "figures": 5,
+  "equations": 2,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.ijmultiphase.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.jaerosci.2019.06.004.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.optlaseng.2008.08.002.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.optlaseng.2009.05.004.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.pecs.2019.100787.pdf",
+  "figures": 28,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.pecs.2025.101251.pdf",
+  "figures": 38,
+  "equations": 7,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2006.07.183.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2006.08.109.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2008.05.066.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2008.05.081.pdf",
+  "figures": 8,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2008.05.083.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2008.06.182.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2008.06.221.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2010.05.006.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2010.06.130.pdf",
+  "figures": 8,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2012.05.030.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2012.05.065.pdf",
+  "figures": 10,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2012.05.068.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2012.05.076.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2012.05.088.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2012.06.043.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2012.07.007.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2012.07.029.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2012.07.074.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2014.05.064.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2014.05.093.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2014.05.120.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2014.05.138.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2014.06.015.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2014.06.043.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2014.06.125.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2014.07.017.pdf",
+  "figures": 8,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2014.07.022.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2016.06.025.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2016.06.028.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2016.06.193.pdf",
+  "figures": 5,
+  "equations": 12,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2016.08.046.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2018.05.006.pdf",
+  "figures": 4,
+  "equations": 5,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2018.05.082.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2018.05.151.pdf",
+  "figures": 8,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2018.05.168.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2018.06.022.pdf",
+  "figures": 3,
+  "equations": 2,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2018.06.085.pdf",
+  "figures": 4,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2018.06.161.pdf",
+  "figures": 10,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2018.06.191.pdf",
+  "figures": 2,
+  "equations": 5,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2018.06.198.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2018.07.050.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2018.07.096.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2018.07.106.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2020.06.034.pdf",
+  "figures": 3,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2020.06.110.pdf",
+  "figures": 8,
+  "equations": 2,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2020.06.200.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2020.07.139.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2022.07.015.pdf",
+  "figures": 4,
+  "equations": 4,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2022.07.043.pdf",
+  "figures": 7,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2022.07.049.pdf",
+  "figures": 4,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2022.07.053.pdf",
+  "figures": 12,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2022.07.094.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2022.08.107.pdf",
+  "figures": 3,
+  "equations": 5,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2024.105200.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2024.105373.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2024.105400.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2024.105495.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2024.105574.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2026.106032.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2026.106327.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2026.106460.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_j.proci.2026.106484.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_s0010-2180_02_00424-8.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_s0010-2180_98_00100-x.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1016_s0082-0784_06_80819-2.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1017_jfm.2011.349.pdf",
+  "figures": 0,
+  "equations": 20,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1021_acs.energyfuels.5b00071.pdf",
+  "figures": 8,
+  "equations": 5,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1021_acs.energyfuels.5b00158.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1021_acs.energyfuels.7b01092.pdf",
+  "figures": 4,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1021_ef900555u.pdf",
+  "figures": 9,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1038_s41598-017-18398-4.pdf",
+  "figures": 8,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1063_1.2212399.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_00102200490514994.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_00102200601057394.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_00102200903190851.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_00102202.2010.498798.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_00102202.2012.759946.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_00102202.2014.900056.pdf",
+  "figures": 5,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_00102202.2015.1072176.pdf",
+  "figures": 7,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_00102202.2016.1225730.pdf",
+  "figures": 5,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_00102202.2017.1331218.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_00102202.2017.1404587.pdf",
+  "figures": 10,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_00102202.2022.2041621.pdf",
+  "figures": 13,
+  "equations": 2,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_00102202.2023.2182205.pdf",
+  "figures": 10,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_00102202.2025.2465790.pdf",
+  "figures": 15,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_00102209108951711.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_00102209508907795.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_00102209808952065.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_02786826.2015.1025124.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_02786826.2015.1025125.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_13647830.2010.547601.pdf",
+  "figures": 16,
+  "equations": 6,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_13647830.2013.809797.pdf",
+  "figures": 5,
+  "equations": 14,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_13647830.2014.934296.pdf",
+  "figures": 7,
+  "equations": 11,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_13647830.2016.1248494.pdf",
+  "figures": 2,
+  "equations": 22,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_13647830.2017.1280182.pdf",
+  "figures": 5,
+  "equations": 16,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_13647830.2017.1403051.pdf",
+  "figures": 7,
+  "equations": 3,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_13647830.2024.2326830.pdf",
+  "figures": 9,
+  "equations": 2,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_13647830.2025.2539131.pdf",
+  "figures": 8,
+  "equations": 16,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_13647830500098423.pdf",
+  "figures": 3,
+  "equations": 39,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_13647830601161567.pdf",
+  "figures": 9,
+  "equations": 3,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_13647830701383814.pdf",
+  "figures": 15,
+  "equations": 18,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1080_13647830903159293.pdf",
+  "figures": 10,
+  "equations": 21,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1088_1364-7830_7_4_005.pdf",
+  "figures": 10,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1089_space.2013.0035.pdf",
+  "figures": 8,
+  "equations": 3,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1134_s0010508220040036.pdf",
+  "figures": 16,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1146_annurev-chembioeng-060718-030141.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1155_2012_587987.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1155_2013_154202.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1177_0734904113495650.pdf",
+  "figures": 11,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1196_annals.1362.037.pdf",
+  "figures": 8,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1196_annals.1362.038.pdf",
+  "figures": 9,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.1364_ol.43.001103.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.15011_jasma.24.3_235.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.2307_26459823.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.2478_gsr-2014-0007.pdf",
+  "figures": 12,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.2514_1.j051328.pdf",
+  "figures": 10,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.2514_1.j054437.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.2514_2.5698.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.2514_2.7289.pdf",
+  "figures": 11,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.2514_6.1994-571.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.2514_6.2007-546.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.2514_6.2008-806.pdf",
+  "figures": 5,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.2514_6.2012-1251.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.2514_6.2012-1252.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.2514_6.2012-3493.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.2514_6.2012-3536.pdf",
+  "figures": 7,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.2514_6.2013-3433.pdf",
+  "figures": 10,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.2514_6.2014-1019.pdf",
+  "figures": 21,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.3390_en11051235.pdf",
+  "figures": 6,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.3390_math11020261.pdf",
+  "figures": 7,
+  "equations": 7,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.4271_2009-01-2468.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/10.5566_ias.v31.p137-148.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_1-s2.0-s0010218001002474-main.pdf",
+  "figures": 15,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_1-s2.0-s0010218097000515-main.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_1-s2.0-s0010218097000692-main.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_1-s2.0-s0082078496802967-main.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_10.1016_j.firesaf.2016.11.003.pdf",
+  "figures": 0,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_978-1-4020-8682-3.pdf",
+  "figures": 21,
+  "equations": 40,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_bhattacharjee2012.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_brooker2007.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_chen2005.pdf",
+  "figures": 4,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_dotson2010.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_dotson2011.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_eng1995.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_he1998.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_law1994.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_law2000.pdf",
+  "figures": 47,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_ruff2005.pdf",
+  "figures": 1,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_spivey2006.pdf",
+  "figures": 2,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_urban2005.pdf",
+  "figures": 5,
+  "equations": 2,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_urban2008.pdf",
+  "figures": 3,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_verminaplathner2019.pdf",
+  "figures": 1,
+  "equations": 2,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_wang2005.pdf",
+  "figures": 3,
+  "equations": 1,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_yang2009.pdf",
+  "figures": 17,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_yoo2002.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_yoo2002_2.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_zhang2015.pdf",
+  "figures": 0,
+  "equations": 0,
+  "error": null
+ },
+ {
+  "pdf": "kb/raw/papers/pdf/local_zhu2005.pdf",
+  "figures": 3,
   "equations": 0,
   "error": null
  }

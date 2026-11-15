@@ -49,3 +49,26 @@ kb/gold/freefall.sqlite.tmp
 
 # Cache indeks pencarian (dibangun ulang otomatis oleh scripts/retrieval.py)
 kb/cache/
+
+# Gambar paper resolusi asli sebelum dikecilkan (419 MB) — hasil kecilnya yang dilacak
+analysis/figures_orig/
+analysis/figures_opt/
+
+# Ekstraksi gambar versi lama (datar, 2.893 WebP): tidak dibaca find_figures,
+# yang dipakai analysis/figures/figures.json dari paper_figures.py --from-db
+analysis/figures_flat_legacy/
+
+# Paket distribusi 27 GB (7 bagian @4 GB) — bagikan lewat drive, bukan git
+deliverables/*.zip
+deliverables/*.part*
+
+# Dependensi build frontend
+node_modules/
+app/flare-src/node_modules/
+
+# Dependensi build frontend (app/flare dibangun dari app/flare-src)
+node_modules/
+
+# Folder kerja sementara (tangkapan layar, cadangan)
+.look/
+.bak/

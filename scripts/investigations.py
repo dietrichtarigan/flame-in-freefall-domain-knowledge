@@ -179,6 +179,39 @@ def in_band(sc, o2, p):
     return "full" if sc["p_kpa"][0] <= p <= sc["p_kpa"][1] else None
 
 
+def _count(g, sql):
+    try:
+        return g.execute(sql).fetchone()[0]
+    except Exception:          # noqa: BLE001 — tabel belum ada di basis data lama
+        return None
+
+
+def _totals(g):
+    """Angka ringkas + tier masing-masing. Tier bukan hiasan: ia menentukan
+    bagaimana angka itu boleh dibaca.
+
+    Catatan tier video: `derived_auto`, BUKAN `human_verified`. Durasi nyala dari
+    video diukur otomatis dan ketelitiannya belum terkuantifikasi -- hanya satu uji
+    (T16) yang benar-benar terekam dua kali. Lembar bukti PNG-nya ada, tetapi
+    pemeriksaan manusia menyeluruh belum dilakukan.
+    """
+    return [
+        {"key": "investigations", "label": "Investigation profiles", "note": "NASA PSI catalog",
+         "value": _count(g, "SELECT COUNT(*) FROM investigations"), "tier": "nasa_table",
+         "path": "freefall.sqlite -> investigations"},
+        {"key": "tests", "label": "Experimental tests", "note": "Standardized records",
+         "value": _count(g, "SELECT COUNT(*) FROM tests"), "tier": "nasa_table",
+         "path": "freefall.sqlite -> tests"},
+        {"key": "telemetry", "label": "Telemetry records", "note": "ACME sensor mining",
+         "value": _count(g, "SELECT COUNT(*) FROM telemetry"), "tier": "derived_auto",
+         "path": "freefall.sqlite -> telemetry"},
+        {"key": "video", "label": "Video episodes", "note": "BASS / BASS-II",
+         "value": _count(g, "SELECT COUNT(*) FROM video_episodes"), "tier": "derived_auto",
+         "path": "freefall.sqlite -> video_episodes",
+         "caveat": "burn durations are automatic; precision not yet quantified"},
+    ]
+
+
 def build():
     key = (GOLD.stat().st_mtime_ns, BRAIN.stat().st_mtime_ns)
     if _CACHE["key"] == key:
@@ -390,6 +423,11 @@ def build():
     data = {"built": brain.db().execute("SELECT value FROM meta WHERE key='built'").fetchone()[0],
             "weights": WEIGHTS, "pillars": PILLARS, "scenarios": [s["id"] for s in SCENARIOS], "scenario": scen,
             "investigations": cards, "points": points, "earth": EARTH, "partial_gravity": PARTIAL_G, "suggested": SUGGESTED,
+            # Angka ringkas untuk kepala halaman, masing-masing DENGAN tier-nya, supaya
+            # tampilan tidak perlu menuliskannya sebagai teks keras (mockup FLARE+ sempat
+            # menandai episode video "human_verified"; itu salah -- ketelitiannya belum
+            # terkuantifikasi, hanya satu uji yang benar-benar terekam ulang).
+            "totals": _totals(g),
             "tiers": {"nasa_table": "NASA table", "nasa_calibrated": "calibrated NASA signal", "derived_auto": "derived, not yet human-checked",
                       "human_verified": "human-verified", "paper_claim": "paper claim", "model_prediction": "model prediction"},
             "method": {"score": "score = 0.40 x direct fire-safety link + 0.35 x condition proximity + 0.25 x evidence depth (weights adjustable)",

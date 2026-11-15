@@ -1,0 +1,10 @@
+{
+  "description": "Dashboard NASA menyajikan informasi dan data eksplorasi antariksa dalam tampilan yang terinspirasi gambar referensi, sehingga mudah dipantau.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

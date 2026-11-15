@@ -609,9 +609,13 @@ def clean_history(hist):
 
 APP = ROOT / "app" / "nerve"
 INSIGHT = ROOT / "app" / "insight"
+FLARE = ROOT / "app" / "flare"        # tampilan FLARE+ (hasil build app/flare-src)
 MIME = {".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8",
         ".css": "text/css; charset=utf-8", ".json": "application/json; charset=utf-8",
-        ".png": "image/png", ".svg": "image/svg+xml"}
+        ".png": "image/png", ".svg": "image/svg+xml",
+        # Tanpa baris ini WebP dan JPEG dikirim berlabel image/png (bawaan _send
+        # untuk /figures/). Terdeteksi saat menguji gambar hasil figures_optimize.py.
+        ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp"}
 
 
 class H(BaseHTTPRequestHandler):
@@ -687,9 +691,11 @@ class H(BaseHTTPRequestHandler):
             if base in f.parents and f.is_file() and f.suffix.lower() == ".png":
                 return self._send(200, f.read_bytes(), "image/png")
             return self._send(404, b"tidak ada", "text/plain")
-        if u.path.startswith("/app/") or u.path.startswith("/insight/"):   # halaman statis: /app/ = mode peneliti, /insight/ = tampilan juri
-            base = INSIGHT if u.path.startswith("/insight/") else APP
-            rel = u.path[len("/insight/") if base is INSIGHT else len("/app/"):]
+        if u.path.startswith(("/app/", "/insight/", "/flare/")):   # halaman statis: /app/ = mode peneliti, /insight/ + /flare/ = tampilan juri
+            base = (FLARE if u.path.startswith("/flare/")
+                    else INSIGHT if u.path.startswith("/insight/") else APP)
+            pfx = {FLARE: "/flare/", INSIGHT: "/insight/", APP: "/app/"}[base]
+            rel = u.path[len(pfx):]
             f = (base / (rel or "index.html")).resolve()
             if base.resolve() in f.parents and f.is_file():
                 return self._send(200, f.read_bytes(), MIME.get(f.suffix, "application/octet-stream"))
