@@ -118,7 +118,7 @@ export const insight = (signal?: AbortSignal) =>
 
 /** Status backend: apakah model bahasa hidup, penyedia apa, alat apa saja. */
 export const status = (signal?: AbortSignal) =>
-  get<{ llm: boolean; provider: string; model?: string; tools: string[] }>(
+  get<{ llm: boolean; provider: string; model?: string; tools: string[]; public?: boolean }>(
     "/assistant_status",
     signal,
   );

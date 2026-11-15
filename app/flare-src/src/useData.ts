@@ -86,7 +86,7 @@ export function useResearchMap() {
 
 /** Status backend: dipakai untuk menandai apakah asisten memakai model atau mode luring. */
 export function useStatus() {
-  const [s, setS] = useState<{ llm: boolean; provider: string; model?: string } | null>(null);
+  const [s, setS] = useState<{ llm: boolean; provider: string; model?: string; public?: boolean } | null>(null);
   useEffect(() => {
     const ac = new AbortController();
     status(ac.signal)

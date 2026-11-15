@@ -732,7 +732,8 @@ class H(BaseHTTPRequestHandler):
             elif fn == "assistant_status":
                 import assistant
                 ok, why = assistant.claude_available()
-                res = {"claude": ok, "llm": ok, "provider": assistant.provider(), "why": why,
+                # public: jalur tulis (anotasi, catatan, umpan balik) ditutup -> FLARE+ menyembunyikan tombolnya
+                res = {"claude": ok, "llm": ok, "provider": assistant.provider(), "why": why, "public": PUBLIC,
                        "model": assistant.llm_model(), "tools": [t["name"] for t in assistant.TOOLS]}
             elif fn == "insight_data":                              # lapis investigasi + skenario (satu muatan)
                 import investigations
@@ -746,6 +747,15 @@ class H(BaseHTTPRequestHandler):
             elif fn == "scenario":
                 import investigations
                 res = investigations.evidence(arg or "surface")
+            elif fn in ("gravity", "smokepoint", "plot"):             # simulasi & grafik untuk FLARE+ (baca saja)
+                import chat_tools
+                f = lambda k, d: float(q1(k, d))
+                if fn == "gravity":
+                    res = chat_tools.gravity_flammability(q1("body", "moon"), f("o2", 30), f("p_kpa", 70.3), f("u", 0))
+                elif fn == "smokepoint":
+                    res = chat_tools.predict_smoke_point(q1("fuel", "propylene"), f("d_mm", 1.6), f("u", 30))
+                else:
+                    res = chat_tools.make_plot(arg or q1("kind", "smoke_point"), q1("acc"), q1("fuel"))
             elif fn == "tests":
                 res = tests(q1("acc"), q1("q"))
             elif fn == "alerts":

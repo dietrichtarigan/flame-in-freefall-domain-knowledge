@@ -2,25 +2,9 @@ import React, { useEffect, useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
 import "./motion.css";
+import "./features.css";
 
-type View = "Overview" | "Scenario" | "Gaps" | "Compare" | "Map" | "Assistant";
-type IconName = "orbit" | "target" | "grid" | "compare" | "spark" | "arrow" | "check";
-type EvidenceTier =
-  | "nasa_table"
-  | "nasa_calibrated"
-  | "derived_auto"
-  | "human_verified"
-  | "paper_claim"
-  | "model_prediction";
-type EvidenceRecord = {
-  label: string;
-  value: string;
-  tier: EvidenceTier;
-  source: string;
-  path: string;
-  note: string;
-};
-
+type IconName = "orbit" | "target" | "grid" | "compare" | "spark" | "arrow" | "check" | "list" | "flask" | "shield";
 const iconPaths: Record<IconName, React.ReactNode> = {
   orbit: (
     <>
@@ -54,6 +38,9 @@ const iconPaths: Record<IconName, React.ReactNode> = {
   ),
   arrow: <path d="m9 5 7 7-7 7" />,
   check: <path d="m5 12 4 4L19 6" />,
+  list: <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />,
+  flask: <path d="M9 3h6M10 3v6L4.5 19a1.5 1.5 0 0 0 1.3 2h12.4a1.5 1.5 0 0 0 1.3-2L14 9V3M7 15h10" />,
+  shield: <path d="M12 3 4 6v6c0 4.4 3.4 8 8 9 4.6-1 8-4.6 8-9V6l-8-3Zm-3 9 2 2 4-4" />,
 };
 
 function Icon({ name, size = 18 }: { name: IconName; size?: number }) {
@@ -78,47 +65,12 @@ const navigation: { id: View; label: string; sub: string; icon: IconName }[] = [
   { id: "Overview", label: "Mission Overview", sub: "Research landscape", icon: "orbit" },
   { id: "Scenario", label: "Scenario Explorer", sub: "Mission discovery", icon: "target" },
   { id: "Gaps", label: "Gaps Analysis", sub: "Evidence coverage", icon: "grid" },
-  { id: "Compare", label: "Comparison", sub: "Scientific analysis", icon: "compare" },
+  { id: "Investigations", label: "Investigations", sub: "Catalog & compare", icon: "compare" },
+  { id: "Tests", label: "Test Explorer", sub: "Every test, traced", icon: "list" },
+  { id: "WhatIf", label: "What-if", sub: "Predictive models", icon: "flask" },
   { id: "Map", label: "Research Map", sub: "Citation network", icon: "orbit" },
+  { id: "Quality", label: "Quality", sub: "Alerts & verification", icon: "shield" },
   { id: "Assistant", label: "AI Assistant", sub: "Knowledge query", icon: "spark" },
-];
-
-const investigations = [
-  {
-    name: "FLEX",
-    objective: "Suppression",
-    match: 96,
-    tests: "indexed",
-    note: "Droplet flame extinguishment through atmospheric dilution",
-  },
-  {
-    name: "BASS-II",
-    objective: "Flame spread",
-    match: 94,
-    tests: 288,
-    note: "Solid fuel burning and extinction boundaries",
-  },
-  {
-    name: "ACME / CFI-G",
-    objective: "Ignition",
-    match: 87,
-    tests: 320,
-    note: "Gaseous flame response and raw telemetry",
-  },
-  {
-    name: "SPICE",
-    objective: "Detection",
-    match: 76,
-    tests: 55,
-    note: "Smoke particle generation and transport",
-  },
-  {
-    name: "SAFFIRE",
-    objective: "Suppression",
-    match: 69,
-    tests: 18,
-    note: "Large-scale spacecraft fire behavior",
-  },
 ];
 
 const heatmap = [
@@ -133,13 +85,21 @@ import { ask as askApi, feedback as sendFeedback, TIER_LABEL, type AskReply, typ
 import { useInsight, useResearchMap, useStatus, fmt } from "./useData";
 import { AnswerText, ReplyMedia } from "./chatRender";
 import { CitationGraph } from "./citationGraph";
+import { EvidenceMatrix, ResearchNetwork } from "./mapParts";
+import { EvidenceBadge, PageTitle, Panel, go, pct, useFocus, useNav, type EvidenceRecord, type EvidenceTier, type View } from "./ui";
+import { Tests } from "./viewTests";
+import { EvidenceScatter, FuelCoverage, InBandTests, rerank, stability, type Weights } from "./scenarioParts";
+import { Investigations } from "./viewInvestigations";
+import { WhatIf } from "./viewWhatIf";
+import { Quality } from "./viewQuality";
 import { STUDY_BY_ACCESSION, STUDY_HTML } from "./motion";
 
 /** Rute hash sederhana: #Scenario, #Assistant, ... supaya setiap tampilan bisa
  *  ditautkan langsung (berguna saat demo dan saat juri membuka ulang halaman). */
-const VIEWS: View[] = ["Overview", "Scenario", "Gaps", "Compare", "Map", "Assistant"];
+const VIEWS: View[] = ["Overview", "Scenario", "Gaps", "Investigations", "Tests", "WhatIf", "Map", "Quality", "Assistant"];
 const viewFromHash = (): View => {
-  const h = decodeURIComponent(location.hash.replace("#", "")) as View;
+  const raw = decodeURIComponent(location.hash.replace("#", ""));
+  const h = (raw === "Compare" ? "Investigations" : raw) as View;   // tautan lama #Compare tetap jalan
   return VIEWS.includes(h) ? h : "Overview";
 };
 
@@ -149,14 +109,37 @@ function App() {
     setViewRaw(v);
     if (location.hash !== `#${v}`) history.replaceState(null, "", `#${v}`);
   };
+  // go(view, fokus) dari view mana pun (ui.tsx) -> ganti view dan gulir ke atas
+  const navState = useNav();
+  useEffect(() => {
+    if (navState.view) {
+      setView(navState.view);
+      window.scrollTo({ top: 0 });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [navState.seq]);
   useEffect(() => {
     const onHash = () => setViewRaw(viewFromHash());
     addEventListener("hashchange", onHash);
     return () => removeEventListener("hashchange", onHash);
   }, []);
-  const [noticeOpen, setNoticeOpen] = useState(true);
+  // pemberitahuan dataset: ditutup sekali, tidak muncul lagi di setiap view
+  const [noticeOpen, setNoticeOpenRaw] = useState(() => {
+    try {
+      return localStorage.getItem("flare.notice") !== "closed";
+    } catch {
+      return true;
+    }
+  });
+  const setNoticeOpen = (v: boolean) => {
+    setNoticeOpenRaw(v);
+    try {
+      if (!v) localStorage.setItem("flare.notice", "closed");
+    } catch {
+      /* penyimpanan diblokir: cukup tutup untuk kunjungan ini */
+    }
+  };
   const [evidence, setEvidence] = useState<EvidenceRecord | null>(null);
-  const [demoOpen, setDemoOpen] = useState(false);
   const [chatOpen, setChatOpen] = useState(false);
 
   return (
@@ -166,7 +149,7 @@ function App() {
       </a>
       <CombustionBackdrop />
       <div className="grain" aria-hidden="true" />
-      <Header onDemo={() => setDemoOpen(true)} />
+      <Header />
       <Sidebar view={view} setView={setView} />
       <main className="workspace" id="main-content" tabIndex={-1}>
         {noticeOpen && (
@@ -185,7 +168,10 @@ function App() {
         {view === "Overview" && <Overview onNavigate={setView} onEvidence={setEvidence} />}
         {view === "Scenario" && <Scenario onEvidence={setEvidence} />}
         {view === "Gaps" && <Gaps />}
-        {view === "Compare" && <Comparison />}
+        {view === "Investigations" && <Investigations />}
+        {view === "Tests" && <Tests />}
+        {view === "WhatIf" && <WhatIf />}
+        {view === "Quality" && <Quality />}
         {view === "Map" && <ResearchMap onEvidence={setEvidence} />}
         {view === "Assistant" && <Assistant />}
       </main>
@@ -199,15 +185,6 @@ function App() {
         }}
       />
       {evidence && <ProvenanceDrawer record={evidence} onClose={() => setEvidence(null)} />}
-      {demoOpen && (
-        <DemoPanel
-          onClose={() => setDemoOpen(false)}
-          onNavigate={(next) => {
-            setView(next);
-            setDemoOpen(false);
-          }}
-        />
-      )}
     </div>
   );
 }
@@ -357,7 +334,7 @@ function CombustionBackdrop() {
   );
 }
 
-function Header({ onDemo }: { onDemo: () => void }) {
+function Header() {
   return (
     <header className="topbar">
       <div className="brand">
@@ -371,9 +348,6 @@ function Header({ onDemo }: { onDemo: () => void }) {
         <div className="source-state">
           AI-assisted evidence navigation for microgravity combustion research.
         </div>
-        <button className="demo-button" onClick={onDemo}>
-          PRESENTATION MODE
-        </button>
       </div>
       <HeaderMetrics />
     </header>
@@ -435,50 +409,6 @@ function Sidebar({ view, setView }: { view: View; setView: (view: View) => void 
   );
 }
 
-function PageTitle({
-  index,
-  overline,
-  title,
-  description,
-}: {
-  index: string;
-  overline: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="page-title">
-      <span>
-        {index} / {overline}
-      </span>
-      <h1>{title}</h1>
-      <p>{description}</p>
-    </div>
-  );
-}
-
-function Panel({
-  title,
-  meta,
-  className = "",
-  children,
-}: {
-  title: string;
-  meta?: string;
-  className?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section className={`panel ${className}`}>
-      <header>
-        <span>{title}</span>
-        {meta && <small>{meta}</small>}
-      </header>
-      <div className="panel-body">{children}</div>
-    </section>
-  );
-}
-
 function Overview({
   onNavigate,
   onEvidence,
@@ -504,15 +434,6 @@ function Overview({
       </div>
 
       <StatStrip onEvidence={onEvidence} />
-      <div className="trust-strip">
-        <span>AI-assisted</span>
-        <span>Tool-grounded</span>
-        <span>Source-traceable</span>
-        <p>
-          Independent project using public NASA PSI and NTRS data. Not an official NASA product.
-        </p>
-      </div>
-
       <div className="overview-grid">
         <Panel
           title="Research distribution"
@@ -534,22 +455,8 @@ function Overview({
           <TopicLedger />
         </Panel>
 
-        <Panel title="Research watchlist" meta="EVIDENCE INTERPRETATION" className="watch-panel">
-          <Watch
-            number="01"
-            title="Microgravity alters transport"
-            text="Review buoyancy, diffusion, and imposed ventilation separately."
-          />
-          <Watch
-            number="02"
-            title="Partial-gravity evidence is sparse"
-            text="Do not treat microgravity data as validated lunar or Martian predictions."
-          />
-          <Watch
-            number="03"
-            title="Coverage is not validation"
-            text="Track missing metadata and transferability apart from test counts."
-          />
+        <Panel title="Biggest open gaps" meta="CRITICAL FINDINGS · ALL HABITATS" className="watch-panel">
+          <OpenGaps />
         </Panel>
       </div>
     </div>
@@ -562,13 +469,31 @@ function Overview({
 function Scenario({ onEvidence }: { onEvidence: (record: EvidenceRecord) => void }) {
   const { data, error, retry } = useInsight();
   const [sid, setSid] = useState<string>("surface");
+  const [pillar, setPillar] = useState<string | null>(null);
+  const [w, setW] = useState<Weights | null>(null);
+  const [showAll, setShowAll] = useState(false);
+  const [openWhy, setOpenWhy] = useState<string | null>(null);
+
+  const names = useMemo(() => {
+    const m: Record<string, string> = {};
+    for (const i of data?.investigations ?? []) m[i.accession] = i.name;
+    return m;
+  }, [data]);
 
   if (error && !data) return <ViewError what="scenario ranking" detail={error} onRetry={retry} />;
   if (!data) return <ViewLoading />;
 
   const sc: any = data.scenario[sid];
-  const ranking = (sc?.ranking ?? []) as RankRow[];
+  const base = data.weights as Weights;
+  const weights = w ?? base;
+  const rows = rerank(sc?.ranking ?? [], weights, pillar);
+  const stab = stability(`${sid}|${pillar ?? ""}`, rows);
+  const ws = weights.direct + weights.conditions + weights.evidence || 1;
   const phase = (sc?.phase ?? {}) as Record<string, any>;
+  const pillars: [string | null, string][] = [
+    [null, "All pillars"],
+    ...Object.keys(data.pillars ?? {}).map((k) => [k, k[0].toUpperCase() + k.slice(1)] as [string, string]),
+  ];
 
   return (
     <div className="page">
@@ -576,154 +501,181 @@ function Scenario({ onEvidence }: { onEvidence: (record: EvidenceRecord) => void
         index="02"
         overline="MISSION DISCOVERY"
         title="Scenario Explorer"
-        description="Pick where the crew will live. Every investigation is re-ranked for that atmosphere, and each score says why."
+        description="Pick where the crew will live. Every investigation is re-ranked for that atmosphere; change the weights to see how robust the order is."
       />
       {error && <ConnectionNotice onRetry={retry} />}
 
       <div className="segmented objective-segmented">
         {data.scenarios.map((id) => (
-          <button key={id} className={id === sid ? "active" : ""} onClick={() => setSid(id)}>
+          <button key={id} className={id === sid ? "active" : ""} onClick={() => setSid(id)} aria-pressed={id === sid}>
             {data.scenario[id]?.short || data.scenario[id]?.name || id}
           </button>
         ))}
       </div>
 
       {sc?.headline && (
-        <Panel title="What the data says" meta="SCENARIO HEADLINE">
+        <Panel title="What the data says" meta={`${pct(sc.o2?.[0])}–${pct(sc.o2?.[1])} O₂ · ${sc.p_kpa?.[0]}–${sc.p_kpa?.[1]} kPa`}>
           <div className="headline-with-stage">
             <div>
               <p className="score-heading">{sc.headline}</p>
-              <p className="panel-footnote">{sc.basis}</p>
+              <p className="panel-footnote">
+                Gravity: {sc.gravity}. {sc.basis}
+              </p>
             </div>
-            {/* aset motion kit Figma untuk habitat; sebelumnya tidak dipakai sama sekali */}
             <StudyStage study={SCENARIO_STUDY[sid]} label={(sc.name || sid) + " — conceptual illustration"} />
           </div>
         </Panel>
       )}
 
-      <div className="scenario-layout">
-        <Panel
-          title="Investigations ranked for this atmosphere"
-          meta={ranking.length + " RANKED"}
-          className="result-panel"
-        >
-          <div className="results-stack">
-            {ranking.slice(0, 10).map((r, i) => (
-              <article key={r.accession} className="rank-card">
-                <header>
-                  <span className="rank-no">{String(i + 1).padStart(2, "0")}</span>
-                  <StudyMark accession={r.accession} title={r.name} />
-                  <div className="rank-id">
-                    <strong>{r.name}</strong>
-                    <small>{r.pillars.join(" / ") || "—"}</small>
-                  </div>
-                  <b className="rank-score">{r.score.toFixed(2)}</b>
-                </header>
-                <p className="rank-why">{r.why?.conditions}</p>
-                <div className="rank-bars">
-                  <Bar label="Direct link" value={r.components.direct} weight={data.weights.direct} />
-                  <Bar label="Conditions" value={r.components.conditions} weight={data.weights.conditions} />
-                  <Bar label="Evidence" value={r.components.evidence} weight={data.weights.evidence} />
-                </div>
-                {r.stability && (
-                  <p className="rank-stability">
-                    keeps rank {i + 1} in {Math.round(r.stability.keep * 100)}% of random weightings
-                    {" "}(range {r.stability.lo}-{r.stability.hi})
-                  </p>
-                )}
-                <button
-                  className="text-button"
-                  onClick={() =>
-                    onEvidence({
-                      label: r.name + " score " + r.score.toFixed(2),
-                      value: r.score.toFixed(2),
-                      tier: "derived_auto",
-                      source: "Ranking computed from NASA PSI tables",
-                      path: "insight_data -> scenario." + sid + ".ranking",
-                      note:
-                        (data.method?.score || "") +
-                        " Direct: " + (r.why?.direct || "") +
-                        " Evidence: " + (r.why?.evidence || ""),
-                    })
-                  }
-                >
-                  WHY THIS SCORE
+      <div className="scenario-layout aligned">
+        <Panel title="Investigations ranked for this atmosphere" meta={`${rows.length} RANKED`} className="result-panel">
+          <div className="rank-controls">
+            <div className="segmented small">
+              {pillars.map(([k, l]) => (
+                <button key={l} className={pillar === k ? "active" : ""} onClick={() => setPillar(k)} aria-pressed={pillar === k}>
+                  {l}
                 </button>
-              </article>
-            ))}
+              ))}
+            </div>
+            <div className="weight-sliders">
+              {(["direct", "conditions", "evidence"] as const).map((k) => (
+                <label key={k}>
+                  <span>
+                    {k === "direct" ? "Direct fire-safety link" : k === "conditions" ? "Condition match" : "Evidence depth"}{" "}
+                    <b>{(weights[k] / ws).toFixed(2)}</b>
+                  </span>
+                  <input
+                    type="range"
+                    min={0}
+                    max={100}
+                    value={Math.round(weights[k] * 100)}
+                    onChange={(e) => setW({ ...weights, [k]: +e.target.value / 100 })}
+                  />
+                </label>
+              ))}
+              <button className="text-button" onClick={() => setW(null)} disabled={!w}>
+                RESET WEIGHTS
+              </button>
+            </div>
           </div>
+          <div className="results-stack">
+            {(showAll ? rows : rows.slice(0, 8)).map((r, i) => {
+              const st = stab[r.accession];
+              return (
+                <article key={r.accession} className="rank-card">
+                  <header>
+                    <span className="rank-no">{String(i + 1).padStart(2, "0")}</span>
+                    <StudyMark accession={r.accession} title={r.name} />
+                    <div className="rank-id">
+                      <button className="link-button strong" onClick={() => go("Investigations", r.accession)}>
+                        {r.name}
+                      </button>
+                      <small>
+                        {(r.pillars || []).join(" / ") || "—"} · {r.accession}
+                      </small>
+                    </div>
+                    <b className="rank-score">{r.score.toFixed(2)}</b>
+                  </header>
+                  <p className="rank-why">{r.why?.conditions}</p>
+                  <div className="rank-bars">
+                    <Bar label="Direct link" value={r.components.direct} weight={weights.direct / ws} />
+                    <Bar label="Conditions" value={r.components.conditions} weight={weights.conditions / ws} />
+                    <Bar label="Evidence" value={r.components.evidence} weight={weights.evidence / ws} />
+                  </div>
+                  {st && (
+                    <p className="rank-stability">
+                      keeps rank {i + 1} or better in {Math.round(st.keep(i + 1) * 100)}% of 2,000 random weightings (90% range{" "}
+                      {st.lo === st.hi ? st.lo : `${st.lo}–${st.hi}`})
+                    </p>
+                  )}
+                  <button
+                    className="text-button"
+                    onClick={() => setOpenWhy(openWhy === r.accession ? null : r.accession)}
+                    aria-expanded={openWhy === r.accession}
+                  >
+                    {openWhy === r.accession ? "HIDE" : "WHY THIS SCORE"}
+                  </button>
+                  {openWhy === r.accession && (
+                    <dl className="why-box">
+                      <div>
+                        <dt>Direct link {r.components.direct.toFixed(2)}</dt>
+                        <dd>{r.why?.direct}</dd>
+                      </div>
+                      <div>
+                        <dt>Conditions {r.components.conditions.toFixed(2)}</dt>
+                        <dd>{r.why?.conditions}</dd>
+                      </div>
+                      <div>
+                        <dt>Evidence {r.components.evidence.toFixed(2)}</dt>
+                        <dd>{r.why?.evidence}</dd>
+                      </div>
+                      <div>
+                        <dt>Arithmetic</dt>
+                        <dd>
+                          {(weights.direct / ws).toFixed(2)}×{r.components.direct.toFixed(2)} + {(weights.conditions / ws).toFixed(2)}×
+                          {r.components.conditions.toFixed(2)} + {(weights.evidence / ws).toFixed(2)}×{r.components.evidence.toFixed(2)} ={" "}
+                          {r.score.toFixed(2)}. A ranking weight, not a probability or a NASA judgement.
+                        </dd>
+                      </div>
+                    </dl>
+                  )}
+                </article>
+              );
+            })}
+          </div>
+          {rows.length > 8 && (
+            <button className="text-button more" onClick={() => setShowAll((s) => !s)}>
+              {showAll ? "SHOW TOP 8" : `SHOW ALL ${rows.length}`}
+            </button>
+          )}
         </Panel>
 
-        <Panel title="Atmosphere and coverage" meta="SCENARIO BAND" className="parameter-panel">
-          <div className="preset-block">
-            <Field label="Oxygen band">
-              <b>
-                {Math.round((sc.o2?.[0] ?? 0) * 100)}-{Math.round((sc.o2?.[1] ?? 0) * 100)}%
-              </b>
-            </Field>
-            <Field label="Pressure band">
-              <b>
-                {sc.p_kpa?.[0]} - {sc.p_kpa?.[1]} kPa
-              </b>
-            </Field>
-            <Field label="Gravity">
-              <b>{sc.gravity}</b>
-            </Field>
-            <Field label="Tests inside the band">
-              <b>{sc.n_near}</b>
-            </Field>
-          </div>
-          <div className="compatibility">
-            {Object.entries(phase).map(([k, v]: [string, any]) => (
-              <Compat
-                key={k}
-                label={k}
-                value={v.n_in_band + " of " + v.n_tests + " in band"}
-                score={v.n_tests ? v.n_in_band / v.n_tests : 0}
-              />
-            ))}
-          </div>
-          <p className="panel-footnote">
-            Empty means "not reported", never zero. A phase with 0 in band is a gap, not a safe result.
-          </p>
-        </Panel>
+        <div className="side-stack">
+          <Panel title="Coverage by fuel type" meta={`${sc.n_near} TESTS IN THE BAND`}>
+            <FuelCoverage phase={phase} />
+            <p className="panel-footnote">
+              “O₂ only”: oxygen inside the band but pressure never tabulated. A fuel type with 0 in band is a gap, not a safe result.
+            </p>
+          </Panel>
+          {Array.isArray(sc.models) && sc.models.length > 0 && (
+            <Panel title="Model predictions at the band centre" meta="MODEL PREDICTION">
+              <div className="prediction-list">
+                {sc.models.map((m: any, i: number) => (
+                  <div key={i} className="prediction-card">
+                    <span>{m.what}</span>
+                    {m.valid ? (
+                      <strong className="prediction-value">
+                        {m.p_extinction != null ? `P(goes out) ${m.p_extinction}` : `P(ignites) ${m.p_ignite ?? m.p_ignition}`}
+                        {m.K_mm2_s != null && <small> · K {m.K_mm2_s} mm²/s</small>}
+                      </strong>
+                    ) : (
+                      <strong className="prediction-value extrapolation-warning">outside the tested range: no answer</strong>
+                    )}
+                    <small>
+                      {m.input} · per-day AUC {m.auc_per_day}
+                    </small>
+                  </div>
+                ))}
+              </div>
+              <button className="text-button" onClick={() => go("WhatIf")}>
+                CHANGE THE CONDITIONS IN WHAT-IF →
+              </button>
+            </Panel>
+          )}
+        </div>
       </div>
 
-      {Array.isArray(sc.models) && sc.models.length > 0 && (
-        <Panel title="Model predictions at the band centre" meta="MODEL PREDICTION">
-          <div className="preset-grid">
-            {sc.models.map((m: any, i: number) => (
-              <div key={i} className="prediction-card">
-                <span>{m.what}</span>
-                <EvidenceBadge tier="model_prediction" />
-                {m.valid ? (
-                  <>
-                    <strong className="prediction-value">
-                      {/* backend: p_extinction (FLEX) atau p_ignite (CFI-G); sebelumnya dibaca
-                          sebagai p_ignition sehingga semua kartu CFI-G tampil "—" */}
-                      {m.p_extinction != null
-                        ? "P(goes out) " + m.p_extinction
-                        : (m.p_ignite ?? m.p_ignition) != null
-                          ? "P(ignites) " + (m.p_ignite ?? m.p_ignition)
-                          : "—"}
-                    </strong>
-                    {m.K_mm2_s != null && <small>burning-rate constant K {m.K_mm2_s} mm²/s</small>}
-                  </>
-                ) : (
-                  <strong className="prediction-value extrapolation-warning">
-                    model does not answer - outside the tested range
-                  </strong>
-                )}
-                <small>{m.input}</small>
-              </div>
-            ))}
-          </div>
-          <p className="panel-footnote">
-            Model output, not a measurement. Models refuse to answer outside the conditions they were
-            fitted on, and PSI holds no partial-gravity data at all.
-          </p>
-        </Panel>
-      )}
+      <Panel title="Every tabulated test by oxygen and pressure" meta={`${data.points.length} TESTS WITH OXYGEN RECORDED`}>
+        <EvidenceScatter points={data.points} band={{ o2: sc.o2, p: sc.p_kpa }} label={sc.short || sc.name} names={names} />
+        <p className="panel-footnote">
+          Dashed box: this scenario's oxygen and pressure band. Tests with no recorded pressure sit in the lane below the axis. Click a point
+          to open the test.
+        </p>
+      </Panel>
+
+      <Panel title="Real tests inside the band" meta={`${sc.n_near} TESTS`}>
+        <InBandTests near={sc.near ?? []} total={sc.n_near} names={names} />
+      </Panel>
     </div>
   );
 }
@@ -732,6 +684,10 @@ function Scenario({ onEvidence }: { onEvidence: (record: EvidenceRecord) => void
 function Gaps() {
   const { data, error, retry } = useInsight();
   const [sid, setSid] = useState<string>("surface");
+  const focusSid = useFocus("Gaps");
+  useEffect(() => {
+    if (focusSid) setSid(focusSid);
+  }, [focusSid]);
   if (error && !data) return <ViewError what="gap analysis" detail={error} onRetry={retry} />;
   if (!data) return <ViewLoading />;
   const sc: any = data.scenario[sid];
@@ -755,7 +711,7 @@ function Gaps() {
         ))}
       </div>
 
-      <div className="gaps-grid">
+      <div className="gaps-grid aligned">
         <Panel title="What is not known here" meta={gaps.length + " FINDINGS"} className="quality-panel">
           <div className="gap-list">
             {gaps.map((g, i) => (
@@ -767,6 +723,46 @@ function Gaps() {
             ))}
           </div>
         </Panel>
+
+        <div className="side-stack">
+        <Panel title="Gravity" meta="KNOWN LIMIT" className="quality-panel">
+          <ul className="gap-list">
+            {(data.partial_gravity ?? []).map((t: string, i: number) => (
+              <li key={i}>{t}</li>
+            ))}
+          </ul>
+          <button className="text-button" onClick={() => go("WhatIf")}>
+            BOUND IT WITH THE GRAVITY BRIDGE →
+          </button>
+        </Panel>
+        <Panel title="Back on Earth" meta="SPINOFF" className="quality-panel">
+          <div className="gap-list">
+            {(data.earth ?? []).map((e: any, i: number) => {
+              const invs = (data.investigations ?? []).filter((c: any) => c.direct >= 0.8 && (c.pillars ?? []).includes(e.pillar));
+              return (
+                <article key={i} className="quality-facts">
+                  <strong>{e.title || e.name}</strong>
+                  <p>{e.text || e.detail}</p>
+                  {invs.length > 0 && (
+                    <small>
+                      Same pillar in PSI ({e.pillar}):{" "}
+                      {invs.map((c: any, j: number) => (
+                        <React.Fragment key={c.accession}>
+                          {j > 0 && ", "}
+                          <button className="link-button" onClick={() => go("Investigations", c.accession)}>
+                            {c.name}
+                          </button>
+                        </React.Fragment>
+                      ))}
+                    </small>
+                  )}
+                </article>
+              );
+            })}
+          </div>
+        </Panel>
+        </div>
+      </div>
 
         <Panel title="Most informative next tests" meta="ACTIVE LEARNING" className="heat-panel">
           <div className="table-scroll">
@@ -800,36 +796,11 @@ function Gaps() {
             is least sure whether the flame ignites there, so one test teaches the most. Candidates
             stay close to conditions that were actually flown.
           </p>
+          <button className="text-button" onClick={() => go("WhatIf")}>
+            TRY THESE CONDITIONS IN WHAT-IF →
+          </button>
         </Panel>
-      </div>
 
-      <div className="gaps-grid">
-        <Panel title="Gravity" meta="KNOWN LIMIT" className="quality-panel">
-          <ul className="gap-list">
-            {(data.partial_gravity ?? []).map((t: string, i: number) => (
-              <li key={i}>{t}</li>
-            ))}
-          </ul>
-        </Panel>
-        <Panel title="Back on Earth" meta="SPINOFF" className="quality-panel">
-          <div className="gap-list">
-            {(data.earth ?? []).map((e: any, i: number) => (
-              <article key={i} className="quality-facts">
-                <strong>{e.title || e.name}</strong>
-                <p>{e.text || e.detail}</p>
-                {/* dihitung di sini seperti /insight/: backend tidak mengirim same_pillar,
-                    jadi baris ini dulu tidak pernah tampil */}
-                {(() => {
-                  const invs = (data.investigations ?? [])
-                    .filter((c: any) => c.direct >= 0.8 && (c.pillars ?? []).includes(e.pillar))
-                    .map((c: any) => c.name);
-                  return invs.length ? <small>Same pillar in PSI ({e.pillar}): {invs.join(", ")}</small> : null;
-                })()}
-              </article>
-            ))}
-          </div>
-        </Panel>
-      </div>
     </div>
   );
 }
@@ -942,236 +913,33 @@ function ConnectionNotice({ onRetry }: { onRetry: () => void }) {
   );
 }
 
-/** Banding investigasi berdampingan, dari kartu /insight_data.
- *  Mockup membandingkan dua nama tetap; ini membiarkan pengguna memilih,
- *  dan menandai lapangan yang memang tidak ditabulasi NASA. */
-const named = (xs: any, total?: number) => {
-  if (!Array.isArray(xs) || !xs.length) return null;
-  const head = xs.slice(0, 4).map((x: any) => (x?.name ? `${x.name} (${x.n})` : String(x)));
-  const rest = (total ?? xs.length) - head.length;
-  return head.join(", ") + (rest > 0 ? ` +${rest}` : "");
-};
-
-/** Variabel yang diubah-ubah vs dijaga tetap -- pertanyaan eksplisit di brief
- *  tantangan ("how did tests from the same investigation differ?"). */
-const varied = (v: any) => {
-  if (!v || typeof v !== "object") return null;
-  const on = Object.entries(v).filter(([, k]) => k === "varied").map(([k]) => k);
-  const off = Object.entries(v).filter(([, k]) => k === "constant").map(([k]) => k);
-  const parts = [];
-  if (on.length) parts.push("varied: " + on.join(", "));
-  if (off.length) parts.push("constant: " + off.join(", "));
-  return parts.join(" · ") || null;
-};
-
-function Comparison() {
-  const { data, error, retry } = useInsight();
-  const [sel, setSel] = useState<string[]>([]);
-  if (error && !data) return <ViewError what="comparison" detail={error} onRetry={retry} />;
-  if (!data) return <ViewLoading />;
-
-  const cards: any[] = data.investigations;
-  const picked = sel.length ? sel : cards.slice(0, 3).map((c) => c.accession);
-  const chosen = picked.map((acc) => cards.find((c) => c.accession === acc)).filter(Boolean);
-
-  const toggle = (acc: string) =>
-    setSel((cur) => {
-      const base = cur.length ? cur : cards.slice(0, 3).map((c) => c.accession);
-      return base.includes(acc) ? base.filter((x) => x !== acc) : [...base, acc].slice(-4);
-    });
-
-  const rows: [string, (c: any) => any][] = [
-    ["Full title", (c) => c.title],
-    ["Pillars", (c) => (c.pillars || []).join(" / ")],
-    ["Facility", (c) => c.facility || c.hardware],
-    ["Platform", (c) => c.platform],
-    ["Years", (c) => (Array.isArray(c.years) ? c.years.join("–") : c.years)],
-    ["Fuel phases", (c) => (c.phases || []).join(", ")],
-    // fuels/samples adalah [{name, n}], bukan string: tanpa .name hasilnya "[object Object]".
-    ["Fuels", (c) => named(c.fuels, c.n_fuels)],
-    ["Samples", (c) => named(c.samples)],
-    ["Sample size", (c) => c.size_mm],
-    ["Variables", (c) => varied(c.variables)],
-    ["Oxygen range", (c) => (c.o2 ? `${(c.o2[0] * 100).toFixed(0)}–${(c.o2[1] * 100).toFixed(0)}%` : null)],
-    ["Pressure range", (c) => (c.p_kpa ? `${c.p_kpa[0]}–${c.p_kpa[1]} kPa` : null)],
-    ["Flow", (c) => (c.flow_cm_s ? `${c.flow_cm_s[0]}–${c.flow_cm_s[1]} cm/s` : null)],
-    ["Diluents", (c) => (c.diluents || []).join(", ")],
-    ["Rows in NASA table", (c) => c.n_rows],
-    ["Result values", (c) => c.n_results],
-    ["Publications", (c) => c.n_publications],
-    ["Files listed / local", (c) => `${c.files_listed} / ${c.files_local}`],
-  ];
-
+/** Research Map: graf sitasi (Crossref), jaringan investigasi-paper-topik, dan matriks bukti. */
+function ResearchMap({ onEvidence: _onEvidence }: { onEvidence: (record: EvidenceRecord) => void }) {
+  const { map, error } = useResearchMap();
+  const { data } = useInsight();
+  if (error) return <ViewError what="research map" detail={error} />;
+  if (!map || !data) return <ViewLoading />;
   return (
     <div className="page">
       <PageTitle
-        index="04"
-        overline="SCIENTIFIC ANALYSIS"
-        title="Comparison"
-        description="Put investigations side by side on the attributes the challenge asks about: fuels, conditions, variables and sensors."
-      />
-      {error && <ConnectionNotice onRetry={retry} />}
-      <Panel title="Pick investigations" meta={`${chosen.length} SELECTED`}>
-        <div className="pick-grid">
-          {cards.map((c) => (
-            <button
-              key={c.accession}
-              className={picked.includes(c.accession) ? "pick on" : "pick"}
-              onClick={() => toggle(c.accession)}
-            >
-              {c.name || c.accession}
-            </button>
-          ))}
-        </div>
-      </Panel>
-      <Panel title="Side by side" meta="NASA TABLE + DERIVED">
-        <div className="cmp-wrap">
-          <table className="cmp">
-            <thead>
-              <tr>
-                <th />
-                {chosen.map((c: any) => (
-                  <th key={c.accession}>
-                    <StudyMark accession={c.accession} title={c.name} size="large" />
-                    {c.name}
-                    <small>{c.accession}</small>
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map(([label, get]) => (
-                <tr key={label}>
-                  <th>{label}</th>
-                  {chosen.map((c: any) => {
-                    const v = get(c);
-                    const empty = v === null || v === undefined || v === "" || v === "–";
-                    return (
-                      <td key={c.accession} className={empty ? "na" : ""}>
-                        {empty ? "not tabulated" : String(v)}
-                      </td>
-                    );
-                  })}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="panel-footnote">
-          "not tabulated" means NASA did not record that field for the investigation. It is never a
-          zero and never a judgement about the experiment.
-        </p>
-      </Panel>
-    </div>
-  );
-}
-
-/** Peta riset: 465 simpul, 516 tautan. Jenis tautan ditampilkan apa adanya --
- *  termasuk bahwa kemiripan topik BUKAN sitasi. */
-function ResearchMap({ onEvidence }: { onEvidence: (record: EvidenceRecord) => void }) {
-  const [map, setMap] = useState<any>(null);
-  const [err, setErr] = useState<string | null>(null);
-  const [kind, setKind] = useState<string>("all");
-
-  useEffect(() => {
-    const ac = new AbortController();
-    fetch("research_map.json", { signal: ac.signal })
-      .then((r) => (r.ok ? r.json() : Promise.reject(new Error("HTTP " + r.status))))
-      .then(setMap)
-      .catch((e) => {
-        if (e.name !== "AbortError") setErr(String(e));
-      });
-    return () => ac.abort();
-  }, []);
-
-  if (err) return <ViewError what="research map" detail={err} />;
-  if (!map) return <ViewLoading />;
-
-  const nodes: any[] = map.nodes || [];
-  const edges: any[] = (map.edges || []).filter((e: any) => kind === "all" || e.k === kind);
-  const invs = nodes.filter((n) => n.kind === "investigation");
-  const kinds = Array.from(new Set((map.edges || []).map((e: any) => e.k))) as string[];
-
-  // Hitung tautan per investigasi untuk sorotan sederhana (tanpa grafik gaya pegas:
-  // 465 simpul akan jadi bola benang yang tidak terbaca).
-  const deg: Record<number, number> = {};
-  edges.forEach((e: any) => {
-    deg[e.s] = (deg[e.s] || 0) + 1;
-    deg[e.t] = (deg[e.t] || 0) + 1;
-  });
-
-  return (
-    <div className="page">
-      <PageTitle
-        index="05"
+        index="07"
         overline="EVIDENCE NETWORK"
         title="Research Map"
-        description="How investigations, papers and topics connect — and how that connection was established."
+        description="Who cites whom, which papers belong to which investigation, and how much evidence each investigation brings to each habitat."
       />
       <Panel title="Citation network" meta="INDEXED PAPERS → WHAT THEY CITE → COMMON ROOTS" className="cite-panel">
         <CitationGraph />
       </Panel>
-
-      <div className="segmented objective-switch">
-        <button className={kind === "all" ? "active" : ""} onClick={() => setKind("all")}>
-          all links
-        </button>
-        {kinds.map((k) => (
-          <button key={k} className={kind === k ? "active" : ""} onClick={() => setKind(k)}>
-            {k}
-          </button>
-        ))}
-      </div>
-
-      <div className="gaps-grid">
-        <Panel title="Link types" meta="HOW THE EDGE WAS MADE" className="quality-panel">
-          <div className="gap-list">
-            {Object.entries(map.method || {}).map(([k, v]) => (
-              <article key={k} className="quality-facts">
-                <strong>{k}</strong>
-                <p>{String(v)}</p>
-              </article>
-            ))}
-          </div>
-          <p className="panel-footnote">
-            Topic similarity is not a citation. Real citations are in the citation network above
-            (reference lists from OpenAlex).
-          </p>
-        </Panel>
-
-        <Panel title="Investigations by evidence attached" meta={`${edges.length} LINKS SHOWN`} className="quality-panel">
-          <div className="gap-list">
-            {invs
-              .map((n) => ({ n, d: deg[nodes.indexOf(n)] || 0 }))
-              .sort((x, y) => y.d - x.d)
-              .slice(0, 12)
-              .map(({ n, d }) => (
-                <div key={n.id} className="rank-bar">
-                  <span>{n.label}</span>
-                  <i>
-                    <b style={{ width: Math.max(2, (d / Math.max(1, Math.max(...Object.values(deg)))) * 100) + "%" }} />
-                  </i>
-                  <small>{d} links</small>
-                </div>
-              ))}
-          </div>
-          <button
-            className="text-button"
-            onClick={() =>
-              onEvidence({
-                label: "Research map",
-                value: `${nodes.length} nodes / ${map.edges.length} links`,
-                tier: "derived_auto",
-                source: "Built from PSI publication lists, NTRS tags and LSA topic similarity",
-                path: "app/insight/research_map.json",
-                note: JSON.stringify(map.stats),
-              })
-            }
-          >
-            HOW THIS MAP WAS BUILT
-          </button>
-        </Panel>
-      </div>
+      <Panel title="Investigations, papers and topics" meta={`${map.stats?.investigations ?? 0} INVESTIGATIONS · ${map.stats?.papers ?? 0} PAPERS · ${map.stats?.topics ?? 0} TOPICS`}>
+        <ResearchNetwork map={map} />
+      </Panel>
+      <Panel title="Evidence matrix" meta="TESTS INSIDE EACH HABITAT BAND">
+        <EvidenceMatrix data={data} map={map} />
+        <p className="panel-footnote">
+          Each cell counts the tests inside that habitat's oxygen and pressure band (shade = condition-match score). “O₂ only” means
+          pressure was never tabulated. Click a row to open the investigation.
+        </p>
+      </Panel>
     </div>
   );
 }
@@ -1224,6 +992,13 @@ function Assistant() {
       setBusy(false);
     }
   };
+
+  // pertanyaan yang dikirim view lain lewat go("Assistant", pertanyaan)
+  const asked = useFocus("Assistant");
+  useEffect(() => {
+    if (asked) send(asked);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [asked]);
 
   const suggested: string[] = data?.suggested?.length
     ? data.suggested
@@ -1296,13 +1071,6 @@ function Assistant() {
               <Icon name="arrow" size={12} />
             </button>
           ))}
-          <div className="assistant-note">
-            <strong>Evidence policy</strong>
-            <p>
-              Answers separate source facts, derived analysis, and interpretation. Numbers that no
-              tool produced are listed as unsupported rather than quietly shown.
-            </p>
-          </div>
         </aside>
       </div>
     </div>
@@ -1316,7 +1084,9 @@ type Msg = { role: "user" | "assistant"; text: string; pending?: boolean; failed
  *  dipakai asisten sebagai contoh pendekatan untuk pertanyaan serupa (similar_cases). */
 function FeedbackButtons({ reply, question }: { reply: AskReply; question?: string }) {
   const [sent, setSent] = useState<"up" | "down" | "error" | null>(null);
-  if (!question) return null;
+  const st = useStatus();
+  // di mode publik /feedback ditutup: jangan tampilkan tombol yang tidak bisa bekerja
+  if (!question || !st || st.public) return null;
   const rate = async (r: "up" | "down") => {
     try {
       await sendFeedback({ question, answer: reply.answer, rating: r === "up" ? "baik" : "buruk", mode: reply.mode, tool_calls: reply.tool_calls });
@@ -1479,10 +1249,6 @@ function FloatingAssistant({
       </button>
     </div>
   );
-}
-
-function EvidenceBadge({ tier }: { tier: EvidenceTier }) {
-  return <span className={`evidence-badge tier-${tier}`}>{tier.replaceAll("_", " ")}</span>;
 }
 
 /** Angka ringkas dari backend. Tidak ada nilai cadangan karangan: bila backend
@@ -1688,322 +1454,58 @@ function TopicLedger() {
   );
 }
 
+/** Temuan "critical" dari Gaps untuk semua habitat; klik -> Gaps. */
+function OpenGaps() {
+  const { data } = useInsight();
+  if (!data) return <p className="chart-note">Loading…</p>;
+  const items: { sid: string; short: string; title: string; text: string }[] = [];
+  for (const sid of data.scenarios)
+    for (const g of data.scenario[sid].gaps ?? [])
+      if (g.level === "critical") items.push({ sid, short: data.scenario[sid].short, title: g.title, text: g.text });
+  return (
+    <ul className="open-gaps">
+      {items.slice(0, 5).map((g, i) => (
+        <li key={i}>
+          <button className="open-gap" onClick={() => go("Gaps", g.sid)}>
+            <span className="gap-level critical">{g.short}</span>
+            <strong>{g.title}</strong>
+            <small>{g.text.length > 150 ? g.text.slice(0, 149) + "…" : g.text}</small>
+          </button>
+        </li>
+      ))}
+      {!items.length && <li className="muted">No critical gap in any habitat.</li>}
+    </ul>
+  );
+}
+
 function DistributionRow({ label, value, total }: { label: string; value: number; total: number }) {
   return (
-    <div className="distribution-row">
+    <button className="distribution-row" onClick={() => go("Investigations", `pillar:${label.toLowerCase()}`)}
+      title={`Show the ${label.toLowerCase()} investigations`}>
       <span>{label}</span>
       <i>
         <em style={{ width: `${(value / total) * 100}%` }} />
       </i>
       <strong>{String(value).padStart(2, "0")}</strong>
-    </div>
+    </button>
   );
 }
 
 function TopicRow({ label, count, layer }: { label: string; count: string; layer: string }) {
   return (
-    <div className="topic-row">
+    <button className="topic-row" onClick={() => go("Assistant", `What do the papers say about ${label.toLowerCase()} in microgravity?`)}
+      title={`Ask the assistant about ${label}`}>
       <strong>{label}</strong>
       <span>{count}</span>
       <small>{layer}</small>
-    </div>
-  );
-}
-function Watch({ number, title, text }: { number: string; title: string; text: string }) {
-  return (
-    <div className="watch">
-      <span>{number}</span>
-      <div>
-        <strong>{title}</strong>
-        <p>{text}</p>
-      </div>
-    </div>
-  );
-}
-function Field({ label, children }: { label: string; children: React.ReactNode }) {
-  return (
-    <label className="field">
-      <span>{label}</span>
-      {children}
-    </label>
-  );
-}
-function Range({
-  label,
-  value,
-  min,
-  max,
-  step,
-  suffix,
-  onChange,
-}: {
-  label: string;
-  value: number;
-  min: number;
-  max: number;
-  step: number;
-  suffix: string;
-  onChange: (value: number) => void;
-}) {
-  const setBoundedValue = (next: number) => {
-    if (Number.isNaN(next)) return;
-    const bounded = Math.min(max, Math.max(min, next));
-    const decimals = String(step).includes(".") ? String(step).split(".")[1].length : 0;
-    onChange(Number((Math.round(bounded / step) * step).toFixed(decimals)));
-  };
-
-  return (
-    <label className="range-field">
-      <span>{label}</span>
-      <div className="number-control">
-        <button
-          type="button"
-          onClick={() => setBoundedValue(value - step)}
-          aria-label={`Decrease ${label}`}
-        >
-          −
-        </button>
-        <div>
-          <input
-            type="number"
-            min={min}
-            max={max}
-            step={step}
-            value={value}
-            onChange={(event) => setBoundedValue(Number(event.target.value))}
-            aria-label={`${label} value`}
-          />
-          <span>{suffix.trim()}</span>
-        </div>
-        <button
-          type="button"
-          onClick={() => setBoundedValue(value + step)}
-          aria-label={`Increase ${label}`}
-        >
-          +
-        </button>
-      </div>
-      <input
-        className="parameter-slider"
-        type="range"
-        min={min}
-        max={max}
-        step={step}
-        value={value}
-        onChange={(e) => onChange(Number(e.target.value))}
-      />
-      <small className="range-limits">
-        <span>
-          {min}
-          {suffix}
-        </span>
-        <span>
-          {max}
-          {suffix}
-        </span>
-      </small>
-    </label>
+    </button>
   );
 }
 
-function HabitatAsset({ type }: { type: string }) {
-  const className = type.toLowerCase().replaceAll(" ", "-");
-  return (
-    <span className={`habitat-asset ${className}`} aria-hidden="true">
-      <i />
-      <i />
-      <i />
-    </span>
-  );
-}
 
-function MaterialSelector({
-  value,
-  onChange,
-}: {
-  value: string;
-  onChange: (value: string) => void;
-}) {
-  const materials = [
-    { name: "Any material", className: "mixed" },
-    { name: "Solid polymer", className: "polymer" },
-    { name: "Fabric / textile", className: "fabric" },
-    { name: "Liquid fuel", className: "liquid" },
-    { name: "Smoke / aerosol", className: "smoke" },
-  ];
-  return (
-    <div className="material-selector">
-      {materials.map((material) => (
-        <button
-          type="button"
-          key={material.name}
-          className={value === material.name ? "active" : ""}
-          onClick={() => onChange(material.name)}
-        >
-          <span className={`material-asset ${material.className}`} aria-hidden="true">
-            <i />
-            <i />
-            <i />
-          </span>
-          <span>{material.name}</span>
-        </button>
-      ))}
-    </div>
-  );
-}
 
-function GravitySelector({
-  gravity,
-  gravityG,
-  onChange,
-}: {
-  gravity: string;
-  gravityG: number;
-  onChange: (name: string, value: number) => void;
-}) {
-  const bodies = [
-    { name: "Microgravity", value: 0, className: "zero-g" },
-    { name: "Moon", value: 0.166, className: "moon" },
-    { name: "Mars", value: 0.378, className: "mars" },
-    { name: "Earth", value: 1, className: "earth" },
-  ];
-  return (
-    <div className="gravity-selector">
-      <div className="gravity-bodies">
-        {bodies.map((body) => (
-          <button
-            type="button"
-            key={body.name}
-            className={gravity === body.name ? "active" : ""}
-            onClick={() => onChange(body.name, body.value)}
-          >
-            <span className={`celestial-body ${body.className}`}>
-              <i />
-              <i />
-              {body.className === "zero-g" && <i />}
-            </span>
-            <strong>{body.name}</strong>
-            <small>{body.value.toFixed(body.value === 0 ? 2 : 3)} g</small>
-          </button>
-        ))}
-      </div>
-      <div className="gravity-current">
-        <span>Current field</span>
-        <strong>{gravity === "Custom" ? "Custom gravity" : gravity}</strong>
-        <b>{gravityG.toFixed(3)} g</b>
-      </div>
-    </div>
-  );
-}
 
-function AtmosphereModel({
-  oxygen,
-  pressure,
-  velocity,
-  gravity,
-  gravityG,
-}: {
-  oxygen: number;
-  pressure: number;
-  velocity: number;
-  gravity: string;
-  gravityG: number;
-}) {
-  const oxygenScale = Math.min(1, Math.max(0.2, oxygen / 40));
-  const pressureScale = Math.min(1, Math.max(0.3, pressure / 15));
-  const normalizedGravity = Math.min(1, gravityG);
-  const gravityX = 1 - normalizedGravity * 0.2;
-  const gravityY = 1 + normalizedGravity * 0.42;
-  const flameBase = 0.82 + oxygenScale * 0.22;
-  return (
-    <div
-      className="atmosphere-model"
-      style={
-        {
-          "--oxygen-scale": oxygenScale,
-          "--pressure-scale": pressureScale,
-          "--flow-angle": `${Math.min(24, velocity) * 2.4}deg`,
-          "--gravity-x": gravityX,
-          "--gravity-y": gravityY,
-          "--flame-x": flameBase * gravityX,
-          "--flame-y": flameBase * gravityY,
-        } as React.CSSProperties
-      }
-    >
-      <div className="model-heading">
-        <span>Atmosphere preview</span>
-        <small>3D PARAMETER VIEW · NOT MODEL OUTPUT</small>
-      </div>
-      <div className="model-stage">
-        <div className="model-grid" />
-        <div className="model-orbit orbit-x">
-          <i />
-        </div>
-        <div className="model-orbit orbit-y">
-          <i />
-        </div>
-        <div className="model-orbit orbit-z">
-          <i />
-        </div>
-        <div className="model-flame">
-          <span className="flame-shell" />
-          <span className="flame-core" />
-        </div>
-        <div className="flow-vector">
-          <i />
-          <span>FLOW</span>
-        </div>
-      </div>
-      <div className="model-readout">
-        <span>
-          <b>{oxygen}%</b> O₂
-        </span>
-        <span>
-          <b>{pressure}</b> psi
-        </span>
-        <span>
-          <b>{velocity}</b> cm/s
-        </span>
-        <span>
-          <b>{gravityG.toFixed(3)} g</b> {gravity}
-        </span>
-      </div>
-    </div>
-  );
-}
-function Compat({ label, value, score }: { label: string; value: string; score: number }) {
-  return (
-    <div className="compat">
-      <span>{label}</span>
-      <strong>{value}</strong>
-      <i>
-        <em style={{ width: `${score}%` }} />
-      </i>
-    </div>
-  );
-}
 
-function ScoreLine({
-  label,
-  weight,
-  score,
-  contribution,
-}: {
-  label: string;
-  weight: string;
-  score: string;
-  contribution: string;
-}) {
-  return (
-    <div className="score-line">
-      <span>{label}</span>
-      <small>
-        {weight} × {score}
-      </small>
-      <strong>{contribution}</strong>
-    </div>
-  );
-}
 
 function ProvenanceDrawer({ record, onClose }: { record: EvidenceRecord; onClose: () => void }) {
   return (
@@ -2043,90 +1545,12 @@ function ProvenanceDrawer({ record, onClose }: { record: EvidenceRecord; onClose
           <i />
           <span>03 · DISPLAY</span>
         </div>
-        <p>
-          Frontend prototype. Connect this drawer to the backend provenance record and source URL
-          during integration.
-        </p>
+        
       </aside>
     </div>
   );
 }
 
-function DemoPanel({
-  onClose,
-  onNavigate,
-}: {
-  onClose: () => void;
-  onNavigate: (view: View) => void;
-}) {
-  const steps: { id: View; number: string; title: string; copy: string }[] = [
-    {
-      id: "Scenario",
-      number: "01",
-      title: "Set Lunar Base",
-      copy: "30% O₂ · 10.2 psi · Moon gravity target",
-    },
-    {
-      id: "Scenario",
-      number: "02",
-      title: "Inspect ranking",
-      copy: "Score decomposition and rank stability",
-    },
-    {
-      id: "Assistant",
-      number: "03",
-      title: "Ask the evidence",
-      copy: "Tool trace and grounded numerical claims",
-    },
-    {
-      id: "Map",
-      number: "04",
-      title: "Trace the source",
-      copy: "Paper relations, figures, and provenance",
-    },
-  ];
-  return (
-    <div className="demo-scrim" onClick={onClose}>
-      <section className="demo-panel" onClick={(event) => event.stopPropagation()}>
-        <header>
-          <span>3-MINUTE JURY WALKTHROUGH</span>
-          <button onClick={onClose}>×</button>
-        </header>
-        <h2>
-          Show the evidence,
-          <br />
-          not just the answer.
-        </h2>
-        <p>Use this guided path to demonstrate why FLARE+ is trustworthy.</p>
-        <div className="demo-steps">
-          {steps.map((step) => (
-            <button key={`${step.number}-${step.title}`} onClick={() => onNavigate(step.id)}>
-              <span>{step.number}</span>
-              <div>
-                <strong>{step.title}</strong>
-                <small>{step.copy}</small>
-              </div>
-              <Icon name="arrow" size={14} />
-            </button>
-          ))}
-        </div>
-        <div className="demo-disclaimer">
-          Independent project · Public NASA PSI/NTRS data · Not an official NASA product
-        </div>
-      </section>
-    </div>
-  );
-}
-function Gauge({ value, label }: { value: number; label: string }) {
-  return (
-    <div className="gauge">
-      <div style={{ "--gauge": `${value * 3.6}deg` } as React.CSSProperties}>
-        <span>{value}%</span>
-      </div>
-      <p>{label}</p>
-    </div>
-  );
-}
 /** Bilah status dari backend sungguhan; sebelumnya "NOMINAL" dan "7,924 CHUNKS" ditulis keras. */
 function Footer() {
   const { data, error, retry } = useInsight();
