@@ -360,7 +360,7 @@ function Sidebar({ view, setView }: { view: View; setView: (view: View) => void 
             className={view === item.id ? "active" : ""}
             onClick={() => setView(item.id)}
           >
-            <span className="nav-number">0{index + 1}</span>
+            <span className="nav-number">{String(index + 1).padStart(2, "0")}</span>
             <span className="nav-icon">
               <Icon name={item.icon} size={17} />
             </span>
@@ -610,7 +610,7 @@ function Scenario({ onEvidence }: { onEvidence: (record: EvidenceRecord) => void
                     {m.valid ? (
                       <strong className="prediction-value">
                         {m.p_extinction != null ? `P(goes out) ${m.p_extinction}` : `P(ignites) ${m.p_ignite ?? m.p_ignition}`}
-                        {m.K_mm2_s != null && <small> · K {m.K_mm2_s} mm²/s</small>}
+                        {m.K_mm2_s != null && <small className="pred-k">burning-rate constant K = {m.K_mm2_s} mm²/s</small>}
                       </strong>
                     ) : (
                       <strong className="prediction-value extrapolation-warning">outside the tested range: no answer</strong>

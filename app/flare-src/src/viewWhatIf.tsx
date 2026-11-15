@@ -137,7 +137,7 @@ function GravitySim() {
               {(d.flags ?? []).map((f: string, i: number) => (
                 <p key={i} className="sim-flag">⚠ {en(f)}</p>
               ))}
-              <Tex src={TEX.gravity} caption="Limiting O₂ X_lim at effective flow a; buoyant flow scales with gravity and pressure. Parameters: Olson & Ferkul (2017) fit to BASS-II. Uncertainty band: U_b1 = 10–30 cm/s, n = 1/3 or 1/2." />
+              <Tex src={TEX.gravity} caption="Limiting oxygen as a function of the effective flow a past the sample; the buoyant part of that flow scales with gravity and pressure. Parameters: Olson & Ferkul (2017) fit to BASS-II. Uncertainty band: buoyant flow 10–30 cm/s at 1 g, exponent n = 1/3 or 1/2." />
             </>
           ) : (
             <p className="chart-note">{r.loading ? "Computing…" : r.error || d?.error}</p>

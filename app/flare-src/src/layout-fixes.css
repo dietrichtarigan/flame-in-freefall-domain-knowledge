@@ -482,3 +482,30 @@
   border-bottom: 1px solid var(--line-strong);
 }
 .cmp2 tr.group-row th::after { content: none; }
+
+/* ---- polesan setelah pemeriksaan visual situs live ---- */
+/* label tahun grafik publikasi: label terakhir sempat tersusun vertikal (2/0/2/6) */
+.chart-years--placed span { white-space: nowrap; }
+.chart-years--placed span:last-child { transform: translateX(-100%); }
+.chart-years--placed span:first-child { transform: none; }
+/* kalimat hasil terjemahan dimulai huruf kapital */
+.alert-list b::first-letter,
+.hypotheses b::first-letter,
+.queue-list small::first-letter { text-transform: uppercase; }
+/* Test Explorer: tabel butuh ruang lebih dari dosir */
+.tests-layout { grid-template-columns: minmax(0, 1.75fr) minmax(300px, 1fr); }
+/* kartu prediksi Scenario: tanpa bingkai ganda, K di bawah nilainya */
+.prediction-list .prediction-value.extrapolation-warning { border: 0; padding: 0; background: none; font-size: 14px; color: #e2b84a; }
+.prediction-list .prediction-value { display: block; padding: 0; }
+.prediction-list .pred-k { display: block; margin-top: 2px; color: var(--muted); font-size: 11px; }
+/* baris identitas peringkat: satu baris, tidak terpotong aneh */
+.rank-id small { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Scenario: kolom peringkat dulu 390 px tetap -> angka bobot terbelah, "Fundament/als" patah */
+.scenario-layout.aligned { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+@media (max-width: 1100px) { .scenario-layout.aligned { grid-template-columns: 1fr; } }
+.weight-sliders { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.weight-sliders label span { white-space: nowrap; }
+.weight-sliders .text-button { justify-self: start; }
+.rank-controls .segmented { flex-wrap: wrap; }
+.rank-controls .segmented button { white-space: nowrap; flex: 1 0 auto; }
