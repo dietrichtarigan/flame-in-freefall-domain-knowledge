@@ -116,7 +116,45 @@ def entity(id_):
         "SELECT h.rule_id, h.detail, r.effect, r.reason FROM rule_hit h JOIN rule r ON r.id=h.rule_id WHERE h.entity=?", (e,))]
     return {"id": e, "kind": r["kind"], "accession": r["accession"], "label": r["label"],
             "attrs": json.loads(r["attrs"]), "measurements": by_q, "links": links, "rule_hits": hits,
-            "contradictions": contradictions(by_q)}
+            "contradictions": contradictions(by_q), "openflex": openflex_links(e)}
+
+
+# ------------------------------------------------------------------ modul Open FLEX (modules/open_flex)
+OPENFLEX = ROOT / "modules" / "open_flex"
+_OPENFLEX_IX = []
+
+
+def _openflex_ix():
+    """Tabel IX NASA/TP-2015-216046 versi Open FLEX: CIR identifier -> [FLEX-xxx, ...]."""
+    if not _OPENFLEX_IX:
+        import csv
+        by_cir = defaultdict(list)
+        path = OPENFLEX / "data" / "extracted" / "table_ix.csv"
+        if path.is_file():
+            for r in csv.DictReader(open(path, encoding="utf-8")):
+                by_cir[r["cir_identifier"]].append(r["flex_test"])
+        _OPENFLEX_IX.append(dict(by_cir))
+    return _OPENFLEX_IX[0]
+
+
+def openflex_links(entity_id):
+    """Tautan ke lab Open FLEX untuk entitas PSI-69 (FLEX asli).
+
+    Kuncinya CIR identifier, BUKAN nomor uji: nomor di tabel PSI-69 bergeser dari nomor
+    Tabel IX laporan NASA mulai FLEX-156. Satu CIR (193F001) tercetak untuk dua uji
+    (FLEX-070 dan FLEX-073); keduanya dikembalikan, tidak dipilih salah satu.
+    """
+    if entity_id == "inv:PSI-69":
+        return {"url": "/openflex/", "tests": []}
+    if not entity_id.startswith("test:PSI-69:"):
+        return None
+    tests = _openflex_ix().get(entity_id.split(":", 2)[2], [])
+    if not tests:
+        return None
+    return {"url": f"/openflex/#test={tests[0]}&tab=lab",
+            "tests": [{"flex_test": t, "url": f"/openflex/#test={t}&tab=lab"} for t in tests],
+            "ambiguous": len(tests) > 1,
+            "note": "satu CIR identifier untuk beberapa uji di Tabel IX NASA" if len(tests) > 1 else None}
 
 
 def contradictions(by_q):
@@ -609,11 +647,17 @@ class H(BaseHTTPRequestHandler):
             self.send_header("Location", "/app/" + (("?" + u.query) if u.query else ""))
             self.end_headers()
             return
-        if u.path == "/insight":
+        if u.path in ("/insight", "/openflex"):
             self.send_response(302)
-            self.send_header("Location", "/insight/")
+            self.send_header("Location", u.path + "/")
             self.end_headers()
             return
+        if u.path == "/openflex/":                             # lab Open FLEX: satu berkas mandiri hasil build modulnya
+            f = OPENFLEX / "dist" / "open_flex_lab.html"
+            if f.is_file():
+                return self._send(200, f.read_bytes(), MIME[".html"])
+            return self._send(404, b"modules/open_flex/dist/open_flex_lab.html belum dibangun "
+                                   b"(python3 -I modules/open_flex/tools/build_app.py)", "text/plain")
         if u.path.startswith("/app/") or u.path.startswith("/insight/"):   # halaman statis: /app/ = mode peneliti, /insight/ = tampilan juri
             base = INSIGHT if u.path.startswith("/insight/") else APP
             rel = u.path[len("/insight/") if base is INSIGHT else len("/app/"):]
@@ -675,13 +719,15 @@ class H(BaseHTTPRequestHandler):
                 res = provenance(arg)
             elif fn == "coverage":
                 res = coverage()
+            elif fn == "openflex_links":
+                res = openflex_links(arg) or {"error": f"tidak ada uji Open FLEX untuk {arg}"}
             elif fn == "search":
                 res = search(qs.get("q", [""])[0])
             else:
                 res = {"endpoints": ["/tests?acc=&q=", "/entity/<PSI-159:21106G8>", "/explain/<id>",
                                      "/relevance/<id>?k=15", "/provenance/<measurement id>", "/alerts?entity=&min=",
                                      "/whatif/cfig?config=&fuel=&o2=&x_fuel=", "/whatif/flex?fuel=&o2=&pressure_kpa=&he=",
-                                     "/notes?entity=", "POST /note", "/coverage", "/search?q=", "/events?since=", "/queue?k=", "/history", "/pipeline", "/model_cards", "/assistant_status", "/insight_data", "/investigations/<PSI-69>", "/rank/<cabin|surface|suit|earth>?pillar=", "/scenario/<id>", "/insight/ (tampilan juri)", "POST /annotate", "POST /rebuild", "POST /ask", "POST /feedback", "/app/ (kerangka)"]}
+                                     "/notes?entity=", "POST /note", "/coverage", "/search?q=", "/events?since=", "/queue?k=", "/history", "/pipeline", "/model_cards", "/assistant_status", "/insight_data", "/investigations/<PSI-69>", "/rank/<cabin|surface|suit|earth>?pillar=", "/scenario/<id>", "/insight/ (tampilan juri)", "/openflex/ (lab Open FLEX)", "/openflex_links/<test:PSI-69:20CAL08>", "POST /annotate", "POST /rebuild", "POST /ask", "POST /feedback", "/app/ (kerangka)"]}
             body, code = json.dumps(res, ensure_ascii=False, default=str).encode("utf-8"), 200
         except Exception as e:  # noqa: BLE001
             body, code = json.dumps({"error": repr(e)}).encode(), 500

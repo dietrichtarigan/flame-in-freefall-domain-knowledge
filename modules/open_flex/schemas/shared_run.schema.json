@@ -1,0 +1,59 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://open-flex.local/schemas/shared_run.schema.json",
+ "title": "OpenFLEXSharedRun",
+ "description": "A D²-law baseline simulation run packaged for posting and reproduction by others. Contains no personal data and no timestamps. A reproduction check (openflex.share.verify_run, or the app's Import) re-runs it; REPRODUCED does not mean validated.",
+ "type": "object",
+ "additionalProperties": false,
+ "required": ["record_type", "format_version", "labels", "run_id", "model", "seeded_from_physical_test", "modified_inputs", "inputs", "outputs", "comparison", "exported_by", "content_sha256"],
+ "properties": {
+  "record_type": {"const": "OpenFLEXSharedRun"},
+  "format_version": {"const": "1.0"},
+  "labels": {
+   "type": "object", "additionalProperties": false,
+   "required": ["evidence_class", "status", "scope"],
+   "properties": {"evidence_class": {"const": "NUMERICAL_SIMULATION"}, "status": {"const": "EDUCATIONAL_BASELINE"}, "scope": {"type": "string", "maxLength": 600}}
+  },
+  "run_id": {"$ref": "common.schema.json#/$defs/simulation_run_id"},
+  "model": {
+   "type": "object", "additionalProperties": false,
+   "required": ["name", "version", "property_table_sha256", "implementation_sha256"],
+   "properties": {"name": {"type": "string"}, "version": {"type": "string"}, "property_table_sha256": {"$ref": "common.schema.json#/$defs/sha256"}, "implementation_sha256": {"$ref": "common.schema.json#/$defs/sha256"}}
+  },
+  "seeded_from_physical_test": {"$ref": "common.schema.json#/$defs/physical_test_id"},
+  "modified_inputs": {"type": "array", "items": {"enum": ["fuel", "X.O2", "X.N2", "X.CO2", "X.He", "D0_mm", "T_inf_K", "T_prop_K", "Q_variant", "rho_l_at"]}, "uniqueItems": true},
+  "inputs": {
+   "type": "object", "additionalProperties": false,
+   "required": ["fuel", "X", "D0_mm", "T_inf_K", "rho_l_at", "Q_variant"],
+   "properties": {
+    "fuel": {"enum": ["methanol", "heptane"]},
+    "X": {"type": "object", "additionalProperties": false, "properties": {
+      "O2": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "N2": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+      "CO2": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "He": {"type": ["number", "null"], "minimum": 0, "maximum": 1}}},
+    "D0_mm": {"type": ["number", "null"], "exclusiveMinimum": 0},
+    "T_inf_K": {"type": "number", "minimum": 200, "maximum": 600},
+    "T_prop_K": {"type": "number", "minimum": 300, "maximum": 2000},
+    "rho_l_at": {"enum": ["boil", "298"]},
+    "Q_variant": {"enum": ["nominal", "low", "high"]},
+    "P_atm": {"type": ["number", "null"], "minimum": 0},
+    "T_prop_rule": {"type": "string", "maxLength": 40}
+   }
+  },
+  "outputs": {
+   "type": "object", "additionalProperties": false,
+   "required": ["B", "K_mm2_s", "t_burn_s", "flame_standoff_ratio", "T_flame_K", "T_prop_K", "flags"],
+   "properties": {
+    "B": {"type": "number"}, "K_mm2_s": {"type": "number"}, "t_burn_s": {"type": ["number", "null"]},
+    "flame_standoff_ratio": {"type": ["number", "null"]}, "T_flame_K": {"type": "number"}, "T_prop_K": {"type": "number"},
+    "flags": {"type": "array", "items": {"type": "string", "maxLength": 200}, "maxItems": 10}
+   }
+  },
+  "comparison": {
+   "type": "object", "additionalProperties": false,
+   "required": ["printed_K_as_printed", "printed_basis", "applies", "model_over_printed"],
+   "properties": {"printed_K_as_printed": {"type": ["string", "null"], "maxLength": 20}, "printed_basis": {"type": "string", "maxLength": 200}, "applies": {"type": "boolean"}, "model_over_printed": {"type": ["number", "null"]}}
+  },
+  "exported_by": {"type": "string", "maxLength": 80, "description": "Software and version only (app build id or openflex CLI version); never a person."},
+  "content_sha256": {"$ref": "common.schema.json#/$defs/sha256"}
+ }
+}

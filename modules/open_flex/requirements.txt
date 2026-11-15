@@ -1,0 +1,13 @@
+# Python packages used by the tools and tests (versions tested in Phase B M2).
+# System tools also needed: poppler (pdftotext, pdftoppm), Chrome/Chromium; tesseract only for --verify.
+jsonschema==4.26.0
+pdfplumber==0.11.10
+pillow==12.3.0
+playwright==1.63.0
+pytest==9.1.1
+# only for tools/verify_table_ix.py (page-image verification):
+numpy==2.5.3
+opencv-python-headless==5.0.0.93
+# M6: RO-Crate validation (tools/validate_rocrate.py) and, only for regenerating the property table, CoolProp
+roc-validator==0.13.1
+CoolProp==8.0.0

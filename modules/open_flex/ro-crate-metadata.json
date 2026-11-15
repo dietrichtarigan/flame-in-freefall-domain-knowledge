@@ -1,0 +1,4631 @@
+{
+ "@context": "https://w3id.org/ro/crate/1.2/context",
+ "@graph": [
+  {
+   "@id": "ro-crate-metadata.json",
+   "@type": "CreativeWork",
+   "conformsTo": {
+    "@id": "https://w3id.org/ro/crate/1.2"
+   },
+   "about": {
+    "@id": "./"
+   }
+  },
+  {
+   "@id": "./",
+   "@type": "Dataset",
+   "name": "Open FLEX virtual laboratory — evidence-traceable data package (Phase B M6)",
+   "description": "Independent, evidence-traceable reconstruction of the original NASA Flame Extinguishment Experiment (FLEX, ISS 2009–2011) from NASA/TP-2015-216046: Table IX and test-matrix extractions with cell-level checks, digitized Appendix B plots, registries of claims, sources and discrepancies, a single-file offline lab application, and a code-verified D²-law educational baseline (not validated against FLEX). Not a NASA product; citing NASA does not imply endorsement.",
+   "datePublished": "2026-11-15",
+   "version": "0.6.1",
+   "license": {
+    "@id": "#licence-not-chosen"
+   },
+   "creditText": "Open FLEX virtual laboratory, Phase B (2026), data from NASA/TP-2015-216046.",
+   "isBasedOn": {
+    "@id": "https://ntrs.nasa.gov/citations/20150023456"
+   },
+   "keywords": [
+    "FLEX",
+    "droplet combustion",
+    "microgravity",
+    "International Space Station",
+    "provenance"
+   ],
+   "contributor": {
+    "@id": "#claude"
+   },
+   "hasPart": [
+    {
+     "@id": "data/analysis/d2law_vs_table_ix.csv"
+    },
+    {
+     "@id": "data/analysis/FLEX-010_d2_fit.json"
+    },
+    {
+     "@id": "data/analysis/FLEX-023_d2_fit.json"
+    },
+    {
+     "@id": "data/analysis/FLEX-033_d2_fit.json"
+    },
+    {
+     "@id": "data/analysis/FLEX-035_d2_fit.json"
+    },
+    {
+     "@id": "data/analysis/FLEX-049_d2_fit.json"
+    },
+    {
+     "@id": "data/analysis/FLEX-051_d2_fit.json"
+    },
+    {
+     "@id": "data/analysis/FLEX-062_d2_fit.json"
+    },
+    {
+     "@id": "data/analysis/FLEX-082_d2_fit.json"
+    },
+    {
+     "@id": "data/analysis/FLEX-110_d2_fit.json"
+    },
+    {
+     "@id": "data/analysis/FLEX-198_d2_fit.json"
+    },
+    {
+     "@id": "data/analysis/FLEX-204_d2_fit.json"
+    },
+    {
+     "@id": "data/analysis/FLEX-263_d2_fit.json"
+    },
+    {
+     "@id": "data/analysis/FLEX-264_d2_fit.json"
+    },
+    {
+     "@id": "data/derived/crosscheck_matrix_vs_ix.csv"
+    },
+    {
+     "@id": "data/derived/fiber_from_captions.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-010_fig014_color_camera_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-010_fig014_droplet_d2.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-010_fig014_lluv_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitization/FIG014_FLEX-010_record.json"
+    },
+    {
+     "@id": "data/digitized/FLEX-023_fig027_droplet_d2.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-023_fig027_lluv_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitization/FIG027_FLEX-023_record.json"
+    },
+    {
+     "@id": "data/digitized/FLEX-033_fig037_droplet_d2.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-033_fig037_lluv_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitization/FIG037_FLEX-033_record.json"
+    },
+    {
+     "@id": "data/digitized/FLEX-035_fig039_color_camera_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-035_fig039_droplet_d2.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-035_fig039_lluv_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitization/FIG039_FLEX-035_record.json"
+    },
+    {
+     "@id": "data/digitized/FLEX-049_fig053_color_camera_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-049_fig053_droplet_d2.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-049_fig053_lluv_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitization/FIG053_FLEX-049_record.json"
+    },
+    {
+     "@id": "data/digitized/FLEX-051_fig055_color_camera_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-051_fig055_droplet_d2.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-051_fig055_lluv_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitization/FIG055_FLEX-051_record.json"
+    },
+    {
+     "@id": "data/digitized/FLEX-062_fig066_color_camera_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-062_fig066_droplet_d2.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-062_fig066_lluv_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitization/FIG066_FLEX-062_record.json"
+    },
+    {
+     "@id": "data/digitized/FLEX-082_fig086_color_camera_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-082_fig086_droplet_d2.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-082_fig086_lluv_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitization/FIG086_FLEX-082_record.json"
+    },
+    {
+     "@id": "data/digitized/FLEX-110_fig114_color_camera_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-110_fig114_droplet_d2.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-110_fig114_lluv_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitization/FIG114_FLEX-110_record.json"
+    },
+    {
+     "@id": "data/digitized/FLEX-198_fig201_droplet_d2.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-198_fig201_lluv_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitization/FIG201_FLEX-198_record.json"
+    },
+    {
+     "@id": "data/digitized/FLEX-204_fig207_color_camera_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-204_fig207_droplet_d2.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-204_fig207_lluv_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitization/FIG207_FLEX-204_record.json"
+    },
+    {
+     "@id": "data/digitized/FLEX-263_fig263_color_camera_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-263_fig263_droplet_d2.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-263_fig263_lluv_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitization/FIG263_FLEX-263_record.json"
+    },
+    {
+     "@id": "data/digitized/FLEX-264_fig264_color_camera_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-264_fig264_droplet_d2.csv"
+    },
+    {
+     "@id": "data/digitized/FLEX-264_fig264_lluv_flame_diameter.csv"
+    },
+    {
+     "@id": "data/digitization/FIG264_FLEX-264_record.json"
+    },
+    {
+     "@id": "data/model/d2law_properties.json"
+    },
+    {
+     "@id": "data/records/literature_cases.json"
+    },
+    {
+     "@id": "data/records/physical_tests.json"
+    },
+    {
+     "@id": "data/registry/test_annotations.json"
+    },
+    {
+     "@id": "data/registry/claims.json"
+    },
+    {
+     "@id": "data/registry/discrepancies.json"
+    },
+    {
+     "@id": "data/registry/share_config.json"
+    },
+    {
+     "@id": "data/registry/sources.json"
+    },
+    {
+     "@id": "data/registry/uncertainty_components.json"
+    },
+    {
+     "@id": "data/simulations/d2law_baseline_runs.json"
+    },
+    {
+     "@id": "data/digitization/source_images/FIG014_FLEX-010.jpg"
+    },
+    {
+     "@id": "data/digitization/source_images/FIG027_FLEX-023.jpg"
+    },
+    {
+     "@id": "data/digitization/source_images/FIG037_FLEX-033.jpg"
+    },
+    {
+     "@id": "data/digitization/source_images/FIG039_FLEX-035.jpg"
+    },
+    {
+     "@id": "data/digitization/source_images/FIG053_FLEX-049.jpg"
+    },
+    {
+     "@id": "data/digitization/source_images/FIG055_FLEX-051.jpg"
+    },
+    {
+     "@id": "data/digitization/source_images/FIG066_FLEX-062.jpg"
+    },
+    {
+     "@id": "data/digitization/source_images/FIG086_FLEX-082.jpg"
+    },
+    {
+     "@id": "data/digitization/source_images/FIG114_FLEX-110.jpg"
+    },
+    {
+     "@id": "data/digitization/source_images/FIG201_FLEX-198.jpg"
+    },
+    {
+     "@id": "data/digitization/source_images/FIG207_FLEX-204.jpg"
+    },
+    {
+     "@id": "data/digitization/source_images/FIG263_FLEX-263.jpg"
+    },
+    {
+     "@id": "data/digitization/source_images/FIG264_FLEX-264.jpg"
+    },
+    {
+     "@id": "data/extracted/appendix_b_figures.csv"
+    },
+    {
+     "@id": "data/extracted/table_ix.csv"
+    },
+    {
+     "@id": "data/extracted/test_matrix.csv"
+    },
+    {
+     "@id": "data/verification/d2law_code_verification.json"
+    },
+    {
+     "@id": "data/verification/table_ix_cell_checks.csv"
+    },
+    {
+     "@id": "data/verification/table_ix_manual_review.json"
+    },
+    {
+     "@id": "data/verification/test_matrix_verification.json"
+    },
+    {
+     "@id": "data/verification/test_matrix_cell_checks.csv"
+    },
+    {
+     "@id": "data/verification/test_matrix_manual_review.json"
+    },
+    {
+     "@id": "data/MANIFEST.json"
+    },
+    {
+     "@id": "data/datasets.spec.json"
+    },
+    {
+     "@id": "README.md"
+    },
+    {
+     "@id": "requirements.txt"
+    },
+    {
+     "@id": "pyproject.toml"
+    },
+    {
+     "@id": "setup_and_test.sh"
+    },
+    {
+     "@id": "SOURCE_CHECKSUMS.sha256"
+    },
+    {
+     "@id": "dist/open_flex_lab.html"
+    },
+    {
+     "@id": "vendor/VENDOR.json"
+    },
+    {
+     "@id": "schemas/analysis_run.schema.json"
+    },
+    {
+     "@id": "schemas/claim.schema.json"
+    },
+    {
+     "@id": "schemas/common.schema.json"
+    },
+    {
+     "@id": "schemas/dataset.schema.json"
+    },
+    {
+     "@id": "schemas/digitization_record.schema.json"
+    },
+    {
+     "@id": "schemas/discrepancy.schema.json"
+    },
+    {
+     "@id": "schemas/literature_figure_case.schema.json"
+    },
+    {
+     "@id": "schemas/physical_test.schema.json"
+    },
+    {
+     "@id": "schemas/shared_run.schema.json"
+    },
+    {
+     "@id": "schemas/simulation_run.schema.json"
+    },
+    {
+     "@id": "schemas/source.schema.json"
+    },
+    {
+     "@id": "schemas/uncertainty_component.schema.json"
+    },
+    {
+     "@id": "docs/PHASE_B_01_Independent_Assessment_and_Revision_Plan.md"
+    },
+    {
+     "@id": "docs/PHASE_B_M1_Report.md"
+    },
+    {
+     "@id": "docs/PHASE_B_M2_Report.md"
+    },
+    {
+     "@id": "docs/PHASE_B_M3_Report.md"
+    },
+    {
+     "@id": "docs/PHASE_B_M4_Report.md"
+    },
+    {
+     "@id": "docs/PHASE_B_M5_1_Rendering_Addendum.md"
+    },
+    {
+     "@id": "docs/PHASE_B_M5_Report.md"
+    },
+    {
+     "@id": "docs/PHASE_B_M6_1_Sharing.md"
+    },
+    {
+     "@id": "docs/PHASE_B_M6_D2law_Model.md"
+    },
+    {
+     "@id": "docs/PHASE_B_M6_Report.md"
+    },
+    {
+     "@id": "docs/PHASE_B_M6_VV_Plan.md"
+    },
+    {
+     "@id": "app/src/body.html"
+    },
+    {
+     "@id": "app/src/js/10_util.js"
+    },
+    {
+     "@id": "app/src/js/20_data.js"
+    },
+    {
+     "@id": "app/src/js/30_scene_build.js"
+    },
+    {
+     "@id": "app/src/js/31_scene_update.js"
+    },
+    {
+     "@id": "app/src/js/35_timeline.js"
+    },
+    {
+     "@id": "app/src/js/40_views.js"
+    },
+    {
+     "@id": "app/src/js/41_hotspots.js"
+    },
+    {
+     "@id": "app/src/js/45_transparency.js"
+    },
+    {
+     "@id": "app/src/js/50_panels.js"
+    },
+    {
+     "@id": "app/src/js/60_model.js"
+    },
+    {
+     "@id": "app/src/js/61_explore.js"
+    },
+    {
+     "@id": "app/src/js/62_share.js"
+    },
+    {
+     "@id": "app/src/js/90_main.js"
+    },
+    {
+     "@id": "app/src/styles.css"
+    },
+    {
+     "@id": "openflex/__init__.py"
+    },
+    {
+     "@id": "openflex/__main__.py"
+    },
+    {
+     "@id": "openflex/d2law.py"
+    },
+    {
+     "@id": "openflex/data.py"
+    },
+    {
+     "@id": "openflex/share.py"
+    },
+    {
+     "@id": "tools/analyze_d2_fit.py"
+    },
+    {
+     "@id": "tools/build_app.py"
+    },
+    {
+     "@id": "tools/build_model_properties.py"
+    },
+    {
+     "@id": "tools/build_records.py"
+    },
+    {
+     "@id": "tools/build_rocrate.py"
+    },
+    {
+     "@id": "tools/canonical_json.py"
+    },
+    {
+     "@id": "tools/coverage.py"
+    },
+    {
+     "@id": "tools/crosscheck_tables.py"
+    },
+    {
+     "@id": "tools/digitize_figure.py"
+    },
+    {
+     "@id": "tools/extract_appendix_b_index.py"
+    },
+    {
+     "@id": "tools/extract_table_ix.py"
+    },
+    {
+     "@id": "tools/extract_test_matrix.py"
+    },
+    {
+     "@id": "tools/row_crops.py"
+    },
+    {
+     "@id": "tools/run_d2law_baseline.py"
+    },
+    {
+     "@id": "tools/run_pipeline.sh"
+    },
+    {
+     "@id": "tools/validate_data.py"
+    },
+    {
+     "@id": "tools/validate_rocrate.py"
+    },
+    {
+     "@id": "tools/verify_d2law.py"
+    },
+    {
+     "@id": "tools/verify_table_ix.py"
+    },
+    {
+     "@id": "tools/verify_test_matrix.py"
+    },
+    {
+     "@id": "tools/verify_test_matrix_images.py"
+    },
+    {
+     "@id": "tests/browser/conftest.py"
+    },
+    {
+     "@id": "tests/browser/test_deeplink_browser.py"
+    },
+    {
+     "@id": "tests/browser/test_m1_browser.py"
+    },
+    {
+     "@id": "tests/browser/test_m2_browser.py"
+    },
+    {
+     "@id": "tests/browser/test_m3_browser.py"
+    },
+    {
+     "@id": "tests/browser/test_m4_browser.py"
+    },
+    {
+     "@id": "tests/browser/test_m5_browser.py"
+    },
+    {
+     "@id": "tests/browser/test_m5_render.py"
+    },
+    {
+     "@id": "tests/browser/test_m6_1_share_browser.py"
+    },
+    {
+     "@id": "tests/browser/test_m6_explore.py"
+    },
+    {
+     "@id": "tests/unit/test_extractors.py"
+    },
+    {
+     "@id": "tests/unit/test_m2_data.py"
+    },
+    {
+     "@id": "tests/unit/test_m3_digitization.py"
+    },
+    {
+     "@id": "tests/unit/test_m4_data.py"
+    },
+    {
+     "@id": "tests/unit/test_m5_data.py"
+    },
+    {
+     "@id": "tests/unit/test_m6_1_share.py"
+    },
+    {
+     "@id": "tests/unit/test_m6_model.py"
+    }
+   ],
+   "mentions": [
+    {
+     "@id": "#create-DS-ANA-D2LAW-VS-IX"
+    },
+    {
+     "@id": "#create-DS-ANA-FLEX-010-D2FIT"
+    },
+    {
+     "@id": "#create-DS-ANA-FLEX-023-D2FIT"
+    },
+    {
+     "@id": "#create-DS-ANA-FLEX-033-D2FIT"
+    },
+    {
+     "@id": "#create-DS-ANA-FLEX-035-D2FIT"
+    },
+    {
+     "@id": "#create-DS-ANA-FLEX-049-D2FIT"
+    },
+    {
+     "@id": "#create-DS-ANA-FLEX-051-D2FIT"
+    },
+    {
+     "@id": "#create-DS-ANA-FLEX-062-D2FIT"
+    },
+    {
+     "@id": "#create-DS-ANA-FLEX-082-D2FIT"
+    },
+    {
+     "@id": "#create-DS-ANA-FLEX-110-D2FIT"
+    },
+    {
+     "@id": "#create-DS-ANA-FLEX-198-D2FIT"
+    },
+    {
+     "@id": "#create-DS-ANA-FLEX-204-D2FIT"
+    },
+    {
+     "@id": "#create-DS-ANA-FLEX-263-D2FIT"
+    },
+    {
+     "@id": "#create-DS-ANA-FLEX-264-D2FIT"
+    },
+    {
+     "@id": "#create-DS-DERIVED-CROSSCHECK"
+    },
+    {
+     "@id": "#create-DS-DERIVED-FIBER-CAPTIONS"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-010-FIG014-COLOR"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-010-FIG014-D2"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-010-FIG014-LLUV"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-010-FIG014-RECORD"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-023-FIG027-D2"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-023-FIG027-LLUV"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-023-FIG027-RECORD"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-033-FIG037-D2"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-033-FIG037-LLUV"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-033-FIG037-RECORD"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-035-FIG039-COLOR"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-035-FIG039-D2"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-035-FIG039-LLUV"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-035-FIG039-RECORD"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-049-FIG053-COLOR"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-049-FIG053-D2"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-049-FIG053-LLUV"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-049-FIG053-RECORD"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-051-FIG055-COLOR"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-051-FIG055-D2"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-051-FIG055-LLUV"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-051-FIG055-RECORD"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-062-FIG066-COLOR"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-062-FIG066-D2"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-062-FIG066-LLUV"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-062-FIG066-RECORD"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-082-FIG086-COLOR"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-082-FIG086-D2"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-082-FIG086-LLUV"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-082-FIG086-RECORD"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-110-FIG114-COLOR"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-110-FIG114-D2"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-110-FIG114-LLUV"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-110-FIG114-RECORD"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-198-FIG201-D2"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-198-FIG201-LLUV"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-198-FIG201-RECORD"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-204-FIG207-COLOR"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-204-FIG207-D2"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-204-FIG207-LLUV"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-204-FIG207-RECORD"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-263-FIG263-COLOR"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-263-FIG263-D2"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-263-FIG263-LLUV"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-263-FIG263-RECORD"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-264-FIG264-COLOR"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-264-FIG264-D2"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-264-FIG264-LLUV"
+    },
+    {
+     "@id": "#create-DS-DIG-FLEX-264-FIG264-RECORD"
+    },
+    {
+     "@id": "#create-DS-MODEL-D2LAW-PROPS"
+    },
+    {
+     "@id": "#create-DS-RECORDS-PHYSICAL-TESTS"
+    },
+    {
+     "@id": "#create-DS-SIM-D2LAW-BASELINE"
+    },
+    {
+     "@id": "#create-DS-TP-APPB-INDEX"
+    },
+    {
+     "@id": "#create-DS-TP-TABLE-IX"
+    },
+    {
+     "@id": "#create-DS-TP-TEST-MATRIX"
+    },
+    {
+     "@id": "#create-DS-VER-D2LAW-CODE"
+    },
+    {
+     "@id": "#create-DS-VERIFY-TABLE-IX"
+    },
+    {
+     "@id": "#create-DS-VERIFY-TEST-MATRIX"
+    },
+    {
+     "@id": "#create-DS-VERIFY-TEST-MATRIX-IMAGES"
+    }
+   ],
+   "citation": [
+    {
+     "@id": "https://ntrs.nasa.gov/citations/20150023456"
+    },
+    {
+     "@id": "https://ntrs.nasa.gov/citations/20090014812"
+    },
+    {
+     "@id": "https://doi.org/10.1007/s12217-014-9372-2"
+    },
+    {
+     "@id": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69"
+    },
+    {
+     "@id": "https://ntrs.nasa.gov/citations/20130014061"
+    },
+    {
+     "@id": "https://www.princeton.edu/~yju/1st-near-limit-flames-workshop/presentations/FA%20Williams-Microgravity.pdf"
+    },
+    {
+     "@id": "https://commons.wikimedia.org/wiki/File:FLEX_Test023.webm"
+    },
+    {
+     "@id": "https://www1.grc.nasa.gov/wp-content/uploads/FLEX_Quad.pdf"
+    },
+    {
+     "@id": "https://www.cantera.org/3.2/reference/transport/index.html"
+    },
+    {
+     "@id": "https://chemistry.cerfacs.fr/en/chemical-database/mechanisms-list/gri-mech-3-0/"
+    },
+    {
+     "@id": "https://doi.org/10.1016/j.jocs.2024.102453"
+    },
+    {
+     "@id": "https://salib.readthedocs.io/en/stable/"
+    },
+    {
+     "@id": "https://mapie.readthedocs.io/en/stable/content/conformal-prediction/"
+    },
+    {
+     "@id": "https://w3id.org/ro/crate/1.2"
+    },
+    {
+     "@id": "https://docs.python.org/3/library/hashlib.html"
+    },
+    {
+     "@id": "https://ntrs.nasa.gov/citations/20140006750"
+    },
+    {
+     "@id": "https://www.youtube.com/watch?v=qQQ1OHW1_F4"
+    },
+    {
+     "@id": "https://doi.org/10.1021/ie4033999"
+    },
+    {
+     "@id": "https://en.wikipedia.org/wiki/Heptane"
+    },
+    {
+     "@id": "https://www.engineeringtoolbox.com/methanol-methyl-alcohol-properties-CH3OH-d_2031.html"
+    },
+    {
+     "@id": "https://en.wikipedia.org/wiki/Methanol_(data_page)"
+    },
+    {
+     "@id": "https://doi.org/10.1063/1.1747673"
+    },
+    {
+     "@id": "https://doi.org/10.1063/1.1724352"
+    }
+   ]
+  },
+  {
+   "@id": "data/analysis/d2law_vs_table_ix.csv",
+   "@type": "File",
+   "name": "DS-ANA-D2LAW-VS-IX v1.0.0",
+   "contentSize": "13703",
+   "encodingFormat": "text/csv",
+   "sha256": "b44700da38e2c74155bc2db892ecde4db04b64ca9ce5329d96a9e29516e5a757",
+   "description": "ANALYSIS dataset. Origin: DS-SIM-D2LAW-BASELINE + Table IX. Method: tools/run_d2law_baseline.py. Limitations: Comparison, not validation; no uncertainty on either value is applied.",
+   "keywords": "ANALYSIS",
+   "version": "1.0.0",
+   "identifier": "DS-ANA-D2LAW-VS-IX"
+  },
+  {
+   "@id": "data/analysis/FLEX-010_d2_fit.json",
+   "@type": "File",
+   "name": "DS-ANA-FLEX-010-D2FIT v1.1.0",
+   "contentSize": "3177",
+   "encodingFormat": "application/json",
+   "sha256": "2f271bcb6010949b21a55aab5831e9be0536b1c9fa4b0a384f57085ccd232268",
+   "description": "ANALYSIS dataset. Origin: DS-DIG-FLEX-010-FIG014-D2 + Table IX. Method: tools/analyze_d2_fit.py 1.1.0. Limitations: Digitization check against printed K; not validation; no intervals.",
+   "keywords": "ANALYSIS, FLEX-010",
+   "version": "1.1.0",
+   "identifier": "DS-ANA-FLEX-010-D2FIT"
+  },
+  {
+   "@id": "data/analysis/FLEX-023_d2_fit.json",
+   "@type": "File",
+   "name": "DS-ANA-FLEX-023-D2FIT v1.1.0",
+   "contentSize": "3262",
+   "encodingFormat": "application/json",
+   "sha256": "fc2fc8c2690ff2820b59156274885864cbbd92b76a1b4d0b3b5ac4e7eae62588",
+   "description": "ANALYSIS dataset. Origin: DS-DIG-FLEX-023-FIG027-D2 + Table IX. Method: tools/analyze_d2_fit.py 1.1.0. Limitations: Digitization check against printed K; not validation; no intervals.",
+   "keywords": "ANALYSIS, FLEX-023",
+   "version": "1.1.0",
+   "identifier": "DS-ANA-FLEX-023-D2FIT"
+  },
+  {
+   "@id": "data/analysis/FLEX-033_d2_fit.json",
+   "@type": "File",
+   "name": "DS-ANA-FLEX-033-D2FIT v1.1.0",
+   "contentSize": "3400",
+   "encodingFormat": "application/json",
+   "sha256": "bc90ae32c263f389f917a90fc7b62459fae1678c3a7e8767c9cf8888ec201e8e",
+   "description": "ANALYSIS dataset. Origin: DS-DIG-FLEX-033-FIG037-D2 + Table IX. Method: tools/analyze_d2_fit.py 1.1.0. Limitations: Digitization check against printed K; not validation; no intervals.",
+   "keywords": "ANALYSIS, FLEX-033",
+   "version": "1.1.0",
+   "identifier": "DS-ANA-FLEX-033-D2FIT"
+  },
+  {
+   "@id": "data/analysis/FLEX-035_d2_fit.json",
+   "@type": "File",
+   "name": "DS-ANA-FLEX-035-D2FIT v1.1.0",
+   "contentSize": "3407",
+   "encodingFormat": "application/json",
+   "sha256": "6a4126643c870d87be0ab6110fc38f9b9e3803dec75306f1939c935902db3181",
+   "description": "ANALYSIS dataset. Origin: DS-DIG-FLEX-035-FIG039-D2 + Table IX. Method: tools/analyze_d2_fit.py 1.1.0. Limitations: Digitization check against printed K; not validation; no intervals.",
+   "keywords": "ANALYSIS, FLEX-035",
+   "version": "1.1.0",
+   "identifier": "DS-ANA-FLEX-035-D2FIT"
+  },
+  {
+   "@id": "data/analysis/FLEX-049_d2_fit.json",
+   "@type": "File",
+   "name": "DS-ANA-FLEX-049-D2FIT v1.1.0",
+   "contentSize": "3398",
+   "encodingFormat": "application/json",
+   "sha256": "2635f94e0543afdaae5718e26837f16b2af7a598bc7daafa6c2e9ae63d611bfa",
+   "description": "ANALYSIS dataset. Origin: DS-DIG-FLEX-049-FIG053-D2 + Table IX. Method: tools/analyze_d2_fit.py 1.1.0. Limitations: Digitization check against printed K; not validation; no intervals.",
+   "keywords": "ANALYSIS, FLEX-049",
+   "version": "1.1.0",
+   "identifier": "DS-ANA-FLEX-049-D2FIT"
+  },
+  {
+   "@id": "data/analysis/FLEX-051_d2_fit.json",
+   "@type": "File",
+   "name": "DS-ANA-FLEX-051-D2FIT v1.1.0",
+   "contentSize": "3167",
+   "encodingFormat": "application/json",
+   "sha256": "8fe34794c06fba78a38d2e53365eea1fbd90a6ca04fa0a80d2f7f190afb19be6",
+   "description": "ANALYSIS dataset. Origin: DS-DIG-FLEX-051-FIG055-D2 + Table IX. Method: tools/analyze_d2_fit.py 1.1.0. Limitations: Digitization check against printed K; not validation; no intervals.",
+   "keywords": "ANALYSIS, FLEX-051",
+   "version": "1.1.0",
+   "identifier": "DS-ANA-FLEX-051-D2FIT"
+  },
+  {
+   "@id": "data/analysis/FLEX-062_d2_fit.json",
+   "@type": "File",
+   "name": "DS-ANA-FLEX-062-D2FIT v1.1.0",
+   "contentSize": "3405",
+   "encodingFormat": "application/json",
+   "sha256": "e239bd613028ef333a7711dd8f58b63cb96f9e96ee94a87d9673ac67ebeddf1c",
+   "description": "ANALYSIS dataset. Origin: DS-DIG-FLEX-062-FIG066-D2 + Table IX. Method: tools/analyze_d2_fit.py 1.1.0. Limitations: Digitization check against printed K; not validation; no intervals.",
+   "keywords": "ANALYSIS, FLEX-062",
+   "version": "1.1.0",
+   "identifier": "DS-ANA-FLEX-062-D2FIT"
+  },
+  {
+   "@id": "data/analysis/FLEX-082_d2_fit.json",
+   "@type": "File",
+   "name": "DS-ANA-FLEX-082-D2FIT v1.1.0",
+   "contentSize": "3388",
+   "encodingFormat": "application/json",
+   "sha256": "422607275b8196bac2656671efb098d56176998438ba6702be2a6442e0ea9917",
+   "description": "ANALYSIS dataset. Origin: DS-DIG-FLEX-082-FIG086-D2 + Table IX. Method: tools/analyze_d2_fit.py 1.1.0. Limitations: Digitization check against printed K; not validation; no intervals.",
+   "keywords": "ANALYSIS, FLEX-082",
+   "version": "1.1.0",
+   "identifier": "DS-ANA-FLEX-082-D2FIT"
+  },
+  {
+   "@id": "data/analysis/FLEX-110_d2_fit.json",
+   "@type": "File",
+   "name": "DS-ANA-FLEX-110-D2FIT v1.1.0",
+   "contentSize": "3388",
+   "encodingFormat": "application/json",
+   "sha256": "ec166a798084add9a59a00c4311933d923b2f68940582748f47c9c95b82dfa1a",
+   "description": "ANALYSIS dataset. Origin: DS-DIG-FLEX-110-FIG114-D2 + Table IX. Method: tools/analyze_d2_fit.py 1.1.0. Limitations: Digitization check against printed K; not validation; no intervals.",
+   "keywords": "ANALYSIS, FLEX-110",
+   "version": "1.1.0",
+   "identifier": "DS-ANA-FLEX-110-D2FIT"
+  },
+  {
+   "@id": "data/analysis/FLEX-198_d2_fit.json",
+   "@type": "File",
+   "name": "DS-ANA-FLEX-198-D2FIT v1.1.0",
+   "contentSize": "3394",
+   "encodingFormat": "application/json",
+   "sha256": "a97309de4679396ec223309f659416064f701f04f17202a0b4946c84625fac3b",
+   "description": "ANALYSIS dataset. Origin: DS-DIG-FLEX-198-FIG201-D2 + Table IX. Method: tools/analyze_d2_fit.py 1.1.0. Limitations: Digitization check against printed K; not validation; no intervals.",
+   "keywords": "ANALYSIS, FLEX-198",
+   "version": "1.1.0",
+   "identifier": "DS-ANA-FLEX-198-D2FIT"
+  },
+  {
+   "@id": "data/analysis/FLEX-204_d2_fit.json",
+   "@type": "File",
+   "name": "DS-ANA-FLEX-204-D2FIT v1.1.0",
+   "contentSize": "3400",
+   "encodingFormat": "application/json",
+   "sha256": "2bbaeafdecf4020c2f48fd4832b16b09a70066921ec62676637e65ac9c2e33dd",
+   "description": "ANALYSIS dataset. Origin: DS-DIG-FLEX-204-FIG207-D2 + Table IX. Method: tools/analyze_d2_fit.py 1.1.0. Limitations: Digitization check against printed K; not validation; no intervals.",
+   "keywords": "ANALYSIS, FLEX-204",
+   "version": "1.1.0",
+   "identifier": "DS-ANA-FLEX-204-D2FIT"
+  },
+  {
+   "@id": "data/analysis/FLEX-263_d2_fit.json",
+   "@type": "File",
+   "name": "DS-ANA-FLEX-263-D2FIT v1.1.0",
+   "contentSize": "3392",
+   "encodingFormat": "application/json",
+   "sha256": "5658e27a6c023ece7670f7b5bafa055b62340eaeeb9b1b0bc7729fa36d112713",
+   "description": "ANALYSIS dataset. Origin: DS-DIG-FLEX-263-FIG263-D2 + Table IX. Method: tools/analyze_d2_fit.py 1.1.0. Limitations: Digitization check against printed K; not validation; no intervals.",
+   "keywords": "ANALYSIS, FLEX-263",
+   "version": "1.1.0",
+   "identifier": "DS-ANA-FLEX-263-D2FIT"
+  },
+  {
+   "@id": "data/analysis/FLEX-264_d2_fit.json",
+   "@type": "File",
+   "name": "DS-ANA-FLEX-264-D2FIT v1.1.0",
+   "contentSize": "3397",
+   "encodingFormat": "application/json",
+   "sha256": "8a05ae5a09135cea6499350f6b01b3f039f9709c77ef7ad8954caa95e638ed9f",
+   "description": "ANALYSIS dataset. Origin: DS-DIG-FLEX-264-FIG264-D2 + Table IX. Method: tools/analyze_d2_fit.py 1.1.0. Limitations: Digitization check against printed K; not validation; no intervals.",
+   "keywords": "ANALYSIS, FLEX-264",
+   "version": "1.1.0",
+   "identifier": "DS-ANA-FLEX-264-D2FIT"
+  },
+  {
+   "@id": "data/derived/crosscheck_matrix_vs_ix.csv",
+   "@type": "File",
+   "name": "DS-DERIVED-CROSSCHECK v1.0.0",
+   "contentSize": "124287",
+   "encodingFormat": "text/csv",
+   "sha256": "c64ed59764fecaed9f8052d1c56b7c1f575780c43d7cadadfa306d505edee60f",
+   "description": "DERIVED dataset. Origin: DS-TP-TABLE-IX, DS-TP-TEST-MATRIX, DS-DERIVED-FIBER-CAPTIONS. Method: tools/crosscheck_tables.py — agreement within printed rounding. Limitations: 'DIFFERS' states a fact about printed values; it does not say which value is right.",
+   "keywords": "DERIVED",
+   "version": "1.0.0",
+   "identifier": "DS-DERIVED-CROSSCHECK"
+  },
+  {
+   "@id": "data/derived/fiber_from_captions.csv",
+   "@type": "File",
+   "name": "DS-DERIVED-FIBER-CAPTIONS v1.0.0",
+   "contentSize": "33571",
+   "encodingFormat": "text/csv",
+   "sha256": "fdcffaeb3407257cb2cc83f4c0a3948800f79b934920389c18d61eb990b6d35c",
+   "description": "DERIVED dataset. Origin: DS-TP-APPB-INDEX. Method: tools/crosscheck_tables.py — regex 'fiber[- ]supported' / 'free[- ]floating' on verbatim captions. Limitations: Keyword classification of NASA text, not a measurement.",
+   "keywords": "DERIVED",
+   "version": "1.0.0",
+   "identifier": "DS-DERIVED-FIBER-CAPTIONS"
+  },
+  {
+   "@id": "data/digitized/FLEX-010_fig014_color_camera_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-010-FIG014-COLOR v1.1.0",
+   "contentSize": "4613",
+   "encodingFormat": "text/csv",
+   "sha256": "920f64472a898a08f0381ecd7131ce073dd60dcf4e63584b112fc0efec234351",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 14 (green open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-010",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-010-FIG014-COLOR"
+  },
+  {
+   "@id": "data/digitized/FLEX-010_fig014_droplet_d2.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-010-FIG014-D2 v1.1.0",
+   "contentSize": "3743",
+   "encodingFormat": "text/csv",
+   "sha256": "273d79ba39cf75903bb8dac3af2622c4d5c870e666300a7d2fa7f619140870bc",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 14 (red open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-010",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-010-FIG014-D2"
+  },
+  {
+   "@id": "data/digitized/FLEX-010_fig014_lluv_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-010-FIG014-LLUV v1.1.0",
+   "contentSize": "9720",
+   "encodingFormat": "text/csv",
+   "sha256": "1514eb80bc4f34f1e039950bd73c2d53d566a249d4280a1c437c83cf5f1ddbd6",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 14 (blue open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-010",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-010-FIG014-LLUV"
+  },
+  {
+   "@id": "data/digitization/FIG014_FLEX-010_record.json",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-010-FIG014-RECORD v1.1.0",
+   "contentSize": "6603",
+   "encodingFormat": "application/json",
+   "sha256": "03ec4da74e62d54bd91df162996a7d43016656dcbde8210b7b90273a4f1b8570",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 14 (PDF p. 44). Method: tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay. Limitations: Describes how the series were digitized; read its limitations list.",
+   "keywords": "DIGITIZED, FLEX-010",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-010-FIG014-RECORD"
+  },
+  {
+   "@id": "data/digitized/FLEX-023_fig027_droplet_d2.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-023-FIG027-D2 v1.1.0",
+   "contentSize": "5340",
+   "encodingFormat": "text/csv",
+   "sha256": "b914965d940df8b549a1be57bc4587865f36c74f079ddc146d664601d9b64f75",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 27 (red open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-023",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-023-FIG027-D2"
+  },
+  {
+   "@id": "data/digitized/FLEX-023_fig027_lluv_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-023-FIG027-LLUV v1.1.0",
+   "contentSize": "12192",
+   "encodingFormat": "text/csv",
+   "sha256": "b38bea8a6c60533ff9d6142e4c7ce32cb0b93edb0fd72f39f6dd8ac7e573c7b5",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 27 (blue open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-023",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-023-FIG027-LLUV"
+  },
+  {
+   "@id": "data/digitization/FIG027_FLEX-023_record.json",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-023-FIG027-RECORD v1.1.0",
+   "contentSize": "5878",
+   "encodingFormat": "application/json",
+   "sha256": "d6a68713f1f9b4b42996ef490b47b7f24744ee5ab1ae7bc855e964c3cfe7e3ff",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 27 (PDF p. 57). Method: tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay. Limitations: Describes how the series were digitized; read its limitations list.",
+   "keywords": "DIGITIZED, FLEX-023",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-023-FIG027-RECORD"
+  },
+  {
+   "@id": "data/digitized/FLEX-033_fig037_droplet_d2.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-033-FIG037-D2 v1.1.0",
+   "contentSize": "6125",
+   "encodingFormat": "text/csv",
+   "sha256": "0571a89e7857b0694257277f634ec3d02460fdbc30fb8b17295f67e54553a828",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 37 (red open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-033",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-033-FIG037-D2"
+  },
+  {
+   "@id": "data/digitized/FLEX-033_fig037_lluv_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-033-FIG037-LLUV v1.1.0",
+   "contentSize": "11055",
+   "encodingFormat": "text/csv",
+   "sha256": "1cc9d1f6eca507ed4419da532732c8dd8927e86313b46f3c5471f0c4929c9df4",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 37 (blue open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-033",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-033-FIG037-LLUV"
+  },
+  {
+   "@id": "data/digitization/FIG037_FLEX-033_record.json",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-033-FIG037-RECORD v1.1.0",
+   "contentSize": "5859",
+   "encodingFormat": "application/json",
+   "sha256": "641799f8880d1f255c248fdbad7338af91a645df71863ea8aeec73c7cba4e888",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 37 (PDF p. 67). Method: tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay. Limitations: Describes how the series were digitized; read its limitations list.",
+   "keywords": "DIGITIZED, FLEX-033",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-033-FIG037-RECORD"
+  },
+  {
+   "@id": "data/digitized/FLEX-035_fig039_color_camera_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-035-FIG039-COLOR v1.1.0",
+   "contentSize": "3891",
+   "encodingFormat": "text/csv",
+   "sha256": "6d3b5cde24178a2d19a021750077f1f817bab1d535acee6c34ee2b85f49056b2",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 39 (green open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-035",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-035-FIG039-COLOR"
+  },
+  {
+   "@id": "data/digitized/FLEX-035_fig039_droplet_d2.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-035-FIG039-D2 v1.1.0",
+   "contentSize": "6794",
+   "encodingFormat": "text/csv",
+   "sha256": "3a121e6746f4407d39fb9be6421c620ea4e177830eb7741f723fa0878fdbc843",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 39 (red open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-035",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-035-FIG039-D2"
+  },
+  {
+   "@id": "data/digitized/FLEX-035_fig039_lluv_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-035-FIG039-LLUV v1.1.0",
+   "contentSize": "3990",
+   "encodingFormat": "text/csv",
+   "sha256": "05d6c40eee2c9533d91302fd43a0087e73fbd4512f26309eddeabcb172917ca7",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 39 (blue open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-035",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-035-FIG039-LLUV"
+  },
+  {
+   "@id": "data/digitization/FIG039_FLEX-035_record.json",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-035-FIG039-RECORD v1.1.0",
+   "contentSize": "6304",
+   "encodingFormat": "application/json",
+   "sha256": "8147f8762770816b270eefb373a33ca81b89ef088949abd1e4342a00148a1a40",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 39 (PDF p. 69). Method: tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay. Limitations: Describes how the series were digitized; read its limitations list.",
+   "keywords": "DIGITIZED, FLEX-035",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-035-FIG039-RECORD"
+  },
+  {
+   "@id": "data/digitized/FLEX-049_fig053_color_camera_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-049-FIG053-COLOR v1.1.0",
+   "contentSize": "3111",
+   "encodingFormat": "text/csv",
+   "sha256": "1961230088afb0def2a08d80904bbc50a44ae9e6cc286d500ade5893aeb4089b",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 53 (green open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-049",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-049-FIG053-COLOR"
+  },
+  {
+   "@id": "data/digitized/FLEX-049_fig053_droplet_d2.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-049-FIG053-D2 v1.1.0",
+   "contentSize": "5726",
+   "encodingFormat": "text/csv",
+   "sha256": "30a1fc23c59c2e99b1fc7b309dc6a10633b5cb9bc73caf8b8056cab187f1cb59",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 53 (red open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-049",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-049-FIG053-D2"
+  },
+  {
+   "@id": "data/digitized/FLEX-049_fig053_lluv_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-049-FIG053-LLUV v1.1.0",
+   "contentSize": "3889",
+   "encodingFormat": "text/csv",
+   "sha256": "cdacb4c7450b122d07143d28d089f3730cc7b241b20048824bf5800c4c484030",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 53 (blue open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-049",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-049-FIG053-LLUV"
+  },
+  {
+   "@id": "data/digitization/FIG053_FLEX-049_record.json",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-049-FIG053-RECORD v1.1.0",
+   "contentSize": "6563",
+   "encodingFormat": "application/json",
+   "sha256": "c61d2e02e4f835bb2fe4bed69c55fa5babad148f75a54596f1215df125bdb6f3",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 53 (PDF p. 83). Method: tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay. Limitations: Describes how the series were digitized; read its limitations list.",
+   "keywords": "DIGITIZED, FLEX-049",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-049-FIG053-RECORD"
+  },
+  {
+   "@id": "data/digitized/FLEX-051_fig055_color_camera_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-051-FIG055-COLOR v1.1.0",
+   "contentSize": "4600",
+   "encodingFormat": "text/csv",
+   "sha256": "75f6027e115df136f5a9a881e4d484225ec289cd4c7cf8caf7fadb18784866e8",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 55 (green open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-051",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-051-FIG055-COLOR"
+  },
+  {
+   "@id": "data/digitized/FLEX-051_fig055_droplet_d2.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-051-FIG055-D2 v1.1.0",
+   "contentSize": "5399",
+   "encodingFormat": "text/csv",
+   "sha256": "a5a10912150c5f0586f5cf4170e1c191aaf45b64e99021a6bc88d12367fbdd0e",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 55 (red open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-051",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-051-FIG055-D2"
+  },
+  {
+   "@id": "data/digitized/FLEX-051_fig055_lluv_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-051-FIG055-LLUV v1.1.0",
+   "contentSize": "6348",
+   "encodingFormat": "text/csv",
+   "sha256": "0b49523b13f0c751c96e3fb0a70df46d5ba58e8b06ea5c88212def515b1e559b",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 55 (blue open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-051",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-051-FIG055-LLUV"
+  },
+  {
+   "@id": "data/digitization/FIG055_FLEX-051_record.json",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-051-FIG055-RECORD v1.1.0",
+   "contentSize": "6443",
+   "encodingFormat": "application/json",
+   "sha256": "11895ceea7897af3290356071151e0064b5404cac65d59cee687a43c0498130a",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 55 (PDF p. 85). Method: tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay. Limitations: Describes how the series were digitized; read its limitations list.",
+   "keywords": "DIGITIZED, FLEX-051",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-051-FIG055-RECORD"
+  },
+  {
+   "@id": "data/digitized/FLEX-062_fig066_color_camera_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-062-FIG066-COLOR v1.1.0",
+   "contentSize": "1912",
+   "encodingFormat": "text/csv",
+   "sha256": "727b33e9078fda527bfc6cffea8dbaefe2b3a3f2caefdf7f31443ee0e40649bf",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 66 (green open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-062",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-062-FIG066-COLOR"
+  },
+  {
+   "@id": "data/digitized/FLEX-062_fig066_droplet_d2.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-062-FIG066-D2 v1.1.0",
+   "contentSize": "5537",
+   "encodingFormat": "text/csv",
+   "sha256": "5c749246e363fa0db55c30a558974da20b87360d6a9350b21eb4832a4ebfa73d",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 66 (red open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-062",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-062-FIG066-D2"
+  },
+  {
+   "@id": "data/digitized/FLEX-062_fig066_lluv_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-062-FIG066-LLUV v1.1.0",
+   "contentSize": "2863",
+   "encodingFormat": "text/csv",
+   "sha256": "0a60e03aac58ef24b41afa490acc763ab5547a6ffa1ed3e1b934889bee259a84",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 66 (blue open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-062",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-062-FIG066-LLUV"
+  },
+  {
+   "@id": "data/digitization/FIG066_FLEX-062_record.json",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-062-FIG066-RECORD v1.1.0",
+   "contentSize": "6512",
+   "encodingFormat": "application/json",
+   "sha256": "12ec3e400d5ed365d0c980ad6ae91922a6250b11e808ae226346707a66c6f520",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 66 (PDF p. 96). Method: tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay. Limitations: Describes how the series were digitized; read its limitations list.",
+   "keywords": "DIGITIZED, FLEX-062",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-062-FIG066-RECORD"
+  },
+  {
+   "@id": "data/digitized/FLEX-082_fig086_color_camera_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-082-FIG086-COLOR v1.1.0",
+   "contentSize": "4098",
+   "encodingFormat": "text/csv",
+   "sha256": "92a51baa0cc600897add8dc78de49620e9d8801db154150a065acf4db87641f8",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 86 (green open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-082",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-082-FIG086-COLOR"
+  },
+  {
+   "@id": "data/digitized/FLEX-082_fig086_droplet_d2.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-082-FIG086-D2 v1.1.0",
+   "contentSize": "5408",
+   "encodingFormat": "text/csv",
+   "sha256": "2b8f2b8340bd8e99115b89101d8403c38ead0fea9fec9868e579bae1d32226b4",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 86 (red open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-082",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-082-FIG086-D2"
+  },
+  {
+   "@id": "data/digitized/FLEX-082_fig086_lluv_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-082-FIG086-LLUV v1.1.0",
+   "contentSize": "7089",
+   "encodingFormat": "text/csv",
+   "sha256": "cc59f68d981ea6581922f3fd6aeb0cd003c7a93b5d8ebe9e62e2d30354d31feb",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 86 (blue open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-082",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-082-FIG086-LLUV"
+  },
+  {
+   "@id": "data/digitization/FIG086_FLEX-082_record.json",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-082-FIG086-RECORD v1.1.0",
+   "contentSize": "6310",
+   "encodingFormat": "application/json",
+   "sha256": "b72b4a7b0785cf1931ce80ff1a73b5f77433e0f5e5e0f5b6353d4a86d553abc5",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 86 (PDF p. 116). Method: tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay. Limitations: Describes how the series were digitized; read its limitations list.",
+   "keywords": "DIGITIZED, FLEX-082",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-082-FIG086-RECORD"
+  },
+  {
+   "@id": "data/digitized/FLEX-110_fig114_color_camera_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-110-FIG114-COLOR v1.1.0",
+   "contentSize": "4476",
+   "encodingFormat": "text/csv",
+   "sha256": "c3a152444b5fe6655b7efc80e496dad816b265517c9aed44cf4067f496b9513d",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 114 (green open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-110",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-110-FIG114-COLOR"
+  },
+  {
+   "@id": "data/digitized/FLEX-110_fig114_droplet_d2.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-110-FIG114-D2 v1.1.0",
+   "contentSize": "5896",
+   "encodingFormat": "text/csv",
+   "sha256": "5eacd956e01b52e651373366bc23941f9c66ffc3725ba8a1d0309019e86f85f7",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 114 (red open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-110",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-110-FIG114-D2"
+  },
+  {
+   "@id": "data/digitized/FLEX-110_fig114_lluv_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-110-FIG114-LLUV v1.1.0",
+   "contentSize": "11101",
+   "encodingFormat": "text/csv",
+   "sha256": "dc27747772298d4e37e690f3c6806f33d03727410fde3c167f2d75a8d39d0de7",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 114 (blue open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-110",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-110-FIG114-LLUV"
+  },
+  {
+   "@id": "data/digitization/FIG114_FLEX-110_record.json",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-110-FIG114-RECORD v1.1.0",
+   "contentSize": "6371",
+   "encodingFormat": "application/json",
+   "sha256": "c558f206951104069cc70b6dab890b8bd1045e24eacc591f3e711920b6e395a4",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 114 (PDF p. 144). Method: tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay. Limitations: Describes how the series were digitized; read its limitations list.",
+   "keywords": "DIGITIZED, FLEX-110",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-110-FIG114-RECORD"
+  },
+  {
+   "@id": "data/digitized/FLEX-198_fig201_droplet_d2.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-198-FIG201-D2 v1.1.0",
+   "contentSize": "6226",
+   "encodingFormat": "text/csv",
+   "sha256": "efdf08f79b5b28c1599fb82ad54d896a9eceaab7576479c9de403139f003eacd",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 201 (red open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-198",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-198-FIG201-D2"
+  },
+  {
+   "@id": "data/digitized/FLEX-198_fig201_lluv_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-198-FIG201-LLUV v1.1.0",
+   "contentSize": "3506",
+   "encodingFormat": "text/csv",
+   "sha256": "c444f70ed5f6f486af43e360f5c31bb34c137b390d1f63368bff792e75509fa8",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 201 (blue open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-198",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-198-FIG201-LLUV"
+  },
+  {
+   "@id": "data/digitization/FIG201_FLEX-198_record.json",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-198-FIG201-RECORD v1.1.0",
+   "contentSize": "5773",
+   "encodingFormat": "application/json",
+   "sha256": "359f8884bc2dc060dc4b1c876d9a82c2c59147fe8fdb3b09baddb9d15bd99542",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 201 (PDF p. 231). Method: tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay. Limitations: Describes how the series were digitized; read its limitations list.",
+   "keywords": "DIGITIZED, FLEX-198",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-198-FIG201-RECORD"
+  },
+  {
+   "@id": "data/digitized/FLEX-204_fig207_color_camera_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-204-FIG207-COLOR v1.1.0",
+   "contentSize": "4278",
+   "encodingFormat": "text/csv",
+   "sha256": "e31155cf6b467f3717f79de585a35f87cf3d155c8722ee4439691b00123e8e9d",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 207 (green open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-204",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-204-FIG207-COLOR"
+  },
+  {
+   "@id": "data/digitized/FLEX-204_fig207_droplet_d2.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-204-FIG207-D2 v1.1.0",
+   "contentSize": "3889",
+   "encodingFormat": "text/csv",
+   "sha256": "b5ad41d4aff5c7afd0abde3200ebba0dc25597c17c0e1a09d9c47f2a18f28fc1",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 207 (red open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-204",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-204-FIG207-D2"
+  },
+  {
+   "@id": "data/digitized/FLEX-204_fig207_lluv_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-204-FIG207-LLUV v1.1.0",
+   "contentSize": "7492",
+   "encodingFormat": "text/csv",
+   "sha256": "61194a71191619e14d5c5a7c87c4f9ee0ae675060fcc301fe73ba5060ed1cea1",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 207 (blue open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-204",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-204-FIG207-LLUV"
+  },
+  {
+   "@id": "data/digitization/FIG207_FLEX-204_record.json",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-204-FIG207-RECORD v1.1.0",
+   "contentSize": "6329",
+   "encodingFormat": "application/json",
+   "sha256": "228aacc86208c66ec147cbd6dba1bb24e7ff948d07fbbf0e5f3387e6d4f9bb7b",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 207 (PDF p. 237). Method: tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay. Limitations: Describes how the series were digitized; read its limitations list.",
+   "keywords": "DIGITIZED, FLEX-204",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-204-FIG207-RECORD"
+  },
+  {
+   "@id": "data/digitized/FLEX-263_fig263_color_camera_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-263-FIG263-COLOR v1.1.0",
+   "contentSize": "3677",
+   "encodingFormat": "text/csv",
+   "sha256": "f2380ac3d099d299abaf12a7d5ac8028b4c0c9aeadd29652a6edbf20f5d12746",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 263 (green open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-263",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-263-FIG263-COLOR"
+  },
+  {
+   "@id": "data/digitized/FLEX-263_fig263_droplet_d2.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-263-FIG263-D2 v1.1.0",
+   "contentSize": "6136",
+   "encodingFormat": "text/csv",
+   "sha256": "95249af88f1185d732ee5838c7909a64a1bc107c3e710820f0c42b414f806d2b",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 263 (red open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-263",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-263-FIG263-D2"
+  },
+  {
+   "@id": "data/digitized/FLEX-263_fig263_lluv_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-263-FIG263-LLUV v1.1.0",
+   "contentSize": "3902",
+   "encodingFormat": "text/csv",
+   "sha256": "d9e34365724bc8a24c69cf57de92ec9a1554c3388dc45d418b116dc38941afae",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 263 (blue open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-263",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-263-FIG263-LLUV"
+  },
+  {
+   "@id": "data/digitization/FIG263_FLEX-263_record.json",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-263-FIG263-RECORD v1.1.0",
+   "contentSize": "6715",
+   "encodingFormat": "application/json",
+   "sha256": "ce41b921f2086517953f7c7735b6bf62a6fef0fd8ece755f99855885d2507696",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 263 (PDF p. 293). Method: tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay. Limitations: Describes how the series were digitized; read its limitations list.",
+   "keywords": "DIGITIZED, FLEX-263",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-263-FIG263-RECORD"
+  },
+  {
+   "@id": "data/digitized/FLEX-264_fig264_color_camera_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-264-FIG264-COLOR v1.1.0",
+   "contentSize": "2717",
+   "encodingFormat": "text/csv",
+   "sha256": "f4c27a93b54d2daccce023e022a36c0f33bef9b6b197da6463f2bb2281f4b818",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 264 (green open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-264",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-264-FIG264-COLOR"
+  },
+  {
+   "@id": "data/digitized/FLEX-264_fig264_droplet_d2.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-264-FIG264-D2 v1.1.0",
+   "contentSize": "5769",
+   "encodingFormat": "text/csv",
+   "sha256": "56b82de59e635d7dbba7160fbcdbe89ab3ed9588f1a013765429ad1b72b8dd5c",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 264 (red open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-264",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-264-FIG264-D2"
+  },
+  {
+   "@id": "data/digitized/FLEX-264_fig264_lluv_flame_diameter.csv",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-264-FIG264-LLUV v1.1.0",
+   "contentSize": "2895",
+   "encodingFormat": "text/csv",
+   "sha256": "355c1bbd12054e98f023d582ffc6eb638bc9af2d0dadd6f1914e544d2ff662cd",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 264 (blue open-circle markers). Method: tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks). Limitations: Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "keywords": "DIGITIZED, FLEX-264",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-264-FIG264-LLUV"
+  },
+  {
+   "@id": "data/digitization/FIG264_FLEX-264_record.json",
+   "@type": "File",
+   "name": "DS-DIG-FLEX-264-FIG264-RECORD v1.1.0",
+   "contentSize": "6401",
+   "encodingFormat": "application/json",
+   "sha256": "987e0258eecfad49edda74e0fa78d4bcb4f70a131678befd801204f52ae053bd",
+   "description": "DIGITIZED dataset. Origin: S01 Appendix B Fig. 264 (PDF p. 294). Method: tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay. Limitations: Describes how the series were digitized; read its limitations list.",
+   "keywords": "DIGITIZED, FLEX-264",
+   "version": "1.1.0",
+   "identifier": "DS-DIG-FLEX-264-FIG264-RECORD"
+  },
+  {
+   "@id": "data/model/d2law_properties.json",
+   "@type": "File",
+   "name": "DS-MODEL-D2LAW-PROPS v1.0.0",
+   "contentSize": "9752",
+   "encodingFormat": "application/json",
+   "sha256": "6f84f62d35f2d8a2dba16721e4d4348e6734e5aee8a0b143fe6edbc72c432bbb",
+   "description": "DERIVED dataset. Origin: S42 CoolProp 8.0.0 evaluations; S43–S45 enthalpies of combustion. Method: tools/build_model_properties.py (CoolProp version pinned). Limitations: Ambient-gas properties only (no fuel vapour or products); 1 atm; 300–2000 K; heats of combustion from tertiary sources (DSC-027).",
+   "keywords": "DERIVED",
+   "version": "1.0.0",
+   "identifier": "DS-MODEL-D2LAW-PROPS"
+  },
+  {
+   "@id": "data/records/literature_cases.json",
+   "@type": "File",
+   "name": "DS-RECORDS-LITERATURE-CASES v0.2.0",
+   "contentSize": "5352",
+   "encodingFormat": "application/json",
+   "sha256": "af42b1a668eefe0b58771be5e18af1a1723f4760cbed32cd65b71c85057019e5",
+   "description": "RECORDS dataset. Origin: Original prototype attributions + S03 abstract. Method: hand-authored. Limitations: Conditions not checked against the papers; all links CANDIDATE.",
+   "keywords": "RECORDS",
+   "version": "0.2.0",
+   "identifier": "DS-RECORDS-LITERATURE-CASES"
+  },
+  {
+   "@id": "data/records/physical_tests.json",
+   "@type": "File",
+   "name": "DS-RECORDS-PHYSICAL-TESTS v0.2.0",
+   "contentSize": "1177623",
+   "encodingFormat": "application/json",
+   "sha256": "ea672932cdaccfe97074060896fd88c82607f51be8aa44d225440820c802c418",
+   "description": "RECORDS dataset. Origin: All DS-TP-*, DS-DERIVED-*, DS-VERIFY-TABLE-IX and registries. Method: tools/build_records.py. Limitations: Assembled view; no new values.",
+   "keywords": "RECORDS",
+   "version": "0.2.0",
+   "identifier": "DS-RECORDS-PHYSICAL-TESTS"
+  },
+  {
+   "@id": "data/registry/test_annotations.json",
+   "@type": "File",
+   "name": "DS-REGISTRY-ANNOTATIONS v0.1.0",
+   "contentSize": "2957",
+   "encodingFormat": "application/json",
+   "sha256": "ecc5c01ef02e447feec2474442efa8a2764c3c3fff37ce06dc493721b8644121",
+   "description": "REGISTRY dataset. Origin: Phase B review. Method: hand-authored.",
+   "keywords": "REGISTRY",
+   "version": "0.1.0",
+   "identifier": "DS-REGISTRY-ANNOTATIONS"
+  },
+  {
+   "@id": "data/registry/claims.json",
+   "@type": "File",
+   "name": "DS-REGISTRY-CLAIMS v0.4.0",
+   "contentSize": "26292",
+   "encodingFormat": "application/json",
+   "sha256": "1654e042b1e10ed76daccda22e4ca26b90142c14af3eef2cd6361d9a78d3dae9",
+   "description": "REGISTRY dataset. Origin: Phase B review. Method: hand-authored; each claim carries locators.",
+   "keywords": "REGISTRY",
+   "version": "0.4.0",
+   "identifier": "DS-REGISTRY-CLAIMS"
+  },
+  {
+   "@id": "data/registry/discrepancies.json",
+   "@type": "File",
+   "name": "DS-REGISTRY-DISCREPANCIES v0.4.0",
+   "contentSize": "17093",
+   "encodingFormat": "application/json",
+   "sha256": "a9441393f7c270e3428ad9d8e110d9768c35dcfbf029acb5615e41caae20ddff",
+   "description": "REGISTRY dataset. Origin: Phase B review + M2 cross-checks. Method: hand-authored from tool output.",
+   "keywords": "REGISTRY",
+   "version": "0.4.0",
+   "identifier": "DS-REGISTRY-DISCREPANCIES"
+  },
+  {
+   "@id": "data/registry/share_config.json",
+   "@type": "File",
+   "name": "DS-REGISTRY-SHARE-CONFIG v1.0.0",
+   "contentSize": "536",
+   "encodingFormat": "application/json",
+   "sha256": "28bda3e47bfd3bbcca8d029dfbdadb4996ef1a323e003fe6152777513f47c45b",
+   "description": "REGISTRY dataset. Origin: Phase B M6.1. Method: hand-authored. Limitations: github_repo is null until the owner names a repository.",
+   "keywords": "REGISTRY",
+   "version": "1.0.0",
+   "identifier": "DS-REGISTRY-SHARE-CONFIG"
+  },
+  {
+   "@id": "data/registry/sources.json",
+   "@type": "File",
+   "name": "DS-REGISTRY-SOURCES v0.1.0",
+   "contentSize": "11047",
+   "encodingFormat": "application/json",
+   "sha256": "8d2c15ac9d43a2a1ce7d1892c5483be18da12e9fecc6507d793bc840400b5117",
+   "description": "REGISTRY dataset. Origin: Research Guide §7 + Phase B review. Method: hand-authored.",
+   "keywords": "REGISTRY",
+   "version": "0.1.0",
+   "identifier": "DS-REGISTRY-SOURCES"
+  },
+  {
+   "@id": "data/registry/uncertainty_components.json",
+   "@type": "File",
+   "name": "DS-REGISTRY-UNCERTAINTY v0.4.0",
+   "contentSize": "7895",
+   "encodingFormat": "application/json",
+   "sha256": "8b990c6abc92e3511a48794d18e1716ca8b86f014722a94d0afbba3a88095059",
+   "description": "REGISTRY dataset. Origin: Phase B review of S01 §3 and App. A.1. Method: hand-authored; each reported component carries claim IDs. Limitations: No component is propagated; semantics as stated by the source.",
+   "keywords": "REGISTRY",
+   "version": "0.4.0",
+   "identifier": "DS-REGISTRY-UNCERTAINTY"
+  },
+  {
+   "@id": "data/simulations/d2law_baseline_runs.json",
+   "@type": "File",
+   "name": "DS-SIM-D2LAW-BASELINE v1.0.0",
+   "contentSize": "332816",
+   "encodingFormat": "application/json",
+   "sha256": "264e50a16deb8db4208833adf790086e5c6648a0d9c4e5f4a10303102294f45e",
+   "description": "SIMULATION dataset. Origin: D²-law educational baseline 1.0.0 at the printed Table IX conditions. Method: tools/run_d2law_baseline.py. Limitations: NUMERICAL_SIMULATION of a classical model; not FLEX measurements; no extinction, radiation, soot or unsteady effects.",
+   "keywords": "SIMULATION",
+   "version": "1.0.0",
+   "identifier": "DS-SIM-D2LAW-BASELINE"
+  },
+  {
+   "@id": "data/digitization/source_images/FIG014_FLEX-010.jpg",
+   "@type": "File",
+   "name": "DS-SRCIMG-FLEX-010-FIG014 v1.0.0",
+   "contentSize": "196068",
+   "encodingFormat": "application/octet-stream",
+   "sha256": "454db197c48561709c136bdf30285ae9aad8157b2e779ddb8a05c92c16f8272d",
+   "description": "ORIGINAL dataset. Origin: S01 Appendix B Fig. 14: embedded JPEG on PDF p. 44. Method: pdfimages -j (embedded DCT stream copied byte for byte). Limitations: The NASA plot image itself; not data values.",
+   "keywords": "ORIGINAL, FLEX-010",
+   "version": "1.0.0",
+   "identifier": "DS-SRCIMG-FLEX-010-FIG014"
+  },
+  {
+   "@id": "data/digitization/source_images/FIG027_FLEX-023.jpg",
+   "@type": "File",
+   "name": "DS-SRCIMG-FLEX-023-FIG027 v1.0.0",
+   "contentSize": "168905",
+   "encodingFormat": "application/octet-stream",
+   "sha256": "03fa3ef398ab27607933d7dfd6dd2c298f8a84608412c018953635d7ed21fc75",
+   "description": "ORIGINAL dataset. Origin: S01 Appendix B Fig. 27: embedded JPEG on PDF p. 57. Method: pdfimages -j (embedded DCT stream copied byte for byte). Limitations: The NASA plot image itself; not data values.",
+   "keywords": "ORIGINAL, FLEX-023",
+   "version": "1.0.0",
+   "identifier": "DS-SRCIMG-FLEX-023-FIG027"
+  },
+  {
+   "@id": "data/digitization/source_images/FIG037_FLEX-033.jpg",
+   "@type": "File",
+   "name": "DS-SRCIMG-FLEX-033-FIG037 v1.0.0",
+   "contentSize": "168010",
+   "encodingFormat": "application/octet-stream",
+   "sha256": "c941f91775e56c3e050bcc832106ba4c9b0f58c85635de5e894d0fc27ed0b028",
+   "description": "ORIGINAL dataset. Origin: S01 Appendix B Fig. 37: embedded JPEG on PDF p. 67. Method: pdfimages -j (embedded DCT stream copied byte for byte). Limitations: The NASA plot image itself; not data values.",
+   "keywords": "ORIGINAL, FLEX-033",
+   "version": "1.0.0",
+   "identifier": "DS-SRCIMG-FLEX-033-FIG037"
+  },
+  {
+   "@id": "data/digitization/source_images/FIG039_FLEX-035.jpg",
+   "@type": "File",
+   "name": "DS-SRCIMG-FLEX-035-FIG039 v1.0.0",
+   "contentSize": "145715",
+   "encodingFormat": "application/octet-stream",
+   "sha256": "d26160f810f4bb5a7e66ea2167fa45defbc639827890080128647bdfaa38fee0",
+   "description": "ORIGINAL dataset. Origin: S01 Appendix B Fig. 39: embedded JPEG on PDF p. 69. Method: pdfimages -j (embedded DCT stream copied byte for byte). Limitations: The NASA plot image itself; not data values.",
+   "keywords": "ORIGINAL, FLEX-035",
+   "version": "1.0.0",
+   "identifier": "DS-SRCIMG-FLEX-035-FIG039"
+  },
+  {
+   "@id": "data/digitization/source_images/FIG053_FLEX-049.jpg",
+   "@type": "File",
+   "name": "DS-SRCIMG-FLEX-049-FIG053 v1.0.0",
+   "contentSize": "137362",
+   "encodingFormat": "application/octet-stream",
+   "sha256": "81e1d9398c595210074c382f77e4d563705c24c75e2c8e3d29717b7b91bcaaa0",
+   "description": "ORIGINAL dataset. Origin: S01 Appendix B Fig. 53: embedded JPEG on PDF p. 83. Method: pdfimages -j (embedded DCT stream copied byte for byte). Limitations: The NASA plot image itself; not data values.",
+   "keywords": "ORIGINAL, FLEX-049",
+   "version": "1.0.0",
+   "identifier": "DS-SRCIMG-FLEX-049-FIG053"
+  },
+  {
+   "@id": "data/digitization/source_images/FIG055_FLEX-051.jpg",
+   "@type": "File",
+   "name": "DS-SRCIMG-FLEX-051-FIG055 v1.0.0",
+   "contentSize": "167629",
+   "encodingFormat": "application/octet-stream",
+   "sha256": "61d27f1c980b03efff641696a8ff599981844aad0c2468b960394614f086c9e5",
+   "description": "ORIGINAL dataset. Origin: S01 Appendix B Fig. 55: embedded JPEG on PDF p. 85. Method: pdfimages -j (embedded DCT stream copied byte for byte). Limitations: The NASA plot image itself; not data values.",
+   "keywords": "ORIGINAL, FLEX-051",
+   "version": "1.0.0",
+   "identifier": "DS-SRCIMG-FLEX-051-FIG055"
+  },
+  {
+   "@id": "data/digitization/source_images/FIG066_FLEX-062.jpg",
+   "@type": "File",
+   "name": "DS-SRCIMG-FLEX-062-FIG066 v1.0.0",
+   "contentSize": "118300",
+   "encodingFormat": "application/octet-stream",
+   "sha256": "fecc956c4dccead65c2ed902bb944de1a1dbbe4ebd3d7a9f53ed0b15c1f86779",
+   "description": "ORIGINAL dataset. Origin: S01 Appendix B Fig. 66: embedded JPEG on PDF p. 96. Method: pdfimages -j (embedded DCT stream copied byte for byte). Limitations: The NASA plot image itself; not data values.",
+   "keywords": "ORIGINAL, FLEX-062",
+   "version": "1.0.0",
+   "identifier": "DS-SRCIMG-FLEX-062-FIG066"
+  },
+  {
+   "@id": "data/digitization/source_images/FIG086_FLEX-082.jpg",
+   "@type": "File",
+   "name": "DS-SRCIMG-FLEX-082-FIG086 v1.0.0",
+   "contentSize": "162414",
+   "encodingFormat": "application/octet-stream",
+   "sha256": "56d010ab35a34027a6b0eb1779a86aaad985df2336e0c13a852b78472229b806",
+   "description": "ORIGINAL dataset. Origin: S01 Appendix B Fig. 86: embedded JPEG on PDF p. 116. Method: pdfimages -j (embedded DCT stream copied byte for byte). Limitations: The NASA plot image itself; not data values.",
+   "keywords": "ORIGINAL, FLEX-082",
+   "version": "1.0.0",
+   "identifier": "DS-SRCIMG-FLEX-082-FIG086"
+  },
+  {
+   "@id": "data/digitization/source_images/FIG114_FLEX-110.jpg",
+   "@type": "File",
+   "name": "DS-SRCIMG-FLEX-110-FIG114 v1.0.0",
+   "contentSize": "178634",
+   "encodingFormat": "application/octet-stream",
+   "sha256": "56ac70641fa419a820427e088fdaf62038b526d2b9e952de077267efe3480d79",
+   "description": "ORIGINAL dataset. Origin: S01 Appendix B Fig. 114: embedded JPEG on PDF p. 144. Method: pdfimages -j (embedded DCT stream copied byte for byte). Limitations: The NASA plot image itself; not data values.",
+   "keywords": "ORIGINAL, FLEX-110",
+   "version": "1.0.0",
+   "identifier": "DS-SRCIMG-FLEX-110-FIG114"
+  },
+  {
+   "@id": "data/digitization/source_images/FIG201_FLEX-198.jpg",
+   "@type": "File",
+   "name": "DS-SRCIMG-FLEX-198-FIG201 v1.0.0",
+   "contentSize": "119753",
+   "encodingFormat": "application/octet-stream",
+   "sha256": "7d07fe9550f502045be24ab364dbdd1cb95bb0da3ee7db159c5c13c11d84a7f2",
+   "description": "ORIGINAL dataset. Origin: S01 Appendix B Fig. 201: embedded JPEG on PDF p. 231. Method: pdfimages -j (embedded DCT stream copied byte for byte). Limitations: The NASA plot image itself; not data values.",
+   "keywords": "ORIGINAL, FLEX-198",
+   "version": "1.0.0",
+   "identifier": "DS-SRCIMG-FLEX-198-FIG201"
+  },
+  {
+   "@id": "data/digitization/source_images/FIG207_FLEX-204.jpg",
+   "@type": "File",
+   "name": "DS-SRCIMG-FLEX-204-FIG207 v1.0.0",
+   "contentSize": "152262",
+   "encodingFormat": "application/octet-stream",
+   "sha256": "368c5dbe4d260e2370d096def8a402d8cdf6b4f3551ce0b04760a78b862f6762",
+   "description": "ORIGINAL dataset. Origin: S01 Appendix B Fig. 207: embedded JPEG on PDF p. 237. Method: pdfimages -j (embedded DCT stream copied byte for byte). Limitations: The NASA plot image itself; not data values.",
+   "keywords": "ORIGINAL, FLEX-204",
+   "version": "1.0.0",
+   "identifier": "DS-SRCIMG-FLEX-204-FIG207"
+  },
+  {
+   "@id": "data/digitization/source_images/FIG263_FLEX-263.jpg",
+   "@type": "File",
+   "name": "DS-SRCIMG-FLEX-263-FIG263 v1.0.0",
+   "contentSize": "144098",
+   "encodingFormat": "application/octet-stream",
+   "sha256": "5bbbfdc7c856631c19552c0cfe37c9f0ab9a8ef13a18aa80be1411af32472e00",
+   "description": "ORIGINAL dataset. Origin: S01 Appendix B Fig. 263: embedded JPEG on PDF p. 293. Method: pdfimages -j (embedded DCT stream copied byte for byte). Limitations: The NASA plot image itself; not data values.",
+   "keywords": "ORIGINAL, FLEX-263",
+   "version": "1.0.0",
+   "identifier": "DS-SRCIMG-FLEX-263-FIG263"
+  },
+  {
+   "@id": "data/digitization/source_images/FIG264_FLEX-264.jpg",
+   "@type": "File",
+   "name": "DS-SRCIMG-FLEX-264-FIG264 v1.0.0",
+   "contentSize": "119293",
+   "encodingFormat": "application/octet-stream",
+   "sha256": "1e4dbc24b653b09cd4b2969dfcefa4ad89ff819a77eb44517abfee55ee6a9ef1",
+   "description": "ORIGINAL dataset. Origin: S01 Appendix B Fig. 264: embedded JPEG on PDF p. 294. Method: pdfimages -j (embedded DCT stream copied byte for byte). Limitations: The NASA plot image itself; not data values.",
+   "keywords": "ORIGINAL, FLEX-264",
+   "version": "1.0.0",
+   "identifier": "DS-SRCIMG-FLEX-264-FIG264"
+  },
+  {
+   "@id": "data/extracted/appendix_b_figures.csv",
+   "@type": "File",
+   "name": "DS-TP-APPB-INDEX v1.0.0",
+   "contentSize": "175031",
+   "encodingFormat": "text/csv",
+   "sha256": "93bf68763240998b1cd299562e90d2b75c0ede760a7f2f5198cf130d2fefd2ec",
+   "description": "EXTRACTED_TABULATED dataset. Origin: S01 NASA/TP-2015-216046 Appendix B captions, Figs. 5–280. Method: tools/extract_appendix_b_index.py — caption text verbatim. Limitations: Index and captions only; plot data not extracted.",
+   "keywords": "EXTRACTED_TABULATED",
+   "version": "1.0.0",
+   "identifier": "DS-TP-APPB-INDEX"
+  },
+  {
+   "@id": "data/extracted/table_ix.csv",
+   "@type": "File",
+   "name": "DS-TP-TABLE-IX v1.0.0",
+   "contentSize": "85449",
+   "encodingFormat": "text/csv",
+   "sha256": "e86621fecd5c0737fb6af351aee6231cf0847059f1197eab9fc5abb1ba137f66",
+   "description": "EXTRACTED_TABULATED dataset. Origin: S01 NASA/TP-2015-216046 Table IX, printed pp. 20–28 (PDF 26–34). Method: tools/extract_table_ix.py — pdftotext -layout, cells verbatim (*_raw) + parsed. Limitations: Reproduces the printed table; printed errors are not corrected (see discrepancy register).",
+   "keywords": "EXTRACTED_TABULATED",
+   "version": "1.0.0",
+   "identifier": "DS-TP-TABLE-IX"
+  },
+  {
+   "@id": "data/extracted/test_matrix.csv",
+   "@type": "File",
+   "name": "DS-TP-TEST-MATRIX v1.0.0",
+   "contentSize": "38854",
+   "encodingFormat": "text/csv",
+   "sha256": "e2687ab97e7ea0617c12645918086780e330a61f92dd5dd0919bae51b6ea4b95",
+   "description": "EXTRACTED_TABULATED dataset. Origin: S01 NASA/TP-2015-216046 Tables I–VIII, printed pp. 10–15 (PDF 16–21). Method: tools/extract_test_matrix.py — pdftotext -layout; header constants copied with origin='table header'. Limitations: Nominal/planned conditions; covers 153 tests (DSC-022).",
+   "keywords": "EXTRACTED_TABULATED",
+   "version": "1.0.0",
+   "identifier": "DS-TP-TEST-MATRIX"
+  },
+  {
+   "@id": "data/verification/d2law_code_verification.json",
+   "@type": "File",
+   "name": "DS-VER-D2LAW-CODE v1.0.0",
+   "contentSize": "5618",
+   "encodingFormat": "application/json",
+   "sha256": "5eab0eb65de2c07e2fc2e77fb28ad0b44466d9e5cb90736de0501b7202c9770b",
+   "description": "VERIFICATION dataset. Origin: openflex/d2law.py + DS-MODEL-D2LAW-PROPS. Method: tools/verify_d2law.py. Limitations: Code verification only; no validation against FLEX.",
+   "keywords": "VERIFICATION",
+   "version": "1.0.0",
+   "identifier": "DS-VER-D2LAW-CODE"
+  },
+  {
+   "@id": "data/verification/table_ix_cell_checks.csv",
+   "@type": "File",
+   "name": "DS-VERIFY-TABLE-IX v1.0.0",
+   "contentSize": "271228",
+   "encodingFormat": "text/csv",
+   "sha256": "a49334189f30ac90cf5cff6ebf7f2cd1138aeb2f004d697d8689ff97bf2b3766",
+   "description": "VERIFICATION dataset. Origin: DS-TP-TABLE-IX vs PDF text layer (pdfplumber) and rendered page images (Tesseract + connected components). Method: tools/verify_table_ix.py. Limitations: Checks extraction fidelity only, not the correctness of NASA's values.",
+   "keywords": "VERIFICATION",
+   "version": "1.0.0",
+   "identifier": "DS-VERIFY-TABLE-IX"
+  },
+  {
+   "@id": "data/verification/table_ix_manual_review.json",
+   "@type": "File",
+   "name": "DS-VERIFY-TABLE-IX-REVIEW v1.0.0",
+   "contentSize": "28924",
+   "encodingFormat": "application/json",
+   "sha256": "867aa1bf0cf2762debc9f41e446358dd92adbe531da2ccaf3c1286339639674a",
+   "description": "VERIFICATION dataset. Origin: Visual review of crops listed in DS-VERIFY-TABLE-IX. Method: montage images in docs/verification/. Limitations: Reviewer is the AI assistant, not an independent human.",
+   "keywords": "VERIFICATION",
+   "version": "1.0.0",
+   "identifier": "DS-VERIFY-TABLE-IX-REVIEW"
+  },
+  {
+   "@id": "data/verification/test_matrix_verification.json",
+   "@type": "File",
+   "name": "DS-VERIFY-TEST-MATRIX v1.0.0",
+   "contentSize": "851",
+   "encodingFormat": "application/json",
+   "sha256": "7429a8de097107f2b1be9e57954a3183062f502e7e8176a3a72382938ba37b53",
+   "description": "VERIFICATION dataset. Origin: DS-TP-TEST-MATRIX vs PDF text layer (pdfplumber). Method: tools/verify_test_matrix.py. Limitations: Second text-layer parser; see DS-VERIFY-TEST-MATRIX-IMAGES for the cell-by-cell page-image check.",
+   "keywords": "VERIFICATION",
+   "version": "1.0.0",
+   "identifier": "DS-VERIFY-TEST-MATRIX"
+  },
+  {
+   "@id": "data/verification/test_matrix_cell_checks.csv",
+   "@type": "File",
+   "name": "DS-VERIFY-TEST-MATRIX-IMAGES v1.0.0",
+   "contentSize": "70103",
+   "encodingFormat": "text/csv",
+   "sha256": "abec2820c48fbbc1967fee62956858a8325ad3c0d47510e5c01dcfa1ac259374",
+   "description": "VERIFICATION dataset. Origin: DS-TP-TEST-MATRIX vs rendered page images (Tesseract + connected components). Method: tools/verify_test_matrix_images.py. Limitations: Checks extraction fidelity only.",
+   "keywords": "VERIFICATION",
+   "version": "1.0.0",
+   "identifier": "DS-VERIFY-TEST-MATRIX-IMAGES"
+  },
+  {
+   "@id": "data/verification/test_matrix_manual_review.json",
+   "@type": "File",
+   "name": "DS-VERIFY-TEST-MATRIX-REVIEW v1.0.0",
+   "contentSize": "10131",
+   "encodingFormat": "application/json",
+   "sha256": "88129b3aec5da056c4f0f23ba6c8b93a55cdb15c36488357b1a99a5e064780d6",
+   "description": "VERIFICATION dataset. Origin: Visual review of crops listed in DS-VERIFY-TEST-MATRIX-IMAGES. Method: montage in docs/verification/. Limitations: Reviewer is the AI assistant, not an independent human.",
+   "keywords": "VERIFICATION",
+   "version": "1.0.0",
+   "identifier": "DS-VERIFY-TEST-MATRIX-REVIEW"
+  },
+  {
+   "@id": "data/MANIFEST.json",
+   "@type": "File",
+   "name": "MANIFEST.json",
+   "contentSize": "81648",
+   "encodingFormat": "application/json",
+   "sha256": "cadd259cd55827c6fb7ad347c1ce6b2c1688b8c2efe470bddd1260706b61084b",
+   "description": "Dataset manifest: version, class, origin, method, SHA-256 of every data file."
+  },
+  {
+   "@id": "data/datasets.spec.json",
+   "@type": "File",
+   "name": "datasets.spec.json",
+   "contentSize": "69455",
+   "encodingFormat": "application/json",
+   "sha256": "7d5a3bfc2bc96f374ae25e760f012ddb84a0877243278fd6b4486751b3a75914",
+   "description": "Hand-maintained dataset specification from which tools/build_app.py writes data/MANIFEST.json."
+  },
+  {
+   "@id": "README.md",
+   "@type": "File",
+   "name": "README.md",
+   "contentSize": "4696",
+   "encodingFormat": "text/markdown",
+   "sha256": "860e0929da0663476ba164e87071bbfd2ca1d42c8d06f613646e3d147504154c",
+   "description": "Open FLEX — evidence-traceable virtual laboratory (Phase B)"
+  },
+  {
+   "@id": "requirements.txt",
+   "@type": "File",
+   "name": "requirements.txt",
+   "contentSize": "528",
+   "encodingFormat": "text/plain",
+   "sha256": "35a3831294b12a24f04cfdfb76b866a2424b53d62d8d486c950513dea20407f1",
+   "description": "Pinned Python packages used by the tools and tests."
+  },
+  {
+   "@id": "pyproject.toml",
+   "@type": "File",
+   "name": "pyproject.toml",
+   "contentSize": "751",
+   "encodingFormat": "application/toml",
+   "sha256": "f1d7b3ba6eed093c4e34508de6b9363a8f827d20e066f0bc1fb7d77fc3bd4e55",
+   "description": "Python packaging metadata for the openflex package."
+  },
+  {
+   "@id": "setup_and_test.sh",
+   "@type": "File",
+   "name": "setup_and_test.sh",
+   "contentSize": "1378",
+   "encodingFormat": "application/x-sh",
+   "sha256": "9a3e47f8a8b2cfbe0ab6dd33dc8387cdf46e95c59386cc6fdfde5a7fbf961cc8",
+   "description": "One-command setup check: dependencies -> source PDF check -> pipeline (extract, cross-check, records, build, validate) -> tests."
+  },
+  {
+   "@id": "SOURCE_CHECKSUMS.sha256",
+   "@type": "File",
+   "name": "SOURCE_CHECKSUMS.sha256",
+   "contentSize": "661",
+   "encodingFormat": "text/plain",
+   "sha256": "562327edc069993e40ed5b7e907a5f6d8b736c4fef37ee7ab7e89805506e623c",
+   "description": "SHA-256 of the NASA source PDF expected in sources/original/."
+  },
+  {
+   "@id": "dist/open_flex_lab.html",
+   "@type": "File",
+   "name": "open_flex_lab.html",
+   "contentSize": "6117442",
+   "encodingFormat": "text/html",
+   "sha256": "31e69d8faa4320cd5ccd0ea56adf051e794dd0bf7679183c0262281c89c397c8",
+   "description": "Built single-file offline application (tools/build_app.py)."
+  },
+  {
+   "@id": "vendor/VENDOR.json",
+   "@type": "File",
+   "name": "VENDOR.json",
+   "contentSize": "6131",
+   "encodingFormat": "application/json",
+   "sha256": "be223e3a00b8ea9a74538ca563530d41b705302c8bfd9bd2652c2fd0597d2de7",
+   "description": "Pinned third-party files (library, test-only and validation files) with versions, sources and SHA-256."
+  },
+  {
+   "@id": "schemas/analysis_run.schema.json",
+   "@type": "File",
+   "name": "analysis_run.schema.json",
+   "contentSize": "1512",
+   "encodingFormat": "application/json",
+   "sha256": "9ac3cf7aad984f7da41636d5b2b8411d6143150bfebbb484d20d3d171b334367",
+   "description": "JSON Schema: AnalysisRun. A computation on data (e.g. a D² fit to digitized points). Inherits no NASA test identity: it references its input datasets."
+  },
+  {
+   "@id": "schemas/claim.schema.json",
+   "@type": "File",
+   "name": "claim.schema.json",
+   "contentSize": "1244",
+   "encodingFormat": "application/json",
+   "sha256": "b3c90ba9006cc5c3504afc242e2df01da19ce23f8a478e59238d9356a600f7e1",
+   "description": "JSON Schema: Claim/evidence registry"
+  },
+  {
+   "@id": "schemas/common.schema.json",
+   "@type": "File",
+   "name": "common.schema.json",
+   "contentSize": "3315",
+   "encodingFormat": "application/json",
+   "sha256": "fa834832899aa71a2fa1b2a5e53cc201650b7a3fbd7b03ba3b902c2648b2afd0",
+   "description": "JSON Schema: Shared definitions"
+  },
+  {
+   "@id": "schemas/dataset.schema.json",
+   "@type": "File",
+   "name": "dataset.schema.json",
+   "contentSize": "1637",
+   "encodingFormat": "application/json",
+   "sha256": "379ab8edc9a5f9b4fdf7faef7e78fd76c3f888b71f9d2a83e64c17187984d388",
+   "description": "JSON Schema: Dataset. A file of values with origin, method and processing history. Original, digitized, processed and derived data are separate datasets."
+  },
+  {
+   "@id": "schemas/digitization_record.schema.json",
+   "@type": "File",
+   "name": "digitization_record.schema.json",
+   "contentSize": "3380",
+   "encodingFormat": "application/json",
+   "sha256": "593dfcb30165ae512191e8cab7d5b8adc0c968ca5f0a73ae9f4f4779e737be63",
+   "description": "JSON Schema: DigitizationRecord. How DIGITIZED series were read from a source plot: source image hash, axis calibration with residuals, detection settings, self-check, overlay, limitations."
+  },
+  {
+   "@id": "schemas/discrepancy.schema.json",
+   "@type": "File",
+   "name": "discrepancy.schema.json",
+   "contentSize": "1676",
+   "encodingFormat": "application/json",
+   "sha256": "c73d776ce29564b558e05e3e7e4f258e674cc4610cc0ea07abbee55bc874aa55",
+   "description": "JSON Schema: Discrepancy register. Disagreements between or within sources. Values are shown as printed; 'preferred' stays null unless a documented reason exists."
+  },
+  {
+   "@id": "schemas/literature_figure_case.schema.json",
+   "@type": "File",
+   "name": "literature_figure_case.schema.json",
+   "contentSize": "1517",
+   "encodingFormat": "application/json",
+   "sha256": "0f63588c09a1bfd1947acebb81b14d6b4ba6279b8381cc9781f255cd7132b925",
+   "description": "JSON Schema: LiteratureFigureCase. A case shown in a published figure (not a NASA test record). Linking it to a physical test requires a stated basis; unconfirmed links stay CANDIDATE."
+  },
+  {
+   "@id": "schemas/physical_test.schema.json",
+   "@type": "File",
+   "name": "physical_test.schema.json",
+   "contentSize": "5211",
+   "encodingFormat": "application/json",
+   "sha256": "8c183a2e0ccddad23435decdb15999eb31d6d8c23f9f35adee6a6d87051eb667",
+   "description": "JSON Schema: PhysicalTest. One FLEX test performed on the ISS, as documented in NASA/TP-2015-216046. Contains only printed (PUBLISHED_TABULATED) values, verbatim caption text and DERIVED comparison results; no simulated or predicted quantity may appear here."
+  },
+  {
+   "@id": "schemas/shared_run.schema.json",
+   "@type": "File",
+   "name": "shared_run.schema.json",
+   "contentSize": "3882",
+   "encodingFormat": "application/json",
+   "sha256": "302eeb2b3eebd18a2d5aef72ff63c1baddee4b5958db14a79e82ccfb9ad66c5f",
+   "description": "JSON Schema: OpenFLEXSharedRun. A D²-law baseline simulation run packaged for posting and reproduction by others. Contains no personal data and no timestamps. A reproduction check (openflex.share.verify_run, or the app's Import) re-runs it; REPRODUCED does not mean validated."
+  },
+  {
+   "@id": "schemas/simulation_run.schema.json",
+   "@type": "File",
+   "name": "simulation_run.schema.json",
+   "contentSize": "1631",
+   "encodingFormat": "application/json",
+   "sha256": "b5db58d946bd62e58b1dd85fbe7609ce4fc2d4e663c95a8314c01c3c4a45c9de",
+   "description": "JSON Schema: SimulationRun. A model evaluation (e.g. the D²-law educational baseline). Never carries a NASA test ID as its identity; may cite the test whose printed conditions seeded its inputs, with any modification listed."
+  },
+  {
+   "@id": "schemas/source.schema.json",
+   "@type": "File",
+   "name": "source.schema.json",
+   "contentSize": "1290",
+   "encodingFormat": "application/json",
+   "sha256": "99791ffa1028c4a0448c28001aca2095465ad764f395181d8bea075c8b11b5f5",
+   "description": "JSON Schema: Source registry"
+  },
+  {
+   "@id": "schemas/uncertainty_component.schema.json",
+   "@type": "File",
+   "name": "uncertainty_component.schema.json",
+   "contentSize": "2598",
+   "encodingFormat": "application/json",
+   "sha256": "75de054cad0a63cdc96ca82868ad8b5f16aca22d00af844434aa3ad8badefaf8",
+   "description": "JSON Schema: Uncertainty component registry"
+  },
+  {
+   "@id": "docs/PHASE_B_01_Independent_Assessment_and_Revision_Plan.md",
+   "@type": "File",
+   "name": "PHASE_B_01_Independent_Assessment_and_Revision_Plan.md",
+   "contentSize": "27928",
+   "encodingFormat": "text/markdown",
+   "sha256": "036403d93962a7cb8e7566f0aae9477f964756995cd36b62db607cede0dc6774",
+   "description": "Open FLEX — Phase B, Step 1: Independent Review of the Phase A Audit and Revision Plan"
+  },
+  {
+   "@id": "docs/PHASE_B_M1_Report.md",
+   "@type": "File",
+   "name": "PHASE_B_M1_Report.md",
+   "contentSize": "6196",
+   "encodingFormat": "text/markdown",
+   "sha256": "656a2282b9f7cb0bcef9f3acf01eeb769301f60d8514dfccaffabf3de9492b8f",
+   "description": "Phase B — Milestone M1 Report: Scientific Integrity"
+  },
+  {
+   "@id": "docs/PHASE_B_M2_Report.md",
+   "@type": "File",
+   "name": "PHASE_B_M2_Report.md",
+   "contentSize": "10056",
+   "encodingFormat": "text/markdown",
+   "sha256": "f475a489398915265a6dd475d715f3c1c910c557487a34dc68bba5feb166447f",
+   "description": "Phase B — Milestone M2 report: data architecture"
+  },
+  {
+   "@id": "docs/PHASE_B_M3_Report.md",
+   "@type": "File",
+   "name": "PHASE_B_M3_Report.md",
+   "contentSize": "10669",
+   "encodingFormat": "text/markdown",
+   "sha256": "cc9b30586efb10fc3c4a2a79e73ab70e08fa24329d858114230f8f2ef8cf1eee",
+   "description": "Phase B — Milestone M3 report: pilot digitization of two Appendix B plots (+ M2 carry-over)"
+  },
+  {
+   "@id": "docs/PHASE_B_M4_Report.md",
+   "@type": "File",
+   "name": "PHASE_B_M4_Report.md",
+   "contentSize": "9625",
+   "encodingFormat": "text/markdown",
+   "sha256": "69b8bf9d2f1effb6bbbff8108f44954f922950a47d43b005fb36b757d573b55e",
+   "description": "Phase B — Milestone M4 report: transparency, uncertainty and condition coverage"
+  },
+  {
+   "@id": "docs/PHASE_B_M5_1_Rendering_Addendum.md",
+   "@type": "File",
+   "name": "PHASE_B_M5_1_Rendering_Addendum.md",
+   "contentSize": "5459",
+   "encodingFormat": "text/markdown",
+   "sha256": "51b9a42cfc22580702a46fe39d2f7f520fa7c8f6199b2f4574ccdd9ba1d7f38a",
+   "description": "Phase B — M5.1 addendum: photorealistic rendering without changing the physics"
+  },
+  {
+   "@id": "docs/PHASE_B_M5_Report.md",
+   "@type": "File",
+   "name": "PHASE_B_M5_Report.md",
+   "contentSize": "13192",
+   "encodingFormat": "text/markdown",
+   "sha256": "cff0d3d5cb1e485e9f23752143fe06a0c71583d64db72d0209bfa8a616a8e21f",
+   "description": "Phase B — Milestone M5 report: data-driven 3D experiment and dashboard redesign"
+  },
+  {
+   "@id": "docs/PHASE_B_M6_1_Sharing.md",
+   "@type": "File",
+   "name": "PHASE_B_M6_1_Sharing.md",
+   "contentSize": "4535",
+   "encodingFormat": "text/markdown",
+   "sha256": "09f998acfd21f6f5a7193834fff5a1fdd7a64a723d9020eb95f8563f11f54845",
+   "description": "Phase B M6.1: sharing a simulation run so others can check it"
+  },
+  {
+   "@id": "docs/PHASE_B_M6_D2law_Model.md",
+   "@type": "File",
+   "name": "PHASE_B_M6_D2law_Model.md",
+   "contentSize": "7277",
+   "encodingFormat": "text/markdown",
+   "sha256": "337b3f9949d45b7d5b0f827920e0689ff46cd88a74bd8fdabed5d4f6e55b014e",
+   "description": "D²-law educational baseline — model, properties, code verification"
+  },
+  {
+   "@id": "docs/PHASE_B_M6_Report.md",
+   "@type": "File",
+   "name": "PHASE_B_M6_Report.md",
+   "contentSize": "10014",
+   "encodingFormat": "text/markdown",
+   "sha256": "c1baac014bd0c6a2cf2d5085b4dfc766978bd5f8858327f667bbbc69143eb358",
+   "description": "Phase B — M6 report: D²-law educational baseline, Explore mode, Python package, RO-Crate 1.2, V&V plan"
+  },
+  {
+   "@id": "docs/PHASE_B_M6_VV_Plan.md",
+   "@type": "File",
+   "name": "PHASE_B_M6_VV_Plan.md",
+   "contentSize": "4075",
+   "encodingFormat": "text/markdown",
+   "sha256": "49adc8bbcab1848be865ac45e97b2a8ec9ac810c24c92fc1b3804d3b2984966e",
+   "description": "Verification & validation plan (Phase B M6)"
+  },
+  {
+   "@id": "app/src/body.html",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "app/src/body.html",
+   "contentSize": "34896",
+   "encodingFormat": "text/html",
+   "sha256": "481e0d34a016c5fe4471ff430a45965a56a0e5236388c0263f281b1446ac9219",
+   "description": "Application page markup (five workspaces), inlined by tools/build_app.py.",
+   "programmingLanguage": {
+    "@id": "#html"
+   }
+  },
+  {
+   "@id": "app/src/js/10_util.js",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "app/src/js/10_util.js",
+   "contentSize": "2663",
+   "encodingFormat": "text/javascript",
+   "sha256": "fc4a33436439f99ba138f263bbe89b699d6a61fe68840ba87108a4343247d49e",
+   "description": "Open FLEX — utilities: escaping, canonical JSON, genuine SHA-256, UUIDs.",
+   "programmingLanguage": {
+    "@id": "#javascript"
+   }
+  },
+  {
+   "@id": "app/src/js/20_data.js",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "app/src/js/20_data.js",
+   "contentSize": "2335",
+   "encodingFormat": "text/javascript",
+   "sha256": "8e798f31e717352a707f24008ce07548a0c43442b7e266b64f7be0c9097e176f",
+   "description": "Open FLEX — data access. All values come from window.OPEN_FLEX_DATA, which",
+   "programmingLanguage": {
+    "@id": "#javascript"
+   }
+  },
+  {
+   "@id": "app/src/js/30_scene_build.js",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "app/src/js/30_scene_build.js",
+   "contentSize": "28604",
+   "encodingFormat": "text/javascript",
+   "sha256": "135a2a1ea6f0bc180d42513e5ceddbf706699ab3af12f3969280c57847b99483",
+   "description": "Open FLEX — 3D apparatus (Phase B M5). Units: millimetres.",
+   "programmingLanguage": {
+    "@id": "#javascript"
+   }
+  },
+  {
+   "@id": "app/src/js/31_scene_update.js",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "app/src/js/31_scene_update.js",
+   "contentSize": "21773",
+   "encodingFormat": "text/javascript",
+   "sha256": "28a5102e15a7b8df70621fe6f9b3fb7199013b0191a29d0722e9f54103135d5b",
+   "description": "Open FLEX — procedure + burn playback (Phase B M5).",
+   "programmingLanguage": {
+    "@id": "#javascript"
+   }
+  },
+  {
+   "@id": "app/src/js/35_timeline.js",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "app/src/js/35_timeline.js",
+   "contentSize": "9792",
+   "encodingFormat": "text/javascript",
+   "sha256": "e312b0cdfa60391b9e8e73440fe77a22654ff998a5de66fc6a75e691a1dfd47d",
+   "description": "Open FLEX — burn timeline engine (Phase B M5). No DOM, no THREE: pure data → state.",
+   "programmingLanguage": {
+    "@id": "#javascript"
+   }
+  },
+  {
+   "@id": "app/src/js/40_views.js",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "app/src/js/40_views.js",
+   "contentSize": "22878",
+   "encodingFormat": "text/javascript",
+   "sha256": "74b9aa4a3121b6d33d1ec65ee81c9c35c74c4b3aaf7a14f826704550a65c7810",
+   "description": "Open FLEX — views for the selected physical test record.",
+   "programmingLanguage": {
+    "@id": "#javascript"
+   }
+  },
+  {
+   "@id": "app/src/js/41_hotspots.js",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "app/src/js/41_hotspots.js",
+   "contentSize": "9237",
+   "encodingFormat": "text/javascript",
+   "sha256": "72608b6b15a25bf0e472c76ec1ee5e4f30dc3e119a5aea8cda35554e4694961b",
+   "description": "Open FLEX — component information. Each text field is either backed by",
+   "programmingLanguage": {
+    "@id": "#javascript"
+   }
+  },
+  {
+   "@id": "app/src/js/45_transparency.js",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "app/src/js/45_transparency.js",
+   "contentSize": "17555",
+   "encodingFormat": "text/javascript",
+   "sha256": "9228532b0c0ed17205b52f07dee4ae534ad7ca0f3b56bada6881d398cb18da74",
+   "description": "Open FLEX — transparency layer (Phase B M4).",
+   "programmingLanguage": {
+    "@id": "#javascript"
+   }
+  },
+  {
+   "@id": "app/src/js/50_panels.js",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "app/src/js/50_panels.js",
+   "contentSize": "10939",
+   "encodingFormat": "text/javascript",
+   "sha256": "6055a47750cfbdf33f703c2a3a9d96f15b093785cc9c5432c29f1219a0cef72e",
+   "description": "Open FLEX — physics schematic, uncertainty budget, evidence tables, export.",
+   "programmingLanguage": {
+    "@id": "#javascript"
+   }
+  },
+  {
+   "@id": "app/src/js/60_model.js",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "app/src/js/60_model.js",
+   "contentSize": "6469",
+   "encodingFormat": "text/javascript",
+   "sha256": "b9d7b8165dc37524dcc628d71f4eb38febae615c1ce05cd4dcf760afd1deb443",
+   "description": "Open FLEX — D²-law educational baseline, browser implementation.",
+   "programmingLanguage": {
+    "@id": "#javascript"
+   }
+  },
+  {
+   "@id": "app/src/js/61_explore.js",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "app/src/js/61_explore.js",
+   "contentSize": "15712",
+   "encodingFormat": "text/javascript",
+   "sha256": "f65aa80c9a81068182f406ef385f6c0e00655c87e6ff6457749b190adf64233b",
+   "description": "Open FLEX — Explore mode: the D²-law educational baseline next to the source record.",
+   "programmingLanguage": {
+    "@id": "#javascript"
+   }
+  },
+  {
+   "@id": "app/src/js/62_share.js",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "app/src/js/62_share.js",
+   "contentSize": "20131",
+   "encodingFormat": "text/javascript",
+   "sha256": "46debe720a235f46dd35ad7908643d9ee0f9be49b8ef78ee0e93f6864fae96f6",
+   "description": "Open FLEX — share a simulation run, and check someone else's.",
+   "programmingLanguage": {
+    "@id": "#javascript"
+   }
+  },
+  {
+   "@id": "app/src/js/90_main.js",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "app/src/js/90_main.js",
+   "contentSize": "6592",
+   "encodingFormat": "text/javascript",
+   "sha256": "ded9d37f7fa98dd5c510585774a81f5c2e9f721c5cca0b0d36b581c75dd5751a",
+   "description": "Open FLEX — bootstrap, workspaces (ARIA tabs), theme, animation loop.",
+   "programmingLanguage": {
+    "@id": "#javascript"
+   }
+  },
+  {
+   "@id": "app/src/styles.css",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "app/src/styles.css",
+   "contentSize": "14193",
+   "encodingFormat": "text/css",
+   "sha256": "f4ca000b5e21c84c8e1a77acc474f963ae35bb32ba73fde7ff2e6cbf98c79ce2",
+   "description": "Open FLEX — Phase B M5 theme. Light by default; dark via [data-theme=\"dark\"].",
+   "programmingLanguage": {
+    "@id": "#css"
+   }
+  },
+  {
+   "@id": "openflex/__init__.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "openflex/__init__.py",
+   "contentSize": "488",
+   "encodingFormat": "text/x-python",
+   "sha256": "d4f6eaf7f4b002610a4baf9b75a160cde97f45c90c978967ab7e76c265044e58",
+   "description": "Open FLEX: data-package access and the D²-law educational baseline (Phase B M6 scaffold).",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "openflex/__main__.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "openflex/__main__.py",
+   "contentSize": "4923",
+   "encodingFormat": "text/x-python",
+   "sha256": "484881c28c6fa05de66c83036d21aa04d6892222a65fb3355e4d48e1dd1b7e5f",
+   "description": "Command line: python3 -m openflex <command>",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "openflex/d2law.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "openflex/d2law.py",
+   "contentSize": "6819",
+   "encodingFormat": "text/x-python",
+   "sha256": "d6869de5ba39ac3eacb1a29f49d697c537b639c741d68501edbe20f1945c094f",
+   "description": "D²-law educational baseline: classical quasi-steady, spherically symmetric droplet burning.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "openflex/data.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "openflex/data.py",
+   "contentSize": "2792",
+   "encodingFormat": "text/x-python",
+   "sha256": "8b15df3457011b17df1a44f6e154f5faeaa832468f1f7f428786784dd9d7420b",
+   "description": "Read-only access to the Open FLEX data package, with SHA-256 checks against data/MANIFEST.json.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "openflex/share.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "openflex/share.py",
+   "contentSize": "12650",
+   "encodingFormat": "text/x-python",
+   "sha256": "35305f76b814cca92de6adee2094a406e13789d89c486c7179afe789ff524d42",
+   "description": "Shareable simulation-run files and their reproduction check (reference implementation).",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/analyze_d2_fit.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/analyze_d2_fit.py",
+   "contentSize": "8621",
+   "encodingFormat": "text/x-python",
+   "sha256": "7de91abcb13476a32defe9b4b745d2197fdf4ea81f290dcd548c1b22481a06e3",
+   "description": "AnalysisRun: linear D^2(t) fits to DIGITIZED droplet data, compared with the printed Table IX values.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/build_app.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/build_app.py",
+   "contentSize": "9498",
+   "encodingFormat": "text/x-python",
+   "sha256": "d6c0f1d9f873bc6ec835a861324e6acaf5ede5c380685467ae96824879b3948c",
+   "description": "Build the single-file Open FLEX app from modular sources.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/build_model_properties.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/build_model_properties.py",
+   "contentSize": "6733",
+   "encodingFormat": "text/x-python",
+   "sha256": "7df2c348b991092fed07971875308143edfc4c90fd2654866b806873826570b5",
+   "description": "Build the property table used by the D²-law educational baseline (Phase B M6).",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/build_records.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/build_records.py",
+   "contentSize": "9155",
+   "encodingFormat": "text/x-python",
+   "sha256": "a547f4d297a9791bb2536e24e7e2e95c8c5b16e3ae4f641e77eb42af3cd36626",
+   "description": "Assemble one PhysicalTest record per FLEX test from the extracted tables and registries.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/build_rocrate.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/build_rocrate.py",
+   "contentSize": "11295",
+   "encodingFormat": "text/x-python",
+   "sha256": "ab7bfbd04fe5cd34baa11f68e0c70688a7b40308b10d27413dc29620844d7f12",
+   "description": "Write ro-crate-metadata.json (RO-Crate 1.2) at the repository root, from data/MANIFEST.json and the registries.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/canonical_json.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/canonical_json.py",
+   "contentSize": "1734",
+   "encodingFormat": "text/x-python",
+   "sha256": "00dfb396c40c7ada7277e9e0b26dc878fcec14129bd5b9d2c5efbf03d666881e",
+   "description": "Canonical JSON and SHA-256, matching OF.canonicalJSON in app/src/js/10_util.js.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/coverage.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/coverage.py",
+   "contentSize": "3543",
+   "encodingFormat": "text/x-python",
+   "sha256": "37451cb205f2018f317b93aa74cb5adac30daadf6b6026d49b60936b4c289a94",
+   "description": "Condition coverage of Table IX (\"domain status\") — reference implementation.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/crosscheck_tables.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/crosscheck_tables.py",
+   "contentSize": "6428",
+   "encodingFormat": "text/x-python",
+   "sha256": "49c91e5788df1fafce8d6d1d7faec3a65ba8e045f063010acfb2f9901c17d435",
+   "description": "Cross-check three places in NASA/TP-2015-216046 that describe the same tests.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/digitize_figure.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/digitize_figure.py",
+   "contentSize": "16439",
+   "encodingFormat": "text/x-python",
+   "sha256": "e54edd75e0b689d5454c11035985952ceebc80aeb0dd83a99ffe4bd16fc39d6e",
+   "description": "Digitize one Appendix B plot of NASA/TP-2015-216046 (DIGITIZED data, not original measurements).",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/extract_appendix_b_index.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/extract_appendix_b_index.py",
+   "contentSize": "1920",
+   "encodingFormat": "text/x-python",
+   "sha256": "39fbc42ab2724a2cd589208a57b0ad001b677a319f4bb2fe72d01db388b3a350",
+   "description": "Index NASA/TP-2015-216046 Appendix B: Figure number <-> FLEX test, PDF page, printed page, caption.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/extract_table_ix.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/extract_table_ix.py",
+   "contentSize": "3007",
+   "encodingFormat": "text/x-python",
+   "sha256": "0b3e027a3c62c5280a85b034d5b628bfc14fdc98658a3bc683d8b7cffe89e443",
+   "description": "Extract Table IX (\"Results by test number and FLEX identifier\") from NASA/TP-2015-216046.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/extract_test_matrix.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/extract_test_matrix.py",
+   "contentSize": "6509",
+   "encodingFormat": "text/x-python",
+   "sha256": "819a4b2eca213e8d7e17211bee54e9e62e94c3fbe2810824bc18945156183ec5",
+   "description": "Extract the FLEX test matrices (Tables I-VIII) from NASA/TP-2015-216046.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/row_crops.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/row_crops.py",
+   "contentSize": "2092",
+   "encodingFormat": "text/x-python",
+   "sha256": "7d1adf3d38cddb8a4d68ebce9ceb768d37e5ab363ff3215246164d3a41062188",
+   "description": "Render table rows of NASA/TP-2015-216046 as images, for checking extracted values by eye.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/run_d2law_baseline.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/run_d2law_baseline.py",
+   "contentSize": "4842",
+   "encodingFormat": "text/x-python",
+   "sha256": "908ad8f78200127c63b9fb9fde17e7e61db79441493e8233908d6e61271a8986",
+   "description": "Evaluate the D²-law educational baseline at the printed conditions of every Table IX test.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/run_pipeline.sh",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/run_pipeline.sh",
+   "contentSize": "2268",
+   "encodingFormat": "application/x-sh",
+   "sha256": "b24e1706249faf7315d79863bf79053d9af37b8953d6687d1138584308a2f8e8",
+   "description": "Rebuild every derived artefact from the source PDF, in dependency order, then validate.",
+   "programmingLanguage": {
+    "@id": "#bash"
+   }
+  },
+  {
+   "@id": "tools/validate_data.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/validate_data.py",
+   "contentSize": "10024",
+   "encodingFormat": "text/x-python",
+   "sha256": "c143045b7ad7d5e34b3dbc5ab8216c9faee0104aacbbd1d7494ee245f9a9fef5",
+   "description": "Validate registries, records and the dataset manifest against schemas/ and check cross-references.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/validate_rocrate.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/validate_rocrate.py",
+   "contentSize": "3269",
+   "encodingFormat": "text/x-python",
+   "sha256": "e34cd75f3e207e827df183580ec0a9bd57d8146800550c11fe363bb3cb802a0c",
+   "description": "Validate ro-crate-metadata.json with rocrate-validator (profile ro-crate-1.2), working offline.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/verify_d2law.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/verify_d2law.py",
+   "contentSize": "10158",
+   "encodingFormat": "text/x-python",
+   "sha256": "73fc5efdc4d3f034b6851999b0e90a33a1f28987815bfc23b5c63e1d63a85fb5",
+   "description": "Code verification of the D²-law educational baseline (openflex/d2law.py).",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/verify_table_ix.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/verify_table_ix.py",
+   "contentSize": "10100",
+   "encodingFormat": "text/x-python",
+   "sha256": "67253cf5d09662c49b36d6441b6216571ed8ce50724c9bc340c55f33ab0cbeb6",
+   "description": "Check every cell of data/extracted/table_ix.csv by two routes that are independent of the extractor.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/verify_test_matrix.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/verify_test_matrix.py",
+   "contentSize": "3718",
+   "encodingFormat": "text/x-python",
+   "sha256": "787f35d31acdc4b83b6d3bfe9156a3e67a5669bc577aed4d8d494fe823b6140f",
+   "description": "Second-parser check of data/extracted/test_matrix.csv (Tables I-VIII).",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tools/verify_test_matrix_images.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tools/verify_test_matrix_images.py",
+   "contentSize": "4526",
+   "encodingFormat": "text/x-python",
+   "sha256": "2e0b46c48438885b0481f8d07ccf87f0b92529df25de495c1d7f4c52f305ddd8",
+   "description": "Page-image check of data/extracted/test_matrix.csv (Tables I-VIII), cell by cell.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tests/browser/conftest.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tests/browser/conftest.py",
+   "contentSize": "512",
+   "encodingFormat": "text/x-python",
+   "sha256": "dc43e655b5d0c11da62c734883b5316a8ba38228020d896d3580475ee6c08ee4",
+   "description": "Shared browser-test setup: build the no-vendor variant once per session (needs the source PDF).",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tests/browser/test_deeplink_browser.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tests/browser/test_deeplink_browser.py",
+   "contentSize": "1319",
+   "encodingFormat": "text/x-python",
+   "sha256": "9190b98fa3a729723b9cb2379fecad405a7e036e496f473d7851f1e452cf7399",
+   "description": "Deep link used by the Flame in Freefall dashboards: #test=FLEX-xxx&tab=<workspace>.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tests/browser/test_m1_browser.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tests/browser/test_m1_browser.py",
+   "contentSize": "8593",
+   "encodingFormat": "text/x-python",
+   "sha256": "a0e97b749adaf31504f794d086ef3a0d64d62353080c7fd7b9c3fdd4adbb6d29",
+   "description": "M1 browser acceptance tests (headless Chrome via Playwright).",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tests/browser/test_m2_browser.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tests/browser/test_m2_browser.py",
+   "contentSize": "4195",
+   "encodingFormat": "text/x-python",
+   "sha256": "d1187d4376ed4fec989c38dfb5b9d015425b4a22fb8d656cf5cde978f3ffcff2",
+   "description": "M2 browser tests: fiber status, test-matrix box, discrepancies, literature cases, dataset manifest.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tests/browser/test_m3_browser.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tests/browser/test_m3_browser.py",
+   "contentSize": "2706",
+   "encodingFormat": "text/x-python",
+   "sha256": "5912adb3ad5f1c0e2fb800b61ce05afe54343797142621614493db12d9550db6",
+   "description": "M3 browser tests: digitized plots, labels, table view, fallback without Plotly (offline, headless Chrome).",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tests/browser/test_m4_browser.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tests/browser/test_m4_browser.py",
+   "contentSize": "9909",
+   "encodingFormat": "text/x-python",
+   "sha256": "05696e5b5a811059aedb36b6e6f97ed08f0657a121a4c09ede109fb46a86b86b",
+   "description": "M4 browser tests: provenance of every rendered quantitative statement, interval semantics, NASA ± wording,",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tests/browser/test_m5_browser.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tests/browser/test_m5_browser.py",
+   "contentSize": "15096",
+   "encodingFormat": "text/x-python",
+   "sha256": "9ead6f82390ce39691f6b45b179bca3c46a2683d76bdebec2e5acc746df73784",
+   "description": "M5 browser tests: data-driven burn timeline (physics rules), 3D scene follows the timeline, instrument views,",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tests/browser/test_m5_render.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tests/browser/test_m5_render.py",
+   "contentSize": "6365",
+   "encodingFormat": "text/x-python",
+   "sha256": "1cbb6dff1ea9b13ee3a4cb07d24e880f1908881bdadf670a2c0c5060fab78216",
+   "description": "M5.1 photorealistic rendering: the look must not change the physics. Offline, headless Chrome (SwiftShader).",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tests/browser/test_m6_1_share_browser.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tests/browser/test_m6_1_share_browser.py",
+   "contentSize": "11466",
+   "encodingFormat": "text/x-python",
+   "sha256": "536d38f974b185cc323740496e6529a7dca2452ec72034d8d07b3d7cdec2565a",
+   "description": "M6.1 browser tests: share a simulation run, check someone else's.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tests/browser/test_m6_explore.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tests/browser/test_m6_explore.py",
+   "contentSize": "9301",
+   "encodingFormat": "text/x-python",
+   "sha256": "e3d54720ade68473750212a1adfe438cd0d9285b1cda27f022a6265a19594599",
+   "description": "M6 browser tests: Explore mode with the D²-law educational baseline.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tests/unit/test_extractors.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tests/unit/test_extractors.py",
+   "contentSize": "2120",
+   "encodingFormat": "text/x-python",
+   "sha256": "caba59b8653bbd41f85f3c57fae311b6fcd86ba9108bbb36f804b1a189ef0ddc",
+   "description": "Unit tests for the NASA/TP-2015-216046 extractors (run them fresh from the PDF).",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tests/unit/test_m2_data.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tests/unit/test_m2_data.py",
+   "contentSize": "7208",
+   "encodingFormat": "text/x-python",
+   "sha256": "f55e68a4cd91962031e3d9f529ae1ada5392da416d2290b7a7f64e2766daa1af",
+   "description": "M2 data-architecture tests: extraction reproducibility, cross-checks, records, schemas, verification.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tests/unit/test_m3_digitization.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tests/unit/test_m3_digitization.py",
+   "contentSize": "6657",
+   "encodingFormat": "text/x-python",
+   "sha256": "acdcbf6c006fa368e3717df1a21750ce129f7e5dfc076e7963b4c8fd7fb8c737",
+   "description": "M3 tests: digitization provenance, calibration, determinism, analysis semantics, validator guards.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tests/unit/test_m4_data.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tests/unit/test_m4_data.py",
+   "contentSize": "2558",
+   "encodingFormat": "text/x-python",
+   "sha256": "2ab02ff6485cfd4592f14bae38aa41b4c5e2ce6c0d1225a32afbc2838075add0",
+   "description": "M4 unit tests: uncertainty-component registry rules, coverage reference implementation.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tests/unit/test_m5_data.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tests/unit/test_m5_data.py",
+   "contentSize": "2684",
+   "encodingFormat": "text/x-python",
+   "sha256": "2f5cc41aff708ed99258d0e3b529a6652500a7a151c114c530865e5aa9670b8b",
+   "description": "M5 data tests: new claims are found on their cited PDF pages; new discrepancies; digitization method version.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tests/unit/test_m6_1_share.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tests/unit/test_m6_1_share.py",
+   "contentSize": "6728",
+   "encodingFormat": "text/x-python",
+   "sha256": "145f9ac2a8c482dedfcdab1ed965c6613649894f1ecefe46903a3c3aaf3be3fe",
+   "description": "M6.1 unit tests: shared-run file format, reproduction check, CLI round trip.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "tests/unit/test_m6_model.py",
+   "@type": [
+    "File",
+    "SoftwareSourceCode"
+   ],
+   "name": "tests/unit/test_m6_model.py",
+   "contentSize": "7579",
+   "encodingFormat": "text/x-python",
+   "sha256": "cd3c80018b96da4ffd20bc793da2034cc08ade265debbe1a14bd6041a031ae22",
+   "description": "M6 unit tests: D²-law educational baseline, its code verification, simulation-run records, Python scaffold.",
+   "programmingLanguage": {
+    "@id": "#python"
+   }
+  },
+  {
+   "@id": "#create-DS-ANA-D2LAW-VS-IX",
+   "@type": "CreateAction",
+   "name": "Create DS-ANA-D2LAW-VS-IX",
+   "instrument": {
+    "@id": "tools/run_d2law_baseline.py"
+   },
+   "result": {
+    "@id": "data/analysis/d2law_vs_table_ix.csv"
+   },
+   "description": "tools/run_d2law_baseline.py",
+   "object": [
+    {
+     "@id": "data/simulations/d2law_baseline_runs.json"
+    },
+    {
+     "@id": "data/extracted/table_ix.csv"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-ANA-FLEX-010-D2FIT",
+   "@type": "CreateAction",
+   "name": "Create DS-ANA-FLEX-010-D2FIT",
+   "instrument": {
+    "@id": "tools/analyze_d2_fit.py"
+   },
+   "result": {
+    "@id": "data/analysis/FLEX-010_d2_fit.json"
+   },
+   "description": "tools/analyze_d2_fit.py 1.1.0",
+   "object": [
+    {
+     "@id": "data/digitized/FLEX-010_fig014_droplet_d2.csv"
+    },
+    {
+     "@id": "data/extracted/table_ix.csv"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-ANA-FLEX-023-D2FIT",
+   "@type": "CreateAction",
+   "name": "Create DS-ANA-FLEX-023-D2FIT",
+   "instrument": {
+    "@id": "tools/analyze_d2_fit.py"
+   },
+   "result": {
+    "@id": "data/analysis/FLEX-023_d2_fit.json"
+   },
+   "description": "tools/analyze_d2_fit.py 1.1.0",
+   "object": [
+    {
+     "@id": "data/digitized/FLEX-023_fig027_droplet_d2.csv"
+    },
+    {
+     "@id": "data/extracted/table_ix.csv"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-ANA-FLEX-033-D2FIT",
+   "@type": "CreateAction",
+   "name": "Create DS-ANA-FLEX-033-D2FIT",
+   "instrument": {
+    "@id": "tools/analyze_d2_fit.py"
+   },
+   "result": {
+    "@id": "data/analysis/FLEX-033_d2_fit.json"
+   },
+   "description": "tools/analyze_d2_fit.py 1.1.0",
+   "object": [
+    {
+     "@id": "data/digitized/FLEX-033_fig037_droplet_d2.csv"
+    },
+    {
+     "@id": "data/extracted/table_ix.csv"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-ANA-FLEX-035-D2FIT",
+   "@type": "CreateAction",
+   "name": "Create DS-ANA-FLEX-035-D2FIT",
+   "instrument": {
+    "@id": "tools/analyze_d2_fit.py"
+   },
+   "result": {
+    "@id": "data/analysis/FLEX-035_d2_fit.json"
+   },
+   "description": "tools/analyze_d2_fit.py 1.1.0",
+   "object": [
+    {
+     "@id": "data/digitized/FLEX-035_fig039_droplet_d2.csv"
+    },
+    {
+     "@id": "data/extracted/table_ix.csv"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-ANA-FLEX-049-D2FIT",
+   "@type": "CreateAction",
+   "name": "Create DS-ANA-FLEX-049-D2FIT",
+   "instrument": {
+    "@id": "tools/analyze_d2_fit.py"
+   },
+   "result": {
+    "@id": "data/analysis/FLEX-049_d2_fit.json"
+   },
+   "description": "tools/analyze_d2_fit.py 1.1.0",
+   "object": [
+    {
+     "@id": "data/digitized/FLEX-049_fig053_droplet_d2.csv"
+    },
+    {
+     "@id": "data/extracted/table_ix.csv"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-ANA-FLEX-051-D2FIT",
+   "@type": "CreateAction",
+   "name": "Create DS-ANA-FLEX-051-D2FIT",
+   "instrument": {
+    "@id": "tools/analyze_d2_fit.py"
+   },
+   "result": {
+    "@id": "data/analysis/FLEX-051_d2_fit.json"
+   },
+   "description": "tools/analyze_d2_fit.py 1.1.0",
+   "object": [
+    {
+     "@id": "data/digitized/FLEX-051_fig055_droplet_d2.csv"
+    },
+    {
+     "@id": "data/extracted/table_ix.csv"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-ANA-FLEX-062-D2FIT",
+   "@type": "CreateAction",
+   "name": "Create DS-ANA-FLEX-062-D2FIT",
+   "instrument": {
+    "@id": "tools/analyze_d2_fit.py"
+   },
+   "result": {
+    "@id": "data/analysis/FLEX-062_d2_fit.json"
+   },
+   "description": "tools/analyze_d2_fit.py 1.1.0",
+   "object": [
+    {
+     "@id": "data/digitized/FLEX-062_fig066_droplet_d2.csv"
+    },
+    {
+     "@id": "data/extracted/table_ix.csv"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-ANA-FLEX-082-D2FIT",
+   "@type": "CreateAction",
+   "name": "Create DS-ANA-FLEX-082-D2FIT",
+   "instrument": {
+    "@id": "tools/analyze_d2_fit.py"
+   },
+   "result": {
+    "@id": "data/analysis/FLEX-082_d2_fit.json"
+   },
+   "description": "tools/analyze_d2_fit.py 1.1.0",
+   "object": [
+    {
+     "@id": "data/digitized/FLEX-082_fig086_droplet_d2.csv"
+    },
+    {
+     "@id": "data/extracted/table_ix.csv"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-ANA-FLEX-110-D2FIT",
+   "@type": "CreateAction",
+   "name": "Create DS-ANA-FLEX-110-D2FIT",
+   "instrument": {
+    "@id": "tools/analyze_d2_fit.py"
+   },
+   "result": {
+    "@id": "data/analysis/FLEX-110_d2_fit.json"
+   },
+   "description": "tools/analyze_d2_fit.py 1.1.0",
+   "object": [
+    {
+     "@id": "data/digitized/FLEX-110_fig114_droplet_d2.csv"
+    },
+    {
+     "@id": "data/extracted/table_ix.csv"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-ANA-FLEX-198-D2FIT",
+   "@type": "CreateAction",
+   "name": "Create DS-ANA-FLEX-198-D2FIT",
+   "instrument": {
+    "@id": "tools/analyze_d2_fit.py"
+   },
+   "result": {
+    "@id": "data/analysis/FLEX-198_d2_fit.json"
+   },
+   "description": "tools/analyze_d2_fit.py 1.1.0",
+   "object": [
+    {
+     "@id": "data/digitized/FLEX-198_fig201_droplet_d2.csv"
+    },
+    {
+     "@id": "data/extracted/table_ix.csv"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-ANA-FLEX-204-D2FIT",
+   "@type": "CreateAction",
+   "name": "Create DS-ANA-FLEX-204-D2FIT",
+   "instrument": {
+    "@id": "tools/analyze_d2_fit.py"
+   },
+   "result": {
+    "@id": "data/analysis/FLEX-204_d2_fit.json"
+   },
+   "description": "tools/analyze_d2_fit.py 1.1.0",
+   "object": [
+    {
+     "@id": "data/digitized/FLEX-204_fig207_droplet_d2.csv"
+    },
+    {
+     "@id": "data/extracted/table_ix.csv"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-ANA-FLEX-263-D2FIT",
+   "@type": "CreateAction",
+   "name": "Create DS-ANA-FLEX-263-D2FIT",
+   "instrument": {
+    "@id": "tools/analyze_d2_fit.py"
+   },
+   "result": {
+    "@id": "data/analysis/FLEX-263_d2_fit.json"
+   },
+   "description": "tools/analyze_d2_fit.py 1.1.0",
+   "object": [
+    {
+     "@id": "data/digitized/FLEX-263_fig263_droplet_d2.csv"
+    },
+    {
+     "@id": "data/extracted/table_ix.csv"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-ANA-FLEX-264-D2FIT",
+   "@type": "CreateAction",
+   "name": "Create DS-ANA-FLEX-264-D2FIT",
+   "instrument": {
+    "@id": "tools/analyze_d2_fit.py"
+   },
+   "result": {
+    "@id": "data/analysis/FLEX-264_d2_fit.json"
+   },
+   "description": "tools/analyze_d2_fit.py 1.1.0",
+   "object": [
+    {
+     "@id": "data/digitized/FLEX-264_fig264_droplet_d2.csv"
+    },
+    {
+     "@id": "data/extracted/table_ix.csv"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-DERIVED-CROSSCHECK",
+   "@type": "CreateAction",
+   "name": "Create DS-DERIVED-CROSSCHECK",
+   "instrument": {
+    "@id": "tools/crosscheck_tables.py"
+   },
+   "result": {
+    "@id": "data/derived/crosscheck_matrix_vs_ix.csv"
+   },
+   "description": "tools/crosscheck_tables.py — agreement within printed rounding",
+   "object": [
+    {
+     "@id": "data/extracted/table_ix.csv"
+    },
+    {
+     "@id": "data/extracted/test_matrix.csv"
+    },
+    {
+     "@id": "data/derived/fiber_from_captions.csv"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-DERIVED-FIBER-CAPTIONS",
+   "@type": "CreateAction",
+   "name": "Create DS-DERIVED-FIBER-CAPTIONS",
+   "instrument": {
+    "@id": "tools/crosscheck_tables.py"
+   },
+   "result": {
+    "@id": "data/derived/fiber_from_captions.csv"
+   },
+   "description": "tools/crosscheck_tables.py — regex 'fiber[- ]supported' / 'free[- ]floating' on verbatim captions",
+   "object": {
+    "@id": "data/extracted/appendix_b_figures.csv"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-010-FIG014-COLOR",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-010-FIG014-COLOR",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-010_fig014_color_camera_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG014_FLEX-010.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-010-FIG014-D2",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-010-FIG014-D2",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-010_fig014_droplet_d2.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG014_FLEX-010.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-010-FIG014-LLUV",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-010-FIG014-LLUV",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-010_fig014_lluv_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG014_FLEX-010.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-010-FIG014-RECORD",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-010-FIG014-RECORD",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitization/FIG014_FLEX-010_record.json"
+   },
+   "description": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "object": {
+    "@id": "data/digitization/source_images/FIG014_FLEX-010.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-023-FIG027-D2",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-023-FIG027-D2",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-023_fig027_droplet_d2.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG027_FLEX-023.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-023-FIG027-LLUV",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-023-FIG027-LLUV",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-023_fig027_lluv_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG027_FLEX-023.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-023-FIG027-RECORD",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-023-FIG027-RECORD",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitization/FIG027_FLEX-023_record.json"
+   },
+   "description": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "object": {
+    "@id": "data/digitization/source_images/FIG027_FLEX-023.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-033-FIG037-D2",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-033-FIG037-D2",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-033_fig037_droplet_d2.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG037_FLEX-033.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-033-FIG037-LLUV",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-033-FIG037-LLUV",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-033_fig037_lluv_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG037_FLEX-033.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-033-FIG037-RECORD",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-033-FIG037-RECORD",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitization/FIG037_FLEX-033_record.json"
+   },
+   "description": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "object": {
+    "@id": "data/digitization/source_images/FIG037_FLEX-033.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-035-FIG039-COLOR",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-035-FIG039-COLOR",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-035_fig039_color_camera_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG039_FLEX-035.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-035-FIG039-D2",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-035-FIG039-D2",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-035_fig039_droplet_d2.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG039_FLEX-035.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-035-FIG039-LLUV",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-035-FIG039-LLUV",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-035_fig039_lluv_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG039_FLEX-035.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-035-FIG039-RECORD",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-035-FIG039-RECORD",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitization/FIG039_FLEX-035_record.json"
+   },
+   "description": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "object": {
+    "@id": "data/digitization/source_images/FIG039_FLEX-035.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-049-FIG053-COLOR",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-049-FIG053-COLOR",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-049_fig053_color_camera_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG053_FLEX-049.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-049-FIG053-D2",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-049-FIG053-D2",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-049_fig053_droplet_d2.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG053_FLEX-049.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-049-FIG053-LLUV",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-049-FIG053-LLUV",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-049_fig053_lluv_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG053_FLEX-049.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-049-FIG053-RECORD",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-049-FIG053-RECORD",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitization/FIG053_FLEX-049_record.json"
+   },
+   "description": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "object": {
+    "@id": "data/digitization/source_images/FIG053_FLEX-049.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-051-FIG055-COLOR",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-051-FIG055-COLOR",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-051_fig055_color_camera_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG055_FLEX-051.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-051-FIG055-D2",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-051-FIG055-D2",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-051_fig055_droplet_d2.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG055_FLEX-051.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-051-FIG055-LLUV",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-051-FIG055-LLUV",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-051_fig055_lluv_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG055_FLEX-051.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-051-FIG055-RECORD",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-051-FIG055-RECORD",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitization/FIG055_FLEX-051_record.json"
+   },
+   "description": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "object": {
+    "@id": "data/digitization/source_images/FIG055_FLEX-051.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-062-FIG066-COLOR",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-062-FIG066-COLOR",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-062_fig066_color_camera_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG066_FLEX-062.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-062-FIG066-D2",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-062-FIG066-D2",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-062_fig066_droplet_d2.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG066_FLEX-062.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-062-FIG066-LLUV",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-062-FIG066-LLUV",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-062_fig066_lluv_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG066_FLEX-062.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-062-FIG066-RECORD",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-062-FIG066-RECORD",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitization/FIG066_FLEX-062_record.json"
+   },
+   "description": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "object": {
+    "@id": "data/digitization/source_images/FIG066_FLEX-062.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-082-FIG086-COLOR",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-082-FIG086-COLOR",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-082_fig086_color_camera_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG086_FLEX-082.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-082-FIG086-D2",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-082-FIG086-D2",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-082_fig086_droplet_d2.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG086_FLEX-082.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-082-FIG086-LLUV",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-082-FIG086-LLUV",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-082_fig086_lluv_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG086_FLEX-082.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-082-FIG086-RECORD",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-082-FIG086-RECORD",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitization/FIG086_FLEX-082_record.json"
+   },
+   "description": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "object": {
+    "@id": "data/digitization/source_images/FIG086_FLEX-082.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-110-FIG114-COLOR",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-110-FIG114-COLOR",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-110_fig114_color_camera_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG114_FLEX-110.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-110-FIG114-D2",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-110-FIG114-D2",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-110_fig114_droplet_d2.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG114_FLEX-110.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-110-FIG114-LLUV",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-110-FIG114-LLUV",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-110_fig114_lluv_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG114_FLEX-110.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-110-FIG114-RECORD",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-110-FIG114-RECORD",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitization/FIG114_FLEX-110_record.json"
+   },
+   "description": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "object": {
+    "@id": "data/digitization/source_images/FIG114_FLEX-110.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-198-FIG201-D2",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-198-FIG201-D2",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-198_fig201_droplet_d2.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG201_FLEX-198.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-198-FIG201-LLUV",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-198-FIG201-LLUV",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-198_fig201_lluv_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG201_FLEX-198.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-198-FIG201-RECORD",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-198-FIG201-RECORD",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitization/FIG201_FLEX-198_record.json"
+   },
+   "description": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "object": {
+    "@id": "data/digitization/source_images/FIG201_FLEX-198.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-204-FIG207-COLOR",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-204-FIG207-COLOR",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-204_fig207_color_camera_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG207_FLEX-204.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-204-FIG207-D2",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-204-FIG207-D2",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-204_fig207_droplet_d2.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG207_FLEX-204.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-204-FIG207-LLUV",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-204-FIG207-LLUV",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-204_fig207_lluv_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG207_FLEX-204.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-204-FIG207-RECORD",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-204-FIG207-RECORD",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitization/FIG207_FLEX-204_record.json"
+   },
+   "description": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "object": {
+    "@id": "data/digitization/source_images/FIG207_FLEX-204.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-263-FIG263-COLOR",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-263-FIG263-COLOR",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-263_fig263_color_camera_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG263_FLEX-263.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-263-FIG263-D2",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-263-FIG263-D2",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-263_fig263_droplet_d2.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG263_FLEX-263.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-263-FIG263-LLUV",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-263-FIG263-LLUV",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-263_fig263_lluv_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG263_FLEX-263.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-263-FIG263-RECORD",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-263-FIG263-RECORD",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitization/FIG263_FLEX-263_record.json"
+   },
+   "description": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "object": {
+    "@id": "data/digitization/source_images/FIG263_FLEX-263.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-264-FIG264-COLOR",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-264-FIG264-COLOR",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-264_fig264_color_camera_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG264_FLEX-264.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-264-FIG264-D2",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-264-FIG264-D2",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-264_fig264_droplet_d2.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG264_FLEX-264.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-264-FIG264-LLUV",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-264-FIG264-LLUV",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitized/FLEX-264_fig264_lluv_flame_diameter.csv"
+   },
+   "description": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "object": {
+    "@id": "data/digitization/source_images/FIG264_FLEX-264.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-DIG-FLEX-264-FIG264-RECORD",
+   "@type": "CreateAction",
+   "name": "Create DS-DIG-FLEX-264-FIG264-RECORD",
+   "instrument": {
+    "@id": "tools/digitize_figure.py"
+   },
+   "result": {
+    "@id": "data/digitization/FIG264_FLEX-264_record.json"
+   },
+   "description": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "object": {
+    "@id": "data/digitization/source_images/FIG264_FLEX-264.jpg"
+   }
+  },
+  {
+   "@id": "#create-DS-MODEL-D2LAW-PROPS",
+   "@type": "CreateAction",
+   "name": "Create DS-MODEL-D2LAW-PROPS",
+   "instrument": {
+    "@id": "tools/build_model_properties.py"
+   },
+   "result": {
+    "@id": "data/model/d2law_properties.json"
+   },
+   "description": "tools/build_model_properties.py (CoolProp version pinned)"
+  },
+  {
+   "@id": "#create-DS-RECORDS-PHYSICAL-TESTS",
+   "@type": "CreateAction",
+   "name": "Create DS-RECORDS-PHYSICAL-TESTS",
+   "instrument": {
+    "@id": "tools/build_records.py"
+   },
+   "result": {
+    "@id": "data/records/physical_tests.json"
+   },
+   "description": "tools/build_records.py"
+  },
+  {
+   "@id": "#create-DS-SIM-D2LAW-BASELINE",
+   "@type": "CreateAction",
+   "name": "Create DS-SIM-D2LAW-BASELINE",
+   "instrument": {
+    "@id": "tools/run_d2law_baseline.py"
+   },
+   "result": {
+    "@id": "data/simulations/d2law_baseline_runs.json"
+   },
+   "description": "tools/run_d2law_baseline.py",
+   "object": [
+    {
+     "@id": "data/extracted/table_ix.csv"
+    },
+    {
+     "@id": "data/model/d2law_properties.json"
+    },
+    {
+     "@id": "openflex/d2law.py"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-TP-APPB-INDEX",
+   "@type": "CreateAction",
+   "name": "Create DS-TP-APPB-INDEX",
+   "instrument": {
+    "@id": "tools/extract_appendix_b_index.py"
+   },
+   "result": {
+    "@id": "data/extracted/appendix_b_figures.csv"
+   },
+   "description": "tools/extract_appendix_b_index.py — caption text verbatim",
+   "object": {
+    "@id": "https://ntrs.nasa.gov/citations/20150023456"
+   }
+  },
+  {
+   "@id": "#create-DS-TP-TABLE-IX",
+   "@type": "CreateAction",
+   "name": "Create DS-TP-TABLE-IX",
+   "instrument": {
+    "@id": "tools/extract_table_ix.py"
+   },
+   "result": {
+    "@id": "data/extracted/table_ix.csv"
+   },
+   "description": "tools/extract_table_ix.py — pdftotext -layout, cells verbatim (*_raw) + parsed",
+   "object": {
+    "@id": "https://ntrs.nasa.gov/citations/20150023456"
+   }
+  },
+  {
+   "@id": "#create-DS-TP-TEST-MATRIX",
+   "@type": "CreateAction",
+   "name": "Create DS-TP-TEST-MATRIX",
+   "instrument": {
+    "@id": "tools/extract_test_matrix.py"
+   },
+   "result": {
+    "@id": "data/extracted/test_matrix.csv"
+   },
+   "description": "tools/extract_test_matrix.py — pdftotext -layout; header constants copied with origin='table header'",
+   "object": {
+    "@id": "https://ntrs.nasa.gov/citations/20150023456"
+   }
+  },
+  {
+   "@id": "#create-DS-VER-D2LAW-CODE",
+   "@type": "CreateAction",
+   "name": "Create DS-VER-D2LAW-CODE",
+   "instrument": {
+    "@id": "tools/verify_d2law.py"
+   },
+   "result": {
+    "@id": "data/verification/d2law_code_verification.json"
+   },
+   "description": "tools/verify_d2law.py",
+   "object": [
+    {
+     "@id": "openflex/d2law.py"
+    },
+    {
+     "@id": "data/model/d2law_properties.json"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-VERIFY-TABLE-IX",
+   "@type": "CreateAction",
+   "name": "Create DS-VERIFY-TABLE-IX",
+   "instrument": {
+    "@id": "tools/verify_table_ix.py"
+   },
+   "result": {
+    "@id": "data/verification/table_ix_cell_checks.csv"
+   },
+   "description": "tools/verify_table_ix.py",
+   "object": [
+    {
+     "@id": "data/extracted/table_ix.csv"
+    },
+    {
+     "@id": "https://ntrs.nasa.gov/citations/20150023456"
+    }
+   ]
+  },
+  {
+   "@id": "#create-DS-VERIFY-TEST-MATRIX",
+   "@type": "CreateAction",
+   "name": "Create DS-VERIFY-TEST-MATRIX",
+   "instrument": {
+    "@id": "tools/verify_test_matrix.py"
+   },
+   "result": {
+    "@id": "data/verification/test_matrix_verification.json"
+   },
+   "description": "tools/verify_test_matrix.py",
+   "object": {
+    "@id": "data/extracted/test_matrix.csv"
+   }
+  },
+  {
+   "@id": "#create-DS-VERIFY-TEST-MATRIX-IMAGES",
+   "@type": "CreateAction",
+   "name": "Create DS-VERIFY-TEST-MATRIX-IMAGES",
+   "instrument": {
+    "@id": "tools/verify_test_matrix_images.py"
+   },
+   "result": {
+    "@id": "data/verification/test_matrix_cell_checks.csv"
+   },
+   "description": "tools/verify_test_matrix_images.py",
+   "object": [
+    {
+     "@id": "data/extracted/test_matrix.csv"
+    },
+    {
+     "@id": "https://ntrs.nasa.gov/citations/20150023456"
+    }
+   ]
+  },
+  {
+   "@id": "https://ntrs.nasa.gov/citations/20150023456",
+   "@type": "CreativeWork",
+   "name": "NASA/TP-2015-216046 (source S01)",
+   "description": "Dietrich, D.L.; Ferkul, P.V.; Bryg, V.M.; Nayagam, M.V.; Hicks, M.C.; Williams, F.A.; Dryer, F.L.; Shaw, B.D.; et al. Detailed Results from the Flame Extinguishment Experiment (FLEX) — March 2009 to December 2011. NASA/TP-2015-216046 (E-18493), NASA Glenn Research Center, 2015. The PDF is not packaged in this crate; place it at sources/original/NASA-TP-2015-216046.pdf to rebuild. Rights as shown on NTRS: Public Use Permitted.",
+   "sha256": "b4f6ca983e2792c33a0b92220a791a818f426bb635b94f7fd33dc8c9c471e79d"
+  },
+  {
+   "@id": "#licence-not-chosen",
+   "@type": "CreativeWork",
+   "name": "No licence chosen yet",
+   "description": "The owner of this repository has not yet chosen a licence. Until one is chosen, no reuse licence is granted by this crate. Third-party content keeps its own terms (NASA report: NTRS public use; vendored libraries: see vendor/VENDOR.json)."
+  },
+  {
+   "@id": "#claude",
+   "@type": "SoftwareApplication",
+   "name": "Claude (Anthropic AI assistant)",
+   "url": "https://claude.ai",
+   "version": "Claude Opus 5.5",
+   "description": "Prepared the code, data processing and documentation under the repository owner's direction."
+  },
+  {
+   "@id": "#python",
+   "@type": "ComputerLanguage",
+   "name": "Python",
+   "url": "https://www.python.org/",
+   "version": "3.13 (tested; >=3.10 required)"
+  },
+  {
+   "@id": "#javascript",
+   "@type": "ComputerLanguage",
+   "name": "JavaScript",
+   "url": "https://tc39.es/ecma262/",
+   "version": "ECMAScript 2017+ (browser)"
+  },
+  {
+   "@id": "#bash",
+   "@type": "ComputerLanguage",
+   "name": "Bash",
+   "url": "https://www.gnu.org/software/bash/",
+   "version": "5"
+  },
+  {
+   "@id": "#html",
+   "@type": "ComputerLanguage",
+   "name": "HTML",
+   "url": "https://html.spec.whatwg.org/",
+   "version": "HTML Living Standard"
+  },
+  {
+   "@id": "#css",
+   "@type": "ComputerLanguage",
+   "name": "CSS",
+   "url": "https://www.w3.org/Style/CSS/",
+   "version": "CSS3"
+  },
+  {
+   "@id": "https://ntrs.nasa.gov/citations/20090014812",
+   "@type": "CreativeWork",
+   "name": "S02 (Open FLEX source register)",
+   "description": "Williams, F.A. et al. JSC-17962-27, Multi-User Droplet Combustion Apparatus — Flame Extinguishment Experiment (23 Feb 2009)."
+  },
+  {
+   "@id": "https://doi.org/10.1007/s12217-014-9372-2",
+   "@type": "CreativeWork",
+   "name": "S03 (Open FLEX source register)",
+   "description": "Dietrich, D.L.; Nayagam, V.; Hicks, M.C.; Ferkul, P.V.; Dryer, F.L.; Farouk, T.; Shaw, B.D.; Suh, H.K.; Choi, M.Y.; Liu, Y.C.; Avedisian, C.T.; Williams, F.A. Droplet Combustion Experiments Aboard the International Space Station. Microgravity Sci. Technol. 26, 65–76 (2014). doi:10.1007/s12217-014-9372-2"
+  },
+  {
+   "@id": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69",
+   "@type": "CreativeWork",
+   "name": "S04 (Open FLEX source register)",
+   "description": "NASA Physical Sciences Informatics, PSI-69 — Flame Extinguishment Experiment (FLEX), Version 5. doi:10.60555/mbq8-0451."
+  },
+  {
+   "@id": "https://ntrs.nasa.gov/citations/20130014061",
+   "@type": "CreativeWork",
+   "name": "S06 (Open FLEX source register)",
+   "description": "Nayagam, V.; Dietrich, D.L.; Hicks, M.C.; Williams, F.A. Methanol Droplet Combustion in Oxygen-Inert Environments in Microgravity (2013). NASA NTRS 20130014061."
+  },
+  {
+   "@id": "https://www.princeton.edu/~yju/1st-near-limit-flames-workshop/presentations/FA%20Williams-Microgravity.pdf",
+   "@type": "CreativeWork",
+   "name": "S07 (Open FLEX source register)",
+   "description": "Williams, F.A. Unexpected Observations Made in FLEX Test 0035. Near-limit flames workshop presentation (2009)."
+  },
+  {
+   "@id": "https://commons.wikimedia.org/wiki/File:FLEX_Test023.webm",
+   "@type": "CreativeWork",
+   "name": "S08 (Open FLEX source register)",
+   "description": "FLEX Test 023 video, NASA Glenn Research Center / P. Ferkul, 24 Oct 2009 (Wikimedia Commons mirror)."
+  },
+  {
+   "@id": "https://www1.grc.nasa.gov/wp-content/uploads/FLEX_Quad.pdf",
+   "@type": "CreativeWork",
+   "name": "S09 (Open FLEX source register)",
+   "description": "NASA Glenn, FLEX Project Overview one-pager, October 2010 (FLEX_Quad.pdf)."
+  },
+  {
+   "@id": "https://www.cantera.org/3.2/reference/transport/index.html",
+   "@type": "CreativeWork",
+   "name": "S25 (Open FLEX source register)",
+   "description": "Cantera 3.2 documentation: gas transport."
+  },
+  {
+   "@id": "https://chemistry.cerfacs.fr/en/chemical-database/mechanisms-list/gri-mech-3-0/",
+   "@type": "CreativeWork",
+   "name": "S26 (Open FLEX source register)",
+   "description": "CERFACS Chemistry Database: GRI-Mech 3.0 entry."
+  },
+  {
+   "@id": "https://doi.org/10.1016/j.jocs.2024.102453",
+   "@type": "CreativeWork",
+   "name": "S30 (Open FLEX source register)",
+   "description": "A numerical framework for droplet combustion (J. Comput. Sci., 2024). doi:10.1016/j.jocs.2024.102453"
+  },
+  {
+   "@id": "https://salib.readthedocs.io/en/stable/",
+   "@type": "CreativeWork",
+   "name": "S33 (Open FLEX source register)",
+   "description": "SALib documentation (Sobol, Morris)."
+  },
+  {
+   "@id": "https://mapie.readthedocs.io/en/stable/content/conformal-prediction/",
+   "@type": "CreativeWork",
+   "name": "S35 (Open FLEX source register)",
+   "description": "MAPIE documentation: conformal prediction."
+  },
+  {
+   "@id": "https://w3id.org/ro/crate/1.2",
+   "@type": "CreativeWork",
+   "name": "S37 (Open FLEX source register)",
+   "description": "RO-Crate Metadata Specification (1.2 stable 2025; 1.3 announced 23 Jun 2026)."
+  },
+  {
+   "@id": "https://docs.python.org/3/library/hashlib.html",
+   "@type": "CreativeWork",
+   "name": "S39 (Open FLEX source register)",
+   "description": "Python Standard Library: uuid, hashlib."
+  },
+  {
+   "@id": "https://ntrs.nasa.gov/citations/20140006750",
+   "@type": "CreativeWork",
+   "name": "S40 (Open FLEX source register)",
+   "description": "Nayagam, V.; Dietrich, D.L.; Hicks, M.C.; Williams, F.A. Cool-flame extinction during n-alkane droplet combustion in microgravity. 2014 Spring Technical Meeting, Central States Section of the Combustion Institute (NTRS 20140006750)."
+  },
+  {
+   "@id": "https://www.youtube.com/watch?v=qQQ1OHW1_F4",
+   "@type": "CreativeWork",
+   "name": "S41 (Open FLEX source register)",
+   "description": "NASA. \"Amazing Flame Comes to Life in Space Station Microgravity Combustion Science\" (video, 1:04). YouTube, NASA channel. https://www.youtube.com/watch?v=qQQ1OHW1_F4"
+  },
+  {
+   "@id": "https://doi.org/10.1021/ie4033999",
+   "@type": "CreativeWork",
+   "name": "S42 (Open FLEX source register)",
+   "description": "Bell, I.H.; Wronski, J.; Quoilin, S.; Lemort, V. Pure and Pseudo-pure Fluid Thermophysical Property Evaluation and the Open-Source Thermophysical Property Library CoolProp. Ind. Eng. Chem. Res. 53(6), 2498–2508 (2014). doi:10.1021/ie4033999. Software: CoolProp 8.0.0 (PyPI)."
+  },
+  {
+   "@id": "https://en.wikipedia.org/wiki/Heptane",
+   "@type": "CreativeWork",
+   "name": "S43 (Open FLEX source register)",
+   "description": "Wikipedia contributors. \"Heptane\" (infobox, Thermochemistry). Wikipedia, read 15 Nov 2026. https://en.wikipedia.org/wiki/Heptane"
+  },
+  {
+   "@id": "https://www.engineeringtoolbox.com/methanol-methyl-alcohol-properties-CH3OH-d_2031.html",
+   "@type": "CreativeWork",
+   "name": "S44 (Open FLEX source register)",
+   "description": "The Engineering ToolBox. \"Methanol - Thermophysical Properties\". Read 15 Nov 2026. https://www.engineeringtoolbox.com/methanol-methyl-alcohol-properties-CH3OH-d_2031.html"
+  },
+  {
+   "@id": "https://en.wikipedia.org/wiki/Methanol_(data_page)",
+   "@type": "CreativeWork",
+   "name": "S45 (Open FLEX source register)",
+   "description": "Wikipedia contributors. \"Methanol (data page)\" (liquid properties). Wikipedia, read 15 Nov 2026. https://en.wikipedia.org/wiki/Methanol_(data_page)"
+  },
+  {
+   "@id": "https://doi.org/10.1063/1.1747673",
+   "@type": "CreativeWork",
+   "name": "S46 (Open FLEX source register)",
+   "description": "Wilke, C.R. A Viscosity Equation for Gas Mixtures. J. Chem. Phys. 18, 517–519 (1950). doi:10.1063/1.1747673"
+  },
+  {
+   "@id": "https://doi.org/10.1063/1.1724352",
+   "@type": "CreativeWork",
+   "name": "S47 (Open FLEX source register)",
+   "description": "Mason, E.A.; Saxena, S.C. Approximate Formula for the Thermal Conductivity of Gas Mixtures. Phys. Fluids 1, 361–369 (1958). doi:10.1063/1.1724352"
+  }
+ ]
+}

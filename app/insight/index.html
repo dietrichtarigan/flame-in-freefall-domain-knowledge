@@ -140,7 +140,7 @@ footer{color:var(--mute);font-size:12px;padding:18px 0 40px;border-top:1px solid
 <header>
   <h1>Flame in Freefall</h1>
   <span class="sub">Fire-safety insights from NASA's microgravity combustion data</span>
-  <span class="right"><a href="/app/" id="research">Researcher mode: every test, every source</a></span>
+  <span class="right"><a href="/app/" id="research">Researcher mode: every test, every source</a><span id="openflex"> · <a href="/openflex/" target="_blank" rel="noopener">Open FLEX lab: the original FLEX droplet tests in 3D</a></span></span>
 </header>
 
 <div class="hint">Choose where the crew will live. Everything below re-ranks for that atmosphere.</div>
@@ -268,7 +268,7 @@ async function load() {
   const h = new URLSearchParams(location.hash.slice(1));
   if (D.scenario[h.get("s")]) S.sc = h.get("s");
   if (h.get("t")) S.tab = h.get("t");
-  if (!S.live) $("research").style.display = "none";
+  if (!S.live) { $("research").style.display = "none"; $("openflex").style.display = "none"; }
   renderAll();
 }
 const sc = () => D.scenario[S.sc];
@@ -459,7 +459,7 @@ function openCard(acc) {
     </div>
     ${c.highlights.length ? `<p><b>Added by our analysis.</b> ${c.highlights.map(esc).join(". ")}.</p>` : ""}
     ${c.impacts ? `<p class="hint"><b>Impact (PSI):</b> ${esc(c.impacts)}</p>` : ""}
-    <p><a href="${esc(c.psi_url)}" target="_blank" rel="noopener">Open in NASA PSI</a></p>`;
+    <p><a href="${esc(c.psi_url)}" target="_blank" rel="noopener">Open in NASA PSI</a>${c.accession === "PSI-69" && S.live ? ` · <a href="/openflex/" target="_blank" rel="noopener">Open in the Open FLEX lab</a> <span class="hint">(every test of NASA/TP-2015-216046 Table IX, with sources and a D²-law baseline)</span>` : ""}</p>`;
   $("dlg").showModal();
 }
 function openCompare(accs) {

@@ -1,0 +1,569 @@
+{
+ "registry_version": "0.5.0",
+ "discrepancies": [
+  {
+   "discrepancy_id": "DSC-001",
+   "topic": "Number of tests",
+   "values": [
+    {
+     "value": "first 284 tests",
+     "source": "S01 p. 1"
+    },
+    {
+     "value": "276 rows, FLEX–001…280; 156, 205, 213, 228 absent",
+     "source": "S01 Table IX pp. 20–28"
+    },
+    {
+     "value": "FLEX–156 listed as conducted (heptane, 2.30 mm)",
+     "source": "S01 Table VIII p. 15"
+    }
+   ],
+   "preferred": null,
+   "reason": "No basis to choose; shown as-is.",
+   "tests": [
+    "FLEX-156"
+   ]
+  },
+  {
+   "discrepancy_id": "DSC-002",
+   "topic": "FLEX–023 oxygen mole fraction",
+   "values": [
+    {
+     "value": "0.400/0.600 (nominal matrix)",
+     "source": "S01 Table III p. 11"
+    },
+    {
+     "value": "0.34/0.66 (reconstructed)",
+     "source": "S01 Table IX p. 20"
+    },
+    {
+     "value": "0.37/0.66 (sums to 1.03)",
+     "source": "S01 Fig. 27 caption p. 51"
+    },
+    {
+     "value": "33.4 %",
+     "source": "S08 description via Research Guide (not verified)"
+    }
+   ],
+   "preferred": "0.34/0.66",
+   "reason": "App. A.1 says Table IX composition is reconstructed from detailed fill/combustion records.",
+   "tests": [
+    "FLEX-023"
+   ]
+  },
+  {
+   "discrepancy_id": "DSC-003",
+   "topic": "Nominal vs reconstructed composition (general)",
+   "values": [
+    {
+     "value": "Tables I–VIII: nominal/3-decimal compositions",
+     "source": "S01 pp. 9–15"
+    },
+    {
+     "value": "Table IX: reconstructed, 2 decimals; max O₂ 0.34",
+     "source": "S01 Table IX"
+    }
+   ],
+   "preferred": "Table IX for actual conditions",
+   "reason": "As DSC-002.",
+   "tests": [
+    "FLEX-019",
+    "FLEX-020",
+    "FLEX-021",
+    "FLEX-022",
+    "FLEX-023",
+    "FLEX-024"
+   ]
+  },
+  {
+   "discrepancy_id": "DSC-004",
+   "topic": "FLEX–023 initial diameter",
+   "values": [
+    {
+     "value": "3.18 mm",
+     "source": "S01 Table III p. 11"
+    },
+    {
+     "value": "3.01 mm at igniter ON",
+     "source": "S01 Table IX p. 20"
+    }
+   ],
+   "preferred": null,
+   "reason": "Different definitions are possible (matrix value vs value at time zero); both kept.",
+   "tests": [
+    "FLEX-023"
+   ]
+  },
+  {
+   "discrepancy_id": "DSC-005",
+   "topic": "FLEX–035 initial diameter",
+   "values": [
+    {
+     "value": "3.91 mm",
+     "source": "S01 Table V p. 13"
+    },
+    {
+     "value": "3.85 mm at igniter ON",
+     "source": "S01 Table IX p. 21"
+    }
+   ],
+   "preferred": null,
+   "reason": "As DSC-004.",
+   "tests": [
+    "FLEX-035"
+   ]
+  },
+  {
+   "discrepancy_id": "DSC-006",
+   "topic": "HiBMs image scale",
+   "values": [
+    {
+     "value": "FOV 30.25 mm on 1024 px → 29.5 µm/px",
+     "source": "S01 §3.1.2 p. 8"
+    },
+    {
+     "value": "scale factor 32.5 px/mm → 30.8 µm/px, 31.5 mm FOV",
+     "source": "S01 §3.1.1 step 6 p. 8"
+    },
+    {
+     "value": "FOV approximately 30 mm",
+     "source": "S01 §2.2 p. 4"
+    }
+   ],
+   "preferred": null,
+   "reason": "Requires CIR optics documentation (Banu 2008)."
+  },
+  {
+   "discrepancy_id": "DSC-007",
+   "topic": "LLUV and colour camera FOV",
+   "values": [
+    {
+     "value": "LLUV approx. 50 mm",
+     "source": "S01 §2.2 p. 4"
+    },
+    {
+     "value": "LLUV 57.8 mm (8.86 px/mm × 512)",
+     "source": "S01 §3.2.1–3.2.2 p. 8"
+    },
+    {
+     "value": "Colour approx. 110 × 90 mm",
+     "source": "S01 §2.2 p. 4"
+    },
+    {
+     "value": "93.2 mm wide (6.87 px/mm × 640), text says 'LLUV'",
+     "source": "S01 §3.3.1–3.3.2 p. 9"
+    }
+   ],
+   "preferred": null,
+   "reason": "Requires CIR optics documentation."
+  },
+  {
+   "discrepancy_id": "DSC-008",
+   "topic": "Reporting period",
+   "values": [
+    {
+     "value": "March 2009 – end of December 2011",
+     "source": "S01 p. 1; §4.1 p. 9"
+    },
+    {
+     "value": "March 2009 through December 2010",
+     "source": "S01 App. A p. 19"
+    }
+   ],
+   "preferred": "2009–2011",
+   "reason": "Table IX contains 2011 tests."
+  },
+  {
+   "discrepancy_id": "DSC-009",
+   "topic": "Initial droplet diameter range",
+   "values": [
+    {
+     "value": "between 2 and 5 mm",
+     "source": "S01 Abstract p. 2; §6 p. 17"
+    },
+    {
+     "value": "1.5–5.0 mm",
+     "source": "S03 abstract"
+    },
+    {
+     "value": "1.1–4.67 mm (Table IX)",
+     "source": "S01 Table IX"
+    }
+   ],
+   "preferred": null,
+   "reason": "Quote with source."
+  },
+  {
+   "discrepancy_id": "DSC-010",
+   "topic": "FLEX–114 pressure",
+   "values": [
+    {
+     "value": "0 mmHg",
+     "source": "S01 Table IX p. 23"
+    },
+    {
+     "value": "0.70 atm",
+     "source": "S01 Table VI p. 14"
+    }
+   ],
+   "preferred": null,
+   "reason": "Table IX value is evidently a typographical error but is preserved verbatim.",
+   "tests": [
+    "FLEX-114"
+   ]
+  },
+  {
+   "discrepancy_id": "DSC-011",
+   "topic": "Meaning of extinction diameter '0' vs '–'",
+   "values": [
+    {
+     "value": "'–' = no extinction (completion or disruption)",
+     "source": "S01 App. A.1 p. 19"
+    },
+    {
+     "value": "'0' printed for some Completion and some Disruption rows",
+     "source": "S01 Table IX"
+    }
+   ],
+   "preferred": null,
+   "reason": "Raw cell kept; '0' is not interpreted as a measured diameter."
+  },
+  {
+   "discrepancy_id": "DSC-012",
+   "topic": "Columns defined vs printed",
+   "values": [
+    {
+     "value": "A.1 defines Fiber, Notes, H₂O, heptane and methanol vapour columns",
+     "source": "S01 App. A.1 p. 19"
+    },
+    {
+     "value": "Printed Table IX has none of these columns",
+     "source": "S01 Table IX"
+    }
+   ],
+   "preferred": null,
+   "reason": "Presumably in the electronic data files (not supplied)."
+  },
+  {
+   "discrepancy_id": "DSC-013",
+   "topic": "Initial droplet diameter: test matrix vs Table IX (all tests in both)",
+   "values": [
+    {
+     "value": "Tables I–VIII D₀ (meaning not defined in the TP)",
+     "source": "S01 Tables I–VIII, printed pp. 10–15"
+    },
+    {
+     "value": "Table IX D₀ = diameter when igniters turned ON (App. A.1)",
+     "source": "S01 Table IX and App. A.1, printed pp. 19–28"
+    },
+    {
+     "value": "Differ beyond printed rounding for 127 of 145 tests in both tables; Table IX smaller for 131 of 145 (median difference −0.07 mm)",
+     "source": "Phase B cross-check (DERIVED)"
+    }
+   ],
+   "preferred": null,
+   "reason": "Different quantities or different measurement times are plausible, but the TP does not define the matrix D₀; both are shown, labelled.",
+   "detected_by": "tools/crosscheck_tables.py → data/derived/crosscheck_matrix_vs_ix.csv",
+   "impact": "App shows Table IX D₀ as the result value and the matrix D₀ separately; never merged."
+  },
+  {
+   "discrepancy_id": "DSC-014",
+   "topic": "FLEX–053 fiber support",
+   "tests": [
+    "FLEX-053"
+   ],
+   "values": [
+    {
+     "value": "No (not fiber-supported)",
+     "source": "S01 Table V, printed p. 13 (PDF p. 19)"
+    },
+    {
+     "value": "'Fiber-supported heptane droplet'",
+     "source": "S01 App. B Fig. 57 caption, PDF p. 87"
+    }
+   ],
+   "preferred": null,
+   "reason": "Two parts of the TP disagree; no third source checked.",
+   "detected_by": "tools/crosscheck_tables.py → data/derived/crosscheck_matrix_vs_ix.csv"
+  },
+  {
+   "discrepancy_id": "DSC-015",
+   "topic": "FLEX–124 fiber support",
+   "tests": [
+    "FLEX-124"
+   ],
+   "values": [
+    {
+     "value": "Yes (fiber-supported)",
+     "source": "S01 Table VI, printed p. 14 (PDF p. 20)"
+    },
+    {
+     "value": "'Free-floating methanol droplet'",
+     "source": "S01 App. B Fig. 128 caption, PDF p. 158"
+    }
+   ],
+   "preferred": null,
+   "reason": "Two parts of the TP disagree; no third source checked.",
+   "detected_by": "tools/crosscheck_tables.py → data/derived/crosscheck_matrix_vs_ix.csv"
+  },
+  {
+   "discrepancy_id": "DSC-016",
+   "topic": "FLEX–070 and FLEX–073 share one Table IX identity",
+   "tests": [
+    "FLEX-070",
+    "FLEX-073"
+   ],
+   "values": [
+    {
+     "value": "Both rows: CIR identifier 193F001, 3/23/10, 7:25:43 GMT, 761 mmHg; D₀ 4.67 mm (070) and 4.64 mm (073)",
+     "source": "S01 Table IX, printed p. 22 (PDF p. 28)"
+    },
+    {
+     "value": "FLEX–070 D₀ 1.30 mm; FLEX–073 D₀ 4.72 mm",
+     "source": "S01 Table V, printed p. 13 (PDF p. 19)"
+    },
+    {
+     "value": "FLEX–073: fuel dispensed before deployment, droplet much larger than intended; FLEX–070: extra fuel dispensed after the sequence started",
+     "source": "S01 App. B Figs. 74 and 77 captions"
+    }
+   ],
+   "preferred": null,
+   "reason": "Possibly a duplicated identity/row in Table IX, but the TP gives no correction. Values are shown as printed with this warning.",
+   "detected_by": "Phase B M2 duplicate-identity scan of Table IX + tools/crosscheck_tables.py → data/derived/crosscheck_matrix_vs_ix.csv",
+   "impact": "FLEX–070 Table IX values should not be used without this caveat."
+  },
+  {
+   "discrepancy_id": "DSC-017",
+   "topic": "FLEX–114 date/time equals FLEX–118's",
+   "tests": [
+    "FLEX-114",
+    "FLEX-118"
+   ],
+   "values": [
+    {
+     "value": "FLEX–114 and FLEX–118 both 9/6/10 19:14:22 GMT (different fuels and CIR identifiers)",
+     "source": "S01 Table IX, printed p. 23 (PDF p. 29)"
+    },
+    {
+     "value": "FLEX–114 Sept. 1, 2010 (same day as FLEX–113 and –115)",
+     "source": "S01 Table VI, printed p. 14 (PDF p. 20)"
+    }
+   ],
+   "preferred": null,
+   "reason": "Not resolvable from the TP. FLEX–114 also has P printed as 0 mmHg (DSC-010).",
+   "detected_by": "Phase B M2 duplicate-time scan + tools/crosscheck_tables.py → data/derived/crosscheck_matrix_vs_ix.csv"
+  },
+  {
+   "discrepancy_id": "DSC-018",
+   "topic": "Test dates: test matrix vs Table IX",
+   "tests": [
+    "FLEX-054",
+    "FLEX-069"
+   ],
+   "values": [
+    {
+     "value": "FLEX–054 Jan. 12, 2010; FLEX–069 Mar. 19, 2010",
+     "source": "S01 Tables IV and V, printed pp. 12–13"
+    },
+    {
+     "value": "FLEX–054 1/29/10; FLEX–069 3/23/10",
+     "source": "S01 Table IX, printed pp. 21–22"
+    }
+   ],
+   "preferred": null,
+   "reason": "The matrix may list planned dates; the TP does not say. Table IX dates are shown.",
+   "detected_by": "tools/crosscheck_tables.py → data/derived/crosscheck_matrix_vs_ix.csv"
+  },
+  {
+   "discrepancy_id": "DSC-019",
+   "topic": "FLEX–162 to –165 composition",
+   "tests": [
+    "FLEX-162",
+    "FLEX-163",
+    "FLEX-164",
+    "FLEX-165"
+   ],
+   "values": [
+    {
+     "value": "O₂/CO₂/N₂ = .153/.298/.549",
+     "source": "S01 Table VIII, printed p. 15 (PDF p. 21)"
+    },
+    {
+     "value": "CO₂ .32, N₂ .54 (162) or .53 (163–165), O₂ .15",
+     "source": "S01 Table IX, printed p. 24 (PDF p. 30)"
+    }
+   ],
+   "preferred": null,
+   "reason": "Nominal (matrix) vs reconstructed (Table IX) composition, see DSC-003; difference larger than printed rounding.",
+   "detected_by": "tools/crosscheck_tables.py → data/derived/crosscheck_matrix_vs_ix.csv"
+  },
+  {
+   "discrepancy_id": "DSC-020",
+   "topic": "Small matrix vs Table IX differences just beyond printed rounding",
+   "tests": [
+    "FLEX-084",
+    "FLEX-085",
+    "FLEX-086",
+    "FLEX-087",
+    "FLEX-097",
+    "FLEX-104",
+    "FLEX-105",
+    "FLEX-107",
+    "FLEX-118",
+    "FLEX-070",
+    "FLEX-147"
+   ],
+   "values": [
+    {
+     "value": "O₂ .126 (084–087), .240 (097, 104, 105, 107); N₂ .450 (118); P 1.01 atm (070), .71 atm (147)",
+     "source": "S01 Tables IV, VI, VII, V, VI"
+    },
+    {
+     "value": "O₂ .12, .23; N₂ .44; P 761 mmHg (1.001 atm), 535.7 mmHg (0.705 atm)",
+     "source": "S01 Table IX"
+    }
+   ],
+   "preferred": null,
+   "reason": "Nominal vs reconstructed values; differences of 0.005–0.01 are listed for completeness only.",
+   "detected_by": "tools/crosscheck_tables.py → data/derived/crosscheck_matrix_vs_ix.csv"
+  },
+  {
+   "discrepancy_id": "DSC-021",
+   "topic": "Table IX mole fractions that do not sum to 1",
+   "tests": [
+    "FLEX-069",
+    "FLEX-075",
+    "FLEX-076",
+    "FLEX-079",
+    "FLEX-080",
+    "FLEX-081"
+   ],
+   "values": [
+    {
+     "value": "O₂+N₂+CO₂+He = 0.98 as printed",
+     "source": "S01 Table IX, printed pp. 22–23"
+    },
+    {
+     "value": "All other rows within 0.015 of 1.00",
+     "source": "Phase B consistency check (DERIVED)"
+    }
+   ],
+   "preferred": null,
+   "reason": "Could be rounding or unprinted species (A.1 defines H₂O and fuel-vapour columns that are not printed, DSC-012). Not corrected.",
+   "detected_by": "Phase B M2 composition-sum check"
+  },
+  {
+   "discrepancy_id": "DSC-022",
+   "topic": "Coverage of the test matrix tables",
+   "values": [
+    {
+     "value": "Tables I–VIII list 153 tests: FLEX–001 to –166 except 072, 131–139, 144–146",
+     "source": "S01 Tables I–VIII"
+    },
+    {
+     "value": "Table IX lists 276 tests up to FLEX–280",
+     "source": "S01 Table IX"
+    }
+   ],
+   "preferred": null,
+   "reason": "Not a contradiction but a gap: for 124 Table IX tests, fiber status and nominal conditions come only from the Appendix B caption.",
+   "detected_by": "tools/crosscheck_tables.py → data/derived/crosscheck_matrix_vs_ix.csv"
+  },
+  {
+   "discrepancy_id": "DSC-023",
+   "topic": "FLEX–023 droplet size at t = 0",
+   "tests": [
+    "FLEX-023"
+   ],
+   "values": [
+    {
+     "value": "D₀ = 3.01 mm at igniter ON → D² = 9.06 mm²",
+     "source": "S01 Table IX, printed p. 21 (PDF p. 27)"
+    },
+    {
+     "value": "Plotted D² between about 9.2 and 11 mm² from t ≈ −1.5 s to 0.6 s, several markers clipped at the top of the axis; first point near 9.1 mm² at t ≈ 0.7 s",
+     "source": "S01 App. B Fig. 27 (PDF p. 57), DIGITIZED in Phase B M3"
+    }
+   ],
+   "preferred": null,
+   "reason": "The TP notes igniter glare distorts early droplet images in some tests; whether Table IX D₀ was taken from a later frame is not stated. Not resolved.",
+   "detected_by": "tools/analyze_d2_fit.py point check (data/analysis/FLEX-023_d2_fit.json) + visual inspection of Fig. 27",
+   "impact": "Do not treat the digitized early-time points of FLEX–023 as D₀."
+  },
+  {
+   "discrepancy_id": "DSC-024",
+   "topic": "Table IX columns printed but not defined",
+   "values": [
+    {
+     "value": "Table IX prints 'Burn time, s', 'Test end' and an He mole fraction",
+     "source": "S01 Table IX header, printed p. 20"
+    },
+    {
+     "value": "App. A.1 defines neither burn time nor test end nor He",
+     "source": "S01 App. A.1, printed p. 19"
+    }
+   ],
+   "preferred": null,
+   "reason": "The meaning of burn time (from igniter ON? from ignition?) and of the test-end categories is not stated; the app shows them as printed with this note.",
+   "detected_by": "Phase B M4 review of App. A.1 against the Table IX header"
+  },
+  {
+   "discrepancy_id": "DSC-025",
+   "topic": "FLEX–051 printed K vs the plotted D² history",
+   "tests": [
+    "FLEX-051"
+   ],
+   "values": [
+    {
+     "value": "K = .65 mm²/s",
+     "source": "S01 Table IX, printed p. 21 (PDF p. 27)"
+    },
+    {
+     "value": "Slopes 0.68–0.79 mm²/s over the four pre-declared windows; the plotted D² is flat for ≈1.5 s, drops steeply, then decreases nearly linearly with steps",
+     "source": "S01 App. B Fig. 55, DIGITIZED (Phase B M5), data/analysis/FLEX-051_d2_fit.json"
+    },
+    {
+     "value": "Fiber-supported droplet with significant transverse oscillations; flame disappeared abruptly halfway through the burn",
+     "source": "S01 App. B Fig. 55 caption"
+    }
+   ],
+   "preferred": null,
+   "reason": "NASA's fit window is not reported (CLM-019). The difference is most likely the window, but no window was chosen after the fact to match the printed value.",
+   "detected_by": "tools/analyze_d2_fit.py (Phase B M5)"
+  },
+  {
+   "discrepancy_id": "DSC-026",
+   "topic": "Light source opposite the HiBMs camera",
+   "values": [
+    {
+     "value": "Box opposite the HiBMs labelled 'LED light source'",
+     "source": "S01 Fig. 3, printed p. 3 (PDF p. 9)"
+    },
+    {
+     "value": "HiBMs backlight is a laser diode with collimating optics; the white LED illuminates the colour camera view",
+     "source": "S01 §2.2, printed p. 4 (PDF p. 10)"
+    }
+   ],
+   "preferred": null,
+   "reason": "The 3D layout reproduces the Fig. 3 label and notes the text; which hardware sits in that position is not resolvable from the TP.",
+   "detected_by": "Phase B M5 (3D layout from Fig. 3)"
+  },
+  {
+   "discrepancy_id": "DSC-027",
+   "topic": "Standard enthalpy of combustion of liquid methanol",
+   "values": [
+    {
+     "value": "-726.1 kJ/mol (computed from formation enthalpies) and -727 kJ/mol (liquid)",
+     "source": "S44"
+    },
+    {
+     "value": "-715.0 kJ/mol",
+     "source": "S45"
+    }
+   ],
+   "preferred": "-726.1 kJ/mol (nominal); range -727 to -715 kJ/mol carried as the model's low/high heating-value option",
+   "reason": "-726.1 kJ/mol follows from the formation enthalpies stated with it; the -715.0 kJ/mol value has no derivation in the snippet read. Both are tertiary sources.",
+   "detected_by": "Phase B M6 (property sourcing)"
+  }
+ ]
+}

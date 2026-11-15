@@ -1,0 +1,823 @@
+{
+ "registry_version": "0.5.1",
+ "fields": {
+  "evidence_class": "origin of the statement",
+  "verification_status": "what this review checked"
+ },
+ "claims": [
+  {
+   "claim_id": "CLM-001",
+   "claim_text": "The CIR combustion chamber has a volume of 90 L.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§2.1, p. 2"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-002",
+   "claim_text": "The CIR chamber can operate at approximately 0 to 9 atm.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§2.1, p. 2"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-003",
+   "claim_text": "For FLEX, safety analysis reduced the maximum working pressure to approximately 3 atm.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§2.1, p. 3"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-004",
+   "claim_text": "FLEX tests in the TP were run at pressures between 0.70 and 3.05 atm, most between 0.7 and 1 atm.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "Abstract, p. 1–2; §6, p. 17"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-005",
+   "claim_text": "Deployment needles are stainless-steel tubes of 250 µm outside diameter with specially treated ends.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§2.1, p. 3"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-006",
+   "claim_text": "Two hot-wire igniters are located 180° to each other in the same plane as the deployment needles.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§2.1, p. 4"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-007",
+   "claim_text": "Fiber-supported tests used an 80 µm support fiber.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§2.1, p. 4"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-008",
+   "claim_text": "The 80 µm support fiber is silicon carbide.",
+   "evidence_class": "PEER_OR_TEAM_REPORT",
+   "sources": [
+    {
+     "source_id": "S40",
+     "locator": "§2 (search snippet)"
+    }
+   ],
+   "support": "partial",
+   "verification_status": "PARTIALLY VERIFIED",
+   "note": "Not stated in the TP; stated in a FLEX-team conference paper seen only as a search snippet."
+  },
+  {
+   "claim_id": "CLM-009",
+   "claim_text": "HiBMs droplet-size uncertainty was estimated at ±50 µm; coverage factor and distribution are not stated.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§3.1.2, p. 8"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-010",
+   "claim_text": "HiBMs minimum spatial resolution is stated as ±29.5 µm (FOV 30.25 mm, 1024 px).",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§3.1.2, p. 8"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Inconsistent with the 32.5 px/mm scale factor in §3.1.1 (see DSC-006)."
+  },
+  {
+   "claim_id": "CLM-011",
+   "claim_text": "LLUV flame-size uncertainty was estimated at ±200 µm; minimum spatial resolution ±113 µm (57.8 mm, 512 px).",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§3.2.2, pp. 8–9"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-012",
+   "claim_text": "MDCA colour-camera flame-size uncertainty was estimated at ±250 µm; minimum spatial resolution ±146 µm (93.2 mm, 640 px).",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§3.3.2, p. 9"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-013",
+   "claim_text": "The LLUV threshold represents the outer edge of OH* chemiluminescence and likely overestimates a measure based on maximum radial intensity.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§3.2.1–3.2.2, p. 8"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-014",
+   "claim_text": "Colour-camera flame diameters are typically about three-fourths of LLUV flame diameters, with a larger discrepancy for sooting heptane flames.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§4.2/§5.1, p. 16"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-015",
+   "claim_text": "The MDCA radiometers were not sensitive enough to provide reliable quantitative information; radiometer data are not reported.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§2.2, p. 4"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-016",
+   "claim_text": "The g-environment was low enough that buoyant flow could be considered negligible, but g-jitter caused droplet drift, potentially out of the camera FOV.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§2.3, p. 5"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-017",
+   "claim_text": "When a droplet drifts out of a camera's FOV the data from that view end or show a gap; this is not the end of the test.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§4.2, p. 16"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-018",
+   "claim_text": "Time zero in Appendix B plots and the D₀ of Table IX correspond to when the igniters were turned on.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "App. A.1, p. 19; App. B, p. 29"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-019",
+   "claim_text": "The Table IX burning rate is an average from a linear fit of D² versus time from shortly after ignition to extinction.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "App. A.1, p. 19"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-020",
+   "claim_text": "Table IX ambient composition is reconstructed from detailed records of chamber fill, recirculation, filter and combustion history.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "App. A.1, p. 19; §2.3, p. 7"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-021",
+   "claim_text": "Cameras record for a preset time, typically on the order of 40 s.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§2.3 (5)(c)(v), p. 5"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-022",
+   "claim_text": "Data recording starts before droplet deployment; ignition follows deployment; igniters are then turned off and retracted.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§2.3 (5)(c)(i)–(iv), p. 5"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-023",
+   "claim_text": "A conformal coating on the fuel needles dissolved/flaked into the fuel in the tests reported; deployed droplets contained an unknown amount of it.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§5.2, p. 16"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-024",
+   "claim_text": "Per the TP authors, burning-rate constants and flame sizes were minimally influenced by the needle contaminant.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§5.2 assertions (1)–(2), p. 16"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Authors' assertion based on testing and analysis."
+  },
+  {
+   "claim_id": "CLM-025",
+   "claim_text": "Per the TP authors, disruptive extinction of methanol is probably due to the needle contaminant; for heptane no conclusion can be drawn.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§5.2 assertions (4)–(5), p. 16"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-026",
+   "claim_text": "Tests FLEX–001 to –009 used a 1/30 s shutter with image distortion from igniters and flame radiation; later tests used 1/1000 s, giving more accurate droplet size data.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§5.1, p. 16"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-027",
+   "claim_text": "After visible flame extinction in some large heptane tests, continued vaporization and vapour-cloud formation were observed, which the authors describe as indicative of cool flame burning.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "Fig. 39 caption p. 63; Fig. 66 p. 90; Fig. 201 p. 225"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "An inference by the authors, not a direct measurement of a cool flame."
+  },
+  {
+   "claim_id": "CLM-028",
+   "claim_text": "The FLEX TP states that it presents results of the first 284 tests.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "p. 1"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Table IX lists 276 rows (see DSC-001)."
+  },
+  {
+   "claim_id": "CLM-029",
+   "claim_text": "First FLEX experiments covered initial droplet diameters 1.5–5.0 mm, oxygen mole fractions 0.1–0.4 and pressures 0.7–3.0 atm.",
+   "evidence_class": "PEER_REVIEWED_RESULT",
+   "sources": [
+    {
+     "source_id": "S03",
+     "locator": "Abstract"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "PARTIALLY VERIFIED",
+   "note": "Table IX reconstructed O₂ maximum is 0.34 (DSC-003); TP D₀ range 1.1–4.67 mm. Checked against the abstract only; full text not available."
+  },
+  {
+   "claim_id": "CLM-030",
+   "claim_text": "Limiting oxygen index in O₂/N₂ at 1 atm is approximately 0.12 for methanol and 0.15 for n-heptane.",
+   "evidence_class": "PEER_REVIEWED_RESULT",
+   "sources": [
+    {
+     "source_id": "S03",
+     "locator": "not located"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "UNVERIFIED",
+   "note": "Carried over from the prototype; source not read."
+  },
+  {
+   "claim_id": "CLM-031",
+   "claim_text": "Methanol droplets (D₀≈2.75±0.08 mm) had k̄ of 0.52 (N₂), 0.45 (CO₂) and 0.70 mm²/s (He).",
+   "evidence_class": "PEER_REVIEWED_RESULT",
+   "sources": [
+    {
+     "source_id": "S03",
+     "locator": "Fig. 6 (claimed)"
+    },
+    {
+     "source_id": "S06",
+     "locator": "not located"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "UNVERIFIED",
+   "note": "Candidate Table IX matches FLEX–204 (1.0 atm), FLEX–110 (0.71 atm), FLEX–263 (0.70 atm)."
+  },
+  {
+   "claim_id": "CLM-032",
+   "claim_text": "Free droplets drifted at about 1–2 mm/s.",
+   "evidence_class": "PEER_REVIEWED_RESULT",
+   "sources": [
+    {
+     "source_id": "S03",
+     "locator": "Fig. 3 (claimed)"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "UNVERIFIED",
+   "note": ""
+  },
+  {
+   "claim_id": "CLM-033",
+   "claim_text": "GRI-Mech 3.0 is a methane/natural-gas mechanism and is not an appropriate default for methanol or n-heptane FLEX simulations.",
+   "evidence_class": "SOFTWARE_DOC",
+   "sources": [
+    {
+     "source_id": "S26",
+     "locator": "entry"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "UNVERIFIED",
+   "note": "Policy statement; source not opened in this review."
+  },
+  {
+   "claim_id": "CLM-034",
+   "claim_text": "Historical test counts differ by document: 196 planned (2009 plan), 258 'FLEX & FLEX-H' (Oct 2010), first 284 (2015 TP).",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S02",
+     "locator": "not located"
+    },
+    {
+     "source_id": "S09",
+     "locator": "not located"
+    },
+    {
+     "source_id": "S01",
+     "locator": "p. 1"
+    }
+   ],
+   "support": "partial",
+   "verification_status": "PARTIALLY VERIFIED",
+   "note": "Only the 284 figure was verified."
+  },
+  {
+   "claim_id": "CLM-035",
+   "claim_text": "Tables III–VII state for each listed test whether the droplet was supported by a fiber; the headers of Tables I, II and VIII state that the droplets were not supported by a fiber.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "Tables I–VIII, printed pp. 10–15 (PDF pp. 16–21)"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Added in M2."
+  },
+  {
+   "claim_id": "CLM-036",
+   "claim_text": "Each Appendix B figure caption describes the test droplet as free-floating or fiber-supported.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "Appendix B, Figs. 5–280 captions"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Added in M2."
+  },
+  {
+   "claim_id": "CLM-037",
+   "claim_text": "In FLEX–073 an error in the automated test sequence made the MDCA dispense fuel before deployment, giving a droplet much larger than intended.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "Appendix B, Fig. 77 caption (PDF p. 107)"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Added in M2."
+  },
+  {
+   "claim_id": "CLM-038",
+   "claim_text": "In FLEX–070 extra fuel was dispensed after the automated sequence started.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "Appendix B, Fig. 74 caption (PDF p. 104)"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Added in M2."
+  },
+  {
+   "claim_id": "CLM-039",
+   "claim_text": "Appendix B Figures 5–280 plot droplet diameter squared and flame diameter (LLUV and, where available, MDCA colour camera) against time, with time zero when the igniter was energized.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "Appendix B introduction, printed p. 29 (PDF p. 35)"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Added in M3."
+  },
+  {
+   "claim_id": "CLM-040",
+   "claim_text": "The data for each test are also available in a text file associated with the TP.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "Appendix B introduction, printed p. 29 (PDF p. 35)"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "The file was not available to this project; hence digitization (M3)."
+  },
+  {
+   "claim_id": "CLM-041",
+   "claim_text": "Where the droplet left the HiBMs field of view before extinction, the authors estimated the extinction diameter by extrapolating the burning history when enough history was available; otherwise it is not listed. Table IX does not mark which values were extrapolated.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "App. A.1, printed p. 19 (PDF p. 25)"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Added in M4. The last sentence is an observation about Table IX by this review."
+  },
+  {
+   "claim_id": "CLM-042",
+   "claim_text": "App. A.1 defines the Table IX columns test, identifier, date, time, fuel, actual D0, burning rate, visible flame extinction diameter, P, O2, CO2 and N2, but gives no definition for the printed columns 'Burn time', 'Test end' and 'He'.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "App. A.1 and Table IX header, printed pp. 19–20"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Added in M4; see DSC-024."
+  },
+  {
+   "claim_id": "CLM-043",
+   "claim_text": "Natural convection destroys the spherical symmetry of droplet combustion in normal gravity; microgravity experiments afford spherical symmetry.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§1, printed p. 2 (PDF p. 8)"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Added in M5 (used by the burn timeline)."
+  },
+  {
+   "claim_id": "CLM-044",
+   "claim_text": "After deployment the droplet is misshaped by the needle retraction but assumes the expected spherical shape within approximately 1 s.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§2.3, printed p. 7 (PDF p. 13)"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Added in M5 (used by the burn timeline)."
+  },
+  {
+   "claim_id": "CLM-045",
+   "claim_text": "For heptane tests with significant soot luminosity (not visible in the LLUV, dominant in the colour camera), the peak of the soot luminosity is typically inside the blue flame envelope.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§5.1, printed p. 16 (PDF p. 22)"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Added in M5 (used by the burn timeline)."
+  },
+  {
+   "claim_id": "CLM-046",
+   "claim_text": "Both flame-diameter measurements are of the outer edge of the flame; the colour-camera diameters are the smaller of the two.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§1, printed p. 2 (PDF p. 8)"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Added in M5 (used by the burn timeline)."
+  },
+  {
+   "claim_id": "CLM-047",
+   "claim_text": "The CIR diagnostics include a backlit view of the droplet (HiBMs, laser-diode illumination at 650–660 nm operated below lasing threshold) and an orthogonal view of the flame.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§2.2, printed p. 4 (PDF p. 10)"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Added in M5 (3D layout)."
+  },
+  {
+   "claim_id": "CLM-048",
+   "claim_text": "The MDCA colour camera has a zoom lens and a white LED on the MDCA; the LED is on during droplet formation and is turned off immediately before deployment and ignition, when the camera zooms out to a field of view of approximately 110 by 90 mm.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§2.2, printed p. 4 (PDF p. 10)"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Added in M5 (3D layout)."
+  },
+  {
+   "claim_id": "CLM-049",
+   "claim_text": "In MDCA colour-camera footage the igniters appear as open D-shaped wire loops at the ends of two diagonal shafts, and the droplet is held between two thin opposed needle tips carried on L-shaped arms.",
+   "evidence_class": "VISUAL_OBSERVATION",
+   "sources": [
+    {
+     "source_id": "S41",
+     "locator": "frame at about 0:08 and a close-up deployment frame (user screenshots)"
+    }
+   ],
+   "support": "partial",
+   "verification_status": "PARTIALLY VERIFIED",
+   "note": "Added in M5.1 for the photorealistic rendering. Qualitative appearance only; which FLEX test the footage shows is not established, so no size, colour value or timing is taken from it."
+  },
+  {
+   "claim_id": "CLM-050",
+   "claim_text": "In the same footage the hot igniter wires glow white at ignition, the burning flame shows a bright luminous (yellow-white to pink, camera-saturated) region surrounding the droplet inside a dimmer blue spherical outer shell, and the dark background shows coloured single-pixel camera noise.",
+   "evidence_class": "VISUAL_OBSERVATION",
+   "sources": [
+    {
+     "source_id": "S41",
+     "locator": "frames at about 0:45, 0:47 and later (user screenshots)"
+    }
+   ],
+   "support": "partial",
+   "verification_status": "PARTIALLY VERIFIED",
+   "note": "Added in M5.1 for the photorealistic rendering. Qualitative appearance only; which FLEX test the footage shows is not established, so no size, colour value or timing is taken from it."
+  },
+  {
+   "claim_id": "CLM-051",
+   "claim_text": "The TP introduces spherically symmetric droplet combustion as a classical problem first addressed by Godsave (1952), Hall and Diederichsen (1953) and Spalding (1952, 1953).",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "§1.0 Introduction, printed p. 2 (PDF p. 8)"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Basis for calling the D²-law baseline 'the classical theory the TP cites'; the TP itself presents no model equations."
+  },
+  {
+   "claim_id": "CLM-052",
+   "claim_text": "The FLEX tests were burned at 'ambient temperature'; the TP gives no numerical value, so the D²-law baseline assumes 298.15 K.",
+   "evidence_class": "NASA_REPORTED",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "Abstract and §1.0, printed p. 1–2"
+    }
+   ],
+   "support": "partial",
+   "verification_status": "VERIFIED",
+   "note": "The 298.15 K value is an assumption of this release, not a TP value."
+  },
+  {
+   "claim_id": "CLM-053",
+   "claim_text": "Fuel boiling points, latent heats and liquid densities, and the cp, conductivity and viscosity of N2, O2, CO2 and He used by the D²-law baseline, are CoolProp 8.0.0 evaluations at 1 atm (data/model/d2law_properties.json).",
+   "evidence_class": "REFERENCE_DATA",
+   "sources": [
+    {
+     "source_id": "S42",
+     "locator": "CoolProp 8.0.0 PropsSI; generator tools/build_model_properties.py"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Reproducible by re-running the generator, which refuses other CoolProp versions. Fuel-vapour properties are not used: the methanol and n-heptane equations are valid only to 620 K and 600 K."
+  },
+  {
+   "claim_id": "CLM-054",
+   "claim_text": "Standard enthalpy of combustion of liquid n-heptane: -4.825 to -4.809 MJ/mol (midpoint -4817 kJ/mol used).",
+   "evidence_class": "REFERENCE_DATA",
+   "sources": [
+    {
+     "source_id": "S43",
+     "locator": "infobox, Thermochemistry"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "PARTIALLY VERIFIED",
+   "note": "Tertiary source; the range is carried into the model's Q_variant low/high option."
+  },
+  {
+   "claim_id": "CLM-055",
+   "claim_text": "Standard enthalpy of combustion of liquid methanol: -726.1 kJ/mol (S44, from formation enthalpies) and -727 kJ/mol (S44), but -715.0 kJ/mol in S45; -726.1 kJ/mol is used, the spread is carried as the low/high option.",
+   "evidence_class": "REFERENCE_DATA",
+   "sources": [
+    {
+     "source_id": "S44",
+     "locator": "methanol page"
+    },
+    {
+     "source_id": "S45",
+     "locator": "liquid properties"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "PARTIALLY VERIFIED",
+   "note": "See DSC-027."
+  },
+  {
+   "claim_id": "CLM-056",
+   "claim_text": "The D²-law educational baseline (openflex/d2law.py 1.0.0) passes 24 code-verification checks (conservation residuals, boundary and jump conditions, RK4 convergence order, fixed point, invariances, hand calculation). It is not validated against FLEX.",
+   "evidence_class": "NUMERICAL_SIMULATION",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "Table IX (printed values used only for the comparison, not to set the model)"
+    }
+   ],
+   "support": "partial",
+   "verification_status": "VERIFIED",
+   "note": "Record: data/verification/d2law_code_verification.json. Code verification shows the equations are solved correctly, not that they describe FLEX."
+  },
+  {
+   "claim_id": "CLM-057",
+   "claim_text": "At the printed conditions of the Table IX tests, the baseline's burning-rate constant exceeds the printed K for every test with both values: model/printed median 2.1 (methanol, 151 tests) and 4.3 (n-heptane, 109 tests).",
+   "evidence_class": "NUMERICAL_SIMULATION",
+   "sources": [
+    {
+     "source_id": "S01",
+     "locator": "Table IX, printed pp. 20–28"
+    }
+   ],
+   "support": "direct",
+   "verification_status": "VERIFIED",
+   "note": "Comparison, not validation (data/analysis/d2law_vs_table_ix.csv). Expected directions of error include gas properties of hot air rather than fuel vapour and products, and no radiative loss; these are not quantified here."
+  }
+ ]
+}

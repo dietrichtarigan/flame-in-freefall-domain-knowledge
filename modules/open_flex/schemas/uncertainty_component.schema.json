@@ -1,0 +1,147 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://open-flex.local/schemas/uncertainty_component.schema.json",
+ "title": "Uncertainty component registry",
+ "type": "object",
+ "required": [
+  "registry_version",
+  "components"
+ ],
+ "properties": {
+  "registry_version": {
+   "type": "string"
+  },
+  "note": {
+   "type": "string"
+  },
+  "components": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "component",
+     "measurand",
+     "applies_to",
+     "status",
+     "value",
+     "unit",
+     "interval_type",
+     "coverage_factor",
+     "distribution",
+     "propagated",
+     "statement",
+     "claims"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^UC-[0-9]{2}$"
+     },
+     "component": {
+      "type": "string"
+     },
+     "measurand": {
+      "type": "string"
+     },
+     "applies_to": {
+      "type": "object",
+      "required": [
+       "kind"
+      ],
+      "properties": {
+       "kind": {
+        "enum": [
+         "all",
+         "range",
+         "digitized"
+        ]
+       },
+       "first": {
+        "type": "integer"
+       },
+       "last": {
+        "type": "integer"
+       }
+      }
+     },
+     "status": {
+      "enum": [
+       "reported",
+       "reported precision",
+       "estimated (scale only)",
+       "estimated (sensitivity)",
+       "qualitative",
+       "flagged",
+       "not quantified",
+       "not applicable"
+      ]
+     },
+     "value": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "unit": {
+      "type": "string"
+     },
+     "interval_type": {
+      "type": "string",
+      "not": {
+       "pattern": "(?i)(sigma|σ|standard deviation|confidence|95)"
+      }
+     },
+     "coverage_factor": {
+      "type": "string",
+      "enum": [
+       "not stated",
+       "not applicable"
+      ]
+     },
+     "distribution": {
+      "type": "string",
+      "enum": [
+       "not specified",
+       "not applicable"
+      ]
+     },
+     "propagated": {
+      "const": false
+     },
+     "statement": {
+      "type": "string"
+     },
+     "claims": {
+      "type": "array",
+      "items": {
+       "$ref": "common.schema.json#/$defs/claim_id"
+      }
+     },
+     "record_ref": {
+      "type": "string"
+     }
+    },
+    "allOf": [
+     {
+      "if": {
+       "properties": {
+        "status": {
+         "const": "reported"
+        }
+       }
+      },
+      "then": {
+       "properties": {
+        "claims": {
+         "minItems": 1
+        }
+       }
+      }
+     }
+    ]
+   }
+  }
+ }
+}

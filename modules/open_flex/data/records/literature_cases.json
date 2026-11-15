@@ -1,0 +1,181 @@
+{
+ "registry_version": "0.2.0",
+ "note": "Cases from published figures. Conditions are as attributed by the original prototype and were NOT checked against the papers (full texts unavailable). Links to physical tests are CANDIDATES.",
+ "cases": [
+  {
+   "record_type": "LiteratureFigureCase",
+   "case_id": "LIT-Dietrich-2014-FIG3",
+   "source": {
+    "source_id": "S03",
+    "locator": "Fig. 3"
+   },
+   "conditions": {
+    "status": "ATTRIBUTED_NOT_CHECKED",
+    "values": {
+     "fuel": "n-heptane",
+     "D0_mm": 3.41,
+     "X_O2": 0.18,
+     "P_atm": 1.0,
+     "k_mm2_s": 0.38
+    },
+    "attributed_by": "(original prototype, flex_virtual_lab.html; not checked against the paper)"
+   },
+   "linked_physical_test": {
+    "test_id": "FLEX-062",
+    "status": "CANDIDATE",
+    "basis": "Conditions and K close to Table IX FLEX–062; paper not read."
+   }
+  },
+  {
+   "record_type": "LiteratureFigureCase",
+   "case_id": "LIT-Dietrich-2014-FIG4-A",
+   "source": {
+    "source_id": "S03",
+    "locator": "Fig. 4"
+   },
+   "conditions": {
+    "status": "ATTRIBUTED_NOT_CHECKED",
+    "values": {
+     "fuel": "n-heptane",
+     "D0_mm": "~3.0",
+     "O2_N2_CO2": "0.20/0.75/0.05",
+     "k_mm2_s": 0.49
+    },
+    "attributed_by": "(original prototype, flex_virtual_lab.html; not checked against the paper)"
+   },
+   "linked_physical_test": {
+    "test_id": "FLEX-198",
+    "status": "CANDIDATE",
+    "basis": "Matched by conditions and K in Table IX; paper not read."
+   }
+  },
+  {
+   "record_type": "LiteratureFigureCase",
+   "case_id": "LIT-Dietrich-2014-FIG4-B",
+   "source": {
+    "source_id": "S03",
+    "locator": "Fig. 4"
+   },
+   "conditions": {
+    "status": "ATTRIBUTED_NOT_CHECKED",
+    "values": {
+     "fuel": "n-heptane",
+     "D0_mm": "~2.1",
+     "O2_N2_CO2": "0.20/0.75/0.05",
+     "k_mm2_s": 0.53
+    },
+    "attributed_by": "(original prototype, flex_virtual_lab.html; not checked against the paper)"
+   },
+   "linked_physical_test": {
+    "test_id": "FLEX-199",
+    "status": "CANDIDATE",
+    "basis": "Matched by conditions and K in Table IX; paper not read."
+   }
+  },
+  {
+   "record_type": "LiteratureFigureCase",
+   "case_id": "LIT-Dietrich-2014-FIG5",
+   "source": {
+    "source_id": "S03",
+    "locator": "Fig. 5"
+   },
+   "conditions": {
+    "status": "ATTRIBUTED_NOT_CHECKED",
+    "values": {},
+    "attributed_by": "(original prototype, flex_virtual_lab.html; not checked against the paper)"
+   },
+   "linked_physical_test": {
+    "test_id": "FLEX-035",
+    "status": "CANDIDATE",
+    "basis": "Claimed by the original prototype; paper not read."
+   }
+  },
+  {
+   "record_type": "LiteratureFigureCase",
+   "case_id": "LIT-Dietrich-2014-FIG6-N2",
+   "source": {
+    "source_id": "S03",
+    "locator": "Fig. 6"
+   },
+   "conditions": {
+    "status": "ATTRIBUTED_NOT_CHECKED",
+    "values": {
+     "fuel": "methanol",
+     "diluent": "N2",
+     "k_mm2_s": 0.52
+    },
+    "attributed_by": "(original prototype, flex_virtual_lab.html; not checked against the paper)"
+   },
+   "linked_physical_test": {
+    "test_id": "FLEX-204",
+    "status": "CANDIDATE",
+    "basis": "D₀ 2.75 mm and K 0.52 match Table IX; paper not read."
+   },
+   "note": "The k values and D₀ ≈ 2.75 ± 0.08 mm are stated in the S03 abstract (CLM-031); the figure number and the link to a test are not checked."
+  },
+  {
+   "record_type": "LiteratureFigureCase",
+   "case_id": "LIT-Dietrich-2014-FIG6-CO2",
+   "source": {
+    "source_id": "S03",
+    "locator": "Fig. 6"
+   },
+   "conditions": {
+    "status": "ATTRIBUTED_NOT_CHECKED",
+    "values": {
+     "fuel": "methanol",
+     "diluent": "CO2",
+     "k_mm2_s": 0.45
+    },
+    "attributed_by": "(original prototype, flex_virtual_lab.html; not checked against the paper)"
+   },
+   "linked_physical_test": {
+    "test_id": "FLEX-110",
+    "status": "CANDIDATE",
+    "basis": "Table IX gives 0.71 atm whereas the prototype assumed 1.00 atm; paper not read."
+   },
+   "note": "The k values and D₀ ≈ 2.75 ± 0.08 mm are stated in the S03 abstract (CLM-031); the figure number and the link to a test are not checked."
+  },
+  {
+   "record_type": "LiteratureFigureCase",
+   "case_id": "LIT-Dietrich-2014-FIG6-He",
+   "source": {
+    "source_id": "S03",
+    "locator": "Fig. 6"
+   },
+   "conditions": {
+    "status": "ATTRIBUTED_NOT_CHECKED",
+    "values": {
+     "fuel": "methanol",
+     "diluent": "He",
+     "k_mm2_s": 0.7
+    },
+    "attributed_by": "(original prototype, flex_virtual_lab.html; not checked against the paper)"
+   },
+   "linked_physical_test": {
+    "test_id": "FLEX-263",
+    "status": "CANDIDATE",
+    "basis": "Table IX gives 0.70 atm whereas the prototype assumed 1.00 atm; paper not read."
+   },
+   "note": "The k values and D₀ ≈ 2.75 ± 0.08 mm are stated in the S03 abstract (CLM-031); the figure number and the link to a test are not checked."
+  },
+  {
+   "record_type": "LiteratureFigureCase",
+   "case_id": "LIT-Williams-2009-TEST0035",
+   "source": {
+    "source_id": "S07",
+    "locator": "whole document (title)"
+   },
+   "conditions": {
+    "status": "ATTRIBUTED_NOT_CHECKED",
+    "values": {},
+    "attributed_by": "(original prototype, flex_virtual_lab.html; not checked against the paper)"
+   },
+   "linked_physical_test": {
+    "test_id": "FLEX-035",
+    "status": "CANDIDATE",
+    "basis": "Same test number in the title; document not available."
+   }
+  }
+ ]
+}

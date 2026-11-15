@@ -1,0 +1,2098 @@
+{
+ "datasets": [
+  {
+   "data_class": "ANALYSIS",
+   "dataset_id": "DS-ANA-D2LAW-VS-IX",
+   "inputs": [
+    "data/simulations/d2law_baseline_runs.json",
+    "data/extracted/table_ix.csv"
+   ],
+   "limitations": "Comparison, not validation; no uncertainty on either value is applied.",
+   "method": "tools/run_d2law_baseline.py",
+   "origin": "DS-SIM-D2LAW-BASELINE + Table IX",
+   "path": "data/analysis/d2law_vs_table_ix.csv",
+   "processing_history": [
+    "M6: created"
+   ],
+   "record_type": "Dataset",
+   "rows": 276,
+   "schema": "CSV: flex_test, fuel, K_printed_mm2_s (as printed), K_model_mm2_s, ratio_model_to_printed, simulation_run_id",
+   "sha256": "b44700da38e2c74155bc2db892ecde4db04b64ca9ce5329d96a9e29516e5a757",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "ANALYSIS",
+   "dataset_id": "DS-ANA-FLEX-010-D2FIT",
+   "inputs": [
+    "data/digitized/FLEX-010_fig014_droplet_d2.csv",
+    "data/extracted/table_ix.csv"
+   ],
+   "limitations": "Digitization check against printed K; not validation; no intervals.",
+   "method": "tools/analyze_d2_fit.py 1.1.0",
+   "origin": "DS-DIG-FLEX-010-FIG014-D2 + Table IX",
+   "path": "data/analysis/FLEX-010_d2_fit.json",
+   "processing_history": [
+    "digitization check (re-run for method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/analysis_run.schema.json",
+   "sha256": "2f271bcb6010949b21a55aab5831e9be0536b1c9fa4b0a384f57085ccd232268",
+   "test_id": "FLEX-010",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "ANALYSIS",
+   "dataset_id": "DS-ANA-FLEX-023-D2FIT",
+   "inputs": [
+    "data/digitized/FLEX-023_fig027_droplet_d2.csv",
+    "data/extracted/table_ix.csv"
+   ],
+   "limitations": "Digitization check against printed K; not validation; no intervals.",
+   "method": "tools/analyze_d2_fit.py 1.1.0",
+   "origin": "DS-DIG-FLEX-023-FIG027-D2 + Table IX",
+   "path": "data/analysis/FLEX-023_d2_fit.json",
+   "processing_history": [
+    "digitization check (re-run for method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/analysis_run.schema.json",
+   "sha256": "fc2fc8c2690ff2820b59156274885864cbbd92b76a1b4d0b3b5ac4e7eae62588",
+   "test_id": "FLEX-023",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "ANALYSIS",
+   "dataset_id": "DS-ANA-FLEX-033-D2FIT",
+   "inputs": [
+    "data/digitized/FLEX-033_fig037_droplet_d2.csv",
+    "data/extracted/table_ix.csv"
+   ],
+   "limitations": "Digitization check against printed K; not validation; no intervals.",
+   "method": "tools/analyze_d2_fit.py 1.1.0",
+   "origin": "DS-DIG-FLEX-033-FIG037-D2 + Table IX",
+   "path": "data/analysis/FLEX-033_d2_fit.json",
+   "processing_history": [
+    "digitization check (re-run for method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/analysis_run.schema.json",
+   "sha256": "bc90ae32c263f389f917a90fc7b62459fae1678c3a7e8767c9cf8888ec201e8e",
+   "test_id": "FLEX-033",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "ANALYSIS",
+   "dataset_id": "DS-ANA-FLEX-035-D2FIT",
+   "inputs": [
+    "data/digitized/FLEX-035_fig039_droplet_d2.csv",
+    "data/extracted/table_ix.csv"
+   ],
+   "limitations": "Digitization check against printed K; not validation; no intervals.",
+   "method": "tools/analyze_d2_fit.py 1.1.0",
+   "origin": "DS-DIG-FLEX-035-FIG039-D2 + Table IX",
+   "path": "data/analysis/FLEX-035_d2_fit.json",
+   "processing_history": [
+    "digitization check (re-run for method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/analysis_run.schema.json",
+   "sha256": "6a4126643c870d87be0ab6110fc38f9b9e3803dec75306f1939c935902db3181",
+   "test_id": "FLEX-035",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "ANALYSIS",
+   "dataset_id": "DS-ANA-FLEX-049-D2FIT",
+   "inputs": [
+    "data/digitized/FLEX-049_fig053_droplet_d2.csv",
+    "data/extracted/table_ix.csv"
+   ],
+   "limitations": "Digitization check against printed K; not validation; no intervals.",
+   "method": "tools/analyze_d2_fit.py 1.1.0",
+   "origin": "DS-DIG-FLEX-049-FIG053-D2 + Table IX",
+   "path": "data/analysis/FLEX-049_d2_fit.json",
+   "processing_history": [
+    "digitization check (re-run for method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/analysis_run.schema.json",
+   "sha256": "2635f94e0543afdaae5718e26837f16b2af7a598bc7daafa6c2e9ae63d611bfa",
+   "test_id": "FLEX-049",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "ANALYSIS",
+   "dataset_id": "DS-ANA-FLEX-051-D2FIT",
+   "inputs": [
+    "data/digitized/FLEX-051_fig055_droplet_d2.csv",
+    "data/extracted/table_ix.csv"
+   ],
+   "limitations": "Digitization check against printed K; not validation; no intervals.",
+   "method": "tools/analyze_d2_fit.py 1.1.0",
+   "origin": "DS-DIG-FLEX-051-FIG055-D2 + Table IX",
+   "path": "data/analysis/FLEX-051_d2_fit.json",
+   "processing_history": [
+    "digitization check (re-run for method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/analysis_run.schema.json",
+   "sha256": "8fe34794c06fba78a38d2e53365eea1fbd90a6ca04fa0a80d2f7f190afb19be6",
+   "test_id": "FLEX-051",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "ANALYSIS",
+   "dataset_id": "DS-ANA-FLEX-062-D2FIT",
+   "inputs": [
+    "data/digitized/FLEX-062_fig066_droplet_d2.csv",
+    "data/extracted/table_ix.csv"
+   ],
+   "limitations": "Digitization check against printed K; not validation; no intervals.",
+   "method": "tools/analyze_d2_fit.py 1.1.0",
+   "origin": "DS-DIG-FLEX-062-FIG066-D2 + Table IX",
+   "path": "data/analysis/FLEX-062_d2_fit.json",
+   "processing_history": [
+    "digitization check (re-run for method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/analysis_run.schema.json",
+   "sha256": "e239bd613028ef333a7711dd8f58b63cb96f9e96ee94a87d9673ac67ebeddf1c",
+   "test_id": "FLEX-062",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "ANALYSIS",
+   "dataset_id": "DS-ANA-FLEX-082-D2FIT",
+   "inputs": [
+    "data/digitized/FLEX-082_fig086_droplet_d2.csv",
+    "data/extracted/table_ix.csv"
+   ],
+   "limitations": "Digitization check against printed K; not validation; no intervals.",
+   "method": "tools/analyze_d2_fit.py 1.1.0",
+   "origin": "DS-DIG-FLEX-082-FIG086-D2 + Table IX",
+   "path": "data/analysis/FLEX-082_d2_fit.json",
+   "processing_history": [
+    "digitization check (re-run for method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/analysis_run.schema.json",
+   "sha256": "422607275b8196bac2656671efb098d56176998438ba6702be2a6442e0ea9917",
+   "test_id": "FLEX-082",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "ANALYSIS",
+   "dataset_id": "DS-ANA-FLEX-110-D2FIT",
+   "inputs": [
+    "data/digitized/FLEX-110_fig114_droplet_d2.csv",
+    "data/extracted/table_ix.csv"
+   ],
+   "limitations": "Digitization check against printed K; not validation; no intervals.",
+   "method": "tools/analyze_d2_fit.py 1.1.0",
+   "origin": "DS-DIG-FLEX-110-FIG114-D2 + Table IX",
+   "path": "data/analysis/FLEX-110_d2_fit.json",
+   "processing_history": [
+    "digitization check (re-run for method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/analysis_run.schema.json",
+   "sha256": "ec166a798084add9a59a00c4311933d923b2f68940582748f47c9c95b82dfa1a",
+   "test_id": "FLEX-110",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "ANALYSIS",
+   "dataset_id": "DS-ANA-FLEX-198-D2FIT",
+   "inputs": [
+    "data/digitized/FLEX-198_fig201_droplet_d2.csv",
+    "data/extracted/table_ix.csv"
+   ],
+   "limitations": "Digitization check against printed K; not validation; no intervals.",
+   "method": "tools/analyze_d2_fit.py 1.1.0",
+   "origin": "DS-DIG-FLEX-198-FIG201-D2 + Table IX",
+   "path": "data/analysis/FLEX-198_d2_fit.json",
+   "processing_history": [
+    "digitization check (re-run for method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/analysis_run.schema.json",
+   "sha256": "a97309de4679396ec223309f659416064f701f04f17202a0b4946c84625fac3b",
+   "test_id": "FLEX-198",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "ANALYSIS",
+   "dataset_id": "DS-ANA-FLEX-204-D2FIT",
+   "inputs": [
+    "data/digitized/FLEX-204_fig207_droplet_d2.csv",
+    "data/extracted/table_ix.csv"
+   ],
+   "limitations": "Digitization check against printed K; not validation; no intervals.",
+   "method": "tools/analyze_d2_fit.py 1.1.0",
+   "origin": "DS-DIG-FLEX-204-FIG207-D2 + Table IX",
+   "path": "data/analysis/FLEX-204_d2_fit.json",
+   "processing_history": [
+    "digitization check (re-run for method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/analysis_run.schema.json",
+   "sha256": "2bbaeafdecf4020c2f48fd4832b16b09a70066921ec62676637e65ac9c2e33dd",
+   "test_id": "FLEX-204",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "ANALYSIS",
+   "dataset_id": "DS-ANA-FLEX-263-D2FIT",
+   "inputs": [
+    "data/digitized/FLEX-263_fig263_droplet_d2.csv",
+    "data/extracted/table_ix.csv"
+   ],
+   "limitations": "Digitization check against printed K; not validation; no intervals.",
+   "method": "tools/analyze_d2_fit.py 1.1.0",
+   "origin": "DS-DIG-FLEX-263-FIG263-D2 + Table IX",
+   "path": "data/analysis/FLEX-263_d2_fit.json",
+   "processing_history": [
+    "digitization check (re-run for method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/analysis_run.schema.json",
+   "sha256": "5658e27a6c023ece7670f7b5bafa055b62340eaeeb9b1b0bc7729fa36d112713",
+   "test_id": "FLEX-263",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "ANALYSIS",
+   "dataset_id": "DS-ANA-FLEX-264-D2FIT",
+   "inputs": [
+    "data/digitized/FLEX-264_fig264_droplet_d2.csv",
+    "data/extracted/table_ix.csv"
+   ],
+   "limitations": "Digitization check against printed K; not validation; no intervals.",
+   "method": "tools/analyze_d2_fit.py 1.1.0",
+   "origin": "DS-DIG-FLEX-264-FIG264-D2 + Table IX",
+   "path": "data/analysis/FLEX-264_d2_fit.json",
+   "processing_history": [
+    "digitization check (re-run for method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/analysis_run.schema.json",
+   "sha256": "8a05ae5a09135cea6499350f6b01b3f039f9709c77ef7ad8954caa95e638ed9f",
+   "test_id": "FLEX-264",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DERIVED",
+   "dataset_id": "DS-DERIVED-CROSSCHECK",
+   "inputs": [
+    "data/extracted/table_ix.csv",
+    "data/extracted/test_matrix.csv",
+    "data/derived/fiber_from_captions.csv"
+   ],
+   "limitations": "'DIFFERS' states a fact about printed values; it does not say which value is right.",
+   "method": "tools/crosscheck_tables.py — agreement within printed rounding",
+   "origin": "DS-TP-TABLE-IX, DS-TP-TEST-MATRIX, DS-DERIVED-FIBER-CAPTIONS",
+   "path": "data/derived/crosscheck_matrix_vs_ix.csv",
+   "processing_history": [
+    "M2: created"
+   ],
+   "record_type": "Dataset",
+   "rows": 1142,
+   "schema": "CSV",
+   "sha256": "c64ed59764fecaed9f8052d1c56b7c1f575780c43d7cadadfa306d505edee60f",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "DERIVED",
+   "dataset_id": "DS-DERIVED-FIBER-CAPTIONS",
+   "inputs": [
+    "data/extracted/appendix_b_figures.csv"
+   ],
+   "limitations": "Keyword classification of NASA text, not a measurement.",
+   "method": "tools/crosscheck_tables.py — regex 'fiber[- ]supported' / 'free[- ]floating' on verbatim captions",
+   "origin": "DS-TP-APPB-INDEX",
+   "path": "data/derived/fiber_from_captions.csv",
+   "processing_history": [
+    "M2: created; 276/276 captions classified, 0 ambiguous"
+   ],
+   "record_type": "Dataset",
+   "rows": 276,
+   "schema": "CSV",
+   "sha256": "fdcffaeb3407257cb2cc83f4c0a3948800f79b934920389c18d61eb990b6d35c",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-010-FIG014-COLOR",
+   "digitization_record": "data/digitization/FIG014_FLEX-010_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG014_FLEX-010.jpg",
+    "data/digitization/configs/FIG014_FLEX-010.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 14 (green open-circle markers)",
+   "path": "data/digitized/FLEX-010_fig014_color_camera_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 125,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "color_camera_flame_diameter",
+   "sha256": "920f64472a898a08f0381ecd7131ce073dd60dcf4e63584b112fc0efec234351",
+   "test_id": "FLEX-010",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-010-FIG014-D2",
+   "digitization_record": "data/digitization/FIG014_FLEX-010_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG014_FLEX-010.jpg",
+    "data/digitization/configs/FIG014_FLEX-010.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 14 (red open-circle markers)",
+   "path": "data/digitized/FLEX-010_fig014_droplet_d2.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 100,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "droplet_d2",
+   "sha256": "273d79ba39cf75903bb8dac3af2622c4d5c870e666300a7d2fa7f619140870bc",
+   "test_id": "FLEX-010",
+   "unit": "mm^2",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-010-FIG014-LLUV",
+   "digitization_record": "data/digitization/FIG014_FLEX-010_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG014_FLEX-010.jpg",
+    "data/digitization/configs/FIG014_FLEX-010.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 14 (blue open-circle markers)",
+   "path": "data/digitized/FLEX-010_fig014_lluv_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 265,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "lluv_flame_diameter",
+   "sha256": "1514eb80bc4f34f1e039950bd73c2d53d566a249d4280a1c437c83cf5f1ddbd6",
+   "test_id": "FLEX-010",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-010-FIG014-RECORD",
+   "inputs": [
+    "data/digitization/configs/FIG014_FLEX-010.json",
+    "data/digitization/source_images/FIG014_FLEX-010.jpg"
+   ],
+   "limitations": "Describes how the series were digitized; read its limitations list.",
+   "method": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "origin": "S01 Appendix B Fig. 14 (PDF p. 44)",
+   "path": "data/digitization/FIG014_FLEX-010_record.json",
+   "processing_history": [
+    "M3/M5: created; M5: method 1.1.0 (threshold 0.30)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/digitization_record.schema.json",
+   "sha256": "03ec4da74e62d54bd91df162996a7d43016656dcbde8210b7b90273a4f1b8570",
+   "test_id": "FLEX-010",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-023-FIG027-D2",
+   "digitization_record": "data/digitization/FIG027_FLEX-023_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG027_FLEX-023.jpg",
+    "data/digitization/configs/FIG027_FLEX-023.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 27 (red open-circle markers)",
+   "path": "data/digitized/FLEX-023_fig027_droplet_d2.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 146,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "droplet_d2",
+   "sha256": "b914965d940df8b549a1be57bc4587865f36c74f079ddc146d664601d9b64f75",
+   "test_id": "FLEX-023",
+   "unit": "mm^2",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-023-FIG027-LLUV",
+   "digitization_record": "data/digitization/FIG027_FLEX-023_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG027_FLEX-023.jpg",
+    "data/digitization/configs/FIG027_FLEX-023.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 27 (blue open-circle markers)",
+   "path": "data/digitized/FLEX-023_fig027_lluv_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 328,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "lluv_flame_diameter",
+   "sha256": "b38bea8a6c60533ff9d6142e4c7ce32cb0b93edb0fd72f39f6dd8ac7e573c7b5",
+   "test_id": "FLEX-023",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-023-FIG027-RECORD",
+   "inputs": [
+    "data/digitization/configs/FIG027_FLEX-023.json",
+    "data/digitization/source_images/FIG027_FLEX-023.jpg"
+   ],
+   "limitations": "Describes how the series were digitized; read its limitations list.",
+   "method": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "origin": "S01 Appendix B Fig. 27 (PDF p. 57)",
+   "path": "data/digitization/FIG027_FLEX-023_record.json",
+   "processing_history": [
+    "M3/M5: created; M5: method 1.1.0 (threshold 0.30)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/digitization_record.schema.json",
+   "sha256": "d6a68713f1f9b4b42996ef490b47b7f24744ee5ab1ae7bc855e964c3cfe7e3ff",
+   "test_id": "FLEX-023",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-033-FIG037-D2",
+   "digitization_record": "data/digitization/FIG037_FLEX-033_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG037_FLEX-033.jpg",
+    "data/digitization/configs/FIG037_FLEX-033.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 37 (red open-circle markers)",
+   "path": "data/digitized/FLEX-033_fig037_droplet_d2.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 168,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "droplet_d2",
+   "sha256": "0571a89e7857b0694257277f634ec3d02460fdbc30fb8b17295f67e54553a828",
+   "test_id": "FLEX-033",
+   "unit": "mm^2",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-033-FIG037-LLUV",
+   "digitization_record": "data/digitization/FIG037_FLEX-033_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG037_FLEX-033.jpg",
+    "data/digitization/configs/FIG037_FLEX-033.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 37 (blue open-circle markers)",
+   "path": "data/digitized/FLEX-033_fig037_lluv_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 302,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "lluv_flame_diameter",
+   "sha256": "1cc9d1f6eca507ed4419da532732c8dd8927e86313b46f3c5471f0c4929c9df4",
+   "test_id": "FLEX-033",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-033-FIG037-RECORD",
+   "inputs": [
+    "data/digitization/configs/FIG037_FLEX-033.json",
+    "data/digitization/source_images/FIG037_FLEX-033.jpg"
+   ],
+   "limitations": "Describes how the series were digitized; read its limitations list.",
+   "method": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "origin": "S01 Appendix B Fig. 37 (PDF p. 67)",
+   "path": "data/digitization/FIG037_FLEX-033_record.json",
+   "processing_history": [
+    "M3/M5: created; M5: method 1.1.0 (threshold 0.30)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/digitization_record.schema.json",
+   "sha256": "641799f8880d1f255c248fdbad7338af91a645df71863ea8aeec73c7cba4e888",
+   "test_id": "FLEX-033",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-035-FIG039-COLOR",
+   "digitization_record": "data/digitization/FIG039_FLEX-035_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG039_FLEX-035.jpg",
+    "data/digitization/configs/FIG039_FLEX-035.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 39 (green open-circle markers)",
+   "path": "data/digitized/FLEX-035_fig039_color_camera_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 104,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "color_camera_flame_diameter",
+   "sha256": "6d3b5cde24178a2d19a021750077f1f817bab1d535acee6c34ee2b85f49056b2",
+   "test_id": "FLEX-035",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-035-FIG039-D2",
+   "digitization_record": "data/digitization/FIG039_FLEX-035_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG039_FLEX-035.jpg",
+    "data/digitization/configs/FIG039_FLEX-035.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 39 (red open-circle markers)",
+   "path": "data/digitized/FLEX-035_fig039_droplet_d2.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 183,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "droplet_d2",
+   "sha256": "3a121e6746f4407d39fb9be6421c620ea4e177830eb7741f723fa0878fdbc843",
+   "test_id": "FLEX-035",
+   "unit": "mm^2",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-035-FIG039-LLUV",
+   "digitization_record": "data/digitization/FIG039_FLEX-035_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG039_FLEX-035.jpg",
+    "data/digitization/configs/FIG039_FLEX-035.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 39 (blue open-circle markers)",
+   "path": "data/digitized/FLEX-035_fig039_lluv_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 107,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "lluv_flame_diameter",
+   "sha256": "05d6c40eee2c9533d91302fd43a0087e73fbd4512f26309eddeabcb172917ca7",
+   "test_id": "FLEX-035",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-035-FIG039-RECORD",
+   "inputs": [
+    "data/digitization/configs/FIG039_FLEX-035.json",
+    "data/digitization/source_images/FIG039_FLEX-035.jpg"
+   ],
+   "limitations": "Describes how the series were digitized; read its limitations list.",
+   "method": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "origin": "S01 Appendix B Fig. 39 (PDF p. 69)",
+   "path": "data/digitization/FIG039_FLEX-035_record.json",
+   "processing_history": [
+    "M3/M5: created; M5: method 1.1.0 (threshold 0.30)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/digitization_record.schema.json",
+   "sha256": "8147f8762770816b270eefb373a33ca81b89ef088949abd1e4342a00148a1a40",
+   "test_id": "FLEX-035",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-049-FIG053-COLOR",
+   "digitization_record": "data/digitization/FIG053_FLEX-049_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG053_FLEX-049.jpg",
+    "data/digitization/configs/FIG053_FLEX-049.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 53 (green open-circle markers)",
+   "path": "data/digitized/FLEX-049_fig053_color_camera_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 83,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "color_camera_flame_diameter",
+   "sha256": "1961230088afb0def2a08d80904bbc50a44ae9e6cc286d500ade5893aeb4089b",
+   "test_id": "FLEX-049",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-049-FIG053-D2",
+   "digitization_record": "data/digitization/FIG053_FLEX-049_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG053_FLEX-049.jpg",
+    "data/digitization/configs/FIG053_FLEX-049.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 53 (red open-circle markers)",
+   "path": "data/digitized/FLEX-049_fig053_droplet_d2.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 154,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "droplet_d2",
+   "sha256": "30a1fc23c59c2e99b1fc7b309dc6a10633b5cb9bc73caf8b8056cab187f1cb59",
+   "test_id": "FLEX-049",
+   "unit": "mm^2",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-049-FIG053-LLUV",
+   "digitization_record": "data/digitization/FIG053_FLEX-049_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG053_FLEX-049.jpg",
+    "data/digitization/configs/FIG053_FLEX-049.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 53 (blue open-circle markers)",
+   "path": "data/digitized/FLEX-049_fig053_lluv_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 105,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "lluv_flame_diameter",
+   "sha256": "cdacb4c7450b122d07143d28d089f3730cc7b241b20048824bf5800c4c484030",
+   "test_id": "FLEX-049",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-049-FIG053-RECORD",
+   "inputs": [
+    "data/digitization/configs/FIG053_FLEX-049.json",
+    "data/digitization/source_images/FIG053_FLEX-049.jpg"
+   ],
+   "limitations": "Describes how the series were digitized; read its limitations list.",
+   "method": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "origin": "S01 Appendix B Fig. 53 (PDF p. 83)",
+   "path": "data/digitization/FIG053_FLEX-049_record.json",
+   "processing_history": [
+    "M3/M5: created; M5: method 1.1.0 (threshold 0.30)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/digitization_record.schema.json",
+   "sha256": "c61d2e02e4f835bb2fe4bed69c55fa5babad148f75a54596f1215df125bdb6f3",
+   "test_id": "FLEX-049",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-051-FIG055-COLOR",
+   "digitization_record": "data/digitization/FIG055_FLEX-051_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG055_FLEX-051.jpg",
+    "data/digitization/configs/FIG055_FLEX-051.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 55 (green open-circle markers)",
+   "path": "data/digitized/FLEX-051_fig055_color_camera_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 123,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "color_camera_flame_diameter",
+   "sha256": "75f6027e115df136f5a9a881e4d484225ec289cd4c7cf8caf7fadb18784866e8",
+   "test_id": "FLEX-051",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-051-FIG055-D2",
+   "digitization_record": "data/digitization/FIG055_FLEX-051_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG055_FLEX-051.jpg",
+    "data/digitization/configs/FIG055_FLEX-051.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 55 (red open-circle markers)",
+   "path": "data/digitized/FLEX-051_fig055_droplet_d2.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 149,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "droplet_d2",
+   "sha256": "a5a10912150c5f0586f5cf4170e1c191aaf45b64e99021a6bc88d12367fbdd0e",
+   "test_id": "FLEX-051",
+   "unit": "mm^2",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-051-FIG055-LLUV",
+   "digitization_record": "data/digitization/FIG055_FLEX-051_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG055_FLEX-051.jpg",
+    "data/digitization/configs/FIG055_FLEX-051.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 55 (blue open-circle markers)",
+   "path": "data/digitized/FLEX-051_fig055_lluv_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 171,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "lluv_flame_diameter",
+   "sha256": "0b49523b13f0c751c96e3fb0a70df46d5ba58e8b06ea5c88212def515b1e559b",
+   "test_id": "FLEX-051",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-051-FIG055-RECORD",
+   "inputs": [
+    "data/digitization/configs/FIG055_FLEX-051.json",
+    "data/digitization/source_images/FIG055_FLEX-051.jpg"
+   ],
+   "limitations": "Describes how the series were digitized; read its limitations list.",
+   "method": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "origin": "S01 Appendix B Fig. 55 (PDF p. 85)",
+   "path": "data/digitization/FIG055_FLEX-051_record.json",
+   "processing_history": [
+    "M3/M5: created; M5: method 1.1.0 (threshold 0.30)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/digitization_record.schema.json",
+   "sha256": "11895ceea7897af3290356071151e0064b5404cac65d59cee687a43c0498130a",
+   "test_id": "FLEX-051",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-062-FIG066-COLOR",
+   "digitization_record": "data/digitization/FIG066_FLEX-062_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG066_FLEX-062.jpg",
+    "data/digitization/configs/FIG066_FLEX-062.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 66 (green open-circle markers)",
+   "path": "data/digitized/FLEX-062_fig066_color_camera_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 50,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "color_camera_flame_diameter",
+   "sha256": "727b33e9078fda527bfc6cffea8dbaefe2b3a3f2caefdf7f31443ee0e40649bf",
+   "test_id": "FLEX-062",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-062-FIG066-D2",
+   "digitization_record": "data/digitization/FIG066_FLEX-062_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG066_FLEX-062.jpg",
+    "data/digitization/configs/FIG066_FLEX-062.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 66 (red open-circle markers)",
+   "path": "data/digitized/FLEX-062_fig066_droplet_d2.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 149,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "droplet_d2",
+   "sha256": "5c749246e363fa0db55c30a558974da20b87360d6a9350b21eb4832a4ebfa73d",
+   "test_id": "FLEX-062",
+   "unit": "mm^2",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-062-FIG066-LLUV",
+   "digitization_record": "data/digitization/FIG066_FLEX-062_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG066_FLEX-062.jpg",
+    "data/digitization/configs/FIG066_FLEX-062.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 66 (blue open-circle markers)",
+   "path": "data/digitized/FLEX-062_fig066_lluv_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 76,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "lluv_flame_diameter",
+   "sha256": "0a60e03aac58ef24b41afa490acc763ab5547a6ffa1ed3e1b934889bee259a84",
+   "test_id": "FLEX-062",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-062-FIG066-RECORD",
+   "inputs": [
+    "data/digitization/configs/FIG066_FLEX-062.json",
+    "data/digitization/source_images/FIG066_FLEX-062.jpg"
+   ],
+   "limitations": "Describes how the series were digitized; read its limitations list.",
+   "method": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "origin": "S01 Appendix B Fig. 66 (PDF p. 96)",
+   "path": "data/digitization/FIG066_FLEX-062_record.json",
+   "processing_history": [
+    "M3/M5: created; M5: method 1.1.0 (threshold 0.30)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/digitization_record.schema.json",
+   "sha256": "12ec3e400d5ed365d0c980ad6ae91922a6250b11e808ae226346707a66c6f520",
+   "test_id": "FLEX-062",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-082-FIG086-COLOR",
+   "digitization_record": "data/digitization/FIG086_FLEX-082_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG086_FLEX-082.jpg",
+    "data/digitization/configs/FIG086_FLEX-082.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 86 (green open-circle markers)",
+   "path": "data/digitized/FLEX-082_fig086_color_camera_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 110,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "color_camera_flame_diameter",
+   "sha256": "92a51baa0cc600897add8dc78de49620e9d8801db154150a065acf4db87641f8",
+   "test_id": "FLEX-082",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-082-FIG086-D2",
+   "digitization_record": "data/digitization/FIG086_FLEX-082_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG086_FLEX-082.jpg",
+    "data/digitization/configs/FIG086_FLEX-082.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 86 (red open-circle markers)",
+   "path": "data/digitized/FLEX-082_fig086_droplet_d2.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 149,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "droplet_d2",
+   "sha256": "2b8f2b8340bd8e99115b89101d8403c38ead0fea9fec9868e579bae1d32226b4",
+   "test_id": "FLEX-082",
+   "unit": "mm^2",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-082-FIG086-LLUV",
+   "digitization_record": "data/digitization/FIG086_FLEX-082_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG086_FLEX-082.jpg",
+    "data/digitization/configs/FIG086_FLEX-082.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 86 (blue open-circle markers)",
+   "path": "data/digitized/FLEX-082_fig086_lluv_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 192,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "lluv_flame_diameter",
+   "sha256": "cc59f68d981ea6581922f3fd6aeb0cd003c7a93b5d8ebe9e62e2d30354d31feb",
+   "test_id": "FLEX-082",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-082-FIG086-RECORD",
+   "inputs": [
+    "data/digitization/configs/FIG086_FLEX-082.json",
+    "data/digitization/source_images/FIG086_FLEX-082.jpg"
+   ],
+   "limitations": "Describes how the series were digitized; read its limitations list.",
+   "method": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "origin": "S01 Appendix B Fig. 86 (PDF p. 116)",
+   "path": "data/digitization/FIG086_FLEX-082_record.json",
+   "processing_history": [
+    "M3/M5: created; M5: method 1.1.0 (threshold 0.30)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/digitization_record.schema.json",
+   "sha256": "b72b4a7b0785cf1931ce80ff1a73b5f77433e0f5e5e0f5b6353d4a86d553abc5",
+   "test_id": "FLEX-082",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-110-FIG114-COLOR",
+   "digitization_record": "data/digitization/FIG114_FLEX-110_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG114_FLEX-110.jpg",
+    "data/digitization/configs/FIG114_FLEX-110.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 114 (green open-circle markers)",
+   "path": "data/digitized/FLEX-110_fig114_color_camera_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 120,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "color_camera_flame_diameter",
+   "sha256": "c3a152444b5fe6655b7efc80e496dad816b265517c9aed44cf4067f496b9513d",
+   "test_id": "FLEX-110",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-110-FIG114-D2",
+   "digitization_record": "data/digitization/FIG114_FLEX-110_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG114_FLEX-110.jpg",
+    "data/digitization/configs/FIG114_FLEX-110.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 114 (red open-circle markers)",
+   "path": "data/digitized/FLEX-110_fig114_droplet_d2.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 161,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "droplet_d2",
+   "sha256": "5eacd956e01b52e651373366bc23941f9c66ffc3725ba8a1d0309019e86f85f7",
+   "test_id": "FLEX-110",
+   "unit": "mm^2",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-110-FIG114-LLUV",
+   "digitization_record": "data/digitization/FIG114_FLEX-110_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG114_FLEX-110.jpg",
+    "data/digitization/configs/FIG114_FLEX-110.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 114 (blue open-circle markers)",
+   "path": "data/digitized/FLEX-110_fig114_lluv_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 303,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "lluv_flame_diameter",
+   "sha256": "dc27747772298d4e37e690f3c6806f33d03727410fde3c167f2d75a8d39d0de7",
+   "test_id": "FLEX-110",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-110-FIG114-RECORD",
+   "inputs": [
+    "data/digitization/configs/FIG114_FLEX-110.json",
+    "data/digitization/source_images/FIG114_FLEX-110.jpg"
+   ],
+   "limitations": "Describes how the series were digitized; read its limitations list.",
+   "method": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "origin": "S01 Appendix B Fig. 114 (PDF p. 144)",
+   "path": "data/digitization/FIG114_FLEX-110_record.json",
+   "processing_history": [
+    "M3/M5: created; M5: method 1.1.0 (threshold 0.30)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/digitization_record.schema.json",
+   "sha256": "c558f206951104069cc70b6dab890b8bd1045e24eacc591f3e711920b6e395a4",
+   "test_id": "FLEX-110",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-198-FIG201-D2",
+   "digitization_record": "data/digitization/FIG201_FLEX-198_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG201_FLEX-198.jpg",
+    "data/digitization/configs/FIG201_FLEX-198.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 201 (red open-circle markers)",
+   "path": "data/digitized/FLEX-198_fig201_droplet_d2.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 169,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "droplet_d2",
+   "sha256": "efdf08f79b5b28c1599fb82ad54d896a9eceaab7576479c9de403139f003eacd",
+   "test_id": "FLEX-198",
+   "unit": "mm^2",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-198-FIG201-LLUV",
+   "digitization_record": "data/digitization/FIG201_FLEX-198_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG201_FLEX-198.jpg",
+    "data/digitization/configs/FIG201_FLEX-198.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 201 (blue open-circle markers)",
+   "path": "data/digitized/FLEX-198_fig201_lluv_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 94,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "lluv_flame_diameter",
+   "sha256": "c444f70ed5f6f486af43e360f5c31bb34c137b390d1f63368bff792e75509fa8",
+   "test_id": "FLEX-198",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-198-FIG201-RECORD",
+   "inputs": [
+    "data/digitization/configs/FIG201_FLEX-198.json",
+    "data/digitization/source_images/FIG201_FLEX-198.jpg"
+   ],
+   "limitations": "Describes how the series were digitized; read its limitations list.",
+   "method": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "origin": "S01 Appendix B Fig. 201 (PDF p. 231)",
+   "path": "data/digitization/FIG201_FLEX-198_record.json",
+   "processing_history": [
+    "M3/M5: created; M5: method 1.1.0 (threshold 0.30)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/digitization_record.schema.json",
+   "sha256": "359f8884bc2dc060dc4b1c876d9a82c2c59147fe8fdb3b09baddb9d15bd99542",
+   "test_id": "FLEX-198",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-204-FIG207-COLOR",
+   "digitization_record": "data/digitization/FIG207_FLEX-204_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG207_FLEX-204.jpg",
+    "data/digitization/configs/FIG207_FLEX-204.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 207 (green open-circle markers)",
+   "path": "data/digitized/FLEX-204_fig207_color_camera_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 115,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "color_camera_flame_diameter",
+   "sha256": "e31155cf6b467f3717f79de585a35f87cf3d155c8722ee4439691b00123e8e9d",
+   "test_id": "FLEX-204",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-204-FIG207-D2",
+   "digitization_record": "data/digitization/FIG207_FLEX-204_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG207_FLEX-204.jpg",
+    "data/digitization/configs/FIG207_FLEX-204.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 207 (red open-circle markers)",
+   "path": "data/digitized/FLEX-204_fig207_droplet_d2.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 107,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "droplet_d2",
+   "sha256": "b5ad41d4aff5c7afd0abde3200ebba0dc25597c17c0e1a09d9c47f2a18f28fc1",
+   "test_id": "FLEX-204",
+   "unit": "mm^2",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-204-FIG207-LLUV",
+   "digitization_record": "data/digitization/FIG207_FLEX-204_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG207_FLEX-204.jpg",
+    "data/digitization/configs/FIG207_FLEX-204.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 207 (blue open-circle markers)",
+   "path": "data/digitized/FLEX-204_fig207_lluv_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 203,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "lluv_flame_diameter",
+   "sha256": "61194a71191619e14d5c5a7c87c4f9ee0ae675060fcc301fe73ba5060ed1cea1",
+   "test_id": "FLEX-204",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-204-FIG207-RECORD",
+   "inputs": [
+    "data/digitization/configs/FIG207_FLEX-204.json",
+    "data/digitization/source_images/FIG207_FLEX-204.jpg"
+   ],
+   "limitations": "Describes how the series were digitized; read its limitations list.",
+   "method": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "origin": "S01 Appendix B Fig. 207 (PDF p. 237)",
+   "path": "data/digitization/FIG207_FLEX-204_record.json",
+   "processing_history": [
+    "M3/M5: created; M5: method 1.1.0 (threshold 0.30)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/digitization_record.schema.json",
+   "sha256": "228aacc86208c66ec147cbd6dba1bb24e7ff948d07fbbf0e5f3387e6d4f9bb7b",
+   "test_id": "FLEX-204",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-263-FIG263-COLOR",
+   "digitization_record": "data/digitization/FIG263_FLEX-263_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG263_FLEX-263.jpg",
+    "data/digitization/configs/FIG263_FLEX-263.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 263 (green open-circle markers)",
+   "path": "data/digitized/FLEX-263_fig263_color_camera_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 99,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "color_camera_flame_diameter",
+   "sha256": "f2380ac3d099d299abaf12a7d5ac8028b4c0c9aeadd29652a6edbf20f5d12746",
+   "test_id": "FLEX-263",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-263-FIG263-D2",
+   "digitization_record": "data/digitization/FIG263_FLEX-263_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG263_FLEX-263.jpg",
+    "data/digitization/configs/FIG263_FLEX-263.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 263 (red open-circle markers)",
+   "path": "data/digitized/FLEX-263_fig263_droplet_d2.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 168,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "droplet_d2",
+   "sha256": "95249af88f1185d732ee5838c7909a64a1bc107c3e710820f0c42b414f806d2b",
+   "test_id": "FLEX-263",
+   "unit": "mm^2",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-263-FIG263-LLUV",
+   "digitization_record": "data/digitization/FIG263_FLEX-263_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG263_FLEX-263.jpg",
+    "data/digitization/configs/FIG263_FLEX-263.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 263 (blue open-circle markers)",
+   "path": "data/digitized/FLEX-263_fig263_lluv_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 105,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "lluv_flame_diameter",
+   "sha256": "d9e34365724bc8a24c69cf57de92ec9a1554c3388dc45d418b116dc38941afae",
+   "test_id": "FLEX-263",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-263-FIG263-RECORD",
+   "inputs": [
+    "data/digitization/configs/FIG263_FLEX-263.json",
+    "data/digitization/source_images/FIG263_FLEX-263.jpg"
+   ],
+   "limitations": "Describes how the series were digitized; read its limitations list.",
+   "method": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "origin": "S01 Appendix B Fig. 263 (PDF p. 293)",
+   "path": "data/digitization/FIG263_FLEX-263_record.json",
+   "processing_history": [
+    "M3/M5: created; M5: method 1.1.0 (threshold 0.30)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/digitization_record.schema.json",
+   "sha256": "ce41b921f2086517953f7c7735b6bf62a6fef0fd8ece755f99855885d2507696",
+   "test_id": "FLEX-263",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-264-FIG264-COLOR",
+   "digitization_record": "data/digitization/FIG264_FLEX-264_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG264_FLEX-264.jpg",
+    "data/digitization/configs/FIG264_FLEX-264.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 264 (green open-circle markers)",
+   "path": "data/digitized/FLEX-264_fig264_color_camera_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 72,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "color_camera_flame_diameter",
+   "sha256": "f4c27a93b54d2daccce023e022a36c0f33bef9b6b197da6463f2bb2281f4b818",
+   "test_id": "FLEX-264",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-264-FIG264-D2",
+   "digitization_record": "data/digitization/FIG264_FLEX-264_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG264_FLEX-264.jpg",
+    "data/digitization/configs/FIG264_FLEX-264.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 264 (red open-circle markers)",
+   "path": "data/digitized/FLEX-264_fig264_droplet_d2.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 156,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "droplet_d2",
+   "sha256": "56b82de59e635d7dbba7160fbcdbe89ab3ed9588f1a013765429ad1b72b8dd5c",
+   "test_id": "FLEX-264",
+   "unit": "mm^2",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-264-FIG264-LLUV",
+   "digitization_record": "data/digitization/FIG264_FLEX-264_record.json",
+   "inputs": [
+    "data/digitization/source_images/FIG264_FLEX-264.jpg",
+    "data/digitization/configs/FIG264_FLEX-264.json"
+   ],
+   "limitations": "Read from a raster plot; dense trails are sampled, not frame-by-frame; not original measurements.",
+   "method": "tools/digitize_figure.py 1.1.0 (ring-template marker detection, axis calibration from tick marks)",
+   "origin": "S01 Appendix B Fig. 264 (blue open-circle markers)",
+   "path": "data/digitized/FLEX-264_fig264_lluv_flame_diameter.csv",
+   "processing_history": [
+    "digitized (method 1.1.0)"
+   ],
+   "record_type": "Dataset",
+   "rows": 78,
+   "schema": "CSV: t_s, value, x_px, y_px, match_score_rel, detection_pass",
+   "series": "lluv_flame_diameter",
+   "sha256": "355c1bbd12054e98f023d582ffc6eb638bc9af2d0dadd6f1914e544d2ff662cd",
+   "test_id": "FLEX-264",
+   "unit": "mm",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DIGITIZED",
+   "dataset_id": "DS-DIG-FLEX-264-FIG264-RECORD",
+   "inputs": [
+    "data/digitization/configs/FIG264_FLEX-264.json",
+    "data/digitization/source_images/FIG264_FLEX-264.jpg"
+   ],
+   "limitations": "Describes how the series were digitized; read its limitations list.",
+   "method": "tools/digitize_figure.py — calibration, marker detection settings, self-check, overlay",
+   "origin": "S01 Appendix B Fig. 264 (PDF p. 294)",
+   "path": "data/digitization/FIG264_FLEX-264_record.json",
+   "processing_history": [
+    "M3/M5: created; M5: method 1.1.0 (threshold 0.30)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/digitization_record.schema.json",
+   "sha256": "987e0258eecfad49edda74e0fa78d4bcb4f70a131678befd801204f52ae053bd",
+   "test_id": "FLEX-264",
+   "version": "1.1.0"
+  },
+  {
+   "data_class": "DERIVED",
+   "dataset_id": "DS-MODEL-D2LAW-PROPS",
+   "inputs": [],
+   "limitations": "Ambient-gas properties only (no fuel vapour or products); 1 atm; 300–2000 K; heats of combustion from tertiary sources (DSC-027).",
+   "method": "tools/build_model_properties.py (CoolProp version pinned)",
+   "origin": "S42 CoolProp 8.0.0 evaluations; S43–S45 enthalpies of combustion",
+   "path": "data/model/d2law_properties.json",
+   "processing_history": [
+    "M6: created"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JSON; fields documented in tools/build_model_properties.py",
+   "sha256": "6f84f62d35f2d8a2dba16721e4d4348e6734e5aee8a0b143fe6edbc72c432bbb",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "RECORDS",
+   "dataset_id": "DS-RECORDS-LITERATURE-CASES",
+   "inputs": [],
+   "limitations": "Conditions not checked against the papers; all links CANDIDATE.",
+   "method": "hand-authored",
+   "origin": "Original prototype attributions + S03 abstract",
+   "path": "data/records/literature_cases.json",
+   "processing_history": [
+    "M2: created from M1 candidate annotations"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/literature_figure_case.schema.json",
+   "sha256": "af42b1a668eefe0b58771be5e18af1a1723f4760cbed32cd65b71c85057019e5",
+   "version": "0.2.0"
+  },
+  {
+   "data_class": "RECORDS",
+   "dataset_id": "DS-RECORDS-PHYSICAL-TESTS",
+   "inputs": [
+    "data/extracted/*.csv",
+    "data/derived/*.csv",
+    "data/registry/*.json"
+   ],
+   "limitations": "Assembled view; no new values.",
+   "method": "tools/build_records.py",
+   "origin": "All DS-TP-*, DS-DERIVED-*, DS-VERIFY-TABLE-IX and registries",
+   "path": "data/records/physical_tests.json",
+   "processing_history": [
+    "M2: created (277 records: 276 Table IX tests + FLEX-156)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/physical_test.schema.json",
+   "sha256": "ea672932cdaccfe97074060896fd88c82607f51be8aa44d225440820c802c418",
+   "version": "0.2.0"
+  },
+  {
+   "data_class": "REGISTRY",
+   "dataset_id": "DS-REGISTRY-ANNOTATIONS",
+   "inputs": [],
+   "limitations": "",
+   "method": "hand-authored",
+   "origin": "Phase B review",
+   "path": "data/registry/test_annotations.json",
+   "processing_history": [
+    "M1: created"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "(informal; consumed by tools/build_records.py)",
+   "sha256": "ecc5c01ef02e447feec2474442efa8a2764c3c3fff37ce06dc493721b8644121",
+   "version": "0.1.0"
+  },
+  {
+   "data_class": "REGISTRY",
+   "dataset_id": "DS-REGISTRY-CLAIMS",
+   "inputs": [],
+   "limitations": "",
+   "method": "hand-authored; each claim carries locators",
+   "origin": "Phase B review",
+   "path": "data/registry/claims.json",
+   "processing_history": [
+    "M1: 34 claims",
+    "M2: +4 claims (CLM-035–038); CLM-029 status normalised to PARTIALLY VERIFIED",
+    "M3: +CLM-039/040",
+    "M4: +CLM-041/042"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/claim.schema.json",
+   "sha256": "1654e042b1e10ed76daccda22e4ca26b90142c14af3eef2cd6361d9a78d3dae9",
+   "version": "0.4.0"
+  },
+  {
+   "data_class": "REGISTRY",
+   "dataset_id": "DS-REGISTRY-DISCREPANCIES",
+   "inputs": [
+    "data/derived/crosscheck_matrix_vs_ix.csv"
+   ],
+   "limitations": "",
+   "method": "hand-authored from tool output",
+   "origin": "Phase B review + M2 cross-checks",
+   "path": "data/registry/discrepancies.json",
+   "processing_history": [
+    "M1: 12 entries",
+    "M2: +10 entries (DSC-013–022); 'tests' field added",
+    "M3: +DSC-023",
+    "M4: +DSC-024"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/discrepancy.schema.json",
+   "sha256": "a9441393f7c270e3428ad9d8e110d9768c35dcfbf029acb5615e41caae20ddff",
+   "version": "0.4.0"
+  },
+  {
+   "data_class": "REGISTRY",
+   "dataset_id": "DS-REGISTRY-SHARE-CONFIG",
+   "inputs": [],
+   "limitations": "github_repo is null until the owner names a repository.",
+   "method": "hand-authored",
+   "origin": "Phase B M6.1",
+   "path": "data/registry/share_config.json",
+   "processing_history": [
+    "M6.1: created"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JSON; fields described in its note",
+   "sha256": "28bda3e47bfd3bbcca8d029dfbdadb4996ef1a323e003fe6152777513f47c45b",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "REGISTRY",
+   "dataset_id": "DS-REGISTRY-SOURCES",
+   "inputs": [],
+   "limitations": "",
+   "method": "hand-authored",
+   "origin": "Research Guide §7 + Phase B review",
+   "path": "data/registry/sources.json",
+   "processing_history": [
+    "M1: created"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/source.schema.json",
+   "sha256": "8d2c15ac9d43a2a1ce7d1892c5483be18da12e9fecc6507d793bc840400b5117",
+   "version": "0.1.0"
+  },
+  {
+   "data_class": "REGISTRY",
+   "dataset_id": "DS-REGISTRY-UNCERTAINTY",
+   "inputs": [],
+   "limitations": "No component is propagated; semantics as stated by the source.",
+   "method": "hand-authored; each reported component carries claim IDs",
+   "origin": "Phase B review of S01 §3 and App. A.1",
+   "path": "data/registry/uncertainty_components.json",
+   "processing_history": [
+    "M4: created (14 components)"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/uncertainty_component.schema.json",
+   "sha256": "8b990c6abc92e3511a48794d18e1716ca8b86f014722a94d0afbba3a88095059",
+   "version": "0.4.0"
+  },
+  {
+   "data_class": "SIMULATION",
+   "dataset_id": "DS-SIM-D2LAW-BASELINE",
+   "inputs": [
+    "data/extracted/table_ix.csv",
+    "data/model/d2law_properties.json",
+    "openflex/d2law.py"
+   ],
+   "limitations": "NUMERICAL_SIMULATION of a classical model; not FLEX measurements; no extinction, radiation, soot or unsteady effects.",
+   "method": "tools/run_d2law_baseline.py",
+   "origin": "D²-law educational baseline 1.0.0 at the printed Table IX conditions",
+   "path": "data/simulations/d2law_baseline_runs.json",
+   "processing_history": [
+    "M6: created"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "schemas/simulation_run.schema.json (one record per run)",
+   "sha256": "264e50a16deb8db4208833adf790086e5c6648a0d9c4e5f4a10303102294f45e",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "ORIGINAL",
+   "dataset_id": "DS-SRCIMG-FLEX-010-FIG014",
+   "inputs": [
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "The NASA plot image itself; not data values.",
+   "method": "pdfimages -j (embedded DCT stream copied byte for byte)",
+   "origin": "S01 Appendix B Fig. 14: embedded JPEG on PDF p. 44",
+   "path": "data/digitization/source_images/FIG014_FLEX-010.jpg",
+   "processing_history": [
+    "extracted unchanged"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JPEG",
+   "sha256": "454db197c48561709c136bdf30285ae9aad8157b2e779ddb8a05c92c16f8272d",
+   "test_id": "FLEX-010",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "ORIGINAL",
+   "dataset_id": "DS-SRCIMG-FLEX-023-FIG027",
+   "inputs": [
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "The NASA plot image itself; not data values.",
+   "method": "pdfimages -j (embedded DCT stream copied byte for byte)",
+   "origin": "S01 Appendix B Fig. 27: embedded JPEG on PDF p. 57",
+   "path": "data/digitization/source_images/FIG027_FLEX-023.jpg",
+   "processing_history": [
+    "extracted unchanged"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JPEG",
+   "sha256": "03fa3ef398ab27607933d7dfd6dd2c298f8a84608412c018953635d7ed21fc75",
+   "test_id": "FLEX-023",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "ORIGINAL",
+   "dataset_id": "DS-SRCIMG-FLEX-033-FIG037",
+   "inputs": [
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "The NASA plot image itself; not data values.",
+   "method": "pdfimages -j (embedded DCT stream copied byte for byte)",
+   "origin": "S01 Appendix B Fig. 37: embedded JPEG on PDF p. 67",
+   "path": "data/digitization/source_images/FIG037_FLEX-033.jpg",
+   "processing_history": [
+    "extracted unchanged"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JPEG",
+   "sha256": "c941f91775e56c3e050bcc832106ba4c9b0f58c85635de5e894d0fc27ed0b028",
+   "test_id": "FLEX-033",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "ORIGINAL",
+   "dataset_id": "DS-SRCIMG-FLEX-035-FIG039",
+   "inputs": [
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "The NASA plot image itself; not data values.",
+   "method": "pdfimages -j (embedded DCT stream copied byte for byte)",
+   "origin": "S01 Appendix B Fig. 39: embedded JPEG on PDF p. 69",
+   "path": "data/digitization/source_images/FIG039_FLEX-035.jpg",
+   "processing_history": [
+    "extracted unchanged"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JPEG",
+   "sha256": "d26160f810f4bb5a7e66ea2167fa45defbc639827890080128647bdfaa38fee0",
+   "test_id": "FLEX-035",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "ORIGINAL",
+   "dataset_id": "DS-SRCIMG-FLEX-049-FIG053",
+   "inputs": [
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "The NASA plot image itself; not data values.",
+   "method": "pdfimages -j (embedded DCT stream copied byte for byte)",
+   "origin": "S01 Appendix B Fig. 53: embedded JPEG on PDF p. 83",
+   "path": "data/digitization/source_images/FIG053_FLEX-049.jpg",
+   "processing_history": [
+    "extracted unchanged"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JPEG",
+   "sha256": "81e1d9398c595210074c382f77e4d563705c24c75e2c8e3d29717b7b91bcaaa0",
+   "test_id": "FLEX-049",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "ORIGINAL",
+   "dataset_id": "DS-SRCIMG-FLEX-051-FIG055",
+   "inputs": [
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "The NASA plot image itself; not data values.",
+   "method": "pdfimages -j (embedded DCT stream copied byte for byte)",
+   "origin": "S01 Appendix B Fig. 55: embedded JPEG on PDF p. 85",
+   "path": "data/digitization/source_images/FIG055_FLEX-051.jpg",
+   "processing_history": [
+    "extracted unchanged"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JPEG",
+   "sha256": "61d27f1c980b03efff641696a8ff599981844aad0c2468b960394614f086c9e5",
+   "test_id": "FLEX-051",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "ORIGINAL",
+   "dataset_id": "DS-SRCIMG-FLEX-062-FIG066",
+   "inputs": [
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "The NASA plot image itself; not data values.",
+   "method": "pdfimages -j (embedded DCT stream copied byte for byte)",
+   "origin": "S01 Appendix B Fig. 66: embedded JPEG on PDF p. 96",
+   "path": "data/digitization/source_images/FIG066_FLEX-062.jpg",
+   "processing_history": [
+    "extracted unchanged"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JPEG",
+   "sha256": "fecc956c4dccead65c2ed902bb944de1a1dbbe4ebd3d7a9f53ed0b15c1f86779",
+   "test_id": "FLEX-062",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "ORIGINAL",
+   "dataset_id": "DS-SRCIMG-FLEX-082-FIG086",
+   "inputs": [
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "The NASA plot image itself; not data values.",
+   "method": "pdfimages -j (embedded DCT stream copied byte for byte)",
+   "origin": "S01 Appendix B Fig. 86: embedded JPEG on PDF p. 116",
+   "path": "data/digitization/source_images/FIG086_FLEX-082.jpg",
+   "processing_history": [
+    "extracted unchanged"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JPEG",
+   "sha256": "56d010ab35a34027a6b0eb1779a86aaad985df2336e0c13a852b78472229b806",
+   "test_id": "FLEX-082",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "ORIGINAL",
+   "dataset_id": "DS-SRCIMG-FLEX-110-FIG114",
+   "inputs": [
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "The NASA plot image itself; not data values.",
+   "method": "pdfimages -j (embedded DCT stream copied byte for byte)",
+   "origin": "S01 Appendix B Fig. 114: embedded JPEG on PDF p. 144",
+   "path": "data/digitization/source_images/FIG114_FLEX-110.jpg",
+   "processing_history": [
+    "extracted unchanged"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JPEG",
+   "sha256": "56ac70641fa419a820427e088fdaf62038b526d2b9e952de077267efe3480d79",
+   "test_id": "FLEX-110",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "ORIGINAL",
+   "dataset_id": "DS-SRCIMG-FLEX-198-FIG201",
+   "inputs": [
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "The NASA plot image itself; not data values.",
+   "method": "pdfimages -j (embedded DCT stream copied byte for byte)",
+   "origin": "S01 Appendix B Fig. 201: embedded JPEG on PDF p. 231",
+   "path": "data/digitization/source_images/FIG201_FLEX-198.jpg",
+   "processing_history": [
+    "extracted unchanged"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JPEG",
+   "sha256": "7d07fe9550f502045be24ab364dbdd1cb95bb0da3ee7db159c5c13c11d84a7f2",
+   "test_id": "FLEX-198",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "ORIGINAL",
+   "dataset_id": "DS-SRCIMG-FLEX-204-FIG207",
+   "inputs": [
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "The NASA plot image itself; not data values.",
+   "method": "pdfimages -j (embedded DCT stream copied byte for byte)",
+   "origin": "S01 Appendix B Fig. 207: embedded JPEG on PDF p. 237",
+   "path": "data/digitization/source_images/FIG207_FLEX-204.jpg",
+   "processing_history": [
+    "extracted unchanged"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JPEG",
+   "sha256": "368c5dbe4d260e2370d096def8a402d8cdf6b4f3551ce0b04760a78b862f6762",
+   "test_id": "FLEX-204",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "ORIGINAL",
+   "dataset_id": "DS-SRCIMG-FLEX-263-FIG263",
+   "inputs": [
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "The NASA plot image itself; not data values.",
+   "method": "pdfimages -j (embedded DCT stream copied byte for byte)",
+   "origin": "S01 Appendix B Fig. 263: embedded JPEG on PDF p. 293",
+   "path": "data/digitization/source_images/FIG263_FLEX-263.jpg",
+   "processing_history": [
+    "extracted unchanged"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JPEG",
+   "sha256": "5bbbfdc7c856631c19552c0cfe37c9f0ab9a8ef13a18aa80be1411af32472e00",
+   "test_id": "FLEX-263",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "ORIGINAL",
+   "dataset_id": "DS-SRCIMG-FLEX-264-FIG264",
+   "inputs": [
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "The NASA plot image itself; not data values.",
+   "method": "pdfimages -j (embedded DCT stream copied byte for byte)",
+   "origin": "S01 Appendix B Fig. 264: embedded JPEG on PDF p. 294",
+   "path": "data/digitization/source_images/FIG264_FLEX-264.jpg",
+   "processing_history": [
+    "extracted unchanged"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JPEG",
+   "sha256": "1e4dbc24b653b09cd4b2969dfcefa4ad89ff819a77eb44517abfee55ee6a9ef1",
+   "test_id": "FLEX-264",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "EXTRACTED_TABULATED",
+   "dataset_id": "DS-TP-APPB-INDEX",
+   "inputs": [
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "Index and captions only; plot data not extracted.",
+   "method": "tools/extract_appendix_b_index.py — caption text verbatim",
+   "origin": "S01 NASA/TP-2015-216046 Appendix B captions, Figs. 5–280",
+   "path": "data/extracted/appendix_b_figures.csv",
+   "processing_history": [
+    "M1: extracted"
+   ],
+   "record_type": "Dataset",
+   "rows": 276,
+   "schema": "CSV",
+   "sha256": "93bf68763240998b1cd299562e90d2b75c0ede760a7f2f5198cf130d2fefd2ec",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "EXTRACTED_TABULATED",
+   "dataset_id": "DS-TP-TABLE-IX",
+   "inputs": [
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "Reproduces the printed table; printed errors are not corrected (see discrepancy register).",
+   "method": "tools/extract_table_ix.py — pdftotext -layout, cells verbatim (*_raw) + parsed",
+   "origin": "S01 NASA/TP-2015-216046 Table IX, printed pp. 20–28 (PDF 26–34)",
+   "path": "data/extracted/table_ix.csv",
+   "processing_history": [
+    "M1: extracted",
+    "M2: every cell checked by a second parser and against 300-dpi page images (data/verification)"
+   ],
+   "record_type": "Dataset",
+   "rows": 276,
+   "schema": "CSV; columns documented in tools/extract_table_ix.py",
+   "sha256": "e86621fecd5c0737fb6af351aee6231cf0847059f1197eab9fc5abb1ba137f66",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "EXTRACTED_TABULATED",
+   "dataset_id": "DS-TP-TEST-MATRIX",
+   "inputs": [
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "Nominal/planned conditions; covers 153 tests (DSC-022).",
+   "method": "tools/extract_test_matrix.py — pdftotext -layout; header constants copied with origin='table header'",
+   "origin": "S01 NASA/TP-2015-216046 Tables I–VIII, printed pp. 10–15 (PDF 16–21)",
+   "path": "data/extracted/test_matrix.csv",
+   "processing_history": [
+    "M2: extracted; all 153 rows checked by a second parser (data/verification/test_matrix_verification.json)",
+    "M3: every cell checked against 300-dpi page images (1432 cells; 25 disagreements reviewed visually, all match)"
+   ],
+   "record_type": "Dataset",
+   "rows": 153,
+   "schema": "CSV; columns documented in tools/extract_test_matrix.py",
+   "sha256": "e2687ab97e7ea0617c12645918086780e330a61f92dd5dd0919bae51b6ea4b95",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "VERIFICATION",
+   "dataset_id": "DS-VER-D2LAW-CODE",
+   "inputs": [
+    "openflex/d2law.py",
+    "data/model/d2law_properties.json"
+   ],
+   "limitations": "Code verification only; no validation against FLEX.",
+   "method": "tools/verify_d2law.py",
+   "origin": "openflex/d2law.py + DS-MODEL-D2LAW-PROPS",
+   "path": "data/verification/d2law_code_verification.json",
+   "processing_history": [
+    "M6: created"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JSON CodeVerification record",
+   "sha256": "5eab0eb65de2c07e2fc2e77fb28ad0b44466d9e5cb90736de0501b7202c9770b",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "VERIFICATION",
+   "dataset_id": "DS-VERIFY-TABLE-IX",
+   "inputs": [
+    "data/extracted/table_ix.csv",
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "Checks extraction fidelity only, not the correctness of NASA's values.",
+   "method": "tools/verify_table_ix.py",
+   "origin": "DS-TP-TABLE-IX vs PDF text layer (pdfplumber) and rendered page images (Tesseract + connected components)",
+   "path": "data/verification/table_ix_cell_checks.csv",
+   "processing_history": [
+    "M2: created; 80 image disagreements reviewed visually (table_ix_manual_review.json)"
+   ],
+   "record_type": "Dataset",
+   "rows": 4140,
+   "schema": "CSV",
+   "sha256": "a49334189f30ac90cf5cff6ebf7f2cd1138aeb2f004d697d8689ff97bf2b3766",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "VERIFICATION",
+   "dataset_id": "DS-VERIFY-TABLE-IX-REVIEW",
+   "inputs": [
+    "data/verification/table_ix_cell_checks.csv"
+   ],
+   "limitations": "Reviewer is the AI assistant, not an independent human.",
+   "method": "montage images in docs/verification/",
+   "origin": "Visual review of crops listed in DS-VERIFY-TABLE-IX",
+   "path": "data/verification/table_ix_manual_review.json",
+   "processing_history": [
+    "M2: 80 cells reviewed, 80 match"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JSON",
+   "sha256": "867aa1bf0cf2762debc9f41e446358dd92adbe531da2ccaf3c1286339639674a",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "VERIFICATION",
+   "dataset_id": "DS-VERIFY-TEST-MATRIX",
+   "inputs": [
+    "data/extracted/test_matrix.csv"
+   ],
+   "limitations": "Second text-layer parser; see DS-VERIFY-TEST-MATRIX-IMAGES for the cell-by-cell page-image check.",
+   "method": "tools/verify_test_matrix.py",
+   "origin": "DS-TP-TEST-MATRIX vs PDF text layer (pdfplumber)",
+   "path": "data/verification/test_matrix_verification.json",
+   "processing_history": [
+    "M2: 153/153 rows match; 8/8 header phrases found"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JSON",
+   "sha256": "7429a8de097107f2b1be9e57954a3183062f502e7e8176a3a72382938ba37b53",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "VERIFICATION",
+   "dataset_id": "DS-VERIFY-TEST-MATRIX-IMAGES",
+   "inputs": [
+    "data/extracted/test_matrix.csv",
+    "sources/original/NASA-TP-2015-216046.pdf"
+   ],
+   "limitations": "Checks extraction fidelity only.",
+   "method": "tools/verify_test_matrix_images.py",
+   "origin": "DS-TP-TEST-MATRIX vs rendered page images (Tesseract + connected components)",
+   "path": "data/verification/test_matrix_cell_checks.csv",
+   "processing_history": [
+    "M3: created (M2 carry-over)"
+   ],
+   "record_type": "Dataset",
+   "rows": 1432,
+   "schema": "CSV",
+   "sha256": "abec2820c48fbbc1967fee62956858a8325ad3c0d47510e5c01dcfa1ac259374",
+   "version": "1.0.0"
+  },
+  {
+   "data_class": "VERIFICATION",
+   "dataset_id": "DS-VERIFY-TEST-MATRIX-REVIEW",
+   "inputs": [
+    "data/verification/test_matrix_cell_checks.csv"
+   ],
+   "limitations": "Reviewer is the AI assistant, not an independent human.",
+   "method": "montage in docs/verification/",
+   "origin": "Visual review of crops listed in DS-VERIFY-TEST-MATRIX-IMAGES",
+   "path": "data/verification/test_matrix_manual_review.json",
+   "processing_history": [
+    "M3: 25 cells reviewed, 25 match"
+   ],
+   "record_type": "Dataset",
+   "rows": null,
+   "schema": "JSON",
+   "sha256": "88129b3aec5da056c4f0f23ba6c8b93a55cdb15c36488357b1a99a5e064780d6",
+   "version": "1.0.0"
+  }
+ ],
+ "manifest_version": "0.2.0",
+ "source_pdf_sha256": "b4f6ca983e2792c33a0b92220a791a818f426bb635b94f7fd33dc8c9c471e79d"
+}

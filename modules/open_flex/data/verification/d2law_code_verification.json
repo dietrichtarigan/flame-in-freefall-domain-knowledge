@@ -1,0 +1,209 @@
+{
+ "record_type": "CodeVerification",
+ "model": {
+  "name": "d2law-educational-baseline",
+  "version": "1.0.0",
+  "status": "EDUCATIONAL_BASELINE"
+ },
+ "implementation": "openflex/d2law.py",
+ "implementation_sha256": "d6869de5ba39ac3eacb1a29f49d697c537b639c741d68501edbe20f1945c094f",
+ "property_table_sha256": "6f84f62d35f2d8a2dba16721e4d4348e6734e5aee8a0b143fe6edbc72c432bbb",
+ "status": "PASS",
+ "n_checks": 24,
+ "n_passed": 24,
+ "scope": "Code verification only: the equations are solved correctly. It says nothing about whether the model represents FLEX (no validation is claimed).",
+ "checks": [
+  {
+   "id": "CV-01",
+   "check": "conservation ODE residual (normalised)",
+   "value": 2.47292e-08,
+   "tolerance": 1e-06,
+   "pass": true,
+   "detail": "case 1: heptane {'O2': 0.21, 'N2': 0.79}"
+  },
+  {
+   "id": "CV-02",
+   "check": "boundary and matching conditions (max error)",
+   "value": 2.84907e-07,
+   "tolerance": 1e-06,
+   "pass": true,
+   "detail": "case 1: heptane {'O2': 0.21, 'N2': 0.79}"
+  },
+  {
+   "id": "CV-03",
+   "check": "surface energy balance (relative error)",
+   "value": 1.57031e-07,
+   "tolerance": 0.0001,
+   "pass": true,
+   "detail": "case 1: heptane {'O2': 0.21, 'N2': 0.79}"
+  },
+  {
+   "id": "CV-04",
+   "check": "flame-sheet jump conditions (max relative error)",
+   "value": 1.95294e-07,
+   "tolerance": 0.0001,
+   "pass": true,
+   "detail": "case 1: heptane {'O2': 0.21, 'N2': 0.79}"
+  },
+  {
+   "id": "CV-06",
+   "check": "property-temperature fixed point |T_prop - (T_s+T_f)/2| (K)",
+   "value": 5.75255e-11,
+   "tolerance": 1e-06,
+   "pass": true,
+   "detail": "case 1: heptane {'O2': 0.21, 'N2': 0.79}"
+  },
+  {
+   "id": "CV-01",
+   "check": "conservation ODE residual (normalised)",
+   "value": 2.02578e-08,
+   "tolerance": 1e-06,
+   "pass": true,
+   "detail": "case 2: methanol {'O2': 0.21, 'N2': 0.79}"
+  },
+  {
+   "id": "CV-02",
+   "check": "boundary and matching conditions (max error)",
+   "value": 7.58742e-08,
+   "tolerance": 1e-06,
+   "pass": true,
+   "detail": "case 2: methanol {'O2': 0.21, 'N2': 0.79}"
+  },
+  {
+   "id": "CV-03",
+   "check": "surface energy balance (relative error)",
+   "value": 3.15271e-07,
+   "tolerance": 0.0001,
+   "pass": true,
+   "detail": "case 2: methanol {'O2': 0.21, 'N2': 0.79}"
+  },
+  {
+   "id": "CV-04",
+   "check": "flame-sheet jump conditions (max relative error)",
+   "value": 1.85272e-07,
+   "tolerance": 0.0001,
+   "pass": true,
+   "detail": "case 2: methanol {'O2': 0.21, 'N2': 0.79}"
+  },
+  {
+   "id": "CV-06",
+   "check": "property-temperature fixed point |T_prop - (T_s+T_f)/2| (K)",
+   "value": 8.16271e-11,
+   "tolerance": 1e-06,
+   "pass": true,
+   "detail": "case 2: methanol {'O2': 0.21, 'N2': 0.79}"
+  },
+  {
+   "id": "CV-01",
+   "check": "conservation ODE residual (normalised)",
+   "value": 2.30398e-08,
+   "tolerance": 1e-06,
+   "pass": true,
+   "detail": "case 3: heptane {'O2': 0.16, 'N2': 0.54, 'CO2': 0.3}"
+  },
+  {
+   "id": "CV-02",
+   "check": "boundary and matching conditions (max error)",
+   "value": 2.40387e-07,
+   "tolerance": 1e-06,
+   "pass": true,
+   "detail": "case 3: heptane {'O2': 0.16, 'N2': 0.54, 'CO2': 0.3}"
+  },
+  {
+   "id": "CV-03",
+   "check": "surface energy balance (relative error)",
+   "value": 3.43891e-08,
+   "tolerance": 0.0001,
+   "pass": true,
+   "detail": "case 3: heptane {'O2': 0.16, 'N2': 0.54, 'CO2': 0.3}"
+  },
+  {
+   "id": "CV-04",
+   "check": "flame-sheet jump conditions (max relative error)",
+   "value": 1.85465e-07,
+   "tolerance": 0.0001,
+   "pass": true,
+   "detail": "case 3: heptane {'O2': 0.16, 'N2': 0.54, 'CO2': 0.3}"
+  },
+  {
+   "id": "CV-01",
+   "check": "conservation ODE residual (normalised)",
+   "value": 1.97889e-08,
+   "tolerance": 1e-06,
+   "pass": true,
+   "detail": "case 4: methanol {'O2': 0.17, 'N2': 0.43, 'He': 0.4}"
+  },
+  {
+   "id": "CV-02",
+   "check": "boundary and matching conditions (max error)",
+   "value": 6.68221e-08,
+   "tolerance": 1e-06,
+   "pass": true,
+   "detail": "case 4: methanol {'O2': 0.17, 'N2': 0.43, 'He': 0.4}"
+  },
+  {
+   "id": "CV-03",
+   "check": "surface energy balance (relative error)",
+   "value": 2.38326e-07,
+   "tolerance": 0.0001,
+   "pass": true,
+   "detail": "case 4: methanol {'O2': 0.17, 'N2': 0.43, 'He': 0.4}"
+  },
+  {
+   "id": "CV-04",
+   "check": "flame-sheet jump conditions (max relative error)",
+   "value": 1.86888e-07,
+   "tolerance": 0.0001,
+   "pass": true,
+   "detail": "case 4: methanol {'O2': 0.17, 'N2': 0.43, 'He': 0.4}"
+  },
+  {
+   "id": "CV-05",
+   "check": "RK4 integration converges to the closed form: observed order",
+   "value": 3.87679,
+   "tolerance": "3.7-4.3",
+   "pass": true,
+   "detail": "errors 1.374e-06, 1.040e-07, 7.080e-09 mm at 200/400/800 steps"
+  },
+  {
+   "id": "CV-07",
+   "check": "pressure is not an input (K identical)",
+   "value": 0.0,
+   "tolerance": 0.0,
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "CV-07",
+   "check": "scaling mole fractions changes nothing (|dK|)",
+   "value": 0.0,
+   "tolerance": 1e-12,
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "CV-07",
+   "check": "K increases with X_O2",
+   "value": true,
+   "tolerance": true,
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "CV-07",
+   "check": "single-species mixture returns pure-species values; interpolation hits table nodes",
+   "value": 0.0,
+   "tolerance": 1e-12,
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "id": "CV-08",
+   "check": "hand calculation, heptane in air at T_prop = 1500 K (max relative difference)",
+   "value": 1.57687e-15,
+   "tolerance": 1e-12,
+   "pass": true,
+   "detail": "K = 2.2264 mm²/s, B = 9.1178, T_f = 2575.8 K, r_f/r_s = 36.05"
+  }
+ ]
+}

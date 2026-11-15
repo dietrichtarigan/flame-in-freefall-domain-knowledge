@@ -1,0 +1,83 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://open-flex.local/schemas/discrepancy.schema.json",
+ "title": "Discrepancy register",
+ "description": "Disagreements between or within sources. Values are shown as printed; 'preferred' stays null unless a documented reason exists.",
+ "type": "object",
+ "required": [
+  "registry_version",
+  "discrepancies"
+ ],
+ "properties": {
+  "registry_version": {
+   "type": "string"
+  },
+  "note": {
+   "type": "string"
+  },
+  "discrepancies": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "discrepancy_id",
+     "topic",
+     "values",
+     "preferred",
+     "reason"
+    ],
+    "properties": {
+     "discrepancy_id": {
+      "$ref": "common.schema.json#/$defs/discrepancy_id"
+     },
+     "topic": {
+      "type": "string"
+     },
+     "values": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+       "type": "object",
+       "required": [
+        "value",
+        "source"
+       ],
+       "additionalProperties": false,
+       "properties": {
+        "value": {
+         "type": "string"
+        },
+        "source": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "preferred": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "reason": {
+      "type": "string"
+     },
+     "tests": {
+      "type": "array",
+      "items": {
+       "$ref": "common.schema.json#/$defs/physical_test_id"
+      }
+     },
+     "detected_by": {
+      "type": "string",
+      "description": "tool or review step that found it"
+     },
+     "impact": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ }
+}

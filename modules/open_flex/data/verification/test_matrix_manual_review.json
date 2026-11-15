@@ -1,0 +1,294 @@
+{
+ "registry_version": "0.3.0",
+ "what": "Visual review of every Tables I–VIII cell where the page-image reading (tools/verify_test_matrix_images.py) disagreed with data/extracted/test_matrix.csv.",
+ "reviewer": "Claude (AI assistant) in Phase B M3, by viewing the crop montage; not an independent human reviewer.",
+ "evidence_images": [
+  "docs/verification/test_matrix_ocr_disagreements_review.png"
+ ],
+ "result_summary": {
+  "cells_reviewed": 25,
+  "csv_matches_image": 25,
+  "csv_differs_from_image": 0
+ },
+ "limits": [
+  "Confirms the CSV reproduces what Tables I–VIII print; says nothing about whether the printed values are correct.",
+  "No independent human review."
+ ],
+ "items": [
+  {
+   "review_index": 0,
+   "flex_test": "FLEX-009",
+   "field": "test_number",
+   "pdf_page": 16,
+   "csv_value": "009",
+   "automatic_reading": "digits=009 layout=–#",
+   "value_seen_in_image": "009",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 1,
+   "flex_test": "FLEX-009",
+   "field": "date_2",
+   "pdf_page": 16,
+   "csv_value": "2009",
+   "automatic_reading": "digits=2009 layout=–#",
+   "value_seen_in_image": "2009",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 2,
+   "flex_test": "FLEX-009",
+   "field": "D0_mm",
+   "pdf_page": 16,
+   "csv_value": "3.00",
+   "automatic_reading": "digits=300 layout=–#.#",
+   "value_seen_in_image": "3.00",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 3,
+   "flex_test": "FLEX-009",
+   "field": "P_atm",
+   "pdf_page": 16,
+   "csv_value": "1.00",
+   "automatic_reading": "digits=100 layout=–#.#",
+   "value_seen_in_image": "1.00",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 4,
+   "flex_test": "FLEX-018",
+   "field": "test_number",
+   "pdf_page": 16,
+   "csv_value": "018",
+   "automatic_reading": "digits=018 layout=–#",
+   "value_seen_in_image": "018",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 5,
+   "flex_test": "FLEX-018",
+   "field": "date_1",
+   "pdf_page": 16,
+   "csv_value": "1,",
+   "automatic_reading": "4",
+   "value_seen_in_image": "1,",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 6,
+   "flex_test": "FLEX-018",
+   "field": "date_2",
+   "pdf_page": 16,
+   "csv_value": "2009",
+   "automatic_reading": "digits=2009 layout=–#",
+   "value_seen_in_image": "2009",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 7,
+   "flex_test": "FLEX-018",
+   "field": "D0_mm",
+   "pdf_page": 16,
+   "csv_value": "2.92",
+   "automatic_reading": "digits=292 layout=–#.#",
+   "value_seen_in_image": "2.92",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 8,
+   "flex_test": "FLEX-018",
+   "field": "P_atm",
+   "pdf_page": 16,
+   "csv_value": "2.04",
+   "automatic_reading": "digits=204 layout=–#.#",
+   "value_seen_in_image": "2.04",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 9,
+   "flex_test": "FLEX-130",
+   "field": "test_number",
+   "pdf_page": 21,
+   "csv_value": "130",
+   "automatic_reading": "digits=130 layout=–#",
+   "value_seen_in_image": "130",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 10,
+   "flex_test": "FLEX-130",
+   "field": "date_1",
+   "pdf_page": 21,
+   "csv_value": "17,",
+   "automatic_reading": "1,",
+   "value_seen_in_image": "17,",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 11,
+   "flex_test": "FLEX-130",
+   "field": "date_2",
+   "pdf_page": 21,
+   "csv_value": "2010",
+   "automatic_reading": "digits=2010 layout=–#",
+   "value_seen_in_image": "2010",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 12,
+   "flex_test": "FLEX-130",
+   "field": "D0_mm",
+   "pdf_page": 21,
+   "csv_value": "3.02",
+   "automatic_reading": "digits=302 layout=–#.#",
+   "value_seen_in_image": "3.02",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 13,
+   "flex_test": "FLEX-130",
+   "field": "P_atm",
+   "pdf_page": 21,
+   "csv_value": ".71",
+   "automatic_reading": "digits= layout=–.#",
+   "value_seen_in_image": ".71",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 14,
+   "flex_test": "FLEX-130",
+   "field": "X_O2",
+   "pdf_page": 21,
+   "csv_value": ".170",
+   "automatic_reading": "digits=170 layout=–.#",
+   "value_seen_in_image": ".170",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 15,
+   "flex_test": "FLEX-130",
+   "field": "X_CO2",
+   "pdf_page": 21,
+   "csv_value": ".450",
+   "automatic_reading": "digits=450 layout=–.#",
+   "value_seen_in_image": ".450",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 16,
+   "flex_test": "FLEX-130",
+   "field": "X_N2",
+   "pdf_page": 21,
+   "csv_value": ".380",
+   "automatic_reading": "digits=380 layout=–.#",
+   "value_seen_in_image": ".380",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 17,
+   "flex_test": "FLEX-166",
+   "field": "test_number",
+   "pdf_page": 21,
+   "csv_value": "166",
+   "automatic_reading": "digits=166 layout=–#",
+   "value_seen_in_image": "166",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 18,
+   "flex_test": "FLEX-166",
+   "field": "date_1",
+   "pdf_page": 21,
+   "csv_value": "9,",
+   "automatic_reading": "»",
+   "value_seen_in_image": "9,",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 19,
+   "flex_test": "FLEX-166",
+   "field": "date_2",
+   "pdf_page": 21,
+   "csv_value": "2010",
+   "automatic_reading": "digits=2010 layout=–#",
+   "value_seen_in_image": "2010",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 20,
+   "flex_test": "FLEX-166",
+   "field": "D0_mm",
+   "pdf_page": 21,
+   "csv_value": "2.19",
+   "automatic_reading": "digits=219 layout=–#.#",
+   "value_seen_in_image": "2.19",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 21,
+   "flex_test": "FLEX-166",
+   "field": "P_atm",
+   "pdf_page": 21,
+   "csv_value": "1.01",
+   "automatic_reading": "digits=101 layout=–#.#",
+   "value_seen_in_image": "1.01",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 22,
+   "flex_test": "FLEX-166",
+   "field": "X_O2",
+   "pdf_page": 21,
+   "csv_value": ".180",
+   "automatic_reading": "digits=180 layout=–.#",
+   "value_seen_in_image": ".180",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 23,
+   "flex_test": "FLEX-166",
+   "field": "X_CO2",
+   "pdf_page": 21,
+   "csv_value": ".150",
+   "automatic_reading": "digits=150 layout=–.#",
+   "value_seen_in_image": ".150",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  },
+  {
+   "review_index": 24,
+   "flex_test": "FLEX-166",
+   "field": "X_N2",
+   "pdf_page": 21,
+   "csv_value": ".670",
+   "automatic_reading": "digits=670 layout=–.#",
+   "value_seen_in_image": ".670",
+   "result": "CSV MATCHES IMAGE",
+   "note": "Last row of the table: the table's bottom rule lies inside the crop and was read as a dash; digits and decimal point agree."
+  }
+ ]
+}

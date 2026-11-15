@@ -1,0 +1,149 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://open-flex.local/schemas/common.schema.json",
+ "title": "Shared definitions",
+ "$defs": {
+  "evidence_class": {
+   "description": "Where a value or statement comes from (Phase B evidence classes). VISUAL_OBSERVATION = what a reviewer saw in imagery (e.g. NASA video frames); qualitative, no measured values. REFERENCE_DATA = property values from reference or tertiary sources (property libraries, handbooks, encyclopaedic tables); not FLEX data.",
+   "enum": [
+    "PUBLISHED_TABULATED",
+    "NASA_REPORTED",
+    "DIGITIZED",
+    "DERIVED",
+    "PEER_REVIEWED_RESULT",
+    "PEER_OR_TEAM_REPORT",
+    "SOFTWARE_DOC",
+    "NUMERICAL_SIMULATION",
+    "ML_PREDICTION",
+    "CONCEPTUAL_ILLUSTRATION",
+    "UNKNOWN",
+    "VISUAL_OBSERVATION",
+    "REFERENCE_DATA"
+   ]
+  },
+  "verification_status": {
+   "enum": [
+    "VERIFIED",
+    "PARTIALLY VERIFIED",
+    "UNVERIFIED"
+   ]
+  },
+  "physical_test_id": {
+   "type": "string",
+   "pattern": "^FLEX-[0-9]{3}$",
+   "description": "NASA FLEX test number (physical ISS test). Never used for modified or simulated inputs."
+  },
+  "simulation_run_id": {
+   "type": "string",
+   "pattern": "^SIM-[0-9a-f]{12}$"
+  },
+  "analysis_run_id": {
+   "type": "string",
+   "pattern": "^ANA-[0-9a-f]{12}$"
+  },
+  "literature_case_id": {
+   "type": "string",
+   "pattern": "^LIT-[A-Za-z0-9]+-[0-9]{4}-[A-Za-z0-9-]+$"
+  },
+  "dataset_id": {
+   "type": "string",
+   "pattern": "^DS-[A-Z0-9-]+$"
+  },
+  "source_id": {
+   "type": "string",
+   "pattern": "^S[0-9]{2}$"
+  },
+  "claim_id": {
+   "type": "string",
+   "pattern": "^CLM-[0-9]{3}$"
+  },
+  "discrepancy_id": {
+   "type": "string",
+   "pattern": "^DSC-[0-9]{3}$"
+  },
+  "sha256": {
+   "type": "string",
+   "pattern": "^[0-9a-f]{64}$"
+  },
+  "source_ref": {
+   "type": "object",
+   "required": [
+    "source_id",
+    "locator"
+   ],
+   "additionalProperties": false,
+   "properties": {
+    "source_id": {
+     "$ref": "#/$defs/source_id"
+    },
+    "locator": {
+     "type": "string",
+     "minLength": 1,
+     "description": "page/table/figure/section"
+    }
+   }
+  },
+  "printed_cell": {
+   "type": "object",
+   "description": "One printed value: verbatim text plus parsed number.",
+   "required": [
+    "raw",
+    "value"
+   ],
+   "additionalProperties": false,
+   "properties": {
+    "raw": {
+     "type": "string"
+    },
+    "value": {
+     "type": [
+      "number",
+      "string",
+      "null"
+     ]
+    },
+    "approx": {
+     "type": "boolean"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "origin": {
+     "enum": [
+      "cell",
+      "table header",
+      "not given"
+     ]
+    }
+   }
+  },
+  "uncertainty_statement": {
+   "type": "object",
+   "description": "Reported uncertainty. Never converted into a distribution or interval unless the source states one.",
+   "required": [
+    "text",
+    "coverage_factor",
+    "distribution"
+   ],
+   "properties": {
+    "text": {
+     "type": "string"
+    },
+    "coverage_factor": {
+     "type": [
+      "number",
+      "string"
+     ],
+     "description": "number only if stated by the source, else 'not stated'"
+    },
+    "distribution": {
+     "type": "string",
+     "description": "'not specified' unless stated"
+    },
+    "claim_id": {
+     "$ref": "#/$defs/claim_id"
+    }
+   }
+  }
+ }
+}

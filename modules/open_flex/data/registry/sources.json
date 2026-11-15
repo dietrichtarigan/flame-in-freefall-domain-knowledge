@@ -1,0 +1,222 @@
+{
+ "registry_version": "0.5.0",
+ "note": "S-numbers follow the Research Guide register (section 7) so existing references keep their meaning. S40 is new in Phase B.",
+ "sources": [
+  {
+   "source_id": "S01",
+   "citation": "Dietrich, D.L.; Ferkul, P.V.; Bryg, V.M.; Nayagam, M.V.; Hicks, M.C.; Williams, F.A.; Dryer, F.L.; Shaw, B.D.; et al. Detailed Results from the Flame Extinguishment Experiment (FLEX) — March 2009 to December 2011. NASA/TP-2015-216046 (E-18493), NASA Glenn Research Center, 2015.",
+   "url": "https://ntrs.nasa.gov/citations/20150023456",
+   "source_class": "NASA_PRIMARY",
+   "scope": "Original FLEX",
+   "review_status": "READ (PDF supplied; text layer and selected page images checked)",
+   "sha256": "b4f6ca983e2792c33a0b92220a791a818f426bb635b94f7fd33dc8c9c471e79d",
+   "local_file": "sources/original/NASA-TP-2015-216046.pdf",
+   "rights": "NTRS: Public Use Permitted"
+  },
+  {
+   "source_id": "S02",
+   "citation": "Williams, F.A. et al. JSC-17962-27, Multi-User Droplet Combustion Apparatus — Flame Extinguishment Experiment (23 Feb 2009).",
+   "url": "https://ntrs.nasa.gov/citations/20090014812",
+   "source_class": "NASA_PRIMARY",
+   "scope": "Original FLEX — pre-flight planning document",
+   "review_status": "NOT AVAILABLE in this review",
+   "sha256": null
+  },
+  {
+   "source_id": "S03",
+   "citation": "Dietrich, D.L.; Nayagam, V.; Hicks, M.C.; Ferkul, P.V.; Dryer, F.L.; Farouk, T.; Shaw, B.D.; Suh, H.K.; Choi, M.Y.; Liu, Y.C.; Avedisian, C.T.; Williams, F.A. Droplet Combustion Experiments Aboard the International Space Station. Microgravity Sci. Technol. 26, 65–76 (2014). doi:10.1007/s12217-014-9372-2",
+   "url": "https://doi.org/10.1007/s12217-014-9372-2",
+   "source_class": "PEER_REVIEWED",
+   "scope": "Original FLEX",
+   "review_status": "ABSTRACT ONLY (via bibliographic index records); full text not available",
+   "sha256": null
+  },
+  {
+   "source_id": "S04",
+   "citation": "NASA Physical Sciences Informatics, PSI-69 — Flame Extinguishment Experiment (FLEX), Version 5. doi:10.60555/mbq8-0451.",
+   "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69",
+   "source_class": "NASA_PRIMARY",
+   "scope": "Original FLEX data portal",
+   "review_status": "NOT AVAILABLE in this review",
+   "sha256": null
+  },
+  {
+   "source_id": "S06",
+   "citation": "Nayagam, V.; Dietrich, D.L.; Hicks, M.C.; Williams, F.A. Methanol Droplet Combustion in Oxygen-Inert Environments in Microgravity (2013). NASA NTRS 20130014061.",
+   "url": "https://ntrs.nasa.gov/citations/20130014061",
+   "source_class": "NASA_PRIMARY",
+   "scope": "Original FLEX",
+   "review_status": "NOT AVAILABLE in this review",
+   "sha256": null
+  },
+  {
+   "source_id": "S07",
+   "citation": "Williams, F.A. Unexpected Observations Made in FLEX Test 0035. Near-limit flames workshop presentation (2009).",
+   "url": "https://www.princeton.edu/~yju/1st-near-limit-flames-workshop/presentations/FA%20Williams-Microgravity.pdf",
+   "source_class": "OTHER",
+   "scope": "Original FLEX (presentation)",
+   "review_status": "NOT AVAILABLE in this review",
+   "sha256": null
+  },
+  {
+   "source_id": "S08",
+   "citation": "FLEX Test 023 video, NASA Glenn Research Center / P. Ferkul, 24 Oct 2009 (Wikimedia Commons mirror).",
+   "url": "https://commons.wikimedia.org/wiki/File:FLEX_Test023.webm",
+   "source_class": "NASA_PRIMARY",
+   "scope": "Original FLEX (video)",
+   "review_status": "NOT AVAILABLE in this review",
+   "sha256": null
+  },
+  {
+   "source_id": "S09",
+   "citation": "NASA Glenn, FLEX Project Overview one-pager, October 2010 (FLEX_Quad.pdf).",
+   "url": "https://www1.grc.nasa.gov/wp-content/uploads/FLEX_Quad.pdf",
+   "source_class": "NASA_PRIMARY",
+   "scope": "Original FLEX (project overview)",
+   "review_status": "NOT AVAILABLE in this review",
+   "sha256": null
+  },
+  {
+   "source_id": "S25",
+   "citation": "Cantera 3.2 documentation: gas transport.",
+   "url": "https://www.cantera.org/3.2/reference/transport/index.html",
+   "source_class": "SOFTWARE_DOC",
+   "scope": "Methodological",
+   "review_status": "NOT READ in this review",
+   "sha256": null
+  },
+  {
+   "source_id": "S26",
+   "citation": "CERFACS Chemistry Database: GRI-Mech 3.0 entry.",
+   "url": "https://chemistry.cerfacs.fr/en/chemical-database/mechanisms-list/gri-mech-3-0/",
+   "source_class": "SOFTWARE_DOC",
+   "scope": "Methodological",
+   "review_status": "NOT READ in this review",
+   "sha256": null
+  },
+  {
+   "source_id": "S30",
+   "citation": "A numerical framework for droplet combustion (J. Comput. Sci., 2024). doi:10.1016/j.jocs.2024.102453",
+   "url": "https://doi.org/10.1016/j.jocs.2024.102453",
+   "source_class": "PEER_REVIEWED",
+   "scope": "Methodological (not FLEX data)",
+   "review_status": "NOT READ in this review",
+   "sha256": null
+  },
+  {
+   "source_id": "S33",
+   "citation": "SALib documentation (Sobol, Morris).",
+   "url": "https://salib.readthedocs.io/en/stable/",
+   "source_class": "SOFTWARE_DOC",
+   "scope": "Methodological",
+   "review_status": "NOT READ in this review",
+   "sha256": null
+  },
+  {
+   "source_id": "S35",
+   "citation": "MAPIE documentation: conformal prediction.",
+   "url": "https://mapie.readthedocs.io/en/stable/content/conformal-prediction/",
+   "source_class": "SOFTWARE_DOC",
+   "scope": "Methodological",
+   "review_status": "NOT READ in this review",
+   "sha256": null
+  },
+  {
+   "source_id": "S37",
+   "citation": "RO-Crate Metadata Specification (1.2 stable 2025; 1.3 announced 23 Jun 2026).",
+   "url": "https://w3id.org/ro/crate/1.2",
+   "source_class": "SOFTWARE_DOC",
+   "scope": "Methodological",
+   "review_status": "RELEASE STATUS CHECKED via web search; specification text not read",
+   "sha256": null
+  },
+  {
+   "source_id": "S39",
+   "citation": "Python Standard Library: uuid, hashlib.",
+   "url": "https://docs.python.org/3/library/hashlib.html",
+   "source_class": "SOFTWARE_DOC",
+   "scope": "Methodological",
+   "review_status": "NOT READ in this review",
+   "sha256": null
+  },
+  {
+   "source_id": "S40",
+   "citation": "Nayagam, V.; Dietrich, D.L.; Hicks, M.C.; Williams, F.A. Cool-flame extinction during n-alkane droplet combustion in microgravity. 2014 Spring Technical Meeting, Central States Section of the Combustion Institute (NTRS 20140006750).",
+   "url": "https://ntrs.nasa.gov/citations/20140006750",
+   "source_class": "NASA_PRIMARY",
+   "scope": "Original FLEX (conference paper)",
+   "review_status": "SEARCH SNIPPET ONLY (states the 80 µm tether fiber is silicon carbide)",
+   "sha256": null
+  },
+  {
+   "source_id": "S41",
+   "citation": "NASA. \"Amazing Flame Comes to Life in Space Station Microgravity Combustion Science\" (video, 1:04). YouTube, NASA channel. https://www.youtube.com/watch?v=qQQ1OHW1_F4",
+   "url": "https://www.youtube.com/watch?v=qQQ1OHW1_F4",
+   "source_class": "OTHER",
+   "scope": "MDCA colour-camera footage of a droplet test: hardware under LED light, deployment between needles, ignition, burning and extinction. Used only for visual appearance; the test ID and conditions are not stated in the frames seen.",
+   "review_status": "Partially reviewed: five screenshots supplied by the user (frames at about 0:08, 0:45, 0:47 and later); the video itself could not be opened from the build environment.",
+   "sha256": null,
+   "rights": "NASA media; screenshots not redistributed in this repository."
+  },
+  {
+   "source_id": "S42",
+   "citation": "Bell, I.H.; Wronski, J.; Quoilin, S.; Lemort, V. Pure and Pseudo-pure Fluid Thermophysical Property Evaluation and the Open-Source Thermophysical Property Library CoolProp. Ind. Eng. Chem. Res. 53(6), 2498–2508 (2014). doi:10.1021/ie4033999. Software: CoolProp 8.0.0 (PyPI).",
+   "url": "https://doi.org/10.1021/ie4033999",
+   "source_class": "PEER_REVIEWED",
+   "scope": "Fluid properties for the D²-law baseline: fuel boiling points, latent heats, liquid densities; cp, conductivity and viscosity of N2, O2, CO2, He (300–2000 K, 1 atm); water latent heat at 298.15 K.",
+   "review_status": "Software used directly (version pinned and checked by tools/build_model_properties.py); the paper was not re-read in this build.",
+   "sha256": null,
+   "rights": "CoolProp: MIT licence."
+  },
+  {
+   "source_id": "S43",
+   "citation": "Wikipedia contributors. \"Heptane\" (infobox, Thermochemistry). Wikipedia, read 15 Nov 2026. https://en.wikipedia.org/wiki/Heptane",
+   "url": "https://en.wikipedia.org/wiki/Heptane",
+   "source_class": "OTHER",
+   "scope": "Standard enthalpy of combustion of liquid n-heptane, -4.825 to -4.809 MJ/mol (tertiary source).",
+   "review_status": "Value read from search-result text of the page on 15 Nov 2026; tertiary source, primary reference not checked.",
+   "sha256": null,
+   "rights": "CC BY-SA 4.0"
+  },
+  {
+   "source_id": "S44",
+   "citation": "The Engineering ToolBox. \"Methanol - Thermophysical Properties\". Read 15 Nov 2026. https://www.engineeringtoolbox.com/methanol-methyl-alcohol-properties-CH3OH-d_2031.html",
+   "url": "https://www.engineeringtoolbox.com/methanol-methyl-alcohol-properties-CH3OH-d_2031.html",
+   "source_class": "OTHER",
+   "scope": "Enthalpy of combustion of methanol: 726.1 kJ/mol and -727 kJ/mol (liquid) in two versions of the page (tertiary source).",
+   "review_status": "Values read from search-result text on 15 Nov 2026; the two page versions label the value differently (gas / liquid).",
+   "sha256": null,
+   "rights": "Website content; values cited, not redistributed."
+  },
+  {
+   "source_id": "S45",
+   "citation": "Wikipedia contributors. \"Methanol (data page)\" (liquid properties). Wikipedia, read 15 Nov 2026. https://en.wikipedia.org/wiki/Methanol_(data_page)",
+   "url": "https://en.wikipedia.org/wiki/Methanol_(data_page)",
+   "source_class": "OTHER",
+   "scope": "Enthalpy of combustion of liquid methanol, -715.0 kJ/mol (tertiary source).",
+   "review_status": "Value read from search-result text on 15 Nov 2026; primary reference not checked.",
+   "sha256": null,
+   "rights": "CC BY-SA 4.0"
+  },
+  {
+   "source_id": "S46",
+   "citation": "Wilke, C.R. A Viscosity Equation for Gas Mixtures. J. Chem. Phys. 18, 517–519 (1950). doi:10.1063/1.1747673",
+   "url": "https://doi.org/10.1063/1.1747673",
+   "source_class": "PEER_REVIEWED",
+   "scope": "Interaction parameter phi_ij used in the gas-mixture conductivity rule.",
+   "review_status": "Cited for the standard formula; the paper was not re-read in this build.",
+   "sha256": null,
+   "rights": "Cited only."
+  },
+  {
+   "source_id": "S47",
+   "citation": "Mason, E.A.; Saxena, S.C. Approximate Formula for the Thermal Conductivity of Gas Mixtures. Phys. Fluids 1, 361–369 (1958). doi:10.1063/1.1724352",
+   "url": "https://doi.org/10.1063/1.1724352",
+   "source_class": "PEER_REVIEWED",
+   "scope": "Wassiljewa-form mixture conductivity with viscosity-based interaction parameters (used here with the empirical factor epsilon = 1).",
+   "review_status": "Cited for the standard formula; the paper was not re-read in this build.",
+   "sha256": null,
+   "rights": "Cited only."
+  }
+ ]
+}

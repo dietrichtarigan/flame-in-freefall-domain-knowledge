@@ -1,0 +1,1433 @@
+flex_test,table,field,csv,ocr,ocr_status,pdf_page
+FLEX-001,I,test_number,001,digits=001 layout=#,MATCH,16
+FLEX-001,I,date_0,Mar.,Mar.,MATCH,16
+FLEX-001,I,date_1,"5,","5,",MATCH,16
+FLEX-001,I,date_2,2009,digits=2009 layout=#,MATCH,16
+FLEX-001,I,fuel,Methanol,Methanol,MATCH,16
+FLEX-001,I,D0_mm,1.80,digits=180 layout=#.#,MATCH,16
+FLEX-001,I,P_atm,1.00,digits=100 layout=#.#,MATCH,16
+FLEX-002,I,test_number,002,digits=002 layout=#,MATCH,16
+FLEX-002,I,date_0,Mar.,Mar.,MATCH,16
+FLEX-002,I,date_1,"5,","5,",MATCH,16
+FLEX-002,I,date_2,2009,digits=2009 layout=#,MATCH,16
+FLEX-002,I,fuel,Methanol,Methanol,MATCH,16
+FLEX-002,I,D0_mm,2.00,digits=200 layout=#.#,MATCH,16
+FLEX-002,I,P_atm,1.00,digits=100 layout=#.#,MATCH,16
+FLEX-003,I,test_number,003,digits=003 layout=#,MATCH,16
+FLEX-003,I,date_0,Mar.,Mar.,MATCH,16
+FLEX-003,I,date_1,"5,","5,",MATCH,16
+FLEX-003,I,date_2,2009,digits=2009 layout=#,MATCH,16
+FLEX-003,I,fuel,Methanol,Methanol,MATCH,16
+FLEX-003,I,D0_mm,1.71,digits=171 layout=#.#,MATCH,16
+FLEX-003,I,P_atm,1.01,digits=101 layout=#.#,MATCH,16
+FLEX-004,I,test_number,004,digits=004 layout=#,MATCH,16
+FLEX-004,I,date_0,Mar.,Mar.,MATCH,16
+FLEX-004,I,date_1,"31,","31,",MATCH,16
+FLEX-004,I,date_2,2009,digits=2009 layout=#,MATCH,16
+FLEX-004,I,fuel,Methanol,Methanol,MATCH,16
+FLEX-004,I,D0_mm,2.19,digits=219 layout=#.#,MATCH,16
+FLEX-004,I,P_atm,1.00,digits=100 layout=#.#,MATCH,16
+FLEX-005,I,test_number,005,digits=005 layout=#,MATCH,16
+FLEX-005,I,date_0,Mar.,Mar.,MATCH,16
+FLEX-005,I,date_1,"31,","31,",MATCH,16
+FLEX-005,I,date_2,2009,digits=2009 layout=#,MATCH,16
+FLEX-005,I,fuel,Methanol,Methanol,MATCH,16
+FLEX-005,I,D0_mm,1.95,digits=195 layout=#.#,MATCH,16
+FLEX-005,I,P_atm,1.00,digits=100 layout=#.#,MATCH,16
+FLEX-006,I,test_number,006,digits=006 layout=#,MATCH,16
+FLEX-006,I,date_0,Mar.,Mar.,MATCH,16
+FLEX-006,I,date_1,"31,","31,",MATCH,16
+FLEX-006,I,date_2,2009,digits=2009 layout=#,MATCH,16
+FLEX-006,I,fuel,Methanol,Methanol,MATCH,16
+FLEX-006,I,D0_mm,2.90,digits=290 layout=#.#,MATCH,16
+FLEX-006,I,P_atm,1.00,digits=100 layout=#.#,MATCH,16
+FLEX-007,I,test_number,007,digits=007 layout=#,MATCH,16
+FLEX-007,I,date_0,Apr.,Apr.,MATCH,16
+FLEX-007,I,date_1,"10,","10,",MATCH,16
+FLEX-007,I,date_2,2009,digits=2009 layout=#,MATCH,16
+FLEX-007,I,fuel,Heptane,Heptane,MATCH,16
+FLEX-007,I,D0_mm,1.91,digits=191 layout=#.#,MATCH,16
+FLEX-007,I,P_atm,1.00,digits=100 layout=#.#,MATCH,16
+FLEX-008,I,test_number,008,digits=008 layout=#,MATCH,16
+FLEX-008,I,date_0,Apr.,Apr.,MATCH,16
+FLEX-008,I,date_1,"10,","10,",MATCH,16
+FLEX-008,I,date_2,2009,digits=2009 layout=#,MATCH,16
+FLEX-008,I,fuel,Heptane,Heptane,MATCH,16
+FLEX-008,I,D0_mm,2.89,digits=289 layout=#.#,MATCH,16
+FLEX-008,I,P_atm,1.00,digits=100 layout=#.#,MATCH,16
+FLEX-009,I,test_number,009,digits=009 layout=–#,DISAGREE,16
+FLEX-009,I,date_0,Apr.,Apr.,MATCH,16
+FLEX-009,I,date_1,"10,","10,",MATCH,16
+FLEX-009,I,date_2,2009,digits=2009 layout=–#,DISAGREE,16
+FLEX-009,I,fuel,Heptane,Heptane,MATCH,16
+FLEX-009,I,D0_mm,3.00,digits=300 layout=–#.#,DISAGREE,16
+FLEX-009,I,P_atm,1.00,digits=100 layout=–#.#,DISAGREE,16
+FLEX-010,II,test_number,010,digits=010 layout=#,MATCH,16
+FLEX-010,II,date_0,May,May,MATCH,16
+FLEX-010,II,date_1,"22,","22,",MATCH,16
+FLEX-010,II,date_2,2009,digits=2009 layout=#,MATCH,16
+FLEX-010,II,fuel,Methanol,Methanol,MATCH,16
+FLEX-010,II,D0_mm,3.88,digits=388 layout=#.#,MATCH,16
+FLEX-010,II,P_atm,3.05,digits=305 layout=#.#,MATCH,16
+FLEX-011,II,test_number,011,digits=011 layout=#,MATCH,16
+FLEX-011,II,date_0,May,May,MATCH,16
+FLEX-011,II,date_1,"22,","22,",MATCH,16
+FLEX-011,II,date_2,2009,digits=2009 layout=#,MATCH,16
+FLEX-011,II,fuel,Methanol,Methanol,MATCH,16
+FLEX-011,II,D0_mm,3.02,digits=302 layout=#.#,MATCH,16
+FLEX-011,II,P_atm,3.05,digits=305 layout=#.#,MATCH,16
+FLEX-012,II,test_number,012,digits=012 layout=#,MATCH,16
+FLEX-012,II,date_0,May,May,MATCH,16
+FLEX-012,II,date_1,"22,","22,",MATCH,16
+FLEX-012,II,date_2,2009,digits=2009 layout=#,MATCH,16
+FLEX-012,II,fuel,Heptane,Heptane,MATCH,16
+FLEX-012,II,D0_mm,3.09,digits=309 layout=#.#,MATCH,16
+FLEX-012,II,P_atm,3.05,digits=305 layout=#.#,MATCH,16
+FLEX-013,II,test_number,013,digits=013 layout=#,MATCH,16
+FLEX-013,II,date_0,June,June,MATCH,16
+FLEX-013,II,date_1,"25,","25,",MATCH,16
+FLEX-013,II,date_2,2009,digits=2009 layout=#,MATCH,16
+FLEX-013,II,fuel,Methanol,Methanol,MATCH,16
+FLEX-013,II,D0_mm,2.72,digits=272 layout=#.#,MATCH,16
+FLEX-013,II,P_atm,2.73,digits=273 layout=#.#,MATCH,16
+FLEX-014,II,test_number,014,digits=014 layout=#,MATCH,16
+FLEX-014,II,date_0,June,June,MATCH,16
+FLEX-014,II,date_1,"29,","29,",MATCH,16
+FLEX-014,II,date_2,2009,digits=2009 layout=#,MATCH,16
+FLEX-014,II,fuel,Methanol,Methanol,MATCH,16
+FLEX-014,II,D0_mm,3.71,digits=371 layout=#.#,MATCH,16
+FLEX-014,II,P_atm,2.70,digits=270 layout=#.#,MATCH,16
+FLEX-015,II,test_number,015,digits=015 layout=#,MATCH,16
+FLEX-015,II,date_0,June,June,MATCH,16
+FLEX-015,II,date_1,"29,","29,",MATCH,16
+FLEX-015,II,date_2,2009,digits=2009 layout=#,MATCH,16
+FLEX-015,II,fuel,Methanol,Methanol,MATCH,16
+FLEX-015,II,D0_mm,4.43,digits=443 layout=#.#,MATCH,16
+FLEX-015,II,P_atm,2.72,digits=272 layout=#.#,MATCH,16
+FLEX-016,II,test_number,016,digits=016 layout=#,MATCH,16
+FLEX-016,II,date_0,June,June,MATCH,16
+FLEX-016,II,date_1,"29,","29,",MATCH,16
+FLEX-016,II,date_2,2009,digits=2009 layout=#,MATCH,16
+FLEX-016,II,fuel,Methanol,Methanol,MATCH,16
+FLEX-016,II,D0_mm,1.80,digits=180 layout=#.#,MATCH,16
+FLEX-016,II,P_atm,2.73,digits=273 layout=#.#,MATCH,16
+FLEX-017,II,test_number,017,digits=017 layout=#,MATCH,16
+FLEX-017,II,date_0,July,July,MATCH,16
+FLEX-017,II,date_1,"1,","1,",MATCH,16
+FLEX-017,II,date_2,2009,digits=2009 layout=#,MATCH,16
+FLEX-017,II,fuel,Methanol,Methanol,MATCH,16
+FLEX-017,II,D0_mm,2.81,digits=281 layout=#.#,MATCH,16
+FLEX-017,II,P_atm,2.03,digits=203 layout=#.#,MATCH,16
+FLEX-018,II,test_number,018,digits=018 layout=–#,DISAGREE,16
+FLEX-018,II,date_0,July,July,MATCH,16
+FLEX-018,II,date_1,"1,",4,DISAGREE,16
+FLEX-018,II,date_2,2009,digits=2009 layout=–#,DISAGREE,16
+FLEX-018,II,fuel,Heptane,Heptane,MATCH,16
+FLEX-018,II,D0_mm,2.92,digits=292 layout=–#.#,DISAGREE,16
+FLEX-018,II,P_atm,2.04,digits=204 layout=–#.#,DISAGREE,16
+FLEX-019,III,test_number,019,digits=019 layout=#,MATCH,17
+FLEX-019,III,date_0,Aug.,Aug.,MATCH,17
+FLEX-019,III,date_1,"26,","26,",MATCH,17
+FLEX-019,III,date_2,2009,digits=2009 layout=#,MATCH,17
+FLEX-019,III,fuel,Heptane,Heptane,MATCH,17
+FLEX-019,III,D0_mm,3.43,digits=343 layout=#.#,MATCH,17
+FLEX-019,III,fiber,No,No,MATCH,17
+FLEX-019,III,P_atm,0.71,digits=071 layout=#.#,MATCH,17
+FLEX-019,III,X_O2,0.400,digits=0400 layout=#.#,MATCH,17
+FLEX-019,III,X_N2,0.600,digits=0600 layout=#.#,MATCH,17
+FLEX-020,III,test_number,020,digits=020 layout=#,MATCH,17
+FLEX-020,III,date_0,Oct.,Oct.,MATCH,17
+FLEX-020,III,date_1,"24,","24,",MATCH,17
+FLEX-020,III,date_2,2009,digits=2009 layout=#,MATCH,17
+FLEX-020,III,fuel,Methanol,Methanol,MATCH,17
+FLEX-020,III,D0_mm,3.46,digits=346 layout=#.#,MATCH,17
+FLEX-020,III,fiber,No,No,MATCH,17
+FLEX-020,III,P_atm,.71,digits=71 layout=.#,MATCH,17
+FLEX-020,III,X_O2,.400,digits=400 layout=.#,MATCH,17
+FLEX-020,III,X_N2,.600,digits=600 layout=.#,MATCH,17
+FLEX-021,III,test_number,021,digits=021 layout=#,MATCH,17
+FLEX-021,III,date_0,Oct.,Oct.,MATCH,17
+FLEX-021,III,date_1,"24,","24,",MATCH,17
+FLEX-021,III,date_2,2009,digits=2009 layout=#,MATCH,17
+FLEX-021,III,fuel,Methanol,Methanol,MATCH,17
+FLEX-021,III,D0_mm,3.49,digits=349 layout=#.#,MATCH,17
+FLEX-021,III,fiber,No,No,MATCH,17
+FLEX-021,III,P_atm,.71,digits=71 layout=.#,MATCH,17
+FLEX-021,III,X_O2,.400,digits=400 layout=.#,MATCH,17
+FLEX-021,III,X_N2,.600,digits=600 layout=.#,MATCH,17
+FLEX-022,III,test_number,022,digits=022 layout=#,MATCH,17
+FLEX-022,III,date_0,Oct.,Oct.,MATCH,17
+FLEX-022,III,date_1,"24,","24,",MATCH,17
+FLEX-022,III,date_2,2009,digits=2009 layout=#,MATCH,17
+FLEX-022,III,fuel,Methanol,Methanol,MATCH,17
+FLEX-022,III,D0_mm,3.55,digits=355 layout=#.#,MATCH,17
+FLEX-022,III,fiber,No,No,MATCH,17
+FLEX-022,III,P_atm,.71,digits=71 layout=.#,MATCH,17
+FLEX-022,III,X_O2,.400,digits=400 layout=.#,MATCH,17
+FLEX-022,III,X_N2,.600,digits=600 layout=.#,MATCH,17
+FLEX-023,III,test_number,023,digits=023 layout=#,MATCH,17
+FLEX-023,III,date_0,Oct.,Oct.,MATCH,17
+FLEX-023,III,date_1,"24,","24,",MATCH,17
+FLEX-023,III,date_2,2009,digits=2009 layout=#,MATCH,17
+FLEX-023,III,fuel,Heptane,Heptane,MATCH,17
+FLEX-023,III,D0_mm,3.18,digits=318 layout=#.#,MATCH,17
+FLEX-023,III,fiber,No,No,MATCH,17
+FLEX-023,III,P_atm,.71,digits=71 layout=.#,MATCH,17
+FLEX-023,III,X_O2,.400,digits=400 layout=.#,MATCH,17
+FLEX-023,III,X_N2,.600,digits=600 layout=.#,MATCH,17
+FLEX-024,III,test_number,024,digits=024 layout=#,MATCH,17
+FLEX-024,III,date_0,Oct.,Oct.,MATCH,17
+FLEX-024,III,date_1,"24,","24,",MATCH,17
+FLEX-024,III,date_2,2009,digits=2009 layout=#,MATCH,17
+FLEX-024,III,fuel,Heptane,Heptane,MATCH,17
+FLEX-024,III,D0_mm,4.0,digits=40 layout=#.#,MATCH,17
+FLEX-024,III,fiber,No,No,MATCH,17
+FLEX-024,III,P_atm,.71,digits=71 layout=.#,MATCH,17
+FLEX-024,III,X_O2,.400,digits=400 layout=.#,MATCH,17
+FLEX-024,III,X_N2,.600,digits=600 layout=.#,MATCH,17
+FLEX-025,III,test_number,025,digits=025 layout=#,MATCH,17
+FLEX-025,III,date_0,Nov.,Nov.,MATCH,17
+FLEX-025,III,date_1,"9,","9,",MATCH,17
+FLEX-025,III,date_2,2009,digits=2009 layout=#,MATCH,17
+FLEX-025,III,fuel,Methanol,Methanol,MATCH,17
+FLEX-025,III,D0_mm,2.65,digits=265 layout=#.#,MATCH,17
+FLEX-025,III,fiber,No,No,MATCH,17
+FLEX-025,III,P_atm,.71,digits=71 layout=.#,MATCH,17
+FLEX-025,III,X_O2,.300,digits=300 layout=.#,MATCH,17
+FLEX-025,III,X_N2,.700,digits=700 layout=.#,MATCH,17
+FLEX-026,III,test_number,026,digits=026 layout=#,MATCH,17
+FLEX-026,III,date_0,Nov.,Nov.,MATCH,17
+FLEX-026,III,date_1,"9,","9,",MATCH,17
+FLEX-026,III,date_2,2009,digits=2009 layout=#,MATCH,17
+FLEX-026,III,fuel,Methanol,Methanol,MATCH,17
+FLEX-026,III,D0_mm,3.70,digits=370 layout=#.#,MATCH,17
+FLEX-026,III,fiber,No,No,MATCH,17
+FLEX-026,III,P_atm,.71,digits=71 layout=.#,MATCH,17
+FLEX-026,III,X_O2,.300,digits=300 layout=.#,MATCH,17
+FLEX-026,III,X_N2,.700,digits=700 layout=.#,MATCH,17
+FLEX-027,III,test_number,027,digits=027 layout=#,MATCH,17
+FLEX-027,III,date_0,Nov.,Nov.,MATCH,17
+FLEX-027,III,date_1,"9,","9,",MATCH,17
+FLEX-027,III,date_2,2009,digits=2009 layout=#,MATCH,17
+FLEX-027,III,fuel,Heptane,Heptane,MATCH,17
+FLEX-027,III,D0_mm,4.00,digits=400 layout=#.#,MATCH,17
+FLEX-027,III,fiber,No,No,MATCH,17
+FLEX-027,III,P_atm,.71,digits=71 layout=.#,MATCH,17
+FLEX-027,III,X_O2,.300,digits=300 layout=.#,MATCH,17
+FLEX-027,III,X_N2,.700,digits=700 layout=.#,MATCH,17
+FLEX-028,III,test_number,028,digits=028 layout=#,MATCH,17
+FLEX-028,III,date_0,Nov.,Nov.,MATCH,17
+FLEX-028,III,date_1,"9,","9,",MATCH,17
+FLEX-028,III,date_2,2009,digits=2009 layout=#,MATCH,17
+FLEX-028,III,fuel,Heptane,Heptane,MATCH,17
+FLEX-028,III,D0_mm,3.46,digits=346 layout=#.#,MATCH,17
+FLEX-028,III,fiber,No,No,MATCH,17
+FLEX-028,III,P_atm,.71,digits=71 layout=.#,MATCH,17
+FLEX-028,III,X_O2,.300,digits=300 layout=.#,MATCH,17
+FLEX-028,III,X_N2,.700,digits=700 layout=.#,MATCH,17
+FLEX-029,III,test_number,029,digits=029 layout=#,MATCH,17
+FLEX-029,III,date_0,Nov.,Nov.,MATCH,17
+FLEX-029,III,date_1,"13,","13,",MATCH,17
+FLEX-029,III,date_2,2009,digits=2009 layout=#,MATCH,17
+FLEX-029,III,fuel,Methanol,Methanol,MATCH,17
+FLEX-029,III,D0_mm,2.65,digits=265 layout=#.#,MATCH,17
+FLEX-029,III,fiber,No,No,MATCH,17
+FLEX-029,III,P_atm,1.01,digits=101 layout=#.#,MATCH,17
+FLEX-029,III,X_O2,.300,digits=300 layout=.#,MATCH,17
+FLEX-029,III,X_N2,.700,digits=700 layout=.#,MATCH,17
+FLEX-030,III,test_number,030,digits=030 layout=#,MATCH,17
+FLEX-030,III,date_0,Nov.,Nov.,MATCH,17
+FLEX-030,III,date_1,"13,","13,",MATCH,17
+FLEX-030,III,date_2,2009,digits=2009 layout=#,MATCH,17
+FLEX-030,III,fuel,Methanol,Methanol,MATCH,17
+FLEX-030,III,D0_mm,3.32,digits=332 layout=#.#,MATCH,17
+FLEX-030,III,fiber,No,No,MATCH,17
+FLEX-030,III,P_atm,1.01,digits=101 layout=#.#,MATCH,17
+FLEX-030,III,X_O2,.300,digits=300 layout=.#,MATCH,17
+FLEX-030,III,X_N2,.700,digits=700 layout=.#,MATCH,17
+FLEX-031,III,test_number,031,digits=031 layout=#,MATCH,17
+FLEX-031,III,date_0,Nov.,Nov.,MATCH,17
+FLEX-031,III,date_1,"13,","13,",MATCH,17
+FLEX-031,III,date_2,2009,digits=2009 layout=#,MATCH,17
+FLEX-031,III,fuel,Heptane,Heptane,MATCH,17
+FLEX-031,III,D0_mm,3.51,digits=351 layout=#.#,MATCH,17
+FLEX-031,III,fiber,No,No,MATCH,17
+FLEX-031,III,P_atm,1.01,digits=101 layout=#.#,MATCH,17
+FLEX-031,III,X_O2,.300,digits=300 layout=.#,MATCH,17
+FLEX-031,III,X_N2,.700,digits=700 layout=.#,MATCH,17
+FLEX-032,III,test_number,032,digits=032 layout=#,MATCH,17
+FLEX-032,III,date_0,Nov.,Nov.,MATCH,17
+FLEX-032,III,date_1,"13,","13,",MATCH,17
+FLEX-032,III,date_2,2009,digits=2009 layout=#,MATCH,17
+FLEX-032,III,fuel,Heptane,Heptane,MATCH,17
+FLEX-032,III,D0_mm,3.08,digits=308 layout=#.#,MATCH,17
+FLEX-032,III,fiber,No,No,MATCH,17
+FLEX-032,III,P_atm,1.01,digits=101 layout=#.#,MATCH,17
+FLEX-032,III,X_O2,.300,digits=300 layout=.#,MATCH,17
+FLEX-032,III,X_N2,.700,digits=700 layout=.#,MATCH,17
+FLEX-033,IV,test_number,033,digits=033 layout=#,MATCH,18
+FLEX-033,IV,date_0,Nov.,Nov.,MATCH,18
+FLEX-033,IV,date_1,"27,","27,",MATCH,18
+FLEX-033,IV,date_2,2009,digits=2009 layout=#,MATCH,18
+FLEX-033,IV,D0_mm,2.72,digits=272 layout=#.#,MATCH,18
+FLEX-033,IV,fiber,No,No,MATCH,18
+FLEX-033,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-033,IV,X_O2,0.210,digits=0210 layout=#.#,MATCH,18
+FLEX-033,IV,X_N2,0.790,digits=0790 layout=#.#,MATCH,18
+FLEX-034,IV,test_number,034,digits=034 layout=#,MATCH,18
+FLEX-034,IV,date_0,Nov.,Nov.,MATCH,18
+FLEX-034,IV,date_1,"27,","27,",MATCH,18
+FLEX-034,IV,date_2,2009,digits=2009 layout=#,MATCH,18
+FLEX-034,IV,D0_mm,3.95,digits=395 layout=#.#,MATCH,18
+FLEX-034,IV,fiber,No,No,MATCH,18
+FLEX-034,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-034,IV,X_O2,.210,digits=210 layout=.#,MATCH,18
+FLEX-034,IV,X_N2,.790,digits=790 layout=.#,MATCH,18
+FLEX-035,V,test_number,035,digits=035 layout=#,MATCH,19
+FLEX-035,V,date_0,Nov.,Nov.,MATCH,19
+FLEX-035,V,date_1,"27,","27,",MATCH,19
+FLEX-035,V,date_2,2009,digits=2009 layout=#,MATCH,19
+FLEX-035,V,D0_mm,3.91,digits=391 layout=#.#,MATCH,19
+FLEX-035,V,fiber,No,No,MATCH,19
+FLEX-035,V,P_atm,1.01,digits=101 layout=#.#,MATCH,19
+FLEX-035,V,X_O2,0.210,digits=0210 layout=#.#,MATCH,19
+FLEX-035,V,X_N2,0.790,digits=0790 layout=#.#,MATCH,19
+FLEX-036,IV,test_number,036,digits=036 layout=#,MATCH,18
+FLEX-036,IV,date_0,Dec.,Dec.,MATCH,18
+FLEX-036,IV,date_1,"15,","15,",MATCH,18
+FLEX-036,IV,date_2,2009,digits=2009 layout=#,MATCH,18
+FLEX-036,IV,D0_mm,2.45,digits=245 layout=#.#,MATCH,18
+FLEX-036,IV,fiber,No,No,MATCH,18
+FLEX-036,IV,P_atm,0.71,digits=071 layout=#.#,MATCH,18
+FLEX-036,IV,X_O2,.210,digits=210 layout=.#,MATCH,18
+FLEX-036,IV,X_N2,.790,digits=790 layout=.#,MATCH,18
+FLEX-037,III,test_number,037,digits=037 layout=#,MATCH,17
+FLEX-037,III,date_0,Jan.,Jan.,MATCH,17
+FLEX-037,III,date_1,"7,","7,",MATCH,17
+FLEX-037,III,date_2,2010,digits=2010 layout=#,MATCH,17
+FLEX-037,III,fuel,Methanol,Methanol,MATCH,17
+FLEX-037,III,D0_mm,3.41,digits=341 layout=#.#,MATCH,17
+FLEX-037,III,fiber,Yes,Yes,MATCH,17
+FLEX-037,III,P_atm,.70,digits=70 layout=.#,MATCH,17
+FLEX-037,III,X_O2,.337,digits=337 layout=.#,MATCH,17
+FLEX-037,III,X_N2,.662,digits=662 layout=.#,MATCH,17
+FLEX-038,III,test_number,038,digits=038 layout=#,MATCH,17
+FLEX-038,III,date_0,Jan.,Jan.,MATCH,17
+FLEX-038,III,date_1,"7,","7,",MATCH,17
+FLEX-038,III,date_2,2010,digits=2010 layout=#,MATCH,17
+FLEX-038,III,fuel,Methanol,Methanol,MATCH,17
+FLEX-038,III,D0_mm,3.51,digits=351 layout=#.#,MATCH,17
+FLEX-038,III,fiber,Yes,Yes,MATCH,17
+FLEX-038,III,P_atm,.70,digits=70 layout=.#,MATCH,17
+FLEX-038,III,X_O2,.337,digits=337 layout=.#,MATCH,17
+FLEX-038,III,X_N2,.661,digits=661 layout=.#,MATCH,17
+FLEX-039,III,test_number,039,digits=039 layout=#,MATCH,17
+FLEX-039,III,date_0,Jan.,Jan.,MATCH,17
+FLEX-039,III,date_1,"7,","7,",MATCH,17
+FLEX-039,III,date_2,2010,digits=2010 layout=#,MATCH,17
+FLEX-039,III,fuel,Heptane,Heptane,MATCH,17
+FLEX-039,III,D0_mm,2.91,digits=291 layout=#.#,MATCH,17
+FLEX-039,III,fiber,Yes,Yes,MATCH,17
+FLEX-039,III,P_atm,.70,digits=70 layout=.#,MATCH,17
+FLEX-039,III,X_O2,.336,digits=336 layout=.#,MATCH,17
+FLEX-039,III,X_N2,.661,digits=661 layout=.#,MATCH,17
+FLEX-040,III,test_number,040,digits=040 layout=#,MATCH,17
+FLEX-040,III,date_0,Jan.,Jan.,MATCH,17
+FLEX-040,III,date_1,"8,","8,",MATCH,17
+FLEX-040,III,date_2,2010,digits=2010 layout=#,MATCH,17
+FLEX-040,III,fuel,Methanol,Methanol,MATCH,17
+FLEX-040,III,D0_mm,3.77,digits=377 layout=#.#,MATCH,17
+FLEX-040,III,fiber,Yes,Yes,MATCH,17
+FLEX-040,III,P_atm,.70,digits=70 layout=.#,MATCH,17
+FLEX-040,III,X_O2,.297,digits=297 layout=.#,MATCH,17
+FLEX-040,III,X_N2,.699,digits=699 layout=.#,MATCH,17
+FLEX-041,III,test_number,041,digits=041 layout=#,MATCH,17
+FLEX-041,III,date_0,Jan.,Jan.,MATCH,17
+FLEX-041,III,date_1,"8,","8,",MATCH,17
+FLEX-041,III,date_2,2010,digits=2010 layout=#,MATCH,17
+FLEX-041,III,fuel,Methanol,Methanol,MATCH,17
+FLEX-041,III,D0_mm,3.33,digits=333 layout=#.#,MATCH,17
+FLEX-041,III,fiber,Yes,Yes,MATCH,17
+FLEX-041,III,P_atm,.70,digits=70 layout=.#,MATCH,17
+FLEX-041,III,X_O2,.297,digits=297 layout=.#,MATCH,17
+FLEX-041,III,X_N2,.699,digits=699 layout=.#,MATCH,17
+FLEX-042,III,test_number,042,digits=042 layout=#,MATCH,17
+FLEX-042,III,date_0,Jan.,Jan.,MATCH,17
+FLEX-042,III,date_1,"8,","8,",MATCH,17
+FLEX-042,III,date_2,2010,digits=2010 layout=#,MATCH,17
+FLEX-042,III,fuel,Heptane,Heptane,MATCH,17
+FLEX-042,III,D0_mm,3.02,digits=302 layout=#.#,MATCH,17
+FLEX-042,III,fiber,Yes,Yes,MATCH,17
+FLEX-042,III,P_atm,.70,digits=70 layout=.#,MATCH,17
+FLEX-042,III,X_O2,.298,digits=298 layout=.#,MATCH,17
+FLEX-042,III,X_N2,.700,digits=700 layout=.#,MATCH,17
+FLEX-043,III,test_number,043,digits=043 layout=#,MATCH,17
+FLEX-043,III,date_0,Jan.,Jan.,MATCH,17
+FLEX-043,III,date_1,"8,","8,",MATCH,17
+FLEX-043,III,date_2,2010,digits=2010 layout=#,MATCH,17
+FLEX-043,III,fuel,Heptane,Heptane,MATCH,17
+FLEX-043,III,D0_mm,3.02,digits=302 layout=#.#,MATCH,17
+FLEX-043,III,fiber,Yes,Yes,MATCH,17
+FLEX-043,III,P_atm,.70,digits=70 layout=.#,MATCH,17
+FLEX-043,III,X_O2,.298,digits=298 layout=.#,MATCH,17
+FLEX-043,III,X_N2,.700,digits=700 layout=.#,MATCH,17
+FLEX-044,III,test_number,044,digits=044 layout=#,MATCH,17
+FLEX-044,III,date_0,Jan.,Jan.,MATCH,17
+FLEX-044,III,date_1,"11,","11,",MATCH,17
+FLEX-044,III,date_2,2010,digits=2010 layout=#,MATCH,17
+FLEX-044,III,fuel,Methanol,Methanol,MATCH,17
+FLEX-044,III,D0_mm,3.52,digits=352 layout=#.#,MATCH,17
+FLEX-044,III,fiber,Yes,Yes,MATCH,17
+FLEX-044,III,P_atm,1.01,digits=101 layout=#.#,MATCH,17
+FLEX-044,III,X_O2,.298,digits=298 layout=.#,MATCH,17
+FLEX-044,III,X_N2,.697,digits=697 layout=.#,MATCH,17
+FLEX-045,III,test_number,045,digits=045 layout=#,MATCH,17
+FLEX-045,III,date_0,Jan.,Jan.,MATCH,17
+FLEX-045,III,date_1,"11,","11,",MATCH,17
+FLEX-045,III,date_2,2010,digits=2010 layout=#,MATCH,17
+FLEX-045,III,fuel,Methanol,Methanol,MATCH,17
+FLEX-045,III,D0_mm,2.46,digits=246 layout=#.#,MATCH,17
+FLEX-045,III,fiber,Yes,Yes,MATCH,17
+FLEX-045,III,P_atm,1.01,digits=101 layout=#.#,MATCH,17
+FLEX-045,III,X_O2,.298,digits=298 layout=.#,MATCH,17
+FLEX-045,III,X_N2,.697,digits=697 layout=.#,MATCH,17
+FLEX-046,IV,test_number,046,digits=046 layout=#,MATCH,18
+FLEX-046,IV,date_0,Jan.,Jan.,MATCH,18
+FLEX-046,IV,date_1,"12,","12,",MATCH,18
+FLEX-046,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-046,IV,D0_mm,2.88,digits=288 layout=#.#,MATCH,18
+FLEX-046,IV,fiber,Yes,Yes,MATCH,18
+FLEX-046,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-046,IV,X_O2,.209,digits=209 layout=.#,MATCH,18
+FLEX-046,IV,X_N2,.786,digits=786 layout=.#,MATCH,18
+FLEX-047,V,test_number,047,digits=047 layout=#,MATCH,19
+FLEX-047,V,date_0,Jan.,Jan.,MATCH,19
+FLEX-047,V,date_1,"12,","12,",MATCH,19
+FLEX-047,V,date_2,2010,digits=2010 layout=#,MATCH,19
+FLEX-047,V,D0_mm,3.42,digits=342 layout=#.#,MATCH,19
+FLEX-047,V,fiber,No,No,MATCH,19
+FLEX-047,V,P_atm,1.01,digits=101 layout=#.#,MATCH,19
+FLEX-047,V,X_O2,.209,digits=209 layout=.#,MATCH,19
+FLEX-047,V,X_N2,.786,digits=786 layout=.#,MATCH,19
+FLEX-048,IV,test_number,048,digits=048 layout=#,MATCH,18
+FLEX-048,IV,date_0,Jan.,Jan.,MATCH,18
+FLEX-048,IV,date_1,"12,","12,",MATCH,18
+FLEX-048,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-048,IV,D0_mm,3.68,digits=368 layout=#.#,MATCH,18
+FLEX-048,IV,fiber,Yes,Yes,MATCH,18
+FLEX-048,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-048,IV,X_O2,.209,digits=209 layout=.#,MATCH,18
+FLEX-048,IV,X_N2,.786,digits=786 layout=.#,MATCH,18
+FLEX-049,V,test_number,049,digits=049 layout=#,MATCH,19
+FLEX-049,V,date_0,Jan.,Jan.,MATCH,19
+FLEX-049,V,date_1,"19,","19,",MATCH,19
+FLEX-049,V,date_2,2010,digits=2010 layout=#,MATCH,19
+FLEX-049,V,D0_mm,3.58,digits=358 layout=#.#,MATCH,19
+FLEX-049,V,fiber,Yes,Yes,MATCH,19
+FLEX-049,V,P_atm,1.01,digits=101 layout=#.#,MATCH,19
+FLEX-049,V,X_O2,.208,digits=208 layout=.#,MATCH,19
+FLEX-049,V,X_N2,.786,digits=786 layout=.#,MATCH,19
+FLEX-050,V,test_number,050,digits=050 layout=#,MATCH,19
+FLEX-050,V,date_0,Jan.,Jan.,MATCH,19
+FLEX-050,V,date_1,"19,","19,",MATCH,19
+FLEX-050,V,date_2,2010,digits=2010 layout=#,MATCH,19
+FLEX-050,V,D0_mm,3.69,digits=369 layout=#.#,MATCH,19
+FLEX-050,V,fiber,Yes,Yes,MATCH,19
+FLEX-050,V,P_atm,1.01,digits=101 layout=#.#,MATCH,19
+FLEX-050,V,X_O2,.208,digits=208 layout=.#,MATCH,19
+FLEX-050,V,X_N2,.786,digits=786 layout=.#,MATCH,19
+FLEX-051,V,test_number,051,digits=051 layout=#,MATCH,19
+FLEX-051,V,date_0,Jan.,Jan.,MATCH,19
+FLEX-051,V,date_1,"19,","19,",MATCH,19
+FLEX-051,V,date_2,2010,digits=2010 layout=#,MATCH,19
+FLEX-051,V,D0_mm,2.45,digits=245 layout=#.#,MATCH,19
+FLEX-051,V,fiber,Yes,Yes,MATCH,19
+FLEX-051,V,P_atm,1.01,digits=101 layout=#.#,MATCH,19
+FLEX-051,V,X_O2,.208,digits=208 layout=.#,MATCH,19
+FLEX-051,V,X_N2,.786,digits=786 layout=.#,MATCH,19
+FLEX-052,III,test_number,052,digits=052 layout=#,MATCH,17
+FLEX-052,III,date_0,Jan.,Jan.,MATCH,17
+FLEX-052,III,date_1,"11,","11,",MATCH,17
+FLEX-052,III,date_2,2010,digits=2010 layout=#,MATCH,17
+FLEX-052,III,fuel,Heptane,Heptane,MATCH,17
+FLEX-052,III,D0_mm,3.64,digits=364 layout=#.#,MATCH,17
+FLEX-052,III,fiber,Yes,Yes,MATCH,17
+FLEX-052,III,P_atm,1.01,digits=101 layout=#.#,MATCH,17
+FLEX-052,III,X_O2,.297,digits=297 layout=.#,MATCH,17
+FLEX-052,III,X_N2,.697,digits=697 layout=.#,MATCH,17
+FLEX-053,V,test_number,053,digits=053 layout=#,MATCH,19
+FLEX-053,V,date_0,Jan.,Jan.,MATCH,19
+FLEX-053,V,date_1,"12,","12,",MATCH,19
+FLEX-053,V,date_2,2010,digits=2010 layout=#,MATCH,19
+FLEX-053,V,D0_mm,3.4,digits=34 layout=#.#,MATCH,19
+FLEX-053,V,fiber,No,No,MATCH,19
+FLEX-053,V,P_atm,1.01,digits=101 layout=#.#,MATCH,19
+FLEX-053,V,X_O2,.209,digits=209 layout=.#,MATCH,19
+FLEX-053,V,X_N2,.786,digits=786 layout=.#,MATCH,19
+FLEX-054,IV,test_number,054,digits=054 layout=#,MATCH,18
+FLEX-054,IV,date_0,Jan.,Jan.,MATCH,18
+FLEX-054,IV,date_1,"12,","12,",MATCH,18
+FLEX-054,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-054,IV,D0_mm,3.61,digits=361 layout=#.#,MATCH,18
+FLEX-054,IV,fiber,No,No,MATCH,18
+FLEX-054,IV,P_atm,0.71,digits=071 layout=#.#,MATCH,18
+FLEX-054,IV,X_O2,.197,digits=197 layout=.#,MATCH,18
+FLEX-054,IV,X_N2,.796,digits=796 layout=.#,MATCH,18
+FLEX-055,IV,test_number,055,digits=055 layout=#,MATCH,18
+FLEX-055,IV,date_0,Jan.,Jan.,MATCH,18
+FLEX-055,IV,date_1,"29,","29,",MATCH,18
+FLEX-055,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-055,IV,D0_mm,3.52,digits=352 layout=#.#,MATCH,18
+FLEX-055,IV,fiber,Yes,Yes,MATCH,18
+FLEX-055,IV,P_atm,0.71,digits=071 layout=#.#,MATCH,18
+FLEX-055,IV,X_O2,.197,digits=197 layout=.#,MATCH,18
+FLEX-055,IV,X_N2,.795,digits=795 layout=.#,MATCH,18
+FLEX-056,V,test_number,056,digits=056 layout=#,MATCH,19
+FLEX-056,V,date_0,Jan.,Jan.,MATCH,19
+FLEX-056,V,date_1,"29,","29,",MATCH,19
+FLEX-056,V,date_2,2010,digits=2010 layout=#,MATCH,19
+FLEX-056,V,D0_mm,3.64,digits=364 layout=#.#,MATCH,19
+FLEX-056,V,fiber,No,No,MATCH,19
+FLEX-056,V,P_atm,.72,digits=72 layout=.#,MATCH,19
+FLEX-056,V,X_O2,.196,digits=196 layout=.#,MATCH,19
+FLEX-056,V,X_N2,.795,digits=795 layout=.#,MATCH,19
+FLEX-057,V,test_number,057,digits=057 layout=#,MATCH,19
+FLEX-057,V,date_0,Jan.,Jan.,MATCH,19
+FLEX-057,V,date_1,"29,","29,",MATCH,19
+FLEX-057,V,date_2,2010,digits=2010 layout=#,MATCH,19
+FLEX-057,V,D0_mm,3.17,digits=317 layout=#.#,MATCH,19
+FLEX-057,V,fiber,Yes,Yes,MATCH,19
+FLEX-057,V,P_atm,.72,digits=72 layout=.#,MATCH,19
+FLEX-057,V,X_O2,.196,digits=196 layout=.#,MATCH,19
+FLEX-057,V,X_N2,.794,digits=794 layout=.#,MATCH,19
+FLEX-058,IV,test_number,058,digits=058 layout=#,MATCH,18
+FLEX-058,IV,date_0,Feb.,Feb.,MATCH,18
+FLEX-058,IV,date_1,"4,","4,",MATCH,18
+FLEX-058,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-058,IV,D0_mm,3.73,digits=373 layout=#.#,MATCH,18
+FLEX-058,IV,fiber,No,No,MATCH,18
+FLEX-058,IV,P_atm,1.02,digits=102 layout=#.#,MATCH,18
+FLEX-058,IV,X_O2,.176,digits=176 layout=.#,MATCH,18
+FLEX-058,IV,X_N2,.816,digits=816 layout=.#,MATCH,18
+FLEX-059,IV,test_number,059,digits=059 layout=#,MATCH,18
+FLEX-059,IV,date_0,Feb.,Feb.,MATCH,18
+FLEX-059,IV,date_1,"4,","4,",MATCH,18
+FLEX-059,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-059,IV,D0_mm,3.08,digits=308 layout=#.#,MATCH,18
+FLEX-059,IV,fiber,No,No,MATCH,18
+FLEX-059,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-059,IV,X_O2,.176,digits=176 layout=.#,MATCH,18
+FLEX-059,IV,X_N2,.816,digits=816 layout=.#,MATCH,18
+FLEX-060,IV,test_number,060,digits=060 layout=#,MATCH,18
+FLEX-060,IV,date_0,Feb.,Feb.,MATCH,18
+FLEX-060,IV,date_1,"4,","4,",MATCH,18
+FLEX-060,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-060,IV,D0_mm,3.57,digits=357 layout=#.#,MATCH,18
+FLEX-060,IV,fiber,Yes,Yes,MATCH,18
+FLEX-060,IV,P_atm,1.02,digits=102 layout=#.#,MATCH,18
+FLEX-060,IV,X_O2,.176,digits=176 layout=.#,MATCH,18
+FLEX-060,IV,X_N2,.816,digits=816 layout=.#,MATCH,18
+FLEX-061,IV,test_number,061,digits=061 layout=#,MATCH,18
+FLEX-061,IV,date_0,Feb.,Feb.,MATCH,18
+FLEX-061,IV,date_1,"4,","4,",MATCH,18
+FLEX-061,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-061,IV,D0_mm,3.77,digits=377 layout=#.#,MATCH,18
+FLEX-061,IV,fiber,Yes,Yes,MATCH,18
+FLEX-061,IV,P_atm,1.02,digits=102 layout=#.#,MATCH,18
+FLEX-061,IV,X_O2,.176,digits=176 layout=.#,MATCH,18
+FLEX-061,IV,X_N2,.815,digits=815 layout=.#,MATCH,18
+FLEX-062,V,test_number,062,digits=062 layout=#,MATCH,19
+FLEX-062,V,date_0,Mar.,Mar.,MATCH,19
+FLEX-062,V,date_1,"11,","11,",MATCH,19
+FLEX-062,V,date_2,2010,digits=2010 layout=#,MATCH,19
+FLEX-062,V,D0_mm,3.48,digits=348 layout=#.#,MATCH,19
+FLEX-062,V,fiber,No,No,MATCH,19
+FLEX-062,V,P_atm,1.00,digits=100 layout=#.#,MATCH,19
+FLEX-062,V,X_O2,.175,digits=175 layout=.#,MATCH,19
+FLEX-062,V,X_N2,.815,digits=815 layout=.#,MATCH,19
+FLEX-063,V,test_number,063,digits=063 layout=#,MATCH,19
+FLEX-063,V,date_0,Mar.,Mar.,MATCH,19
+FLEX-063,V,date_1,"11,","11,",MATCH,19
+FLEX-063,V,date_2,2010,digits=2010 layout=#,MATCH,19
+FLEX-063,V,D0_mm,2.28,digits=228 layout=#.#,MATCH,19
+FLEX-063,V,fiber,No,No,MATCH,19
+FLEX-063,V,P_atm,1.01,digits=101 layout=#.#,MATCH,19
+FLEX-063,V,X_O2,.175,digits=175 layout=.#,MATCH,19
+FLEX-063,V,X_N2,.815,digits=815 layout=.#,MATCH,19
+FLEX-064,V,test_number,064,digits=064 layout=#,MATCH,19
+FLEX-064,V,date_0,Mar.,Mar.,MATCH,19
+FLEX-064,V,date_1,"11,","11,",MATCH,19
+FLEX-064,V,date_2,2010,digits=2010 layout=#,MATCH,19
+FLEX-064,V,D0_mm,2.74,digits=274 layout=#.#,MATCH,19
+FLEX-064,V,fiber,Yes,Yes,MATCH,19
+FLEX-064,V,P_atm,1.01,digits=101 layout=#.#,MATCH,19
+FLEX-064,V,X_O2,.175,digits=175 layout=.#,MATCH,19
+FLEX-064,V,X_N2,.815,digits=815 layout=.#,MATCH,19
+FLEX-065,IV,test_number,065,digits=065 layout=#,MATCH,18
+FLEX-065,IV,date_0,Mar.,Mar.,MATCH,18
+FLEX-065,IV,date_1,"19,","19,",MATCH,18
+FLEX-065,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-065,IV,D0_mm,3.44,digits=344 layout=#.#,MATCH,18
+FLEX-065,IV,fiber,No,No,MATCH,18
+FLEX-065,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-065,IV,X_O2,.146,digits=146 layout=.#,MATCH,18
+FLEX-065,IV,X_N2,.846,digits=846 layout=.#,MATCH,18
+FLEX-066,IV,test_number,066,digits=066 layout=#,MATCH,18
+FLEX-066,IV,date_0,Mar.,Mar.,MATCH,18
+FLEX-066,IV,date_1,"19,","19,",MATCH,18
+FLEX-066,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-066,IV,D0_mm,2.63,digits=263 layout=#.#,MATCH,18
+FLEX-066,IV,fiber,No,No,MATCH,18
+FLEX-066,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-066,IV,X_O2,.146,digits=146 layout=.#,MATCH,18
+FLEX-066,IV,X_N2,.845,digits=845 layout=.#,MATCH,18
+FLEX-067,IV,test_number,067,digits=067 layout=#,MATCH,18
+FLEX-067,IV,date_0,Mar.,Mar.,MATCH,18
+FLEX-067,IV,date_1,"19,","19,",MATCH,18
+FLEX-067,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-067,IV,D0_mm,4.01,digits=401 layout=#.#,MATCH,18
+FLEX-067,IV,fiber,No,No,MATCH,18
+FLEX-067,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-067,IV,X_O2,.146,digits=146 layout=.#,MATCH,18
+FLEX-067,IV,X_N2,.845,digits=845 layout=.#,MATCH,18
+FLEX-068,IV,test_number,068,digits=068 layout=#,MATCH,18
+FLEX-068,IV,date_0,Mar.,Mar.,MATCH,18
+FLEX-068,IV,date_1,"19,","19,",MATCH,18
+FLEX-068,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-068,IV,D0_mm,2.45,digits=245 layout=#.#,MATCH,18
+FLEX-068,IV,fiber,No,No,MATCH,18
+FLEX-068,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-068,IV,X_O2,.146,digits=146 layout=.#,MATCH,18
+FLEX-068,IV,X_N2,.845,digits=845 layout=.#,MATCH,18
+FLEX-069,V,test_number,069,digits=069 layout=#,MATCH,19
+FLEX-069,V,date_0,Mar.,Mar.,MATCH,19
+FLEX-069,V,date_1,"19,","19,",MATCH,19
+FLEX-069,V,date_2,2010,digits=2010 layout=#,MATCH,19
+FLEX-069,V,D0_mm,1.29,digits=129 layout=#.#,MATCH,19
+FLEX-069,V,fiber,Yes,Yes,MATCH,19
+FLEX-069,V,P_atm,1.01,digits=101 layout=#.#,MATCH,19
+FLEX-069,V,X_O2,.145,digits=145 layout=.#,MATCH,19
+FLEX-069,V,X_N2,.845,digits=845 layout=.#,MATCH,19
+FLEX-070,V,test_number,070,digits=070 layout=#,MATCH,19
+FLEX-070,V,date_0,Mar.,Mar.,MATCH,19
+FLEX-070,V,date_1,"23,","23,",MATCH,19
+FLEX-070,V,date_2,2010,digits=2010 layout=#,MATCH,19
+FLEX-070,V,D0_mm,1.30,digits=130 layout=#.#,MATCH,19
+FLEX-070,V,fiber,No,No,MATCH,19
+FLEX-070,V,P_atm,1.01,digits=101 layout=#.#,MATCH,19
+FLEX-070,V,X_O2,.145,digits=145 layout=.#,MATCH,19
+FLEX-070,V,X_N2,.845,digits=845 layout=.#,MATCH,19
+FLEX-071,IV,test_number,071,digits=071 layout=#,MATCH,18
+FLEX-071,IV,date_0,Mar.,Mar.,MATCH,18
+FLEX-071,IV,date_1,"19,","19,",MATCH,18
+FLEX-071,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-071,IV,D0_mm,2.26,digits=226 layout=#.#,MATCH,18
+FLEX-071,IV,fiber,No,No,MATCH,18
+FLEX-071,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-071,IV,X_O2,.146,digits=146 layout=.#,MATCH,18
+FLEX-071,IV,X_N2,.845,digits=845 layout=.#,MATCH,18
+FLEX-073,V,test_number,073,digits=073 layout=#,MATCH,19
+FLEX-073,V,date_0,Mar.,Mar.,MATCH,19
+FLEX-073,V,date_1,"23,","23,",MATCH,19
+FLEX-073,V,date_2,2010,digits=2010 layout=#,MATCH,19
+FLEX-073,V,D0_mm,4.72,digits=472 layout=#.#,MATCH,19
+FLEX-073,V,fiber,No,No,MATCH,19
+FLEX-073,V,P_atm,1.00,digits=100 layout=#.#,MATCH,19
+FLEX-073,V,X_O2,.145,digits=145 layout=.#,MATCH,19
+FLEX-073,V,X_N2,.845,digits=845 layout=.#,MATCH,19
+FLEX-074,V,test_number,074,digits=074 layout=#,MATCH,19
+FLEX-074,V,date_0,Mar.,Mar.,MATCH,19
+FLEX-074,V,date_1,"23,","23,",MATCH,19
+FLEX-074,V,date_2,2010,digits=2010 layout=#,MATCH,19
+FLEX-074,V,D0_mm,1.53,digits=153 layout=#.#,MATCH,19
+FLEX-074,V,fiber,Yes,Yes,MATCH,19
+FLEX-074,V,P_atm,1.01,digits=101 layout=#.#,MATCH,19
+FLEX-074,V,X_O2,.145,digits=145 layout=.#,MATCH,19
+FLEX-074,V,X_N2,.845,digits=845 layout=.#,MATCH,19
+FLEX-075,IV,test_number,075,digits=075 layout=#,MATCH,18
+FLEX-075,IV,date_0,Mar.,Mar.,MATCH,18
+FLEX-075,IV,date_1,"29,","29,",MATCH,18
+FLEX-075,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-075,IV,D0_mm,2.56,digits=256 layout=#.#,MATCH,18
+FLEX-075,IV,fiber,Yes,Yes,MATCH,18
+FLEX-075,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-075,IV,X_O2,.135,digits=135 layout=.#,MATCH,18
+FLEX-075,IV,X_N2,.854,digits=854 layout=.#,MATCH,18
+FLEX-076,IV,test_number,076,digits=076 layout=#,MATCH,18
+FLEX-076,IV,date_0,Mar.,Mar.,MATCH,18
+FLEX-076,IV,date_1,"29,","29,",MATCH,18
+FLEX-076,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-076,IV,D0_mm,3.29,digits=329 layout=#.#,MATCH,18
+FLEX-076,IV,fiber,Yes,Yes,MATCH,18
+FLEX-076,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-076,IV,X_O2,.135,digits=135 layout=.#,MATCH,18
+FLEX-076,IV,X_N2,.854,digits=854 layout=.#,MATCH,18
+FLEX-077,IV,test_number,077,digits=077 layout=#,MATCH,18
+FLEX-077,IV,date_0,Mar.,Mar.,MATCH,18
+FLEX-077,IV,date_1,"29,","29,",MATCH,18
+FLEX-077,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-077,IV,D0_mm,3.41,digits=341 layout=#.#,MATCH,18
+FLEX-077,IV,fiber,No,No,MATCH,18
+FLEX-077,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-077,IV,X_O2,.135,digits=135 layout=.#,MATCH,18
+FLEX-077,IV,X_N2,.854,digits=854 layout=.#,MATCH,18
+FLEX-078,IV,test_number,078,digits=078 layout=#,MATCH,18
+FLEX-078,IV,date_0,Mar.,Mar.,MATCH,18
+FLEX-078,IV,date_1,"29,","29,",MATCH,18
+FLEX-078,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-078,IV,D0_mm,2.69,digits=269 layout=#.#,MATCH,18
+FLEX-078,IV,fiber,No,No,MATCH,18
+FLEX-078,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-078,IV,X_O2,.135,digits=135 layout=.#,MATCH,18
+FLEX-078,IV,X_N2,.854,digits=854 layout=.#,MATCH,18
+FLEX-079,V,test_number,079,digits=079 layout=#,MATCH,19
+FLEX-079,V,date_0,Mar.,Mar.,MATCH,19
+FLEX-079,V,date_1,"30,","30,",MATCH,19
+FLEX-079,V,date_2,2010,digits=2010 layout=#,MATCH,19
+FLEX-079,V,D0_mm,3.06,digits=306 layout=#.#,MATCH,19
+FLEX-079,V,fiber,No,No,MATCH,19
+FLEX-079,V,P_atm,1.01,digits=101 layout=#.#,MATCH,19
+FLEX-079,V,X_O2,.134,digits=134 layout=.#,MATCH,19
+FLEX-079,V,X_N2,.853,digits=853 layout=.#,MATCH,19
+FLEX-080,V,test_number,080,digits=080 layout=#,MATCH,19
+FLEX-080,V,date_0,Mar.,Mar.,MATCH,19
+FLEX-080,V,date_1,"30,","30,",MATCH,19
+FLEX-080,V,date_2,2010,digits=2010 layout=#,MATCH,19
+FLEX-080,V,D0_mm,4.00,digits=400 layout=#.#,MATCH,19
+FLEX-080,V,fiber,Yes,Yes,MATCH,19
+FLEX-080,V,P_atm,1.01,digits=101 layout=#.#,MATCH,19
+FLEX-080,V,X_O2,.134,digits=134 layout=.#,MATCH,19
+FLEX-080,V,X_N2,.853,digits=853 layout=.#,MATCH,19
+FLEX-081,V,test_number,081,digits=081 layout=#,MATCH,19
+FLEX-081,V,date_0,Mar.,Mar.,MATCH,19
+FLEX-081,V,date_1,"30,","30,",MATCH,19
+FLEX-081,V,date_2,2010,digits=2010 layout=#,MATCH,19
+FLEX-081,V,D0_mm,2.40,digits=240 layout=#.#,MATCH,19
+FLEX-081,V,fiber,Yes,Yes,MATCH,19
+FLEX-081,V,P_atm,1.01,digits=101 layout=#.#,MATCH,19
+FLEX-081,V,X_O2,.134,digits=134 layout=.#,MATCH,19
+FLEX-081,V,X_N2,.853,digits=853 layout=.#,MATCH,19
+FLEX-082,IV,test_number,082,digits=082 layout=#,MATCH,18
+FLEX-082,IV,date_0,Apr.,Apr.,MATCH,18
+FLEX-082,IV,date_1,"19,","19,",MATCH,18
+FLEX-082,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-082,IV,D0_mm,2.93,digits=293 layout=#.#,MATCH,18
+FLEX-082,IV,fiber,No,No,MATCH,18
+FLEX-082,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-082,IV,X_O2,.126,digits=126 layout=.#,MATCH,18
+FLEX-082,IV,X_N2,.870,digits=870 layout=.#,MATCH,18
+FLEX-083,IV,test_number,083,digits=083 layout=#,MATCH,18
+FLEX-083,IV,date_0,Apr.,Apr.,MATCH,18
+FLEX-083,IV,date_1,"19,","19,",MATCH,18
+FLEX-083,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-083,IV,D0_mm,3.60,digits=360 layout=#.#,MATCH,18
+FLEX-083,IV,fiber,No,No,MATCH,18
+FLEX-083,IV,P_atm,1.02,digits=102 layout=#.#,MATCH,18
+FLEX-083,IV,X_O2,.125,digits=125 layout=.#,MATCH,18
+FLEX-083,IV,X_N2,.869,digits=869 layout=.#,MATCH,18
+FLEX-084,IV,test_number,084,digits=084 layout=#,MATCH,18
+FLEX-084,IV,date_0,Apr.,Apr.,MATCH,18
+FLEX-084,IV,date_1,"19,","19,",MATCH,18
+FLEX-084,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-084,IV,D0_mm,2.43,digits=243 layout=#.#,MATCH,18
+FLEX-084,IV,fiber,No,No,MATCH,18
+FLEX-084,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-084,IV,X_O2,.126,digits=126 layout=.#,MATCH,18
+FLEX-084,IV,X_N2,.869,digits=869 layout=.#,MATCH,18
+FLEX-085,IV,test_number,085,digits=085 layout=#,MATCH,18
+FLEX-085,IV,date_0,Apr.,Apr.,MATCH,18
+FLEX-085,IV,date_1,"19,","19,",MATCH,18
+FLEX-085,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-085,IV,D0_mm,2.49,digits=249 layout=#.#,MATCH,18
+FLEX-085,IV,fiber,No,No,MATCH,18
+FLEX-085,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-085,IV,X_O2,.126,digits=126 layout=.#,MATCH,18
+FLEX-085,IV,X_N2,.869,digits=869 layout=.#,MATCH,18
+FLEX-086,IV,test_number,086,digits=086 layout=#,MATCH,18
+FLEX-086,IV,date_0,Apr.,Apr.,MATCH,18
+FLEX-086,IV,date_1,"19,","19,",MATCH,18
+FLEX-086,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-086,IV,D0_mm,3.10,digits=310 layout=#.#,MATCH,18
+FLEX-086,IV,fiber,Yes,Yes,MATCH,18
+FLEX-086,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-086,IV,X_O2,.126,digits=126 layout=.#,MATCH,18
+FLEX-086,IV,X_N2,.869,digits=869 layout=.#,MATCH,18
+FLEX-087,IV,test_number,087,digits=087 layout=#,MATCH,18
+FLEX-087,IV,date_0,Apr.,Apr.,MATCH,18
+FLEX-087,IV,date_1,"19,","19,",MATCH,18
+FLEX-087,IV,date_2,2010,digits=2010 layout=#,MATCH,18
+FLEX-087,IV,D0_mm,2.66,digits=266 layout=#.#,MATCH,18
+FLEX-087,IV,fiber,Yes,Yes,MATCH,18
+FLEX-087,IV,P_atm,1.01,digits=101 layout=#.#,MATCH,18
+FLEX-087,IV,X_O2,.126,digits=126 layout=.#,MATCH,18
+FLEX-087,IV,X_N2,.869,digits=869 layout=.#,MATCH,18
+FLEX-088,VI,test_number,088,digits=088 layout=#,MATCH,20
+FLEX-088,VI,date_0,May,May,MATCH,20
+FLEX-088,VI,date_1,"5,","5,",MATCH,20
+FLEX-088,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-088,VI,D0_mm,3.08,digits=308 layout=#.#,MATCH,20
+FLEX-088,VI,fiber,No,No,MATCH,20
+FLEX-088,VI,P_atm,0.71,digits=071 layout=#.#,MATCH,20
+FLEX-088,VI,X_O2,0.250,digits=0250 layout=#.#,MATCH,20
+FLEX-088,VI,X_CO2,0.150,digits=0150 layout=#.#,MATCH,20
+FLEX-088,VI,X_N2,0.600,digits=0600 layout=#.#,MATCH,20
+FLEX-089,VI,test_number,089,digits=089 layout=#,MATCH,20
+FLEX-089,VI,date_0,May,May,MATCH,20
+FLEX-089,VI,date_1,"5,","5,",MATCH,20
+FLEX-089,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-089,VI,D0_mm,3.79,digits=379 layout=#.#,MATCH,20
+FLEX-089,VI,fiber,No,No,MATCH,20
+FLEX-089,VI,P_atm,.71,digits=71 layout=.#,MATCH,20
+FLEX-089,VI,X_O2,.250,digits=250 layout=.#,MATCH,20
+FLEX-089,VI,X_CO2,.150,digits=150 layout=.#,MATCH,20
+FLEX-089,VI,X_N2,.600,digits=600 layout=.#,MATCH,20
+FLEX-090,VI,test_number,090,digits=090 layout=#,MATCH,20
+FLEX-090,VI,date_0,May,May,MATCH,20
+FLEX-090,VI,date_1,"6,","6,",MATCH,20
+FLEX-090,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-090,VI,D0_mm,3.65,digits=365 layout=#.#,MATCH,20
+FLEX-090,VI,fiber,Yes,Yes,MATCH,20
+FLEX-090,VI,P_atm,.71,digits=71 layout=.#,MATCH,20
+FLEX-090,VI,X_O2,.250,digits=250 layout=.#,MATCH,20
+FLEX-090,VI,X_CO2,.150,digits=150 layout=.#,MATCH,20
+FLEX-090,VI,X_N2,.600,digits=600 layout=.#,MATCH,20
+FLEX-091,VI,test_number,091,digits=091 layout=#,MATCH,20
+FLEX-091,VI,date_0,May,May,MATCH,20
+FLEX-091,VI,date_1,"5,","5,",MATCH,20
+FLEX-091,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-091,VI,D0_mm,3.59,digits=359 layout=#.#,MATCH,20
+FLEX-091,VI,fiber,Yes,Yes,MATCH,20
+FLEX-091,VI,P_atm,.71,digits=71 layout=.#,MATCH,20
+FLEX-091,VI,X_O2,.250,digits=250 layout=.#,MATCH,20
+FLEX-091,VI,X_CO2,.150,digits=150 layout=.#,MATCH,20
+FLEX-091,VI,X_N2,.600,digits=600 layout=.#,MATCH,20
+FLEX-092,VII,test_number,092,digits=092 layout=#,MATCH,21
+FLEX-092,VII,date_0,June,June,MATCH,21
+FLEX-092,VII,date_1,"14,","14,",MATCH,21
+FLEX-092,VII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-092,VII,D0_mm,3.46,digits=346 layout=#.#,MATCH,21
+FLEX-092,VII,fiber,No,No,MATCH,21
+FLEX-092,VII,P_atm,0.71,digits=071 layout=#.#,MATCH,21
+FLEX-092,VII,X_O2,0.250,digits=0250 layout=#.#,MATCH,21
+FLEX-092,VII,X_CO2,0.150,digits=0150 layout=#.#,MATCH,21
+FLEX-092,VII,X_N2,0.600,digits=0600 layout=#.#,MATCH,21
+FLEX-093,VII,test_number,093,digits=093 layout=#,MATCH,21
+FLEX-093,VII,date_0,June,June,MATCH,21
+FLEX-093,VII,date_1,"15,","15,",MATCH,21
+FLEX-093,VII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-093,VII,D0_mm,2.61,digits=261 layout=#.#,MATCH,21
+FLEX-093,VII,fiber,Yes,Yes,MATCH,21
+FLEX-093,VII,P_atm,.71,digits=71 layout=.#,MATCH,21
+FLEX-093,VII,X_O2,.250,digits=250 layout=.#,MATCH,21
+FLEX-093,VII,X_CO2,.150,digits=150 layout=.#,MATCH,21
+FLEX-093,VII,X_N2,.600,digits=600 layout=.#,MATCH,21
+FLEX-094,VII,test_number,094,digits=094 layout=#,MATCH,21
+FLEX-094,VII,date_0,June,June,MATCH,21
+FLEX-094,VII,date_1,"15,","15,",MATCH,21
+FLEX-094,VII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-094,VII,D0_mm,3.59,digits=359 layout=#.#,MATCH,21
+FLEX-094,VII,fiber,No,No,MATCH,21
+FLEX-094,VII,P_atm,.70,digits=70 layout=.#,MATCH,21
+FLEX-094,VII,X_O2,.240,digits=240 layout=.#,MATCH,21
+FLEX-094,VII,X_CO2,.200,digits=200 layout=.#,MATCH,21
+FLEX-094,VII,X_N2,.560,digits=560 layout=.#,MATCH,21
+FLEX-095,VII,test_number,095,digits=095 layout=#,MATCH,21
+FLEX-095,VII,date_0,June,June,MATCH,21
+FLEX-095,VII,date_1,"15,","15,",MATCH,21
+FLEX-095,VII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-095,VII,D0_mm,3.77,digits=377 layout=#.#,MATCH,21
+FLEX-095,VII,fiber,Yes,Yes,MATCH,21
+FLEX-095,VII,P_atm,.70,digits=70 layout=.#,MATCH,21
+FLEX-095,VII,X_O2,.240,digits=240 layout=.#,MATCH,21
+FLEX-095,VII,X_CO2,.200,digits=200 layout=.#,MATCH,21
+FLEX-095,VII,X_N2,.560,digits=560 layout=.#,MATCH,21
+FLEX-096,VII,test_number,096,digits=096 layout=#,MATCH,21
+FLEX-096,VII,date_0,June,June,MATCH,21
+FLEX-096,VII,date_1,"15,","15,",MATCH,21
+FLEX-096,VII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-096,VII,D0_mm,2.30,digits=230 layout=#.#,MATCH,21
+FLEX-096,VII,fiber,Yes,Yes,MATCH,21
+FLEX-096,VII,P_atm,.70,digits=70 layout=.#,MATCH,21
+FLEX-096,VII,X_O2,.240,digits=240 layout=.#,MATCH,21
+FLEX-096,VII,X_CO2,.200,digits=200 layout=.#,MATCH,21
+FLEX-096,VII,X_N2,.560,digits=560 layout=.#,MATCH,21
+FLEX-097,VI,test_number,097,digits=097 layout=#,MATCH,20
+FLEX-097,VI,date_0,June,June,MATCH,20
+FLEX-097,VI,date_1,"16,","16,",MATCH,20
+FLEX-097,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-097,VI,D0_mm,4.29,digits=429 layout=#.#,MATCH,20
+FLEX-097,VI,fiber,No,No,MATCH,20
+FLEX-097,VI,P_atm,.70,digits=70 layout=.#,MATCH,20
+FLEX-097,VI,X_O2,.240,digits=240 layout=.#,MATCH,20
+FLEX-097,VI,X_CO2,.200,digits=200 layout=.#,MATCH,20
+FLEX-097,VI,X_N2,.560,digits=560 layout=.#,MATCH,20
+FLEX-098,VI,test_number,098,digits=098 layout=#,MATCH,20
+FLEX-098,VI,date_0,June,June,MATCH,20
+FLEX-098,VI,date_1,"21,","21,",MATCH,20
+FLEX-098,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-098,VI,D0_mm,3.67,digits=367 layout=#.#,MATCH,20
+FLEX-098,VI,fiber,No,No,MATCH,20
+FLEX-098,VI,P_atm,.71,digits=71 layout=.#,MATCH,20
+FLEX-098,VI,X_O2,.230,digits=230 layout=.#,MATCH,20
+FLEX-098,VI,X_CO2,.250,digits=250 layout=.#,MATCH,20
+FLEX-098,VI,X_N2,.520,digits=520 layout=.#,MATCH,20
+FLEX-099,VI,test_number,099,digits=099 layout=#,MATCH,20
+FLEX-099,VI,date_0,June,June,MATCH,20
+FLEX-099,VI,date_1,"21,","21,",MATCH,20
+FLEX-099,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-099,VI,D0_mm,4.34,digits=434 layout=#.#,MATCH,20
+FLEX-099,VI,fiber,No,No,MATCH,20
+FLEX-099,VI,P_atm,.70,digits=70 layout=.#,MATCH,20
+FLEX-099,VI,X_O2,.230,digits=230 layout=.#,MATCH,20
+FLEX-099,VI,X_CO2,.250,digits=250 layout=.#,MATCH,20
+FLEX-099,VI,X_N2,.520,digits=520 layout=.#,MATCH,20
+FLEX-100,VII,test_number,100,digits=100 layout=#,MATCH,21
+FLEX-100,VII,date_0,June,June,MATCH,21
+FLEX-100,VII,date_1,"29,","29,",MATCH,21
+FLEX-100,VII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-100,VII,D0_mm,4.27,digits=427 layout=#.#,MATCH,21
+FLEX-100,VII,fiber,No,No,MATCH,21
+FLEX-100,VII,P_atm,.71,digits=71 layout=.#,MATCH,21
+FLEX-100,VII,X_O2,.230,digits=230 layout=.#,MATCH,21
+FLEX-100,VII,X_CO2,.250,digits=250 layout=.#,MATCH,21
+FLEX-100,VII,X_N2,.520,digits=520 layout=.#,MATCH,21
+FLEX-101,VII,test_number,101,digits=101 layout=#,MATCH,21
+FLEX-101,VII,date_0,June,June,MATCH,21
+FLEX-101,VII,date_1,"29,","29,",MATCH,21
+FLEX-101,VII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-101,VII,D0_mm,3.87,digits=387 layout=#.#,MATCH,21
+FLEX-101,VII,fiber,Yes,Yes,MATCH,21
+FLEX-101,VII,P_atm,.71,digits=71 layout=.#,MATCH,21
+FLEX-101,VII,X_O2,.230,digits=230 layout=.#,MATCH,21
+FLEX-101,VII,X_CO2,.250,digits=250 layout=.#,MATCH,21
+FLEX-101,VII,X_N2,.520,digits=520 layout=.#,MATCH,21
+FLEX-102,VII,test_number,102,digits=102 layout=#,MATCH,21
+FLEX-102,VII,date_0,June,June,MATCH,21
+FLEX-102,VII,date_1,"29,","29,",MATCH,21
+FLEX-102,VII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-102,VII,D0_mm,3.69,digits=369 layout=#.#,MATCH,21
+FLEX-102,VII,fiber,No,No,MATCH,21
+FLEX-102,VII,P_atm,.70,digits=70 layout=.#,MATCH,21
+FLEX-102,VII,X_O2,.210,digits=210 layout=.#,MATCH,21
+FLEX-102,VII,X_CO2,.300,digits=300 layout=.#,MATCH,21
+FLEX-102,VII,X_N2,.490,digits=490 layout=.#,MATCH,21
+FLEX-103,VII,test_number,103,digits=103 layout=#,MATCH,21
+FLEX-103,VII,date_0,June,June,MATCH,21
+FLEX-103,VII,date_1,"29,","29,",MATCH,21
+FLEX-103,VII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-103,VII,D0_mm,4.05,digits=405 layout=#.#,MATCH,21
+FLEX-103,VII,fiber,Yes,Yes,MATCH,21
+FLEX-103,VII,P_atm,.70,digits=70 layout=.#,MATCH,21
+FLEX-103,VII,X_O2,.210,digits=210 layout=.#,MATCH,21
+FLEX-103,VII,X_CO2,.300,digits=300 layout=.#,MATCH,21
+FLEX-103,VII,X_N2,.490,digits=490 layout=.#,MATCH,21
+FLEX-104,VI,test_number,104,digits=104 layout=#,MATCH,20
+FLEX-104,VI,date_0,June,June,MATCH,20
+FLEX-104,VI,date_1,"16,","16,",MATCH,20
+FLEX-104,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-104,VI,D0_mm,3.66,digits=366 layout=#.#,MATCH,20
+FLEX-104,VI,fiber,No,No,MATCH,20
+FLEX-104,VI,P_atm,.70,digits=70 layout=.#,MATCH,20
+FLEX-104,VI,X_O2,.240,digits=240 layout=.#,MATCH,20
+FLEX-104,VI,X_CO2,.200,digits=200 layout=.#,MATCH,20
+FLEX-104,VI,X_N2,.560,digits=560 layout=.#,MATCH,20
+FLEX-105,VI,test_number,105,digits=105 layout=#,MATCH,20
+FLEX-105,VI,date_0,June,June,MATCH,20
+FLEX-105,VI,date_1,"16,","16,",MATCH,20
+FLEX-105,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-105,VI,D0_mm,4.35,digits=435 layout=#.#,MATCH,20
+FLEX-105,VI,fiber,Yes,Yes,MATCH,20
+FLEX-105,VI,P_atm,.70,digits=70 layout=.#,MATCH,20
+FLEX-105,VI,X_O2,.240,digits=240 layout=.#,MATCH,20
+FLEX-105,VI,X_CO2,.200,digits=200 layout=.#,MATCH,20
+FLEX-105,VI,X_N2,.560,digits=560 layout=.#,MATCH,20
+FLEX-106,VI,test_number,106,digits=106 layout=#,MATCH,20
+FLEX-106,VI,date_0,June,June,MATCH,20
+FLEX-106,VI,date_1,"21,","21,",MATCH,20
+FLEX-106,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-106,VI,D0_mm,3.16,digits=316 layout=#.#,MATCH,20
+FLEX-106,VI,fiber,Yes,Yes,MATCH,20
+FLEX-106,VI,P_atm,.71,digits=71 layout=.#,MATCH,20
+FLEX-106,VI,X_O2,.230,digits=230 layout=.#,MATCH,20
+FLEX-106,VI,X_CO2,.250,digits=250 layout=.#,MATCH,20
+FLEX-106,VI,X_N2,.520,digits=520 layout=.#,MATCH,20
+FLEX-107,VI,test_number,107,digits=107 layout=#,MATCH,20
+FLEX-107,VI,date_0,June,June,MATCH,20
+FLEX-107,VI,date_1,"16,","16,",MATCH,20
+FLEX-107,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-107,VI,D0_mm,3.25,digits=325 layout=#.#,MATCH,20
+FLEX-107,VI,fiber,Yes,Yes,MATCH,20
+FLEX-107,VI,P_atm,.70,digits=70 layout=.#,MATCH,20
+FLEX-107,VI,X_O2,.240,digits=240 layout=.#,MATCH,20
+FLEX-107,VI,X_CO2,.200,digits=200 layout=.#,MATCH,20
+FLEX-107,VI,X_N2,.560,digits=560 layout=.#,MATCH,20
+FLEX-108,VI,test_number,108,digits=108 layout=#,MATCH,20
+FLEX-108,VI,date_0,June,June,MATCH,20
+FLEX-108,VI,date_1,"21,","21,",MATCH,20
+FLEX-108,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-108,VI,D0_mm,3.82,digits=382 layout=#.#,MATCH,20
+FLEX-108,VI,fiber,Yes,Yes,MATCH,20
+FLEX-108,VI,P_atm,.71,digits=71 layout=.#,MATCH,20
+FLEX-108,VI,X_O2,.230,digits=230 layout=.#,MATCH,20
+FLEX-108,VI,X_CO2,.250,digits=250 layout=.#,MATCH,20
+FLEX-108,VI,X_N2,.520,digits=520 layout=.#,MATCH,20
+FLEX-109,VI,test_number,109,digits=109 layout=#,MATCH,20
+FLEX-109,VI,date_0,Aug.,Aug.,MATCH,20
+FLEX-109,VI,date_1,"31,","31,",MATCH,20
+FLEX-109,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-109,VI,D0_mm,3.62,digits=362 layout=#.#,MATCH,20
+FLEX-109,VI,fiber,No,No,MATCH,20
+FLEX-109,VI,P_atm,.71,digits=71 layout=.#,MATCH,20
+FLEX-109,VI,X_O2,.211,digits=211 layout=.#,MATCH,20
+FLEX-109,VI,X_CO2,.299,digits=299 layout=.#,MATCH,20
+FLEX-109,VI,X_N2,.490,digits=490 layout=.#,MATCH,20
+FLEX-110,VI,test_number,110,digits=110 layout=#,MATCH,20
+FLEX-110,VI,date_0,Aug.,Aug.,MATCH,20
+FLEX-110,VI,date_1,"31,","31,",MATCH,20
+FLEX-110,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-110,VI,D0_mm,2.88,digits=288 layout=#.#,MATCH,20
+FLEX-110,VI,fiber,No,No,MATCH,20
+FLEX-110,VI,P_atm,.71,digits=71 layout=.#,MATCH,20
+FLEX-110,VI,X_O2,.211,digits=211 layout=.#,MATCH,20
+FLEX-110,VI,X_CO2,.299,digits=299 layout=.#,MATCH,20
+FLEX-110,VI,X_N2,.490,digits=490 layout=.#,MATCH,20
+FLEX-111,VI,test_number,111,digits=111 layout=#,MATCH,20
+FLEX-111,VI,date_0,Aug.,Aug.,MATCH,20
+FLEX-111,VI,date_1,"31,","31,",MATCH,20
+FLEX-111,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-111,VI,D0_mm,3.38,digits=338 layout=#.#,MATCH,20
+FLEX-111,VI,fiber,Yes,Yes,MATCH,20
+FLEX-111,VI,P_atm,.71,digits=71 layout=.#,MATCH,20
+FLEX-111,VI,X_O2,.211,digits=211 layout=.#,MATCH,20
+FLEX-111,VI,X_CO2,.299,digits=299 layout=.#,MATCH,20
+FLEX-111,VI,X_N2,.490,digits=490 layout=.#,MATCH,20
+FLEX-112,VI,test_number,112,digits=112 layout=#,MATCH,20
+FLEX-112,VI,date_0,Sept.,Sept.,MATCH,20
+FLEX-112,VI,date_1,"1,","1,",MATCH,20
+FLEX-112,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-112,VI,D0_mm,4.02,digits=402 layout=#.#,MATCH,20
+FLEX-112,VI,fiber,Yes,Yes,MATCH,20
+FLEX-112,VI,P_atm,.70,digits=70 layout=.#,MATCH,20
+FLEX-112,VI,X_O2,.211,digits=211 layout=.#,MATCH,20
+FLEX-112,VI,X_CO2,.299,digits=299 layout=.#,MATCH,20
+FLEX-112,VI,X_N2,.490,digits=490 layout=.#,MATCH,20
+FLEX-113,VI,test_number,113,digits=113 layout=#,MATCH,20
+FLEX-113,VI,date_0,Sept.,Sept.,MATCH,20
+FLEX-113,VI,date_1,"1,","1,",MATCH,20
+FLEX-113,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-113,VI,D0_mm,4.26,digits=426 layout=#.#,MATCH,20
+FLEX-113,VI,fiber,No,No,MATCH,20
+FLEX-113,VI,P_atm,.70,digits=70 layout=.#,MATCH,20
+FLEX-113,VI,X_O2,.200,digits=200 layout=.#,MATCH,20
+FLEX-113,VI,X_CO2,.350,digits=350 layout=.#,MATCH,20
+FLEX-113,VI,X_N2,.450,digits=450 layout=.#,MATCH,20
+FLEX-114,VI,test_number,114,digits=114 layout=#,MATCH,20
+FLEX-114,VI,date_0,Sept.,Sept.,MATCH,20
+FLEX-114,VI,date_1,"1,","1,",MATCH,20
+FLEX-114,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-114,VI,D0_mm,3.28,digits=328 layout=#.#,MATCH,20
+FLEX-114,VI,fiber,No,No,MATCH,20
+FLEX-114,VI,P_atm,.70,digits=70 layout=.#,MATCH,20
+FLEX-114,VI,X_O2,.200,digits=200 layout=.#,MATCH,20
+FLEX-114,VI,X_CO2,.350,digits=350 layout=.#,MATCH,20
+FLEX-114,VI,X_N2,.450,digits=450 layout=.#,MATCH,20
+FLEX-115,VI,test_number,115,digits=115 layout=#,MATCH,20
+FLEX-115,VI,date_0,Sept.,Sept.,MATCH,20
+FLEX-115,VI,date_1,"1,","1,",MATCH,20
+FLEX-115,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-115,VI,D0_mm,4.03,digits=403 layout=#.#,MATCH,20
+FLEX-115,VI,fiber,Yes,Yes,MATCH,20
+FLEX-115,VI,P_atm,.71,digits=71 layout=.#,MATCH,20
+FLEX-115,VI,X_O2,.200,digits=200 layout=.#,MATCH,20
+FLEX-115,VI,X_CO2,.350,digits=350 layout=.#,MATCH,20
+FLEX-115,VI,X_N2,.450,digits=450 layout=.#,MATCH,20
+FLEX-116,VI,test_number,116,digits=116 layout=#,MATCH,20
+FLEX-116,VI,date_0,Sept.,Sept.,MATCH,20
+FLEX-116,VI,date_1,"1,","1,",MATCH,20
+FLEX-116,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-116,VI,D0_mm,3.15,digits=315 layout=#.#,MATCH,20
+FLEX-116,VI,fiber,Yes,Yes,MATCH,20
+FLEX-116,VI,P_atm,.71,digits=71 layout=.#,MATCH,20
+FLEX-116,VI,X_O2,.200,digits=200 layout=.#,MATCH,20
+FLEX-116,VI,X_CO2,.350,digits=350 layout=.#,MATCH,20
+FLEX-116,VI,X_N2,.450,digits=450 layout=.#,MATCH,20
+FLEX-117,VII,test_number,117,digits=117 layout=#,MATCH,21
+FLEX-117,VII,date_0,Sept.,Sept.,MATCH,21
+FLEX-117,VII,date_1,"6,","6,",MATCH,21
+FLEX-117,VII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-117,VII,D0_mm,3.89,digits=389 layout=#.#,MATCH,21
+FLEX-117,VII,fiber,No,No,MATCH,21
+FLEX-117,VII,P_atm,.70,digits=70 layout=.#,MATCH,21
+FLEX-117,VII,X_O2,.200,digits=200 layout=.#,MATCH,21
+FLEX-117,VII,X_CO2,.350,digits=350 layout=.#,MATCH,21
+FLEX-117,VII,X_N2,.450,digits=450 layout=.#,MATCH,21
+FLEX-118,VII,test_number,118,digits=118 layout=#,MATCH,21
+FLEX-118,VII,date_0,Sept.,Sept.,MATCH,21
+FLEX-118,VII,date_1,"6,","6,",MATCH,21
+FLEX-118,VII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-118,VII,D0_mm,3.11,digits=311 layout=#.#,MATCH,21
+FLEX-118,VII,fiber,Yes,Yes,MATCH,21
+FLEX-118,VII,P_atm,.70,digits=70 layout=.#,MATCH,21
+FLEX-118,VII,X_O2,.200,digits=200 layout=.#,MATCH,21
+FLEX-118,VII,X_CO2,.350,digits=350 layout=.#,MATCH,21
+FLEX-118,VII,X_N2,.450,digits=450 layout=.#,MATCH,21
+FLEX-119,VII,test_number,119,digits=119 layout=#,MATCH,21
+FLEX-119,VII,date_0,Sept.,Sept.,MATCH,21
+FLEX-119,VII,date_1,"7,","7,",MATCH,21
+FLEX-119,VII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-119,VII,D0_mm,2.68,digits=268 layout=#.#,MATCH,21
+FLEX-119,VII,fiber,Yes,Yes,MATCH,21
+FLEX-119,VII,P_atm,.70,digits=70 layout=.#,MATCH,21
+FLEX-119,VII,X_O2,.180,digits=180 layout=.#,MATCH,21
+FLEX-119,VII,X_CO2,.400,digits=400 layout=.#,MATCH,21
+FLEX-119,VII,X_N2,.420,digits=420 layout=.#,MATCH,21
+FLEX-120,VII,test_number,120,digits=120 layout=#,MATCH,21
+FLEX-120,VII,date_0,Sept.,Sept.,MATCH,21
+FLEX-120,VII,date_1,"7,","7,",MATCH,21
+FLEX-120,VII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-120,VII,D0_mm,2.53,digits=253 layout=#.#,MATCH,21
+FLEX-120,VII,fiber,Yes,Yes,MATCH,21
+FLEX-120,VII,P_atm,.70,digits=70 layout=.#,MATCH,21
+FLEX-120,VII,X_O2,.180,digits=180 layout=.#,MATCH,21
+FLEX-120,VII,X_CO2,.400,digits=400 layout=.#,MATCH,21
+FLEX-120,VII,X_N2,.420,digits=420 layout=.#,MATCH,21
+FLEX-121,VI,test_number,121,digits=121 layout=#,MATCH,20
+FLEX-121,VI,date_0,Sept.,Sept.,MATCH,20
+FLEX-121,VI,date_1,"8,","8,",MATCH,20
+FLEX-121,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-121,VI,D0_mm,4.33,digits=433 layout=#.#,MATCH,20
+FLEX-121,VI,fiber,No,No,MATCH,20
+FLEX-121,VI,P_atm,.69,digits=69 layout=.#,MATCH,20
+FLEX-121,VI,X_O2,.180,digits=180 layout=.#,MATCH,20
+FLEX-121,VI,X_CO2,.400,digits=400 layout=.#,MATCH,20
+FLEX-121,VI,X_N2,.420,digits=420 layout=.#,MATCH,20
+FLEX-122,VI,test_number,122,digits=122 layout=#,MATCH,20
+FLEX-122,VI,date_0,Sept.,Sept.,MATCH,20
+FLEX-122,VI,date_1,"8,","8,",MATCH,20
+FLEX-122,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-122,VI,D0_mm,3.57,digits=357 layout=#.#,MATCH,20
+FLEX-122,VI,fiber,No,No,MATCH,20
+FLEX-122,VI,P_atm,.70,digits=70 layout=.#,MATCH,20
+FLEX-122,VI,X_O2,.180,digits=180 layout=.#,MATCH,20
+FLEX-122,VI,X_CO2,.400,digits=400 layout=.#,MATCH,20
+FLEX-122,VI,X_N2,.420,digits=420 layout=.#,MATCH,20
+FLEX-123,VI,test_number,123,digits=123 layout=#,MATCH,20
+FLEX-123,VI,date_0,Sept.,Sept.,MATCH,20
+FLEX-123,VI,date_1,"8,","8,",MATCH,20
+FLEX-123,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-123,VI,D0_mm,4.13,digits=413 layout=#.#,MATCH,20
+FLEX-123,VI,fiber,Yes,Yes,MATCH,20
+FLEX-123,VI,P_atm,.70,digits=70 layout=.#,MATCH,20
+FLEX-123,VI,X_O2,.180,digits=180 layout=.#,MATCH,20
+FLEX-123,VI,X_CO2,.400,digits=400 layout=.#,MATCH,20
+FLEX-123,VI,X_N2,.420,digits=420 layout=.#,MATCH,20
+FLEX-124,VI,test_number,124,digits=124 layout=#,MATCH,20
+FLEX-124,VI,date_0,Sept.,Sept.,MATCH,20
+FLEX-124,VI,date_1,"8,","8,",MATCH,20
+FLEX-124,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-124,VI,D0_mm,3.57,digits=357 layout=#.#,MATCH,20
+FLEX-124,VI,fiber,Yes,Yes,MATCH,20
+FLEX-124,VI,P_atm,.70,digits=70 layout=.#,MATCH,20
+FLEX-124,VI,X_O2,.180,digits=180 layout=.#,MATCH,20
+FLEX-124,VI,X_CO2,.400,digits=400 layout=.#,MATCH,20
+FLEX-124,VI,X_N2,.420,digits=420 layout=.#,MATCH,20
+FLEX-125,VI,test_number,125,digits=125 layout=#,MATCH,20
+FLEX-125,VI,date_0,Sept.,Sept.,MATCH,20
+FLEX-125,VI,date_1,"13,","13,",MATCH,20
+FLEX-125,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-125,VI,D0_mm,3.70,digits=370 layout=#.#,MATCH,20
+FLEX-125,VI,fiber,No,No,MATCH,20
+FLEX-125,VI,P_atm,.71,digits=71 layout=.#,MATCH,20
+FLEX-125,VI,X_O2,.170,digits=170 layout=.#,MATCH,20
+FLEX-125,VI,X_CO2,.450,digits=450 layout=.#,MATCH,20
+FLEX-125,VI,X_N2,.380,digits=380 layout=.#,MATCH,20
+FLEX-126,VI,test_number,126,digits=126 layout=#,MATCH,20
+FLEX-126,VI,date_0,Sept.,Sept.,MATCH,20
+FLEX-126,VI,date_1,"13,","13,",MATCH,20
+FLEX-126,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-126,VI,D0_mm,2.89,digits=289 layout=#.#,MATCH,20
+FLEX-126,VI,fiber,No,No,MATCH,20
+FLEX-126,VI,P_atm,.71,digits=71 layout=.#,MATCH,20
+FLEX-126,VI,X_O2,.170,digits=170 layout=.#,MATCH,20
+FLEX-126,VI,X_CO2,.450,digits=450 layout=.#,MATCH,20
+FLEX-126,VI,X_N2,.380,digits=380 layout=.#,MATCH,20
+FLEX-127,VI,test_number,127,digits=127 layout=#,MATCH,20
+FLEX-127,VI,date_0,Sept.,Sept.,MATCH,20
+FLEX-127,VI,date_1,"13,","13,",MATCH,20
+FLEX-127,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-127,VI,D0_mm,3.20,digits=320 layout=#.#,MATCH,20
+FLEX-127,VI,fiber,Yes,Yes,MATCH,20
+FLEX-127,VI,P_atm,.71,digits=71 layout=.#,MATCH,20
+FLEX-127,VI,X_O2,.170,digits=170 layout=.#,MATCH,20
+FLEX-127,VI,X_CO2,.450,digits=450 layout=.#,MATCH,20
+FLEX-127,VI,X_N2,.380,digits=380 layout=.#,MATCH,20
+FLEX-128,VI,test_number,128,digits=128 layout=#,MATCH,20
+FLEX-128,VI,date_0,Sept.,Sept.,MATCH,20
+FLEX-128,VI,date_1,"13,","13,",MATCH,20
+FLEX-128,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-128,VI,D0_mm,2.93,digits=293 layout=#.#,MATCH,20
+FLEX-128,VI,fiber,Yes,Yes,MATCH,20
+FLEX-128,VI,P_atm,.71,digits=71 layout=.#,MATCH,20
+FLEX-128,VI,X_O2,.170,digits=170 layout=.#,MATCH,20
+FLEX-128,VI,X_CO2,.450,digits=450 layout=.#,MATCH,20
+FLEX-128,VI,X_N2,.380,digits=380 layout=.#,MATCH,20
+FLEX-129,VII,test_number,129,digits=129 layout=#,MATCH,21
+FLEX-129,VII,date_0,Sept.,Sept.,MATCH,21
+FLEX-129,VII,date_1,"17,","17,",MATCH,21
+FLEX-129,VII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-129,VII,D0_mm,3.43,digits=343 layout=#.#,MATCH,21
+FLEX-129,VII,fiber,No,No,MATCH,21
+FLEX-129,VII,P_atm,.71,digits=71 layout=.#,MATCH,21
+FLEX-129,VII,X_O2,.170,digits=170 layout=.#,MATCH,21
+FLEX-129,VII,X_CO2,.450,digits=450 layout=.#,MATCH,21
+FLEX-129,VII,X_N2,.380,digits=380 layout=.#,MATCH,21
+FLEX-130,VII,test_number,130,digits=130 layout=–#,DISAGREE,21
+FLEX-130,VII,date_0,Sept.,Sept.,MATCH,21
+FLEX-130,VII,date_1,"17,","1,",DISAGREE,21
+FLEX-130,VII,date_2,2010,digits=2010 layout=–#,DISAGREE,21
+FLEX-130,VII,D0_mm,3.02,digits=302 layout=–#.#,DISAGREE,21
+FLEX-130,VII,fiber,Yes,Yes,MATCH,21
+FLEX-130,VII,P_atm,.71,digits= layout=–.#,DISAGREE,21
+FLEX-130,VII,X_O2,.170,digits=170 layout=–.#,DISAGREE,21
+FLEX-130,VII,X_CO2,.450,digits=450 layout=–.#,DISAGREE,21
+FLEX-130,VII,X_N2,.380,digits=380 layout=–.#,DISAGREE,21
+FLEX-140,VI,test_number,140,digits=140 layout=#,MATCH,20
+FLEX-140,VI,date_0,Nov.,Nov.,MATCH,20
+FLEX-140,VI,date_1,"4,","4,",MATCH,20
+FLEX-140,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-140,VI,D0_mm,4.05,digits=405 layout=#.#,MATCH,20
+FLEX-140,VI,fiber,No,No,MATCH,20
+FLEX-140,VI,P_atm,.70,digits=70 layout=.#,MATCH,20
+FLEX-140,VI,X_O2,.146,digits=146 layout=.#,MATCH,20
+FLEX-140,VI,X_CO2,.500,digits=500 layout=.#,MATCH,20
+FLEX-140,VI,X_N2,.354,digits=354 layout=.#,MATCH,20
+FLEX-141,VI,test_number,141,digits=141 layout=#,MATCH,20
+FLEX-141,VI,date_0,Nov.,Nov.,MATCH,20
+FLEX-141,VI,date_1,"4,","4,",MATCH,20
+FLEX-141,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-141,VI,D0_mm,2.94,digits=294 layout=#.#,MATCH,20
+FLEX-141,VI,fiber,No,No,MATCH,20
+FLEX-141,VI,P_atm,.70,digits=70 layout=.#,MATCH,20
+FLEX-141,VI,X_O2,.146,digits=146 layout=.#,MATCH,20
+FLEX-141,VI,X_CO2,.500,digits=500 layout=.#,MATCH,20
+FLEX-141,VI,X_N2,.354,digits=354 layout=.#,MATCH,20
+FLEX-142,VI,test_number,142,digits=142 layout=#,MATCH,20
+FLEX-142,VI,date_0,Nov.,Nov.,MATCH,20
+FLEX-142,VI,date_1,"4,","4,",MATCH,20
+FLEX-142,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-142,VI,D0_mm,1.88,digits=188 layout=#.#,MATCH,20
+FLEX-142,VI,fiber,No,No,MATCH,20
+FLEX-142,VI,P_atm,.70,digits=70 layout=.#,MATCH,20
+FLEX-142,VI,X_O2,.146,digits=146 layout=.#,MATCH,20
+FLEX-142,VI,X_CO2,.500,digits=500 layout=.#,MATCH,20
+FLEX-142,VI,X_N2,.354,digits=354 layout=.#,MATCH,20
+FLEX-143,VI,test_number,143,digits=143 layout=#,MATCH,20
+FLEX-143,VI,date_0,Nov.,Nov.,MATCH,20
+FLEX-143,VI,date_1,"4,","4,",MATCH,20
+FLEX-143,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-143,VI,D0_mm,2.33,digits=233 layout=#.#,MATCH,20
+FLEX-143,VI,fiber,No,No,MATCH,20
+FLEX-143,VI,P_atm,.70,digits=70 layout=.#,MATCH,20
+FLEX-143,VI,X_O2,.146,digits=146 layout=.#,MATCH,20
+FLEX-143,VI,X_CO2,.500,digits=500 layout=.#,MATCH,20
+FLEX-143,VI,X_N2,.354,digits=354 layout=.#,MATCH,20
+FLEX-147,VI,test_number,147,digits=147 layout=#,MATCH,20
+FLEX-147,VI,date_0,Sept.,Sept.,MATCH,20
+FLEX-147,VI,date_1,"13,","13,",MATCH,20
+FLEX-147,VI,date_2,2010,digits=2010 layout=#,MATCH,20
+FLEX-147,VI,D0_mm,3.13,digits=313 layout=#.#,MATCH,20
+FLEX-147,VI,fiber,No,No,MATCH,20
+FLEX-147,VI,P_atm,.71,digits=71 layout=.#,MATCH,20
+FLEX-147,VI,X_O2,.170,digits=170 layout=.#,MATCH,20
+FLEX-147,VI,X_CO2,.450,digits=450 layout=.#,MATCH,20
+FLEX-147,VI,X_N2,.380,digits=380 layout=.#,MATCH,20
+FLEX-148,VIII,test_number,148,digits=148 layout=#,MATCH,21
+FLEX-148,VIII,date_0,Nov.,Nov.,MATCH,21
+FLEX-148,VIII,date_1,"18,","18,",MATCH,21
+FLEX-148,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-148,VIII,fuel,Heptane,Heptane,MATCH,21
+FLEX-148,VIII,D0_mm,2.66,digits=266 layout=#.#,MATCH,21
+FLEX-148,VIII,P_atm,1.01,digits=101 layout=#.#,MATCH,21
+FLEX-148,VIII,X_O2,0.200,digits=0200 layout=#.#,MATCH,21
+FLEX-148,VIII,X_CO2,0.050,digits=0050 layout=#.#,MATCH,21
+FLEX-148,VIII,X_N2,0.750,digits=0750 layout=#.#,MATCH,21
+FLEX-149,VIII,test_number,149,digits=149 layout=#,MATCH,21
+FLEX-149,VIII,date_0,Nov.,Nov.,MATCH,21
+FLEX-149,VIII,date_1,"18,","18,",MATCH,21
+FLEX-149,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-149,VIII,fuel,Heptane,Heptane,MATCH,21
+FLEX-149,VIII,D0_mm,2.37,digits=237 layout=#.#,MATCH,21
+FLEX-149,VIII,P_atm,1.01,digits=101 layout=#.#,MATCH,21
+FLEX-149,VIII,X_O2,.200,digits=200 layout=.#,MATCH,21
+FLEX-149,VIII,X_CO2,.050,digits=050 layout=.#,MATCH,21
+FLEX-149,VIII,X_N2,.750,digits=750 layout=.#,MATCH,21
+FLEX-150,VIII,test_number,150,digits=150 layout=#,MATCH,21
+FLEX-150,VIII,date_0,Nov.,Nov.,MATCH,21
+FLEX-150,VIII,date_1,"18,","18,",MATCH,21
+FLEX-150,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-150,VIII,fuel,Heptane,Heptane,MATCH,21
+FLEX-150,VIII,D0_mm,3.26,digits=326 layout=#.#,MATCH,21
+FLEX-150,VIII,P_atm,1.01,digits=101 layout=#.#,MATCH,21
+FLEX-150,VIII,X_O2,.200,digits=200 layout=.#,MATCH,21
+FLEX-150,VIII,X_CO2,.050,digits=050 layout=.#,MATCH,21
+FLEX-150,VIII,X_N2,.750,digits=750 layout=.#,MATCH,21
+FLEX-151,VIII,test_number,151,digits=151 layout=#,MATCH,21
+FLEX-151,VIII,date_0,Dec.,Dec.,MATCH,21
+FLEX-151,VIII,date_1,"8,","8,",MATCH,21
+FLEX-151,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-151,VIII,fuel,Methanol,Methanol,MATCH,21
+FLEX-151,VIII,D0_mm,3.90,digits=390 layout=#.#,MATCH,21
+FLEX-151,VIII,P_atm,1.00,digits=100 layout=#.#,MATCH,21
+FLEX-151,VIII,X_O2,.180,digits=180 layout=.#,MATCH,21
+FLEX-151,VIII,X_CO2,.150,digits=150 layout=.#,MATCH,21
+FLEX-151,VIII,X_N2,.670,digits=670 layout=.#,MATCH,21
+FLEX-152,VIII,test_number,152,digits=152 layout=#,MATCH,21
+FLEX-152,VIII,date_0,Dec.,Dec.,MATCH,21
+FLEX-152,VIII,date_1,"8,","8,",MATCH,21
+FLEX-152,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-152,VIII,fuel,Methanol,Methanol,MATCH,21
+FLEX-152,VIII,D0_mm,3.41,digits=341 layout=#.#,MATCH,21
+FLEX-152,VIII,P_atm,1.01,digits=101 layout=#.#,MATCH,21
+FLEX-152,VIII,X_O2,.180,digits=180 layout=.#,MATCH,21
+FLEX-152,VIII,X_CO2,.150,digits=150 layout=.#,MATCH,21
+FLEX-152,VIII,X_N2,.670,digits=670 layout=.#,MATCH,21
+FLEX-153,VIII,test_number,153,digits=153 layout=#,MATCH,21
+FLEX-153,VIII,date_0,Dec.,Dec.,MATCH,21
+FLEX-153,VIII,date_1,"8,","8,",MATCH,21
+FLEX-153,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-153,VIII,fuel,Methanol,Methanol,MATCH,21
+FLEX-153,VIII,D0_mm,2.80,digits=280 layout=#.#,MATCH,21
+FLEX-153,VIII,P_atm,1.01,digits=101 layout=#.#,MATCH,21
+FLEX-153,VIII,X_O2,.180,digits=180 layout=.#,MATCH,21
+FLEX-153,VIII,X_CO2,.150,digits=150 layout=.#,MATCH,21
+FLEX-153,VIII,X_N2,.670,digits=670 layout=.#,MATCH,21
+FLEX-154,VIII,test_number,154,digits=154 layout=#,MATCH,21
+FLEX-154,VIII,date_0,Dec.,Dec.,MATCH,21
+FLEX-154,VIII,date_1,"9,","9,",MATCH,21
+FLEX-154,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-154,VIII,fuel,Heptane,Heptane,MATCH,21
+FLEX-154,VIII,D0_mm,3.76,digits=376 layout=#.#,MATCH,21
+FLEX-154,VIII,P_atm,1.00,digits=100 layout=#.#,MATCH,21
+FLEX-154,VIII,X_O2,.180,digits=180 layout=.#,MATCH,21
+FLEX-154,VIII,X_CO2,.150,digits=150 layout=.#,MATCH,21
+FLEX-154,VIII,X_N2,.670,digits=670 layout=.#,MATCH,21
+FLEX-155,VIII,test_number,155,digits=155 layout=#,MATCH,21
+FLEX-155,VIII,date_0,Dec.,Dec.,MATCH,21
+FLEX-155,VIII,date_1,"9,","9,",MATCH,21
+FLEX-155,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-155,VIII,fuel,Heptane,Heptane,MATCH,21
+FLEX-155,VIII,D0_mm,2.84,digits=284 layout=#.#,MATCH,21
+FLEX-155,VIII,P_atm,1.01,digits=101 layout=#.#,MATCH,21
+FLEX-155,VIII,X_O2,.180,digits=180 layout=.#,MATCH,21
+FLEX-155,VIII,X_CO2,.150,digits=150 layout=.#,MATCH,21
+FLEX-155,VIII,X_N2,.670,digits=670 layout=.#,MATCH,21
+FLEX-156,VIII,test_number,156,digits=156 layout=#,MATCH,21
+FLEX-156,VIII,date_0,Dec.,Dec.,MATCH,21
+FLEX-156,VIII,date_1,"9,","9,",MATCH,21
+FLEX-156,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-156,VIII,fuel,Heptane,Heptane,MATCH,21
+FLEX-156,VIII,D0_mm,2.30,digits=230 layout=#.#,MATCH,21
+FLEX-156,VIII,P_atm,1.01,digits=101 layout=#.#,MATCH,21
+FLEX-156,VIII,X_O2,.180,digits=180 layout=.#,MATCH,21
+FLEX-156,VIII,X_CO2,.150,digits=150 layout=.#,MATCH,21
+FLEX-156,VIII,X_N2,.670,digits=670 layout=.#,MATCH,21
+FLEX-157,VIII,test_number,157,digits=157 layout=#,MATCH,21
+FLEX-157,VIII,date_0,Dec.,Dec.,MATCH,21
+FLEX-157,VIII,date_1,"9,","9,",MATCH,21
+FLEX-157,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-157,VIII,fuel,Heptane,Heptane,MATCH,21
+FLEX-157,VIII,D0_mm,2.02,digits=202 layout=#.#,MATCH,21
+FLEX-157,VIII,P_atm,1.01,digits=101 layout=#.#,MATCH,21
+FLEX-157,VIII,X_O2,.180,digits=180 layout=.#,MATCH,21
+FLEX-157,VIII,X_CO2,.150,digits=150 layout=.#,MATCH,21
+FLEX-157,VIII,X_N2,.670,digits=670 layout=.#,MATCH,21
+FLEX-158,VIII,test_number,158,digits=158 layout=#,MATCH,21
+FLEX-158,VIII,date_0,Dec.,Dec.,MATCH,21
+FLEX-158,VIII,date_1,"14,","14,",MATCH,21
+FLEX-158,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-158,VIII,fuel,Methanol,Methanol,MATCH,21
+FLEX-158,VIII,D0_mm,4.31,digits=431 layout=#.#,MATCH,21
+FLEX-158,VIII,P_atm,1.00,digits=100 layout=#.#,MATCH,21
+FLEX-158,VIII,X_O2,.160,digits=160 layout=.#,MATCH,21
+FLEX-158,VIII,X_CO2,.250,digits=250 layout=.#,MATCH,21
+FLEX-158,VIII,X_N2,.590,digits=590 layout=.#,MATCH,21
+FLEX-159,VIII,test_number,159,digits=159 layout=#,MATCH,21
+FLEX-159,VIII,date_0,Dec.,Dec.,MATCH,21
+FLEX-159,VIII,date_1,"14,","14,",MATCH,21
+FLEX-159,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-159,VIII,fuel,Methanol,Methanol,MATCH,21
+FLEX-159,VIII,D0_mm,3.78,digits=378 layout=#.#,MATCH,21
+FLEX-159,VIII,P_atm,1.01,digits=101 layout=#.#,MATCH,21
+FLEX-159,VIII,X_O2,.160,digits=160 layout=.#,MATCH,21
+FLEX-159,VIII,X_CO2,.250,digits=250 layout=.#,MATCH,21
+FLEX-159,VIII,X_N2,.590,digits=590 layout=.#,MATCH,21
+FLEX-160,VIII,test_number,160,digits=160 layout=#,MATCH,21
+FLEX-160,VIII,date_0,Dec.,Dec.,MATCH,21
+FLEX-160,VIII,date_1,"14,","14,",MATCH,21
+FLEX-160,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-160,VIII,fuel,Methanol,Methanol,MATCH,21
+FLEX-160,VIII,D0_mm,2.71,digits=271 layout=#.#,MATCH,21
+FLEX-160,VIII,P_atm,1.01,digits=101 layout=#.#,MATCH,21
+FLEX-160,VIII,X_O2,.160,digits=160 layout=.#,MATCH,21
+FLEX-160,VIII,X_CO2,.250,digits=250 layout=.#,MATCH,21
+FLEX-160,VIII,X_N2,.590,digits=590 layout=.#,MATCH,21
+FLEX-161,VIII,test_number,161,digits=161 layout=#,MATCH,21
+FLEX-161,VIII,date_0,Dec.,Dec.,MATCH,21
+FLEX-161,VIII,date_1,"14,","14,",MATCH,21
+FLEX-161,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-161,VIII,fuel,Methanol,Methanol,MATCH,21
+FLEX-161,VIII,D0_mm,2.81,digits=281 layout=#.#,MATCH,21
+FLEX-161,VIII,P_atm,1.01,digits=101 layout=#.#,MATCH,21
+FLEX-161,VIII,X_O2,.160,digits=160 layout=.#,MATCH,21
+FLEX-161,VIII,X_CO2,.250,digits=250 layout=.#,MATCH,21
+FLEX-161,VIII,X_N2,.590,digits=590 layout=.#,MATCH,21
+FLEX-162,VIII,test_number,162,digits=162 layout=#,MATCH,21
+FLEX-162,VIII,date_0,Dec.,Dec.,MATCH,21
+FLEX-162,VIII,date_1,"28,","28,",MATCH,21
+FLEX-162,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-162,VIII,fuel,Methanol,Methanol,MATCH,21
+FLEX-162,VIII,D0_mm,3.79,digits=379 layout=#.#,MATCH,21
+FLEX-162,VIII,P_atm,1.00,digits=100 layout=#.#,MATCH,21
+FLEX-162,VIII,X_O2,.153,digits=153 layout=.#,MATCH,21
+FLEX-162,VIII,X_CO2,.298,digits=298 layout=.#,MATCH,21
+FLEX-162,VIII,X_N2,.549,digits=549 layout=.#,MATCH,21
+FLEX-163,VIII,test_number,163,digits=163 layout=#,MATCH,21
+FLEX-163,VIII,date_0,Dec.,Dec.,MATCH,21
+FLEX-163,VIII,date_1,"28,","28,",MATCH,21
+FLEX-163,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-163,VIII,fuel,Methanol,Methanol,MATCH,21
+FLEX-163,VIII,D0_mm,3.07,digits=307 layout=#.#,MATCH,21
+FLEX-163,VIII,P_atm,1.01,digits=101 layout=#.#,MATCH,21
+FLEX-163,VIII,X_O2,.153,digits=153 layout=.#,MATCH,21
+FLEX-163,VIII,X_CO2,.298,digits=298 layout=.#,MATCH,21
+FLEX-163,VIII,X_N2,.549,digits=549 layout=.#,MATCH,21
+FLEX-164,VIII,test_number,164,digits=164 layout=#,MATCH,21
+FLEX-164,VIII,date_0,Dec.,Dec.,MATCH,21
+FLEX-164,VIII,date_1,"28,","28,",MATCH,21
+FLEX-164,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-164,VIII,fuel,Methanol,Methanol,MATCH,21
+FLEX-164,VIII,D0_mm,2.59,digits=259 layout=#.#,MATCH,21
+FLEX-164,VIII,P_atm,1.01,digits=101 layout=#.#,MATCH,21
+FLEX-164,VIII,X_O2,.153,digits=153 layout=.#,MATCH,21
+FLEX-164,VIII,X_CO2,.298,digits=298 layout=.#,MATCH,21
+FLEX-164,VIII,X_N2,.549,digits=549 layout=.#,MATCH,21
+FLEX-165,VIII,test_number,165,digits=165 layout=#,MATCH,21
+FLEX-165,VIII,date_0,Dec.,Dec.,MATCH,21
+FLEX-165,VIII,date_1,"28,","28,",MATCH,21
+FLEX-165,VIII,date_2,2010,digits=2010 layout=#,MATCH,21
+FLEX-165,VIII,fuel,Methanol,Methanol,MATCH,21
+FLEX-165,VIII,D0_mm,2.69,digits=269 layout=#.#,MATCH,21
+FLEX-165,VIII,P_atm,1.01,digits=101 layout=#.#,MATCH,21
+FLEX-165,VIII,X_O2,.153,digits=153 layout=.#,MATCH,21
+FLEX-165,VIII,X_CO2,.298,digits=298 layout=.#,MATCH,21
+FLEX-165,VIII,X_N2,.549,digits=549 layout=.#,MATCH,21
+FLEX-166,VIII,test_number,166,digits=166 layout=–#,DISAGREE,21
+FLEX-166,VIII,date_0,Dec.,Dec.,MATCH,21
+FLEX-166,VIII,date_1,"9,",»,DISAGREE,21
+FLEX-166,VIII,date_2,2010,digits=2010 layout=–#,DISAGREE,21
+FLEX-166,VIII,fuel,Heptane,Heptane,MATCH,21
+FLEX-166,VIII,D0_mm,2.19,digits=219 layout=–#.#,DISAGREE,21
+FLEX-166,VIII,P_atm,1.01,digits=101 layout=–#.#,DISAGREE,21
+FLEX-166,VIII,X_O2,.180,digits=180 layout=–.#,DISAGREE,21
+FLEX-166,VIII,X_CO2,.150,digits=150 layout=–.#,DISAGREE,21
+FLEX-166,VIII,X_N2,.670,digits=670 layout=–.#,DISAGREE,21

@@ -1,0 +1,93 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://open-flex.local/schemas/dataset.schema.json",
+ "title": "Dataset",
+ "description": "A file of values with origin, method and processing history. Original, digitized, processed and derived data are separate datasets.",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "record_type",
+  "dataset_id",
+  "version",
+  "path",
+  "sha256",
+  "data_class",
+  "origin",
+  "method",
+  "processing_history"
+ ],
+ "properties": {
+  "record_type": {
+   "const": "Dataset"
+  },
+  "dataset_id": {
+   "$ref": "common.schema.json#/$defs/dataset_id"
+  },
+  "version": {
+   "type": "string",
+   "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+  },
+  "path": {
+   "type": "string"
+  },
+  "sha256": {
+   "$ref": "common.schema.json#/$defs/sha256"
+  },
+  "data_class": {
+   "enum": [
+    "ORIGINAL",
+    "EXTRACTED_TABULATED",
+    "DIGITIZED",
+    "PROCESSED",
+    "DERIVED",
+    "VERIFICATION",
+    "REGISTRY",
+    "RECORDS",
+    "ANALYSIS",
+    "SIMULATION"
+   ]
+  },
+  "origin": {
+   "type": "string"
+  },
+  "method": {
+   "type": "string"
+  },
+  "inputs": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "processing_history": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "rows": {
+   "type": [
+    "integer",
+    "null"
+   ]
+  },
+  "schema": {
+   "type": "string"
+  },
+  "limitations": {
+   "type": "string"
+  },
+  "test_id": {
+   "$ref": "common.schema.json#/$defs/physical_test_id"
+  },
+  "series": {
+   "type": "string"
+  },
+  "unit": {
+   "type": "string"
+  },
+  "digitization_record": {
+   "type": "string"
+  }
+ }
+}

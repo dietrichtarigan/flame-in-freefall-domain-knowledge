@@ -1,0 +1,231 @@
+{
+ "calibration": {
+  "x": {
+   "edge": "bottom",
+   "fit": {
+    "a": -3.4526879039107534,
+    "b": 0.01569344975746113,
+    "model": "value = a + b * pixel"
+   },
+   "major_min_len_px": 18,
+   "major_tick_length_px": 22,
+   "major_tick_px": [
+    92.5,
+    220.0,
+    347.5,
+    475.0,
+    602.0,
+    730.0,
+    857.5,
+    984.5,
+    1112.0
+   ],
+   "max_abs_residual": 0.005231149919152855,
+   "max_abs_residual_px": 0.33333333333327886,
+   "quantity": "time",
+   "residuals_at_ticks": [
+    0.0010438013455988937,
+    0.0001289572693048413,
+    -0.0007858868069892111,
+    -0.0017007308832832635,
+    0.005231149919152855,
+    -0.0035304190358722565,
+    -0.004445263112165421,
+    0.0024866176902715864,
+    0.0015717736139748695
+   ],
+   "tick_labels_as_read": [
+    -2,
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+   ],
+   "tick_matching": "all detected major ticks, in pixel order",
+   "unit": "s"
+  },
+  "y_left": {
+   "edge": "left",
+   "fit": {
+    "a": 7.662598686548184,
+    "b": -0.010381516697017945,
+    "model": "value = a + b * pixel"
+   },
+   "major_min_len_px": "0.75 x longest",
+   "major_tick_length_px": 22,
+   "major_tick_px": [
+    160.0,
+    353.0,
+    545.5,
+    738.0
+   ],
+   "max_abs_residual": 0.0020767074991510093,
+   "max_abs_residual_px": 0.20003893070340448,
+   "quantity": "droplet diameter squared",
+   "residuals_at_ticks": [
+    -0.0015560150253124405,
+    0.0020767074991510093,
+    0.0005186716751053311,
+    -0.001039364148939903
+   ],
+   "tick_labels_as_read": [
+    6,
+    4,
+    2,
+    0
+   ],
+   "tick_matching": "all detected major ticks, in pixel order",
+   "unit": "mm^2"
+  },
+  "y_right": {
+   "edge": "right",
+   "fit": {
+    "a": 14.301922269620498,
+    "b": -0.019374918128346266,
+    "model": "value = a + b * pixel"
+   },
+   "major_min_len_px": "0.75 x longest",
+   "major_tick_length_px": 22,
+   "major_tick_px": [
+    15.5,
+    119.0,
+    222.0,
+    325.0,
+    428.5,
+    532.0,
+    635.0,
+    738.0
+   ],
+   "max_abs_residual": 0.005534174659715063,
+   "max_abs_residual_px": 0.2856360281398221,
+   "quantity": "flame diameter",
+   "residuals_at_ticks": [
+    -0.0016110386311307678,
+    0.003692987652708979,
+    -0.0006904451276277257,
+    -0.0050738779079608776,
+    0.0002301483758770928,
+    0.005534174659715063,
+    0.001150741879380135,
+    -0.003232690900953017
+   ],
+   "tick_labels_as_read": [
+    14,
+    12,
+    10,
+    8,
+    6,
+    4,
+    2,
+    0
+   ],
+   "tick_matching": "all detected major ticks, in pixel order",
+   "unit": "mm"
+  }
+ },
+ "config": "data/digitization/configs/FIG037_FLEX-033.json",
+ "config_sha256": "ef642710698034bbed683592128ffbf1b1445a3dc150d360f928e24d5538a068",
+ "evidence_class": "DIGITIZED",
+ "label_reading_note": "Tick label values typed by the reader (Claude, AI assistant) from the image; listed in pixel order (left-to-right for x, top-to-bottom for y).",
+ "limitations": [
+  "Values are read from a raster plot, not from NASA's data files; they are not original measurements.",
+  "Where markers overlap (dense trails) detected centres sample the trail and do not correspond to individual camera frames; frame count and frame times cannot be recovered.",
+  "Markers hidden under other markers, and markers outside the plotted axis range, are missed.",
+  "Calibration residuals describe tick placement only. No uncertainty of the digitized values is claimed beyond: one marker radius is about 0.086 s in time and 0.057 mm^2 on the left axis.",
+  "Tick label values were typed by the reader from the image."
+ ],
+ "marker_detection": {
+  "colour_score": "e.g. red = max(0, R - max(G, B))",
+  "excluded_regions": [
+   {
+    "what": "legend",
+    "x0": 805,
+    "x1": 1060,
+    "y0": 40,
+    "y1": 110
+   }
+  ],
+  "marker": "open circle",
+  "min_separation_px": 4,
+  "passes": 3,
+  "radius_px": 5.5,
+  "ring_sigma_px": 0.9,
+  "threshold_fraction_of_legend_score": 0.3
+ },
+ "method_version": "1.1.0",
+ "overlay_image": "docs/digitization/FIG037_FLEX-033_overlay.png",
+ "record_type": "DigitizationRecord",
+ "series": [
+  {
+   "axis": "y_left",
+   "color": "red",
+   "legend_text": "Droplet history",
+   "name": "droplet_d2",
+   "path": "data/digitized/FLEX-033_fig037_droplet_d2.csv",
+   "points": 168,
+   "points_per_pass": [
+    121,
+    38,
+    9
+   ],
+   "quality_flag": "OK",
+   "quantity": "D^2",
+   "self_check": {
+    "precision_redrawn_ring_pixels_coloured": 0.909,
+    "recall_coloured_pixels_covered": 0.918,
+    "reference_score_source": "legend marker of the same colour",
+    "threshold_fraction_of_reference": 0.3
+   },
+   "t_range_s": [
+    -1.277,
+    14.941
+   ],
+   "unit": "mm^2"
+  },
+  {
+   "axis": "y_right",
+   "color": "blue",
+   "legend_text": "LLUV flame size",
+   "name": "lluv_flame_diameter",
+   "path": "data/digitized/FLEX-033_fig037_lluv_flame_diameter.csv",
+   "points": 302,
+   "points_per_pass": [
+    269,
+    30,
+    3
+   ],
+   "quality_flag": "OK",
+   "quantity": "LLUV flame diameter",
+   "self_check": {
+    "precision_redrawn_ring_pixels_coloured": 0.872,
+    "recall_coloured_pixels_covered": 0.951,
+    "reference_score_source": "legend marker of the same colour",
+    "threshold_fraction_of_reference": 0.3
+   },
+   "t_range_s": [
+    -0.238,
+    11.384
+   ],
+   "unit": "mm"
+  }
+ ],
+ "source": {
+  "locator": "Appendix B, Figure 37, printed p. 61 (PDF p. 67)",
+  "source_id": "S01",
+  "source_pdf_sha256": "b4f6ca983e2792c33a0b92220a791a818f426bb635b94f7fd33dc8c9c471e79d"
+ },
+ "source_image": {
+  "bytes": 168010,
+  "extraction": "pdfimages -j (embedded DCT stream copied unchanged)",
+  "height_px": 836,
+  "path": "data/digitization/source_images/FIG037_FLEX-033.jpg",
+  "sha256": "c941f91775e56c3e050bcc832106ba4c9b0f58c85635de5e894d0fc27ed0b028",
+  "width_px": 1273
+ },
+ "test_id": "FLEX-033",
+ "time_zero": "As in the source plot: time zero = igniter energized (S01 App. B intro, CLM-018)."
+}

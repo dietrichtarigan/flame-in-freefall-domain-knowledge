@@ -1,0 +1,362 @@
+<!-- Open FLEX — Phase B M5 body. Every data value shown here is filled from the embedded registry/data bundle at runtime. -->
+<a class="skip-link" href="#workspaces">Skip to content</a>
+<header class="app-header">
+  <div class="header-row">
+    <div class="brand">
+      <h1>Open FLEX Virtual Laboratory</h1>
+      <p>Evidence-traceable view of the original Flame Extinguishment Experiment (ISS · CIR · MDCA, 2009–2011). Build <span class="mono" id="build-id">—</span></p>
+    </div>
+    <div class="test-picker">
+      <label for="test-select">Physical test (Table IX)</label>
+      <select id="test-select" onchange="OF.selectTest(this.value)"></select>
+    </div>
+    <div class="header-actions">
+      <div class="run-meta-box" aria-live="polite">Test: <span id="hdr-test-id">—</span><br/>Record SHA-256: <span id="hdr-sha256" class="mono">—</span></div>
+      <button class="btn btn-sm" id="btn-theme" onclick="OF.toggleTheme()" aria-pressed="false">Dark theme</button>
+    </div>
+  </div>
+  <div class="scope-strip" role="note" aria-label="Scope and status">
+    <span class="badge badge-scope">ORIGINAL FLEX ONLY — NASA/TP-2015-216046</span>
+    <span class="badge badge-danger">EXCLUDES FLEX-2</span>
+    <span class="badge badge-info">INDEPENDENT PROTOTYPE · NOT A NASA PRODUCT · NOT NASA-ENDORSED</span>
+  </div>
+  <nav class="nav-tabs" role="tablist" aria-label="Workspaces" id="workspaces-tabs">
+    <button class="tab-btn" role="tab" id="tabbtn-overview" aria-controls="tab-overview" aria-selected="true" tabindex="0" onclick="OF.switchTab('overview', this)">Overview</button>
+    <button class="tab-btn" role="tab" id="tabbtn-lab" aria-controls="tab-lab" aria-selected="false" tabindex="-1" onclick="OF.switchTab('lab', this)">Experiment</button>
+    <button class="tab-btn" role="tab" id="tabbtn-physics" aria-controls="tab-physics" aria-selected="false" tabindex="-1" onclick="OF.switchTab('physics', this)">Physics &amp; Results</button>
+    <button class="tab-btn" role="tab" id="tabbtn-uq" aria-controls="tab-uq" aria-selected="false" tabindex="-1" onclick="OF.switchTab('uq', this)">Uncertainty &amp; Validation</button>
+    <button class="tab-btn" role="tab" id="tabbtn-evidence" aria-controls="tab-evidence" aria-selected="false" tabindex="-1" onclick="OF.switchTab('evidence', this)">Evidence &amp; Reproducibility</button>
+  </nav>
+</header>
+
+<main id="workspaces">
+<!-- 1. OVERVIEW -->
+<section id="tab-overview" class="workspace active" role="tabpanel" aria-labelledby="tabbtn-overview" tabindex="-1">
+  <section class="panel" aria-labelledby="ov-h">
+    <div class="panel-header"><h2 class="panel-title" id="ov-h">What this laboratory shows</h2></div>
+    <div class="panel-body">
+      <p class="lede" data-claims="CLM-016 CLM-043 CLM-028">FLEX burned single droplets of methanol and n-heptane in the Combustion Integrated Rack on the International Space Station. Without buoyant convection the flames are spherical, so droplet and flame sizes over time can be compared directly with one-dimensional theory. This laboratory presents the published results of the first FLEX tests, test by test, with the source of every value.</p>
+      <div class="stat-row">
+        <div class="stat" data-source="S01 Table IX"><div class="num" id="ov-ntests">—</div><div class="lab">tests with published Table IX results</div></div>
+        <div class="stat" data-source="DIGITIZED datasets"><div class="num" id="ov-ndig">—</div><div class="lab">tests with time series digitized from the report's plots</div></div>
+        <div class="stat" data-source="claims registry"><div class="num" id="ov-nclaims">—</div><div class="lab">source-linked claims</div></div>
+        <div class="stat" data-source="discrepancy register"><div class="num" id="ov-ndsc">—</div><div class="lab">recorded source discrepancies</div></div>
+      </div>
+      <div class="alert-box alert-info" data-interpretive="scope statement"><strong>What it is not.</strong> No combustion model runs here, nothing is a NASA product, and no result is "validated". Where data are missing the page says so: for most tests the droplet history is reconstructed from the printed D₀ and burning rate, and the flame size is shown only where it was digitized from the report.</div>
+      <h3 class="panel-title" style="margin:14px 0 8px">Start here</h3>
+      <div class="nav-cards">
+        <button class="nav-card" onclick="OF.switchTab('lab', document.getElementById('tabbtn-lab'))"><strong>Experiment</strong>3D apparatus laid out after NASA Fig. 3; droplet and flame play back from data in real time.</button>
+        <button class="nav-card" onclick="OF.switchTab('physics', document.getElementById('tabbtn-physics'))"><strong>Physics &amp; Results</strong>Table IX values, test-matrix entry, digitized time series and the D² check.</button>
+        <button class="nav-card" onclick="OF.switchTab('uq', document.getElementById('tabbtn-uq'))"><strong>Uncertainty &amp; Validation</strong>Uncertainty components as the source states them, and coverage of tested conditions.</button>
+        <button class="nav-card" onclick="OF.switchTab('evidence', document.getElementById('tabbtn-evidence'))"><strong>Evidence &amp; Reproducibility</strong>Claim ledger, sources, discrepancies, dataset hashes and export.</button>
+      </div>
+      <p class="small" style="margin-top:12px" data-interpretive="usage hint">The test selector in the header applies to every workspace. Digitized tests are marked "· digitized" in the list.</p>
+    </div>
+  </section>
+</section>
+
+<!-- 2. EXPERIMENT -->
+<section id="tab-lab" class="workspace" role="tabpanel" aria-labelledby="tabbtn-lab" tabindex="-1">
+  <div class="exp-grid">
+    <section class="panel" aria-labelledby="exp-h">
+      <div class="panel-header">
+        <h2 class="panel-title" id="exp-h">CIR chamber and MDCA — 3D</h2>
+        <div class="view-presets" role="group" aria-label="Camera views">
+          <button class="btn btn-sm" data-view="droplet" onclick="OF.setCameraView('droplet')">Droplet</button>
+          <button class="btn btn-sm" data-view="flame" onclick="OF.setCameraView('flame')">Flame</button>
+          <button class="btn btn-sm" data-view="hibms" onclick="OF.setCameraView('hibms')">As HiBMs</button>
+          <button class="btn btn-sm" data-view="lluv" onclick="OF.setCameraView('lluv')">As LLUV</button>
+          <button class="btn btn-sm" data-view="colour" onclick="OF.setCameraView('colour')">As colour cam</button>
+          <button class="btn btn-sm" data-view="optics" onclick="OF.setCameraView('optics')">Optical paths</button>
+          <button class="btn btn-sm" data-view="layout" onclick="OF.setCameraView('layout')">Fig. 3 top view</button>
+          <button class="btn btn-sm" data-view="chamber" onclick="OF.setCameraView('chamber')">Chamber</button>
+          <button class="btn btn-sm" id="btn-cutaway" aria-pressed="false" onclick="OF.toggleCutaway()">Hide chamber</button>
+          <button class="btn btn-sm" id="btn-frusta" aria-pressed="true" onclick="OF.toggleFrusta()">Camera FOVs</button>
+          <button class="btn btn-sm" id="btn-overlays" aria-pressed="true" onclick="OF.toggleOverlays()">Measurement overlays</button>
+          <button class="btn btn-sm" id="btn-camlook" aria-pressed="true" onclick="OF.toggleCameraLook()" title="Cosmetic sensor speckle in the colour-camera view (no data)">Camera look</button>
+        </div>
+      </div>
+      <div class="viewport-wrapper">
+        <div id="three-container" role="img" aria-label="3D view of the CIR chamber and MDCA after NASA TP Fig. 3. The droplet, flame, needles, fiber and camera fields of view are drawn to scale in millimetres; chamber and hardware are a layout sketch. The droplet and flame readouts beside the view give the same information as text."></div>
+        <canvas id="fallback-canvas" aria-label="2D fallback view of the apparatus and a to-scale inset of droplet and flame"></canvas>
+        <canvas id="camlook-canvas" aria-hidden="true"></canvas>
+        <div class="viewport-overlay-top">
+          <div class="schematic-stamp" data-source="S01 Fig. 3, Fig. 4; Table IX; DIGITIZED; S41 appearance">LAYOUT AFTER NASA TP FIG. 3 · DROPLET, FLAME, NEEDLES, FIBER, FOVs TO SCALE (mm) · FLAME SIZE FROM DATA ONLY · LIGHTING/COLOUR APPROXIMATE, NOT RADIOMETRIC · HARDWARE SKETCHED, NOT CAD</div>
+          <div><span id="lib-status-3d"></span> <span id="pick-status" aria-live="polite">Click a part to see what it is</span></div>
+        </div>
+        <div class="viewport-overlay-bottom"><span id="camview-note" class="camview-note" data-claims="CLM-047 CLM-013" aria-live="polite"></span>
+        </div>
+      </div>
+      <div class="transport">
+        <button class="btn btn-primary btn-sm" id="btn-play" onclick="OF.togglePlay()" aria-pressed="false">Play</button>
+        <button class="btn btn-sm" onclick="OF.stepStage(-1)" aria-label="Previous stage">◀ Stage</button>
+        <button class="btn btn-sm" onclick="OF.stepStage(1)" aria-label="Next stage">Stage ▶</button>
+        <label class="small" for="speed-select">Speed</label>
+        <select id="speed-select" onchange="OF.setSpeed(this.value)"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1× (real time)</option><option value="2">2×</option><option value="4">4×</option></select>
+        <input type="range" id="time-scrubber" min="0" max="1" step="0.0005" value="0" oninput="OF.anim.playing=false; OF.setPlayLabel(); OF.scrub(parseFloat(this.value))" aria-label="Timeline position" />
+        <span id="time-readout" data-interpretive="UI state">—</span>
+        <span id="regime-readout" data-interpretive="UI state" aria-live="polite">—</span>
+      </div>
+      <div class="panel-body">
+        <div class="small" data-source="S01 §2.3; App. A.1">Test-point sequence as described in NASA/TP-2015-216046 §2.3. Stages before deployment are not to time scale; from deployment onward the timeline is real seconds since the igniters were turned ON (time zero, App. A.1).</div>
+        <div class="stage-pills" id="stage-pills" role="group" aria-label="Procedure stages"></div>
+        <div class="alert-box alert-info" id="stage-detail" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <div>
+      <section class="panel" aria-labelledby="ro-h">
+        <div class="panel-header"><h2 class="panel-title" id="ro-h">At this moment</h2><span class="badge badge-info">EVERY VALUE NAMES ITS SOURCE</span></div>
+        <div class="panel-body">
+          <dl class="readouts" data-source="OF.Timeline (Table IX, DIGITIZED datasets, captions)">
+            <dt>Phase</dt><dd id="ro-phase">—</dd>
+            <dt>Droplet diameter</dt><dd id="ro-droplet">—</dd>
+            <dt>…source</dt><dd id="ro-droplet-src">—</dd>
+            <dt>Flame diameter</dt><dd id="ro-flame">—</dd>
+            <dt>LLUV (OH*) edge</dt><dd id="ro-lluv">—</dd>
+            <dt>…source</dt><dd id="ro-flame-src">—</dd>
+            <dt>Appearance</dt><dd id="ro-appearance">—</dd>
+          </dl>
+          <details open style="margin-top:10px"><summary class="small"><strong>How the playback is driven for this test</strong></summary><div id="timeline-info"></div></details>
+        </div>
+      </section>
+      <section class="panel" aria-labelledby="comp-h">
+        <div class="panel-header"><h2 class="panel-title" id="comp-h">Component information</h2><span class="badge badge-violet" id="bubble-source-tag">—</span></div>
+        <div class="panel-body">
+          <div class="hotspot-chips" id="hotspot-chips" role="group" aria-label="Apparatus components (keyboard alternative to clicking the 3D view)"></div>
+          <div class="bubble-grid" id="bubble-content"></div>
+        </div>
+      </section>
+      <section class="panel" aria-labelledby="diag-h">
+        <div class="panel-header">
+          <h2 class="panel-title" id="diag-h">Diagnostic channels</h2>
+          <select id="cam-channel" onchange="OF.renderDiagnostic()" aria-label="Diagnostic channel">
+            <option value="hibms">HiBMs backlit view (droplet)</option>
+            <option value="lluv">LLUV 310 nm (OH* flame edge)</option>
+            <option value="colour">MDCA colour camera (visible flame)</option>
+            <option value="radiometer">MDCA radiometers</option>
+          </select>
+        </div>
+        <div class="panel-body">
+          <div class="cam-sim-grid">
+            <canvas id="diag-canvas" width="240" height="240" role="img" aria-label="Field of view of the selected camera drawn to scale with the droplet at its printed D0"></canvas>
+            <div><span class="badge badge-warn">ILLUSTRATION — NOT A RECORDED FRAME</span><div id="cam-desc" class="small"></div></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- 3. PHYSICS & RESULTS -->
+<section id="tab-physics" class="workspace" role="tabpanel" aria-labelledby="tabbtn-physics" tabindex="-1">
+  <div class="res-grid">
+    <div>
+      <section class="panel" aria-labelledby="rec-h">
+        <div class="panel-header"><h2 class="panel-title" id="rec-h">Physical test record</h2><span class="badge badge-scope" id="record-class-badge">EVIDENCE: PUBLISHED TABULATED</span></div>
+        <div class="panel-body">
+          <div class="small" id="test-locator">—</div>
+          <div class="control-group" style="margin-top:8px">
+            <div class="control-label">Mode</div>
+            <div class="mode-switch" role="radiogroup" aria-label="Operating mode">
+              <button class="mode-btn active" role="radio" aria-checked="true" id="mode-replay">Source record</button>
+              <button class="mode-btn" role="radio" aria-checked="false" id="mode-explore" disabled>Explore with a model (unavailable)</button>
+            </div>
+            <div class="sub-note" id="mode-note" data-claims="CLM-051 CLM-056"></div>
+          </div>
+          <div id="explore-panel" hidden data-derived="D²-law educational baseline (NUMERICAL_SIMULATION)">
+            <div class="alert-box alert-info" id="ex-status" role="status" aria-live="polite"></div>
+            <fieldset class="ex-form">
+              <legend>Inputs, seeded from the printed conditions of <span id="ex-seed-label" class="mono"></span> <button class="btn" id="btn-explore-reset" type="button">Reset to printed</button></legend>
+              <label>Fuel <select id="ex-fuel" data-x><option value="methanol">methanol</option><option value="heptane">n-heptane</option></select></label>
+              <label>X O₂ <input id="ex-o2" data-x type="number" step="0.01" min="0" max="1"></label>
+              <label>X CO₂ <input id="ex-co2" data-x type="number" step="0.01" min="0" max="1"></label>
+              <label>X He <input id="ex-he" data-x type="number" step="0.01" min="0" max="1"></label>
+              <label>D₀, mm <input id="ex-d0" data-x type="number" step="0.1" min="0.1"></label>
+              <label>T∞, K <input id="ex-tinf" data-x type="number" step="1"></label>
+              <label>Property T, K <input id="ex-tprop" data-x type="number" step="50" placeholder="iterated"></label>
+              <label>Heating value <select id="ex-q" data-x><option value="nominal">nominal</option><option value="low">low end</option><option value="high">high end</option></select></label>
+              <label>Liquid density at <select id="ex-rho" data-x><option value="boil">boiling point</option><option value="298">298.15 K</option></select></label>
+              <p class="sub-note" style="grid-column:1/-1;margin:0">N₂ is the balance. Pressure is not an input: this model has no pressure dependence.</p>
+            </fieldset>
+            <div id="ex-out"></div>
+            <p class="sub-note">Time origin: model curves start at t = 0 with D = D₀ and no ignition transient; digitized data use igniter ON as t = 0 (CLM-018). Dashed lines are SIMULATION; markers are DIGITIZED data.</p>
+            <div id="ex-plot-d2" class="dig-plot" role="img" aria-label="Model D squared versus time with data for comparison"></div>
+            <div id="ex-plot-flame" class="dig-plot" role="img" aria-label="Model flame diameter versus time with data for comparison"></div>
+            <div id="ex-plot-profiles" class="dig-plot" role="img" aria-label="Model radial temperature and mass-fraction profiles"></div>
+            <details id="share-details" open><summary style="cursor:pointer;font-size:12px"><strong>Share this run, or check someone else's</strong></summary>
+              <div id="share-panel">
+                <p class="sub-note">A run file holds the inputs, results, model and property-table versions and the printed-value comparison. It has <strong>no personal data and no timestamp</strong>. Anyone can re-run it here or with <span class="mono">python3 -m openflex check-run</span>. <strong>Reproduced</strong> means the documented model gives the same numbers from the same inputs; it does <strong>not</strong> mean the model agrees with FLEX, and nothing here is validation.</p>
+                <div class="mode-switch">
+                  <button class="btn" id="btn-share-export" type="button" disabled>Save run file (.json)</button>
+                  <button class="btn" id="btn-share-copy" type="button" disabled>Copy post text</button>
+                  <a class="btn" id="lnk-share-gh" href="#" target="_blank" rel="noopener noreferrer" hidden>Open GitHub Discussions</a>
+                </div>
+                <p class="sub-note" id="share-gh-note"></p><p class="sub-note" id="share-why" role="status"></p>
+                <label for="share-post" class="small">Post text (read-only; includes the run file)</label>
+                <textarea id="share-post" rows="6" readonly style="width:100%;font:11px monospace"></textarea>
+                <h3 style="margin:12px 0 4px;font-size:13px">Check a run someone else posted</h3>
+                <label for="share-file" class="small">Run file (.json, up to 200 kB)</label> <input id="share-file" type="file" accept=".json,application/json" />
+                <label for="share-paste" class="small" style="display:block;margin-top:6px">…or paste the run JSON (a whole pasted post also works)</label>
+                <textarea id="share-paste" rows="4" style="width:100%;font:11px monospace"></textarea>
+                <div class="mode-switch" style="margin-top:6px"><button class="btn" id="btn-share-check" type="button">Check</button><button class="btn" id="btn-share-load" type="button" hidden>Load these inputs into Explore</button></div>
+                <div id="share-result" role="status" aria-live="polite"></div>
+              </div>
+            </details>
+            <details><summary style="cursor:pointer;font-size:12px">Model-form sensitivity of K (not an uncertainty interval)</summary><div id="ex-sens"></div></details>
+            <details><summary style="cursor:pointer;font-size:12px">Code verification of the model (CLM-056)</summary><div id="ex-verification"></div></details>
+          </div>
+          <div class="table-wrap" tabindex="0"><table aria-label="Selected test values as printed in Table IX">
+            <thead><tr><th>Quantity</th><th>Value</th><th>Class</th></tr></thead>
+            <tbody id="record-table"></tbody>
+          </table></div>
+          <div id="record-matrix"></div>
+          <div id="record-flags"></div>
+          <div id="record-literature"></div>
+        </div>
+      </section>
+      <section class="panel" aria-labelledby="res-h">
+        <div class="panel-header"><h2 class="panel-title" id="result-panel-title">Result Transparency</h2><span class="badge badge-scope">PUBLISHED TABULATED · COMPUTED BY NASA AUTHORS</span></div>
+        <div class="panel-body">
+          <label for="result-select" class="small">Result: </label><select id="result-select" aria-label="Choose which Table IX result to describe"></select>
+          <div class="pred-card" id="result-panel" style="margin-top:8px"></div>
+        </div>
+      </section>
+    </div>
+    <div>
+      <section class="panel" aria-labelledby="ts-h">
+        <div class="panel-header"><h2 class="panel-title" id="ts-h">Droplet &amp; flame time series</h2><span class="badge badge-danger" id="plot-prov-badge">UNAVAILABLE IN THIS BUILD</span></div>
+        <div class="panel-body" id="timeseries-status"></div>
+      </section>
+      <section class="panel" aria-labelledby="sol-h">
+        <div class="panel-header"><h2 class="panel-title" id="sol-h">Target formulation for a future spherical 1-D solver</h2><span class="badge badge-danger">NOT IMPLEMENTED</span></div>
+        <div class="panel-body">
+          <div class="alert-box alert-warn" data-source="S01 §3"><strong>No 1-D combustion solver runs in this application.</strong> The equations below document a target formulation only; nothing is computed from them. (The much simpler D²-law educational baseline in Explore mode is a different model: constant properties, flame sheet, quasi-steady.) FLEX diagnostics recorded projected droplet images and OH*/visible flame edges, not temperature or species fields (NASA/TP-2015-216046 §3).</div>
+          <div class="table-wrap" tabindex="0"><table data-interpretive="target formulation (textbook conservation laws)">
+            <thead><tr><th>Conservation law</th><th>Spherical form</th><th>Open issues before implementation</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Gas continuity</strong></td><td class="mono">∂ρ/∂t + (1/r²) ∂(r²ρu)/∂r = 0</td><td>Moving boundary at r = R(t); far-field condition. Ideal microgravity: body force g = 0 with finite density ρ (an assumption, not a TP statement).</td></tr>
+              <tr><td><strong>Species</strong></td><td class="mono">∂(ρYᵢ)/∂t + (1/r²) ∂[r²(ρuYᵢ + jᵢ)]/∂r = ω̇ᵢ</td><td>Sign convention and Σjᵢ = 0; mixture-averaged vs multicomponent transport; Soret only with multicomponent transport.</td></tr>
+              <tr><td><strong>Gas energy</strong></td><td class="mono">ρcₚ DT/Dt = (1/r²) ∂(r²λ ∂T/∂r)/∂r − (Σ cₚ,ᵢ jᵢ) ∂T/∂r − Σ hᵢω̇ᵢ − (1/r²) ∂(r² q_rad)/∂r</td><td>Low-Mach isobaric assumption to be stated; radiation closure not selected.</td></tr>
+              <tr><td><strong>Liquid mass</strong></td><td class="mono">dm_d/dt = −4πR² ṁ″, m_d = ρ_l 4πR³/3</td><td>Liquid density variation; flux defined relative to the moving interface.</td></tr>
+              <tr><td><strong>Liquid energy</strong></td><td class="mono">m_d c_l dT_d/dt = 4πR²(q″_g→l − ṁ″ L_v)</td><td>Lumped (uniform T_d) model needs justification; liquid species (methanol water uptake) not represented; interface vapour-pressure closure required.</td></tr>
+            </tbody>
+          </table></div>
+          <div class="alert-box alert-info" data-claims="CLM-033"><strong>Mechanism policy (no mechanism is loaded).</strong> Original FLEX fuels are methanol and n-heptane. GRI-Mech 3.0 is a natural-gas/methane mechanism and must not be the default (CLM-033). CO₂ and He are not interchangeable diluents.</div>
+        </div>
+      </section>
+      <section class="panel" aria-labelledby="rad-h">
+        <div class="panel-header"><h2 class="panel-title" id="rad-h">Diffusion-flame structure (schematic)</h2><span class="badge badge-danger">CONCEPTUAL ILLUSTRATION — NOT SOLVER OUTPUT</span></div>
+        <div class="panel-body">
+          <div id="plot-radial" style="width:100%; height:330px;" role="img" aria-label="Schematic shape of a droplet diffusion flame: normalized temperature peaking at an arbitrary flame position, fuel decreasing outward and oxidizer increasing outward. No numerical values."></div>
+          <div class="sub-note" data-claims="CLM-013">Dimensionless shapes only. Flame position, widths and peak are arbitrary and do not depend on the selected test. The LLUV flame edge is the outer edge of OH* emission and is likely larger than the radius of peak temperature (CLM-013).</div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- 4. UNCERTAINTY & VALIDATION -->
+<section id="tab-uq" class="workspace" role="tabpanel" aria-labelledby="tabbtn-uq" tabindex="-1">
+  <div class="two-col">
+    <section class="panel" aria-labelledby="ub-h">
+      <div class="panel-header"><h2 class="panel-title" id="ub-h">Uncertainty budget for the selected test</h2></div>
+      <div class="panel-body">
+        <p class="small" style="margin-top:0" data-claims="CLM-009 CLM-011 CLM-012">Statuses: <strong>reported</strong> (stated by a source, semantics preserved), <strong>reported precision</strong> (printed rounding), <strong>estimated</strong> (computed here with a stated method), <strong>qualitative</strong>, <strong>flagged</strong>, <strong>not quantified</strong>, <strong>not applicable</strong>. Components come from <span class="mono">data/registry/uncertainty_components.json</span>. NASA's ±50 / ±200 / ±250 µm values are reported estimates: coverage factor <em>not stated</em>, distribution <em>not specified</em>. They are not treated as 1σ or 95 % intervals and are not propagated statistically.</p>
+        <p class="sub-note" id="uq-budget-count"></p>
+        <div class="table-wrap" tabindex="0"><table aria-label="Uncertainty budget for the selected test"><thead><tr><th>ID</th><th>Component</th><th>Status</th><th>Value</th><th>Type and semantics</th><th>Basis</th></tr></thead><tbody id="uq-budget-table"></tbody></table></div>
+      </div>
+    </section>
+    <section class="panel" aria-labelledby="rm-h">
+      <div class="panel-header"><h2 class="panel-title" id="rm-h">Removed in Phase B and why</h2></div>
+      <div class="panel-body">
+        <div class="table-wrap" tabindex="0"><table data-source="docs/PHASE_B_01_Independent_Assessment_and_Revision_Plan.md">
+          <thead><tr><th>Removed item</th><th>Reason</th><th>Condition to restore</th></tr></thead>
+          <tbody>
+            <tr><td>Monte Carlo 5th–95th percentile range of k̄</td><td>Input σ values were unsourced; NASA's ±50 µm was wrongly treated as 2σ (the TP states no σ); response function was an unsourced correlation.</td><td>Documented input-distribution table and a documented model.</td></tr>
+            <tr><td>Sobol "first-order indices" chart</td><td>Hard-coded numbers summing to 1.14 (impossible for first-order indices of independent inputs); no computation existed.</td><td>Computed with SALib on a declared model: sampler, N, bounds, S1 and ST with confidence intervals, convergence.</td></tr>
+            <tr><td>"Regression RMSE" on replay</td><td>Fit to synthetic points generated from the same constant (circular), with a hard-coded fallback.</td><td>Fit to source or digitized series with N, window, residuals and a stated treatment of frame autocorrelation (done for digitized tests).</td></tr>
+            <tr><td>"CV segmentation threshold" readout</td><td>Rescaled a synthetic radius and printed NASA's ±50 µm beside it as if it were a measurement.</td><td>Real HiBMs frames and a calibration procedure.</td></tr>
+            <tr><td>"Group-split by test ID", conformal-prediction badges</td><td>No ML model or calibration exists in the application.</td><td>A trained model with a whole-test split and empirical coverage report.</td></tr>
+          </tbody>
+        </table></div>
+        <div class="alert-box alert-info" data-interpretive="design rules (Phase B plan)"><strong>Design rules for future ML/UQ (not implemented):</strong> split by whole physical test ID, never by frame; conformal coverage is marginal under exchangeability; sensitivity indices are not prediction intervals; do not assume ±2σ = 95 %.</div>
+      </div>
+    </section>
+  </div>
+  <section class="panel" aria-labelledby="cov-h">
+    <div class="panel-header"><h2 class="panel-title" id="cov-h">Condition coverage of Table IX ("domain status")</h2><span class="badge badge-warn">COVERAGE OF TESTED CONDITIONS — NOT A VALIDATION DOMAIN</span></div>
+    <div class="panel-body">
+      <p class="sub-note" style="margin-top:0" data-interpretive="definition of coverage rules (tools/coverage.py)">How close are these conditions to conditions that were actually tested? Compared within the same fuel and diluent class (He if He &gt; 0, else CO₂ if CO₂ &gt; 0, else N₂), using printed Table IX values of pressure, O₂ and D₀. "Near" means a normalized distance ≤ 0.25 to at least one test (a declared convention, not a statistic). No model in this build is validated anywhere.</p>
+      <form id="cov-form" class="cov-form" onsubmit="event.preventDefault(); OF.renderCoverage(false);">
+        <label>Fuel <select name="fuel"><option value="heptane">n-heptane</option><option value="methanol">methanol</option></select></label>
+        <label>Diluent <select name="diluent"><option>N2</option><option>CO2</option><option>He</option></select></label>
+        <label>P, atm <input name="P_atm" type="number" step="0.001" min="0" style="width:90px" /></label>
+        <label>O₂ <input name="X_O2" type="number" step="0.001" min="0" max="1" style="width:80px" /></label>
+        <label>D₀, mm <input name="D0_mm" type="number" step="0.01" min="0" style="width:80px" /></label>
+        <label><input type="checkbox" id="cov-exclude" checked onchange="OF.renderCoverage(false)" /> exclude the selected test</label>
+        <button type="submit" class="mode-btn">Check coverage</button>
+        <button type="button" class="mode-btn" onclick="OF.renderCoverage(true)">Use selected test</button>
+      </form>
+      <div id="cov-result"></div>
+      <div id="plot-coverage" style="min-height:300px" role="img" aria-label="Tested oxygen fraction and pressure for the chosen fuel and diluent, with the query point"></div>
+    </div>
+  </section>
+  <section class="panel" aria-labelledby="val-h">
+    <div class="panel-header"><h2 class="panel-title" id="val-h">Validation label policy</h2><span class="badge badge-danger">NO LABEL IS CURRENTLY GRANTED TO ANY MODEL</span></div>
+    <div class="panel-body">
+      <div class="table-wrap" tabindex="0"><table data-interpretive="label policy (Phase B plan)">
+        <thead><tr><th>Label</th><th>Required evidence</th><th>Granting authority</th></tr></thead>
+        <tbody>
+          <tr><td>SOURCE-TRACEABLE</td><td>Source ID, exact locator and checksum of the source file.</td><td>Automated schema check.</td></tr>
+          <tr><td>MODEL-VERIFIED</td><td>Code verification tests and solution-verification (grid/time-step, conservation) reports.</td><td>Model maintainer + numerical reviewer.</td></tr>
+          <tr><td>INDEPENDENTLY-REPRODUCED</td><td>An external researcher reruns a released package and reports differences.</td><td>Independent replicator, public report.</td></tr>
+          <tr><td>EXPERT-REVIEWED</td><td>Named reviewer, verified expertise, scope, date, conflicts.</td><td>Verified domain expert.</td></tr>
+          <tr><td>NASA-INSTITUTIONALLY-VALIDATED</td><td>Formal written authorization from an official NASA review process with explicit scope.</td><td><strong>Disabled in software.</strong> A NASA citation is not NASA endorsement.</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+</section>
+
+<!-- 5. EVIDENCE & REPRODUCIBILITY -->
+<section id="tab-evidence" class="workspace" role="tabpanel" aria-labelledby="tabbtn-evidence" tabindex="-1">
+  <section class="panel" aria-labelledby="cl-h">
+    <div class="panel-header">
+      <h2 class="panel-title" id="cl-h">Claim ledger</h2>
+      <input type="text" id="claim-search" placeholder="Filter by keyword, claim ID, source ID or status…" style="width:320px;" oninput="OF.renderClaims()" aria-label="Filter claims" />
+    </div>
+    <div class="panel-body table-wrap" tabindex="0">
+      <table aria-label="Claim ledger">
+        <thead><tr><th style="width:80px;">Claim</th><th>Statement</th><th style="width:130px;">Evidence class</th><th style="width:200px;">Source &amp; locator</th><th style="width:120px;">Verification</th><th style="width:180px;">Note</th></tr></thead>
+        <tbody id="claim-ledger-body"></tbody>
+      </table>
+    </div>
+  </section>
+  <div class="two-col">
+    <section class="panel" aria-labelledby="src-h">
+      <div class="panel-header"><h2 class="panel-title" id="src-h">Source registry</h2></div>
+      <div class="panel-body table-wrap" tabindex="0"><table aria-label="Source registry"><thead><tr><th>ID</th><th>Citation</th><th>Class</th><th>Reviewed?</th></tr></thead><tbody id="source-body"></tbody></table></div>
+    </section>
+    <section class="panel" aria-labelledby="dsc-h">
+      <div class="panel-header"><h2 class="panel-title" id="dsc-h">Source discrepancy register</h2></div>
+      <div class="panel-body"><p class="sub-note" style="margin-top:0" data-interpretive="register policy">Disagreements between or within sources are shown, not silently resolved.</p><div id="discrepancy-body"></div></div>
+    </section>
+  </div>
+  <section class="panel" aria-labelledby="ds-h">
+    <div class="panel-header"><h2 class="panel-title" id="ds-h">Dataset manifest</h2><span class="badge badge-scope">data/MANIFEST.json</span></div>
+    <div class="panel-body table-wrap" tabindex="0"><p class="sub-note" style="margin-top:0" data-interpretive="manifest description">Original, extracted, digitized, derived and verification data are separate datasets. SHA-256 values identify the exact files embedded in this build.</p>
+      <table aria-label="Datasets embedded in this build"><thead><tr><th>Dataset</th><th>Class</th><th>File and method</th><th>SHA-256</th></tr></thead><tbody id="dataset-body"></tbody></table></div>
+  </section>
+  <section class="panel" aria-labelledby="ex-h">
+    <div class="panel-header"><h2 class="panel-title" id="ex-h">Export</h2></div>
+    <div class="panel-body">
+      <p class="small" data-interpretive="export description">A plain JSON manifest of the selected test record with its SHA-256. It is not an RO-Crate; a validated RO-Crate export is planned for M6.</p>
+      <button class="btn btn-emerald" id="btn-export" onclick="OF.exportManifest()">Export JSON manifest (not an RO-Crate)</button>
+      <p class="sub-note" data-interpretive="removal note">The earlier "Research Commons" tab was removed: it displayed fabricated posts and saved nothing. It will return only with real persistence and moderation.</p>
+    </div>
+  </section>
+</section>
+</main>
+<footer class="app-footer" data-interpretive="footer">Data in this build: Table IX for <span id="banner-ntests">—</span> tests; digitized time series for selected tests only. Source: Dietrich et al., NASA/TP-2015-216046 (NTRS 20150023456). Independent prototype; a NASA citation does not imply NASA endorsement.</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>

@@ -1,0 +1,131 @@
+{
+ "about_physical_test": "FLEX-062",
+ "inputs": [
+  {
+   "dataset_id": "DS-DIG-FLEX-062-FIG066-D2",
+   "sha256": "5c749246e363fa0db55c30a558974da20b87360d6a9350b21eb4832a4ebfa73d"
+  }
+ ],
+ "method": "Linear fits of digitized D^2 vs t over pre-declared windows (OLS and Theil-Sen); point checks against Table IX.",
+ "outputs": {
+  "K_range_over_windows_and_estimators_mm2_s": [
+   0.3807,
+   0.4025
+  ],
+  "K_range_semantics": "Window/estimator sensitivity only. Not a confidence or prediction interval; no coverage is claimed.",
+  "fits": [
+   {
+    "K_ols_mm2_s": 0.3929,
+    "K_theil_sen_mm2_s": 0.3907,
+    "intercept_ols_mm2": 11.9097,
+    "n_points": 17,
+    "residual_lag1_autocorrelation": -0.242,
+    "residual_rms_mm2": 0.0459,
+    "t_end_s": 4.8,
+    "t_start_s": 0.48,
+    "window": "W1"
+   },
+   {
+    "K_ols_mm2_s": 0.3875,
+    "K_theil_sen_mm2_s": 0.3853,
+    "intercept_ols_mm2": 11.9007,
+    "n_points": 16,
+    "residual_lag1_autocorrelation": -0.271,
+    "residual_rms_mm2": 0.0454,
+    "t_end_s": 4.32,
+    "t_start_s": 0.48,
+    "window": "W2"
+   },
+   {
+    "K_ols_mm2_s": 0.4025,
+    "K_theil_sen_mm2_s": 0.3989,
+    "intercept_ols_mm2": 11.9461,
+    "n_points": 12,
+    "residual_lag1_autocorrelation": -0.532,
+    "residual_rms_mm2": 0.0453,
+    "t_end_s": 3.84,
+    "t_start_s": 0.96,
+    "window": "W3"
+   },
+   {
+    "K_ols_mm2_s": 0.3849,
+    "K_theil_sen_mm2_s": 0.3807,
+    "intercept_ols_mm2": 11.8967,
+    "n_points": 15,
+    "residual_lag1_autocorrelation": -0.29,
+    "residual_rms_mm2": 0.0465,
+    "t_end_s": 3.84,
+    "t_start_s": 0.48,
+    "window": "W4"
+   }
+  ],
+  "interpretation_limits": [
+   "Agreement shows the digitized points are consistent with the printed K; it does not validate any model.",
+   "The fitted values are DERIVED from DIGITIZED data and must not replace the printed Table IX K.",
+   "Standard errors/intervals deliberately not reported (non-independent, autocorrelated points)."
+  ],
+  "point_checks": [
+   {
+    "digitized_median_mm2": 11.8103,
+    "n_points_within_0.2_s": 3,
+    "note": "",
+    "quantity": "D^2 at t = 0 (igniter ON)",
+    "table_ix_value": "D0 = 3.43 mm -> D0^2 = 11.765 mm^2"
+   },
+   {
+    "digitized_median_mm2": 9.9872,
+    "n_points_within_0.2_s": 2,
+    "note": "",
+    "quantity": "D^2 at t = t_burn (visible-flame extinction)",
+    "table_ix_value": "D_ext = 3.17 mm -> 10.049 mm^2 at t_b = 4.8 s"
+   }
+  ],
+  "table_ix_K_mm2_s": {
+   "locator": "S01 Table IX, PDF p. 27",
+   "raw": ".39",
+   "value": 0.39
+  },
+  "table_ix_K_rounding_interval_mm2_s": [
+   0.385,
+   0.395
+  ],
+  "table_ix_K_within_range": true,
+  "within_range_rule": "the printed value's rounding interval (± half a unit of its last printed digit) overlaps the range of fitted slopes (rule since 1.1.0; 1.0.0 compared the bare printed value)"
+ },
+ "parameters": {
+  "estimators": [
+   "OLS",
+   "Theil-Sen"
+  ],
+  "point_check_half_width_s": 0.2,
+  "t_burn_s_from_table_ix": "4.8",
+  "windows_fraction_of_t_burn": {
+   "W1": [
+    0.1,
+    1.0
+   ],
+   "W2": [
+    0.1,
+    0.9
+   ],
+   "W3": [
+    0.2,
+    0.8
+   ],
+   "W4": [
+    0.1,
+    0.8
+   ]
+  }
+ },
+ "record_type": "AnalysisRun",
+ "run_id": "ANA-7775b734cd09",
+ "software": {
+  "code_version": "1.1.0",
+  "numpy": "2.5.3",
+  "python": "3.13.18",
+  "scipy": "1.18.1",
+  "tool": "tools/analyze_d2_fit.py"
+ },
+ "verification_kind": "comparison with published value (not validation)"
+}

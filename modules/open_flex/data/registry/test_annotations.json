@@ -1,0 +1,23 @@
+{
+ "registry_version": "0.1.0",
+ "note": "Per-test annotations that are not Table IX values. Literature mappings are CANDIDATES chosen by matching conditions and burning rate in Table IX; none is confirmed because the cited papers were not available in this review.",
+ "global_flags": [
+  {"flag": "NEEDLE_CONTAMINATION", "applies_to": "all tests in NASA/TP-2015-216046", "text": "Fuel-needle conformal coating dissolved/flaked into the fuel; the TP authors assert burning rates and flame sizes were minimally affected, methanol disruptive extinction probably was affected.", "claims": ["CLM-023", "CLM-024", "CLM-025"]}
+ ],
+ "range_flags": [
+  {"flag": "EARLY_SHUTTER_1_30S", "first": 1, "last": 9, "text": "1/30 s shutter with image distortion from igniters and flame radiation; later tests (1/1000 s) gave more accurate droplet size data.", "claims": ["CLM-026"]}
+ ],
+ "tests": {
+  "FLEX-023": {"discrepancies": ["DSC-002", "DSC-004"], "literature_candidates": []},
+  "FLEX-035": {"discrepancies": ["DSC-005"], "literature_candidates": [
+    {"reference": "Williams (2009) 'Unexpected Observations Made in FLEX Test 0035' [S07]", "status": "CANDIDATE — same number, not confirmed (source not available)"},
+    {"reference": "Dietrich et al. (2014) Fig. 5 [S03] (as claimed by the original prototype)", "status": "CANDIDATE — not confirmed (full text not available)"}]},
+  "FLEX-062": {"literature_candidates": [{"reference": "Dietrich et al. (2014) Fig. 3 [S03]: n-heptane, D0 3.41 mm, 0.18 O2, 1 atm, k 0.38 (as claimed by the original prototype)", "status": "CANDIDATE — conditions and K close; not confirmed"}]},
+  "FLEX-198": {"literature_candidates": [{"reference": "Dietrich et al. (2014) Fig. 4 [S03]: n-heptane ~3.0 mm in 0.20/0.75/0.05 O2/N2/CO2, k 0.49 (as claimed by the original prototype)", "status": "CANDIDATE — not confirmed"}]},
+  "FLEX-199": {"literature_candidates": [{"reference": "Dietrich et al. (2014) Fig. 4 [S03]: n-heptane ~2.1 mm in 0.20/0.75/0.05 O2/N2/CO2, k 0.53 (as claimed by the original prototype)", "status": "CANDIDATE — not confirmed"}]},
+  "FLEX-204": {"literature_candidates": [{"reference": "Dietrich et al. (2014) Fig. 6, methanol in O2/N2, k 0.52 [S03] (as claimed by the original prototype)", "status": "CANDIDATE — D0 2.75 mm and K 0.52 match; not confirmed"}]},
+  "FLEX-110": {"literature_candidates": [{"reference": "Dietrich et al. (2014) Fig. 6, methanol with CO2 dilution, k 0.45 [S03] (as claimed by the original prototype)", "status": "CANDIDATE — Table IX pressure is 0.71 atm, whereas the original prototype assumed 1.00 atm; not confirmed"}]},
+  "FLEX-263": {"literature_candidates": [{"reference": "Dietrich et al. (2014) Fig. 6, methanol with He dilution, k 0.70 [S03] (as claimed by the original prototype)", "status": "CANDIDATE — Table IX pressure is 0.70 atm, whereas the original prototype assumed 1.00 atm; not confirmed"}]},
+  "FLEX-114": {"discrepancies": ["DSC-010"]}
+ }
+}

@@ -1,0 +1,80 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://open-flex.local/schemas/literature_figure_case.schema.json",
+ "title": "LiteratureFigureCase",
+ "description": "A case shown in a published figure (not a NASA test record). Linking it to a physical test requires a stated basis; unconfirmed links stay CANDIDATE.",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "record_type",
+  "case_id",
+  "source",
+  "conditions",
+  "linked_physical_test"
+ ],
+ "properties": {
+  "record_type": {
+   "const": "LiteratureFigureCase"
+  },
+  "case_id": {
+   "$ref": "common.schema.json#/$defs/literature_case_id"
+  },
+  "source": {
+   "$ref": "common.schema.json#/$defs/source_ref"
+  },
+  "linked_physical_test": {
+   "type": "object",
+   "required": [
+    "test_id",
+    "status",
+    "basis"
+   ],
+   "properties": {
+    "test_id": {
+     "oneOf": [
+      {
+       "$ref": "common.schema.json#/$defs/physical_test_id"
+      },
+      {
+       "type": "null"
+      }
+     ]
+    },
+    "status": {
+     "enum": [
+      "CONFIRMED",
+      "CANDIDATE",
+      "NONE"
+     ]
+    },
+    "basis": {
+     "type": "string"
+    }
+   }
+  },
+  "conditions": {
+   "type": "object",
+   "required": [
+    "status",
+    "values"
+   ],
+   "properties": {
+    "status": {
+     "enum": [
+      "READ_IN_SOURCE",
+      "ATTRIBUTED_NOT_CHECKED"
+     ]
+    },
+    "values": {
+     "type": "object"
+    },
+    "attributed_by": {
+     "type": "string"
+    }
+   }
+  },
+  "note": {
+   "type": "string"
+  }
+ }
+}

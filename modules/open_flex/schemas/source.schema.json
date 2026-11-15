@@ -1,0 +1,74 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://open-flex.local/schemas/source.schema.json",
+ "title": "Source registry",
+ "type": "object",
+ "required": [
+  "registry_version",
+  "sources"
+ ],
+ "properties": {
+  "registry_version": {
+   "type": "string"
+  },
+  "note": {
+   "type": "string"
+  },
+  "sources": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "source_id",
+     "citation",
+     "source_class",
+     "scope",
+     "review_status"
+    ],
+    "properties": {
+     "source_id": {
+      "$ref": "common.schema.json#/$defs/source_id"
+     },
+     "citation": {
+      "type": "string",
+      "minLength": 10
+     },
+     "url": {
+      "type": "string"
+     },
+     "source_class": {
+      "enum": [
+       "NASA_PRIMARY",
+       "PEER_REVIEWED",
+       "SOFTWARE_DOC",
+       "OTHER"
+      ]
+     },
+     "scope": {
+      "type": "string"
+     },
+     "review_status": {
+      "type": "string"
+     },
+     "sha256": {
+      "oneOf": [
+       {
+        "$ref": "common.schema.json#/$defs/sha256"
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "local_file": {
+      "type": "string"
+     },
+     "rights": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ }
+}

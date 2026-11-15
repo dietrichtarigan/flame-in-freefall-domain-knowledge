@@ -1,0 +1,251 @@
+# OPEN FLEX — Phase B: Independent Audit Review and Scientific Revision
+
+You are now taking over the Open FLEX project following Phase A, a read-only scientific audit conducted by Claude Sonnet 5.5.
+
+Act as a senior scientific software architect, combustion researcher, numerical methods engineer, uncertainty quantification specialist, and scientific visualization engineer.
+
+Your task is to transform the existing prototype into a scientifically transparent, reproducible, evidence-driven virtual laboratory focused exclusively on the original NASA Flame Extinguishment Experiment (FLEX).
+
+## 1. Files provided
+
+I have provided:
+
+1. Original Open FLEX HTML prototype.
+2. Complete Phase A Scientific Audit prepared by Claude Sonnet 5.5.
+3. Original NASA/TP-2015-216046 technical report.
+4. Open FLEX Ground-Truth, Transparency and Dashboard Brief.
+5. Open FLEX Research Framework and supporting documentation.
+
+The HTML is the implementation to be revised.
+
+The Phase A audit is a technical assessment, not unquestionable scientific truth. Independently verify its important findings against the actual source code and scientific documents.
+
+Do not blindly copy the audit's conclusions.
+
+## 2. First: independently review Phase A
+
+Before changing code:
+
+- Verify the most serious findings directly against the HTML.
+- Check scientific claims against the original NASA report.
+- Identify incorrect interpretations or calculations in the audit itself.
+- Identify findings that remain unresolved because the necessary source material is missing.
+- Distinguish verified findings from plausible but unverified findings.
+- Preserve explicit source disagreements rather than silently choosing one value.
+
+Prioritize the 8 Critical and 11 High findings identified by Sonnet.
+
+Pay particular attention to:
+
+- Synthetic data presented as experimental replay.
+- Incorrect experimental presets.
+- Fabricated community posts and replication claims.
+- Hard-coded sensitivity indices.
+- Unsupported Monte Carlo uncertainty intervals.
+- False SHA-256 fallback.
+- Incorrect experiment and simulation identity.
+- Non-conformant RO-Crate export.
+- Conceptual profiles presented as solver results.
+- Unsupported empirical correlations.
+- Incorrect extinction and ignition predictions.
+- Misleading g-jitter and camera-field-of-view representations.
+
+## 3. Scientific rules
+
+These are mandatory.
+
+### Original FLEX only
+
+Do not mix original FLEX with FLEX-2 or other experiments.
+
+### Real data versus generated data
+
+Clearly distinguish:
+
+- Original experimental measurements.
+- Published or digitized data.
+- Derived quantities.
+- Numerical simulation outputs.
+- Machine-learning predictions.
+- Conceptual illustrations.
+- Unknown or unverified information.
+
+If genuine time-series data are unavailable, display that they are unavailable.
+
+Do not manufacture a time series to make the dashboard appear complete.
+
+### Uncertainty
+
+Do not invent uncertainty distributions, confidence intervals, sensitivity indices, or prediction intervals.
+
+Preserve the meaning of NASA-reported measurement estimates. In particular, do not interpret ±50 µm, ±200 µm, or ±250 µm as standard deviations or 95% confidence intervals without supporting evidence.
+
+### Physics
+
+Do not claim to have a research-grade combustion solver unless the governing equations, constitutive models, boundary conditions, numerical methods, and verification tests actually exist.
+
+A D²-law model may be included as an educational baseline, with its limitations clearly stated.
+
+Do not use unsupported empirical correlations as predictive models.
+
+### Verification and validation
+
+Distinguish code verification, numerical solution verification, and physical model validation.
+
+Do not display NASA-validated, experimentally validated, or research-grade badges without the appropriate evidence.
+
+### Provenance
+
+Every scientific quantity must have an identifiable source or an explicit statement that it is an assumption or conceptual illustration.
+
+A NASA citation does not imply NASA endorsement.
+
+## 4. Revision priorities
+
+Revise the prototype in the following order.
+
+### Priority 1 — Scientific integrity
+
+- Correct or remove misleading experimental replay.
+- Correct verified experimental preset values.
+- Remove fabricated replication claims and researcher attribution.
+- Remove unsupported sensitivity and uncertainty outputs.
+- Correct misleading solver and simulation labels.
+- Fix experiment identity and provenance.
+- Fix the SHA-256 implementation.
+- Separate physical test identity from simulation run identity.
+- Correct or remove unsupported predictive correlations.
+
+### Priority 2 — Genuine experimental data
+
+Establish a data-loading architecture that can accept actual FLEX measurements.
+
+Keep original source files immutable.
+
+Separate original data, digitized data, processed data, and derived quantities.
+
+Where the NASA report provides only plotted data, do not imply that digitized points are original raw measurements.
+
+Record digitization method, source figure, page, units, and processing history.
+
+### Priority 3 — Research transparency
+
+Implement a claim and evidence registry.
+
+Each claim should have a unique ID, source, locator, evidence classification, and verification status.
+
+Every plotted series should identify its provenance and computational method.
+
+### Priority 4 — Scientific dashboard
+
+Preserve the useful interface features:
+
+- Interactive 3D apparatus.
+- Component information bubbles.
+- Experimental procedure timeline.
+- Experimental data visualization.
+- Scientific plots.
+- Parameter controls.
+- Uncertainty information.
+- Provenance and claim ledger.
+- Export functionality.
+
+Improve readability, accessibility, and scientific clarity.
+
+Use a restrained, professional scientific visual style.
+
+### Priority 5 — Architecture for future development
+
+Prepare the system for future extensions:
+
+- Python-based numerical solver.
+- Cantera integration where justified.
+- Spherical one-dimensional droplet combustion model.
+- Verification and validation framework.
+- Uncertainty quantification.
+- Future PINN or neural-operator models.
+- Reproducible simulation records.
+- Open research collaboration.
+
+Do not implement every future technology in this revision.
+
+## 5. Implementation requirements
+
+Do not rewrite the entire project unnecessarily.
+
+Preserve useful working components and make changes incrementally.
+
+Before modifying files:
+
+1. Inspect the project structure.
+2. Identify the affected components.
+3. Establish a clean backup or Git checkpoint.
+4. Produce a concise revision plan.
+5. Identify scientific assumptions and unresolved source requirements.
+
+Then implement the changes in manageable milestones.
+
+For each milestone, report:
+
+- Objective.
+- Files modified.
+- Scientific justification.
+- Technical changes.
+- Tests performed.
+- Test results.
+- Remaining limitations.
+- Known unresolved issues.
+
+Do not claim a feature works unless it has actually been tested.
+
+A successful JavaScript syntax check is not equivalent to browser testing or scientific validation.
+
+## 6. Engineering requirements
+
+Maintain a modular and maintainable codebase.
+
+Use stable identifiers for experimental cases and simulation runs.
+
+Use real SHA-256 cryptographic hashing. If unavailable, report that hashing is unavailable rather than substituting another algorithm.
+
+Keep experimental records separate from model-generated records.
+
+Do not attach a NASA experimental test ID to modified simulation inputs.
+
+Do not claim RO-Crate compliance unless the exported package satisfies the selected specification and passes an appropriate validator.
+
+Ensure the interface works when external libraries or network connections are unavailable, or provide clear error messages.
+
+## 7. Working with incomplete evidence
+
+When a source is unavailable:
+
+- Do not invent the missing information.
+- Preserve the relevant feature only if it can be clearly labelled as conceptual.
+- Otherwise disable or remove it.
+- Document what evidence is required to restore it.
+
+Do not silently replace missing experimental data with synthetic values.
+
+## 8. Final objective
+
+The desired outcome is not necessarily the largest or most sophisticated virtual laboratory.
+
+It is a scientifically defensible Open FLEX platform in which a researcher can understand:
+
+- What was actually measured.
+- What was derived.
+- What was simulated.
+- What assumptions were made.
+- How uncertainty was treated.
+- Whether a model has been verified.
+- Whether a model has been validated.
+- Where every important scientific claim originated.
+
+I want a professional platform that could serve as a foundation for future academic research and independent reproduction.
+
+Start by reviewing the Phase A audit and preparing your independent assessment and revision plan.
+
+Do not make destructive changes or perform a complete rewrite without first explaining the proposed scope.
+
+Once the revision plan is approved, implement it milestone by milestone.

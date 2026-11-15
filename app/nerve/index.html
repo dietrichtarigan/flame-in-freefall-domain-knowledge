@@ -126,6 +126,7 @@ svg text{fill:var(--mute);font-size:10px}
     <span id="loading"></span>
     <button id="undo" title="batalkan langkah terakhir">↶ undo</button>
     <button id="share" title="salin tautan yang memulihkan tampilan ini">salin tautan</button>
+    <a href="/openflex/" target="_blank" rel="noopener" title="lab virtual FLEX asli: 3D, bukti, model D²">Open FLEX lab</a>
   </div>
 </header>
 
@@ -337,6 +338,12 @@ function renderWhatifOut(r) {
 }
 
 // ---------------- dosir / kenapa / relevansi
+// Uji FLEX asli (PSI-69) -> lab Open FLEX (modules/open_flex), dicocokkan lewat CIR identifier.
+function openflexLinks(o) {
+  if (!o || !o.tests || !o.tests.length) return "";
+  const a = o.tests.map((t) => `<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.flex_test)}</a>`).join(" · ");
+  return `<div class="hint" style="margin:4px 0">Lab Open FLEX (Tabel IX NASA/TP-2015-216046): ${a}${o.ambiguous ? ` <span class="chip">${esc(o.note)}</span>` : ""}</div>`;
+}
 function renderDossier(d) {
   if (!d) { $("dossier").innerHTML = N.state.focus ? "<span class='hint'>memuat…</span>" : "<span class='hint'>pilih satu uji dari daftar, peta, peringatan, atau asisten</span>"; return; }
   const vb = (m) => m.tier === "derived_auto" && !m.flags.includes("ditolak_manusia")
@@ -348,6 +355,7 @@ function renderDossier(d) {
        ${m.flags.map((f) => `<span class="chip">${esc(f)}</span>`).join("")}${m.verified_by ? ` <span class="hint">${esc(m.verified_by)}</span>` : ""}${vb(m)}</div>`).join("")).join("");
   $("dossier").innerHTML = `<div style="display:flex;gap:8px;align-items:baseline;flex-wrap:wrap"><span style="font-size:18px;font-weight:600">${esc(d.label)}</span>
       <span class="hint">${esc(d.accession)}${d.attrs.fuel ? " · " + esc(d.attrs.fuel) : ""}${d.attrs.configuration ? " · " + esc(d.attrs.configuration) : ""}${d.attrs.note ? " · " + esc(d.attrs.note) : ""}</span></div>
+    ${openflexLinks(d.openflex)}
     ${d.contradictions.map((c) => `<div class="contra">${st("kritis", "sumber bertentangan")} ${esc(c.detail)}</div>`).join("")}
     <div class="verdict">putusan manusia, menyala? <button class="ign" data-v="ya">ya</button><button class="ign" data-v="tidak">tidak</button>
       <input id="annNote" placeholder="alasan singkat" size="22" aria-label="alasan putusan"></div>

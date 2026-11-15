@@ -1,0 +1,272 @@
+{
+ "registry_version": "0.4.0",
+ "note": "Uncertainty components. Status vocabulary: reported (stated by a source; semantics preserved), reported precision, estimated (computed here, method stated), qualitative, flagged, not quantified, not applicable. No component is propagated statistically; reported ± values are never relabelled as standard deviations or confidence intervals.",
+ "components": [
+  {
+   "id": "UC-01",
+   "component": "HiBMs droplet-diameter measurement",
+   "measurand": "droplet diameter from HiBMs images (D0, D_ext, D(t))",
+   "applies_to": {
+    "kind": "all"
+   },
+   "status": "reported",
+   "value": 50,
+   "unit": "µm",
+   "interval_type": "reported ± estimate",
+   "coverage_factor": "not stated",
+   "distribution": "not specified",
+   "propagated": false,
+   "statement": "±50 µm estimated by the NASA authors from resolution, segmentation and noise.",
+   "claims": [
+    "CLM-009"
+   ]
+  },
+  {
+   "id": "UC-02",
+   "component": "HiBMs spatial resolution",
+   "measurand": "droplet diameter",
+   "applies_to": {
+    "kind": "all"
+   },
+   "status": "reported",
+   "value": 29.5,
+   "unit": "µm",
+   "interval_type": "resolution (not an uncertainty)",
+   "coverage_factor": "not applicable",
+   "distribution": "not applicable",
+   "propagated": false,
+   "statement": "Minimum spatial resolution stated as ±29.5 µm; the TP's scale factors are inconsistent (DSC-006).",
+   "claims": [
+    "CLM-010"
+   ]
+  },
+  {
+   "id": "UC-03",
+   "component": "LLUV flame-diameter measurement",
+   "measurand": "LLUV flame diameter",
+   "applies_to": {
+    "kind": "all"
+   },
+   "status": "reported",
+   "value": 200,
+   "unit": "µm",
+   "interval_type": "reported ± estimate",
+   "coverage_factor": "not stated",
+   "distribution": "not specified",
+   "propagated": false,
+   "statement": "±200 µm; the LLUV threshold marks the outer edge of OH* emission and likely overestimates a temperature-based flame size.",
+   "claims": [
+    "CLM-011",
+    "CLM-013"
+   ]
+  },
+  {
+   "id": "UC-04",
+   "component": "Colour-camera flame-diameter measurement",
+   "measurand": "colour-camera flame diameter",
+   "applies_to": {
+    "kind": "all"
+   },
+   "status": "reported",
+   "value": 250,
+   "unit": "µm",
+   "interval_type": "reported ± estimate",
+   "coverage_factor": "not stated",
+   "distribution": "not specified",
+   "propagated": false,
+   "statement": "±250 µm; a different measurand from the LLUV size (typically about three-quarters of it).",
+   "claims": [
+    "CLM-012",
+    "CLM-014"
+   ]
+  },
+  {
+   "id": "UC-05",
+   "component": "Burning-rate constant K (Table IX)",
+   "measurand": "K",
+   "applies_to": {
+    "kind": "all"
+   },
+   "status": "not quantified",
+   "value": null,
+   "unit": "mm²/s",
+   "interval_type": "none",
+   "coverage_factor": "not applicable",
+   "distribution": "not applicable",
+   "propagated": false,
+   "statement": "No uncertainty is printed; the fit window and number of frames are not reported.",
+   "claims": [
+    "CLM-019"
+   ]
+  },
+  {
+   "id": "UC-06",
+   "component": "Extrapolated extinction diameters",
+   "measurand": "visible-flame extinction diameter",
+   "applies_to": {
+    "kind": "all"
+   },
+   "status": "not quantified",
+   "value": null,
+   "unit": "mm",
+   "interval_type": "none",
+   "coverage_factor": "not applicable",
+   "distribution": "not applicable",
+   "propagated": false,
+   "statement": "Some extinction diameters were extrapolated from the burning history; Table IX does not mark which, so any given value may be extrapolated.",
+   "claims": [
+    "CLM-041"
+   ]
+  },
+  {
+   "id": "UC-07",
+   "component": "Printed precision",
+   "measurand": "every Table IX value",
+   "applies_to": {
+    "kind": "all"
+   },
+   "status": "reported precision",
+   "value": null,
+   "unit": "",
+   "interval_type": "rounding resolution (not an uncertainty)",
+   "coverage_factor": "not applicable",
+   "distribution": "not applicable",
+   "propagated": false,
+   "statement": "Values are printed to 2–4 significant digits; half a unit of the last printed digit is a rounding resolution, used only to compare tables.",
+   "claims": []
+  },
+  {
+   "id": "UC-08",
+   "component": "Ambient pressure and composition",
+   "measurand": "P, mole fractions",
+   "applies_to": {
+    "kind": "all"
+   },
+   "status": "not quantified",
+   "value": null,
+   "unit": "",
+   "interval_type": "none",
+   "coverage_factor": "not applicable",
+   "distribution": "not applicable",
+   "propagated": false,
+   "statement": "Composition is reconstructed from fill, recirculation, filter and combustion records; sensor uncertainties are not stated. Some rows sum to 0.98 (DSC-021).",
+   "claims": [
+    "CLM-020"
+   ]
+  },
+  {
+   "id": "UC-09",
+   "component": "Needle-coating contaminant",
+   "measurand": "burning behaviour",
+   "applies_to": {
+    "kind": "all"
+   },
+   "status": "qualitative",
+   "value": null,
+   "unit": "",
+   "interval_type": "none",
+   "coverage_factor": "not applicable",
+   "distribution": "not applicable",
+   "propagated": false,
+   "statement": "Authors' assessment: K and flame size minimally affected; methanol disruptive extinction probably affected.",
+   "claims": [
+    "CLM-023",
+    "CLM-024",
+    "CLM-025"
+   ]
+  },
+  {
+   "id": "UC-10",
+   "component": "Early-test shutter setting",
+   "measurand": "droplet images",
+   "applies_to": {
+    "kind": "range",
+    "first": 1,
+    "last": 9
+   },
+   "status": "flagged",
+   "value": null,
+   "unit": "",
+   "interval_type": "none",
+   "coverage_factor": "not applicable",
+   "distribution": "not applicable",
+   "propagated": false,
+   "statement": "Tests 001–009: 1/30 s shutter with image distortion from igniters and flame radiation.",
+   "claims": [
+    "CLM-026"
+   ]
+  },
+  {
+   "id": "UC-11",
+   "component": "Run-to-run variability",
+   "measurand": "all results",
+   "applies_to": {
+    "kind": "all"
+   },
+   "status": "not quantified",
+   "value": null,
+   "unit": "",
+   "interval_type": "none",
+   "coverage_factor": "not applicable",
+   "distribution": "not applicable",
+   "propagated": false,
+   "statement": "Would need repeated tests at matched conditions, analysed test by test; not done.",
+   "claims": []
+  },
+  {
+   "id": "UC-12",
+   "component": "Digitization of the plot",
+   "measurand": "digitized D²(t) and flame diameters",
+   "applies_to": {
+    "kind": "digitized"
+   },
+   "status": "estimated (scale only)",
+   "value": null,
+   "unit": "",
+   "interval_type": "calibration residual and marker size (not an uncertainty interval)",
+   "coverage_factor": "not applicable",
+   "distribution": "not specified",
+   "propagated": false,
+   "statement": "Axis calibration residuals at the ticks and the marker radius are stated in the digitization record; dense trails are sampled, not frame by frame.",
+   "claims": [],
+   "record_ref": "digitization record"
+  },
+  {
+   "id": "UC-13",
+   "component": "Fit-window choice for slopes of digitized D²",
+   "measurand": "slope of digitized D²",
+   "applies_to": {
+    "kind": "digitized"
+   },
+   "status": "estimated (sensitivity)",
+   "value": null,
+   "unit": "mm²/s",
+   "interval_type": "window/estimator sensitivity range (no coverage)",
+   "coverage_factor": "not applicable",
+   "distribution": "not applicable",
+   "propagated": false,
+   "statement": "Range of slopes over four pre-declared windows and two estimators; not a confidence interval.",
+   "claims": [
+    "CLM-019"
+   ],
+   "record_ref": "analysis run"
+  },
+  {
+   "id": "UC-14",
+   "component": "Numerical, model-form and ML uncertainty",
+   "measurand": "model outputs",
+   "applies_to": {
+    "kind": "all"
+   },
+   "status": "not applicable",
+   "value": null,
+   "unit": "",
+   "interval_type": "none",
+   "coverage_factor": "not applicable",
+   "distribution": "not applicable",
+   "propagated": false,
+   "statement": "No model runs in this build.",
+   "claims": []
+  }
+ ]
+}

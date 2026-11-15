@@ -1,0 +1,300 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://open-flex.local/schemas/physical_test.schema.json",
+ "title": "PhysicalTest",
+ "description": "One FLEX test performed on the ISS, as documented in NASA/TP-2015-216046. Contains only printed (PUBLISHED_TABULATED) values, verbatim caption text and DERIVED comparison results; no simulated or predicted quantity may appear here.",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "record_type",
+  "test_id",
+  "identity",
+  "table_ix",
+  "test_matrix",
+  "fiber",
+  "appendix_b",
+  "time_series",
+  "flags",
+  "discrepancies",
+  "crosscheck"
+ ],
+ "properties": {
+  "record_type": {
+   "const": "PhysicalTest"
+  },
+  "test_id": {
+   "$ref": "common.schema.json#/$defs/physical_test_id"
+  },
+  "identity": {
+   "type": "object",
+   "required": [
+    "flex_test_as_printed",
+    "cir_identifier"
+   ],
+   "properties": {
+    "flex_test_as_printed": {
+     "type": "string"
+    },
+    "cir_identifier": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "note": {
+     "type": "string"
+    }
+   }
+  },
+  "table_ix": {
+   "type": "object",
+   "required": [
+    "present"
+   ],
+   "properties": {
+    "present": {
+     "type": "boolean"
+    },
+    "source": {
+     "$ref": "common.schema.json#/$defs/source_ref"
+    },
+    "evidence_class": {
+     "const": "PUBLISHED_TABULATED"
+    },
+    "date_as_printed": {
+     "type": "string"
+    },
+    "time_gmt": {
+     "type": "string"
+    },
+    "fuel": {
+     "enum": [
+      "methanol",
+      "heptane"
+     ]
+    },
+    "values": {
+     "type": "object",
+     "additionalProperties": {
+      "oneOf": [
+       {
+        "$ref": "common.schema.json#/$defs/printed_cell"
+       }
+      ]
+     }
+    },
+    "extraction_check": {
+     "type": "object",
+     "properties": {
+      "second_parser": {
+       "type": "string"
+      },
+      "page_image": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  "test_matrix": {
+   "type": "object",
+   "required": [
+    "present"
+   ],
+   "properties": {
+    "present": {
+     "type": "boolean"
+    },
+    "table": {
+     "type": "string"
+    },
+    "source": {
+     "$ref": "common.schema.json#/$defs/source_ref"
+    },
+    "evidence_class": {
+     "const": "PUBLISHED_TABULATED"
+    },
+    "meaning": {
+     "type": "string"
+    },
+    "date_as_printed": {
+     "type": "string"
+    },
+    "fuel": {
+     "enum": [
+      "methanol",
+      "heptane"
+     ]
+    },
+    "values": {
+     "type": "object",
+     "additionalProperties": {
+      "$ref": "common.schema.json#/$defs/printed_cell"
+     }
+    },
+    "absent_reason": {
+     "type": "string"
+    }
+   }
+  },
+  "fiber": {
+   "type": "object",
+   "required": [
+    "status",
+    "test_matrix",
+    "caption"
+   ],
+   "properties": {
+    "status": {
+     "enum": [
+      "AGREE",
+      "DIFFERS",
+      "CAPTION_ONLY",
+      "MATRIX_ONLY",
+      "UNKNOWN"
+     ]
+    },
+    "test_matrix": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "caption": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "display": {
+     "type": "string"
+    },
+    "evidence": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "appendix_b": {
+   "oneOf": [
+    {
+     "type": "null"
+    },
+    {
+     "type": "object",
+     "required": [
+      "figure",
+      "pdf_page",
+      "caption_verbatim"
+     ],
+     "properties": {
+      "figure": {
+       "type": "integer"
+      },
+      "pdf_page": {
+       "type": "integer"
+      },
+      "printed_page": {
+       "type": "integer"
+      },
+      "caption_verbatim": {
+       "type": "string"
+      },
+      "plot_kind": {
+       "type": "string"
+      }
+     }
+    }
+   ]
+  },
+  "time_series": {
+   "type": "object",
+   "required": [
+    "status"
+   ],
+   "properties": {
+    "status": {
+     "enum": [
+      "UNAVAILABLE",
+      "DIGITIZED",
+      "ORIGINAL_DATA"
+     ]
+    },
+    "note": {
+     "type": "string"
+    },
+    "dataset_ids": {
+     "type": "array",
+     "items": {
+      "$ref": "common.schema.json#/$defs/dataset_id"
+     }
+    }
+   }
+  },
+  "flags": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "flag",
+     "claims"
+    ],
+    "properties": {
+     "flag": {
+      "type": "string"
+     },
+     "text": {
+      "type": "string"
+     },
+     "claims": {
+      "type": "array",
+      "items": {
+       "$ref": "common.schema.json#/$defs/claim_id"
+      }
+     }
+    }
+   }
+  },
+  "discrepancies": {
+   "type": "array",
+   "items": {
+    "$ref": "common.schema.json#/$defs/discrepancy_id"
+   }
+  },
+  "crosscheck": {
+   "type": "array",
+   "description": "DERIVED: printed values that differ between Tables I-VIII, Table IX and captions beyond printed rounding.",
+   "items": {
+    "type": "object",
+    "required": [
+     "field",
+     "matrix",
+     "other",
+     "status"
+    ],
+    "properties": {
+     "field": {
+      "type": "string"
+     },
+     "matrix": {
+      "type": "string"
+     },
+     "other": {
+      "type": "string"
+     },
+     "status": {
+      "const": "DIFFERS"
+     },
+     "note": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "literature_candidates": {
+   "type": "array"
+  }
+ }
+}

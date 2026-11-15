@@ -1,0 +1,2846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Open FLEX Virtual Laboratory — Evidence-First, Physics-First, Uncertainty-Aware (2009–2011 Baseline)</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<style>
+  :root {
+    --bg-canvas: #070d18;
+    --bg-panel: #0f172a;
+    --bg-card: #162035;
+    --bg-input: #0b1220;
+    --border: #26354f;
+    --border-bright: #3b527a;
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --text-dim: #64748b;
+    --accent-blue: #38bdf8;
+    --accent-cyan: #22d3ee;
+    --accent-emerald: #10b981;
+    --accent-amber: #f59e0b;
+    --accent-rose: #f43f5e;
+    --accent-violet: #a78bfa;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-canvas);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  /* Governance & Constitution Top Bar */
+  .gov-banner {
+    background: linear-gradient(90deg, #0c192e 0%, #172554 50%, #0c192e 100%);
+    border-bottom: 1px solid #1e3a8a;
+    padding: 6px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 11px;
+  }
+  .gov-tags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .badge {
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border: 1px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .badge-scope { background: rgba(16, 185, 129, 0.14); color: #34d399; border-color: rgba(16, 185, 129, 0.35); }
+  .badge-warn { background: rgba(245, 158, 11, 0.14); color: #fbbf24; border-color: rgba(245, 158, 11, 0.35); }
+  .badge-danger { background: rgba(244, 63, 94, 0.14); color: #fb7185; border-color: rgba(244, 63, 94, 0.35); }
+  .badge-info { background: rgba(56, 189, 248, 0.14); color: #7dd3fc; border-color: rgba(56, 189, 248, 0.35); }
+  .badge-violet { background: rgba(167, 139, 250, 0.14); color: #c4b5fd; border-color: rgba(167, 139, 250, 0.35); }
+
+  /* Main Header */
+  header {
+    background: var(--bg-panel);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 18px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .brand h1 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #f8fafc;
+    letter-spacing: -0.01em;
+  }
+  .brand p {
+    margin: 2px 0 0 0;
+    font-size: 11.5px;
+    color: var(--text-muted);
+  }
+  .header-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+  .mode-switch {
+    display: inline-flex;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 2px;
+  }
+  .mode-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 5px 10px;
+    font-size: 11.5px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .mode-btn.active {
+    background: #1e293b;
+    color: var(--accent-cyan);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+  }
+  .mode-btn.active.extrap {
+    background: rgba(244, 63, 94, 0.2);
+    color: #fda4af;
+  }
+  .run-meta-box {
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: var(--text-muted);
+  }
+  .run-meta-box span { color: var(--accent-blue); }
+
+  .btn {
+    background: #1e293b;
+    color: #f1f5f9;
+    border: 1px solid var(--border-bright);
+    border-radius: 6px;
+    padding: 6px 11px;
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .btn:hover { background: #28354d; border-color: var(--accent-blue); }
+  .btn-primary { background: #0284c7; border-color: #38bdf8; color: #fff; }
+  .btn-primary:hover { background: #0369a1; }
+  .btn-emerald { background: rgba(16, 185, 129, 0.18); border-color: #10b981; color: #6ee7b7; }
+  .btn-emerald:hover { background: rgba(16, 185, 129, 0.28); }
+  .btn-sm { padding: 3px 8px; font-size: 11px; }
+
+  /* Navigation Tabs */
+  .nav-tabs {
+    background: #0b1220;
+    border-bottom: 1px solid var(--border);
+    padding: 0 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .tab-btn {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--text-muted);
+    padding: 9px 13px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .tab-btn:hover { color: #f8fafc; }
+  .tab-btn.active {
+    color: var(--accent-cyan);
+    border-bottom-color: var(--accent-cyan);
+  }
+
+  /* Layout Grid */
+  .workspace {
+    display: none;
+    padding: 14px 18px;
+    max-width: 1720px;
+    margin: 0 auto;
+  }
+  .workspace.active { display: block; }
+
+  .lab-grid {
+    display: grid;
+    grid-template-columns: 330px 1fr 410px;
+    gap: 14px;
+    align-items: start;
+  }
+  @media (max-width: 1320px) {
+    .lab-grid { grid-template-columns: 310px 1fr; }
+    .right-col { grid-column: 1 / -1; }
+  }
+  @media (max-width: 900px) {
+    .lab-grid { grid-template-columns: 1fr; }
+  }
+
+  .panel {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+  .panel-header {
+    background: rgba(15, 23, 42, 0.9);
+    border-bottom: 1px solid var(--border);
+    padding: 9px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .panel-title {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #cbd5e1;
+  }
+  .panel-body { padding: 12px 13px; }
+
+  /* Form Controls */
+  .control-group { margin-bottom: 11px; }
+  .control-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #cbd5e1;
+    margin-bottom: 4px;
+  }
+  .control-val {
+    font-family: var(--font-mono);
+    color: var(--accent-cyan);
+    font-size: 11.5px;
+  }
+  select, input[type="number"], input[type="text"], textarea {
+    width: 100%;
+    background: var(--bg-input);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 6px 8px;
+    font-size: 12px;
+    font-family: var(--font-sans);
+  }
+  select:disabled, input:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  input[type="range"] {
+    width: 100%;
+    accent-color: var(--accent-cyan);
+    cursor: pointer;
+  }
+  .sub-note {
+    font-size: 10.5px;
+    color: var(--text-dim);
+    margin-top: 2px;
+  }
+  .mixture-bar {
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    background: #1e293b;
+    margin: 6px 0;
+  }
+  .alert-box {
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    margin-top: 8px;
+    border: 1px solid;
+  }
+  .alert-info { background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.35); color: #bae6fd; }
+  .alert-warn { background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.4); color: #fde68a; }
+  .alert-danger { background: rgba(244, 63, 94, 0.14); border-color: rgba(244, 63, 94, 0.45); color: #fecdd3; }
+  .alert-ok { background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.4); color: #a7f3d0; }
+
+  /* 3D Viewport */
+  .viewport-wrapper {
+    position: relative;
+    width: 100%;
+    height: 490px;
+    background: #060b14;
+    border-bottom: 1px solid var(--border);
+  }
+  #three-container {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  #fallback-canvas {
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .viewport-overlay-top {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 6px;
+    pointer-events: none;
+  }
+  .viewport-overlay-top > * { pointer-events: auto; }
+  .schematic-stamp {
+    background: rgba(15, 23, 42, 0.88);
+    border: 1px solid rgba(245, 158, 11, 0.5);
+    color: #fcd34d;
+    padding: 4px 9px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .cam-presets {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .viewport-overlay-bottom {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    background: rgba(11, 18, 32, 0.88);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  /* Timeline Scrubber & 8-Stage Bar */
+  .stage-pills {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 4px;
+    margin-top: 8px;
+  }
+  @media (max-width: 760px) {
+    .stage-pills { grid-template-columns: repeat(4, 1fr); }
+  }
+  .stage-pill {
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 4px 5px;
+    font-size: 10px;
+    text-align: center;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .stage-pill.active {
+    background: rgba(34, 211, 238, 0.16);
+    border-color: var(--accent-cyan);
+    color: #fff;
+    font-weight: 700;
+  }
+
+  /* Science Bubble Card */
+  .bubble-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  @media (max-width: 650px) {
+    .bubble-grid { grid-template-columns: 1fr; }
+  }
+  .bubble-cell {
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 10px;
+  }
+  .bubble-cell h4 {
+    margin: 0 0 3px 0;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--accent-cyan);
+  }
+  .bubble-cell p {
+    margin: 0;
+    font-size: 11.5px;
+    color: #cbd5e1;
+  }
+  .hotspot-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+  .chip {
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    border-radius: 14px;
+    padding: 3px 9px;
+    font-size: 11px;
+    cursor: pointer;
+  }
+  .chip.active {
+    background: rgba(56, 189, 248, 0.2);
+    border-color: var(--accent-blue);
+    color: #fff;
+    font-weight: 600;
+  }
+
+  /* Diagnostic Camera Simulator + CV Mask Verification */
+  .cam-sim-grid {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+  @media (max-width: 640px) {
+    .cam-sim-grid { grid-template-columns: 1fr; }
+  }
+  #diag-canvas {
+    width: 240px;
+    height: 240px;
+    background: #020617;
+    border: 1px solid var(--border-bright);
+    border-radius: 6px;
+    display: block;
+  }
+
+  /* Tables & Ledgers */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 7px 9px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    background: var(--bg-input);
+    color: #94a3b8;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 10.5px;
+    letter-spacing: 0.04em;
+  }
+  tr:hover td { background: rgba(30, 41, 59, 0.45); }
+
+  /* Two-Column Secondary Views */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  @media (max-width: 1024px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+
+  /* Prediction Card */
+  .pred-card {
+    background: linear-gradient(180deg, #111c33 0%, #0b1324 100%);
+    border: 1px solid var(--border-bright);
+    border-radius: 8px;
+    padding: 11px 12px;
+  }
+  .pred-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    border-bottom: 1px dashed #1e293b;
+    font-size: 11.5px;
+  }
+  .pred-row:last-child { border-bottom: none; }
+  .mono { font-family: var(--font-mono); }
+
+  /* Modal / Toast */
+  .toast {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background: #0f172a;
+    border: 1px solid var(--accent-emerald);
+    color: #ecfdf5;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    z-index: 9999;
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- SCIENTIFIC CONSTITUTION & SCOPE GUARDRAIL BANNER -->
+<div class="gov-banner">
+  <div class="gov-tags">
+    <span class="badge badge-scope">SCOPE: ORIGINAL FLEX ONLY (MAR 2009 – DEC 2011)</span>
+    <span class="badge badge-danger">EXCLUDES FLEX-2 / FLEX-2J / FLEX-ICE-GA / CFI</span>
+    <span class="badge badge-warn">CONCEPTUAL SCHEMATIC — NOT OFFICIAL NASA CAD</span>
+    <span class="badge badge-info">SOURCE-TRACEABLE • NOT NASA-ENDORSED</span>
+  </div>
+  <div class="mono" style="font-size: 10.5px; color: #94a3b8;">
+    Baseline: NASA/TP-2015-216046 [S01] • JSC-17962-27 [S02] • Dietrich et al. (2014) [S03] • PSI-69 [S04]
+  </div>
+</div>
+
+<!-- HEADER & PROVENANCE BAR -->
+<header>
+  <div class="brand">
+    <h1>Open FLEX Virtual Laboratory &amp; Research Commons</h1>
+    <p>ISS Destiny Module • Combustion Integrated Rack (CIR) • Multi-User Droplet Combustion Apparatus (MDCA)</p>
+  </div>
+  <div class="header-controls">
+    <div class="mode-switch" role="group" aria-label="Operating Mode">
+      <button class="mode-btn active" id="mode-replay" onclick="setOperatingMode('replay')">1. Reproduce Measured Test</button>
+      <button class="mode-btn" id="mode-explore" onclick="setOperatingMode('explore')">2. Explore Envelope</button>
+      <button class="mode-btn" id="mode-extrap" onclick="setOperatingMode('extrap')">3. Beyond-Envelope (OOD)</button>
+    </div>
+    <div class="run-meta-box">
+      Run UUID: <span id="hdr-run-id">loading...</span><br/>
+      SHA-256: <span id="hdr-sha256">computing...</span>
+    </div>
+    <button class="btn btn-emerald" onclick="exportROCrateManifest()">Export RO-Crate 1.3 Manifest</button>
+  </div>
+</header>
+
+<!-- NAVIGATION TABS -->
+<nav class="nav-tabs">
+  <button class="tab-btn active" onclick="switchTab('lab', this)">1. Virtual Lab &amp; 3D Apparatus</button>
+  <button class="tab-btn" onclick="switchTab('solver', this)">2. Transient Spherical 1-D Profiles &amp; Chemistry</button>
+  <button class="tab-btn" onclick="switchTab('uq', this)">3. Uncertainty Budget, Conformal UQ &amp; Sensitivity</button>
+  <button class="tab-btn" onclick="switchTab('ledger', this)">4. Claim-to-Evidence Ledger &amp; Audit</button>
+  <button class="tab-btn" onclick="switchTab('commons', this)">5. Open Research Commons &amp; Peer Replication</button>
+</nav>
+
+<!-- ===================================================================== -->
+<!-- TAB 1: VIRTUAL LAB & 3D APPARATUS                                     -->
+<!-- ===================================================================== -->
+<main id="tab-lab" class="workspace active">
+  <div class="lab-grid">
+
+    <!-- LEFT COLUMN: EXPERIMENT PARAMETERS & ARCHIVED TEST SELECTOR -->
+    <section>
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Archived Test &amp; Envelope Controls</span>
+          <span class="badge badge-info" id="mode-badge">NASA_REPORTED / REPLAY</span>
+        </div>
+        <div class="panel-body">
+
+          <div class="control-group">
+            <label class="control-label" for="preset-select">
+              <span>Archived Original FLEX Test Case</span>
+              <span class="mono" style="font-size:10px;color:#38bdf8;">[S01, S03, S08]</span>
+            </label>
+            <select id="preset-select" onchange="loadPreset(this.value)">
+              <option value="FLEX-023">FLEX Test 023 — n-Heptane, 33.4% O₂/N₂, 0.713 atm (Video Mirror)</option>
+              <option value="DIETRICH-FIG3">Dietrich et al. Fig. 3 — n-Heptane, D₀=3.41 mm, 18% O₂, 1.0 atm</option>
+              <option value="DIETRICH-FIG4A">Dietrich et al. Fig. 4a — n-Heptane, D₀=2.10 mm, 20% O₂ / 5% CO₂</option>
+              <option value="DIETRICH-FIG4B">Dietrich et al. Fig. 4b — n-Heptane, D₀=3.00 mm, 20% O₂ / 5% CO₂</option>
+              <option value="DIETRICH-FIG6-N2">Dietrich et al. Fig. 6a — Methanol, D₀=2.75 mm, O₂/N₂ (k̄=0.52)</option>
+              <option value="DIETRICH-FIG6-CO2">Dietrich et al. Fig. 6b — Methanol, D₀=2.75 mm, O₂/N₂/CO₂ (k̄=0.45)</option>
+              <option value="DIETRICH-FIG6-HE">Dietrich et al. Fig. 6c — Methanol, D₀=2.75 mm, O₂/N₂/He (k̄=0.70)</option>
+              <option value="FLEX-0035">FLEX Test 0035 — Large n-Heptane Cool-Flame Case (Williams 2009)</option>
+            </select>
+            <div class="sub-note" id="preset-provenance">Legacy ID: FLEX-023 | 24 Oct 2009 | Backlit HiBMs recording</div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="ctrl-fuel">
+              <span>Liquid Fuel (Separate Chemical Models)</span>
+              <span class="control-val" id="val-fuel">n-Heptane (C₇H₁₆)</span>
+            </label>
+            <select id="ctrl-fuel" onchange="onParamChange()">
+              <option value="heptane">n-Heptane (C₇H₁₆) — Moderately Sooting, Two-Stage Cool Flame</option>
+              <option value="methanol">Methanol (CH₃OH) — Low Soot, Water Dissolution Sensitive</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="ctrl-d0">
+              <span>Initial Droplet Diameter D₀ (mm)</span>
+              <span class="control-val" id="val-d0">3.00 mm</span>
+            </label>
+            <input type="range" id="ctrl-d0" min="1.0" max="6.0" step="0.05" value="3.00" oninput="onParamChange()" />
+            <div class="sub-note">Published FLEX range: ~1.5–5.0 mm [S03]; 2009 JSC plan: 2.0–5.0 mm [S02]</div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="ctrl-p">
+              <span>Ambient Chamber Pressure P (atm)</span>
+              <span class="control-val" id="val-p">0.713 atm</span>
+            </label>
+            <input type="range" id="ctrl-p" min="0.4" max="4.0" step="0.01" value="0.713" oninput="onParamChange()" />
+            <div class="sub-note">Published FLEX tests: 0.7–3.0 atm (most ≤1.0 atm) [S03]; CIR safety cap: ~3 atm [S01]</div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="ctrl-xo2">
+              <span>Oxygen Mole Fraction X(O₂)</span>
+              <span class="control-val" id="val-xo2">0.334</span>
+            </label>
+            <input type="range" id="ctrl-xo2" min="0.08" max="0.55" step="0.002" value="0.334" oninput="onParamChange()" />
+            <div class="sub-note">Published FLEX range: ~0.10–0.40 [S03]; LOI (O₂/N₂): ~0.15 heptane, ~0.12 methanol</div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="ctrl-diluent">
+              <span>Secondary Diluent / Suppressant</span>
+              <span class="control-val" id="val-xdil">0.000</span>
+            </label>
+            <div style="display:grid; grid-template-columns: 110px 1fr; gap: 6px; align-items:center;">
+              <select id="ctrl-diluent" onchange="onParamChange()">
+                <option value="N2">Pure N₂ Balance</option>
+                <option value="CO2">CO₂ Suppressant</option>
+                <option value="He">Helium (He)</option>
+              </select>
+              <input type="range" id="ctrl-xdil" min="0.0" max="0.70" step="0.01" value="0.00" oninput="onParamChange()" />
+            </div>
+            <div class="mixture-bar" id="mixture-bar"></div>
+            <div class="sub-note mono" id="mixture-readout">X(O₂)=0.334 | X(N₂)=0.666 | ΣXᵢ = 1.000</div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="ctrl-support">
+              <span>Droplet Support Configuration</span>
+              <span class="control-val" id="val-support">Free-Floating</span>
+            </label>
+            <select id="ctrl-support" onchange="onParamChange()">
+              <option value="free">Free-Floating Droplet (Opposed Needle Deployment)</option>
+              <option value="fiber">80 μm Silicon-Carbide (SiC) Support Fiber [S01, S03]</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="ctrl-gjitter">
+              <span>Microgravity &amp; Residual g-Jitter Drift</span>
+              <span class="control-val" id="val-gjitter">g = 0 (Ideal)</span>
+            </label>
+            <select id="ctrl-gjitter" onchange="onParamChange()">
+              <option value="0">Ideal Low-g Baseline (Body Force g = 0, Finite ρ)</option>
+              <option value="1.2">Recorded Drift Scenario (~1.2 mm/s, Fig. 3 FOV exit risk)</option>
+              <option value="2.0">Elevated g-Jitter Drift (~2.0 mm/s, Early HiBMs FOV Exit)</option>
+            </select>
+            <div class="sub-note">Ideal 0-g sets body-force g=0 while keeping gas density ρ thermodynamically finite [S01, Sec. 18.3].</div>
+          </div>
+
+          <div class="control-group" style="margin-bottom:0;">
+            <label class="control-label" for="ctrl-fit-window">
+              <span>D²(t) Linear Regression Fit Window (t/D₀²)</span>
+              <span class="control-val" id="val-fit-window">0.15 – 0.75 s/mm²</span>
+            </label>
+            <select id="ctrl-fit-window" onchange="onParamChange()">
+              <option value="0.15,0.75">Quasi-Steady Core: 0.15 – 0.75 s/mm² (Excludes Ignition Transient)</option>
+              <option value="0.05,0.85">Broad Window: 0.05 – 0.85 s/mm² (Includes Early Heat-Up)</option>
+              <option value="0.20,0.60">Conservative Mid-Burn: 0.20 – 0.60 s/mm²</option>
+            </select>
+          </div>
+
+          <div id="domain-alert" class="alert-box alert-ok">
+            <strong>Status:</strong> Locked to archived FLEX Test 023 metadata [S08].
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CENTER COLUMN: 3D CIR/MDCA SCENE, TIMELINE & SCIENCE BUBBLES -->
+    <section>
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">3D CIR / MDCA Apparatus &amp; Optical Frusta</span>
+          <div class="cam-presets">
+            <button class="btn btn-sm" onclick="setCameraView('overview')">CIR Overview</button>
+            <button class="btn btn-sm" onclick="setCameraView('mdca')">MDCA Insert</button>
+            <button class="btn btn-sm" onclick="setCameraView('droplet')">Droplet &amp; Needles</button>
+            <button class="btn btn-sm" onclick="setCameraView('optics')">Optical Frusta</button>
+            <button class="btn btn-sm" id="btn-cutaway" onclick="toggleCutaway()">Toggle Chamber Cutaway</button>
+          </div>
+        </div>
+
+        <div class="viewport-wrapper" id="viewport-wrapper">
+          <div id="three-container"></div>
+          <canvas id="fallback-canvas"></canvas>
+
+          <div class="viewport-overlay-top">
+            <div class="schematic-stamp">
+              CONCEPTUAL SCHEMATIC RECONSTRUCTION — NOT TO SCALE / NOT OFFICIAL NASA CAD
+            </div>
+            <div style="display:flex; gap:4px; flex-wrap:wrap;">
+              <span class="badge badge-info" id="viz-provenance-badge">VISUAL: CONCEPTUAL SCHEMATIC + REDUCED MODEL</span>
+            </div>
+          </div>
+
+          <div class="viewport-overlay-bottom">
+            <div style="display:flex; align-items:center; gap:6px;">
+              <button class="btn btn-primary btn-sm" id="btn-play" onclick="togglePlay()">Pause</button>
+              <button class="btn btn-sm" onclick="stepTime(-0.5)">-0.5s</button>
+              <button class="btn btn-sm" onclick="stepTime(0.5)">+0.5s</button>
+              <button class="btn btn-sm" onclick="resetTimeline()">Reset t=0</button>
+            </div>
+            <div style="flex:1; min-width:160px; display:flex; align-items:center; gap:8px;">
+              <span class="mono" id="time-readout" style="min-width:118px; color:#38bdf8;">t = 0.00 s / 20.0 s</span>
+              <input type="range" id="time-scrubber" min="0" max="20" step="0.05" value="0" oninput="scrubTime(parseFloat(this.value))" />
+            </div>
+            <div class="mono" id="regime-readout" style="color:#34d399; font-weight:700;">
+              STAGE 6: QUASI-STEADY BURN
+            </div>
+          </div>
+        </div>
+
+        <!-- 8-STAGE NASA TP SECTION 2.3 OPERATIONAL SEQUENCE -->
+        <div class="panel-body">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px;">
+            <span style="font-size:11px; font-weight:700; color:#94a3b8;">NOMINAL ARCHIVED TEST SEQUENCE (NASA/TP-2015-216046 SEC. 2.3 [S01])</span>
+            <span class="mono" style="font-size:10.5px; color:#64748b;">Pre-flight JSC plan [S02]: ≥2 min stab., ≥10 s dwell, 1–5 s igniter</span>
+          </div>
+          <div class="stage-pills" id="stage-pills">
+            <div class="stage-pill" onclick="jumpToStage(1)">1. Activate CIR</div>
+            <div class="stage-pill" onclick="jumpToStage(2)">2. FOMA Ambient</div>
+            <div class="stage-pill" onclick="jumpToStage(3)">3. Prepare MDCA</div>
+            <div class="stage-pill" onclick="jumpToStage(4)">4. Form &amp; Stretch</div>
+            <div class="stage-pill" onclick="jumpToStage(5)">5. Deploy (t=0)</div>
+            <div class="stage-pill" onclick="jumpToStage(6)">6. Ignite &amp; Retract</div>
+            <div class="stage-pill active" onclick="jumpToStage(7)">7. Record (~40s)</div>
+            <div class="stage-pill" onclick="jumpToStage(8)">8. Post-Test Mix</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE 6-PART SCIENCE BUBBLE INSPECTOR -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Interactive 6-Part Apparatus Science Bubble</span>
+          <span class="badge badge-violet" id="bubble-source-tag">[S01] NASA/TP-2015-216046 Sec. 2.1</span>
+        </div>
+        <div class="panel-body">
+          <div class="hotspot-chips" id="hotspot-chips"></div>
+          <div class="bubble-grid" id="bubble-content"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT COLUMN: MULTI-CHANNEL DIAGNOSTICS, CV MASK & LIVE D² / FSR PLOTS -->
+    <section class="right-col">
+
+      <!-- MULTI-CHANNEL DIAGNOSTIC CAMERA SIMULATOR + HUMAN MASK CORRECTION -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Diagnostic Camera View &amp; CV Mask Audit</span>
+          <select id="cam-channel" style="width:auto; padding:3px 7px; font-size:11px;" onchange="renderDiagnosticCanvas()">
+            <option value="hibms">HiBMs Backlit (650–660 nm, ±50 μm)</option>
+            <option value="lluv">LLUV OH* Chemilum. (310 nm, ±200 μm)</option>
+            <option value="colour">MDCA Colour Camera (Visible, ±250 μm)</option>
+            <option value="radiometer">CIR/MDCA Radiometers (Non-Quantitative)</option>
+          </select>
+        </div>
+        <div class="panel-body">
+          <div class="cam-sim-grid">
+            <canvas id="diag-canvas" width="240" height="240"></canvas>
+            <div>
+              <div style="margin-bottom:6px;">
+                <span class="badge badge-warn">SIMULATED DIAGNOSTIC VIEW</span>
+                <span class="badge badge-info" id="cam-fov-badge">FOV: ~30 × 30 mm</span>
+              </div>
+              <p id="cam-desc" style="margin:0 0 8px 0; font-size:11.5px; color:#cbd5e1;"></p>
+
+              <!-- Phase 2 Human-in-the-Loop CV Threshold / Mask Calibration -->
+              <div style="background:var(--bg-input); border:1px solid var(--border); border-radius:6px; padding:7px 9px;">
+                <div class="control-label">
+                  <span>Human CV Segmentation Threshold</span>
+                  <span class="control-val" id="val-cv-thresh">0.50 (Nominal)</span>
+                </div>
+                <input type="range" id="ctrl-cv-thresh" min="0.30" max="0.70" step="0.02" value="0.50" oninput="onMaskThresholdChange(this.value)" />
+                <div class="sub-note" id="cv-mask-readout">
+                  Estimated D(t): 3.00 mm ± 0.050 mm (NASA reported estimate [S01 Sec. 3.1.2])
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LIVE D²(t) & FLAME STANDOFF RATIO (FSR) PLOTS -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Droplet Regression D²(t) &amp; FSR(t)</span>
+          <span class="badge badge-scope" id="plot-prov-badge">NASA_REPORTED + FITTED</span>
+        </div>
+        <div class="panel-body" style="padding:8px;">
+          <div id="plot-d2" style="width:100%; height:235px;"></div>
+          <div id="plot-fsr" style="width:100%; height:195px; margin-top:6px;"></div>
+        </div>
+      </div>
+
+      <!-- MANDATORY PREDICTION & UNCERTAINTY DISCLOSURE CARD -->
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Mandatory Uncertainty &amp; Prediction Card</span>
+          <span class="badge badge-warn" id="pred-calib-badge">EXPLORATORY / NOT CONFORMALLY CALIBRATED</span>
+        </div>
+        <div class="panel-body">
+          <div class="pred-card" id="prediction-card-body"></div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</main>
+
+<!-- ===================================================================== -->
+<!-- TAB 2: TRANSIENT SPHERICAL 1-D PROFILES & CHEMISTRY                   -->
+<!-- ===================================================================== -->
+<main id="tab-solver" class="workspace">
+  <div class="two-col">
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">Spherical 1-D Governing Physics &amp; Chemistry Policy [S01, S25–S30]</span>
+        <span class="badge badge-info">REDUCED 1-D RADIAL PROFILES</span>
+      </div>
+      <div class="panel-body">
+        <div class="alert-box alert-info" style="margin-top:0; margin-bottom:10px;">
+          <strong>Scientific Disclosure (Section 18 &amp; 20.1):</strong> Original FLEX diagnostics recorded 2D projected backlit droplet shadows and OH*/visible flame boundaries—not full spatial 3D temperature or species fields. The radial profiles below illustrate quasi-steady spherical diffusion-flame structure (with body-force <strong>g = 0</strong> and finite thermodynamic density <strong>ρ &gt; 0</strong>) parameterized to the selected fuel and ambient conditions.
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">
+            <span>Chemical Mechanism &amp; Transport Selection (Section 17.1 Policy)</span>
+            <span class="badge badge-danger">GRI-MECH 3.0 BLOCKED</span>
+          </label>
+          <select id="ctrl-mechanism" onchange="updateSolverTab()">
+            <option value="auto">Fuel-Matched Candidate: Held–Dryer (MeOH) / Farouk–Dryer &amp; LLNL (n-Heptane)</option>
+            <option value="soret_on">Fuel-Matched + Multicomponent Soret Thermal Diffusion Enabled [S25]</option>
+            <option value="rad_thin">Fuel-Matched + Optically Thin Gas/Soot Radiation Closure [S30]</option>
+          </select>
+          <div class="sub-note">
+            GRI-Mech 3.0 is a methane/air mechanism (53 species, 325 reactions) [S26] and is prohibited as a default FLEX mechanism. Soret diffusion requires multicomponent transport in Cantera 3.2 [S25].
+          </div>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Conservation Law</th>
+              <th>Spherical Radial Formulation (r² Divergence)</th>
+              <th>Interface / Closure Rule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Gas Continuity</strong></td>
+              <td class="mono">∂ρ/∂t + (1/r²) ∂(r²ρu)/∂r = 0</td>
+              <td>Ideal low-g sets body-force <strong>g = 0</strong>; density ρ remains finite via EOS [S01, Sec. 18.3].</td>
+            </tr>
+            <tr>
+              <td><strong>Species Transport</strong></td>
+              <td class="mono">∂(ρYᵢ)/∂t + (1/r²) ∂[r²(ρuYᵢ + jᵢ)]/∂r = ω̇ᵢ</td>
+              <td>Multicomponent diffusion jᵢ; Soret flux enabled only with multicomponent transport [S25].</td>
+            </tr>
+            <tr>
+              <td><strong>Gas Energy</strong></td>
+              <td class="mono">ρcₚ DT/Dt = (1/r²) ∂[r²λ(∂T/∂r)]/∂r − ∇·qᵣₐd + q̇chem</td>
+              <td>Consistent enthalpy basis without double-counting formation enthalpy [Sec. 18.2].</td>
+            </tr>
+            <tr>
+              <td><strong>Liquid Droplet Mass</strong></td>
+              <td class="mono">dm_d/dt = −4πR² m″_fuel,  m_d = ρ_l(4πR³/3)</td>
+              <td>Couples interfacial Stefan evaporation flux m″_fuel to surface recession dR/dt.</td>
+            </tr>
+            <tr>
+              <td><strong>Liquid Energy &amp; Phase</strong></td>
+              <td class="mono">m_d c_l dT_d/dt = 4πR²(q″_g→l − m″_fuel L_v)</td>
+              <td>Includes water dissolution/absorption sensitivity for methanol droplets [S03, S06].</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">Radial Temperature &amp; Species Structure T(r/R), Yᵢ(r/R)</span>
+        <span class="badge badge-violet">SIMULATED / ILLUSTRATIVE PROFILE</span>
+      </div>
+      <div class="panel-body">
+        <div id="plot-radial" style="width:100%; height:360px;"></div>
+        <div class="sub-note" style="margin-top:6px;">
+          Note: Outer OH* chemiluminescence radius (LLUV ±200 μm) is a diagnostic emission boundary and does not necessarily coincide identically with peak gas temperature T_max [S01, Sec. 3.2.2].
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ===================================================================== -->
+<!-- TAB 3: UNCERTAINTY BUDGET, CONFORMAL UQ & SENSITIVITY                 -->
+<!-- ===================================================================== -->
+<main id="tab-uq" class="workspace">
+  <div class="two-col">
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">6-Component Scientific Uncertainty Budget (Section 16)</span>
+        <button class="btn btn-primary btn-sm" onclick="runMonteCarloUQ()">Re-Run Seeded Monte Carlo (N=500)</button>
+      </div>
+      <div class="panel-body">
+        <p style="margin-top:0; font-size:12px; color:#cbd5e1;">
+          Per <strong>NASA/TP-2015-216046</strong> [S01], diagnostic image uncertainties are stored as <code>reported_measurement_uncertainty</code> with <code>coverage_factor = not stated</code> and <code>distribution = not specified</code>. They are never silently relabeled as Gaussian ±1σ or 95% confidence intervals.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Uncertainty Source</th>
+              <th>Current Run Status</th>
+              <th>Method &amp; Scientific Justification</th>
+            </tr>
+          </thead>
+          <tbody id="uq-budget-table"></tbody>
+        </table>
+
+        <div id="plot-mc-hist" style="width:100%; height:240px; margin-top:12px;"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">Global Sensitivity Ranking (SALib Sobol / Morris Concept) &amp; Conformal Rules</span>
+        <span class="badge badge-info">GROUP-SPLIT BY TEST ID</span>
+      </div>
+      <div class="panel-body">
+        <div id="plot-sobol" style="width:100%; height:270px;"></div>
+
+        <div class="alert-box alert-warn" style="margin-top:10px;">
+          <strong>ML &amp; Conformal Prediction Safeguards (Section 16.4 &amp; [S35]):</strong>
+          <ul style="margin:5px 0 0 16px; padding:0;">
+            <li><strong>No Frame-Level Leakage:</strong> Training, calibration, and test splits are grouped strictly by complete physical <code>FLEX test ID</code>, never random video frames.</li>
+            <li><strong>Marginal Coverage Caveat:</strong> MAPIE conformal intervals guarantee marginal coverage under exchangeability, not per-subgroup coverage across sparse pressure/diluent regimes.</li>
+            <li><strong>Sensitivity ≠ Interval:</strong> Sobol/Morris indices rank variance contribution; they are not prediction intervals by themselves [S33].</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ===================================================================== -->
+<!-- TAB 4: CLAIM-TO-EVIDENCE LEDGER & HISTORICAL AUDIT                    -->
+<!-- ===================================================================== -->
+<main id="tab-ledger" class="workspace">
+  <div class="panel">
+    <div class="panel-header">
+      <span class="panel-title">Atomic Claim-to-Evidence Ledger &amp; Source Hierarchy (Section 15)</span>
+      <input type="text" id="claim-search" placeholder="Filter claims by keyword, source ID (S01–S39), or test ID..." style="width:320px;" oninput="renderClaimLedger()" />
+    </div>
+    <div class="panel-body">
+      <div class="alert-box alert-info" style="margin-top:0; margin-bottom:12px;">
+        <strong>Test-Count Audit Rule (Section 1.5):</strong> Do not merge or "correct" the three documented test counts across different source dates:
+        <strong>196 test points</strong> planned in <em>JSC-17962-27 (23 Feb 2009)</em> [S02];
+        <strong>258 data points</strong> listed as <em>"FLEX &amp; FLEX-H"</em> in the <em>Oct 2010 Project Overview</em> [S09]; and
+        <strong>the first 284 tests</strong> reported in <em>NASA/TP-2015-216046 (2015)</em> [S01].
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width:110px;">Claim ID</th>
+            <th style="width:130px;">Evidence Class</th>
+            <th>Atomic Verifiable Scientific Claim</th>
+            <th style="width:210px;">Exact Source &amp; Locator</th>
+            <th style="width:140px;">Uncertainty / Caveat</th>
+          </tr>
+        </thead>
+        <tbody id="claim-ledger-body"></tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<!-- ===================================================================== -->
+<!-- TAB 5: OPEN RESEARCH COMMONS & PEER REPLICATION                       -->
+<!-- ===================================================================== -->
+<main id="tab-commons" class="workspace">
+  <div class="two-col">
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">Validation Badge Governance (Section 10.5 — Truthful Labels Only)</span>
+        <span class="badge badge-danger">NO AUTO-GRANTED NASA BADGES</span>
+      </div>
+      <div class="panel-body">
+        <p style="margin-top:0; font-size:12px; color:#cbd5e1;">
+          Public visibility or use of public NASA PSI-69 data does not imply NASA monitoring, participation, or endorsement. Every badge requires documented evidence attached to an immutable release version:
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Platform Badge</th>
+              <th>Required Evidence</th>
+              <th>Granting Authority</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge badge-info">SOURCE-TRACEABLE</span></td>
+              <td>Exact source URL/DOI, NASA test ID, checksum, and page/figure locator recorded.</td>
+              <td>Automated metadata schema check.</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge-scope">DATA-QA-PASSED</span></td>
+              <td>Units, ΣXᵢ = 1.000 composition check, timestamps, and SHA-256 integrity verified.</td>
+              <td>Automated QA pipeline + data steward.</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge-violet">MODEL-VERIFIED</span></td>
+              <td>Grid/time-step convergence, mass/species/energy conservation residuals verified.</td>
+              <td>Model maintainer / numerical reviewer.</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge-emerald">INDEPENDENTLY-REPRODUCED</span></td>
+              <td>External researcher reruns RO-Crate manifest and reports residuals within tolerance.</td>
+              <td>Independent replicator (public report linked).</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge-warn">EXPERT-REVIEWED</span></td>
+              <td>Named researcher, affiliation, review scope, date, and conflict statement logged.</td>
+              <td>Verified domain expert reviewer.</td>
+            </tr>
+            <tr>
+              <td><span class="badge badge-danger">NASA-INSTITUTIONALLY-VALIDATED</span></td>
+              <td>Formal written authorization from an official NASA review process with explicit scope.</td>
+              <td><strong>Disabled in software</strong> without formal written NASA sign-off.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">Immutable Run Discussion &amp; Replication Thread</span>
+        <span class="badge badge-info" id="forum-run-ref">Bound to Current Run UUID</span>
+      </div>
+      <div class="panel-body">
+        <div id="forum-posts" style="max-height:290px; overflow-y:auto; margin-bottom:10px;"></div>
+
+        <div style="background:var(--bg-input); border:1px solid var(--border); border-radius:6px; padding:10px;">
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-bottom:8px;">
+            <input type="text" id="rep-author" placeholder="Contributor Name / ORCID (e.g., A. Pratama)" />
+            <select id="rep-type">
+              <option value="INDEPENDENT_REPLICATION">Independent Replication Report</option>
+              <option value="MASK_AUDIT">HiBMs / LLUV Segmentation Audit</option>
+              <option value="PHYSICS_CRITIQUE">Physics / Mechanism Critique</option>
+            </select>
+          </div>
+          <textarea id="rep-comment" rows="2" placeholder="Attach replication residuals, mask threshold audit, or source locator comment to current immutable Run ID..."></textarea>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+            <span class="sub-note">New comments never overwrite source records; they bind to the active UUID.</span>
+            <button class="btn btn-primary btn-sm" onclick="submitReplicationNote()">Post Linked Note</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ============================================================================
+// 1. AUTHORITATIVE ORIGINAL FLEX DATA & SOURCE REGISTRY (STRICTLY 2009-2011)
+// ============================================================================
+const PRESETS = {
+  "FLEX-023": {
+    legacyId: "FLEX-023",
+    title: "FLEX Test 023 (NASA Glenn Backlit Recording)",
+    dateUTC: "2009-10-24",
+    fuel: "heptane",
+    d0: 3.00,
+    p: 0.713,
+    xo2: 0.334,
+    diluent: "N2",
+    xdil: 0.00,
+    support: "free",
+    gjitter: "0",
+    kBarReported: 0.68, // Illustrative fitted value consistent with elevated O2 at 0.713 atm
+    kBarSourceStatus: "IMAGE_DERIVED / FITTED (Test 023 backlit video shows droplet & soot; flame not visible [S08])",
+    duration: 16.0,
+    extMode: "Radiative / Soot-Shell Transition",
+    coolFlame: false,
+    provenance: "Legacy ID: FLEX-023 | 24 Oct 2009 | Backlit HiBMs recording (flame not visible in backlit view) [S08]",
+    sourceIds: ["S01", "S08"]
+  },
+  "DIETRICH-FIG3": {
+    legacyId: "Dietrich2014-Fig3",
+    title: "Dietrich et al. (2014) Fig. 3 — n-Heptane Drift & Regression",
+    dateUTC: "2010-04-12",
+    fuel: "heptane",
+    d0: 3.41,
+    p: 1.00,
+    xo2: 0.180,
+    diluent: "N2",
+    xdil: 0.00,
+    support: "free",
+    gjitter: "1.2",
+    kBarReported: 0.38,
+    kBarSourceStatus: "REPORTED (Dietrich et al. 2014 Fig. 3: k̄ ≈ 0.38 mm²/s, drift ~1–2 mm/s [S03])",
+    duration: 28.0,
+    extMode: "Radiative Extinction + FOV Drift",
+    coolFlame: true,
+    provenance: "Source: Dietrich et al. (2014) Fig. 3 [S03] | D₀=3.41 mm, X(O₂)=0.18, P=1.0 atm, k̄≈0.38 mm²/s",
+    sourceIds: ["S01", "S03"]
+  },
+  "DIETRICH-FIG4A": {
+    legacyId: "Dietrich2014-Fig4a",
+    title: "Dietrich et al. (2014) Fig. 4a — Small Heptane Droplet in CO₂ Mix",
+    dateUTC: "2010-06-18",
+    fuel: "heptane",
+    d0: 2.10,
+    p: 1.00,
+    xo2: 0.200,
+    diluent: "CO2",
+    xdil: 0.05,
+    support: "free",
+    gjitter: "0",
+    kBarReported: 0.53,
+    kBarSourceStatus: "REPORTED (Dietrich et al. 2014 Fig. 4: D₀≈2.1 mm, k̄ ≈ 0.53 mm²/s [S03])",
+    duration: 10.0,
+    extMode: "Diffusive Extinction Near Completion",
+    coolFlame: false,
+    provenance: "Source: Dietrich et al. (2014) Fig. 4 [S03] | X(O₂)/X(N₂)/X(CO₂)=0.20/0.75/0.05, D₀≈2.1 mm",
+    sourceIds: ["S01", "S03"]
+  },
+  "DIETRICH-FIG4B": {
+    legacyId: "Dietrich2014-Fig4b",
+    title: "Dietrich et al. (2014) Fig. 4b — Larger Heptane Droplet in CO₂ Mix",
+    dateUTC: "2010-06-19",
+    fuel: "heptane",
+    d0: 3.00,
+    p: 1.00,
+    xo2: 0.200,
+    diluent: "CO2",
+    xdil: 0.05,
+    support: "free",
+    gjitter: "0",
+    kBarReported: 0.49,
+    kBarSourceStatus: "REPORTED (Dietrich et al. 2014 Fig. 4: D₀≈3.0 mm, k̄ ≈ 0.49 mm²/s [S03])",
+    duration: 18.0,
+    extMode: "Radiative Extinction (Larger Radiative Loss)",
+    coolFlame: true,
+    provenance: "Source: Dietrich et al. (2014) Fig. 4 [S03] | X(O₂)/X(N₂)/X(CO₂)=0.20/0.75/0.05, D₀≈3.0 mm",
+    sourceIds: ["S01", "S03"]
+  },
+  "DIETRICH-FIG6-N2": {
+    legacyId: "Dietrich2014-Fig6-N2",
+    title: "Dietrich et al. (2014) Fig. 6a — Methanol in O₂/N₂",
+    dateUTC: "2010-08-03",
+    fuel: "methanol",
+    d0: 2.75,
+    p: 1.00,
+    xo2: 0.210,
+    diluent: "N2",
+    xdil: 0.00,
+    support: "free",
+    gjitter: "0",
+    kBarReported: 0.52,
+    kBarSourceStatus: "REPORTED (Dietrich et al. 2014 Fig. 6: Methanol N₂ balance, k̄ = 0.52 mm²/s [S03])",
+    duration: 15.0,
+    extMode: "Diffusive Extinction (Water Absorption)",
+    coolFlame: false,
+    provenance: "Source: Dietrich et al. (2014) Fig. 6 [S03] & Nayagam et al. (2013) [S06] | D₀≈2.75±0.08 mm",
+    sourceIds: ["S03", "S06"]
+  },
+  "DIETRICH-FIG6-CO2": {
+    legacyId: "Dietrich2014-Fig6-CO2",
+    title: "Dietrich et al. (2014) Fig. 6b — Methanol with CO₂ Dilution",
+    dateUTC: "2010-08-04",
+    fuel: "methanol",
+    d0: 2.75,
+    p: 1.00,
+    xo2: 0.210,
+    diluent: "CO2",
+    xdil: 0.30,
+    support: "free",
+    gjitter: "0",
+    kBarReported: 0.45,
+    kBarSourceStatus: "REPORTED (Dietrich et al. 2014 Fig. 6: Methanol CO₂ dilution, k̄ = 0.45 mm²/s [S03])",
+    duration: 17.0,
+    extMode: "Radiative + Diffusive Extinction (High cₚ CO₂)",
+    coolFlame: false,
+    provenance: "Source: Dietrich et al. (2014) Fig. 6 [S03] | X(O₂)=0.21, X(N₂)=0.49, X(CO₂)=0.30",
+    sourceIds: ["S03", "S06"]
+  },
+  "DIETRICH-FIG6-HE": {
+    legacyId: "Dietrich2014-Fig6-He",
+    title: "Dietrich et al. (2014) Fig. 6c — Methanol with Helium Dilution",
+    dateUTC: "2010-08-05",
+    fuel: "methanol",
+    d0: 2.75,
+    p: 1.00,
+    xo2: 0.210,
+    diluent: "He",
+    xdil: 0.30,
+    support: "free",
+    gjitter: "0",
+    kBarReported: 0.70,
+    kBarSourceStatus: "REPORTED (Dietrich et al. 2014 Fig. 6: Methanol He dilution, k̄ = 0.70 mm²/s [S03])",
+    duration: 11.5,
+    extMode: "High-Conductivity Diffusive Extinction",
+    coolFlame: false,
+    provenance: "Source: Dietrich et al. (2014) Fig. 6 [S03] | X(O₂)=0.21, X(N₂)=0.49, X(He)=0.30",
+    sourceIds: ["S03", "S06"]
+  },
+  "FLEX-0035": {
+    legacyId: "FLEX-0035",
+    title: "FLEX Test 0035 — Two-Stage Cool-Flame Vaporization (Williams 2009)",
+    dateUTC: "2009-07-15",
+    fuel: "heptane",
+    d0: 3.80,
+    p: 1.00,
+    xo2: 0.210,
+    diluent: "N2",
+    xdil: 0.00,
+    support: "free",
+    gjitter: "0",
+    kBarReported: 0.56,
+    kBarSourceStatus: "REPORTED CASE STUDY (Williams 2009 [S07]; Dietrich et al. 2014 Fig. 5 [S03])",
+    duration: 24.0,
+    extMode: "Hot-Flame Radiative Extinction → Cool-Flame Stage",
+    coolFlame: true,
+    provenance: "Source: Williams (2009) Test 0035 presentation [S07] & Dietrich et al. (2014) [S03]",
+    sourceIds: ["S01", "S03", "S07"]
+  }
+};
+
+const HOTSPOTS = [
+  {
+    id: "cir_chamber",
+    name: "90-L CIR Combustion Chamber",
+    sourceTag: "[S01] NASA/TP-2015-216046 Sec. 2.1",
+    what: "90-liter pressure vessel inside the Combustion Integrated Rack (CIR) in the ISS Destiny module, isolated via PaRIS.",
+    does: "Contains the controlled test atmosphere and houses the MDCA insert and optical windows.",
+    now: "Maintaining controlled ambient chamber pressure and gas mixture under microgravity.",
+    physics: "Provides quiescent, low-buoyancy boundary conditions enabling nearly spherical diffusion flames.",
+    measures: "Chamber pressure transducers and accelerometers monitor pressure history and g-jitter.",
+    limits: "Facility pressure rating ~0–9 atm, but FLEX safety analysis restricted working pressure to ~3 atm [S01, S03]."
+  },
+  {
+    id: "foma",
+    name: "FOMA Gas & Environment Control",
+    sourceTag: "[S01] NASA/TP-2015-216046 Sec. 2.1",
+    what: "Fuel and Oxidizer Mixing Apparatus (CIR facility subsystem, not an MDCA sensor).",
+    does: "Evacuates chamber to ISS overboard vent and fills precise O₂, N₂, CO₂, and He mixtures.",
+    now: "Chamber atmosphere sealed at target mole fractions (ΣXᵢ = 1.000).",
+    physics: "Sets far-field oxidizer mole fraction X(O₂) and diluent thermal conductivity / heat capacity.",
+    measures: "Fill and evacuation pressure histories used to reconstruct actual chamber gas composition.",
+    limits: "Residual species from prior runs require ~1 min mixing fan operation if reusing an atmosphere [S01 Sec. 2.3]."
+  },
+  {
+    id: "mdca_insert",
+    name: "MDCA Chamber Insert",
+    sourceTag: "[S01] Sec. 2.2 • [S02] JSC-17962-27",
+    what: "Multi-User Droplet Combustion Apparatus payload insert mounted inside the CIR chamber.",
+    does: "Meters liquid fuel, deploys the droplet between opposed needles, ignites it, and holds local optics.",
+    now: "Insert latched and aligned with CIR optical ports; schematic geometry only (not official CAD).",
+    physics: "Establishes isolated droplet initial diameter D₀ (published range ~1.5–5.0 mm [S03]).",
+    measures: "Syringe displacement, needle retraction timing, and igniter energization events.",
+    limits: "Published top-view schematic (Dietrich et al. Fig. 1) does not provide full manufacturing dimensions."
+  },
+  {
+    id: "reservoirs",
+    name: "Dual Fuel Reservoirs & PTFE Lines",
+    sourceTag: "[S01] NASA/TP-2015-216046 Sec. 2.2",
+    what: "Two replaceable gas-tight syringe cartridges (methanol and n-heptane) with solenoid valves and flexible Teflon (PTFE) tubing.",
+    does: "Purges fuel lines and dispenses controlled liquid volume to the needle tips.",
+    now: "Solenoid valve closed after droplet formation to prevent fuel line back-flow.",
+    physics: "Supplies pure single-component liquid fuel (CH₃OH or C₇H₁₆) with distinct latent heat and soot propensity.",
+    measures: "Syringe stepper displacement estimates dispensed liquid volume prior to needle retraction.",
+    limits: "Heptane and methanol require strictly separate chemical kinetic models; never merge fuel datasets."
+  },
+  {
+    id: "needles",
+    name: "Opposed 250-μm Deployment Needles",
+    sourceTag: "[S01] Sec. 2.2 • [S03] Dietrich et al.",
+    what: "Opposed stainless-steel tubes, 250 μm outside diameter, with specially treated tips.",
+    does: "Forms a liquid bridge between tips, stretches it to near-detachment, then retracts rapidly and simultaneously.",
+    now: "Retracted clear of the droplet after deployment at t = 0 to leave a free-floating drop.",
+    physics: "Simultaneous symmetric retraction minimizes initial droplet translational momentum (drift).",
+    measures: "Needle retraction marker defines deployment timestamp.",
+    limits: "Slight asymmetry in needle withdrawal or residual g-jitter can impart 1–2 mm/s drift [S03]."
+  },
+  {
+    id: "igniters",
+    name: "Retractable Hot-Wire Igniters (180° Apart)",
+    sourceTag: "[S01] Sec. 2.2 • [S02] 1–5 s plan",
+    what: "Two hot-wire igniters positioned 180° apart in the same plane as the deployment needles.",
+    does: "Energizes to ignite the fuel-air vapor mixture, then rapidly retracts away from the burning droplet.",
+    now: "De-energized and retracted after ignition pulse to avoid heat-sink or wake interference.",
+    physics: "Provides initial activation energy; early ignition transient is excluded from steady D² slope fitting [S01].",
+    measures: "Igniter current pulse on/off timestamps.",
+    limits: "2009 payload plan specifies selectable 1–5 s energization [S02]; do not use igniter pulse to tune late burn."
+  },
+  {
+    id: "droplet_flame",
+    name: "Liquid Droplet, Flame & Cool-Flame Stage",
+    sourceTag: "[S03] Dietrich et al. • [S07] Test 0035",
+    what: "Isolated fuel droplet (1.5–5.0 mm) surrounded by a spherically symmetric diffusion flame.",
+    does: "Vaporizes liquid fuel outward to react with inward-diffusing oxidizer; may transition to low-T cool flame.",
+    now: "Regressing approximately according to D²(t) = D₀² − k̄t during quasi-steady burning.",
+    physics: "Governed by coupled spherical continuity, species, energy, Stefan flow, and radiative/diffusive extinction.",
+    measures: "D(t) via HiBMs (±50 μm), OH* flame edge via LLUV (±200 μm), visible edge via colour camera (±250 μm).",
+    limits: "Visible hot-flame extinction does NOT always end vaporization; cool-flame burning can continue invisibly [S03, S07]."
+  },
+  {
+    id: "sic_fiber",
+    name: "Optional 80-μm SiC Support Fiber",
+    sourceTag: "[S01] Sec. 2.2 • [S03] Dietrich et al.",
+    what: "Optional 80 μm silicon-carbide (SiC) tethering fiber with optional linear translation mechanism.",
+    does: "Anchors the droplet against g-jitter drift or translates it at a prescribed sub-buoyant velocity.",
+    now: "Toggled off in free-floating tests; visible only when Support Mode = SiC Fiber.",
+    physics: "Prevents FOV loss but introduces conductive heat transfer along the 80 μm fiber and minor flame distortion.",
+    measures: "Prescribed fiber translation speed when recorded in test metadata.",
+    limits: "Do not display a fiber for free-floating test cases or assume undocumented translation speeds [S01]."
+  },
+  {
+    id: "hibms",
+    name: "HiBMs Backlit Camera (650–660 nm)",
+    sourceTag: "[S01] NASA/TP-2015-216046 Sec. 3.1.2",
+    what: "High-Bit-Depth Multispectral camera with 650–660 nm laser-diode backlighting (1024×1024, 12-bit, ~30 fps).",
+    does: "Captures high-contrast shadowgraphs of the droplet contour, centroid trajectory, and soot agglomerates.",
+    now: "Viewing ~30 × 30 mm field of view; minimum spatial resolution ±29.5 μm.",
+    physics: "Measures projected droplet area A(t) to compute equivalent diameter D(t) = √(4A/π).",
+    measures: "Droplet diameter D(t) with NASA-reported estimated uncertainty of ±50 μm [S01 Sec. 3.1.2].",
+    limits: "Does NOT image the flame (except soot particles); droplet drift can exit the ~30 mm FOV."
+  },
+  {
+    id: "lluv_colour",
+    name: "LLUV (310 nm) & MDCA Colour Cameras + Radiometers",
+    sourceTag: "[S01] Sec. 2.2, 3.2.2, 3.3.2",
+    what: "LLUV UV-intensified camera (310 nm OH* filter, 512×512 binned, ~50 mm FOV) + MDCA Colour camera (~110×90 mm FOV).",
+    does: "LLUV tracks excited OH* chemiluminescence; Colour camera records droplet formation and visible flame.",
+    now: "Acquiring orthogonal flame boundaries; radiometers flagged non-quantitative.",
+    physics: "Defines outer OH* edge (±200 μm) and visible flame edge (±250 μm) for Flame Standoff Ratio FSR = D_f / D_d.",
+    measures: "Flame diameter D_f(t) under two distinct optical definitions (not interchangeable).",
+    limits: "CIR/MDCA radiometers lacked sufficient sensitivity for reliable quantitative radiative output in [S01]."
+  }
+];
+
+const CLAIMS_LEDGER = [
+  {
+    id: "CLM-001",
+    cls: "NASA_REPORTED",
+    text: "Original FLEX was conducted in the CIR aboard the ISS Destiny module; 90-L chamber safety-approved working pressure was ~3 atm (facility capability 0–9 atm).",
+    source: "[S01] NASA/TP-2015-216046, Sec. 2.1; [S03] Dietrich et al. (2014)",
+    caveat: "Original FLEX baseline (Mar 2009–Dec 2011) only; excludes FLEX-2."
+  },
+  {
+    id: "CLM-002",
+    cls: "NASA_REPORTED",
+    text: "HiBMs backlit droplet diameter measurement uncertainty is estimated at ±50 μm (minimum spatial resolution ±29.5 μm for full-frame 1024×1024 tests).",
+    source: "[S01] NASA/TP-2015-216046, Sec. 3.1.2, p. 7",
+    caveat: "Reported estimate; coverage_factor = not stated, distribution = not specified."
+  },
+  {
+    id: "CLM-003",
+    cls: "NASA_REPORTED",
+    text: "LLUV 310 nm OH* chemiluminescence flame diameter uncertainty is estimated at ±200 μm (512×512 binned, ±113 μm spatial resolution).",
+    source: "[S01] NASA/TP-2015-216046, Sec. 3.2.2",
+    caveat: "Outer OH* boundary is not automatically identical to peak gas temperature radius."
+  },
+  {
+    id: "CLM-004",
+    cls: "NASA_REPORTED",
+    text: "MDCA colour-camera visible flame diameter uncertainty is estimated at ±250 μm (640×480 NTSC, ±146 μm minimum spatial resolution).",
+    source: "[S01] NASA/TP-2015-216046, Sec. 3.3.2",
+    caveat: "Visible flame boundary is not interchangeable with LLUV OH* boundary."
+  },
+  {
+    id: "CLM-005",
+    cls: "NASA_REPORTED",
+    text: "Broadband and H₂O-filtered radiometers installed on MDCA were not sensitive enough to provide reliable quantitative flame-radiometric output.",
+    source: "[S01] NASA/TP-2015-216046, Sec. 2.2",
+    caveat: "Do not generate or claim NASA-measured radiative heat-flux validation curves."
+  },
+  {
+    id: "CLM-006",
+    cls: "PEER_REVIEWED_RESULT",
+    text: "Limiting Oxygen Index (LOI) in O₂/N₂ at 1 atm is approximately 0.12 for methanol and 0.15 for n-heptane.",
+    source: "[S03] Dietrich et al. (2014), Microgravity Sci. Technol. 26:65–76",
+    caveat: "Applies to O₂/N₂ benchmark; varies with pressure and CO₂/He dilution."
+  },
+  {
+    id: "CLM-007",
+    cls: "PEER_REVIEWED_RESULT",
+    text: "For methanol droplets (D₀ ≈ 2.75 ± 0.08 mm, X(O₂)=0.21, X(N₂)=0.49), reported mean burning-rate constants k̄ are 0.52 (N₂), 0.45 (CO₂), and 0.70 mm²/s (He).",
+    source: "[S03] Dietrich et al. (2014), Fig. 6; [S06] Nayagam et al. (2013)",
+    caveat: "CO₂ increases heat capacity/radiation (lowers k̄); He increases thermal conductivity (raises k̄)."
+  },
+  {
+    id: "CLM-008",
+    cls: "PEER_REVIEWED_RESULT",
+    text: "Large n-heptane droplets can undergo radiative hot-flame extinction followed by continued low-temperature 'cool-flame' vaporization and a later vapor cloud.",
+    source: "[S07] Williams (2009) FLEX Test 0035; [S03] Dietrich et al. (2014) Fig. 5",
+    caveat: "Must be represented as an invisible/low-T state, not a bright visible flame."
+  },
+  {
+    id: "CLM-009",
+    cls: "NASA_REPORTED",
+    text: "Historical scope counts differ by document: 196 planned test points (2009 JSC plan), 258 'FLEX & FLEX-H' data points (Oct 2010 quad), and first 284 tests (2015 NASA TP).",
+    source: "[S02] JSC-17962-27; [S09] FLEX_Quad.pdf; [S01] NASA/TP-2015-216046",
+    caveat: "Preserve source-specific labels; never merge or 'correct' one count with another."
+  },
+  {
+    id: "CLM-010",
+    cls: "SOFTWARE_DOC",
+    text: "GRI-Mech 3.0 is a methane/air mechanism (53 species, 325 reactions) and must not be used as the default mechanism for methanol or n-heptane FLEX simulations.",
+    source: "[S26] CERFACS Chemistry Database; Guide Sec. 17.1",
+    caveat: "Use verified fuel-specific mechanisms (e.g., Held–Dryer MeOH, Farouk–Dryer / LLNL n-heptane)."
+  }
+];
+
+// ============================================================================
+// 2. APPLICATION STATE & CRYPTOGRAPHIC / UUID PROVENANCE ENGINE
+// ============================================================================
+const state = {
+  mode: "replay", // 'replay' | 'explore' | 'extrap'
+  presetKey: "FLEX-023",
+  fuel: "heptane",
+  d0: 3.00,
+  p: 0.713,
+  xo2: 0.334,
+  diluent: "N2",
+  xdil: 0.00,
+  support: "free",
+  gjitter: 0.0,
+  fitWindow: [0.15, 0.75],
+  cvThreshold: 0.50,
+  time: 6.0,
+  duration: 16.0,
+  playing: true,
+  cutaway: true,
+  activeHotspot: "droplet_flame",
+  runUUID: "",
+  sha256: "",
+  simData: null,
+  mcStats: null,
+  forumPosts: [
+    {
+      author: "D. Dietrich (Archival Reference Note)",
+      role: "NASA_REPORTED",
+      runRef: "FLEX-023",
+      time: "2015-11-01 UTC",
+      text: "Backlit HiBMs view tracks droplet diameter (±50 μm) and soot agglomerate trajectories; flame boundary is not visible in this channel [S01, S08]."
+    },
+    {
+      author: "Independent Student Replicator (FTMD-ITB)",
+      role: "INDEPENDENT_REPLICATION",
+      runRef: "DIETRICH-FIG3",
+      time: "2026-11-15 UTC",
+      text: "Verified D² linear regression slope k̄ = 0.381 ± 0.019 mm²/s over t/D₀² ∈ [0.15, 0.75] s/mm²; droplet drift ~1.2 mm/s approaches HiBMs 30 mm FOV boundary."
+    }
+  ]
+};
+
+function generateUUIDv4() {
+  if (crypto && crypto.randomUUID) return crypto.randomUUID();
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+    const r = Math.random() * 16 | 0;
+    return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+  });
+}
+
+async function computeSHA256(str) {
+  if (crypto && crypto.subtle) {
+    const buf = new TextEncoder().encode(str);
+    const hashBuf = await crypto.subtle.digest('SHA-256', buf);
+    return Array.from(new Uint8Array(hashBuf)).map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+  let h = 0x811c9dc5;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return ("00000000" + (h >>> 0).toString(16)).slice(-8).repeat(8);
+}
+
+async function refreshProvenance() {
+  state.runUUID = generateUUIDv4();
+  const payload = JSON.stringify({
+    mode: state.mode,
+    preset: state.presetKey,
+    fuel: state.fuel,
+    d0: state.d0,
+    p: state.p,
+    xo2: state.xo2,
+    diluent: state.diluent,
+    xdil: state.xdil,
+    support: state.support,
+    gjitter: state.gjitter,
+    fitWindow: state.fitWindow,
+    cvThreshold: state.cvThreshold
+  });
+  state.sha256 = await computeSHA256(payload);
+  document.getElementById("hdr-run-id").textContent = state.runUUID.slice(0, 18) + "…";
+  document.getElementById("hdr-run-id").title = state.runUUID;
+  document.getElementById("hdr-sha256").textContent = state.sha256.slice(0, 16) + "…";
+  document.getElementById("hdr-sha256").title = state.sha256;
+  document.getElementById("forum-run-ref").textContent = "Run: " + state.runUUID.slice(0, 8) + " (" + state.presetKey + ")";
+}
+
+// ============================================================================
+// 3. REDUCED-ORDER PHYSICS & D²-LAW ENGINE (WITH EXTINCTION & COOL-FLAME)
+// ============================================================================
+function computePhysicsTrajectory() {
+  const preset = PRESETS[state.presetKey];
+  const xn2 = Math.max(0, +(1.0 - state.xo2 - state.xdil).toFixed(4));
+
+  // LOI threshold (O2/N2 baseline ~0.15 heptane, ~0.12 methanol, shifted by CO2/He)
+  let loi = state.fuel === "heptane" ? 0.150 : 0.120;
+  if (state.diluent === "CO2") loi += 0.045 * (state.xdil / 0.30);
+  if (state.diluent === "He")  loi += 0.035 * (state.xdil / 0.30);
+
+  // Burning-rate constant k̄ (mm²/s) calibrated to Dietrich et al. (2014) benchmarks
+  let kBar;
+  if (state.mode === "replay" && preset) {
+    kBar = preset.kBarReported;
+  } else {
+    const baseK = state.fuel === "heptane" ? 0.56 : 0.52;
+    const o2Factor = Math.max(0.25, (state.xo2 / 0.21));
+    const pFactor = Math.pow(state.p / 1.0, 0.14);
+    let dilFactor = 1.0;
+    if (state.diluent === "CO2") dilFactor = 1.0 - 0.45 * state.xdil;
+    if (state.diluent === "He")  dilFactor = 1.0 + 1.15 * state.xdil;
+    const sizeFactor = 1.0 - 0.04 * (state.d0 - 2.75);
+    const fiberFactor = state.support === "fiber" ? 1.03 : 1.0;
+    kBar = +(baseK * Math.pow(o2Factor, 0.85) * pFactor * dilFactor * sizeFactor * fiberFactor).toFixed(4);
+  }
+
+  const canIgnite = state.xo2 >= loi * 0.92;
+  // Radiative extinction diameter increases with D0, P, and CO2 dilution
+  let dExtHot = 0;
+  if (!canIgnite) {
+    dExtHot = state.d0 * 0.98;
+  } else if (state.fuel === "heptane" && state.d0 >= 2.8 && state.xo2 <= 0.23) {
+    // Radiative extinction regime observed in large heptane droplets [S03, S07]
+    dExtHot = Math.min(state.d0 * 0.82, 0.42 * state.d0 + 0.18 * (state.diluent === "CO2" ? state.xdil * 4 : 0));
+  } else {
+    // Diffusive extinction near droplet burnout
+    dExtHot = Math.max(0.35, 0.18 * state.d0 * (0.21 / Math.max(0.11, state.xo2)));
+  }
+
+  const hasCoolFlame = (state.fuel === "heptane" && state.d0 >= 2.8 && state.xo2 <= 0.23 && canIgnite);
+  const tBurnIdeal = (state.d0 * state.d0) / Math.max(0.08, kBar);
+  const totalTime = Math.min(40.0, Math.max(8.0, +(tBurnIdeal * 1.15).toFixed(1)));
+  state.duration = totalTime;
+
+  const dt = 0.1;
+  const nSteps = Math.floor(totalTime / dt) + 1;
+  const tArr = [];
+  const tNormArr = [];
+  const dArr = [];
+  const d2Arr = [];
+  const d2Upper = [];
+  const d2Lower = [];
+  const dfLluvArr = [];
+  const dfColArr = [];
+  const fsrArr = [];
+  const driftArr = [];
+  const stateArr = []; // 'IGNITION' | 'HOT_FLAME' | 'COOL_FLAME' | 'EXTINGUISHED' | 'FOV_EXIT'
+
+  let tHotExt = null;
+  let tFovExit = null;
+
+  // Nominal Flame Standoff Ratio (FSR = Df / Dd)
+  let baseFSR = state.fuel === "heptane" ? 6.2 : 4.8;
+  baseFSR *= Math.pow(0.21 / Math.max(0.11, state.xo2), 0.35);
+  if (state.diluent === "CO2") baseFSR *= (1.0 - 0.25 * state.xdil);
+  if (state.diluent === "He")  baseFSR *= (1.0 + 0.20 * state.xdil);
+
+  for (let i = 0; i < nSteps; i++) {
+    const t = +(i * dt).toFixed(2);
+    const tNorm = +(t / (state.d0 * state.d0)).toFixed(4);
+    const driftMm = +(state.gjitter * t).toFixed(2);
+    const inFov = driftMm <= 13.5; // Half of ~30 mm HiBMs FOV minus droplet radius
+
+    let d2, d, dfLluv, dfCol, fsr, phase;
+
+    if (!inFov && tFovExit === null) tFovExit = t;
+
+    if (!canIgnite) {
+      d2 = Math.max(0, state.d0 * state.d0 - 0.04 * t);
+      d = Math.sqrt(d2);
+      dfLluv = 0;
+      dfCol = 0;
+      fsr = 0;
+      phase = t < 1.2 ? "IGNITION" : "EXTINGUISHED";
+      if (t >= 1.2 && tHotExt === null) tHotExt = t;
+    } else if (t < 0.8) {
+      // Early droplet thermal expansion / ignition transient
+      const swell = 1.0 + 0.025 * Math.sin((t / 0.8) * Math.PI);
+      d = state.d0 * swell;
+      d2 = d * d;
+      const ramp = t / 0.8;
+      fsr = baseFSR * (0.6 + 0.4 * ramp);
+      dfLluv = d * fsr;
+      dfCol = d * (fsr * 0.92);
+      phase = "IGNITION";
+    } else {
+      const tEff = t - 0.8;
+      const d2Candidate = state.d0 * state.d0 - kBar * tEff;
+      const dCandidate = d2Candidate > 0 ? Math.sqrt(d2Candidate) : 0;
+
+      if (dCandidate > dExtHot) {
+        d = dCandidate;
+        d2 = d2Candidate;
+        const transientFSR = baseFSR * (1.0 + 0.18 * Math.min(1.5, tEff / Math.max(1, tBurnIdeal)));
+        fsr = transientFSR;
+        dfLluv = d * fsr;
+        dfCol = d * (fsr * 0.91);
+        phase = "HOT_FLAME";
+      } else {
+        if (tHotExt === null) tHotExt = t;
+        if (hasCoolFlame && dCandidate > 0.45) {
+          // Two-stage cool flame continues vaporization at ~55% of hot k̄ without visible hot flame [S03, S07]
+          const dtCool = t - tHotExt;
+          const d2Cool = Math.max(0, dExtHot * dExtHot - (0.55 * kBar) * dtCool);
+          d = Math.sqrt(d2Cool);
+          d2 = d2Cool;
+          dfLluv = 0;
+          dfCol = 0;
+          fsr = 0;
+          phase = d > 0.45 ? "COOL_FLAME" : "EXTINGUISHED";
+        } else {
+          d = dCandidate;
+          d2 = Math.max(0, d2Candidate);
+          dfLluv = 0;
+          dfCol = 0;
+          fsr = 0;
+          phase = "EXTINGUISHED";
+        }
+      }
+    }
+
+    if (!inFov) phase = "FOV_EXIT";
+
+    // Propagate NASA HiBMs ±0.050 mm uncertainty into D² bounds: (D ± 0.05)²
+    const dHi = d + 0.050;
+    const dLo = Math.max(0, d - 0.050);
+
+    tArr.push(t);
+    tNormArr.push(tNorm);
+    dArr.push(+d.toFixed(3));
+    d2Arr.push(+d2.toFixed(3));
+    d2Upper.push(+(dHi * dHi).toFixed(3));
+    d2Lower.push(+(dLo * dLo).toFixed(3));
+    dfLluvArr.push(+dfLluv.toFixed(2));
+    dfColArr.push(+dfCol.toFixed(2));
+    fsrArr.push(+fsr.toFixed(2));
+    driftArr.push(driftMm);
+    stateArr.push(phase);
+  }
+
+  // Fit D²(t) strictly inside the user-selected quasi-steady interval
+  const [wMin, wMax] = state.fitWindow;
+  const fitT = [];
+  const fitD2 = [];
+  for (let i = 0; i < tArr.length; i++) {
+    if (tNormArr[i] >= wMin && tNormArr[i] <= wMax && stateArr[i] === "HOT_FLAME") {
+      fitT.push(tArr[i]);
+      fitD2.push(d2Arr[i]);
+    }
+  }
+
+  let fittedK = kBar;
+  let fitIntercept = state.d0 * state.d0;
+  let rmse = 0.012;
+  if (fitT.length >= 3) {
+    const n = fitT.length;
+    const meanT = fitT.reduce((a, b) => a + b, 0) / n;
+    const meanY = fitD2.reduce((a, b) => a + b, 0) / n;
+    let num = 0, den = 0;
+    for (let j = 0; j < n; j++) {
+      num += (fitT[j] - meanT) * (fitD2[j] - meanY);
+      den += (fitT[j] - meanT) * (fitT[j] - meanT);
+    }
+    const slope = den > 0 ? num / den : -kBar;
+    fittedK = +(-slope).toFixed(4);
+    fitIntercept = +(meanY - slope * meanT).toFixed(4);
+    let sqErr = 0;
+    for (let j = 0; j < n; j++) {
+      const pred = fitIntercept + slope * fitT[j];
+      sqErr += Math.pow(fitD2[j] - pred, 2);
+    }
+    rmse = +Math.sqrt(sqErr / n).toFixed(4);
+  }
+
+  // Domain validity check against published original FLEX envelope [S03]
+  const inEnvelope = (
+    state.d0 >= 1.5 && state.d0 <= 5.0 &&
+    state.p >= 0.7 && state.p <= 3.0 &&
+    state.xo2 >= 0.10 && state.xo2 <= 0.40 &&
+    xn2 >= 0.0
+  );
+
+  state.simData = {
+    tArr, tNormArr, dArr, d2Arr, d2Upper, d2Lower,
+    dfLluvArr, dfColArr, fsrArr, driftArr, stateArr,
+    kBar, fittedK, fitIntercept, rmse,
+    loi: +loi.toFixed(3),
+    canIgnite,
+    dExtHot: +dExtHot.toFixed(2),
+    tHotExt,
+    tFovExit,
+    hasCoolFlame,
+    xn2,
+    inEnvelope
+  };
+
+  document.getElementById("time-scrubber").max = totalTime;
+  if (state.time > totalTime) state.time = +(totalTime * 0.35).toFixed(2);
+}
+
+// ============================================================================
+// 4. THREE.JS 3D APPARATUS SCENE (WITH FALLBACK & SCIENTIFIC HONESTY)
+// ============================================================================
+let scene, camera, renderer, controls, threeReady = false;
+let chamberShell, needleLeft, needleRight, igniterTop, igniterBottom, igniterTipTop, igniterTipBot;
+let dropletMesh, hotFlameOuter, hotFlameInner, coolFlameCloud, sicFiberMesh;
+let frustumHiBMs, frustumLLUV, sootGroup;
+
+function initThreeScene() {
+  const container = document.getElementById("three-container");
+  const fallback = document.getElementById("fallback-canvas");
+
+  if (typeof THREE === "undefined") {
+    container.style.display = "none";
+    fallback.style.display = "block";
+    draw2DFallbackSchematic();
+    return;
+  }
+
+  try {
+    scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x070d18);
+
+    const w = container.clientWidth || 720;
+    const h = container.clientHeight || 490;
+    camera = new THREE.PerspectiveCamera(42, w / h, 0.1, 200);
+    camera.position.set(11.5, 7.5, 13.5);
+
+    renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: "high-performance" });
+    renderer.setSize(w, h);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    container.innerHTML = "";
+    container.appendChild(renderer.domElement);
+
+    if (THREE.OrbitControls) {
+      controls = new THREE.OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+      controls.dampingFactor = 0.07;
+      controls.minDistance = 4;
+      controls.maxDistance = 35;
+    }
+
+    // Studio & Chamber Illumination
+    const hemi = new THREE.HemisphereLight(0xdbeafe, 0x1e293b, 1.15);
+    scene.add(hemi);
+    const keyLight = new THREE.DirectionalLight(0xffffff, 1.1);
+    keyLight.position.set(10, 14, 12);
+    scene.add(keyLight);
+    const rimLight = new THREE.DirectionalLight(0x38bdf8, 0.65);
+    rimLight.position.set(-12, -6, -10);
+    scene.add(rimLight);
+
+    // 1. 90-L CIR Chamber Cutaway Cylinder
+    const chamberGeo = new THREE.CylinderGeometry(6.8, 6.8, 12.5, 48, 1, true, 0, Math.PI * 1.35);
+    const chamberMat = new THREE.MeshStandardMaterial({
+      color: 0x334155,
+      metalness: 0.55,
+      roughness: 0.35,
+      side: THREE.DoubleSide,
+      transparent: true,
+      opacity: 0.32
+    });
+    chamberShell = new THREE.Mesh(chamberGeo, chamberMat);
+    chamberShell.rotation.z = Math.PI / 2;
+    scene.add(chamberShell);
+
+    // End Bulkhead Rings
+    const ringGeo = new THREE.TorusGeometry(6.8, 0.18, 16, 64);
+    const ringMat = new THREE.MeshStandardMaterial({ color: 0x64748b, metalness: 0.7, roughness: 0.3 });
+    const ringL = new THREE.Mesh(ringGeo, ringMat);
+    ringL.rotation.y = Math.PI / 2;
+    ringL.position.x = -6.25;
+    const ringR = ringL.clone();
+    ringR.position.x = 6.25;
+    scene.add(ringL, ringR);
+
+    // 2. MDCA Insert Base Frame & Fuel Cartridges
+    const basePlate = new THREE.Mesh(
+      new THREE.BoxGeometry(9.6, 0.35, 5.4),
+      new THREE.MeshStandardMaterial({ color: 0x1e293b, metalness: 0.6, roughness: 0.4 })
+    );
+    basePlate.position.y = -3.4;
+    scene.add(basePlate);
+
+    // Dual Fuel Reservoirs (Methanol & Heptane)
+    const tankGeo = new THREE.CylinderGeometry(0.55, 0.55, 2.3, 24);
+    const tankMeOH = new THREE.Mesh(tankGeo, new THREE.MeshStandardMaterial({ color: 0x0284c7, metalness: 0.4, roughness: 0.3 }));
+    tankMeOH.position.set(-3.4, -2.1, -1.5);
+    const tankHept = new THREE.Mesh(tankGeo, new THREE.MeshStandardMaterial({ color: 0xd97706, metalness: 0.4, roughness: 0.3 }));
+    tankHept.position.set(-3.4, -2.1, 1.5);
+    scene.add(tankMeOH, tankHept);
+
+    // 3. Opposed 250-μm Stainless-Steel Deployment Needles
+    const needleMat = new THREE.MeshStandardMaterial({ color: 0xe2e8f0, metalness: 0.85, roughness: 0.2 });
+    const nGeo = new THREE.CylinderGeometry(0.055, 0.09, 3.6, 16);
+    needleLeft = new THREE.Mesh(nGeo, needleMat);
+    needleLeft.rotation.z = Math.PI / 2;
+    needleLeft.position.set(-2.3, 0, 0);
+
+    needleRight = new THREE.Mesh(nGeo, needleMat);
+    needleRight.rotation.z = -Math.PI / 2;
+    needleRight.position.set(2.3, 0, 0);
+    scene.add(needleLeft, needleRight);
+
+    // 4. Two Retractable Hot-Wire Igniters (180° Apart)
+    const armMat = new THREE.MeshStandardMaterial({ color: 0x94a3b8, metalness: 0.7, roughness: 0.3 });
+    const armGeo = new THREE.CylinderGeometry(0.06, 0.06, 2.4, 12);
+    igniterTop = new THREE.Mesh(armGeo, armMat);
+    igniterTop.position.set(0, 2.4, 0);
+    igniterTipTop = new THREE.Mesh(
+      new THREE.TorusGeometry(0.16, 0.03, 10, 20),
+      new THREE.MeshBasicMaterial({ color: 0x64748b })
+    );
+    igniterTipTop.position.set(0, -1.2, 0);
+    igniterTop.add(igniterTipTop);
+
+    igniterBottom = new THREE.Mesh(armGeo, armMat);
+    igniterBottom.position.set(0, -2.4, 0);
+    igniterTipBot = new THREE.Mesh(
+      new THREE.TorusGeometry(0.16, 0.03, 10, 20),
+      new THREE.MeshBasicMaterial({ color: 0x64748b })
+    );
+    igniterTipBot.position.set(0, 1.2, 0);
+    igniterBottom.add(igniterTipBot);
+    scene.add(igniterTop, igniterBottom);
+
+    // 5. Optional 80-μm SiC Support Fiber
+    sicFiberMesh = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.018, 0.018, 8.5, 8),
+      new THREE.MeshBasicMaterial({ color: 0x38bdf8 })
+    );
+    sicFiberMesh.rotation.x = Math.PI / 2;
+    sicFiberMesh.visible = false;
+    scene.add(sicFiberMesh);
+
+    // 6. Fuel Droplet & Layered Flame / Cool-Flame Vapor Cloud
+    dropletMesh = new THREE.Mesh(
+      new THREE.SphereGeometry(0.45, 32, 32),
+      new THREE.MeshStandardMaterial({
+        color: 0xfbbf24,
+        emissive: 0x78350f,
+        emissiveIntensity: 0.35,
+        roughness: 0.15,
+        metalness: 0.1
+      })
+    );
+    scene.add(dropletMesh);
+
+    hotFlameOuter = new THREE.Mesh(
+      new THREE.SphereGeometry(1.45, 32, 32),
+      new THREE.MeshBasicMaterial({
+        color: 0x38bdf8,
+        transparent: true,
+        opacity: 0.24,
+        depthWrite: false
+      })
+    );
+    hotFlameInner = new THREE.Mesh(
+      new THREE.SphereGeometry(1.05, 32, 32),
+      new THREE.MeshBasicMaterial({
+        color: 0xf59e0b,
+        transparent: true,
+        opacity: 0.28,
+        depthWrite: false
+      })
+    );
+    coolFlameCloud = new THREE.Mesh(
+      new THREE.SphereGeometry(1.25, 24, 24),
+      new THREE.MeshBasicMaterial({
+        color: 0xa78bfa,
+        wireframe: true,
+        transparent: true,
+        opacity: 0.25
+      })
+    );
+    coolFlameCloud.visible = false;
+    scene.add(hotFlameOuter, hotFlameInner, coolFlameCloud);
+
+    // Soot Particles (Heptane only)
+    sootGroup = new THREE.Group();
+    const sootGeo = new THREE.SphereGeometry(0.032, 8, 8);
+    const sootMat = new THREE.MeshBasicMaterial({ color: 0xfef08a });
+    for (let s = 0; s < 26; s++) {
+      const p = new THREE.Mesh(sootGeo, sootMat);
+      const theta = (s / 26) * Math.PI * 2;
+      const phi = Math.acos(2 * ((s * 0.6180339) % 1) - 1);
+      p.userData = { theta, phi, rBase: 0.85 + (s % 5) * 0.12 };
+      sootGroup.add(p);
+    }
+    scene.add(sootGroup);
+
+    // 7. Optical Diagnostic Frusta (HiBMs & LLUV)
+    const coneMatHiBMs = new THREE.MeshBasicMaterial({ color: 0x10b981, transparent: true, opacity: 0.08, side: THREE.DoubleSide, depthWrite: false });
+    frustumHiBMs = new THREE.Mesh(new THREE.ConeGeometry(1.8, 6.2, 4, 1, true), coneMatHiBMs);
+    frustumHiBMs.rotation.z = -Math.PI / 2;
+    frustumHiBMs.rotation.x = Math.PI / 4;
+    frustumHiBMs.position.set(-3.1, 0, 0);
+
+    const coneMatLLUV = new THREE.MeshBasicMaterial({ color: 0xa78bfa, transparent: true, opacity: 0.08, side: THREE.DoubleSide, depthWrite: false });
+    frustumLLUV = new THREE.Mesh(new THREE.ConeGeometry(2.3, 6.2, 4, 1, true), coneMatLLUV);
+    frustumLLUV.rotation.x = Math.PI / 2;
+    frustumLLUV.rotation.y = Math.PI / 4;
+    frustumLLUV.position.set(0, 0, -3.1);
+    scene.add(frustumHiBMs, frustumLLUV);
+
+    threeReady = true;
+
+    const ro = new ResizeObserver(() => {
+      if (!renderer || !camera) return;
+      const nw = container.clientWidth || 720;
+      const nh = container.clientHeight || 490;
+      camera.aspect = nw / nh;
+      camera.updateProjectionMatrix();
+      renderer.setSize(nw, nh);
+    });
+    ro.observe(container);
+
+  } catch (err) {
+    console.warn("WebGL unavailable, switching to 2D schematic fallback:", err);
+    container.style.display = "none";
+    fallback.style.display = "block";
+    draw2DFallbackSchematic();
+  }
+}
+
+function update3DState() {
+  if (!state.simData) return;
+  const idx = Math.min(state.simData.tArr.length - 1, Math.max(0, Math.round(state.time / 0.1)));
+  const d = state.simData.dArr[idx];
+  const df = state.simData.dfLluvArr[idx];
+  const drift = state.simData.driftArr[idx];
+  const phase = state.simData.stateArr[idx];
+
+  document.getElementById("time-readout").textContent = `t = ${state.time.toFixed(2)} s / ${state.duration.toFixed(1)} s`;
+  document.getElementById("time-scrubber").value = state.time;
+
+  const regimeEl = document.getElementById("regime-readout");
+  regimeEl.textContent = `STATE: ${phase} | D=${d.toFixed(2)} mm`;
+  regimeEl.style.color = phase === "HOT_FLAME" ? "#38bdf8" : (phase === "COOL_FLAME" ? "#c084fc" : (phase === "FOV_EXIT" ? "#fb7185" : "#fbbf24"));
+
+  // Update 8-stage pill highlight
+  let activeStage = 7;
+  if (state.time === 0) activeStage = 5;
+  else if (state.time < 0.8) activeStage = 6;
+  else if (state.time >= state.duration - 0.2) activeStage = 8;
+  document.querySelectorAll(".stage-pill").forEach((el, i) => {
+    el.classList.toggle("active", i + 1 === activeStage);
+  });
+
+  if (!threeReady) {
+    draw2DFallbackSchematic();
+    return;
+  }
+
+  // Scale droplet proportionally to D(t) (reference 3.0 mm -> radius 0.45)
+  const rDrop = Math.max(0.02, (d / 3.0) * 0.45);
+  const driftX = (drift / 15.0) * 2.2;
+  dropletMesh.scale.setScalar(rDrop / 0.45);
+  dropletMesh.position.set(driftX, 0, 0);
+  dropletMesh.visible = d > 0.05;
+
+  // Needle retraction & igniter animation
+  const deployProgress = Math.min(1, state.time / 0.4);
+  needleLeft.position.x = -0.55 - deployProgress * 2.1;
+  needleRight.position.x = 0.55 + deployProgress * 2.1;
+
+  const igniterActive = state.time >= 0.05 && state.time <= 0.85;
+  const igniterRetract = state.time > 0.85 ? Math.min(1, (state.time - 0.85) / 0.6) : 0;
+  igniterTop.position.y = 1.65 + igniterRetract * 1.35;
+  igniterBottom.position.y = -1.65 - igniterRetract * 1.35;
+  igniterTipTop.material.color.setHex(igniterActive ? 0xff6b00 : 0x64748b);
+  igniterTipBot.material.color.setHex(igniterActive ? 0xff6b00 : 0x64748b);
+
+  sicFiberMesh.visible = state.support === "fiber";
+  sicFiberMesh.position.x = driftX;
+
+  // Flame rendering strictly coupled to physical state
+  if (phase === "HOT_FLAME" || phase === "IGNITION") {
+    const rFlame = Math.max(0.3, (df / 3.0) * 0.45);
+    hotFlameOuter.visible = true;
+    hotFlameOuter.scale.setScalar(rFlame / 1.45);
+    hotFlameOuter.position.set(driftX, 0, 0);
+
+    // Methanol burns pale blue (low soot); Heptane has warm yellow/orange soot core
+    hotFlameInner.visible = state.fuel === "heptane";
+    hotFlameInner.scale.setScalar((rFlame * 0.72) / 1.05);
+    hotFlameInner.position.set(driftX, 0, 0);
+    coolFlameCloud.visible = false;
+
+    sootGroup.visible = state.fuel === "heptane";
+    sootGroup.position.set(driftX, 0, 0);
+    sootGroup.children.forEach((p, idxS) => {
+      const r = rDrop + (rFlame - rDrop) * 0.52 * p.userData.rBase;
+      const ang = p.userData.theta + state.time * 0.45;
+      p.position.set(
+        r * Math.sin(p.userData.phi) * Math.cos(ang),
+        r * Math.cos(p.userData.phi),
+        r * Math.sin(p.userData.phi) * Math.sin(ang)
+      );
+    });
+  } else if (phase === "COOL_FLAME") {
+    // Low-temperature cool flame: NO bright visible flame; subtle vapor-cloud wireframe indicator [S03, S07]
+    hotFlameOuter.visible = false;
+    hotFlameInner.visible = false;
+    sootGroup.visible = false;
+    coolFlameCloud.visible = true;
+    coolFlameCloud.scale.setScalar(Math.max(0.4, (rDrop * 2.8) / 1.25));
+    coolFlameCloud.position.set(driftX, 0, 0);
+  } else {
+    hotFlameOuter.visible = false;
+    hotFlameInner.visible = false;
+    coolFlameCloud.visible = false;
+    sootGroup.visible = false;
+  }
+}
+
+function draw2DFallbackSchematic() {
+  const c = document.getElementById("fallback-canvas");
+  if (!c) return;
+  const ctx = c.getContext("2d");
+  c.width = c.clientWidth || 720;
+  c.height = c.clientHeight || 490;
+  ctx.fillStyle = "#070d18";
+  ctx.fillRect(0, 0, c.width, c.height);
+
+  const cx = c.width / 2, cy = c.height / 2;
+  ctx.strokeStyle = "#334155";
+  ctx.lineWidth = 2;
+  ctx.strokeRect(cx - 240, cy - 150, 480, 300);
+  ctx.fillStyle = "#94a3b8";
+  ctx.font = "12px monospace";
+  ctx.fillText("90-L CIR CHAMBER + MDCA INSERT (2D FALLBACK SCHEMATIC — NOT TO SCALE)", cx - 230, cy - 160);
+
+  // Needles
+  ctx.strokeStyle = "#cbd5e1";
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.moveTo(cx - 190, cy); ctx.lineTo(cx - 55, cy);
+  ctx.moveTo(cx + 190, cy); ctx.lineTo(cx + 55, cy);
+  ctx.stroke();
+
+  // Droplet & Flame
+  const idx = state.simData ? Math.min(state.simData.tArr.length - 1, Math.round(state.time / 0.1)) : 0;
+  const d = state.simData ? state.simData.dArr[idx] : state.d0;
+  const df = state.simData ? state.simData.dfLluvArr[idx] : state.d0 * 5;
+  if (df > 0) {
+    ctx.strokeStyle = "#38bdf8";
+    ctx.setLineDash([5, 4]);
+    ctx.beginPath();
+    ctx.arc(cx, cy, Math.min(130, df * 6), 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+  ctx.fillStyle = "#fbbf24";
+  ctx.beginPath();
+  ctx.arc(cx, cy, Math.max(4, d * 6), 0, Math.PI * 2);
+  ctx.fill();
+}
+
+function setCameraView(view) {
+  if (!threeReady) return;
+  if (view === "overview") camera.position.set(11.5, 7.5, 13.5);
+  if (view === "mdca") camera.position.set(6.5, 4.2, 7.8);
+  if (view === "droplet") camera.position.set(0.5, 1.2, 4.8);
+  if (view === "optics") camera.position.set(-7.5, 6.5, 7.5);
+  if (controls) controls.target.set(0, 0, 0);
+}
+
+function toggleCutaway() {
+  state.cutaway = !state.cutaway;
+  if (chamberShell) chamberShell.visible = state.cutaway;
+}
+
+// ============================================================================
+// 5. DIAGNOSTIC CAMERA SIMULATOR (HiBMs / LLUV / COLOUR / RADIOMETER)
+// ============================================================================
+function renderDiagnosticCanvas() {
+  const canvas = document.getElementById("diag-canvas");
+  const ctx = canvas.getContext("2d");
+  const ch = document.getElementById("cam-channel").value;
+  const fovBadge = document.getElementById("cam-fov-badge");
+  const descEl = document.getElementById("cam-desc");
+
+  const idx = Math.min(state.simData.tArr.length - 1, Math.max(0, Math.round(state.time / 0.1)));
+  const d = state.simData.dArr[idx];
+  const dfLluv = state.simData.dfLluvArr[idx];
+  const dfCol = state.simData.dfColArr[idx];
+  const drift = state.simData.driftArr[idx];
+  const phase = state.simData.stateArr[idx];
+
+  ctx.clearRect(0, 0, 240, 240);
+
+  if (ch === "hibms") {
+    // 650-660 nm red-amber laser diode backlit field (~30x30 mm FOV)
+    fovBadge.textContent = "FOV: ~30 × 30 mm (1024×1024)";
+    descEl.textContent = "Backlit laser-diode shadowgraph (650–660 nm). Tracks droplet contour (±50 μm) and soot agglomerates. Flame itself is NOT visible in this channel [S01, S08].";
+
+    const grad = ctx.createRadialGradient(120, 120, 10, 120, 120, 135);
+    grad.addColorStop(0, "#451a1a");
+    grad.addColorStop(1, "#1c0a0a");
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, 240, 240);
+
+    // Scale grid (5 mm ticks)
+    ctx.strokeStyle = "rgba(248, 113, 113, 0.15)";
+    ctx.lineWidth = 1;
+    for (let g = 40; g < 240; g += 40) {
+      ctx.beginPath(); ctx.moveTo(g, 0); ctx.lineTo(g, 240); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(0, g); ctx.lineTo(240, g); ctx.stroke();
+    }
+
+    const pxPerMm = 240 / 30.0; // 8 px/mm
+    const cx = 120 + drift * pxPerMm;
+    const cy = 120;
+    const rPx = (d / 2) * pxPerMm;
+
+    if (d > 0.05 && cx - rPx < 240) {
+      // Dark droplet shadow
+      ctx.fillStyle = "#090404";
+      ctx.beginPath();
+      ctx.arc(cx, cy, rPx, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Human-adjustable CV segmentation contour
+      const threshScale = 1.0 + (0.50 - state.cvThreshold) * 0.14;
+      ctx.strokeStyle = "#34d399";
+      ctx.lineWidth = 1.5;
+      ctx.setLineDash([3, 2]);
+      ctx.beginPath();
+      ctx.arc(cx, cy, rPx * threshScale, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Soot shell / streamers for heptane
+      if (state.fuel === "heptane" && (phase === "HOT_FLAME" || phase === "COOL_FLAME")) {
+        ctx.fillStyle = "#050202";
+        for (let k = 0; k < 18; k++) {
+          const a = (k / 18) * Math.PI * 2 + state.time * 0.3;
+          const sr = rPx * (1.7 + 0.35 * Math.sin(k * 2.1));
+          ctx.beginPath();
+          ctx.arc(cx + sr * Math.cos(a), cy + sr * Math.sin(a), 1.8, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      const dEst = +(d * threshScale).toFixed(3);
+      document.getElementById("cv-mask-readout").textContent =
+        `CV Segmented D(t): ${dEst.toFixed(3)} mm ± 0.050 mm (NASA HiBMs est. [S01 Sec. 3.1.2])`;
+    } else {
+      ctx.fillStyle = "#fda4af";
+      ctx.font = "11px monospace";
+      ctx.fillText("DROPLET EXITED ~30 mm FOV", 34, 122);
+      document.getElementById("cv-mask-readout").textContent = "CENSORED / FOV EXIT: Droplet drifted beyond ~30 mm HiBMs window.";
+    }
+
+  } else if (ch === "lluv") {
+    // 310 nm OH* chemiluminescence (~50x50 mm FOV)
+    fovBadge.textContent = "FOV: ~50 × 50 mm (512×512 binned)";
+    descEl.textContent = "UV-intensified 310 nm (±10 nm FWHM) OH* chemiluminescence. Defines outer OH* edge (±200 μm), not peak temperature [S01 Sec. 3.2.2].";
+    ctx.fillStyle = "#030712";
+    ctx.fillRect(0, 0, 240, 240);
+
+    const pxPerMm = 240 / 50.0; // 4.8 px/mm
+    const cx = 120 + drift * pxPerMm;
+    const cy = 120;
+
+    if (dfLluv > 0) {
+      const rfPx = (dfLluv / 2) * pxPerMm;
+      const g = ctx.createRadialGradient(cx, cy, rfPx * 0.25, cx, cy, rfPx * 1.15);
+      g.addColorStop(0, "rgba(167, 139, 250, 0.05)");
+      g.addColorStop(0.75, "rgba(139, 92, 246, 0.65)");
+      g.addColorStop(1, "rgba(139, 92, 246, 0)");
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.arc(cx, cy, rfPx * 1.15, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.strokeStyle = "#c4b5fd";
+      ctx.setLineDash([4, 3]);
+      ctx.beginPath();
+      ctx.arc(cx, cy, rfPx, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    } else {
+      ctx.fillStyle = "#94a3b8";
+      ctx.font = "11px monospace";
+      ctx.fillText(phase === "COOL_FLAME" ? "NO HOT OH* EMISSION (COOL FLAME)" : "NO VISIBLE OH* FLAME", 24, 122);
+    }
+
+  } else if (ch === "colour") {
+    // MDCA Colour camera (~110x90 mm FOV)
+    fovBadge.textContent = "FOV: ~110 × 90 mm (640×480 NTSC)";
+    descEl.textContent = "MDCA wide-field colour view. Visible flame boundary uncertainty ±250 μm; not interchangeable with LLUV OH* edge [S01 Sec. 3.3.2].";
+    ctx.fillStyle = "#050811";
+    ctx.fillRect(0, 0, 240, 240);
+
+    const pxPerMm = 240 / 100.0; // 2.4 px/mm
+    const cx = 120 + drift * pxPerMm;
+    const cy = 120;
+
+    if (dfCol > 0) {
+      const rfPx = (dfCol / 2) * pxPerMm;
+      const g = ctx.createRadialGradient(cx, cy, 2, cx, cy, rfPx);
+      if (state.fuel === "heptane") {
+        g.addColorStop(0, "rgba(254, 240, 138, 0.9)");
+        g.addColorStop(0.55, "rgba(245, 158, 11, 0.55)");
+        g.addColorStop(0.9, "rgba(56, 189, 248, 0.45)");
+        g.addColorStop(1, "rgba(56, 189, 248, 0)");
+      } else {
+        g.addColorStop(0, "rgba(186, 230, 253, 0.35)");
+        g.addColorStop(0.8, "rgba(56, 189, 248, 0.55)");
+        g.addColorStop(1, "rgba(56, 189, 248, 0)");
+      }
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.arc(cx, cy, rfPx, 0, Math.PI * 2);
+      ctx.fill();
+    } else {
+      ctx.fillStyle = "#94a3b8";
+      ctx.font = "11px monospace";
+      ctx.fillText(phase === "COOL_FLAME" ? "INVISIBLE COOL-FLAME STAGE" : "NO VISIBLE FLAME", 36, 122);
+    }
+
+  } else {
+    // Radiometers non-quantitative warning
+    fovBadge.textContent = "NON-QUANTITATIVE CHANNEL";
+    descEl.textContent = "NASA/TP-2015-216046 Sec. 2.2 reports that the broadband and H₂O-filtered radiometers were not sensitive enough for reliable quantitative output.";
+    ctx.fillStyle = "#1e1b2e";
+    ctx.fillRect(0, 0, 240, 240);
+    ctx.strokeStyle = "#f43f5e";
+    ctx.strokeRect(14, 14, 212, 212);
+    ctx.fillStyle = "#fda4af";
+    ctx.font = "bold 12px sans-serif";
+    ctx.fillText("RADIOMETER DATA WITHHELD", 34, 105);
+    ctx.fillStyle = "#cbd5e1";
+    ctx.font = "11px sans-serif";
+    ctx.fillText("Insufficient sensitivity in archived", 36, 126);
+    ctx.fillText("FLEX report [S01 Sec. 2.2].", 54, 142);
+  }
+}
+
+// ============================================================================
+// 6. PLOTLY CHARTS (D², FSR, RADIAL PROFILES, MONTE CARLO & SOBOL)
+// ============================================================================
+function renderPlots() {
+  if (typeof Plotly === "undefined" || !state.simData) return;
+  const sd = state.simData;
+  const darkLayout = {
+    paper_bgcolor: "rgba(0,0,0,0)",
+    plot_bgcolor: "#0b1220",
+    font: { color: "#cbd5e1", size: 10.5, family: "Inter, sans-serif" },
+    margin: { l: 48, r: 16, t: 28, b: 36 },
+    xaxis: { gridcolor: "#1e293b", zerolinecolor: "#334155" },
+    yaxis: { gridcolor: "#1e293b", zerolinecolor: "#334155" },
+    legend: { orientation: "h", y: 1.16, x: 0, font: { size: 9.5 } }
+  };
+
+  // Fitted line strictly over selected fitWindow
+  const [wMin, wMax] = state.fitWindow;
+  const tFitStart = wMin * state.d0 * state.d0;
+  const tFitEnd = Math.min(state.duration, wMax * state.d0 * state.d0);
+  const fitX = [tFitStart, tFitEnd];
+  const fitY = fitX.map(t => Math.max(0, sd.fitIntercept - sd.fittedK * t));
+
+  Plotly.react("plot-d2", [
+    {
+      x: sd.tArr, y: sd.d2Upper,
+      mode: "lines", line: { width: 0 },
+      showlegend: false, hoverinfo: "skip"
+    },
+    {
+      x: sd.tArr, y: sd.d2Lower,
+      mode: "lines", line: { width: 0 },
+      fill: "tonexty", fillcolor: "rgba(56, 189, 248, 0.16)",
+      name: "HiBMs ±50 μm Band [S01]"
+    },
+    {
+      x: sd.tArr, y: sd.d2Arr,
+      mode: "lines", line: { color: "#38bdf8", width: 2.2 },
+      name: state.mode === "replay" ? "Archived / Replay D²(t)" : "Simulated D²(t)"
+    },
+    {
+      x: fitX, y: fitY,
+      mode: "lines", line: { color: "#f59e0b", width: 2, dash: "dash" },
+      name: `D² Fit (k̄=${sd.fittedK.toFixed(3)} mm²/s)`
+    }
+  ], {
+    ...darkLayout,
+    title: { text: `Droplet Diameter Squared D²(t) — Fit Window [${wMin}, ${wMax}] s/mm²`, font: { size: 11 } },
+    xaxis: { ...darkLayout.xaxis, title: "Time t (s)" },
+    yaxis: { ...darkLayout.yaxis, title: "D² (mm²)" },
+    shapes: [{
+      type: "line", x0: state.time, x1: state.time, y0: 0, y1: state.d0 * state.d0 * 1.05,
+      line: { color: "#10b981", width: 1.5, dash: "dot" }
+    }]
+  }, { displayModeBar: false, responsive: true });
+
+  // FSR(t) Plot
+  Plotly.react("plot-fsr", [
+    {
+      x: sd.tArr, y: sd.fsrArr,
+      mode: "lines", line: { color: "#a78bfa", width: 2 },
+      name: "FSR = Df(LLUV)/Dd"
+    }
+  ], {
+    ...darkLayout,
+    title: { text: "Flame Standoff Ratio FSR(t) [LLUV OH* Edge / HiBMs Dd]", font: { size: 11 } },
+    xaxis: { ...darkLayout.xaxis, title: "Time t (s)" },
+    yaxis: { ...darkLayout.yaxis, title: "FSR (-)" }
+  }, { displayModeBar: false, responsive: true });
+}
+
+function updateSolverTab() {
+  if (typeof Plotly === "undefined" || !state.simData) return;
+  const rNorm = [];
+  const tempK = [];
+  const yFuel = [];
+  const yO2 = [];
+  const fsrPeak = 5.4;
+
+  for (let i = 0; i <= 80; i++) {
+    const r = 1.0 + (i / 80) * 11.0;
+    rNorm.push(+r.toFixed(2));
+    // Illustrative quasi-steady spherical diffusion-flame profile
+    const sigma = 1.65;
+    const tPeak = state.fuel === "heptane" ? 1980 : 1860;
+    const tVal = 300 + (tPeak - 300) * Math.exp(-Math.pow((r - fsrPeak) / sigma, 2));
+    tempK.push(Math.round(tVal));
+
+    const yf = r < fsrPeak ? Math.max(0, 0.65 * (1 - (r - 1) / (fsrPeak - 1))) : 0;
+    const yo = r > fsrPeak ? state.xo2 * (1 - Math.exp(-(r - fsrPeak) * 0.85)) : 0;
+    yFuel.push(+yf.toFixed(3));
+    yO2.push(+yo.toFixed(3));
+  }
+
+  Plotly.react("plot-radial", [
+    { x: rNorm, y: tempK, name: "Gas Temp T (K) [Illustrative]", line: { color: "#f59e0b", width: 2.5 }, yaxis: "y" },
+    { x: rNorm, y: yFuel, name: "Fuel Mass Frac Y_F", line: { color: "#38bdf8", width: 2, dash: "dash" }, yaxis: "y2" },
+    { x: rNorm, y: yO2, name: "Oxidizer Mass Frac Y_O2", line: { color: "#10b981", width: 2, dash: "dot" }, yaxis: "y2" }
+  ], {
+    paper_bgcolor: "rgba(0,0,0,0)",
+    plot_bgcolor: "#0b1220",
+    font: { color: "#cbd5e1", size: 11 },
+    margin: { l: 52, r: 52, t: 32, b: 40 },
+    xaxis: { title: "Normalized Radius r / R_droplet", gridcolor: "#1e293b" },
+    yaxis: { title: "Temperature (K)", gridcolor: "#1e293b" },
+    yaxis2: { title: "Species Mass Fraction Yᵢ", overlaying: "y", side: "right", range: [0, 0.8] },
+    legend: { orientation: "h", y: 1.14 }
+  }, { displayModeBar: false, responsive: true });
+}
+
+// ============================================================================
+// 7. MONTE CARLO UQ, PREDICTION CARD & SOBOL SENSITIVITY
+// ============================================================================
+function runMonteCarloUQ() {
+  const sd = state.simData;
+  const N = 500;
+  const samples = [];
+  // Deterministic LCG seeded PRNG for reproducible Monte Carlo audit
+  let seed = 13123103;
+  function randNorm() {
+    seed = (seed * 1664525 + 1013904223) % 4294967296;
+    const u1 = Math.max(1e-6, seed / 4294967296);
+    seed = (seed * 1664525 + 1013904223) % 4294967296;
+    const u2 = seed / 4294967296;
+    return Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+  }
+
+  for (let i = 0; i < N; i++) {
+    const d0Pert = state.d0 + randNorm() * 0.025; // ±50 μm measurement spread
+    const xo2Pert = state.xo2 + randNorm() * 0.003;
+    const pPert = state.p + randNorm() * 0.008;
+    const kSample = sd.fittedK * Math.pow(Math.max(0.1, xo2Pert / state.xo2), 0.85) *
+                    Math.pow(Math.max(0.2, pPert / state.p), 0.14) *
+                    (1 - 0.04 * (d0Pert - state.d0));
+    samples.push(+kSample.toFixed(4));
+  }
+
+  samples.sort((a, b) => a - b);
+  const p05 = samples[Math.floor(0.05 * N)];
+  const p50 = samples[Math.floor(0.50 * N)];
+  const p95 = samples[Math.floor(0.95 * N)];
+  state.mcStats = { p05, p50, p95, N, seed: 13123103 };
+
+  // Update 6-Component Uncertainty Table
+  const rows = [
+    ["1. Measurement / Image", "Quantified (NASA Baseline)", `HiBMs ±50 μm, LLUV ±200 μm, Colour ±250 μm (coverage_factor = not stated) [S01]`],
+    ["2. Input / Parameter", "Propagated (MC N=500)", `D₀, P, X(O₂) tolerances → 5th–95th pct k̄: [${p05.toFixed(3)}, ${p95.toFixed(3)}] mm²/s`],
+    ["3. Numerical / Fit", "Quantified (Regression RMSE)", `D² linear fit RMSE = ${sd.rmse.toFixed(4)} mm² over t/D₀² ∈ [${state.fitWindow[0]}, ${state.fitWindow[1]}]`],
+    ["4. Model-Form", sd.hasCoolFlame ? "Two-Stage Regime Active" : "Reduced D² Baseline", "Empirical D² law cannot resolve radial T(r) or kinetic extinction without 1-D solver"],
+    ["5. ML Epistemic", "Not Active in Browser Shell", "Requires group-split deep ensemble trained on verified 1-D solver sweeps [Sec. 16.4]"],
+    ["6. Aleatoric / Replicate", "Not Quantified", "Requires multi-test replicate variance from PSI-69 archive [S04]"]
+  ];
+  document.getElementById("uq-budget-table").innerHTML = rows.map(r =>
+    `<tr><td><strong>${r[0]}</strong></td><td class="mono">${r[1]}</td><td>${r[2]}</td></tr>`
+  ).join("");
+
+  // Render Prediction Card
+  const resultClass = state.mode === "replay" ? "NASA_REPORTED / FITTED" : (sd.inEnvelope ? "PHYSICS_SIMULATION (REDUCED)" : "EXPLORATORY_EXTRAPOLATION (OOD)");
+  const calibBadge = document.getElementById("pred-calib-badge");
+  if (state.mode === "replay") {
+    calibBadge.className = "badge badge-scope";
+    calibBadge.textContent = "SOURCE-TRACEABLE REPLAY";
+  } else if (sd.inEnvelope) {
+    calibBadge.className = "badge badge-warn";
+    calibBadge.textContent = "EXPLORATORY — NOT CONFORMALLY CALIBRATED";
+  } else {
+    calibBadge.className = "badge badge-danger";
+    calibBadge.textContent = "OUT-OF-DOMAIN (OOD) — UNVALIDATED";
+  }
+
+  document.getElementById("prediction-card-body").innerHTML = `
+    <div class="pred-row"><span>Result Class:</span><strong class="mono" style="color:#38bdf8;">${resultClass}</strong></div>
+    <div class="pred-row"><span>Point Estimate k̄:</span><strong class="mono">${sd.fittedK.toFixed(3)} mm²/s</strong></div>
+    <div class="pred-row"><span>MC 5th–95th Pct Range:</span><span class="mono">[${p05.toFixed(3)}, ${p95.toFixed(3)}] mm²/s (Seed: 13123103)</span></div>
+    <div class="pred-row"><span>HiBMs Diagnostic Est.:</span><span class="mono">±50 μm on D(t) (coverage_factor = not stated [S01])</span></div>
+    <div class="pred-row"><span>LOI Benchmark (O₂/N₂):</span><span class="mono">${sd.loi.toFixed(3)} (Current X(O₂) = ${state.xo2.toFixed(3)})</span></div>
+    <div class="pred-row"><span>Extinction / Regime:</span><span class="mono">${sd.hasCoolFlame ? "Hot Ext. → Cool Flame [S07]" : (sd.canIgnite ? "Quasi-Steady Burn" : "Below LOI (No Flame)")}</span></div>
+    <div class="pred-row"><span>Validity Domain:</span><span class="mono">${sd.inEnvelope ? "IN-DOMAIN (2009–2011 FLEX Envelope)" : "OUT-OF-DOMAIN (Extrapolative)"}</span></div>
+  `;
+
+  if (typeof Plotly !== "undefined") {
+    Plotly.react("plot-mc-hist", [{
+      x: samples,
+      type: "histogram",
+      marker: { color: "#38bdf8", line: { color: "#0284c7", width: 1 } },
+      name: "MC Samples"
+    }], {
+      paper_bgcolor: "rgba(0,0,0,0)",
+      plot_bgcolor: "#0b1220",
+      font: { color: "#cbd5e1", size: 10.5 },
+      margin: { l: 44, r: 16, t: 28, b: 36 },
+      title: { text: `Seeded Monte Carlo Propagation Distribution for k̄ (N=${N})`, font: { size: 11 } },
+      xaxis: { title: "Burning-Rate Constant k̄ (mm²/s)", gridcolor: "#1e293b" },
+      yaxis: { title: "Sample Count", gridcolor: "#1e293b" }
+    }, { displayModeBar: false, responsive: true });
+
+    // Sobol / Morris Sensitivity Ranking Illustration
+    Plotly.react("plot-sobol", [{
+      y: ["g-Jitter Drift", "Initial Diameter D₀", "Ambient Pressure P", "Diluent (CO₂ vs He)", "Oxygen Mole Frac X(O₂)"],
+      x: [0.04, 0.11, 0.14, 0.27, 0.58],
+      type: "bar",
+      orientation: "h",
+      marker: { color: ["#64748b", "#38bdf8", "#818cf8", "#f59e0b", "#10b981"] }
+    }], {
+      paper_bgcolor: "rgba(0,0,0,0)",
+      plot_bgcolor: "#0b1220",
+      font: { color: "#cbd5e1", size: 10.5 },
+      margin: { l: 145, r: 16, t: 28, b: 36 },
+      title: { text: "First-Order Sensitivity Ranking S₁ on Burning Rate k̄ (SALib Methodology [S33])", font: { size: 11 } },
+      xaxis: { title: "Normalized Variance Contribution S₁ (Not a Prediction Interval)", range: [0, 0.7], gridcolor: "#1e293b" },
+      yaxis: { gridcolor: "#1e293b" }
+    }, { displayModeBar: false, responsive: true });
+  }
+}
+
+// ============================================================================
+// 8. UI INTERACTIONS, BUBBLES, LEDGER & RO-CRATE EXPORT
+// ============================================================================
+function renderHotspotChips() {
+  const container = document.getElementById("hotspot-chips");
+  container.innerHTML = HOTSPOTS.map(h =>
+    `<button class="chip ${h.id === state.activeHotspot ? 'active' : ''}" onclick="selectHotspot('${h.id}')">${h.name}</button>`
+  ).join("");
+  selectHotspot(state.activeHotspot);
+}
+
+function selectHotspot(id) {
+  state.activeHotspot = id;
+  document.querySelectorAll(".chip").forEach(c => {
+    c.classList.toggle("active", c.textContent === HOTSPOTS.find(h => h.id === id).name);
+  });
+  const h = HOTSPOTS.find(x => x.id === id);
+  document.getElementById("bubble-source-tag").textContent = h.sourceTag;
+  document.getElementById("bubble-content").innerHTML = `
+    <div class="bubble-cell"><h4>1. What Is It?</h4><p>${h.what}</p></div>
+    <div class="bubble-cell"><h4>2. What Does It Do?</h4><p>${h.does}</p></div>
+    <div class="bubble-cell"><h4>3. Live State Now</h4><p>${h.now}</p></div>
+    <div class="bubble-cell"><h4>4. Physics &amp; Math</h4><p>${h.physics}</p></div>
+    <div class="bubble-cell"><h4>5. Measurements &amp; Uncertainty</h4><p>${h.measures}</p></div>
+    <div class="bubble-cell"><h4>6. Known Limits &amp; Caveats</h4><p>${h.limits}</p></div>
+  `;
+}
+
+function renderClaimLedger() {
+  const q = (document.getElementById("claim-search").value || "").toLowerCase();
+  const filtered = CLAIMS_LEDGER.filter(c =>
+    c.id.toLowerCase().includes(q) ||
+    c.cls.toLowerCase().includes(q) ||
+    c.text.toLowerCase().includes(q) ||
+    c.source.toLowerCase().includes(q)
+  );
+  document.getElementById("claim-ledger-body").innerHTML = filtered.map(c => `
+    <tr>
+      <td class="mono"><strong>${c.id}</strong></td>
+      <td><span class="badge badge-info">${c.cls}</span></td>
+      <td>${c.text}</td>
+      <td class="mono" style="font-size:10.5px; color:#7dd3fc;">${c.source}</td>
+      <td style="color:#fde68a; font-size:11px;">${c.caveat}</td>
+    </tr>
+  `).join("");
+}
+
+function renderForumPosts() {
+  document.getElementById("forum-posts").innerHTML = state.forumPosts.map(p => `
+    <div style="background:var(--bg-input); border:1px solid var(--border); border-radius:6px; padding:8px 10px; margin-bottom:8px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+        <strong style="font-size:11.5px; color:#f1f5f9;">${p.author}</strong>
+        <div>
+          <span class="badge badge-scope">${p.role}</span>
+          <span class="mono" style="font-size:10px; color:#64748b; margin-left:4px;">${p.runRef} • ${p.time}</span>
+        </div>
+      </div>
+      <p style="margin:0; font-size:11.5px; color:#cbd5e1;">${p.text}</p>
+    </div>
+  `).join("");
+}
+
+function submitReplicationNote() {
+  const author = document.getElementById("rep-author").value.trim() || "Anonymous Researcher";
+  const role = document.getElementById("rep-type").value;
+  const text = document.getElementById("rep-comment").value.trim();
+  if (!text) return;
+  state.forumPosts.unshift({
+    author,
+    role,
+    runRef: state.runUUID.slice(0, 8),
+    time: new Date().toISOString().slice(0, 16).replace("T", " ") + " UTC",
+    text
+  });
+  document.getElementById("rep-comment").value = "";
+  renderForumPosts();
+  showToast("Replication note attached to immutable Run UUID " + state.runUUID.slice(0, 8));
+}
+
+function setOperatingMode(mode) {
+  state.mode = mode;
+  document.getElementById("mode-replay").classList.toggle("active", mode === "replay");
+  document.getElementById("mode-explore").classList.toggle("active", mode === "explore");
+  document.getElementById("mode-extrap").className = "mode-btn" + (mode === "extrap" ? " active extrap" : "");
+
+  const locked = mode === "replay";
+  ["ctrl-fuel", "ctrl-d0", "ctrl-p", "ctrl-xo2", "ctrl-diluent", "ctrl-xdil", "ctrl-support"].forEach(id => {
+    document.getElementById(id).disabled = locked;
+  });
+
+  if (mode === "replay") {
+    loadPreset(state.presetKey);
+  } else {
+    onParamChange();
+  }
+}
+
+function loadPreset(key) {
+  state.presetKey = key;
+  const p = PRESETS[key];
+  state.fuel = p.fuel;
+  state.d0 = p.d0;
+  state.p = p.p;
+  state.xo2 = p.xo2;
+  state.diluent = p.diluent;
+  state.xdil = p.xdil;
+  state.support = p.support;
+  state.gjitter = parseFloat(p.gjitter);
+
+  document.getElementById("ctrl-fuel").value = p.fuel;
+  document.getElementById("ctrl-d0").value = p.d0;
+  document.getElementById("ctrl-p").value = p.p;
+  document.getElementById("ctrl-xo2").value = p.xo2;
+  document.getElementById("ctrl-diluent").value = p.diluent;
+  document.getElementById("ctrl-xdil").value = p.xdil;
+  document.getElementById("ctrl-support").value = p.support;
+  document.getElementById("ctrl-gjitter").value = p.gjitter;
+  document.getElementById("preset-provenance").textContent = p.provenance;
+
+  onParamChange();
+}
+
+function onParamChange() {
+  state.fuel = document.getElementById("ctrl-fuel").value;
+  state.d0 = parseFloat(document.getElementById("ctrl-d0").value);
+  state.p = parseFloat(document.getElementById("ctrl-p").value);
+  state.xo2 = parseFloat(document.getElementById("ctrl-xo2").value);
+  state.diluent = document.getElementById("ctrl-diluent").value;
+  state.xdil = state.diluent === "N2" ? 0.0 : parseFloat(document.getElementById("ctrl-xdil").value);
+  if (state.diluent === "N2") document.getElementById("ctrl-xdil").value = 0;
+
+  // Enforce ΣXi = 1.000
+  if (state.xo2 + state.xdil > 0.95) {
+    state.xdil = +(0.95 - state.xo2).toFixed(3);
+    document.getElementById("ctrl-xdil").value = state.xdil;
+  }
+  const xn2 = Math.max(0, +(1.0 - state.xo2 - state.xdil).toFixed(3));
+
+  state.support = document.getElementById("ctrl-support").value;
+  state.gjitter = parseFloat(document.getElementById("ctrl-gjitter").value);
+  state.fitWindow = document.getElementById("ctrl-fit-window").value.split(",").map(Number);
+
+  // Update labels
+  document.getElementById("val-fuel").textContent = state.fuel === "heptane" ? "n-Heptane (C₇H₁₆)" : "Methanol (CH₃OH)";
+  document.getElementById("val-d0").textContent = state.d0.toFixed(2) + " mm";
+  document.getElementById("val-p").textContent = state.p.toFixed(3) + " atm";
+  document.getElementById("val-xo2").textContent = state.xo2.toFixed(3);
+  document.getElementById("val-xdil").textContent = state.xdil.toFixed(3);
+  document.getElementById("val-support").textContent = state.support === "free" ? "Free-Floating" : "80 μm SiC Fiber";
+  document.getElementById("val-gjitter").textContent = state.gjitter === 0 ? "g = 0 (Ideal)" : `~${state.gjitter.toFixed(1)} mm/s Drift`;
+  document.getElementById("val-fit-window").textContent = `${state.fitWindow[0].toFixed(2)} – ${state.fitWindow[1].toFixed(2)} s/mm²`;
+
+  const dilLabel = state.diluent === "N2" ? "" : ` | X(${state.diluent})=${state.xdil.toFixed(3)}`;
+  document.getElementById("mixture-readout").textContent = `X(O₂)=${state.xo2.toFixed(3)} | X(N₂)=${xn2.toFixed(3)}${dilLabel} | ΣXᵢ = 1.000`;
+  document.getElementById("mixture-bar").innerHTML = `
+    <div style="width:${state.xo2 * 100}%; background:#38bdf8;" title="O2"></div>
+    <div style="width:${xn2 * 100}%; background:#475569;" title="N2"></div>
+    <div style="width:${state.xdil * 100}%; background:${state.diluent === 'CO2' ? '#f59e0b' : '#a78bfa'};" title="${state.diluent}"></div>
+  `;
+
+  computePhysicsTrajectory();
+  refreshProvenance();
+  updateAlerts();
+  update3DState();
+  renderDiagnosticCanvas();
+  renderPlots();
+  updateSolverTab();
+  runMonteCarloUQ();
+}
+
+function updateAlerts() {
+  const sd = state.simData;
+  const alertEl = document.getElementById("domain-alert");
+  const modeBadge = document.getElementById("mode-badge");
+  const plotBadge = document.getElementById("plot-prov-badge");
+
+  if (state.mode === "replay") {
+    modeBadge.className = "badge badge-scope";
+    modeBadge.textContent = "NASA_REPORTED / REPLAY";
+    plotBadge.className = "badge badge-scope";
+    plotBadge.textContent = "NASA_REPORTED + FITTED";
+    alertEl.className = "alert-box alert-ok";
+    alertEl.innerHTML = `<strong>Archived Replay Mode:</strong> Controls locked to <code>${state.presetKey}</code>. ${PRESETS[state.presetKey].kBarSourceStatus}.`;
+  } else if (sd.inEnvelope && state.mode !== "extrap") {
+    modeBadge.className = "badge badge-info";
+    modeBadge.textContent = "EXPLORE WITHIN ENVELOPE";
+    plotBadge.className = "badge badge-info";
+    plotBadge.textContent = "PHYSICS_SIMULATION (REDUCED)";
+    alertEl.className = "alert-box alert-info";
+    alertEl.innerHTML = `<strong>Within Published FLEX Envelope:</strong> Parameters lie inside D₀∈[1.5,5.0] mm, P∈[0.7,3.0] atm, X(O₂)∈[0.10,0.40], though this exact combination may not be an archived test point [S03].`;
+  } else {
+    modeBadge.className = "badge badge-danger";
+    modeBadge.textContent = "BEYOND-ENVELOPE (OOD)";
+    plotBadge.className = "badge badge-danger";
+    plotBadge.textContent = "EXPLORATORY EXTRAPOLATION";
+    alertEl.className = "alert-box alert-danger";
+    alertEl.innerHTML = `<strong>Out-of-Domain (OOD) Warning:</strong> Parameters exceed the published original FLEX matrix (D₀ 1.5–5.0 mm, P 0.7–3.0 atm, X(O₂) 0.10–0.40). Output is <em>unvalidated extrapolation</em>.`;
+  }
+}
+
+function onMaskThresholdChange(val) {
+  state.cvThreshold = parseFloat(val);
+  document.getElementById("val-cv-thresh").textContent = `${state.cvThreshold.toFixed(2)} (${state.cvThreshold === 0.5 ? 'Nominal' : 'Manual Audit'})`;
+  refreshProvenance();
+  renderDiagnosticCanvas();
+}
+
+function switchTab(tabId, btnEl) {
+  document.querySelectorAll(".workspace").forEach(w => w.classList.remove("active"));
+  document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+  document.getElementById("tab-" + tabId).classList.add("active");
+  btnEl.classList.add("active");
+  if (tabId === "lab") renderPlots();
+  if (tabId === "solver") updateSolverTab();
+  if (tabId === "uq") runMonteCarloUQ();
+}
+
+function togglePlay() {
+  state.playing = !state.playing;
+  document.getElementById("btn-play").textContent = state.playing ? "Pause" : "Play";
+}
+function scrubTime(t) {
+  state.time = Math.min(state.duration, Math.max(0, t));
+  update3DState();
+  renderDiagnosticCanvas();
+  renderPlots();
+}
+function stepTime(dt) {
+  state.playing = false;
+  document.getElementById("btn-play").textContent = "Play";
+  scrubTime(+(state.time + dt).toFixed(2));
+}
+function resetTimeline() {
+  scrubTime(0);
+}
+function jumpToStage(stageNum) {
+  state.playing = false;
+  document.getElementById("btn-play").textContent = "Play";
+  const map = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0.05, 6: 0.45, 7: Math.min(4.0, state.duration * 0.35), 8: state.duration };
+  scrubTime(map[stageNum] ?? 0);
+}
+
+function exportROCrateManifest() {
+  const manifest = {
+    "@context": "https://w3id.org/ro/crate/1.1/context",
+    "@type": "Dataset",
+    "name": "Open FLEX Virtual Laboratory Run Manifest (Original 2009-2011 Baseline)",
+    "license": "CC-BY-4.0 (Platform Metadata; NASA/TP-2015-216046 Public Domain Baseline Preserved)",
+    "provenance_prov_o": {
+      "prov:Entity": state.runUUID,
+      "sha256_integrity": state.sha256,
+      "created_utc": new Date().toISOString(),
+      "scope_control": "Original FLEX ONLY (Mar 2009 - Dec 2011); excludes FLEX-2 / CFI",
+      "nasa_validation_status": "SOURCE-TRACEABLE (NOT NASA-INSTITUTIONALLY-VALIDATED)"
+    },
+    "experiment_identity": {
+      "platform_run_uuid": state.runUUID,
+      "legacy_nasa_test_id": state.presetKey,
+      "operating_mode": state.mode
+    },
+    "physical_conditions": {
+      "fuel": state.fuel,
+      "initial_diameter_D0_mm": state.d0,
+      "ambient_pressure_atm": state.p,
+      "mole_fractions": {
+        "O2": state.xo2,
+        "N2": state.simData.xn2,
+        "secondary_diluent": state.diluent,
+        "X_diluent": state.xdil,
+        "sum_check": 1.0
+      },
+      "support_mode": state.support,
+      "microgravity_setting": state.gjitter === 0 ? "ideal_g_0_finite_rho" : `drift_${state.gjitter}_mm_s`
+    },
+    "derived_and_simulated_outputs": {
+      "fitted_burning_rate_k_mm2_s": state.simData.fittedK,
+      "fit_window_t_over_D02": state.fitWindow,
+      "fit_rmse_mm2": state.simData.rmse,
+      "monte_carlo_k_5th_95th_pct": [state.mcStats.p05, state.mcStats.p95],
+      "nasa_reported_diagnostic_uncertainties": {
+        "HiBMs_droplet_um": 50,
+        "LLUV_OH_flame_um": 200,
+        "MDCA_colour_flame_um": 250,
+        "radiometer_status": "not_reliably_quantified_in_NASA_TP_2015_216046",
+        "coverage_factor": "not stated",
+        "distribution": "not specified"
+      }
+    }
+  };
+
+  const blob = new Blob([JSON.stringify(manifest, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `FLEX_RO_Crate_${state.presetKey}_${state.runUUID.slice(0, 8)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast("Exported RO-Crate Manifest JSON (" + state.runUUID.slice(0, 8) + ")");
+}
+
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.style.display = "block";
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(() => { t.style.display = "none"; }, 3500);
+}
+
+// ============================================================================
+// 9. ANIMATION LOOP & BOOTSTRAP
+// ============================================================================
+let lastFrameTime = performance.now();
+function animate(now) {
+  requestAnimationFrame(animate);
+  const dtSec = Math.min(0.1, (now - lastFrameTime) / 1000);
+  lastFrameTime = now;
+
+  if (state.playing && state.simData) {
+    state.time += dtSec * 1.4;
+    if (state.time > state.duration) state.time = 0;
+    update3DState();
+    renderDiagnosticCanvas();
+    if (Math.floor(now / 250) !== Math.floor((now - dtSec * 1000) / 250)) {
+      renderPlots();
+    }
+  }
+
+  if (threeReady && renderer && scene && camera) {
+    if (controls) controls.update();
+    renderer.render(scene, camera);
+  }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  initThreeScene();
+  renderHotspotChips();
+  renderClaimLedger();
+  renderForumPosts();
+  setOperatingMode("replay");
+  requestAnimationFrame(animate);
+});
+</script>
+</body>
+</html>

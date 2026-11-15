@@ -1,0 +1,8 @@
+*.png
+!docs/screens/*.png
+!docs/digitization/*.png
+__pycache__/
+.pytest_cache/
+dist/test_no_vendor.html
+data/verification/table_ix_ocr_disagreements/
+data/verification/test_matrix_ocr_disagreements/

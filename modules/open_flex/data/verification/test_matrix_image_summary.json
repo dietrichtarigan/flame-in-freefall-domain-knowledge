@@ -1,0 +1,10 @@
+{
+ "cells_checked": 1432,
+ "note": "Disagreements are resolved by visual inspection; see test_matrix_manual_review.json.",
+ "ocr_agreements": 1407,
+ "ocr_disagreements": 25,
+ "ocr_engine": "tesseract 5.3.4",
+ "render": "pdftoppm 300 dpi grayscale",
+ "rows_checked": 153,
+ "tool": "tools/verify_test_matrix_images.py"
+}

@@ -1,0 +1,185 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://open-flex.local/schemas/digitization_record.schema.json",
+ "title": "DigitizationRecord",
+ "description": "How DIGITIZED series were read from a source plot: source image hash, axis calibration with residuals, detection settings, self-check, overlay, limitations.",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "record_type",
+  "method_version",
+  "test_id",
+  "evidence_class",
+  "source",
+  "source_image",
+  "config",
+  "config_sha256",
+  "label_reading_note",
+  "time_zero",
+  "calibration",
+  "marker_detection",
+  "series",
+  "overlay_image",
+  "limitations"
+ ],
+ "properties": {
+  "record_type": {
+   "const": "DigitizationRecord"
+  },
+  "method_version": {
+   "type": "string"
+  },
+  "test_id": {
+   "$ref": "common.schema.json#/$defs/physical_test_id"
+  },
+  "evidence_class": {
+   "const": "DIGITIZED"
+  },
+  "source": {
+   "type": "object",
+   "required": [
+    "source_id",
+    "locator",
+    "source_pdf_sha256"
+   ],
+   "properties": {
+    "source_id": {
+     "$ref": "common.schema.json#/$defs/source_id"
+    },
+    "locator": {
+     "type": "string"
+    },
+    "source_pdf_sha256": {
+     "$ref": "common.schema.json#/$defs/sha256"
+    }
+   }
+  },
+  "source_image": {
+   "type": "object",
+   "required": [
+    "path",
+    "sha256",
+    "extraction"
+   ],
+   "properties": {
+    "path": {
+     "type": "string"
+    },
+    "sha256": {
+     "$ref": "common.schema.json#/$defs/sha256"
+    },
+    "bytes": {
+     "type": "integer"
+    },
+    "width_px": {
+     "type": "integer"
+    },
+    "height_px": {
+     "type": "integer"
+    },
+    "extraction": {
+     "type": "string"
+    }
+   }
+  },
+  "config": {
+   "type": "string"
+  },
+  "config_sha256": {
+   "$ref": "common.schema.json#/$defs/sha256"
+  },
+  "label_reading_note": {
+   "type": "string"
+  },
+  "time_zero": {
+   "type": "string"
+  },
+  "calibration": {
+   "type": "object",
+   "required": [
+    "x",
+    "y_left"
+   ],
+   "additionalProperties": {
+    "type": "object",
+    "required": [
+     "major_tick_px",
+     "tick_labels_as_read",
+     "fit",
+     "residuals_at_ticks",
+     "max_abs_residual_px"
+    ],
+    "properties": {
+     "major_tick_px": {
+      "type": "array",
+      "minItems": 2
+     },
+     "tick_labels_as_read": {
+      "type": "array",
+      "minItems": 2
+     },
+     "fit": {
+      "type": "object",
+      "required": [
+       "a",
+       "b"
+      ]
+     },
+     "residuals_at_ticks": {
+      "type": "array"
+     },
+     "max_abs_residual_px": {
+      "type": "number",
+      "maximum": 1.5
+     },
+     "tick_matching": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "marker_detection": {
+   "type": "object"
+  },
+  "series": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "required": [
+     "name",
+     "color",
+     "axis",
+     "unit",
+     "path",
+     "points",
+     "self_check",
+     "quality_flag"
+    ],
+    "properties": {
+     "points": {
+      "type": "integer",
+      "minimum": 1
+     },
+     "self_check": {
+      "type": "object",
+      "required": [
+       "recall_coloured_pixels_covered",
+       "precision_redrawn_ring_pixels_coloured"
+      ]
+     }
+    }
+   }
+  },
+  "overlay_image": {
+   "type": "string"
+  },
+  "limitations": {
+   "type": "array",
+   "minItems": 3,
+   "items": {
+    "type": "string"
+   }
+  }
+ }
+}

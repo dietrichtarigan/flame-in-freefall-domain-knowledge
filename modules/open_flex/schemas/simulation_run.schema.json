@@ -1,0 +1,78 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://open-flex.local/schemas/simulation_run.schema.json",
+ "title": "SimulationRun",
+ "description": "A model evaluation (e.g. the D²-law educational baseline). Never carries a NASA test ID as its identity; may cite the test whose printed conditions seeded its inputs, with any modification listed.",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "record_type",
+  "run_id",
+  "model",
+  "inputs",
+  "inputs_modified_from_test",
+  "outputs",
+  "evidence_class",
+  "claims_scope"
+ ],
+ "properties": {
+  "record_type": {
+   "const": "SimulationRun"
+  },
+  "run_id": {
+   "$ref": "common.schema.json#/$defs/simulation_run_id"
+  },
+  "model": {
+   "type": "object",
+   "required": [
+    "name",
+    "version",
+    "status"
+   ],
+   "properties": {
+    "name": {
+     "type": "string"
+    },
+    "version": {
+     "type": "string"
+    },
+    "status": {
+     "enum": [
+      "EDUCATIONAL_BASELINE",
+      "RESEARCH_SOLVER"
+     ]
+    }
+   }
+  },
+  "inputs": {
+   "type": "object"
+  },
+  "seeded_from_physical_test": {
+   "oneOf": [
+    {
+     "$ref": "common.schema.json#/$defs/physical_test_id"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "inputs_modified_from_test": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   },
+   "description": "Empty only if every input equals the printed test value."
+  },
+  "outputs": {
+   "type": "object"
+  },
+  "evidence_class": {
+   "const": "NUMERICAL_SIMULATION"
+  },
+  "claims_scope": {
+   "type": "string",
+   "description": "What the run may and may not be used to claim."
+  }
+ }
+}

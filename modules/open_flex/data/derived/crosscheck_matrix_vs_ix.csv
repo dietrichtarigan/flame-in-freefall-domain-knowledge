@@ -1,0 +1,1143 @@
+flex_test,field,matrix_value_raw,matrix_locator,other_value_raw,other_locator,status,note
+FLEX-001,fiber,No (header),"Table I, PDF p. 16",Free-floating,"Appendix B Fig. 5, PDF p. 35",AGREE,
+FLEX-001,fuel,methanol,"Table I, PDF p. 16",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-001,date,"Mar. 5, 2009","Table I, PDF p. 16",3/5/09,"Table IX, PDF p. 26",AGREE,
+FLEX-001,D0_mm,1.80,"Table I, PDF p. 16",1.69,"Table IX, PDF p. 26",DIFFERS,difference -0.11; rounding tolerance 0.01
+FLEX-001,P,1.00,"Table I, PDF p. 16",757.7 mmHg,"Table IX, PDF p. 26",AGREE,difference -0.003026; rounding tolerance 0.005066
+FLEX-001,X_O2,0.21,"Table I, PDF p. 16",0.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-001,X_N2,0.79,"Table I, PDF p. 16",0.79,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-001,X_CO2,0.005,"Table I, PDF p. 16",0,"Table IX, PDF p. 26",AGREE,difference -0.005; rounding tolerance 0.5005 (matrix value from table header)
+FLEX-002,fiber,No (header),"Table I, PDF p. 16",Free-floating,"Appendix B Fig. 6, PDF p. 36",AGREE,
+FLEX-002,fuel,methanol,"Table I, PDF p. 16",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-002,date,"Mar. 5, 2009","Table I, PDF p. 16",3/5/09,"Table IX, PDF p. 26",AGREE,
+FLEX-002,D0_mm,2.00,"Table I, PDF p. 16",1.86,"Table IX, PDF p. 26",DIFFERS,difference -0.14; rounding tolerance 0.01
+FLEX-002,P,1.00,"Table I, PDF p. 16",762 mmHg,"Table IX, PDF p. 26",AGREE,difference +0.002632; rounding tolerance 0.005658
+FLEX-002,X_O2,0.21,"Table I, PDF p. 16",.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-002,X_N2,0.79,"Table I, PDF p. 16",.79,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-002,X_CO2,0.005,"Table I, PDF p. 16",0,"Table IX, PDF p. 26",AGREE,difference -0.005; rounding tolerance 0.5005 (matrix value from table header)
+FLEX-003,fiber,No (header),"Table I, PDF p. 16",Free-floating,"Appendix B Fig. 7, PDF p. 37",AGREE,
+FLEX-003,fuel,methanol,"Table I, PDF p. 16",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-003,date,"Mar. 5, 2009","Table I, PDF p. 16",3/5/09,"Table IX, PDF p. 26",AGREE,
+FLEX-003,D0_mm,1.71,"Table I, PDF p. 16",1.61,"Table IX, PDF p. 26",DIFFERS,difference -0.1; rounding tolerance 0.01
+FLEX-003,P,1.01,"Table I, PDF p. 16",764.2 mmHg,"Table IX, PDF p. 26",AGREE,difference -0.004474; rounding tolerance 0.005066
+FLEX-003,X_O2,0.21,"Table I, PDF p. 16",.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-003,X_N2,0.79,"Table I, PDF p. 16",.79,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-003,X_CO2,0.005,"Table I, PDF p. 16",0,"Table IX, PDF p. 26",AGREE,difference -0.005; rounding tolerance 0.5005 (matrix value from table header)
+FLEX-004,fiber,No (header),"Table I, PDF p. 16",Free-floating,"Appendix B Fig. 8, PDF p. 38",AGREE,
+FLEX-004,fuel,methanol,"Table I, PDF p. 16",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-004,date,"Mar. 31, 2009","Table I, PDF p. 16",3/31/09,"Table IX, PDF p. 26",AGREE,
+FLEX-004,D0_mm,2.19,"Table I, PDF p. 16",2.06,"Table IX, PDF p. 26",DIFFERS,difference -0.13; rounding tolerance 0.01
+FLEX-004,P,1.00,"Table I, PDF p. 16",760 mmHg,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.005658
+FLEX-004,X_O2,0.21,"Table I, PDF p. 16",.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-004,X_N2,0.79,"Table I, PDF p. 16",.79,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-004,X_CO2,0.005,"Table I, PDF p. 16",0,"Table IX, PDF p. 26",AGREE,difference -0.005; rounding tolerance 0.5005 (matrix value from table header)
+FLEX-005,fiber,No (header),"Table I, PDF p. 16",Free-floating,"Appendix B Fig. 9, PDF p. 39",AGREE,
+FLEX-005,fuel,methanol,"Table I, PDF p. 16",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-005,date,"Mar. 31, 2009","Table I, PDF p. 16",3/31/09,"Table IX, PDF p. 26",AGREE,
+FLEX-005,D0_mm,1.95,"Table I, PDF p. 16",1.92,"Table IX, PDF p. 26",DIFFERS,difference -0.03; rounding tolerance 0.01
+FLEX-005,P,1.00,"Table I, PDF p. 16",760 mmHg,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.005658
+FLEX-005,X_O2,0.21,"Table I, PDF p. 16",.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-005,X_N2,0.79,"Table I, PDF p. 16",.79,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-005,X_CO2,0.005,"Table I, PDF p. 16",0,"Table IX, PDF p. 26",AGREE,difference -0.005; rounding tolerance 0.5005 (matrix value from table header)
+FLEX-006,fiber,No (header),"Table I, PDF p. 16",Free-floating,"Appendix B Fig. 10, PDF p. 40",AGREE,
+FLEX-006,fuel,methanol,"Table I, PDF p. 16",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-006,date,"Mar. 31, 2009","Table I, PDF p. 16",3/31/09,"Table IX, PDF p. 26",AGREE,
+FLEX-006,D0_mm,2.90,"Table I, PDF p. 16",2.54,"Table IX, PDF p. 26",DIFFERS,difference -0.36; rounding tolerance 0.01
+FLEX-006,P,1.00,"Table I, PDF p. 16",760 mmHg,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.005658
+FLEX-006,X_O2,0.21,"Table I, PDF p. 16",.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-006,X_N2,0.79,"Table I, PDF p. 16",.79,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-006,X_CO2,0.005,"Table I, PDF p. 16",0,"Table IX, PDF p. 26",AGREE,difference -0.005; rounding tolerance 0.5005 (matrix value from table header)
+FLEX-007,fiber,No (header),"Table I, PDF p. 16",Free-floating,"Appendix B Fig. 11, PDF p. 41",AGREE,
+FLEX-007,fuel,heptane,"Table I, PDF p. 16",heptane,"Table IX, PDF p. 26",AGREE,
+FLEX-007,date,"Apr. 10, 2009","Table I, PDF p. 16",4/10/09,"Table IX, PDF p. 26",AGREE,
+FLEX-007,D0_mm,1.91,"Table I, PDF p. 16",1.87,"Table IX, PDF p. 26",DIFFERS,difference -0.04; rounding tolerance 0.01
+FLEX-007,P,1.00,"Table I, PDF p. 16",761.3 mmHg,"Table IX, PDF p. 26",AGREE,difference +0.001711; rounding tolerance 0.005066
+FLEX-007,X_O2,0.21,"Table I, PDF p. 16",.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-007,X_N2,0.79,"Table I, PDF p. 16",.79,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-007,X_CO2,0.005,"Table I, PDF p. 16",0,"Table IX, PDF p. 26",AGREE,difference -0.005; rounding tolerance 0.5005 (matrix value from table header)
+FLEX-008,fiber,No (header),"Table I, PDF p. 16",Free-floating,"Appendix B Fig. 12, PDF p. 42",AGREE,
+FLEX-008,fuel,heptane,"Table I, PDF p. 16",heptane,"Table IX, PDF p. 26",AGREE,
+FLEX-008,date,"Apr. 10, 2009","Table I, PDF p. 16",4/10/09,"Table IX, PDF p. 26",AGREE,
+FLEX-008,D0_mm,2.89,"Table I, PDF p. 16",2.95,"Table IX, PDF p. 26",DIFFERS,difference +0.06; rounding tolerance 0.01
+FLEX-008,P,1.00,"Table I, PDF p. 16",762.4 mmHg,"Table IX, PDF p. 26",AGREE,difference +0.003158; rounding tolerance 0.005066
+FLEX-008,X_O2,0.21,"Table I, PDF p. 16",.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-008,X_N2,0.79,"Table I, PDF p. 16",.79,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-008,X_CO2,0.005,"Table I, PDF p. 16",0,"Table IX, PDF p. 26",AGREE,difference -0.005; rounding tolerance 0.5005 (matrix value from table header)
+FLEX-009,fiber,No (header),"Table I, PDF p. 16",Free-floating,"Appendix B Fig. 13, PDF p. 43",AGREE,
+FLEX-009,fuel,heptane,"Table I, PDF p. 16",heptane,"Table IX, PDF p. 26",AGREE,
+FLEX-009,date,"Apr. 10, 2009","Table I, PDF p. 16",4/10/09,"Table IX, PDF p. 26",AGREE,
+FLEX-009,P,1.00,"Table I, PDF p. 16",760 mmHg,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.005658
+FLEX-009,X_O2,0.21,"Table I, PDF p. 16",.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-009,X_N2,0.79,"Table I, PDF p. 16",.79,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-009,X_CO2,0.005,"Table I, PDF p. 16",0,"Table IX, PDF p. 26",AGREE,difference -0.005; rounding tolerance 0.5005 (matrix value from table header)
+FLEX-010,fiber,No (header),"Table II, PDF p. 16",Free-floating,"Appendix B Fig. 14, PDF p. 44",AGREE,
+FLEX-010,fuel,methanol,"Table II, PDF p. 16",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-010,date,"May 22, 2009","Table II, PDF p. 16",5/22/09,"Table IX, PDF p. 26",AGREE,
+FLEX-010,D0_mm,3.88,"Table II, PDF p. 16",3.86,"Table IX, PDF p. 26",DIFFERS,difference -0.02; rounding tolerance 0.01
+FLEX-010,P,3.05,"Table II, PDF p. 16",2319.7 mmHg,"Table IX, PDF p. 26",AGREE,difference +0.002237; rounding tolerance 0.005066
+FLEX-010,X_O2,0.21,"Table II, PDF p. 16",.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-010,X_N2,0.090,"Table II, PDF p. 16",.09,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0055 (matrix value from table header)
+FLEX-010,X_CO2,0.700,"Table II, PDF p. 16",.7,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505 (matrix value from table header)
+FLEX-011,fiber,No (header),"Table II, PDF p. 16",Free-floating,"Appendix B Fig. 15, PDF p. 45",AGREE,
+FLEX-011,fuel,methanol,"Table II, PDF p. 16",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-011,date,"May 22, 2009","Table II, PDF p. 16",5/22/09,"Table IX, PDF p. 26",AGREE,
+FLEX-011,D0_mm,3.02,"Table II, PDF p. 16",3.03,"Table IX, PDF p. 26",AGREE,difference +0.01; rounding tolerance 0.01
+FLEX-011,P,3.05,"Table II, PDF p. 16",2318.8 mmHg,"Table IX, PDF p. 26",AGREE,difference +0.001053; rounding tolerance 0.005066
+FLEX-011,X_O2,0.21,"Table II, PDF p. 16",.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-011,X_N2,0.090,"Table II, PDF p. 16",.09,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0055 (matrix value from table header)
+FLEX-011,X_CO2,0.700,"Table II, PDF p. 16",.7,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505 (matrix value from table header)
+FLEX-012,fiber,No (header),"Table II, PDF p. 16",Free-floating,"Appendix B Fig. 16, PDF p. 46",AGREE,
+FLEX-012,fuel,heptane,"Table II, PDF p. 16",heptane,"Table IX, PDF p. 26",AGREE,
+FLEX-012,date,"May 22, 2009","Table II, PDF p. 16",5/22/09,"Table IX, PDF p. 26",AGREE,
+FLEX-012,D0_mm,3.09,"Table II, PDF p. 16",2.74,"Table IX, PDF p. 26",DIFFERS,difference -0.35; rounding tolerance 0.01
+FLEX-012,P,3.05,"Table II, PDF p. 16",2319.9 mmHg,"Table IX, PDF p. 26",AGREE,difference +0.0025; rounding tolerance 0.005066
+FLEX-012,X_O2,0.21,"Table II, PDF p. 16",.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-012,X_N2,0.090,"Table II, PDF p. 16",.09,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0055 (matrix value from table header)
+FLEX-012,X_CO2,0.700,"Table II, PDF p. 16",.7,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505 (matrix value from table header)
+FLEX-013,fiber,No (header),"Table II, PDF p. 16",Free-floating,"Appendix B Fig. 17, PDF p. 47",AGREE,
+FLEX-013,fuel,methanol,"Table II, PDF p. 16",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-013,date,"June 25, 2009","Table II, PDF p. 16",6/25/09,"Table IX, PDF p. 26",AGREE,
+FLEX-013,D0_mm,2.72,"Table II, PDF p. 16",2.59,"Table IX, PDF p. 26",DIFFERS,difference -0.13; rounding tolerance 0.01
+FLEX-013,P,2.73,"Table II, PDF p. 16",2074.2 mmHg,"Table IX, PDF p. 26",AGREE,difference -0.0007895; rounding tolerance 0.005066
+FLEX-013,X_O2,0.21,"Table II, PDF p. 16",.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-013,X_N2,0.090,"Table II, PDF p. 16",.09,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0055 (matrix value from table header)
+FLEX-013,X_CO2,0.700,"Table II, PDF p. 16",.7,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505 (matrix value from table header)
+FLEX-014,fiber,No (header),"Table II, PDF p. 16",Free-floating,"Appendix B Fig. 18, PDF p. 48",AGREE,
+FLEX-014,fuel,methanol,"Table II, PDF p. 16",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-014,date,"June 29, 2009","Table II, PDF p. 16",6/29/09,"Table IX, PDF p. 26",AGREE,
+FLEX-014,D0_mm,3.71,"Table II, PDF p. 16",3.7,"Table IX, PDF p. 26",AGREE,difference -0.01; rounding tolerance 0.055
+FLEX-014,P,2.70,"Table II, PDF p. 16",2055.6 mmHg,"Table IX, PDF p. 26",AGREE,difference +0.004737; rounding tolerance 0.005066
+FLEX-014,X_O2,0.21,"Table II, PDF p. 16",.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-014,X_N2,0.090,"Table II, PDF p. 16",.09,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0055 (matrix value from table header)
+FLEX-014,X_CO2,0.700,"Table II, PDF p. 16",.7,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505 (matrix value from table header)
+FLEX-015,fiber,No (header),"Table II, PDF p. 16",Free-floating,"Appendix B Fig. 19, PDF p. 49",AGREE,
+FLEX-015,fuel,methanol,"Table II, PDF p. 16",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-015,date,"June 29, 2009","Table II, PDF p. 16",6/29/09,"Table IX, PDF p. 26",AGREE,
+FLEX-015,D0_mm,4.43,"Table II, PDF p. 16",4.42,"Table IX, PDF p. 26",AGREE,difference -0.01; rounding tolerance 0.01
+FLEX-015,P,2.72,"Table II, PDF p. 16",2066.6 mmHg,"Table IX, PDF p. 26",AGREE,difference -0.0007895; rounding tolerance 0.005066
+FLEX-015,X_O2,0.21,"Table II, PDF p. 16",.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-015,X_N2,0.090,"Table II, PDF p. 16",.09,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0055 (matrix value from table header)
+FLEX-015,X_CO2,0.700,"Table II, PDF p. 16",.7,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505 (matrix value from table header)
+FLEX-016,fiber,No (header),"Table II, PDF p. 16",Free-floating,"Appendix B Fig. 20, PDF p. 50",AGREE,
+FLEX-016,fuel,methanol,"Table II, PDF p. 16",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-016,date,"June 29, 2009","Table II, PDF p. 16",6/29/09,"Table IX, PDF p. 26",AGREE,
+FLEX-016,D0_mm,1.80,"Table II, PDF p. 16",1.66,"Table IX, PDF p. 26",DIFFERS,difference -0.14; rounding tolerance 0.01
+FLEX-016,P,2.73,"Table II, PDF p. 16",2072.1 mmHg,"Table IX, PDF p. 26",AGREE,difference -0.003553; rounding tolerance 0.005066
+FLEX-016,X_O2,0.21,"Table II, PDF p. 16",.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-016,X_N2,0.090,"Table II, PDF p. 16",.09,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0055 (matrix value from table header)
+FLEX-016,X_CO2,0.700,"Table II, PDF p. 16",.7,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505 (matrix value from table header)
+FLEX-017,fiber,No (header),"Table II, PDF p. 16",Free-floating,"Appendix B Fig. 21, PDF p. 51",AGREE,
+FLEX-017,fuel,methanol,"Table II, PDF p. 16",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-017,date,"July 1, 2009","Table II, PDF p. 16",7/1/09,"Table IX, PDF p. 26",AGREE,
+FLEX-017,D0_mm,2.81,"Table II, PDF p. 16",2.67,"Table IX, PDF p. 26",DIFFERS,difference -0.14; rounding tolerance 0.01
+FLEX-017,P,2.03,"Table II, PDF p. 16",1545.7 mmHg,"Table IX, PDF p. 26",AGREE,difference +0.003816; rounding tolerance 0.005066
+FLEX-017,X_O2,0.21,"Table II, PDF p. 16",.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-017,X_N2,0.090,"Table II, PDF p. 16",.09,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0055 (matrix value from table header)
+FLEX-017,X_CO2,0.700,"Table II, PDF p. 16",.7,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505 (matrix value from table header)
+FLEX-018,fiber,No (header),"Table II, PDF p. 16",Free-floating,"Appendix B Fig. 22, PDF p. 52",AGREE,
+FLEX-018,fuel,heptane,"Table II, PDF p. 16",heptane,"Table IX, PDF p. 26",AGREE,
+FLEX-018,date,"July 1, 2009","Table II, PDF p. 16",7/1/09,"Table IX, PDF p. 26",AGREE,
+FLEX-018,D0_mm,2.92,"Table II, PDF p. 16",2.74,"Table IX, PDF p. 26",DIFFERS,difference -0.18; rounding tolerance 0.01
+FLEX-018,P,2.04,"Table II, PDF p. 16",1553.8 mmHg,"Table IX, PDF p. 26",AGREE,difference +0.004474; rounding tolerance 0.005066
+FLEX-018,X_O2,0.21,"Table II, PDF p. 16",.21,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01 (matrix value from table header)
+FLEX-018,X_N2,0.090,"Table II, PDF p. 16",.09,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0055 (matrix value from table header)
+FLEX-018,X_CO2,0.700,"Table II, PDF p. 16",.7,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505 (matrix value from table header)
+FLEX-019,fiber,No,"Table III, PDF p. 17",Free-floating,"Appendix B Fig. 23, PDF p. 53",AGREE,
+FLEX-019,fuel,heptane,"Table III, PDF p. 17",heptane,"Table IX, PDF p. 26",AGREE,
+FLEX-019,date,"Aug. 26, 2009","Table III, PDF p. 17",8/26/09,"Table IX, PDF p. 26",AGREE,
+FLEX-019,D0_mm,3.43,"Table III, PDF p. 17",3.39,"Table IX, PDF p. 26",DIFFERS,difference -0.04; rounding tolerance 0.01
+FLEX-019,P,0.71,"Table III, PDF p. 17",539.1 mmHg,"Table IX, PDF p. 26",AGREE,difference -0.0006579; rounding tolerance 0.005066
+FLEX-019,X_O2,0.400,"Table III, PDF p. 17",.34,"Table IX, PDF p. 26",DIFFERS,difference -0.06; rounding tolerance 0.0055
+FLEX-019,X_N2,0.600,"Table III, PDF p. 17",.66,"Table IX, PDF p. 26",DIFFERS,difference +0.06; rounding tolerance 0.0055
+FLEX-020,fiber,No,"Table III, PDF p. 17",Free-floating,"Appendix B Fig. 24, PDF p. 54",AGREE,
+FLEX-020,fuel,methanol,"Table III, PDF p. 17",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-020,date,"Oct. 24, 2009","Table III, PDF p. 17",10/24/09,"Table IX, PDF p. 26",AGREE,
+FLEX-020,D0_mm,3.46,"Table III, PDF p. 17",3.4,"Table IX, PDF p. 26",DIFFERS,difference -0.06; rounding tolerance 0.055
+FLEX-020,P,.71,"Table III, PDF p. 17",539.5 mmHg,"Table IX, PDF p. 26",AGREE,difference -0.0001316; rounding tolerance 0.005066
+FLEX-020,X_O2,.400,"Table III, PDF p. 17",.34,"Table IX, PDF p. 26",DIFFERS,difference -0.06; rounding tolerance 0.0055
+FLEX-020,X_N2,.600,"Table III, PDF p. 17",.66,"Table IX, PDF p. 26",DIFFERS,difference +0.06; rounding tolerance 0.0055
+FLEX-021,fiber,No,"Table III, PDF p. 17",Free-floating,"Appendix B Fig. 25, PDF p. 55",AGREE,
+FLEX-021,fuel,methanol,"Table III, PDF p. 17",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-021,date,"Oct. 24, 2009","Table III, PDF p. 17",10/24/09,"Table IX, PDF p. 26",AGREE,
+FLEX-021,D0_mm,3.49,"Table III, PDF p. 17",3.49,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.01
+FLEX-021,P,.71,"Table III, PDF p. 17",540.6 mmHg,"Table IX, PDF p. 26",AGREE,difference +0.001316; rounding tolerance 0.005066
+FLEX-021,X_O2,.400,"Table III, PDF p. 17",.34,"Table IX, PDF p. 26",DIFFERS,difference -0.06; rounding tolerance 0.0055
+FLEX-021,X_N2,.600,"Table III, PDF p. 17",.66,"Table IX, PDF p. 26",DIFFERS,difference +0.06; rounding tolerance 0.0055
+FLEX-022,fiber,No,"Table III, PDF p. 17",Free-floating,"Appendix B Fig. 26, PDF p. 56",AGREE,
+FLEX-022,fuel,methanol,"Table III, PDF p. 17",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-022,date,"Oct. 24, 2009","Table III, PDF p. 17",10/24/09,"Table IX, PDF p. 26",AGREE,
+FLEX-022,D0_mm,3.55,"Table III, PDF p. 17",3.5,"Table IX, PDF p. 26",AGREE,difference -0.05; rounding tolerance 0.055
+FLEX-022,P,.71,"Table III, PDF p. 17",540.5 mmHg,"Table IX, PDF p. 26",AGREE,difference +0.001184; rounding tolerance 0.005066
+FLEX-022,X_O2,.400,"Table III, PDF p. 17",.34,"Table IX, PDF p. 26",DIFFERS,difference -0.06; rounding tolerance 0.0055
+FLEX-022,X_N2,.600,"Table III, PDF p. 17",.66,"Table IX, PDF p. 26",DIFFERS,difference +0.06; rounding tolerance 0.0055
+FLEX-023,fiber,No,"Table III, PDF p. 17",Free-floating,"Appendix B Fig. 27, PDF p. 57",AGREE,
+FLEX-023,fuel,heptane,"Table III, PDF p. 17",heptane,"Table IX, PDF p. 26",AGREE,
+FLEX-023,date,"Oct. 24, 2009","Table III, PDF p. 17",10/24/09,"Table IX, PDF p. 26",AGREE,
+FLEX-023,D0_mm,3.18,"Table III, PDF p. 17",3.01,"Table IX, PDF p. 26",DIFFERS,difference -0.17; rounding tolerance 0.01
+FLEX-023,P,.71,"Table III, PDF p. 17",541.8 mmHg,"Table IX, PDF p. 26",AGREE,difference +0.002895; rounding tolerance 0.005066
+FLEX-023,X_O2,.400,"Table III, PDF p. 17",.34,"Table IX, PDF p. 26",DIFFERS,difference -0.06; rounding tolerance 0.0055
+FLEX-023,X_N2,.600,"Table III, PDF p. 17",.66,"Table IX, PDF p. 26",DIFFERS,difference +0.06; rounding tolerance 0.0055
+FLEX-024,fiber,No,"Table III, PDF p. 17",Free-floating,"Appendix B Fig. 28, PDF p. 58",AGREE,
+FLEX-024,fuel,heptane,"Table III, PDF p. 17",heptane,"Table IX, PDF p. 26",AGREE,
+FLEX-024,date,"Oct. 24, 2009","Table III, PDF p. 17",10/24/09,"Table IX, PDF p. 26",AGREE,
+FLEX-024,P,.71,"Table III, PDF p. 17",542.8 mmHg,"Table IX, PDF p. 26",AGREE,difference +0.004211; rounding tolerance 0.005066
+FLEX-024,X_O2,.400,"Table III, PDF p. 17",.34,"Table IX, PDF p. 26",DIFFERS,difference -0.06; rounding tolerance 0.0055
+FLEX-024,X_N2,.600,"Table III, PDF p. 17",.66,"Table IX, PDF p. 26",DIFFERS,difference +0.06; rounding tolerance 0.0055
+FLEX-025,fiber,No,"Table III, PDF p. 17",Free-floating,"Appendix B Fig. 29, PDF p. 59",AGREE,
+FLEX-025,fuel,methanol,"Table III, PDF p. 17",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-025,date,"Nov. 9, 2009","Table III, PDF p. 17",11/9/09,"Table IX, PDF p. 26",AGREE,
+FLEX-025,D0_mm,2.65,"Table III, PDF p. 17",2.6,"Table IX, PDF p. 26",AGREE,difference -0.05; rounding tolerance 0.055
+FLEX-025,P,.71,"Table III, PDF p. 17",537.3 mmHg,"Table IX, PDF p. 26",AGREE,difference -0.003026; rounding tolerance 0.005066
+FLEX-025,X_O2,.300,"Table III, PDF p. 17",.3,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-025,X_N2,.700,"Table III, PDF p. 17",.7,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-026,fiber,No,"Table III, PDF p. 17",Free-floating,"Appendix B Fig. 30, PDF p. 60",AGREE,
+FLEX-026,fuel,methanol,"Table III, PDF p. 17",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-026,date,"Nov. 9, 2009","Table III, PDF p. 17",11/9/09,"Table IX, PDF p. 26",AGREE,
+FLEX-026,D0_mm,3.70,"Table III, PDF p. 17",3.63,"Table IX, PDF p. 26",DIFFERS,difference -0.07; rounding tolerance 0.01
+FLEX-026,P,.71,"Table III, PDF p. 17",538.4 mmHg,"Table IX, PDF p. 26",AGREE,difference -0.001579; rounding tolerance 0.005066
+FLEX-026,X_O2,.300,"Table III, PDF p. 17",.3,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-026,X_N2,.700,"Table III, PDF p. 17",.7,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-027,fiber,No,"Table III, PDF p. 17",Free-floating,"Appendix B Fig. 31, PDF p. 61",AGREE,
+FLEX-027,fuel,heptane,"Table III, PDF p. 17",heptane,"Table IX, PDF p. 26",AGREE,
+FLEX-027,date,"Nov. 9, 2009","Table III, PDF p. 17",11/9/09,"Table IX, PDF p. 26",AGREE,
+FLEX-027,D0_mm,4.00,"Table III, PDF p. 17",3.87,"Table IX, PDF p. 26",DIFFERS,difference -0.13; rounding tolerance 0.01
+FLEX-027,P,.71,"Table III, PDF p. 17",540.7 mmHg,"Table IX, PDF p. 26",AGREE,difference +0.001447; rounding tolerance 0.005066
+FLEX-027,X_O2,.300,"Table III, PDF p. 17",.3,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-027,X_N2,.700,"Table III, PDF p. 17",.7,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-028,fiber,No,"Table III, PDF p. 17",Free-floating,"Appendix B Fig. 32, PDF p. 62",AGREE,
+FLEX-028,fuel,heptane,"Table III, PDF p. 17",heptane,"Table IX, PDF p. 26",AGREE,
+FLEX-028,date,"Nov. 9, 2009","Table III, PDF p. 17",11/9/09,"Table IX, PDF p. 26",AGREE,
+FLEX-028,D0_mm,3.46,"Table III, PDF p. 17",3.36,"Table IX, PDF p. 26",DIFFERS,difference -0.1; rounding tolerance 0.01
+FLEX-028,P,.71,"Table III, PDF p. 17",539.7 mmHg,"Table IX, PDF p. 26",AGREE,difference +0.0001316; rounding tolerance 0.005066
+FLEX-028,X_O2,.300,"Table III, PDF p. 17",.3,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-028,X_N2,.700,"Table III, PDF p. 17",.7,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-029,fiber,No,"Table III, PDF p. 17",Free-floating,"Appendix B Fig. 33, PDF p. 63",AGREE,
+FLEX-029,fuel,methanol,"Table III, PDF p. 17",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-029,date,"Nov. 13, 2009","Table III, PDF p. 17",11/13/09,"Table IX, PDF p. 26",AGREE,
+FLEX-029,D0_mm,2.65,"Table III, PDF p. 17",2.57,"Table IX, PDF p. 26",DIFFERS,difference -0.08; rounding tolerance 0.01
+FLEX-029,P,1.01,"Table III, PDF p. 17",766.9 mmHg,"Table IX, PDF p. 26",AGREE,difference -0.0009211; rounding tolerance 0.005066
+FLEX-029,X_O2,.300,"Table III, PDF p. 17",.3,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-029,X_N2,.700,"Table III, PDF p. 17",.7,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-030,fiber,No,"Table III, PDF p. 17",Free-floating,"Appendix B Fig. 34, PDF p. 64",AGREE,
+FLEX-030,fuel,methanol,"Table III, PDF p. 17",methanol,"Table IX, PDF p. 26",AGREE,
+FLEX-030,date,"Nov. 13, 2009","Table III, PDF p. 17",11/13/09,"Table IX, PDF p. 26",AGREE,
+FLEX-030,D0_mm,3.32,"Table III, PDF p. 17",3.26,"Table IX, PDF p. 26",DIFFERS,difference -0.06; rounding tolerance 0.01
+FLEX-030,P,1.01,"Table III, PDF p. 17",769.2 mmHg,"Table IX, PDF p. 26",AGREE,difference +0.002105; rounding tolerance 0.005066
+FLEX-030,X_O2,.300,"Table III, PDF p. 17",.3,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-030,X_N2,.700,"Table III, PDF p. 17",.7,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-031,fiber,No,"Table III, PDF p. 17",Free-floating,"Appendix B Fig. 35, PDF p. 65",AGREE,
+FLEX-031,fuel,heptane,"Table III, PDF p. 17",heptane,"Table IX, PDF p. 26",AGREE,
+FLEX-031,date,"Nov. 13, 2009","Table III, PDF p. 17",11/13/09,"Table IX, PDF p. 26",AGREE,
+FLEX-031,D0_mm,3.51,"Table III, PDF p. 17",3.39,"Table IX, PDF p. 26",DIFFERS,difference -0.12; rounding tolerance 0.01
+FLEX-031,P,1.01,"Table III, PDF p. 17",770.5 mmHg,"Table IX, PDF p. 26",AGREE,difference +0.003816; rounding tolerance 0.005066
+FLEX-031,X_O2,.300,"Table III, PDF p. 17",.3,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-031,X_N2,.700,"Table III, PDF p. 17",.7,"Table IX, PDF p. 26",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-032,fiber,No,"Table III, PDF p. 17",Free-floating,"Appendix B Fig. 36, PDF p. 66",AGREE,
+FLEX-032,fuel,heptane,"Table III, PDF p. 17",heptane,"Table IX, PDF p. 27",AGREE,
+FLEX-032,date,"Nov. 13, 2009","Table III, PDF p. 17",11/13/09,"Table IX, PDF p. 27",AGREE,
+FLEX-032,D0_mm,3.08,"Table III, PDF p. 17",3.07,"Table IX, PDF p. 27",AGREE,difference -0.01; rounding tolerance 0.01
+FLEX-032,P,1.01,"Table III, PDF p. 17",771 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.004474; rounding tolerance 0.005658
+FLEX-032,X_O2,.300,"Table III, PDF p. 17",.3,"Table IX, PDF p. 27",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-032,X_N2,.700,"Table III, PDF p. 17",.7,"Table IX, PDF p. 27",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-033,fiber,No,"Table IV, PDF p. 18",Free-floating,"Appendix B Fig. 37, PDF p. 67",AGREE,
+FLEX-033,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-033,date,"Nov. 27, 2009","Table IV, PDF p. 18",11/27/09,"Table IX, PDF p. 27",AGREE,
+FLEX-033,D0_mm,2.72,"Table IV, PDF p. 18",2.62,"Table IX, PDF p. 27",DIFFERS,difference -0.1; rounding tolerance 0.01
+FLEX-033,P,1.01,"Table IV, PDF p. 18",764.5 mmHg,"Table IX, PDF p. 27",AGREE,difference -0.004079; rounding tolerance 0.005066
+FLEX-033,X_O2,0.210,"Table IV, PDF p. 18",.21,"Table IX, PDF p. 27",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-033,X_N2,0.790,"Table IV, PDF p. 18",.79,"Table IX, PDF p. 27",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-034,fiber,No,"Table IV, PDF p. 18",Free-floating,"Appendix B Fig. 38, PDF p. 68",AGREE,
+FLEX-034,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-034,date,"Nov. 27, 2009","Table IV, PDF p. 18",11/27/09,"Table IX, PDF p. 27",AGREE,
+FLEX-034,D0_mm,3.95,"Table IV, PDF p. 18",3.89,"Table IX, PDF p. 27",DIFFERS,difference -0.06; rounding tolerance 0.01
+FLEX-034,P,1.01,"Table IV, PDF p. 18",767.7 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.0001316; rounding tolerance 0.005066
+FLEX-034,X_O2,.210,"Table IV, PDF p. 18",.21,"Table IX, PDF p. 27",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-034,X_N2,.790,"Table IV, PDF p. 18",.79,"Table IX, PDF p. 27",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-035,fiber,No,"Table V, PDF p. 19",Free-floating,"Appendix B Fig. 39, PDF p. 69",AGREE,
+FLEX-035,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 27",AGREE,
+FLEX-035,date,"Nov. 27, 2009","Table V, PDF p. 19",11/27/09,"Table IX, PDF p. 27",AGREE,
+FLEX-035,D0_mm,3.91,"Table V, PDF p. 19",3.85,"Table IX, PDF p. 27",DIFFERS,difference -0.06; rounding tolerance 0.01
+FLEX-035,P,1.01,"Table V, PDF p. 19",768.1 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.0006579; rounding tolerance 0.005066
+FLEX-035,X_O2,0.210,"Table V, PDF p. 19",.21,"Table IX, PDF p. 27",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-035,X_N2,0.790,"Table V, PDF p. 19",.79,"Table IX, PDF p. 27",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-036,fiber,No,"Table IV, PDF p. 18",Free-floating,"Appendix B Fig. 40, PDF p. 70",AGREE,
+FLEX-036,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-036,date,"Dec. 15, 2009","Table IV, PDF p. 18",12/15/09,"Table IX, PDF p. 27",AGREE,
+FLEX-036,D0_mm,2.45,"Table IV, PDF p. 18",2.4,"Table IX, PDF p. 27",AGREE,difference -0.05; rounding tolerance 0.055
+FLEX-036,P,0.71,"Table IV, PDF p. 18",539 mmHg,"Table IX, PDF p. 27",AGREE,difference -0.0007895; rounding tolerance 0.005658
+FLEX-036,X_O2,.210,"Table IV, PDF p. 18",.2,"Table IX, PDF p. 27",AGREE,difference -0.01; rounding tolerance 0.0505
+FLEX-036,X_N2,.790,"Table IV, PDF p. 18",.8,"Table IX, PDF p. 27",AGREE,difference +0.01; rounding tolerance 0.0505
+FLEX-037,fiber,Yes,"Table III, PDF p. 17",Fiber-supported,"Appendix B Fig. 41, PDF p. 71",AGREE,
+FLEX-037,fuel,methanol,"Table III, PDF p. 17",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-037,date,"Jan. 7, 2010","Table III, PDF p. 17",1/7/10,"Table IX, PDF p. 27",AGREE,
+FLEX-037,D0_mm,3.41,"Table III, PDF p. 17",3.31,"Table IX, PDF p. 27",DIFFERS,difference -0.1; rounding tolerance 0.01
+FLEX-037,P,.70,"Table III, PDF p. 17",534.3 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.003026; rounding tolerance 0.005066
+FLEX-037,X_O2,.337,"Table III, PDF p. 17",.34,"Table IX, PDF p. 27",AGREE,difference +0.003; rounding tolerance 0.0055
+FLEX-037,X_N2,.662,"Table III, PDF p. 17",.66,"Table IX, PDF p. 27",AGREE,difference -0.002; rounding tolerance 0.0055
+FLEX-038,fiber,Yes,"Table III, PDF p. 17",Fiber-supported,"Appendix B Fig. 42, PDF p. 72",AGREE,
+FLEX-038,fuel,methanol,"Table III, PDF p. 17",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-038,date,"Jan. 7, 2010","Table III, PDF p. 17",1/7/10,"Table IX, PDF p. 27",AGREE,
+FLEX-038,D0_mm,3.51,"Table III, PDF p. 17",3.59,"Table IX, PDF p. 27",DIFFERS,difference +0.08; rounding tolerance 0.01
+FLEX-038,P,.70,"Table III, PDF p. 17",534.4 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.003158; rounding tolerance 0.005066
+FLEX-038,X_O2,.337,"Table III, PDF p. 17",.34,"Table IX, PDF p. 27",AGREE,difference +0.003; rounding tolerance 0.0055
+FLEX-038,X_N2,.661,"Table III, PDF p. 17",.66,"Table IX, PDF p. 27",AGREE,difference -0.001; rounding tolerance 0.0055
+FLEX-039,fiber,Yes,"Table III, PDF p. 17",Fiber-supported,"Appendix B Fig. 43, PDF p. 73",AGREE,
+FLEX-039,fuel,heptane,"Table III, PDF p. 17",heptane,"Table IX, PDF p. 27",AGREE,
+FLEX-039,date,"Jan. 7, 2010","Table III, PDF p. 17",1/7/10,"Table IX, PDF p. 27",AGREE,
+FLEX-039,D0_mm,2.91,"Table III, PDF p. 17",2.91,"Table IX, PDF p. 27",AGREE,difference +0; rounding tolerance 0.01
+FLEX-039,P,.70,"Table III, PDF p. 17",534.9 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.003816; rounding tolerance 0.005066
+FLEX-039,X_O2,.336,"Table III, PDF p. 17",.34,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-039,X_N2,.661,"Table III, PDF p. 17",.66,"Table IX, PDF p. 27",AGREE,difference -0.001; rounding tolerance 0.0055
+FLEX-040,fiber,Yes,"Table III, PDF p. 17",Fiber-supported,"Appendix B Fig. 44, PDF p. 74",AGREE,
+FLEX-040,fuel,methanol,"Table III, PDF p. 17",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-040,date,"Jan. 8, 2010","Table III, PDF p. 17",1/8/10,"Table IX, PDF p. 27",AGREE,
+FLEX-040,D0_mm,3.77,"Table III, PDF p. 17",3.77,"Table IX, PDF p. 27",AGREE,difference +0; rounding tolerance 0.01
+FLEX-040,P,.70,"Table III, PDF p. 17",535.1 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.004079; rounding tolerance 0.005066
+FLEX-040,X_O2,.297,"Table III, PDF p. 17",.3,"Table IX, PDF p. 27",AGREE,difference +0.003; rounding tolerance 0.0505
+FLEX-040,X_N2,.699,"Table III, PDF p. 17",.7,"Table IX, PDF p. 27",AGREE,difference +0.001; rounding tolerance 0.0505
+FLEX-041,fiber,Yes,"Table III, PDF p. 17",Fiber-supported,"Appendix B Fig. 45, PDF p. 75",AGREE,
+FLEX-041,fuel,methanol,"Table III, PDF p. 17",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-041,date,"Jan. 8, 2010","Table III, PDF p. 17",1/8/10,"Table IX, PDF p. 27",AGREE,
+FLEX-041,D0_mm,3.33,"Table III, PDF p. 17",3.35,"Table IX, PDF p. 27",DIFFERS,difference +0.02; rounding tolerance 0.01
+FLEX-041,P,.70,"Table III, PDF p. 17",534.3 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.003026; rounding tolerance 0.005066
+FLEX-041,X_O2,.297,"Table III, PDF p. 17",.3,"Table IX, PDF p. 27",AGREE,difference +0.003; rounding tolerance 0.0505
+FLEX-041,X_N2,.699,"Table III, PDF p. 17",.7,"Table IX, PDF p. 27",AGREE,difference +0.001; rounding tolerance 0.0505
+FLEX-042,fiber,Yes,"Table III, PDF p. 17",Fiber-supported,"Appendix B Fig. 46, PDF p. 76",AGREE,
+FLEX-042,fuel,heptane,"Table III, PDF p. 17",heptane,"Table IX, PDF p. 27",AGREE,
+FLEX-042,date,"Jan. 8, 2010","Table III, PDF p. 17",1/8/10,"Table IX, PDF p. 27",AGREE,
+FLEX-042,D0_mm,3.02,"Table III, PDF p. 17",2.92,"Table IX, PDF p. 27",DIFFERS,difference -0.1; rounding tolerance 0.01
+FLEX-042,P,.70,"Table III, PDF p. 17",535 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.003947; rounding tolerance 0.005658
+FLEX-042,X_O2,.298,"Table III, PDF p. 17",.3,"Table IX, PDF p. 27",AGREE,difference +0.002; rounding tolerance 0.0505
+FLEX-042,X_N2,.700,"Table III, PDF p. 17",.7,"Table IX, PDF p. 27",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-043,fiber,Yes,"Table III, PDF p. 17",Fiber-supported,"Appendix B Fig. 47, PDF p. 77",AGREE,
+FLEX-043,fuel,heptane,"Table III, PDF p. 17",heptane,"Table IX, PDF p. 27",AGREE,
+FLEX-043,date,"Jan. 8, 2010","Table III, PDF p. 17",1/8/10,"Table IX, PDF p. 27",AGREE,
+FLEX-043,D0_mm,3.02,"Table III, PDF p. 17",2.97,"Table IX, PDF p. 27",DIFFERS,difference -0.05; rounding tolerance 0.01
+FLEX-043,P,.70,"Table III, PDF p. 17",534.9 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.003816; rounding tolerance 0.005066
+FLEX-043,X_O2,.298,"Table III, PDF p. 17",.3,"Table IX, PDF p. 27",AGREE,difference +0.002; rounding tolerance 0.0505
+FLEX-043,X_N2,.700,"Table III, PDF p. 17",.7,"Table IX, PDF p. 27",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-044,fiber,Yes,"Table III, PDF p. 17",Fiber-supported,"Appendix B Fig. 48, PDF p. 78",AGREE,
+FLEX-044,fuel,methanol,"Table III, PDF p. 17",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-044,date,"Jan. 11, 2010","Table III, PDF p. 17",1/11/10,"Table IX, PDF p. 27",AGREE,
+FLEX-044,D0_mm,3.52,"Table III, PDF p. 17",3.49,"Table IX, PDF p. 27",DIFFERS,difference -0.03; rounding tolerance 0.01
+FLEX-044,P,1.01,"Table III, PDF p. 17",766.8 mmHg,"Table IX, PDF p. 27",AGREE,difference -0.001053; rounding tolerance 0.005066
+FLEX-044,X_O2,.298,"Table III, PDF p. 17",.3,"Table IX, PDF p. 27",AGREE,difference +0.002; rounding tolerance 0.0505
+FLEX-044,X_N2,.697,"Table III, PDF p. 17",.7,"Table IX, PDF p. 27",AGREE,difference +0.003; rounding tolerance 0.0505
+FLEX-045,fiber,Yes,"Table III, PDF p. 17",Fiber-supported,"Appendix B Fig. 49, PDF p. 79",AGREE,
+FLEX-045,fuel,methanol,"Table III, PDF p. 17",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-045,date,"Jan. 11, 2010","Table III, PDF p. 17",1/11/10,"Table IX, PDF p. 27",AGREE,
+FLEX-045,D0_mm,2.46,"Table III, PDF p. 17",2.42,"Table IX, PDF p. 27",DIFFERS,difference -0.04; rounding tolerance 0.01
+FLEX-045,P,1.01,"Table III, PDF p. 17",768.3 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.0009211; rounding tolerance 0.005066
+FLEX-045,X_O2,.298,"Table III, PDF p. 17",.3,"Table IX, PDF p. 27",AGREE,difference +0.002; rounding tolerance 0.0505
+FLEX-045,X_N2,.697,"Table III, PDF p. 17",.7,"Table IX, PDF p. 27",AGREE,difference +0.003; rounding tolerance 0.0505
+FLEX-046,fiber,Yes,"Table IV, PDF p. 18",Fiber-supported,"Appendix B Fig. 50, PDF p. 80",AGREE,
+FLEX-046,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-046,date,"Jan. 12, 2010","Table IV, PDF p. 18",1/12/10,"Table IX, PDF p. 27",AGREE,
+FLEX-046,D0_mm,2.88,"Table IV, PDF p. 18",2.78,"Table IX, PDF p. 27",DIFFERS,difference -0.1; rounding tolerance 0.01
+FLEX-046,P,1.01,"Table IV, PDF p. 18",769.5 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.0025; rounding tolerance 0.005066
+FLEX-046,X_O2,.209,"Table IV, PDF p. 18",.21,"Table IX, PDF p. 27",AGREE,difference +0.001; rounding tolerance 0.0055
+FLEX-046,X_N2,.786,"Table IV, PDF p. 18",.79,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-047,fiber,No,"Table V, PDF p. 19",Free-floating,"Appendix B Fig. 51, PDF p. 81",AGREE,
+FLEX-047,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 27",AGREE,
+FLEX-047,date,"Jan. 12, 2010","Table V, PDF p. 19",1/12/10,"Table IX, PDF p. 27",AGREE,
+FLEX-047,D0_mm,3.42,"Table V, PDF p. 19",3.36,"Table IX, PDF p. 27",DIFFERS,difference -0.06; rounding tolerance 0.01
+FLEX-047,P,1.01,"Table V, PDF p. 19",770.1 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.003289; rounding tolerance 0.005066
+FLEX-047,X_O2,.209,"Table V, PDF p. 19",.21,"Table IX, PDF p. 27",AGREE,difference +0.001; rounding tolerance 0.0055
+FLEX-047,X_N2,.786,"Table V, PDF p. 19",.79,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-048,fiber,Yes,"Table IV, PDF p. 18",Fiber-supported,"Appendix B Fig. 52, PDF p. 82",AGREE,
+FLEX-048,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-048,date,"Jan. 12, 2010","Table IV, PDF p. 18",1/12/10,"Table IX, PDF p. 27",AGREE,
+FLEX-048,D0_mm,3.68,"Table IV, PDF p. 18",3.66,"Table IX, PDF p. 27",DIFFERS,difference -0.02; rounding tolerance 0.01
+FLEX-048,P,1.01,"Table IV, PDF p. 18",768.7 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.001447; rounding tolerance 0.005066
+FLEX-048,X_O2,.209,"Table IV, PDF p. 18",.21,"Table IX, PDF p. 27",AGREE,difference +0.001; rounding tolerance 0.0055
+FLEX-048,X_N2,.786,"Table IV, PDF p. 18",.79,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-049,fiber,Yes,"Table V, PDF p. 19",Fiber-supported,"Appendix B Fig. 53, PDF p. 83",AGREE,
+FLEX-049,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 27",AGREE,
+FLEX-049,date,"Jan. 19, 2010","Table V, PDF p. 19",1/19/10,"Table IX, PDF p. 27",AGREE,
+FLEX-049,D0_mm,3.58,"Table V, PDF p. 19",3.46,"Table IX, PDF p. 27",DIFFERS,difference -0.12; rounding tolerance 0.01
+FLEX-049,P,1.01,"Table V, PDF p. 19",764.9 mmHg,"Table IX, PDF p. 27",AGREE,difference -0.003553; rounding tolerance 0.005066
+FLEX-049,X_O2,.208,"Table V, PDF p. 19",.21,"Table IX, PDF p. 27",AGREE,difference +0.002; rounding tolerance 0.0055
+FLEX-049,X_N2,.786,"Table V, PDF p. 19",.79,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-050,fiber,Yes,"Table V, PDF p. 19",Fiber-supported,"Appendix B Fig. 54, PDF p. 84",AGREE,
+FLEX-050,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 27",AGREE,
+FLEX-050,date,"Jan. 19, 2010","Table V, PDF p. 19",1/19/10,"Table IX, PDF p. 27",AGREE,
+FLEX-050,D0_mm,3.69,"Table V, PDF p. 19",3.57,"Table IX, PDF p. 27",DIFFERS,difference -0.12; rounding tolerance 0.01
+FLEX-050,P,1.01,"Table V, PDF p. 19",770.1 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.003289; rounding tolerance 0.005066
+FLEX-050,X_O2,.208,"Table V, PDF p. 19",.21,"Table IX, PDF p. 27",AGREE,difference +0.002; rounding tolerance 0.0055
+FLEX-050,X_N2,.786,"Table V, PDF p. 19",.79,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-051,fiber,Yes,"Table V, PDF p. 19",Fiber-supported,"Appendix B Fig. 55, PDF p. 85",AGREE,
+FLEX-051,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 27",AGREE,
+FLEX-051,date,"Jan. 19, 2010","Table V, PDF p. 19",1/19/10,"Table IX, PDF p. 27",AGREE,
+FLEX-051,D0_mm,2.45,"Table V, PDF p. 19",2.41,"Table IX, PDF p. 27",DIFFERS,difference -0.04; rounding tolerance 0.01
+FLEX-051,P,1.01,"Table V, PDF p. 19",771.4 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.005; rounding tolerance 0.005066
+FLEX-051,X_O2,.208,"Table V, PDF p. 19",.21,"Table IX, PDF p. 27",AGREE,difference +0.002; rounding tolerance 0.0055
+FLEX-051,X_N2,.786,"Table V, PDF p. 19",.79,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-052,fiber,Yes,"Table III, PDF p. 17",Fiber-supported,"Appendix B Fig. 56, PDF p. 86",AGREE,
+FLEX-052,fuel,heptane,"Table III, PDF p. 17",heptane,"Table IX, PDF p. 27",AGREE,
+FLEX-052,date,"Jan. 11, 2010","Table III, PDF p. 17",1/11/10,"Table IX, PDF p. 27",AGREE,
+FLEX-052,D0_mm,3.64,"Table III, PDF p. 17",3.53,"Table IX, PDF p. 27",DIFFERS,difference -0.11; rounding tolerance 0.01
+FLEX-052,P,1.01,"Table III, PDF p. 17",771.1 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.004605; rounding tolerance 0.005066
+FLEX-052,X_O2,.297,"Table III, PDF p. 17",.3,"Table IX, PDF p. 27",AGREE,difference +0.003; rounding tolerance 0.0505
+FLEX-052,X_N2,.697,"Table III, PDF p. 17",.7,"Table IX, PDF p. 27",AGREE,difference +0.003; rounding tolerance 0.0505
+FLEX-053,fiber,No,"Table V, PDF p. 19",Fiber-supported,"Appendix B Fig. 57, PDF p. 87",DIFFERS,
+FLEX-053,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 27",AGREE,
+FLEX-053,date,"Jan. 12, 2010","Table V, PDF p. 19",1/12/10,"Table IX, PDF p. 27",AGREE,
+FLEX-053,P,1.01,"Table V, PDF p. 19",770.2 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.003421; rounding tolerance 0.005066
+FLEX-053,X_O2,.209,"Table V, PDF p. 19",.21,"Table IX, PDF p. 27",AGREE,difference +0.001; rounding tolerance 0.0055
+FLEX-053,X_N2,.786,"Table V, PDF p. 19",.79,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-054,fiber,No,"Table IV, PDF p. 18",Free-floating,"Appendix B Fig. 58, PDF p. 88",AGREE,
+FLEX-054,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-054,date,"Jan. 12, 2010","Table IV, PDF p. 18",1/29/10,"Table IX, PDF p. 27",DIFFERS,
+FLEX-054,D0_mm,3.61,"Table IV, PDF p. 18",3.56,"Table IX, PDF p. 27",DIFFERS,difference -0.05; rounding tolerance 0.01
+FLEX-054,P,0.71,"Table IV, PDF p. 18",541.4 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.002368; rounding tolerance 0.005066
+FLEX-054,X_O2,.197,"Table IV, PDF p. 18",.2,"Table IX, PDF p. 27",AGREE,difference +0.003; rounding tolerance 0.0505
+FLEX-054,X_N2,.796,"Table IV, PDF p. 18",.8,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0505
+FLEX-055,fiber,Yes,"Table IV, PDF p. 18",Fiber-supported,"Appendix B Fig. 59, PDF p. 89",AGREE,
+FLEX-055,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-055,date,"Jan. 29, 2010","Table IV, PDF p. 18",1/29/10,"Table IX, PDF p. 27",AGREE,
+FLEX-055,D0_mm,3.52,"Table IV, PDF p. 18",3.37,"Table IX, PDF p. 27",DIFFERS,difference -0.15; rounding tolerance 0.01
+FLEX-055,P,0.71,"Table IV, PDF p. 18",542.6 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.003947; rounding tolerance 0.005066
+FLEX-055,X_O2,.197,"Table IV, PDF p. 18",.2,"Table IX, PDF p. 27",AGREE,difference +0.003; rounding tolerance 0.0505
+FLEX-055,X_N2,.795,"Table IV, PDF p. 18",.8,"Table IX, PDF p. 27",AGREE,difference +0.005; rounding tolerance 0.0505
+FLEX-056,fiber,No,"Table V, PDF p. 19",Free-floating,"Appendix B Fig. 60, PDF p. 90",AGREE,
+FLEX-056,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 27",AGREE,
+FLEX-056,date,"Jan. 29, 2010","Table V, PDF p. 19",1/29/10,"Table IX, PDF p. 27",AGREE,
+FLEX-056,D0_mm,3.64,"Table V, PDF p. 19",3.56,"Table IX, PDF p. 27",DIFFERS,difference -0.08; rounding tolerance 0.01
+FLEX-056,P,.72,"Table V, PDF p. 19",544.1 mmHg,"Table IX, PDF p. 27",AGREE,difference -0.004079; rounding tolerance 0.005066
+FLEX-056,X_O2,.196,"Table V, PDF p. 19",.2,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0505
+FLEX-056,X_N2,.795,"Table V, PDF p. 19",.79,"Table IX, PDF p. 27",AGREE,difference -0.005; rounding tolerance 0.0055
+FLEX-057,fiber,Yes,"Table V, PDF p. 19",Fiber-supported,"Appendix B Fig. 61, PDF p. 91",AGREE,
+FLEX-057,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 27",AGREE,
+FLEX-057,date,"Jan. 29, 2010","Table V, PDF p. 19",1/29/10,"Table IX, PDF p. 27",AGREE,
+FLEX-057,D0_mm,3.17,"Table V, PDF p. 19",3.1,"Table IX, PDF p. 27",DIFFERS,difference -0.07; rounding tolerance 0.055
+FLEX-057,P,.72,"Table V, PDF p. 19",544.4 mmHg,"Table IX, PDF p. 27",AGREE,difference -0.003684; rounding tolerance 0.005066
+FLEX-057,X_O2,.196,"Table V, PDF p. 19",.2,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0505
+FLEX-057,X_N2,.794,"Table V, PDF p. 19",.79,"Table IX, PDF p. 27",AGREE,difference -0.004; rounding tolerance 0.0055
+FLEX-058,fiber,No,"Table IV, PDF p. 18",Free-floating,"Appendix B Fig. 62, PDF p. 92",AGREE,
+FLEX-058,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-058,date,"Feb. 4, 2010","Table IV, PDF p. 18",2/4/10,"Table IX, PDF p. 27",AGREE,
+FLEX-058,D0_mm,3.73,"Table IV, PDF p. 18",3.69,"Table IX, PDF p. 27",DIFFERS,difference -0.04; rounding tolerance 0.01
+FLEX-058,P,1.02,"Table IV, PDF p. 18",773.3 mmHg,"Table IX, PDF p. 27",AGREE,difference -0.0025; rounding tolerance 0.005066
+FLEX-058,X_O2,.176,"Table IV, PDF p. 18",.18,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-058,X_N2,.816,"Table IV, PDF p. 18",.82,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-059,fiber,No,"Table IV, PDF p. 18",Free-floating,"Appendix B Fig. 63, PDF p. 93",AGREE,
+FLEX-059,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-059,date,"Feb. 4, 2010","Table IV, PDF p. 18",2/4/10,"Table IX, PDF p. 27",AGREE,
+FLEX-059,D0_mm,3.08,"Table IV, PDF p. 18",2.93,"Table IX, PDF p. 27",DIFFERS,difference -0.15; rounding tolerance 0.01
+FLEX-059,P,1.01,"Table IV, PDF p. 18",769.2 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.002105; rounding tolerance 0.005066
+FLEX-059,X_O2,.176,"Table IV, PDF p. 18",.18,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-059,X_N2,.816,"Table IV, PDF p. 18",.82,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-060,fiber,Yes,"Table IV, PDF p. 18",Fiber-supported,"Appendix B Fig. 64, PDF p. 94",AGREE,
+FLEX-060,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-060,date,"Feb. 4, 2010","Table IV, PDF p. 18",2/4/10,"Table IX, PDF p. 27",AGREE,
+FLEX-060,D0_mm,3.57,"Table IV, PDF p. 18",3.43,"Table IX, PDF p. 27",DIFFERS,difference -0.14; rounding tolerance 0.01
+FLEX-060,P,1.02,"Table IV, PDF p. 18",773.7 mmHg,"Table IX, PDF p. 27",AGREE,difference -0.001974; rounding tolerance 0.005066
+FLEX-060,X_O2,.176,"Table IV, PDF p. 18",.18,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-060,X_N2,.816,"Table IV, PDF p. 18",.82,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-061,fiber,Yes,"Table IV, PDF p. 18",Fiber-supported,"Appendix B Fig. 65, PDF p. 95",AGREE,
+FLEX-061,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-061,date,"Feb. 4, 2010","Table IV, PDF p. 18",2/4/10,"Table IX, PDF p. 27",AGREE,
+FLEX-061,D0_mm,3.77,"Table IV, PDF p. 18",3.68,"Table IX, PDF p. 27",DIFFERS,difference -0.09; rounding tolerance 0.01
+FLEX-061,P,1.02,"Table IV, PDF p. 18",774.1 mmHg,"Table IX, PDF p. 27",AGREE,difference -0.001447; rounding tolerance 0.005066
+FLEX-061,X_O2,.176,"Table IV, PDF p. 18",.18,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-061,X_N2,.815,"Table IV, PDF p. 18",.82,"Table IX, PDF p. 27",AGREE,difference +0.005; rounding tolerance 0.0055
+FLEX-062,fiber,No,"Table V, PDF p. 19",Free-floating,"Appendix B Fig. 66, PDF p. 96",AGREE,
+FLEX-062,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 27",AGREE,
+FLEX-062,date,"Mar. 11, 2010","Table V, PDF p. 19",3/11/10,"Table IX, PDF p. 27",AGREE,
+FLEX-062,D0_mm,3.48,"Table V, PDF p. 19",3.43,"Table IX, PDF p. 27",DIFFERS,difference -0.05; rounding tolerance 0.01
+FLEX-062,P,1.00,"Table V, PDF p. 19",761.8 mmHg,"Table IX, PDF p. 27",AGREE,difference +0.002368; rounding tolerance 0.005066
+FLEX-062,X_O2,.175,"Table V, PDF p. 19",.18,"Table IX, PDF p. 27",AGREE,difference +0.005; rounding tolerance 0.0055
+FLEX-062,X_N2,.815,"Table V, PDF p. 19",.82,"Table IX, PDF p. 27",AGREE,difference +0.005; rounding tolerance 0.0055
+FLEX-063,fiber,No,"Table V, PDF p. 19",Free-floating,"Appendix B Fig. 67, PDF p. 97",AGREE,
+FLEX-063,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 27",AGREE,
+FLEX-063,date,"Mar. 11, 2010","Table V, PDF p. 19",3/11/10,"Table IX, PDF p. 27",AGREE,
+FLEX-063,D0_mm,2.28,"Table V, PDF p. 19",2.15,"Table IX, PDF p. 27",DIFFERS,difference -0.13; rounding tolerance 0.01
+FLEX-063,P,1.01,"Table V, PDF p. 19",767.6 mmHg,"Table IX, PDF p. 27",AGREE,difference +0; rounding tolerance 0.005066
+FLEX-063,X_O2,.175,"Table V, PDF p. 19",.18,"Table IX, PDF p. 27",AGREE,difference +0.005; rounding tolerance 0.0055
+FLEX-063,X_N2,.815,"Table V, PDF p. 19",.81,"Table IX, PDF p. 27",AGREE,difference -0.005; rounding tolerance 0.0055
+FLEX-064,fiber,Yes,"Table V, PDF p. 19",Fiber-supported,"Appendix B Fig. 68, PDF p. 98",AGREE,
+FLEX-064,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 27",AGREE,
+FLEX-064,date,"Mar. 11, 2010","Table V, PDF p. 19",3/11/10,"Table IX, PDF p. 27",AGREE,
+FLEX-064,D0_mm,2.74,"Table V, PDF p. 19",2.69,"Table IX, PDF p. 27",DIFFERS,difference -0.05; rounding tolerance 0.01
+FLEX-064,P,1.01,"Table V, PDF p. 19",764.6 mmHg,"Table IX, PDF p. 27",AGREE,difference -0.003947; rounding tolerance 0.005066
+FLEX-064,X_O2,.175,"Table V, PDF p. 19",.18,"Table IX, PDF p. 27",AGREE,difference +0.005; rounding tolerance 0.0055
+FLEX-064,X_N2,.815,"Table V, PDF p. 19",.81,"Table IX, PDF p. 27",AGREE,difference -0.005; rounding tolerance 0.0055
+FLEX-065,fiber,No,"Table IV, PDF p. 18",Free-floating,"Appendix B Fig. 69, PDF p. 99",AGREE,
+FLEX-065,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 27",AGREE,
+FLEX-065,date,"Mar. 19, 2010","Table IV, PDF p. 18",3/19/10,"Table IX, PDF p. 27",AGREE,
+FLEX-065,D0_mm,3.44,"Table IV, PDF p. 18",3.37,"Table IX, PDF p. 27",DIFFERS,difference -0.07; rounding tolerance 0.01
+FLEX-065,P,1.01,"Table IV, PDF p. 18",765.9 mmHg,"Table IX, PDF p. 27",AGREE,difference -0.002237; rounding tolerance 0.005066
+FLEX-065,X_O2,.146,"Table IV, PDF p. 18",.15,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-065,X_N2,.846,"Table IV, PDF p. 18",.85,"Table IX, PDF p. 27",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-066,fiber,No,"Table IV, PDF p. 18",Free-floating,"Appendix B Fig. 70, PDF p. 100",AGREE,
+FLEX-066,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-066,date,"Mar. 19, 2010","Table IV, PDF p. 18",3/19/10,"Table IX, PDF p. 28",AGREE,
+FLEX-066,D0_mm,2.63,"Table IV, PDF p. 18",2.52,"Table IX, PDF p. 28",DIFFERS,difference -0.11; rounding tolerance 0.01
+FLEX-066,P,1.01,"Table IV, PDF p. 18",766.8 mmHg,"Table IX, PDF p. 28",AGREE,difference -0.001053; rounding tolerance 0.005066
+FLEX-066,X_O2,.146,"Table IV, PDF p. 18",.15,"Table IX, PDF p. 28",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-066,X_N2,.845,"Table IV, PDF p. 18",.85,"Table IX, PDF p. 28",AGREE,difference +0.005; rounding tolerance 0.0055
+FLEX-067,fiber,No,"Table IV, PDF p. 18",Free-floating,"Appendix B Fig. 71, PDF p. 101",AGREE,
+FLEX-067,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-067,date,"Mar. 19, 2010","Table IV, PDF p. 18",3/19/10,"Table IX, PDF p. 28",AGREE,
+FLEX-067,D0_mm,4.01,"Table IV, PDF p. 18",3.97,"Table IX, PDF p. 28",DIFFERS,difference -0.04; rounding tolerance 0.01
+FLEX-067,P,1.01,"Table IV, PDF p. 18",767.7 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.0001316; rounding tolerance 0.005066
+FLEX-067,X_O2,.146,"Table IV, PDF p. 18",.15,"Table IX, PDF p. 28",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-067,X_N2,.845,"Table IV, PDF p. 18",.85,"Table IX, PDF p. 28",AGREE,difference +0.005; rounding tolerance 0.0055
+FLEX-068,fiber,No,"Table IV, PDF p. 18",Free-floating,"Appendix B Fig. 72, PDF p. 102",AGREE,
+FLEX-068,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-068,date,"Mar. 19, 2010","Table IV, PDF p. 18",3/19/10,"Table IX, PDF p. 28",AGREE,
+FLEX-068,D0_mm,2.45,"Table IV, PDF p. 18",2.38,"Table IX, PDF p. 28",DIFFERS,difference -0.07; rounding tolerance 0.01
+FLEX-068,P,1.01,"Table IV, PDF p. 18",768.8 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.001579; rounding tolerance 0.005066
+FLEX-068,X_O2,.146,"Table IV, PDF p. 18",.15,"Table IX, PDF p. 28",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-068,X_N2,.845,"Table IV, PDF p. 18",.84,"Table IX, PDF p. 28",AGREE,difference -0.005; rounding tolerance 0.0055
+FLEX-069,fiber,Yes,"Table V, PDF p. 19",Fiber-supported,"Appendix B Fig. 73, PDF p. 103",AGREE,
+FLEX-069,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 28",AGREE,
+FLEX-069,date,"Mar. 19, 2010","Table V, PDF p. 19",3/23/10,"Table IX, PDF p. 28",DIFFERS,
+FLEX-069,D0_mm,1.29,"Table V, PDF p. 19",1.1,"Table IX, PDF p. 28",DIFFERS,difference -0.19; rounding tolerance 0.055
+FLEX-069,P,1.01,"Table V, PDF p. 19",767.1 mmHg,"Table IX, PDF p. 28",AGREE,difference -0.0006579; rounding tolerance 0.005066
+FLEX-069,X_O2,.145,"Table V, PDF p. 19",.14,"Table IX, PDF p. 28",AGREE,difference -0.005; rounding tolerance 0.0055
+FLEX-069,X_N2,.845,"Table V, PDF p. 19",.84,"Table IX, PDF p. 28",AGREE,difference -0.005; rounding tolerance 0.0055
+FLEX-070,fiber,No,"Table V, PDF p. 19",Free-floating,"Appendix B Fig. 74, PDF p. 104",AGREE,
+FLEX-070,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 28",AGREE,
+FLEX-070,date,"Mar. 23, 2010","Table V, PDF p. 19",3/23/10,"Table IX, PDF p. 28",AGREE,
+FLEX-070,D0_mm,1.30,"Table V, PDF p. 19",4.67,"Table IX, PDF p. 28",DIFFERS,difference +3.37; rounding tolerance 0.01
+FLEX-070,P,1.01,"Table V, PDF p. 19",761 mmHg,"Table IX, PDF p. 28",DIFFERS,difference -0.008684; rounding tolerance 0.005658
+FLEX-070,X_O2,.145,"Table V, PDF p. 19",.15,"Table IX, PDF p. 28",AGREE,difference +0.005; rounding tolerance 0.0055
+FLEX-070,X_N2,.845,"Table V, PDF p. 19",.84,"Table IX, PDF p. 28",AGREE,difference -0.005; rounding tolerance 0.0055
+FLEX-071,fiber,No,"Table IV, PDF p. 18",Free-floating,"Appendix B Fig. 75, PDF p. 105",AGREE,
+FLEX-071,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-071,date,"Mar. 19, 2010","Table IV, PDF p. 18",3/19/10,"Table IX, PDF p. 28",AGREE,
+FLEX-071,D0_mm,2.26,"Table IV, PDF p. 18",2.25,"Table IX, PDF p. 28",AGREE,difference -0.01; rounding tolerance 0.01
+FLEX-071,P,1.01,"Table IV, PDF p. 18",768.3 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.0009211; rounding tolerance 0.005066
+FLEX-071,X_O2,.146,"Table IV, PDF p. 18",.15,"Table IX, PDF p. 28",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-071,X_N2,.845,"Table IV, PDF p. 18",.84,"Table IX, PDF p. 28",AGREE,difference -0.005; rounding tolerance 0.0055
+FLEX-073,fiber,No,"Table V, PDF p. 19",Free-floating,"Appendix B Fig. 77, PDF p. 107",AGREE,
+FLEX-073,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 28",AGREE,
+FLEX-073,date,"Mar. 23, 2010","Table V, PDF p. 19",3/23/10,"Table IX, PDF p. 28",AGREE,
+FLEX-073,D0_mm,4.72,"Table V, PDF p. 19",4.64,"Table IX, PDF p. 28",DIFFERS,difference -0.08; rounding tolerance 0.01
+FLEX-073,P,1.00,"Table V, PDF p. 19",761 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.001316; rounding tolerance 0.005658
+FLEX-073,X_O2,.145,"Table V, PDF p. 19",.15,"Table IX, PDF p. 28",AGREE,difference +0.005; rounding tolerance 0.0055
+FLEX-073,X_N2,.845,"Table V, PDF p. 19",.84,"Table IX, PDF p. 28",AGREE,difference -0.005; rounding tolerance 0.0055
+FLEX-074,fiber,Yes,"Table V, PDF p. 19",Fiber-supported,"Appendix B Fig. 78, PDF p. 108",AGREE,
+FLEX-074,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 28",AGREE,
+FLEX-074,date,"Mar. 23, 2010","Table V, PDF p. 19",3/23/10,"Table IX, PDF p. 28",AGREE,
+FLEX-074,D0_mm,1.53,"Table V, PDF p. 19",1.33,"Table IX, PDF p. 28",DIFFERS,difference -0.2; rounding tolerance 0.01
+FLEX-074,P,1.01,"Table V, PDF p. 19",765.9 mmHg,"Table IX, PDF p. 28",AGREE,difference -0.002237; rounding tolerance 0.005066
+FLEX-074,X_O2,.145,"Table V, PDF p. 19",.15,"Table IX, PDF p. 28",AGREE,difference +0.005; rounding tolerance 0.0055
+FLEX-074,X_N2,.845,"Table V, PDF p. 19",.84,"Table IX, PDF p. 28",AGREE,difference -0.005; rounding tolerance 0.0055
+FLEX-075,fiber,Yes,"Table IV, PDF p. 18",Fiber-supported,"Appendix B Fig. 79, PDF p. 109",AGREE,
+FLEX-075,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-075,date,"Mar. 29, 2010","Table IV, PDF p. 18",3/29/10,"Table IX, PDF p. 28",AGREE,
+FLEX-075,D0_mm,2.56,"Table IV, PDF p. 18",2.54,"Table IX, PDF p. 28",DIFFERS,difference -0.02; rounding tolerance 0.01
+FLEX-075,P,1.01,"Table IV, PDF p. 18",770.8 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.004211; rounding tolerance 0.005066
+FLEX-075,X_O2,.135,"Table IV, PDF p. 18",.13,"Table IX, PDF p. 28",AGREE,difference -0.005; rounding tolerance 0.0055
+FLEX-075,X_N2,.854,"Table IV, PDF p. 18",.85,"Table IX, PDF p. 28",AGREE,difference -0.004; rounding tolerance 0.0055
+FLEX-076,fiber,Yes,"Table IV, PDF p. 18",Fiber-supported,"Appendix B Fig. 80, PDF p. 110",AGREE,
+FLEX-076,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-076,date,"Mar. 29, 2010","Table IV, PDF p. 18",3/29/10,"Table IX, PDF p. 28",AGREE,
+FLEX-076,D0_mm,3.29,"Table IV, PDF p. 18",3.21,"Table IX, PDF p. 28",DIFFERS,difference -0.08; rounding tolerance 0.01
+FLEX-076,P,1.01,"Table IV, PDF p. 18",769.5 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.0025; rounding tolerance 0.005066
+FLEX-076,X_O2,.135,"Table IV, PDF p. 18",.13,"Table IX, PDF p. 28",AGREE,difference -0.005; rounding tolerance 0.0055
+FLEX-076,X_N2,.854,"Table IV, PDF p. 18",.85,"Table IX, PDF p. 28",AGREE,difference -0.004; rounding tolerance 0.0055
+FLEX-077,fiber,No,"Table IV, PDF p. 18",Free-floating,"Appendix B Fig. 81, PDF p. 111",AGREE,
+FLEX-077,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-077,date,"Mar. 29, 2010","Table IV, PDF p. 18",3/29/10,"Table IX, PDF p. 28",AGREE,
+FLEX-077,D0_mm,3.41,"Table IV, PDF p. 18",3.33,"Table IX, PDF p. 28",DIFFERS,difference -0.08; rounding tolerance 0.01
+FLEX-077,P,1.01,"Table IV, PDF p. 18",768.4 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.001053; rounding tolerance 0.005066
+FLEX-077,X_O2,.135,"Table IV, PDF p. 18",.14,"Table IX, PDF p. 28",AGREE,difference +0.005; rounding tolerance 0.0055
+FLEX-077,X_N2,.854,"Table IV, PDF p. 18",.85,"Table IX, PDF p. 28",AGREE,difference -0.004; rounding tolerance 0.0055
+FLEX-078,fiber,No,"Table IV, PDF p. 18",Free-floating,"Appendix B Fig. 82, PDF p. 112",AGREE,
+FLEX-078,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-078,date,"Mar. 29, 2010","Table IV, PDF p. 18",3/29/10,"Table IX, PDF p. 28",AGREE,
+FLEX-078,D0_mm,2.69,"Table IV, PDF p. 18",2.66,"Table IX, PDF p. 28",DIFFERS,difference -0.03; rounding tolerance 0.01
+FLEX-078,P,1.01,"Table IV, PDF p. 18",766 mmHg,"Table IX, PDF p. 28",AGREE,difference -0.002105; rounding tolerance 0.005658
+FLEX-078,X_O2,.135,"Table IV, PDF p. 18",.14,"Table IX, PDF p. 28",AGREE,difference +0.005; rounding tolerance 0.0055
+FLEX-078,X_N2,.854,"Table IV, PDF p. 18",.85,"Table IX, PDF p. 28",AGREE,difference -0.004; rounding tolerance 0.0055
+FLEX-079,fiber,No,"Table V, PDF p. 19",Free-floating,"Appendix B Fig. 83, PDF p. 113",AGREE,
+FLEX-079,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 28",AGREE,
+FLEX-079,date,"Mar. 30, 2010","Table V, PDF p. 19",3/30/10,"Table IX, PDF p. 28",AGREE,
+FLEX-079,D0_mm,3.06,"Table V, PDF p. 19",2.92,"Table IX, PDF p. 28",DIFFERS,difference -0.14; rounding tolerance 0.01
+FLEX-079,P,1.01,"Table V, PDF p. 19",768.1 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.0006579; rounding tolerance 0.005066
+FLEX-079,X_O2,.134,"Table V, PDF p. 19",.13,"Table IX, PDF p. 28",AGREE,difference -0.004; rounding tolerance 0.0055
+FLEX-079,X_N2,.853,"Table V, PDF p. 19",.85,"Table IX, PDF p. 28",AGREE,difference -0.003; rounding tolerance 0.0055
+FLEX-080,fiber,Yes,"Table V, PDF p. 19",Fiber-supported,"Appendix B Fig. 84, PDF p. 114",AGREE,
+FLEX-080,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 28",AGREE,
+FLEX-080,date,"Mar. 30, 2010","Table V, PDF p. 19",3/30/10,"Table IX, PDF p. 28",AGREE,
+FLEX-080,P,1.01,"Table V, PDF p. 19",770 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.003158; rounding tolerance 0.005658
+FLEX-080,X_O2,.134,"Table V, PDF p. 19",.13,"Table IX, PDF p. 28",AGREE,difference -0.004; rounding tolerance 0.0055
+FLEX-080,X_N2,.853,"Table V, PDF p. 19",.85,"Table IX, PDF p. 28",AGREE,difference -0.003; rounding tolerance 0.0055
+FLEX-081,fiber,Yes,"Table V, PDF p. 19",Fiber-supported,"Appendix B Fig. 85, PDF p. 115",AGREE,
+FLEX-081,fuel,heptane,"Table V, PDF p. 19",heptane,"Table IX, PDF p. 28",AGREE,
+FLEX-081,date,"Mar. 30, 2010","Table V, PDF p. 19",3/30/10,"Table IX, PDF p. 28",AGREE,
+FLEX-081,P,1.01,"Table V, PDF p. 19",770.2 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.003421; rounding tolerance 0.005066
+FLEX-081,X_O2,.134,"Table V, PDF p. 19",.13,"Table IX, PDF p. 28",AGREE,difference -0.004; rounding tolerance 0.0055
+FLEX-081,X_N2,.853,"Table V, PDF p. 19",.85,"Table IX, PDF p. 28",AGREE,difference -0.003; rounding tolerance 0.0055
+FLEX-082,fiber,No,"Table IV, PDF p. 18",Free-floating,"Appendix B Fig. 86, PDF p. 116",AGREE,
+FLEX-082,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-082,date,"Apr. 19, 2010","Table IV, PDF p. 18",4/19/10,"Table IX, PDF p. 28",AGREE,
+FLEX-082,D0_mm,2.93,"Table IV, PDF p. 18",2.84,"Table IX, PDF p. 28",DIFFERS,difference -0.09; rounding tolerance 0.01
+FLEX-082,P,1.01,"Table IV, PDF p. 18",764.6 mmHg,"Table IX, PDF p. 28",AGREE,difference -0.003947; rounding tolerance 0.005066
+FLEX-082,X_O2,.126,"Table IV, PDF p. 18",.13,"Table IX, PDF p. 28",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-082,X_N2,.870,"Table IV, PDF p. 18",.87,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-083,fiber,No,"Table IV, PDF p. 18",Free-floating,"Appendix B Fig. 87, PDF p. 117",AGREE,
+FLEX-083,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-083,date,"Apr. 19, 2010","Table IV, PDF p. 18",4/19/10,"Table IX, PDF p. 28",AGREE,
+FLEX-083,P,1.02,"Table IV, PDF p. 18",772 mmHg,"Table IX, PDF p. 28",AGREE,difference -0.004211; rounding tolerance 0.005658
+FLEX-083,X_O2,.125,"Table IV, PDF p. 18",.12,"Table IX, PDF p. 28",AGREE,difference -0.005; rounding tolerance 0.0055
+FLEX-083,X_N2,.869,"Table IV, PDF p. 18",.87,"Table IX, PDF p. 28",AGREE,difference +0.001; rounding tolerance 0.0055
+FLEX-084,fiber,No,"Table IV, PDF p. 18",Free-floating,"Appendix B Fig. 88, PDF p. 118",AGREE,
+FLEX-084,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-084,date,"Apr. 19, 2010","Table IV, PDF p. 18",4/19/10,"Table IX, PDF p. 28",AGREE,
+FLEX-084,D0_mm,2.43,"Table IV, PDF p. 18",2.35,"Table IX, PDF p. 28",DIFFERS,difference -0.08; rounding tolerance 0.01
+FLEX-084,P,1.01,"Table IV, PDF p. 18",767.2 mmHg,"Table IX, PDF p. 28",AGREE,difference -0.0005263; rounding tolerance 0.005066
+FLEX-084,X_O2,.126,"Table IV, PDF p. 18",.12,"Table IX, PDF p. 28",DIFFERS,difference -0.006; rounding tolerance 0.0055
+FLEX-084,X_N2,.869,"Table IV, PDF p. 18",.87,"Table IX, PDF p. 28",AGREE,difference +0.001; rounding tolerance 0.0055
+FLEX-085,fiber,No,"Table IV, PDF p. 18",Free-floating,"Appendix B Fig. 89, PDF p. 119",AGREE,
+FLEX-085,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-085,date,"Apr. 19, 2010","Table IV, PDF p. 18",4/19/10,"Table IX, PDF p. 28",AGREE,
+FLEX-085,D0_mm,2.49,"Table IV, PDF p. 18",2.4,"Table IX, PDF p. 28",DIFFERS,difference -0.09; rounding tolerance 0.055
+FLEX-085,P,1.01,"Table IV, PDF p. 18",771.2 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.004737; rounding tolerance 0.005066
+FLEX-085,X_O2,.126,"Table IV, PDF p. 18",.12,"Table IX, PDF p. 28",DIFFERS,difference -0.006; rounding tolerance 0.0055
+FLEX-085,X_N2,.869,"Table IV, PDF p. 18",.87,"Table IX, PDF p. 28",AGREE,difference +0.001; rounding tolerance 0.0055
+FLEX-086,fiber,Yes,"Table IV, PDF p. 18",Fiber-supported,"Appendix B Fig. 90, PDF p. 120",AGREE,
+FLEX-086,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-086,date,"Apr. 19, 2010","Table IV, PDF p. 18",4/19/10,"Table IX, PDF p. 28",AGREE,
+FLEX-086,D0_mm,3.10,"Table IV, PDF p. 18",3.07,"Table IX, PDF p. 28",DIFFERS,difference -0.03; rounding tolerance 0.01
+FLEX-086,P,1.01,"Table IV, PDF p. 18",770 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.003158; rounding tolerance 0.005658
+FLEX-086,X_O2,.126,"Table IV, PDF p. 18",.12,"Table IX, PDF p. 28",DIFFERS,difference -0.006; rounding tolerance 0.0055
+FLEX-086,X_N2,.869,"Table IV, PDF p. 18",.87,"Table IX, PDF p. 28",AGREE,difference +0.001; rounding tolerance 0.0055
+FLEX-087,fiber,Yes,"Table IV, PDF p. 18",Fiber-supported,"Appendix B Fig. 91, PDF p. 121",AGREE,
+FLEX-087,fuel,methanol,"Table IV, PDF p. 18",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-087,date,"Apr. 19, 2010","Table IV, PDF p. 18",4/19/10,"Table IX, PDF p. 28",AGREE,
+FLEX-087,D0_mm,2.66,"Table IV, PDF p. 18",2.64,"Table IX, PDF p. 28",DIFFERS,difference -0.02; rounding tolerance 0.01
+FLEX-087,P,1.01,"Table IV, PDF p. 18",771.2 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.004737; rounding tolerance 0.005066
+FLEX-087,X_O2,.126,"Table IV, PDF p. 18",.12,"Table IX, PDF p. 28",DIFFERS,difference -0.006; rounding tolerance 0.0055
+FLEX-087,X_N2,.869,"Table IV, PDF p. 18",.87,"Table IX, PDF p. 28",AGREE,difference +0.001; rounding tolerance 0.0055
+FLEX-088,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 92, PDF p. 122",AGREE,
+FLEX-088,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-088,date,"May 5, 2010","Table VI, PDF p. 20",5/5/10,"Table IX, PDF p. 28",AGREE,
+FLEX-088,D0_mm,3.08,"Table VI, PDF p. 20",3.01,"Table IX, PDF p. 28",DIFFERS,difference -0.07; rounding tolerance 0.01
+FLEX-088,P,0.71,"Table VI, PDF p. 20",537.5 mmHg,"Table IX, PDF p. 28",AGREE,difference -0.002763; rounding tolerance 0.005066
+FLEX-088,X_O2,0.250,"Table VI, PDF p. 20",.25,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-088,X_N2,0.600,"Table VI, PDF p. 20",.6,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-088,X_CO2,0.150,"Table VI, PDF p. 20",.15,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-089,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 93, PDF p. 123",AGREE,
+FLEX-089,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-089,date,"May 5, 2010","Table VI, PDF p. 20",5/5/10,"Table IX, PDF p. 28",AGREE,
+FLEX-089,D0_mm,3.79,"Table VI, PDF p. 20",3.7,"Table IX, PDF p. 28",DIFFERS,difference -0.09; rounding tolerance 0.055
+FLEX-089,P,.71,"Table VI, PDF p. 20",537.4 mmHg,"Table IX, PDF p. 28",AGREE,difference -0.002895; rounding tolerance 0.005066
+FLEX-089,X_O2,.250,"Table VI, PDF p. 20",.25,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-089,X_N2,.600,"Table VI, PDF p. 20",.6,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-089,X_CO2,.150,"Table VI, PDF p. 20",.15,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-090,fiber,Yes,"Table VI, PDF p. 20",Fiber-supported,"Appendix B Fig. 94, PDF p. 124",AGREE,
+FLEX-090,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-090,date,"May 6, 2010","Table VI, PDF p. 20",5/6/10,"Table IX, PDF p. 28",AGREE,
+FLEX-090,D0_mm,3.65,"Table VI, PDF p. 20",3.62,"Table IX, PDF p. 28",DIFFERS,difference -0.03; rounding tolerance 0.01
+FLEX-090,P,.71,"Table VI, PDF p. 20",539.2 mmHg,"Table IX, PDF p. 28",AGREE,difference -0.0005263; rounding tolerance 0.005066
+FLEX-090,X_O2,.250,"Table VI, PDF p. 20",.25,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-090,X_N2,.600,"Table VI, PDF p. 20",.6,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-090,X_CO2,.150,"Table VI, PDF p. 20",.15,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-091,fiber,Yes,"Table VI, PDF p. 20",Fiber-supported,"Appendix B Fig. 95, PDF p. 125",AGREE,
+FLEX-091,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-091,date,"May 5, 2010","Table VI, PDF p. 20",5/5/10,"Table IX, PDF p. 28",AGREE,
+FLEX-091,D0_mm,3.59,"Table VI, PDF p. 20",3.51,"Table IX, PDF p. 28",DIFFERS,difference -0.08; rounding tolerance 0.01
+FLEX-091,P,.71,"Table VI, PDF p. 20",538.3 mmHg,"Table IX, PDF p. 28",AGREE,difference -0.001711; rounding tolerance 0.005066
+FLEX-091,X_O2,.250,"Table VI, PDF p. 20",.25,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-091,X_N2,.600,"Table VI, PDF p. 20",.6,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-091,X_CO2,.150,"Table VI, PDF p. 20",.15,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-092,fiber,No,"Table VII, PDF p. 21",Free-floating,"Appendix B Fig. 96, PDF p. 126",AGREE,
+FLEX-092,fuel,heptane,"Table VII, PDF p. 21",heptane,"Table IX, PDF p. 28",AGREE,
+FLEX-092,date,"June 14, 2010","Table VII, PDF p. 21",6/14/10,"Table IX, PDF p. 28",AGREE,
+FLEX-092,D0_mm,3.46,"Table VII, PDF p. 21",3.41,"Table IX, PDF p. 28",DIFFERS,difference -0.05; rounding tolerance 0.01
+FLEX-092,P,0.71,"Table VII, PDF p. 21",536.3 mmHg,"Table IX, PDF p. 28",AGREE,difference -0.004342; rounding tolerance 0.005066
+FLEX-092,X_O2,0.250,"Table VII, PDF p. 21",.25,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-092,X_N2,0.600,"Table VII, PDF p. 21",.6,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-092,X_CO2,0.150,"Table VII, PDF p. 21",.15,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-093,fiber,Yes,"Table VII, PDF p. 21",Fiber-supported,"Appendix B Fig. 97, PDF p. 127",AGREE,
+FLEX-093,fuel,heptane,"Table VII, PDF p. 21",heptane,"Table IX, PDF p. 28",AGREE,
+FLEX-093,date,"June 15, 2010","Table VII, PDF p. 21",6/15/10,"Table IX, PDF p. 28",AGREE,
+FLEX-093,D0_mm,2.61,"Table VII, PDF p. 21",2.48,"Table IX, PDF p. 28",DIFFERS,difference -0.13; rounding tolerance 0.01
+FLEX-093,P,.71,"Table VII, PDF p. 21",537.3 mmHg,"Table IX, PDF p. 28",AGREE,difference -0.003026; rounding tolerance 0.005066
+FLEX-093,X_O2,.250,"Table VII, PDF p. 21",.25,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-093,X_N2,.600,"Table VII, PDF p. 21",.6,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-093,X_CO2,.150,"Table VII, PDF p. 21",.15,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-094,fiber,No,"Table VII, PDF p. 21",Free-floating,"Appendix B Fig. 98, PDF p. 128",AGREE,
+FLEX-094,fuel,heptane,"Table VII, PDF p. 21",heptane,"Table IX, PDF p. 28",AGREE,
+FLEX-094,date,"June 15, 2010","Table VII, PDF p. 21",6/15/10,"Table IX, PDF p. 28",AGREE,
+FLEX-094,D0_mm,3.59,"Table VII, PDF p. 21",3.53,"Table IX, PDF p. 28",DIFFERS,difference -0.06; rounding tolerance 0.01
+FLEX-094,P,.70,"Table VII, PDF p. 21",533.6 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.002105; rounding tolerance 0.005066
+FLEX-094,X_O2,.240,"Table VII, PDF p. 21",.24,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-094,X_N2,.560,"Table VII, PDF p. 21",.56,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-094,X_CO2,.200,"Table VII, PDF p. 21",.2,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-095,fiber,Yes,"Table VII, PDF p. 21",Fiber-supported,"Appendix B Fig. 99, PDF p. 129",AGREE,
+FLEX-095,fuel,heptane,"Table VII, PDF p. 21",heptane,"Table IX, PDF p. 28",AGREE,
+FLEX-095,date,"June 15, 2010","Table VII, PDF p. 21",6/15/10,"Table IX, PDF p. 28",AGREE,
+FLEX-095,D0_mm,3.77,"Table VII, PDF p. 21",3.6,"Table IX, PDF p. 28",DIFFERS,difference -0.17; rounding tolerance 0.055
+FLEX-095,P,.70,"Table VII, PDF p. 21",534.4 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.003158; rounding tolerance 0.005066
+FLEX-095,X_O2,.240,"Table VII, PDF p. 21",.24,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-095,X_N2,.560,"Table VII, PDF p. 21",.56,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-095,X_CO2,.200,"Table VII, PDF p. 21",.2,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-096,fiber,Yes,"Table VII, PDF p. 21",Fiber-supported,"Appendix B Fig. 100, PDF p. 130",AGREE,
+FLEX-096,fuel,heptane,"Table VII, PDF p. 21",heptane,"Table IX, PDF p. 28",AGREE,
+FLEX-096,date,"June 15, 2010","Table VII, PDF p. 21",6/15/10,"Table IX, PDF p. 28",AGREE,
+FLEX-096,P,.70,"Table VII, PDF p. 21",534.4 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.003158; rounding tolerance 0.005066
+FLEX-096,X_O2,.240,"Table VII, PDF p. 21",.24,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-096,X_N2,.560,"Table VII, PDF p. 21",.56,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-096,X_CO2,.200,"Table VII, PDF p. 21",.2,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-097,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 101, PDF p. 131",AGREE,
+FLEX-097,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-097,date,"June 16, 2010","Table VI, PDF p. 20",6/16/10,"Table IX, PDF p. 28",AGREE,
+FLEX-097,D0_mm,4.29,"Table VI, PDF p. 20",4.25,"Table IX, PDF p. 28",DIFFERS,difference -0.04; rounding tolerance 0.01
+FLEX-097,P,.70,"Table VI, PDF p. 20",534.2 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.002895; rounding tolerance 0.005066
+FLEX-097,X_O2,.240,"Table VI, PDF p. 20",.23,"Table IX, PDF p. 28",DIFFERS,difference -0.01; rounding tolerance 0.0055
+FLEX-097,X_N2,.560,"Table VI, PDF p. 20",.56,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-097,X_CO2,.200,"Table VI, PDF p. 20",.2,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-098,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 102, PDF p. 132",AGREE,
+FLEX-098,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-098,date,"June 21, 2010","Table VI, PDF p. 20",6/21/10,"Table IX, PDF p. 28",AGREE,
+FLEX-098,D0_mm,3.67,"Table VI, PDF p. 20",3.64,"Table IX, PDF p. 28",DIFFERS,difference -0.03; rounding tolerance 0.01
+FLEX-098,P,.71,"Table VI, PDF p. 20",537.1 mmHg,"Table IX, PDF p. 28",AGREE,difference -0.003289; rounding tolerance 0.005066
+FLEX-098,X_O2,.230,"Table VI, PDF p. 20",.23,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-098,X_N2,.520,"Table VI, PDF p. 20",.52,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-098,X_CO2,.250,"Table VI, PDF p. 20",.25,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-099,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 103, PDF p. 133",AGREE,
+FLEX-099,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 28",AGREE,
+FLEX-099,date,"June 21, 2010","Table VI, PDF p. 20",6/21/10,"Table IX, PDF p. 28",AGREE,
+FLEX-099,D0_mm,4.34,"Table VI, PDF p. 20",4.28,"Table IX, PDF p. 28",DIFFERS,difference -0.06; rounding tolerance 0.01
+FLEX-099,P,.70,"Table VI, PDF p. 20",535 mmHg,"Table IX, PDF p. 28",AGREE,difference +0.003947; rounding tolerance 0.005658
+FLEX-099,X_O2,.230,"Table VI, PDF p. 20",.23,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-099,X_N2,.520,"Table VI, PDF p. 20",.52,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-099,X_CO2,.250,"Table VI, PDF p. 20",.25,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-100,fiber,No,"Table VII, PDF p. 21",Free-floating,"Appendix B Fig. 104, PDF p. 134",AGREE,
+FLEX-100,fuel,heptane,"Table VII, PDF p. 21",heptane,"Table IX, PDF p. 28",AGREE,
+FLEX-100,date,"June 29, 2010","Table VII, PDF p. 21",6/29/10,"Table IX, PDF p. 28",AGREE,
+FLEX-100,D0_mm,4.27,"Table VII, PDF p. 21",4.14,"Table IX, PDF p. 28",DIFFERS,difference -0.13; rounding tolerance 0.01
+FLEX-100,P,.71,"Table VII, PDF p. 21",536.7 mmHg,"Table IX, PDF p. 28",AGREE,difference -0.003816; rounding tolerance 0.005066
+FLEX-100,X_O2,.230,"Table VII, PDF p. 21",.23,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-100,X_N2,.520,"Table VII, PDF p. 21",.52,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-100,X_CO2,.250,"Table VII, PDF p. 21",.25,"Table IX, PDF p. 28",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-101,fiber,Yes,"Table VII, PDF p. 21",Fiber-supported,"Appendix B Fig. 105, PDF p. 135",AGREE,
+FLEX-101,fuel,heptane,"Table VII, PDF p. 21",heptane,"Table IX, PDF p. 29",AGREE,
+FLEX-101,date,"June 29, 2010","Table VII, PDF p. 21",6/29/10,"Table IX, PDF p. 29",AGREE,
+FLEX-101,D0_mm,3.87,"Table VII, PDF p. 21",3.88,"Table IX, PDF p. 29",AGREE,difference +0.01; rounding tolerance 0.01
+FLEX-101,P,.71,"Table VII, PDF p. 21",538.7 mmHg,"Table IX, PDF p. 29",AGREE,difference -0.001184; rounding tolerance 0.005066
+FLEX-101,X_O2,.230,"Table VII, PDF p. 21",.23,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-101,X_N2,.520,"Table VII, PDF p. 21",.52,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-101,X_CO2,.250,"Table VII, PDF p. 21",.25,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-102,fiber,No,"Table VII, PDF p. 21",Free-floating,"Appendix B Fig. 106, PDF p. 136",AGREE,
+FLEX-102,fuel,heptane,"Table VII, PDF p. 21",heptane,"Table IX, PDF p. 29",AGREE,
+FLEX-102,date,"June 29, 2010","Table VII, PDF p. 21",6/29/10,"Table IX, PDF p. 29",AGREE,
+FLEX-102,D0_mm,3.69,"Table VII, PDF p. 21",3.57,"Table IX, PDF p. 29",DIFFERS,difference -0.12; rounding tolerance 0.01
+FLEX-102,P,.70,"Table VII, PDF p. 21",534.2 mmHg,"Table IX, PDF p. 29",AGREE,difference +0.002895; rounding tolerance 0.005066
+FLEX-102,X_O2,.210,"Table VII, PDF p. 21",.21,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-102,X_N2,.490,"Table VII, PDF p. 21",.49,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-102,X_CO2,.300,"Table VII, PDF p. 21",.3,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-103,fiber,Yes,"Table VII, PDF p. 21",Fiber-supported,"Appendix B Fig. 107, PDF p. 137",AGREE,
+FLEX-103,fuel,heptane,"Table VII, PDF p. 21",heptane,"Table IX, PDF p. 29",AGREE,
+FLEX-103,date,"June 29, 2010","Table VII, PDF p. 21",6/29/10,"Table IX, PDF p. 29",AGREE,
+FLEX-103,D0_mm,4.05,"Table VII, PDF p. 21",4,"Table IX, PDF p. 29",AGREE,difference -0.05; rounding tolerance 0.505
+FLEX-103,P,.70,"Table VII, PDF p. 21",534.3 mmHg,"Table IX, PDF p. 29",AGREE,difference +0.003026; rounding tolerance 0.005066
+FLEX-103,X_O2,.210,"Table VII, PDF p. 21",.21,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-103,X_N2,.490,"Table VII, PDF p. 21",.49,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-103,X_CO2,.300,"Table VII, PDF p. 21",.3,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-104,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 108, PDF p. 138",AGREE,
+FLEX-104,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-104,date,"June 16, 2010","Table VI, PDF p. 20",6/16/10,"Table IX, PDF p. 29",AGREE,
+FLEX-104,D0_mm,3.66,"Table VI, PDF p. 20",3.6,"Table IX, PDF p. 29",DIFFERS,difference -0.06; rounding tolerance 0.055
+FLEX-104,P,.70,"Table VI, PDF p. 20",534.1 mmHg,"Table IX, PDF p. 29",AGREE,difference +0.002763; rounding tolerance 0.005066
+FLEX-104,X_O2,.240,"Table VI, PDF p. 20",.23,"Table IX, PDF p. 29",DIFFERS,difference -0.01; rounding tolerance 0.0055
+FLEX-104,X_N2,.560,"Table VI, PDF p. 20",.56,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-104,X_CO2,.200,"Table VI, PDF p. 20",.2,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-105,fiber,Yes,"Table VI, PDF p. 20",Fiber-supported,"Appendix B Fig. 109, PDF p. 139",AGREE,
+FLEX-105,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-105,date,"June 16, 2010","Table VI, PDF p. 20",6/16/10,"Table IX, PDF p. 29",AGREE,
+FLEX-105,D0_mm,4.35,"Table VI, PDF p. 20",4.17,"Table IX, PDF p. 29",DIFFERS,difference -0.18; rounding tolerance 0.01
+FLEX-105,P,.70,"Table VI, PDF p. 20",534.6 mmHg,"Table IX, PDF p. 29",AGREE,difference +0.003421; rounding tolerance 0.005066
+FLEX-105,X_O2,.240,"Table VI, PDF p. 20",.23,"Table IX, PDF p. 29",DIFFERS,difference -0.01; rounding tolerance 0.0055
+FLEX-105,X_N2,.560,"Table VI, PDF p. 20",.56,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-105,X_CO2,.200,"Table VI, PDF p. 20",.2,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-106,fiber,Yes,"Table VI, PDF p. 20",Fiber-supported,"Appendix B Fig. 110, PDF p. 140",AGREE,
+FLEX-106,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-106,date,"June 21, 2010","Table VI, PDF p. 20",6/21/10,"Table IX, PDF p. 29",AGREE,
+FLEX-106,D0_mm,3.16,"Table VI, PDF p. 20",3.08,"Table IX, PDF p. 29",DIFFERS,difference -0.08; rounding tolerance 0.01
+FLEX-106,P,.71,"Table VI, PDF p. 20",538.3 mmHg,"Table IX, PDF p. 29",AGREE,difference -0.001711; rounding tolerance 0.005066
+FLEX-106,X_O2,.230,"Table VI, PDF p. 20",.23,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-106,X_N2,.520,"Table VI, PDF p. 20",.52,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-106,X_CO2,.250,"Table VI, PDF p. 20",.25,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-107,fiber,Yes,"Table VI, PDF p. 20",Fiber-supported,"Appendix B Fig. 111, PDF p. 141",AGREE,
+FLEX-107,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-107,date,"June 16, 2010","Table VI, PDF p. 20",6/16/10,"Table IX, PDF p. 29",AGREE,
+FLEX-107,D0_mm,3.25,"Table VI, PDF p. 20",3.18,"Table IX, PDF p. 29",DIFFERS,difference -0.07; rounding tolerance 0.01
+FLEX-107,P,.70,"Table VI, PDF p. 20",535 mmHg,"Table IX, PDF p. 29",AGREE,difference +0.003947; rounding tolerance 0.005658
+FLEX-107,X_O2,.240,"Table VI, PDF p. 20",.23,"Table IX, PDF p. 29",DIFFERS,difference -0.01; rounding tolerance 0.0055
+FLEX-107,X_N2,.560,"Table VI, PDF p. 20",.56,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-107,X_CO2,.200,"Table VI, PDF p. 20",.2,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-108,fiber,Yes,"Table VI, PDF p. 20",Fiber-supported,"Appendix B Fig. 112, PDF p. 142",AGREE,
+FLEX-108,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-108,date,"June 21, 2010","Table VI, PDF p. 20",6/21/10,"Table IX, PDF p. 29",AGREE,
+FLEX-108,D0_mm,3.82,"Table VI, PDF p. 20",3.75,"Table IX, PDF p. 29",DIFFERS,difference -0.07; rounding tolerance 0.01
+FLEX-108,P,.71,"Table VI, PDF p. 20",538.3 mmHg,"Table IX, PDF p. 29",AGREE,difference -0.001711; rounding tolerance 0.005066
+FLEX-108,X_O2,.230,"Table VI, PDF p. 20",.23,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-108,X_N2,.520,"Table VI, PDF p. 20",.52,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-108,X_CO2,.250,"Table VI, PDF p. 20",.25,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-109,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 113, PDF p. 143",AGREE,
+FLEX-109,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-109,date,"Aug. 31, 2010","Table VI, PDF p. 20",8/31/10,"Table IX, PDF p. 29",AGREE,
+FLEX-109,D0_mm,3.62,"Table VI, PDF p. 20",3.56,"Table IX, PDF p. 29",DIFFERS,difference -0.06; rounding tolerance 0.01
+FLEX-109,P,.71,"Table VI, PDF p. 20",536.5 mmHg,"Table IX, PDF p. 29",AGREE,difference -0.004079; rounding tolerance 0.005066
+FLEX-109,X_O2,.211,"Table VI, PDF p. 20",.21,"Table IX, PDF p. 29",AGREE,difference -0.001; rounding tolerance 0.0055
+FLEX-109,X_N2,.490,"Table VI, PDF p. 20",.49,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-109,X_CO2,.299,"Table VI, PDF p. 20",.3,"Table IX, PDF p. 29",AGREE,difference +0.001; rounding tolerance 0.0505
+FLEX-110,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 114, PDF p. 144",AGREE,
+FLEX-110,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-110,date,"Aug. 31, 2010","Table VI, PDF p. 20",8/31/10,"Table IX, PDF p. 29",AGREE,
+FLEX-110,D0_mm,2.88,"Table VI, PDF p. 20",2.83,"Table IX, PDF p. 29",DIFFERS,difference -0.05; rounding tolerance 0.01
+FLEX-110,P,.71,"Table VI, PDF p. 20",537 mmHg,"Table IX, PDF p. 29",AGREE,difference -0.003421; rounding tolerance 0.005658
+FLEX-110,X_O2,.211,"Table VI, PDF p. 20",.21,"Table IX, PDF p. 29",AGREE,difference -0.001; rounding tolerance 0.0055
+FLEX-110,X_N2,.490,"Table VI, PDF p. 20",.49,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-110,X_CO2,.299,"Table VI, PDF p. 20",.3,"Table IX, PDF p. 29",AGREE,difference +0.001; rounding tolerance 0.0505
+FLEX-111,fiber,Yes,"Table VI, PDF p. 20",Fiber-supported,"Appendix B Fig. 115, PDF p. 145",AGREE,
+FLEX-111,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-111,date,"Aug. 31, 2010","Table VI, PDF p. 20",8/31/10,"Table IX, PDF p. 29",AGREE,
+FLEX-111,D0_mm,3.38,"Table VI, PDF p. 20",3.37,"Table IX, PDF p. 29",AGREE,difference -0.01; rounding tolerance 0.01
+FLEX-111,P,.71,"Table VI, PDF p. 20",536.9 mmHg,"Table IX, PDF p. 29",AGREE,difference -0.003553; rounding tolerance 0.005066
+FLEX-111,X_O2,.211,"Table VI, PDF p. 20",.21,"Table IX, PDF p. 29",AGREE,difference -0.001; rounding tolerance 0.0055
+FLEX-111,X_N2,.490,"Table VI, PDF p. 20",.49,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-111,X_CO2,.299,"Table VI, PDF p. 20",.3,"Table IX, PDF p. 29",AGREE,difference +0.001; rounding tolerance 0.0505
+FLEX-112,fiber,Yes,"Table VI, PDF p. 20",Fiber-supported,"Appendix B Fig. 116, PDF p. 146",AGREE,
+FLEX-112,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-112,date,"Sept. 1, 2010","Table VI, PDF p. 20",9/1/10,"Table IX, PDF p. 29",AGREE,
+FLEX-112,D0_mm,4.02,"Table VI, PDF p. 20",3.99,"Table IX, PDF p. 29",DIFFERS,difference -0.03; rounding tolerance 0.01
+FLEX-112,P,.70,"Table VI, PDF p. 20",530.7 mmHg,"Table IX, PDF p. 29",AGREE,difference -0.001711; rounding tolerance 0.005066
+FLEX-112,X_O2,.211,"Table VI, PDF p. 20",.21,"Table IX, PDF p. 29",AGREE,difference -0.001; rounding tolerance 0.0055
+FLEX-112,X_N2,.490,"Table VI, PDF p. 20",.49,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-112,X_CO2,.299,"Table VI, PDF p. 20",.3,"Table IX, PDF p. 29",AGREE,difference +0.001; rounding tolerance 0.0505
+FLEX-113,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 117, PDF p. 147",AGREE,
+FLEX-113,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-113,date,"Sept. 1, 2010","Table VI, PDF p. 20",9/1/10,"Table IX, PDF p. 29",AGREE,
+FLEX-113,D0_mm,4.26,"Table VI, PDF p. 20",4.2,"Table IX, PDF p. 29",DIFFERS,difference -0.06; rounding tolerance 0.055
+FLEX-113,P,.70,"Table VI, PDF p. 20",534.6 mmHg,"Table IX, PDF p. 29",AGREE,difference +0.003421; rounding tolerance 0.005066
+FLEX-113,X_O2,.200,"Table VI, PDF p. 20",.2,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-113,X_N2,.450,"Table VI, PDF p. 20",.45,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-113,X_CO2,.350,"Table VI, PDF p. 20",.35,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-114,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 118, PDF p. 148",AGREE,
+FLEX-114,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-114,date,"Sept. 1, 2010","Table VI, PDF p. 20",9/6/10,"Table IX, PDF p. 29",DIFFERS,
+FLEX-114,D0_mm,3.28,"Table VI, PDF p. 20",3.23,"Table IX, PDF p. 29",DIFFERS,difference -0.05; rounding tolerance 0.01
+FLEX-114,P,.70,"Table VI, PDF p. 20",0 mmHg,"Table IX, PDF p. 29",DIFFERS,difference -0.7; rounding tolerance 0.005658
+FLEX-114,X_O2,.200,"Table VI, PDF p. 20",.2,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-114,X_N2,.450,"Table VI, PDF p. 20",.45,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-114,X_CO2,.350,"Table VI, PDF p. 20",.35,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-115,fiber,Yes,"Table VI, PDF p. 20",Fiber-supported,"Appendix B Fig. 119, PDF p. 149",AGREE,
+FLEX-115,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-115,date,"Sept. 1, 2010","Table VI, PDF p. 20",9/1/10,"Table IX, PDF p. 29",AGREE,
+FLEX-115,D0_mm,4.03,"Table VI, PDF p. 20",3.97,"Table IX, PDF p. 29",DIFFERS,difference -0.06; rounding tolerance 0.01
+FLEX-115,P,.71,"Table VI, PDF p. 20",535.8 mmHg,"Table IX, PDF p. 29",AGREE,difference -0.005; rounding tolerance 0.005066
+FLEX-115,X_O2,.200,"Table VI, PDF p. 20",.2,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-115,X_N2,.450,"Table VI, PDF p. 20",.45,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-115,X_CO2,.350,"Table VI, PDF p. 20",.35,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-116,fiber,Yes,"Table VI, PDF p. 20",Fiber-supported,"Appendix B Fig. 120, PDF p. 150",AGREE,
+FLEX-116,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-116,date,"Sept. 1, 2010","Table VI, PDF p. 20",9/1/10,"Table IX, PDF p. 29",AGREE,
+FLEX-116,D0_mm,3.15,"Table VI, PDF p. 20",3.16,"Table IX, PDF p. 29",AGREE,difference +0.01; rounding tolerance 0.01
+FLEX-116,P,.71,"Table VI, PDF p. 20",536.3 mmHg,"Table IX, PDF p. 29",AGREE,difference -0.004342; rounding tolerance 0.005066
+FLEX-116,X_O2,.200,"Table VI, PDF p. 20",.2,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-116,X_N2,.450,"Table VI, PDF p. 20",.45,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-116,X_CO2,.350,"Table VI, PDF p. 20",.35,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-117,fiber,No,"Table VII, PDF p. 21",Free-floating,"Appendix B Fig. 121, PDF p. 151",AGREE,
+FLEX-117,fuel,heptane,"Table VII, PDF p. 21",heptane,"Table IX, PDF p. 29",AGREE,
+FLEX-117,date,"Sept. 6, 2010","Table VII, PDF p. 21",9/6/10,"Table IX, PDF p. 29",AGREE,
+FLEX-117,D0_mm,3.89,"Table VII, PDF p. 21",3.84,"Table IX, PDF p. 29",DIFFERS,difference -0.05; rounding tolerance 0.01
+FLEX-117,P,.70,"Table VII, PDF p. 21",531.1 mmHg,"Table IX, PDF p. 29",AGREE,difference -0.001184; rounding tolerance 0.005066
+FLEX-117,X_O2,.200,"Table VII, PDF p. 21",.2,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-117,X_N2,.450,"Table VII, PDF p. 21",.45,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-117,X_CO2,.350,"Table VII, PDF p. 21",.35,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-118,fiber,Yes,"Table VII, PDF p. 21",Fiber-supported,"Appendix B Fig. 122, PDF p. 152",AGREE,
+FLEX-118,fuel,heptane,"Table VII, PDF p. 21",heptane,"Table IX, PDF p. 29",AGREE,
+FLEX-118,date,"Sept. 6, 2010","Table VII, PDF p. 21",9/6/10,"Table IX, PDF p. 29",AGREE,
+FLEX-118,D0_mm,3.11,"Table VII, PDF p. 21",3.03,"Table IX, PDF p. 29",DIFFERS,difference -0.08; rounding tolerance 0.01
+FLEX-118,P,.70,"Table VII, PDF p. 21",532.8 mmHg,"Table IX, PDF p. 29",AGREE,difference +0.001053; rounding tolerance 0.005066
+FLEX-118,X_O2,.200,"Table VII, PDF p. 21",.2,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-118,X_N2,.450,"Table VII, PDF p. 21",.44,"Table IX, PDF p. 29",DIFFERS,difference -0.01; rounding tolerance 0.0055
+FLEX-118,X_CO2,.350,"Table VII, PDF p. 21",.35,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-119,fiber,Yes,"Table VII, PDF p. 21",Fiber-supported,"Appendix B Fig. 123, PDF p. 153",AGREE,
+FLEX-119,fuel,heptane,"Table VII, PDF p. 21",heptane,"Table IX, PDF p. 29",AGREE,
+FLEX-119,date,"Sept. 7, 2010","Table VII, PDF p. 21",9/7/10,"Table IX, PDF p. 29",AGREE,
+FLEX-119,D0_mm,2.68,"Table VII, PDF p. 21",2.6,"Table IX, PDF p. 29",DIFFERS,difference -0.08; rounding tolerance 0.055
+FLEX-119,P,.70,"Table VII, PDF p. 21",532.6 mmHg,"Table IX, PDF p. 29",AGREE,difference +0.0007895; rounding tolerance 0.005066
+FLEX-119,X_O2,.180,"Table VII, PDF p. 21",.18,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-119,X_N2,.420,"Table VII, PDF p. 21",.42,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-119,X_CO2,.400,"Table VII, PDF p. 21",.4,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-120,fiber,Yes,"Table VII, PDF p. 21",Fiber-supported,"Appendix B Fig. 124, PDF p. 154",AGREE,
+FLEX-120,fuel,heptane,"Table VII, PDF p. 21",heptane,"Table IX, PDF p. 29",AGREE,
+FLEX-120,date,"Sept. 7, 2010","Table VII, PDF p. 21",9/7/10,"Table IX, PDF p. 29",AGREE,
+FLEX-120,D0_mm,2.53,"Table VII, PDF p. 21",2.45,"Table IX, PDF p. 29",DIFFERS,difference -0.08; rounding tolerance 0.01
+FLEX-120,P,.70,"Table VII, PDF p. 21",532.5 mmHg,"Table IX, PDF p. 29",AGREE,difference +0.0006579; rounding tolerance 0.005066
+FLEX-120,X_O2,.180,"Table VII, PDF p. 21",.18,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-120,X_N2,.420,"Table VII, PDF p. 21",.42,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-120,X_CO2,.400,"Table VII, PDF p. 21",.4,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-121,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 125, PDF p. 155",AGREE,
+FLEX-121,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-121,date,"Sept. 8, 2010","Table VI, PDF p. 20",9/8/10,"Table IX, PDF p. 29",AGREE,
+FLEX-121,D0_mm,4.33,"Table VI, PDF p. 20",4.25,"Table IX, PDF p. 29",DIFFERS,difference -0.08; rounding tolerance 0.01
+FLEX-121,P,.69,"Table VI, PDF p. 20",526.3 mmHg,"Table IX, PDF p. 29",AGREE,difference +0.0025; rounding tolerance 0.005066
+FLEX-121,X_O2,.180,"Table VI, PDF p. 20",.18,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-121,X_N2,.420,"Table VI, PDF p. 20",.42,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-121,X_CO2,.400,"Table VI, PDF p. 20",.4,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-122,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 126, PDF p. 156",AGREE,
+FLEX-122,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-122,date,"Sept. 8, 2010","Table VI, PDF p. 20",9/8/10,"Table IX, PDF p. 29",AGREE,
+FLEX-122,D0_mm,3.57,"Table VI, PDF p. 20",3.46,"Table IX, PDF p. 29",DIFFERS,difference -0.11; rounding tolerance 0.01
+FLEX-122,P,.70,"Table VI, PDF p. 20",531.2 mmHg,"Table IX, PDF p. 29",AGREE,difference -0.001053; rounding tolerance 0.005066
+FLEX-122,X_O2,.180,"Table VI, PDF p. 20",.18,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-122,X_N2,.420,"Table VI, PDF p. 20",.42,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-122,X_CO2,.400,"Table VI, PDF p. 20",.4,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-123,fiber,Yes,"Table VI, PDF p. 20",Fiber-supported,"Appendix B Fig. 127, PDF p. 157",AGREE,
+FLEX-123,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-123,date,"Sept. 8, 2010","Table VI, PDF p. 20",9/8/10,"Table IX, PDF p. 29",AGREE,
+FLEX-123,D0_mm,4.13,"Table VI, PDF p. 20",4.13,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.01
+FLEX-123,P,.70,"Table VI, PDF p. 20",532 mmHg,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.005658
+FLEX-123,X_O2,.180,"Table VI, PDF p. 20",.18,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-123,X_N2,.420,"Table VI, PDF p. 20",.42,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-123,X_CO2,.400,"Table VI, PDF p. 20",.4,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-124,fiber,Yes,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 128, PDF p. 158",DIFFERS,
+FLEX-124,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-124,date,"Sept. 8, 2010","Table VI, PDF p. 20",9/8/10,"Table IX, PDF p. 29",AGREE,
+FLEX-124,D0_mm,3.57,"Table VI, PDF p. 20",2.87,"Table IX, PDF p. 29",DIFFERS,difference -0.7; rounding tolerance 0.01
+FLEX-124,P,.70,"Table VI, PDF p. 20",532.4 mmHg,"Table IX, PDF p. 29",AGREE,difference +0.0005263; rounding tolerance 0.005066
+FLEX-124,X_O2,.180,"Table VI, PDF p. 20",.18,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-124,X_N2,.420,"Table VI, PDF p. 20",.42,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-124,X_CO2,.400,"Table VI, PDF p. 20",.4,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-125,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 129, PDF p. 159",AGREE,
+FLEX-125,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-125,date,"Sept. 13, 2010","Table VI, PDF p. 20",9/13/10,"Table IX, PDF p. 29",AGREE,
+FLEX-125,D0_mm,3.70,"Table VI, PDF p. 20",3.63,"Table IX, PDF p. 29",DIFFERS,difference -0.07; rounding tolerance 0.01
+FLEX-125,P,.71,"Table VI, PDF p. 20",537.2 mmHg,"Table IX, PDF p. 29",AGREE,difference -0.003158; rounding tolerance 0.005066
+FLEX-125,X_O2,.170,"Table VI, PDF p. 20",.17,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-125,X_N2,.380,"Table VI, PDF p. 20",.38,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-125,X_CO2,.450,"Table VI, PDF p. 20",.45,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-126,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 130, PDF p. 160",AGREE,
+FLEX-126,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-126,date,"Sept. 13, 2010","Table VI, PDF p. 20",9/13/10,"Table IX, PDF p. 29",AGREE,
+FLEX-126,D0_mm,2.89,"Table VI, PDF p. 20",2.8,"Table IX, PDF p. 29",DIFFERS,difference -0.09; rounding tolerance 0.055
+FLEX-126,P,.71,"Table VI, PDF p. 20",536.1 mmHg,"Table IX, PDF p. 29",AGREE,difference -0.004605; rounding tolerance 0.005066
+FLEX-126,X_O2,.170,"Table VI, PDF p. 20",.17,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-126,X_N2,.380,"Table VI, PDF p. 20",.38,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-126,X_CO2,.450,"Table VI, PDF p. 20",.45,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-127,fiber,Yes,"Table VI, PDF p. 20",Fiber-supported,"Appendix B Fig. 131, PDF p. 161",AGREE,
+FLEX-127,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-127,date,"Sept. 13, 2010","Table VI, PDF p. 20",9/13/10,"Table IX, PDF p. 29",AGREE,
+FLEX-127,D0_mm,3.20,"Table VI, PDF p. 20",3.22,"Table IX, PDF p. 29",DIFFERS,difference +0.02; rounding tolerance 0.01
+FLEX-127,P,.71,"Table VI, PDF p. 20",536.7 mmHg,"Table IX, PDF p. 29",AGREE,difference -0.003816; rounding tolerance 0.005066
+FLEX-127,X_O2,.170,"Table VI, PDF p. 20",.17,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-127,X_N2,.380,"Table VI, PDF p. 20",.38,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-127,X_CO2,.450,"Table VI, PDF p. 20",.45,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-128,fiber,Yes,"Table VI, PDF p. 20",Fiber-supported,"Appendix B Fig. 132, PDF p. 162",AGREE,
+FLEX-128,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 29",AGREE,
+FLEX-128,date,"Sept. 13, 2010","Table VI, PDF p. 20",9/13/10,"Table IX, PDF p. 29",AGREE,
+FLEX-128,D0_mm,2.93,"Table VI, PDF p. 20",2.91,"Table IX, PDF p. 29",DIFFERS,difference -0.02; rounding tolerance 0.01
+FLEX-128,P,.71,"Table VI, PDF p. 20",537.3 mmHg,"Table IX, PDF p. 29",AGREE,difference -0.003026; rounding tolerance 0.005066
+FLEX-128,X_O2,.170,"Table VI, PDF p. 20",.17,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-128,X_N2,.380,"Table VI, PDF p. 20",.38,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-128,X_CO2,.450,"Table VI, PDF p. 20",.45,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-129,fiber,No,"Table VII, PDF p. 21",Free-floating,"Appendix B Fig. 133, PDF p. 163",AGREE,
+FLEX-129,fuel,heptane,"Table VII, PDF p. 21",heptane,"Table IX, PDF p. 29",AGREE,
+FLEX-129,date,"Sept. 17, 2010","Table VII, PDF p. 21",9/17/10,"Table IX, PDF p. 29",AGREE,
+FLEX-129,D0_mm,3.43,"Table VII, PDF p. 21",3.33,"Table IX, PDF p. 29",DIFFERS,difference -0.1; rounding tolerance 0.01
+FLEX-129,P,.71,"Table VII, PDF p. 21",536.2 mmHg,"Table IX, PDF p. 29",AGREE,difference -0.004474; rounding tolerance 0.005066
+FLEX-129,X_O2,.170,"Table VII, PDF p. 21",.17,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-129,X_N2,.380,"Table VII, PDF p. 21",.38,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-129,X_CO2,.450,"Table VII, PDF p. 21",.45,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-130,fiber,Yes,"Table VII, PDF p. 21",Fiber-supported,"Appendix B Fig. 134, PDF p. 164",AGREE,
+FLEX-130,fuel,heptane,"Table VII, PDF p. 21",heptane,"Table IX, PDF p. 29",AGREE,
+FLEX-130,date,"Sept. 17, 2010","Table VII, PDF p. 21",9/17/10,"Table IX, PDF p. 29",AGREE,
+FLEX-130,D0_mm,3.02,"Table VII, PDF p. 21",2.91,"Table IX, PDF p. 29",DIFFERS,difference -0.11; rounding tolerance 0.01
+FLEX-130,P,.71,"Table VII, PDF p. 21",537.2 mmHg,"Table IX, PDF p. 29",AGREE,difference -0.003158; rounding tolerance 0.005066
+FLEX-130,X_O2,.170,"Table VII, PDF p. 21",.17,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-130,X_N2,.380,"Table VII, PDF p. 21",.38,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-130,X_CO2,.450,"Table VII, PDF p. 21",.45,"Table IX, PDF p. 29",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-140,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 144, PDF p. 174",AGREE,
+FLEX-140,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 30",AGREE,
+FLEX-140,date,"Nov. 4, 2010","Table VI, PDF p. 20",11/4/10,"Table IX, PDF p. 30",AGREE,
+FLEX-140,D0_mm,4.05,"Table VI, PDF p. 20",3.98,"Table IX, PDF p. 30",DIFFERS,difference -0.07; rounding tolerance 0.01
+FLEX-140,P,.70,"Table VI, PDF p. 20",533.5 mmHg,"Table IX, PDF p. 30",AGREE,difference +0.001974; rounding tolerance 0.005066
+FLEX-140,X_O2,.146,"Table VI, PDF p. 20",.15,"Table IX, PDF p. 30",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-140,X_N2,.354,"Table VI, PDF p. 20",.35,"Table IX, PDF p. 30",AGREE,difference -0.004; rounding tolerance 0.0055
+FLEX-140,X_CO2,.500,"Table VI, PDF p. 20",.5,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-141,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 145, PDF p. 175",AGREE,
+FLEX-141,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 30",AGREE,
+FLEX-141,date,"Nov. 4, 2010","Table VI, PDF p. 20",11/4/10,"Table IX, PDF p. 30",AGREE,
+FLEX-141,D0_mm,2.94,"Table VI, PDF p. 20",2.86,"Table IX, PDF p. 30",DIFFERS,difference -0.08; rounding tolerance 0.01
+FLEX-141,P,.70,"Table VI, PDF p. 20",534.1 mmHg,"Table IX, PDF p. 30",AGREE,difference +0.002763; rounding tolerance 0.005066
+FLEX-141,X_O2,.146,"Table VI, PDF p. 20",.15,"Table IX, PDF p. 30",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-141,X_N2,.354,"Table VI, PDF p. 20",.35,"Table IX, PDF p. 30",AGREE,difference -0.004; rounding tolerance 0.0055
+FLEX-141,X_CO2,.500,"Table VI, PDF p. 20",.5,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-142,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 146, PDF p. 176",AGREE,
+FLEX-142,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 30",AGREE,
+FLEX-142,date,"Nov. 4, 2010","Table VI, PDF p. 20",11/4/10,"Table IX, PDF p. 30",AGREE,
+FLEX-142,D0_mm,1.88,"Table VI, PDF p. 20",1.86,"Table IX, PDF p. 30",DIFFERS,difference -0.02; rounding tolerance 0.01
+FLEX-142,P,.70,"Table VI, PDF p. 20",534.5 mmHg,"Table IX, PDF p. 30",AGREE,difference +0.003289; rounding tolerance 0.005066
+FLEX-142,X_O2,.146,"Table VI, PDF p. 20",.15,"Table IX, PDF p. 30",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-142,X_N2,.354,"Table VI, PDF p. 20",.35,"Table IX, PDF p. 30",AGREE,difference -0.004; rounding tolerance 0.0055
+FLEX-142,X_CO2,.500,"Table VI, PDF p. 20",.5,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-143,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 147, PDF p. 177",AGREE,
+FLEX-143,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 30",AGREE,
+FLEX-143,date,"Nov. 4, 2010","Table VI, PDF p. 20",11/4/10,"Table IX, PDF p. 30",AGREE,
+FLEX-143,D0_mm,2.33,"Table VI, PDF p. 20",2.25,"Table IX, PDF p. 30",DIFFERS,difference -0.08; rounding tolerance 0.01
+FLEX-143,P,.70,"Table VI, PDF p. 20",534.7 mmHg,"Table IX, PDF p. 30",AGREE,difference +0.003553; rounding tolerance 0.005066
+FLEX-143,X_O2,.146,"Table VI, PDF p. 20",.15,"Table IX, PDF p. 30",AGREE,difference +0.004; rounding tolerance 0.0055
+FLEX-143,X_N2,.354,"Table VI, PDF p. 20",.35,"Table IX, PDF p. 30",AGREE,difference -0.004; rounding tolerance 0.0055
+FLEX-143,X_CO2,.500,"Table VI, PDF p. 20",.5,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-147,fiber,No,"Table VI, PDF p. 20",Free-floating,"Appendix B Fig. 151, PDF p. 181",AGREE,
+FLEX-147,fuel,methanol,"Table VI, PDF p. 20",methanol,"Table IX, PDF p. 30",AGREE,
+FLEX-147,date,"Sept. 13, 2010","Table VI, PDF p. 20",9/13/10,"Table IX, PDF p. 30",AGREE,
+FLEX-147,D0_mm,3.13,"Table VI, PDF p. 20",3.02,"Table IX, PDF p. 30",DIFFERS,difference -0.11; rounding tolerance 0.01
+FLEX-147,P,.71,"Table VI, PDF p. 20",535.7 mmHg,"Table IX, PDF p. 30",DIFFERS,difference -0.005132; rounding tolerance 0.005066
+FLEX-147,X_O2,.170,"Table VI, PDF p. 20",.17,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-147,X_N2,.380,"Table VI, PDF p. 20",.38,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-147,X_CO2,.450,"Table VI, PDF p. 20",.45,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-148,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 152, PDF p. 182",AGREE,
+FLEX-148,fuel,heptane,"Table VIII, PDF p. 21",heptane,"Table IX, PDF p. 30",AGREE,
+FLEX-148,date,"Nov. 18, 2010","Table VIII, PDF p. 21",11/18/10,"Table IX, PDF p. 30",AGREE,
+FLEX-148,D0_mm,2.66,"Table VIII, PDF p. 21",2.58,"Table IX, PDF p. 30",DIFFERS,difference -0.08; rounding tolerance 0.01
+FLEX-148,P,1.01,"Table VIII, PDF p. 21",764.4 mmHg,"Table IX, PDF p. 30",AGREE,difference -0.004211; rounding tolerance 0.005066
+FLEX-148,X_O2,0.200,"Table VIII, PDF p. 21",.2,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-148,X_N2,0.750,"Table VIII, PDF p. 21",.75,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-148,X_CO2,0.050,"Table VIII, PDF p. 21",.05,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-149,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 153, PDF p. 183",AGREE,
+FLEX-149,fuel,heptane,"Table VIII, PDF p. 21",heptane,"Table IX, PDF p. 30",AGREE,
+FLEX-149,date,"Nov. 18, 2010","Table VIII, PDF p. 21",11/18/10,"Table IX, PDF p. 30",AGREE,
+FLEX-149,D0_mm,2.37,"Table VIII, PDF p. 21",2.21,"Table IX, PDF p. 30",DIFFERS,difference -0.16; rounding tolerance 0.01
+FLEX-149,P,1.01,"Table VIII, PDF p. 21",766.2 mmHg,"Table IX, PDF p. 30",AGREE,difference -0.001842; rounding tolerance 0.005066
+FLEX-149,X_O2,.200,"Table VIII, PDF p. 21",.2,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-149,X_N2,.750,"Table VIII, PDF p. 21",.75,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-149,X_CO2,.050,"Table VIII, PDF p. 21",.05,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-150,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 154, PDF p. 184",AGREE,
+FLEX-150,fuel,heptane,"Table VIII, PDF p. 21",heptane,"Table IX, PDF p. 30",AGREE,
+FLEX-150,date,"Nov. 18, 2010","Table VIII, PDF p. 21",11/18/10,"Table IX, PDF p. 30",AGREE,
+FLEX-150,D0_mm,3.26,"Table VIII, PDF p. 21",3.18,"Table IX, PDF p. 30",DIFFERS,difference -0.08; rounding tolerance 0.01
+FLEX-150,P,1.01,"Table VIII, PDF p. 21",767.6 mmHg,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.005066
+FLEX-150,X_O2,.200,"Table VIII, PDF p. 21",.2,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0505
+FLEX-150,X_N2,.750,"Table VIII, PDF p. 21",.75,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-150,X_CO2,.050,"Table VIII, PDF p. 21",.05,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-151,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 155, PDF p. 185",AGREE,
+FLEX-151,fuel,methanol,"Table VIII, PDF p. 21",methanol,"Table IX, PDF p. 30",AGREE,
+FLEX-151,date,"Dec. 8, 2010","Table VIII, PDF p. 21",12/8/10,"Table IX, PDF p. 30",AGREE,
+FLEX-151,D0_mm,3.90,"Table VIII, PDF p. 21",3.86,"Table IX, PDF p. 30",DIFFERS,difference -0.04; rounding tolerance 0.01
+FLEX-151,P,1.00,"Table VIII, PDF p. 21",762.5 mmHg,"Table IX, PDF p. 30",AGREE,difference +0.003289; rounding tolerance 0.005066
+FLEX-151,X_O2,.180,"Table VIII, PDF p. 21",.18,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-151,X_N2,.670,"Table VIII, PDF p. 21",.67,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-151,X_CO2,.150,"Table VIII, PDF p. 21",.15,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-152,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 156, PDF p. 186",AGREE,
+FLEX-152,fuel,methanol,"Table VIII, PDF p. 21",methanol,"Table IX, PDF p. 30",AGREE,
+FLEX-152,date,"Dec. 8, 2010","Table VIII, PDF p. 21",12/8/10,"Table IX, PDF p. 30",AGREE,
+FLEX-152,D0_mm,3.41,"Table VIII, PDF p. 21",3.33,"Table IX, PDF p. 30",DIFFERS,difference -0.08; rounding tolerance 0.01
+FLEX-152,P,1.01,"Table VIII, PDF p. 21",765 mmHg,"Table IX, PDF p. 30",AGREE,difference -0.003421; rounding tolerance 0.005658
+FLEX-152,X_O2,.180,"Table VIII, PDF p. 21",.18,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-152,X_N2,.670,"Table VIII, PDF p. 21",.67,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-152,X_CO2,.150,"Table VIII, PDF p. 21",.15,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-153,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 157, PDF p. 187",AGREE,
+FLEX-153,fuel,methanol,"Table VIII, PDF p. 21",methanol,"Table IX, PDF p. 30",AGREE,
+FLEX-153,date,"Dec. 8, 2010","Table VIII, PDF p. 21",12/8/10,"Table IX, PDF p. 30",AGREE,
+FLEX-153,D0_mm,2.80,"Table VIII, PDF p. 21",2.78,"Table IX, PDF p. 30",DIFFERS,difference -0.02; rounding tolerance 0.01
+FLEX-153,P,1.01,"Table VIII, PDF p. 21",765.6 mmHg,"Table IX, PDF p. 30",AGREE,difference -0.002632; rounding tolerance 0.005066
+FLEX-153,X_O2,.180,"Table VIII, PDF p. 21",.18,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-153,X_N2,.670,"Table VIII, PDF p. 21",.67,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-153,X_CO2,.150,"Table VIII, PDF p. 21",.15,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-154,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 158, PDF p. 188",AGREE,
+FLEX-154,fuel,heptane,"Table VIII, PDF p. 21",heptane,"Table IX, PDF p. 30",AGREE,
+FLEX-154,date,"Dec. 9, 2010","Table VIII, PDF p. 21",12/9/10,"Table IX, PDF p. 30",AGREE,
+FLEX-154,D0_mm,3.76,"Table VIII, PDF p. 21",3.7,"Table IX, PDF p. 30",DIFFERS,difference -0.06; rounding tolerance 0.055
+FLEX-154,P,1.00,"Table VIII, PDF p. 21",762.3 mmHg,"Table IX, PDF p. 30",AGREE,difference +0.003026; rounding tolerance 0.005066
+FLEX-154,X_O2,.180,"Table VIII, PDF p. 21",.18,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-154,X_N2,.670,"Table VIII, PDF p. 21",.67,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-154,X_CO2,.150,"Table VIII, PDF p. 21",.15,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-155,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 159, PDF p. 189",AGREE,
+FLEX-155,fuel,heptane,"Table VIII, PDF p. 21",heptane,"Table IX, PDF p. 30",AGREE,
+FLEX-155,date,"Dec. 9, 2010","Table VIII, PDF p. 21",12/9/10,"Table IX, PDF p. 30",AGREE,
+FLEX-155,D0_mm,2.84,"Table VIII, PDF p. 21",2.73,"Table IX, PDF p. 30",DIFFERS,difference -0.11; rounding tolerance 0.01
+FLEX-155,P,1.01,"Table VIII, PDF p. 21",764.9 mmHg,"Table IX, PDF p. 30",AGREE,difference -0.003553; rounding tolerance 0.005066
+FLEX-155,X_O2,.180,"Table VIII, PDF p. 21",.18,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-155,X_N2,.670,"Table VIII, PDF p. 21",.67,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-155,X_CO2,.150,"Table VIII, PDF p. 21",.15,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-156,presence,listed,"Table VIII, PDF p. 21",absent from Table IX,Table IX,DIFFERS,
+FLEX-157,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 160, PDF p. 190",AGREE,
+FLEX-157,fuel,heptane,"Table VIII, PDF p. 21",heptane,"Table IX, PDF p. 30",AGREE,
+FLEX-157,date,"Dec. 9, 2010","Table VIII, PDF p. 21",12/9/10,"Table IX, PDF p. 30",AGREE,
+FLEX-157,D0_mm,2.02,"Table VIII, PDF p. 21",1.34,"Table IX, PDF p. 30",DIFFERS,difference -0.68; rounding tolerance 0.01
+FLEX-157,P,1.01,"Table VIII, PDF p. 21",765.7 mmHg,"Table IX, PDF p. 30",AGREE,difference -0.0025; rounding tolerance 0.005066
+FLEX-157,X_O2,.180,"Table VIII, PDF p. 21",.18,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-157,X_N2,.670,"Table VIII, PDF p. 21",.67,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-157,X_CO2,.150,"Table VIII, PDF p. 21",.15,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-158,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 161, PDF p. 191",AGREE,
+FLEX-158,fuel,methanol,"Table VIII, PDF p. 21",methanol,"Table IX, PDF p. 30",AGREE,
+FLEX-158,date,"Dec. 14, 2010","Table VIII, PDF p. 21",12/14/10,"Table IX, PDF p. 30",AGREE,
+FLEX-158,D0_mm,4.31,"Table VIII, PDF p. 21",4.24,"Table IX, PDF p. 30",DIFFERS,difference -0.07; rounding tolerance 0.01
+FLEX-158,P,1.00,"Table VIII, PDF p. 21",762.1 mmHg,"Table IX, PDF p. 30",AGREE,difference +0.002763; rounding tolerance 0.005066
+FLEX-158,X_O2,.160,"Table VIII, PDF p. 21",.16,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-158,X_N2,.590,"Table VIII, PDF p. 21",.59,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-158,X_CO2,.250,"Table VIII, PDF p. 21",.25,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-159,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 162, PDF p. 192",AGREE,
+FLEX-159,fuel,methanol,"Table VIII, PDF p. 21",methanol,"Table IX, PDF p. 30",AGREE,
+FLEX-159,date,"Dec. 14, 2010","Table VIII, PDF p. 21",12/14/10,"Table IX, PDF p. 30",AGREE,
+FLEX-159,D0_mm,3.78,"Table VIII, PDF p. 21",3.7,"Table IX, PDF p. 30",DIFFERS,difference -0.08; rounding tolerance 0.055
+FLEX-159,P,1.01,"Table VIII, PDF p. 21",764.4 mmHg,"Table IX, PDF p. 30",AGREE,difference -0.004211; rounding tolerance 0.005066
+FLEX-159,X_O2,.160,"Table VIII, PDF p. 21",.16,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-159,X_N2,.590,"Table VIII, PDF p. 21",.59,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-159,X_CO2,.250,"Table VIII, PDF p. 21",.25,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-160,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 163, PDF p. 193",AGREE,
+FLEX-160,fuel,methanol,"Table VIII, PDF p. 21",methanol,"Table IX, PDF p. 30",AGREE,
+FLEX-160,date,"Dec. 14, 2010","Table VIII, PDF p. 21",12/14/10,"Table IX, PDF p. 30",AGREE,
+FLEX-160,D0_mm,2.71,"Table VIII, PDF p. 21",2.71,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.01
+FLEX-160,P,1.01,"Table VIII, PDF p. 21",765.5 mmHg,"Table IX, PDF p. 30",AGREE,difference -0.002763; rounding tolerance 0.005066
+FLEX-160,X_O2,.160,"Table VIII, PDF p. 21",.16,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-160,X_N2,.590,"Table VIII, PDF p. 21",.59,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-160,X_CO2,.250,"Table VIII, PDF p. 21",.25,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-161,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 164, PDF p. 194",AGREE,
+FLEX-161,fuel,methanol,"Table VIII, PDF p. 21",methanol,"Table IX, PDF p. 30",AGREE,
+FLEX-161,date,"Dec. 14, 2010","Table VIII, PDF p. 21",12/14/10,"Table IX, PDF p. 30",AGREE,
+FLEX-161,D0_mm,2.81,"Table VIII, PDF p. 21",2.77,"Table IX, PDF p. 30",DIFFERS,difference -0.04; rounding tolerance 0.01
+FLEX-161,P,1.01,"Table VIII, PDF p. 21",767.6 mmHg,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.005066
+FLEX-161,X_O2,.160,"Table VIII, PDF p. 21",.16,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-161,X_N2,.590,"Table VIII, PDF p. 21",.59,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-161,X_CO2,.250,"Table VIII, PDF p. 21",.25,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-162,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 165, PDF p. 195",AGREE,
+FLEX-162,fuel,methanol,"Table VIII, PDF p. 21",methanol,"Table IX, PDF p. 30",AGREE,
+FLEX-162,date,"Dec. 28, 2010","Table VIII, PDF p. 21",12/28/10,"Table IX, PDF p. 30",AGREE,
+FLEX-162,D0_mm,3.79,"Table VIII, PDF p. 21",3.72,"Table IX, PDF p. 30",DIFFERS,difference -0.07; rounding tolerance 0.01
+FLEX-162,P,1.00,"Table VIII, PDF p. 21",763.3 mmHg,"Table IX, PDF p. 30",AGREE,difference +0.004342; rounding tolerance 0.005066
+FLEX-162,X_O2,.153,"Table VIII, PDF p. 21",.15,"Table IX, PDF p. 30",AGREE,difference -0.003; rounding tolerance 0.0055
+FLEX-162,X_N2,.549,"Table VIII, PDF p. 21",.54,"Table IX, PDF p. 30",DIFFERS,difference -0.009; rounding tolerance 0.0055
+FLEX-162,X_CO2,.298,"Table VIII, PDF p. 21",.32,"Table IX, PDF p. 30",DIFFERS,difference +0.022; rounding tolerance 0.0055
+FLEX-163,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 166, PDF p. 196",AGREE,
+FLEX-163,fuel,methanol,"Table VIII, PDF p. 21",methanol,"Table IX, PDF p. 30",AGREE,
+FLEX-163,date,"Dec. 28, 2010","Table VIII, PDF p. 21",12/28/10,"Table IX, PDF p. 30",AGREE,
+FLEX-163,D0_mm,3.07,"Table VIII, PDF p. 21",3.05,"Table IX, PDF p. 30",DIFFERS,difference -0.02; rounding tolerance 0.01
+FLEX-163,P,1.01,"Table VIII, PDF p. 21",764.4 mmHg,"Table IX, PDF p. 30",AGREE,difference -0.004211; rounding tolerance 0.005066
+FLEX-163,X_O2,.153,"Table VIII, PDF p. 21",.15,"Table IX, PDF p. 30",AGREE,difference -0.003; rounding tolerance 0.0055
+FLEX-163,X_N2,.549,"Table VIII, PDF p. 21",.53,"Table IX, PDF p. 30",DIFFERS,difference -0.019; rounding tolerance 0.0055
+FLEX-163,X_CO2,.298,"Table VIII, PDF p. 21",.32,"Table IX, PDF p. 30",DIFFERS,difference +0.022; rounding tolerance 0.0055
+FLEX-164,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 167, PDF p. 197",AGREE,
+FLEX-164,fuel,methanol,"Table VIII, PDF p. 21",methanol,"Table IX, PDF p. 30",AGREE,
+FLEX-164,date,"Dec. 28, 2010","Table VIII, PDF p. 21",12/28/10,"Table IX, PDF p. 30",AGREE,
+FLEX-164,D0_mm,2.59,"Table VIII, PDF p. 21",2.59,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.01
+FLEX-164,P,1.01,"Table VIII, PDF p. 21",765.9 mmHg,"Table IX, PDF p. 30",AGREE,difference -0.002237; rounding tolerance 0.005066
+FLEX-164,X_O2,.153,"Table VIII, PDF p. 21",.15,"Table IX, PDF p. 30",AGREE,difference -0.003; rounding tolerance 0.0055
+FLEX-164,X_N2,.549,"Table VIII, PDF p. 21",.53,"Table IX, PDF p. 30",DIFFERS,difference -0.019; rounding tolerance 0.0055
+FLEX-164,X_CO2,.298,"Table VIII, PDF p. 21",.32,"Table IX, PDF p. 30",DIFFERS,difference +0.022; rounding tolerance 0.0055
+FLEX-165,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 168, PDF p. 198",AGREE,
+FLEX-165,fuel,methanol,"Table VIII, PDF p. 21",methanol,"Table IX, PDF p. 30",AGREE,
+FLEX-165,date,"Dec. 28, 2010","Table VIII, PDF p. 21",12/28/10,"Table IX, PDF p. 30",AGREE,
+FLEX-165,D0_mm,2.69,"Table VIII, PDF p. 21",2.59,"Table IX, PDF p. 30",DIFFERS,difference -0.1; rounding tolerance 0.01
+FLEX-165,P,1.01,"Table VIII, PDF p. 21",766.1 mmHg,"Table IX, PDF p. 30",AGREE,difference -0.001974; rounding tolerance 0.005066
+FLEX-165,X_O2,.153,"Table VIII, PDF p. 21",.15,"Table IX, PDF p. 30",AGREE,difference -0.003; rounding tolerance 0.0055
+FLEX-165,X_N2,.549,"Table VIII, PDF p. 21",.53,"Table IX, PDF p. 30",DIFFERS,difference -0.019; rounding tolerance 0.0055
+FLEX-165,X_CO2,.298,"Table VIII, PDF p. 21",.32,"Table IX, PDF p. 30",DIFFERS,difference +0.022; rounding tolerance 0.0055
+FLEX-166,fiber,No (header),"Table VIII, PDF p. 21",Free-floating,"Appendix B Fig. 169, PDF p. 199",AGREE,
+FLEX-166,fuel,heptane,"Table VIII, PDF p. 21",heptane,"Table IX, PDF p. 30",AGREE,
+FLEX-166,date,"Dec. 9, 2010","Table VIII, PDF p. 21",12/9/10,"Table IX, PDF p. 30",AGREE,
+FLEX-166,D0_mm,2.19,"Table VIII, PDF p. 21",1.96,"Table IX, PDF p. 30",DIFFERS,difference -0.23; rounding tolerance 0.01
+FLEX-166,P,1.01,"Table VIII, PDF p. 21",765.4 mmHg,"Table IX, PDF p. 30",AGREE,difference -0.002895; rounding tolerance 0.005066
+FLEX-166,X_O2,.180,"Table VIII, PDF p. 21",.18,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-166,X_N2,.670,"Table VIII, PDF p. 21",.67,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055
+FLEX-166,X_CO2,.150,"Table VIII, PDF p. 21",.15,"Table IX, PDF p. 30",AGREE,difference +0; rounding tolerance 0.0055

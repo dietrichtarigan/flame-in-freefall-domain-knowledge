@@ -1,0 +1,95 @@
+{
+ "figure": 14,
+ "test_id": "FLEX-010",
+ "pdf_page": 44,
+ "printed_page": 38,
+ "image_index_on_page": 0,
+ "frame_px": {
+  "top": 7,
+  "bottom": 746,
+  "left": 98,
+  "right": 1198
+ },
+ "axes": {
+  "x": {
+   "edge": "bottom",
+   "quantity": "time",
+   "unit": "s",
+   "tick_labels_as_read": [
+    -2,
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+   ]
+  },
+  "y_left": {
+   "edge": "left",
+   "quantity": "droplet diameter squared",
+   "unit": "mm^2",
+   "tick_labels_as_read": [
+    16,
+    14,
+    12,
+    10,
+    8,
+    6,
+    4,
+    2,
+    0
+   ]
+  },
+  "y_right": {
+   "edge": "right",
+   "quantity": "flame diameter",
+   "unit": "mm",
+   "tick_labels_as_read": [
+    20,
+    15,
+    10,
+    5,
+    0
+   ]
+  }
+ },
+ "label_reading_note": "Tick label values typed by the reader (Claude, AI assistant) from the image; listed in pixel order (left-to-right for x, top-to-bottom for y).",
+ "series": [
+  {
+   "name": "droplet_d2",
+   "legend_text": "Droplet history",
+   "color": "red",
+   "axis": "y_left",
+   "quantity": "D^2",
+   "unit": "mm^2"
+  },
+  {
+   "name": "lluv_flame_diameter",
+   "legend_text": "LLUV flame size",
+   "color": "blue",
+   "axis": "y_right",
+   "quantity": "LLUV flame diameter",
+   "unit": "mm"
+  },
+  {
+   "name": "color_camera_flame_diameter",
+   "legend_text": "Color camera flame size",
+   "color": "green",
+   "axis": "y_right",
+   "quantity": "colour-camera flame diameter",
+   "unit": "mm"
+  }
+ ],
+ "exclude_px": [
+  {
+   "what": "legend",
+   "x0": 345,
+   "x1": 700,
+   "y0": 610,
+   "y1": 710
+  }
+ ]
+}

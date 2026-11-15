@@ -1,0 +1,85 @@
+{
+ "what": "Visual inspection of every digitization overlay (detected centres drawn on the source plot).",
+ "reviewer": "Claude (AI assistant), Phase B M5; not an independent human reviewer.",
+ "method_version": "1.1.0",
+ "items": [
+  {
+   "test_id": "FLEX-010",
+   "overlay_image": "docs/digitization/FIG014_FLEX-010_overlay.png",
+   "result": "PASS (visual)",
+   "note": "Droplet series ends near 6 s although the printed burn time is 13.6 s; the plot itself has no droplet markers after that."
+  },
+  {
+   "test_id": "FLEX-023",
+   "overlay_image": "docs/digitization/FIG027_FLEX-023_overlay.png",
+   "result": "PASS (visual)",
+   "note": "Markers clipped at the top axis are mostly missed (DSC-023)."
+  },
+  {
+   "test_id": "FLEX-033",
+   "overlay_image": "docs/digitization/FIG037_FLEX-033_overlay.png",
+   "result": "PASS (visual)",
+   "note": "Detections lie on markers; legend markers excluded; no detections off the plotted series seen."
+  },
+  {
+   "test_id": "FLEX-035",
+   "overlay_image": "docs/digitization/FIG039_FLEX-035_overlay.png",
+   "result": "PASS (visual)",
+   "note": "Detections lie on markers; legend markers excluded; no detections off the plotted series seen."
+  },
+  {
+   "test_id": "FLEX-049",
+   "overlay_image": "docs/digitization/FIG053_FLEX-049_overlay.png",
+   "result": "PASS (visual)",
+   "note": "Detections lie on markers; legend markers excluded; no detections off the plotted series seen."
+  },
+  {
+   "test_id": "FLEX-051",
+   "overlay_image": "docs/digitization/FIG055_FLEX-051_overlay.png",
+   "result": "PASS (visual)",
+   "note": "Droplet history has a flat start, a steep drop and steps (fiber oscillation per caption); digitized points follow the plotted markers (see DSC-025)."
+  },
+  {
+   "test_id": "FLEX-062",
+   "overlay_image": "docs/digitization/FIG066_FLEX-062_overlay.png",
+   "result": "PASS (visual)",
+   "note": "Detections lie on markers; legend markers excluded; no detections off the plotted series seen."
+  },
+  {
+   "test_id": "FLEX-082",
+   "overlay_image": "docs/digitization/FIG086_FLEX-082_overlay.png",
+   "result": "PASS (visual)",
+   "note": "Detections lie on markers; legend markers excluded; no detections off the plotted series seen."
+  },
+  {
+   "test_id": "FLEX-110",
+   "overlay_image": "docs/digitization/FIG114_FLEX-110_overlay.png",
+   "result": "PASS (visual)",
+   "note": "Before method 1.1.0 many isolated LLUV markers were missed (score just under 40% of the legend reference); all visible isolated markers detected at 1.1.0."
+  },
+  {
+   "test_id": "FLEX-198",
+   "overlay_image": "docs/digitization/FIG201_FLEX-198_overlay.png",
+   "result": "PASS (visual)",
+   "note": "Detections lie on markers; legend markers excluded; no detections off the plotted series seen."
+  },
+  {
+   "test_id": "FLEX-204",
+   "overlay_image": "docs/digitization/FIG207_FLEX-204_overlay.png",
+   "result": "PASS (visual)",
+   "note": "Detections lie on markers; legend markers excluded; no detections off the plotted series seen."
+  },
+  {
+   "test_id": "FLEX-263",
+   "overlay_image": "docs/digitization/FIG263_FLEX-263_overlay.png",
+   "result": "PASS (visual)",
+   "note": "LLUV markers largely hidden under colour-camera markers; some LLUV centres offset by about half a marker radius (flagged LOW_PRECISION)."
+  },
+  {
+   "test_id": "FLEX-264",
+   "overlay_image": "docs/digitization/FIG264_FLEX-264_overlay.png",
+   "result": "PASS (visual)",
+   "note": "Detections lie on markers; legend markers excluded; no detections off the plotted series seen."
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openflex"
+version = "0.6.1"
+description = "Open FLEX virtual lab: hash-checked access to the FLEX (NASA/TP-2015-216046) data package and a code-verified D²-law educational baseline. Independent; not a NASA product."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+# regenerating the property table needs CoolProp 8.0.0 exactly (tools/build_model_properties.py checks it)
+properties = ["CoolProp==8.0.0"]
+dev = ["pytest==9.1.1", "jsonschema==4.26.0", "playwright==1.63.0", "roc-validator==0.13.1"]
+
+[tool.setuptools]
+packages = ["openflex"]
+
+[project.scripts]
+openflex = "openflex.__main__:main"

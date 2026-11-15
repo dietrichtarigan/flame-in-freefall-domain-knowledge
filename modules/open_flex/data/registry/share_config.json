@@ -1,0 +1,6 @@
+{
+ "record_type": "ShareConfig",
+ "github_repo": null,
+ "discussion_category": "Shared runs",
+ "note": "Where the app's 'Open GitHub Discussions' button points. Set github_repo to \"owner/repo\" (public repository with Discussions enabled) and rebuild with tools/build_app.py. While it is null the app only offers 'Copy post text'. GitHub Discussions cannot be pre-filled from a link (to our knowledge), so the post text is copied and pasted. The app itself never makes a network request; opening the link is a navigation you start."
+}

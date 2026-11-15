@@ -58,6 +58,7 @@ FROM paper_search WHERE paper_search MATCH 'PMMA AND spread' LIMIT 10;
 | `analysis/saffire/`, `analysis/ml/` | Analisis Saffire dan model |
 | `scripts/` | Seluruh pipeline, dari pengambilan sampai pembangunan basis data |
 | `app/` | Dashboard (buka lewat server lokal, lihat di bawah) |
+| `modules/open_flex/` | **Open FLEX**: lab virtual FLEX asli (3D, bukti per angka, baseline hukum D²), proyek mandiri dengan build & ujinya sendiri |
 | `docs/` | Spesifikasi, termasuk pipeline model 3D |
 
 ## Mengambil ulang data mentah (opsional, ~15,6 GB)
@@ -83,6 +84,31 @@ cd app && python -m http.server 8000
 ```
 
 Lalu buka `http://localhost:8000/insight/index.html`.
+
+Lewat server otak (`python scripts/brain.py serve --port 8765`) tersedia juga:
+
+- `http://127.0.0.1:8765/openflex/` — lab Open FLEX. Bisa langsung ke satu uji:
+  `/openflex/#test=FLEX-035&tab=lab` (tab: `overview`, `lab`, `physics`, `uq`, `evidence`).
+- Dosir uji PSI-69 di mode peneliti (`/app/`) dan kartu FLEX di `/insight/` menautkan ke uji yang sama di lab.
+- `GET /openflex_links/test:PSI-69:20CAL08` → uji Open FLEX padanannya.
+
+## Modul Open FLEX (`modules/open_flex/`)
+
+Dibuat terpisah (Phase B, sampai M6.1); detail lengkap di `modules/open_flex/README.md`.
+Sumber datanya Tabel IX laporan NASA/TP-2015-216046 (276 uji), bukan tabel PSI-69.
+
+```bash
+python3 -I modules/open_flex/tools/build_app.py        # bangun ulang dist/open_flex_lab.html (deterministik)
+python3 -m openflex info                               # dijalankan dari dalam modules/open_flex/
+```
+
+- **Pencocokan uji memakai CIR identifier, bukan nomor uji.** Nomor uji di tabel PSI-69 bergeser
+  dari nomor Tabel IX mulai FLEX-156 (119 dari 274 baris), mis. `C05M101` = FLEX-158 di laporan
+  tetapi 157 di PSI-69. CIR `193F001` tercetak untuk dua uji (FLEX-070 dan FLEX-073); keduanya
+  ditampilkan. Dua uji Tabel IX tidak ada di PSI-69: FLEX-216 (`N03H201`) dan FLEX-230 (`H01H103`).
+- PDF laporan NASA tidak ikut di repo. Tanpa PDF, build memakai checksum terdaftar di
+  `SOURCE_CHECKSUMS.sha256`; uji yang membaca PDF (ekstraktor, kutipan halaman) butuh PDF-nya di
+  `modules/open_flex/sources/original/NASA-TP-2015-216046.pdf` (NTRS 20150023456).
 
 ## Yang perlu diketahui sebelum memakai angkanya
 
