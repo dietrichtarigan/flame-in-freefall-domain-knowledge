@@ -10,6 +10,7 @@
 import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { figureUrl, type AskReply } from "./api";
+import { texToHtml } from "./math";
 
 type Citation = {
   ref: string;
@@ -34,13 +35,21 @@ const CITE = /\[\[(m:[^\]]+|test:[^\]]+|paper:[^\]]+|model:[^\]]+|inv:[^\]]+)\]\
 /** **tebal** dan `kode` di dalam satu potong teks biasa. */
 function inline(text: string, key: string): React.ReactNode[] {
   const out: React.ReactNode[] = [];
-  const re = /\*\*([^*\n]+)\*\*|`([^`\n]+)`/g;
+  // **tebal**, `kode`, dan rumus LaTeX: $$...$$ atau \[...\] (blok), $...$ atau \(...\) (sebaris)
+  const re = /\$\$([^$]+)\$\$|\\\[([\s\S]+?)\\\]|\$([^$\n]+?)\$|\\\(([\s\S]+?)\\\)|\*\*([^*\n]+)\*\*|`([^`\n]+)`/g;
   let last = 0;
   let m: RegExpExecArray | null;
   let i = 0;
   while ((m = re.exec(text))) {
     if (m.index > last) out.push(text.slice(last, m.index));
-    out.push(m[1] ? <b key={`${key}b${i++}`}>{m[1]}</b> : <code key={`${key}c${i++}`}>{m[2]}</code>);
+    const block = m[1] ?? m[2];
+    const inl = m[3] ?? m[4];
+    if (block !== undefined)
+      out.push(<span key={`${key}m${i++}`} className="katex-block" dangerouslySetInnerHTML={{ __html: texToHtml(block.trim(), true) }} />);
+    else if (inl !== undefined && /[\\^_{}=]/.test(inl))
+      out.push(<span key={`${key}m${i++}`} dangerouslySetInnerHTML={{ __html: texToHtml(inl.trim(), false) }} />);
+    else if (inl !== undefined) out.push(m[0]); // "$5 and $6": bukan rumus
+    else out.push(m[5] ? <b key={`${key}b${i++}`}>{m[5]}</b> : <code key={`${key}c${i++}`}>{m[6]}</code>);
     last = re.lastIndex;
   }
   if (last < text.length) out.push(text.slice(last));

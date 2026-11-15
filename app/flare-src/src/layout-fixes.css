@@ -1,0 +1,355 @@
+/* ===========================================================================
+   Perbaikan wadah (dimuat paling akhir)
+   - Panel Overview diberi tinggi tetap 280/304 px oleh desain lama -> isi meluber.
+   - .panel-body tidak berpadding -> isi view baru menempel ke garis kotak.
+   ========================================================================= */
+.distribution-panel,
+.timeline-panel,
+.network-panel,
+.watch-panel {
+  height: auto !important;
+  min-height: 0 !important;
+  align-self: start;
+}
+.panel-body {
+  min-height: 0;
+  overflow-wrap: anywhere;
+}
+.panel > .panel-body {
+  padding: 16px 18px 18px;
+}
+/* panel yang isinya sudah mengatur padding sendiri */
+.chat-panel > .panel-body,
+.distribution-panel > .panel-body,
+.timeline-panel > .panel-body,
+.network-panel > .panel-body {
+  padding: 0;
+}
+.network-panel .chart-note,
+.timeline-panel .chart-note {
+  padding: 0 18px 14px;
+}
+.panel-footnote {
+  padding: 0;
+  margin: 10px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.panel > header {
+  gap: 12px;
+}
+.panel > header > span {
+  min-width: 0;
+}
+
+/* label tingkat peringatan tidak lagi menempel ke tepi */
+.alert-list li {
+  grid-template-columns: 76px minmax(0, 1fr) auto;
+  padding: 10px 4px;
+}
+.alert-list .link-button {
+  white-space: nowrap;
+  padding-right: 4px;
+}
+
+/* ---------------------------------------------------------------- graf sitasi */
+.cite-toolbar {
+  gap: 12px 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 14px;
+  font-size: 12px;
+}
+.cite-toolbar .segmented {
+  flex: 0 0 auto;
+  min-height: 0;
+  height: auto;
+}
+.cite-toolbar .segmented button {
+  min-height: 32px;
+  padding: 0 14px;
+  white-space: nowrap;
+  font: 500 11px "Poppins", sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.cite-toolbar input[type="range"] {
+  accent-color: var(--amber);
+}
+.cite-search input {
+  min-height: 32px;
+  font-size: 12px;
+}
+.cite-canvas {
+  border-radius: 2px;
+}
+.cite-stats strong {
+  font-size: 22px;
+}
+.cite-stats span {
+  font-size: 11px;
+}
+.cite-clusters button {
+  font-size: 12px;
+}
+.cite-clusters small {
+  font-size: 11px;
+}
+.cite-legend-layers {
+  font-size: 11px;
+}
+.cite-graph .panel-footnote {
+  max-width: 100%;
+}
+
+/* ---------------------------------------------------------------- investigations */
+.view-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--line-strong);
+  margin: 0 0 18px;
+}
+.view-tabs button {
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  padding: 10px 18px;
+  font: 500 13px "Poppins", sans-serif;
+  cursor: pointer;
+}
+.view-tabs button.active {
+  color: var(--ink);
+  border-bottom-color: var(--amber);
+}
+.view-tabs button b {
+  display: inline-block;
+  min-width: 18px;
+  margin-left: 6px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: var(--amber);
+  color: #171713;
+  font-size: 11px;
+}
+.compare-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.compare-chips .chip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  border: 1px solid var(--line-strong);
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--ink);
+  font: 12px "Poppins", sans-serif;
+  cursor: pointer;
+}
+.compare-chips .chip-btn span {
+  color: var(--faint);
+}
+.compare-chips select {
+  min-height: 32px;
+  padding: 4px 8px;
+  border: 1px dashed var(--line-strong);
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--ink);
+  font: 12px "Poppins", sans-serif;
+}
+.cmp2 {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13px;
+  table-layout: fixed;
+}
+.cmp2 th,
+.cmp2 td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.cmp2 thead th {
+  position: sticky;
+  top: 0;
+  background: #1f1e1a;
+  z-index: 1;
+  border-bottom: 1px solid var(--line-strong);
+}
+.cmp2 thead th strong {
+  display: block;
+  color: var(--ink);
+  font: 500 15px "Poppins", sans-serif;
+}
+.cmp2 thead th small {
+  color: var(--faint);
+  font-size: 11px;
+}
+.cmp2 tbody th {
+  width: 170px;
+  color: var(--faint);
+  font: 500 10px "IBM Plex Mono", monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.cmp2 tbody td {
+  color: var(--muted);
+}
+.cmp2 tr.differs td {
+  color: var(--ink);
+}
+.cmp2 tr.differs th::after {
+  content: " ≠";
+  color: var(--amber);
+}
+.cmp2 td.na {
+  color: var(--faint);
+  font-style: italic;
+}
+.cmp2 .mini-bar {
+  display: block;
+  height: 4px;
+  margin-top: 6px;
+  background: rgba(232, 227, 216, 0.1);
+}
+.cmp2 .mini-bar i {
+  display: block;
+  height: 100%;
+  background: var(--amber);
+}
+.cmp-legend {
+  font-size: 11px;
+  color: var(--faint);
+  margin: 0 0 10px;
+}
+.cmp-legend b {
+  color: var(--amber);
+}
+
+/* ---------------------------------------------------------------- KaTeX */
+.formula {
+  margin: 10px 0;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.2);
+  overflow-x: auto;
+  color: var(--ink);
+}
+.formula .katex {
+  font-size: 1.08em;
+}
+.formula-caption {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--faint);
+}
+.answer-text .katex-display {
+  margin: 8px 0;
+  overflow-x: auto;
+}
+
+/* ---------------------------------------------------------------- dokumentasi */
+.doc-video {
+  width: 100%;
+  max-height: 70vh;
+  background: #000;
+  border: 1px solid var(--line);
+}
+.doc-chapters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.doc-chapters button {
+  border: 1px solid var(--line-strong);
+  background: none;
+  color: var(--ink);
+  padding: 6px 10px;
+  font: 12px "Poppins", sans-serif;
+  cursor: pointer;
+}
+.doc-chapters button:hover,
+.doc-chapters button.active {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+}
+.doc-card h3 {
+  margin: 0 0 6px;
+  font: 500 15px "Poppins", sans-serif;
+  color: var(--ink);
+}
+.doc-card ol,
+.doc-card ul {
+  margin: 6px 0 10px;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.doc-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+/* ---------------------------------------------------------------- contoh asisten */
+.demo-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.demo-tabs button {
+  border: 1px solid var(--line-strong);
+  background: none;
+  color: var(--muted);
+  padding: 6px 10px;
+  font: 12px "Poppins", sans-serif;
+  cursor: pointer;
+  text-align: left;
+}
+.demo-tabs button.active {
+  border-color: var(--amber);
+  color: var(--ink);
+}
+.demo-q {
+  margin: 0 0 10px;
+  font: 500 15px "Poppins", sans-serif;
+  color: var(--ink);
+}
+.demo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  font-size: 11px;
+  color: var(--faint);
+  margin: 10px 0 0;
+}
+.demo-meta code {
+  color: var(--cyan, #65c6d1);
+}
+.cmp2 tr.group-row th {
+  padding: 14px 12px 6px;
+  color: var(--amber);
+  font: 500 10px "IBM Plex Mono", monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--line-strong);
+}
+.cmp2 tr.group-row th::after { content: none; }

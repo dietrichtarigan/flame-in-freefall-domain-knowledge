@@ -11,9 +11,10 @@ import { API, post } from "./api";
 import { EvidenceBadge, PageTitle, Panel, go, useJSON } from "./ui";
 import { LEVEL_EN, en } from "./i18n";
 import { useStatus } from "./useData";
+import { TEX, Tex, plainFormulaToTex } from "./math";
 
 /** Ringkasan kartu model dalam bahasa Inggris, setia pada catatan asli di model_card (brain.sqlite). */
-const MODEL_EN: Record<string, { target: string; method: string; validity: string; caveats: string[] }> = {
+const MODEL_EN: Record<string, { target: string; method: string; validity: string; caveats: string[]; tex?: string }> = {
   gb_telemetry_labels: {
     target: "Ignition from telemetry (retrained automatically)",
     method: "Histogram gradient boosting on summary features of 18 sensor channels; NASA labels plus human labels",
@@ -27,30 +28,35 @@ const MODEL_EN: Record<string, { target: string; method: string; validity: strin
     caveats: ["Self-supervised pre-training did not help (tested 3 times)", "Use on PSI-10 / PSI-23 is extrapolation to another investigation"],
   },
   gp_boundary_cfig_ign: {
+    tex: TEX.gpBoundary,
     target: "P(ignites), ACME CFI-G gas flames",
     method: "Gaussian-process classifier with U-function active learning",
     validity: "Features: burner configuration, fuel, O₂, fuel fraction, ln pressure, fuel flow",
     caveats: ["Next-test candidates only near conditions already tested"],
   },
   gp_boundary_flex_ext: {
+    tex: TEX.gpBoundary,
     target: "P(flame goes out before the droplet burns up), FLEX",
     method: "Gaussian-process classifier with U-function active learning",
     validity: "Features: fuel, O₂, CO₂, helium, ln pressure, initial droplet diameter",
     caveats: ["Next-test candidates only near conditions already tested"],
   },
   symreg_flex_K: {
+    tex: plainFormulaToTex("K ≈ 0.111 + 1.8·O2 + 0.611·He"),
     target: "Droplet burning-rate constant K (mm²/s)",
     method: "Symbolic regression, exhaustive search with the 1-SE rule",
     validity: "FLEX conditions that were tested",
     caveats: ["Empirical, not a universal law"],
   },
   quantile_burn_cfig: {
+    tex: TEX.quantile,
     target: "CFI-G burn time as a P10–P90 range",
     method: "Quantile gradient boosting with per-day conformal calibration",
     validity: "263 tests over 23 test days",
     caveats: ["Bimodal: self-extinction vs. flow shut-off"],
   },
   spice_smoke_point_hybrid: {
+    tex: TEX.smoke,
     target: "Smoke-point flame length L_SP (mm), SPICE jet flames",
     method: "Power law ln L = a + b ln u + c ln d, plus a Gaussian process on the residual (physics + data hybrid)",
     validity: "55 points over 11 days; validated leave-one-day-out",
@@ -62,6 +68,7 @@ const MODEL_EN: Record<string, { target: string; method: string; validity: strin
     ],
   },
   gbridge_pmma: {
+    tex: TEX.gravity,
     target: "Limiting O₂ of a PMMA rod versus gravity (Moon, Mars, ISS, Earth)",
     method: "X_lim(a) = X0 + A exp(−a/a_q) + B a; buoyant flow U_b1 (g/gE)^n (p0/p)^n plus forced flow",
     validity: "Fitted for 13.5–22.2% O₂, 0–55 cm/s flow, 99–103 kPa",
@@ -183,6 +190,7 @@ export function Quality() {
                     <EvidenceBadge tier="model_prediction" />
                   </summary>
                   <p>{e?.method ?? en(m.method)}</p>
+                  {e?.tex && <Tex src={e.tex} />}
                   <dl>
                     {flatMetrics(m.metrics).map(([k, v]) => (
                       <div key={k}>

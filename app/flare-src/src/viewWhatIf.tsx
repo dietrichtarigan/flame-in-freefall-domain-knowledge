@@ -12,6 +12,7 @@ import { API } from "./api";
 import { EvidenceBadge, PageTitle, Panel, pct, useJSON } from "./ui";
 import { en } from "./i18n";
 import { PlotView } from "./chatRender";
+import { TEX, Tex, plainFormulaToTex } from "./math";
 
 function useDebounced<T>(value: T, ms = 250) {
   const [v, setV] = useState(value);
@@ -136,9 +137,7 @@ function GravitySim() {
               {(d.flags ?? []).map((f: string, i: number) => (
                 <p key={i} className="sim-flag">⚠ {en(f)}</p>
               ))}
-              <p className="panel-footnote">
-                {d.formula} · band from {d.band_from} · {d.parameters_source}
-              </p>
+              <Tex src={TEX.gravity} caption="Limiting O₂ X_lim at effective flow a; buoyant flow scales with gravity and pressure. Parameters: Olson & Ferkul (2017) fit to BASS-II. Uncertainty band: U_b1 = 10–30 cm/s, n = 1/3 or 1/2." />
             </>
           ) : (
             <p className="chart-note">{r.loading ? "Computing…" : r.error || d?.error}</p>
@@ -188,7 +187,7 @@ function SmokeSim() {
               {(d.flags ?? []).map((f: string, i: number) => (
                 <p key={i} className="sim-flag">⚠ {en(f)}</p>
               ))}
-              <p className="panel-footnote">{d.source}</p>
+              <Tex src={TEX.smoke} caption="Power law fitted to 55 SPICE smoke points (ISS), with a Gaussian-process correction on the residual; validated leaving one test day out." />
             </>
           ) : (
             <p className="chart-note">{r.loading ? "Computing…" : r.error || d?.error}</p>
@@ -281,10 +280,12 @@ function FlexSim() {
         <>
           <Prob label="Probability the flame goes out before the droplet burns up" p={d.p_extinction} valid={d.valid} sigma={d.sigma_latent} />
           {d.K_mm2_s?.value != null && (
-            <p className="chart-note">
-              Burning-rate constant K ≈ <b>{d.K_mm2_s.value} mm²/s</b> from the sparse fit {d.K_mm2_s.formula} (RMSE per day{" "}
-              {d.K_mm2_s.rmse_per_hari})
-            </p>
+            <>
+              <p className="chart-note">
+                Burning-rate constant K ≈ <b>{d.K_mm2_s.value} mm²/s</b> from a sparse symbolic fit (RMSE per test day {d.K_mm2_s.rmse_per_hari}):
+              </p>
+              <Tex src={plainFormulaToTex(d.K_mm2_s.formula)} />
+            </>
           )}
           {d.range && (
             <p className="chart-note">

@@ -6,7 +6,7 @@
  */
 import React, { useEffect, useMemo, useState } from "react";
 import { API } from "./api";
-import { EvidenceBadge, PageTitle, Panel, go, pct, useFocus, useJSON } from "./ui";
+import { EvidenceBadge, PageTitle, Panel, displayValue, go, pct, useFocus, useJSON } from "./ui";
 import { FLAG_EN, GRANULARITY_EN, LEVEL_EN, RULE_EN, en } from "./i18n";
 import { useInsight } from "./useData";
 
@@ -228,7 +228,7 @@ function Dossier({ id, names, onOpen }: { id: string; names: Record<string, stri
                 .map(([k, v]) => (
                   <div key={k}>
                     <span>{k.replaceAll("_", " ")}</span>
-                    <b>{k === "granularity" ? GRANULARITY_EN[String(v)] ?? String(v) : en(v)}</b>
+                    <b>{k === "granularity" ? GRANULARITY_EN[String(v)] ?? displayValue(v) : en(displayValue(v))}</b>
                   </div>
                 ))}
             </div>
@@ -239,7 +239,7 @@ function Dossier({ id, names, onOpen }: { id: string; names: Record<string, stri
                   <button key={m.id} className={`measure ${prov === m.id ? "active" : ""}`} onClick={() => setProv(prov === m.id ? null : m.id)}>
                     <span>{q.replaceAll("_", " ")}</span>
                     <b>
-                      {m.value ?? m.value_text ?? "—"} {m.unit ?? ""}
+                      {displayValue(m.value ?? m.value_text)} {m.unit ?? ""}
                     </b>
                     <EvidenceBadge tier={m.tier} />
                   </button>
@@ -249,7 +249,19 @@ function Dossier({ id, names, onOpen }: { id: string; names: Record<string, stri
             </div>
             {prov && <Provenance mid={prov} />}
             {(e.rule_hits ?? []).length > 0 && (
-              <p className="chart-note">Rules fired: {(e.rule_hits as any[]).map((r) => RULE_EN[r.rule ?? r] ?? r.rule ?? r).join(", ")}</p>
+              <>
+                <h4 className="sub">Rules that fired</h4>
+                <ul className="hypotheses">
+                  {(e.rule_hits as any[]).map((r, i) => (
+                    <li key={i}>
+                      <b>{RULE_EN[r.rule_id] ?? en(r.rule_id)}</b>
+                      {r.detail && <small>{en(r.detail)}</small>}
+                      {r.effect && <small>effect: {en(r.effect)}</small>}
+                      {r.reason && <small className="muted">why the rule exists: {en(r.reason)}</small>}
+                    </li>
+                  ))}
+                </ul>
+              </>
             )}
           </>
         )}

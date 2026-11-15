@@ -1,0 +1,38 @@
+[
+ {
+  "t": 0,
+  "title": "Overview"
+ },
+ {
+  "t": 9.6,
+  "title": "Scenario Explorer"
+ },
+ {
+  "t": 23.5,
+  "title": "Gaps"
+ },
+ {
+  "t": 32.2,
+  "title": "Investigations"
+ },
+ {
+  "t": 42.3,
+  "title": "Test Explorer"
+ },
+ {
+  "t": 50.5,
+  "title": "What-if"
+ },
+ {
+  "t": 57.7,
+  "title": "Research Map"
+ },
+ {
+  "t": 67.5,
+  "title": "Quality"
+ },
+ {
+  "t": 75.7,
+  "title": "AI Assistant"
+ }
+]

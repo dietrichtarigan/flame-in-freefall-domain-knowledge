@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./styles.css";
 import "./motion.css";
 import "./features.css";
+import "./layout-fixes.css";
 
 type IconName = "orbit" | "target" | "grid" | "compare" | "spark" | "arrow" | "check" | "list" | "flask" | "shield";
 const iconPaths: Record<IconName, React.ReactNode> = {
@@ -71,6 +72,7 @@ const navigation: { id: View; label: string; sub: string; icon: IconName }[] = [
   { id: "Map", label: "Research Map", sub: "Citation network", icon: "orbit" },
   { id: "Quality", label: "Quality", sub: "Alerts & verification", icon: "shield" },
   { id: "Assistant", label: "AI Assistant", sub: "Knowledge query", icon: "spark" },
+  { id: "Docs", label: "Documentation", sub: "Video & guide", icon: "list" },
 ];
 
 const heatmap = [
@@ -92,13 +94,19 @@ import { EvidenceScatter, FuelCoverage, InBandTests, rerank, stability, type Wei
 import { Investigations } from "./viewInvestigations";
 import { WhatIf } from "./viewWhatIf";
 import { Quality } from "./viewQuality";
+import { Docs } from "./viewDocs";
 import { STUDY_BY_ACCESSION, STUDY_HTML } from "./motion";
 
 /** Rute hash sederhana: #Scenario, #Assistant, ... supaya setiap tampilan bisa
  *  ditautkan langsung (berguna saat demo dan saat juri membuka ulang halaman). */
-const VIEWS: View[] = ["Overview", "Scenario", "Gaps", "Investigations", "Tests", "WhatIf", "Map", "Quality", "Assistant"];
+const VIEWS: View[] = ["Overview", "Scenario", "Gaps", "Investigations", "Tests", "WhatIf", "Map", "Quality", "Assistant", "Docs"];
 const viewFromHash = (): View => {
-  const raw = decodeURIComponent(location.hash.replace("#", ""));
+  let raw = "";
+  try {
+    raw = decodeURIComponent(location.hash.replace(/^#/, ""));
+  } catch {
+    return "Overview";
+  }
   const h = (raw === "Compare" ? "Investigations" : raw) as View;   // tautan lama #Compare tetap jalan
   return VIEWS.includes(h) ? h : "Overview";
 };
@@ -174,6 +182,7 @@ function App() {
         {view === "Quality" && <Quality />}
         {view === "Map" && <ResearchMap onEvidence={setEvidence} />}
         {view === "Assistant" && <Assistant />}
+        {view === "Docs" && <Docs />}
       </main>
       <Footer />
       <FloatingAssistant
@@ -327,9 +336,6 @@ function CombustionBackdrop() {
           <i key={index} />
         ))}
       </div>
-      <span className="generated-visual-label">
-        Generative microgravity flame study · decorative
-      </span>
     </div>
   );
 }
@@ -376,7 +382,6 @@ function HeaderMetrics() {
 function Sidebar({ view, setView }: { view: View; setView: (view: View) => void }) {
   return (
     <aside className="sidebar" aria-label="Research workspace">
-      <div className="side-caption">Workspace</div>
       <nav>
         {navigation.map((item, index) => (
           <button
@@ -395,16 +400,6 @@ function Sidebar({ view, setView }: { view: View; setView: (view: View) => void 
           </button>
         ))}
       </nav>
-      <div className="source-card">
-        <span>DATA CONNECTION</span>
-        <strong>
-          <i /> NASA PSI REPOSITORY
-        </strong>
-        <p>Layered research outputs with source traceability.</p>
-        <a href="https://psi.nasa.gov/physci/repo" target="_blank" rel="noreferrer">
-          OPEN SOURCE ↗
-        </a>
-      </div>
     </aside>
   );
 }
@@ -1029,6 +1024,7 @@ function Assistant() {
             : "No language-model call · read-only tools available"}
         </b>
       </div>
+      <DemoAnswers onAsk={send} />
       <div className="assistant-layout">
         <Panel
           title="Knowledge conversation"
@@ -1103,6 +1099,42 @@ function FeedbackButtons({ reply, question }: { reply: AskReply; question?: stri
       <button onClick={() => rate("up")} aria-label="Good answer">👍</button>
       <button onClick={() => rate("down")} aria-label="Bad answer">👎</button>
     </div>
+  );
+}
+
+/** Contoh jawaban NYATA (scripts/make_demo_answers.py): tampil seketika, tanpa biaya API. */
+function DemoAnswers({ onAsk }: { onAsk: (q: string) => void }) {
+  const [demos, setDemos] = useState<any[] | null>(null);
+  const [k, setK] = useState(0);
+  useEffect(() => {
+    fetch("demo_answers.json")
+      .then((r) => (r.ok ? r.json() : null))
+      .then(setDemos)
+      .catch(() => setDemos(null));
+  }, []);
+  if (!demos?.length) return null;
+  const d = demos[Math.min(k, demos.length - 1)];
+  return (
+    <Panel title="See what it can do" meta={`REAL ANSWERS · ${String(d.model).toUpperCase()} · ${d.asked}`} className="demo-panel-ans">
+      <div className="demo-tabs" role="tablist">
+        {demos.map((x, i) => (
+          <button key={x.key} role="tab" aria-selected={i === k} className={i === k ? "active" : ""} onClick={() => setK(i)}>
+            {x.label}
+          </button>
+        ))}
+      </div>
+      <p className="demo-q">“{d.question}”</p>
+      <AnswerText text={d.reply.answer} citations={d.reply.citations} />
+      <ReplyMeta reply={d.reply} />
+      <div className="inv-actions">
+        <button className="primary-button" onClick={() => onAsk(d.question)}>
+          ASK IT LIVE →
+        </button>
+        <span className="muted">
+          Recorded answer: the live assistant may phrase it differently, but uses the same tools and checks.
+        </span>
+      </div>
+    </Panel>
   );
 }
 
@@ -1580,7 +1612,6 @@ function Footer() {
       <span title={assistantTitle}>
         ASSISTANT <b>{assistant.toUpperCase()}</b>
       </span>
-      <em className="visual-credit">DESERT ANALOG · RYAN GREWELL / UNSPLASH</em>
       <em>FLARE+ · UI 1.0</em>
     </footer>
   );

@@ -27,7 +27,8 @@ export type View =
   | "WhatIf"
   | "Map"
   | "Quality"
-  | "Assistant";
+  | "Assistant"
+  | "Docs";
 
 export function PageTitle({ index, overline, title, description }: {
   index: string;
@@ -65,8 +66,26 @@ export function Panel({ title, meta, className = "", children, actions }: {
   );
 }
 
-export function EvidenceBadge({ tier }: { tier: EvidenceTier | string }) {
-  return <span className={`evidence-badge tier-${tier}`}>{String(tier).replaceAll("_", " ")}</span>;
+/** Label tier (nasa table, derived auto, ...) sengaja tidak lagi ditampilkan sebagai
+ *  lencana di setiap angka: terlalu ramai. Tier tetap ada di data dan di laci provenance. */
+export function EvidenceBadge(_props: { tier: EvidenceTier | string }) {
+  return null;
+}
+
+export function displayValue(value: unknown): string {
+  if (value === null || value === undefined || value === "") return "—";
+  if (Array.isArray(value)) return value.map((item) => displayValue(item)).join(", ");
+  if (typeof value === "object") {
+    const record = value as Record<string, unknown>;
+    if (typeof record.name === "string") {
+      const count = record.n ?? record.count;
+      return count === undefined ? record.name : `${record.name} (${displayValue(count)})`;
+    }
+    return Object.entries(record)
+      .map(([key, item]) => `${key}: ${displayValue(item)}`)
+      .join(", ");
+  }
+  return String(value);
 }
 
 export const pct = (v: number | null | undefined, d = 0) =>

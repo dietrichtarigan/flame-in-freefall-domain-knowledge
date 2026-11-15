@@ -615,7 +615,8 @@ MIME = {".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=ut
         ".png": "image/png", ".svg": "image/svg+xml",
         # Tanpa baris ini WebP dan JPEG dikirim berlabel image/png (bawaan _send
         # untuk /figures/). Terdeteksi saat menguji gambar hasil figures_optimize.py.
-        ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp"}
+        ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp",
+        ".mp4": "video/mp4", ".woff2": "font/woff2", ".woff": "font/woff", ".ttf": "font/ttf"}
 IMG_EXT = {".png", ".jpg", ".jpeg", ".webp", ".svg"}   # yang boleh disajikan lewat /figures/
 
 
@@ -707,7 +708,26 @@ class H(BaseHTTPRequestHandler):
             rel = u.path[len(pfx):]
             f = (base / (rel or "index.html")).resolve()
             if base.resolve() in f.parents and f.is_file():
-                return self._send(200, f.read_bytes(), MIME.get(f.suffix, "application/octet-stream"))
+                ctype = MIME.get(f.suffix, "application/octet-stream")
+                rng = self.headers.get("Range", "")
+                if f.suffix == ".mp4" and rng.startswith("bytes="):
+                    # video tur Documentation: tanpa Range, tombol bab tidak bisa melompat
+                    size = f.stat().st_size
+                    a, _, b = rng[6:].partition("-")
+                    start = int(a) if a else max(0, size - int(b or 0))
+                    end = min(int(b), size - 1) if (a and b) else size - 1
+                    with open(f, "rb") as fh:
+                        fh.seek(start)
+                        chunk = fh.read(end - start + 1)
+                    self.send_response(206)
+                    self.send_header("Content-Type", ctype)
+                    self.send_header("Accept-Ranges", "bytes")
+                    self.send_header("Content-Range", f"bytes {start}-{end}/{size}")
+                    self.send_header("Content-Length", str(len(chunk)))
+                    self.end_headers()
+                    self.wfile.write(chunk)
+                    return
+                return self._send(200, f.read_bytes(), ctype)
             return self._send(404, b"tidak ada", "text/plain")
         parts = [unquote(p) for p in u.path.strip("/").split("/", 1)]
         qs = parse_qs(u.query)
