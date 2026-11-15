@@ -6250,3 +6250,26 @@ select:focus-visible {
     animation: none !important;
   }
 }
+
+/* Batang "Publications over time" (data nyata per tahun, menggantikan kurva hias) */
+.chart-bar {
+  fill: #b47755;
+  opacity: 0.78;
+}
+.chart-bar:hover {
+  opacity: 1;
+}
+.statusbar i.is-offline {
+  background: #c0392b;
+  box-shadow: 0 0 8px #c0392b;
+}
+/* label tahun diletakkan tepat di bawah batangnya, bukan disebar rata */
+.chart-years--placed {
+  position: relative;
+  display: block;
+  height: 12px;
+}
+.chart-years--placed span {
+  position: absolute;
+  transform: translateX(-50%);
+}

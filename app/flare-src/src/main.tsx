@@ -130,7 +130,7 @@ const heatmap = [
 ];
 
 import { ask as askApi, figureUrl, TIER_LABEL, type AskReply } from "./api";
-import { useInsight, useStatus, fmt } from "./useData";
+import { useInsight, useResearchMap, useStatus, fmt } from "./useData";
 import { STUDY_BY_ACCESSION, STUDY_HTML } from "./motion";
 
 /** Rute hash sederhana: #Scenario, #Assistant, ... supaya setiap tampilan bisa
@@ -364,24 +364,33 @@ function Header({ onDemo }: { onDemo: () => void }) {
       </div>
       <div className="header-center">
         <div className="source-state">
-          SI-powered evidence navigation for microgravity combustion research.
+          AI-assisted evidence navigation for microgravity combustion research.
         </div>
         <button className="demo-button" onClick={onDemo}>
           PRESENTATION MODE
         </button>
       </div>
-      <div className="header-metrics">
-        <span>
-          <b>24</b> Investigations
-        </span>
-        <span>
-          <b>1,990</b> Tests
-        </span>
-        <span>
-          <b>352</b> Publications
-        </span>
-      </div>
+      <HeaderMetrics />
     </header>
+  );
+}
+
+/** Angka kepala dari /insight_data (sebelumnya 24 / 1,990 / 352 ditulis keras). */
+function HeaderMetrics() {
+  const { data } = useInsight();
+  const total = (k: string) => (data?.totals || []).find((t: any) => t.key === k)?.value;
+  return (
+    <div className="header-metrics">
+      <span>
+        <b>{fmt(total("investigations"))}</b> Investigations
+      </span>
+      <span>
+        <b>{fmt(total("tests"))}</b> Tests
+      </span>
+      <span>
+        <b>{fmt(data?.corpus?.publications)}</b> Publications
+      </span>
+    </div>
   );
 }
 
@@ -491,7 +500,7 @@ function Overview({
 
       <StatStrip onEvidence={onEvidence} />
       <div className="trust-strip">
-        <span>SI-powered</span>
+        <span>AI-assisted</span>
         <span>Tool-grounded</span>
         <span>Source-traceable</span>
         <p>
@@ -502,80 +511,22 @@ function Overview({
       <div className="overview-grid">
         <Panel
           title="Research distribution"
-          meta="OBJECTIVE TAXONOMY"
+          meta="FIRE-SAFETY PILLAR · LIVE"
           className="distribution-panel"
         >
-          <div className="distribution-summary">
-            <div className="distribution-total">
-              <span>Indexed investigations</span>
-              <strong>24</strong>
-              <small>classified by primary fire-safety objective</small>
-            </div>
-            <div className="distribution-rows">
-              <DistributionRow label="Prevention" value={9} total={24} />
-              <DistributionRow label="Detection" value={7} total={24} />
-              <DistributionRow label="Suppression" value={8} total={24} />
-            </div>
-          </div>
+          <PillarDistribution />
         </Panel>
 
         <Panel
-          title="Research activity over time"
-          meta="PUBLICATION + EXPERIMENT YEARS"
+          title="Publications over time"
+          meta="RESEARCH MAP PAPERS · BY YEAR"
           className="timeline-panel"
         >
-          <div className="line-chart">
-            <svg
-              viewBox="0 0 600 180"
-              preserveAspectRatio="none"
-              aria-label="Research activity trend"
-            >
-              <defs>
-                <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stopColor="#d7844b" stopOpacity=".34" />
-                  <stop offset="1" stopColor="#d7844b" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-              <path className="chart-grid" d="M0 30H600M0 75H600M0 120H600M0 165H600" />
-              <path
-                className="chart-area"
-                d="M0 158 C55 153 70 132 116 136 S185 112 222 118 S278 65 321 83 S382 42 425 61 S479 29 520 43 S565 17 600 21 L600 180 L0 180Z"
-              />
-              <path
-                className="chart-line"
-                d="M0 158 C55 153 70 132 116 136 S185 112 222 118 S278 65 321 83 S382 42 425 61 S479 29 520 43 S565 17 600 21"
-              />
-            </svg>
-            <div className="chart-years">
-              <span>1990</span>
-              <span>2000</span>
-              <span>2010</span>
-              <span>2020</span>
-              <span>2025</span>
-            </div>
-          </div>
-          <p className="chart-note">
-            Indexed activity grows as test-level records and associated publications are added to
-            the corpus.
-          </p>
+          <PaperTimeline />
         </Panel>
 
-        <Panel
-          title="Indexed themes"
-          meta="TEST + PUBLICATION OCCURRENCE"
-          className="network-panel"
-        >
-          <div className="topic-ledger">
-            <div className="topic-head">
-              <span>Theme</span>
-              <span>Records</span>
-              <span>Evidence layer</span>
-            </div>
-            <TopicRow label="Flame spread / solid fuels" count="684" layer="Tests + papers" />
-            <TopicRow label="Ignition and extinction" count="427" layer="Tests" />
-            <TopicRow label="Smoke and aerosols" count="218" layer="Tests + video" />
-            <TopicRow label="Detection response" count="146" layer="Papers" />
-          </div>
+        <Panel title="Indexed themes" meta="NTRS TOPIC TAGS · LIVE" className="network-panel">
+          <TopicLedger />
         </Panel>
 
         <Panel title="Research watchlist" meta="EVIDENCE INTERPRETATION" className="watch-panel">
@@ -1489,6 +1440,139 @@ function Stat({
     </button>
   );
 }
+const PILLAR_ORDER = ["prevention", "detection", "suppression", "fundamentals"];
+
+/** Jumlah investigasi per pilar dari /insight_data (bukan angka mockup 9/7/8). */
+function PillarDistribution() {
+  const { data, error } = useInsight();
+  if (error) return <p className="chart-note">Backend unavailable — distribution not shown.</p>;
+  if (!data) return <p className="chart-note">Loading…</p>;
+  const inv = data.investigations || [];
+  const counts: Record<string, number> = {};
+  for (const i of inv) for (const p of i.pillars || []) counts[p] = (counts[p] || 0) + 1;
+  const keys = [...PILLAR_ORDER.filter((k) => k in counts), ...Object.keys(counts).filter((k) => !PILLAR_ORDER.includes(k))];
+  const tagged = Object.values(counts).reduce((a, b) => a + b, 0);
+  return (
+    <>
+      <div className="distribution-summary">
+        <div className="distribution-total">
+          <span>Indexed investigations</span>
+          <strong>{inv.length}</strong>
+          <small
+            title="Fundamentals = flame physics that fire-safety models are validated against."
+          >
+            {tagged > inv.length
+              ? `by fire-safety pillar · ${tagged} tags, some investigations have two`
+              : "by fire-safety pillar"}
+          </small>
+        </div>
+        <div className="distribution-rows">
+          {keys.map((k) => (
+            <DistributionRow
+              key={k}
+              label={k[0].toUpperCase() + k.slice(1)}
+              value={counts[k]}
+              total={inv.length}
+            />
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
+
+/** Jumlah paper per tahun terbit di peta riset (metadata paper, bukan kurva hias). */
+function PaperTimeline() {
+  const { map, error } = useResearchMap();
+  if (error) return <p className="chart-note">Research map unavailable ({error}).</p>;
+  if (!map) return <p className="chart-note">Loading…</p>;
+  const papers = (map.nodes || []).filter((n: any) => n.kind === "paper");
+  const byYear = new Map<number, number>();
+  let undated = 0;
+  for (const p of papers) {
+    const y = parseInt(p.year, 10);
+    if (Number.isFinite(y) && y > 1900) byYear.set(y, (byYear.get(y) || 0) + 1);
+    else undated++;
+  }
+  if (!byYear.size) return <p className="chart-note">No dated papers in the research map.</p>;
+  const years = [...byYear.keys()];
+  const y0 = Math.min(...years);
+  const y1 = Math.max(...years);
+  const span = y1 - y0 + 1;
+  const peak = Math.max(...byYear.values());
+  const W = 600;
+  const H = 180;
+  const bw = W / span;
+  const ticks = [y0, ...[1990, 2000, 2010, 2020].filter((t) => t > y0 + 2 && t < y1 - 2), y1];
+  return (
+    <>
+      <div className="line-chart">
+        <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" role="img"
+          aria-label={`Papers per year, ${y0} to ${y1}, peak ${peak}`}>
+          <path className="chart-grid" d={`M0 ${H * 0.25}H${W}M0 ${H * 0.5}H${W}M0 ${H * 0.75}H${W}`} />
+          {[...byYear.entries()].map(([y, n]) => {
+            const h = (n / peak) * (H - 12);
+            return (
+              <rect key={y} className="chart-bar" x={(y - y0) * bw + bw * 0.12} y={H - h}
+                width={bw * 0.76} height={h}>
+                <title>{`${y}: ${n} paper${n === 1 ? "" : "s"}`}</title>
+              </rect>
+            );
+          })}
+        </svg>
+        <div className="chart-years chart-years--placed">
+          {ticks.map((t) => (
+            <span key={t} style={{ left: `${(((t - y0) + 0.5) / span) * 100}%` }}>
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
+      <p className="chart-note">
+        {papers.length} papers linked to the 24 investigations; peak {peak} per year
+        {undated ? `; ${undated} without a year are not plotted` : ""}. The last year may be
+        incomplete.
+      </p>
+    </>
+  );
+}
+
+/** Topik NTRS dengan jumlah paper yang tertaut, dari peta riset. */
+function TopicLedger() {
+  const { map, error } = useResearchMap();
+  if (error) return <p className="chart-note">Research map unavailable ({error}).</p>;
+  if (!map) return <p className="chart-note">Loading…</p>;
+  const nodes: any[] = map.nodes || [];
+  // Topik di peta hanya tertaut ke paper (tag NTRS), bukan langsung ke investigasi.
+  const rows = nodes
+    .map((n, i) => ({ n, i }))
+    .filter(({ n }) => n.kind === "topic")
+    .map(({ n, i }) => {
+      const papers = new Set<number>();
+      for (const e of map.edges || []) {
+        const o = e.s === i ? e.t : e.t === i ? e.s : -1;
+        if (o >= 0 && nodes[o]?.kind === "paper") papers.add(o);
+      }
+      const full = [...papers].filter((o) => nodes[o].full_text).length;
+      return { label: n.label, papers: papers.size, full };
+    })
+    .sort((a, b) => b.papers - a.papers)
+    .slice(0, 5);
+  return (
+    <div className="topic-ledger">
+      <div className="topic-head">
+        <span>Theme</span>
+        <span>Papers</span>
+        <span>Full text indexed</span>
+      </div>
+      {rows.map((r) => (
+        <TopicRow key={r.label} label={r.label} count={fmt(r.papers)} layer={`${r.full} of ${r.papers} searchable`} />
+      ))}
+      <p className="chart-note">Top {rows.length} of the NTRS topic tags in the research map, by tagged papers.</p>
+    </div>
+  );
+}
+
 function DistributionRow({ label, value, total }: { label: string; value: number; total: number }) {
   return (
     <div className="distribution-row">
@@ -1928,20 +2012,27 @@ function Gauge({ value, label }: { value: number; label: string }) {
     </div>
   );
 }
+/** Bilah status dari backend sungguhan; sebelumnya "NOMINAL" dan "7,924 CHUNKS" ditulis keras. */
 function Footer() {
+  const { data, error } = useInsight();
+  const st = useStatus();
+  const backend = error ? "OFFLINE" : data ? "ONLINE" : "CHECKING…";
+  const chunks = data?.corpus?.chunks;
+  const built = data?.built ? String(data.built).slice(0, 10) : "—";
+  const assistant = !st ? "—" : st.llm ? `${st.provider}${st.model ? " · " + st.model : ""}` : "OFFLINE PLANNER";
   return (
     <footer className="statusbar">
       <span>
-        <i /> SYSTEM STATUS <b>NOMINAL</b>
+        <i className={error ? "is-offline" : undefined} /> BACKEND <b>{backend}</b>
       </span>
       <span>
-        DATA LAYERS <b>09 / 09</b>
+        KB BUILT <b>{built}</b>
       </span>
       <span>
-        SEARCH INDEX <b>7,924 CHUNKS</b>
+        SEARCH INDEX <b>{chunks != null ? `${fmt(chunks)} CHUNKS` : "—"}</b>
       </span>
       <span>
-        MODEL <b>RESEARCH PROTOTYPE</b>
+        ASSISTANT <b>{assistant.toUpperCase()}</b>
       </span>
       <em className="visual-credit">DESERT ANALOG · RYAN GREWELL / UNSPLASH</em>
       <em>FLARE+ · UI 1.0</em>

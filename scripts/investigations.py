@@ -428,6 +428,11 @@ def build():
             # menandai episode video "human_verified"; itu salah -- ketelitiannya belum
             # terkuantifikasi, hanya satu uji yang benar-benar terekam ulang).
             "totals": _totals(g),
+            # Ukuran indeks pencarian paper, untuk bilah status FLARE+ (sebelumnya
+            # ditulis keras "7,924 CHUNKS" dan usang setelah paper baru masuk).
+            "corpus": {"chunks": _count(g, "SELECT COUNT(*) FROM paper_chunks"),
+                       "papers_full_text": _count(g, "SELECT COUNT(DISTINCT paper_uid) FROM paper_chunks"),
+                       "publications": _count(g, "SELECT COUNT(*) FROM publications")},
             "tiers": {"nasa_table": "NASA table", "nasa_calibrated": "calibrated NASA signal", "derived_auto": "derived, not yet human-checked",
                       "human_verified": "human-verified", "paper_claim": "paper claim", "model_prediction": "model prediction"},
             "method": {"score": "score = 0.40 x direct fire-safety link + 0.35 x condition proximity + 0.25 x evidence depth (weights adjustable)",

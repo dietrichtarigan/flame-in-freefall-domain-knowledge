@@ -83,7 +83,10 @@ export interface InsightData {
   partial_gravity: string[];
   suggested: string[];
   canned?: { q: string; a: string; grounding: any; mode: string; tools: string[] }[];
-  tiers?: Record<string, number>;
+  tiers?: Record<string, string>;
+  pillars?: Record<string, string>;
+  totals?: any[];
+  corpus?: { chunks: number | null; papers_full_text: number | null; publications?: number | null };
   method?: Record<string, string>;
 }
 

@@ -623,6 +623,11 @@ class H(BaseHTTPRequestHandler):
     def _send(self, code, body, ctype="application/json; charset=utf-8"):
         self.send_response(code)
         self.send_header("Content-Type", ctype)
+        if ctype.startswith("text/html"):
+            # Tanpa ini peramban menyimpan index.html lama, yang menunjuk bundle
+            # FLARE+ lama; setelah build/deploy baru pengunjung tetap melihat versi lama.
+            # Aset di /assets/ bernama-hash, jadi aman di-cache.
+            self.send_header("Cache-Control", "no-cache")
         self.send_header("Access-Control-Allow-Origin", CORS_ORIGIN)
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
         self.end_headers()
