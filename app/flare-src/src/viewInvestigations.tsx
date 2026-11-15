@@ -103,7 +103,7 @@ export function Investigations() {
     [
       "Evidence",
       [
-        ["Tests in NASA table", (c) => c.n_tests || c.n_rows, (c) => c.n_tests || c.n_rows || 0],
+        ["Tests recorded", (c) => c.n_tests || c.n_rows, (c) => c.n_tests || c.n_rows || 0],
         ["Result values", (c) => c.n_results, (c) => c.n_results || 0],
         ["Publications", (c) => c.n_publications, (c) => c.n_publications || 0],
         ["Raw data we mined", (c) => (c.own_data || []).join("; ")],
@@ -234,7 +234,7 @@ export function Investigations() {
       )}
 
       {tab === "compare" && (
-        <Panel title="Side by side" meta={`${chosen.length} OF MAX 4`}>
+        <Panel title="Direct comparison" meta={`${chosen.length} SELECTED · MAX 4`}>
           <div className="compare-chips">
             {chosen.map((c: any) => (
               <button key={c.accession} className="chip-btn" onClick={() => toggle(c.accession)} aria-label={`Remove ${c.name}`}>
@@ -255,8 +255,7 @@ export function Investigations() {
           {chosen.length ? (
             <>
               <p className="cmp-legend">
-                Rows marked <b>≠</b> differ between the selected investigations. “not tabulated” means NASA did not record that field; it is
-                never a zero.
+                Compare the selected investigations directly. Rows marked <b>≠</b> are the differences; “not reported” is not a zero.
               </p>
               <div className="table-scroll">
                 <table className="cmp2">

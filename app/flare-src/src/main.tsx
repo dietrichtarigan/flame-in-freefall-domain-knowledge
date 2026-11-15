@@ -83,7 +83,7 @@ const heatmap = [
   [0, 1, 2, 3, 3, 1],
 ];
 
-import { ask as askApi, feedback as sendFeedback, TIER_LABEL, type AskReply, type RankRow } from "./api";
+import { ask as askApi, feedback as sendFeedback, type AskReply, type RankRow } from "./api";
 import { useInsight, useResearchMap, useStatus, fmt } from "./useData";
 import { AnswerText, ReplyMedia } from "./chatRender";
 import { CitationGraph } from "./citationGraph";
@@ -131,22 +131,6 @@ function App() {
     addEventListener("hashchange", onHash);
     return () => removeEventListener("hashchange", onHash);
   }, []);
-  // pemberitahuan dataset: ditutup sekali, tidak muncul lagi di setiap view
-  const [noticeOpen, setNoticeOpenRaw] = useState(() => {
-    try {
-      return localStorage.getItem("flare.notice") !== "closed";
-    } catch {
-      return true;
-    }
-  });
-  const setNoticeOpen = (v: boolean) => {
-    setNoticeOpenRaw(v);
-    try {
-      if (!v) localStorage.setItem("flare.notice", "closed");
-    } catch {
-      /* penyimpanan diblokir: cukup tutup untuk kunjungan ini */
-    }
-  };
   const [evidence, setEvidence] = useState<EvidenceRecord | null>(null);
   const [chatOpen, setChatOpen] = useState(false);
 
@@ -160,19 +144,6 @@ function App() {
       <Header />
       <Sidebar view={view} setView={setView} />
       <main className="workspace" id="main-content" tabIndex={-1}>
-        {noticeOpen && (
-          <div className="data-notice">
-            <span className="notice-mark">i</span>
-            <p>
-              <strong>Research dataset.</strong> NASA PSI and NTRS-derived records. Empty values
-              mean “not reported,” never zero. Telemetry values are raw voltages unless explicitly
-              calibrated.
-            </p>
-            <button onClick={() => setNoticeOpen(false)} aria-label="Dismiss data notice">
-              ×
-            </button>
-          </div>
-        )}
         {view === "Overview" && <Overview onNavigate={setView} onEvidence={setEvidence} />}
         {view === "Scenario" && <Scenario onEvidence={setEvidence} />}
         {view === "Gaps" && <Gaps />}
@@ -498,8 +469,6 @@ function Scenario({ onEvidence }: { onEvidence: (record: EvidenceRecord) => void
         title="Scenario Explorer"
         description="Pick where the crew will live. Every investigation is re-ranked for that atmosphere; change the weights to see how robust the order is."
       />
-      {error && <ConnectionNotice onRetry={retry} />}
-
       <div className="segmented objective-segmented">
         {data.scenarios.map((id) => (
           <button key={id} className={id === sid ? "active" : ""} onClick={() => setSid(id)} aria-pressed={id === sid}>
@@ -697,7 +666,6 @@ function Gaps() {
         title="Gaps Analysis"
         description="What the archive cannot answer for this habitat, and which experiment would teach the most."
       />
-      {error && <ConnectionNotice onRetry={retry} />}
       <div className="segmented objective-switch">
         {data.scenarios.map((id) => (
           <button key={id} className={id === sid ? "active" : ""} onClick={() => setSid(id)}>
@@ -897,17 +865,6 @@ function InlineState({ kind, title, detail, onRetry }: {
 }
 
 /** Koneksi putus SETELAH data termuat: data lama tetap tampil, dengan peringatan + coba lagi. */
-function ConnectionNotice({ onRetry }: { onRetry: () => void }) {
-  return (
-    <div className="connection-notice" role="status">
-      <span>Connection interrupted. Showing the last successfully loaded evidence.</span>
-      <button className="text-button" onClick={onRetry}>
-        RETRY
-      </button>
-    </div>
-  );
-}
-
 /** Research Map: graf sitasi (Crossref), jaringan investigasi-paper-topik, dan matriks bukti. */
 function ResearchMap({ onEvidence: _onEvidence }: { onEvidence: (record: EvidenceRecord) => void }) {
   const { map, error } = useResearchMap();

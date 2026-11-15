@@ -10,7 +10,7 @@
 import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { figureUrl, type AskReply } from "./api";
-import { texToHtml } from "./math";
+import { plainFormulaToTex, texToHtml } from "./math";
 
 type Citation = {
   ref: string;
@@ -32,9 +32,29 @@ type Citation = {
 
 const CITE = /\[\[(m:[^\]]+|test:[^\]]+|paper:[^\]]+|model:[^\]]+|inv:[^\]]+)\]\]/g;
 
+function isBareFormula(text: string) {
+  const value = text.trim();
+  return (
+    value.length <= 240 &&
+    /^[A-Za-z][A-Za-z0-9_]*(?:\([^)]*\))?\s*(?:=|≈|≤|≥)\s*.+/.test(value) &&
+    !/^(?:Note|Warning|Result|Answer|Source|Model)\s*:/i.test(value)
+  );
+}
+
 /** **tebal** dan `kode` di dalam satu potong teks biasa. */
 function inline(text: string, key: string): React.ReactNode[] {
   const out: React.ReactNode[] = [];
+  if (isBareFormula(text)) {
+    out.push(
+      <span
+        key={`${key}bare-math`}
+        className="katex-block"
+        role="math"
+        dangerouslySetInnerHTML={{ __html: texToHtml(plainFormulaToTex(text.trim()), true) }}
+      />,
+    );
+    return out;
+  }
   // **tebal**, `kode`, dan rumus LaTeX: $$...$$ atau \[...\] (blok), $...$ atau \(...\) (sebaris)
   const re = /\$\$([^$]+)\$\$|\\\[([\s\S]+?)\\\]|\$([^$\n]+?)\$|\\\(([\s\S]+?)\\\)|\*\*([^*\n]+)\*\*|`([^`\n]+)`/g;
   let last = 0;

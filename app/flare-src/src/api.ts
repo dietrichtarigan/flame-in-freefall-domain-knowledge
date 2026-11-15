@@ -31,10 +31,10 @@ export type Tier =
   | "model_prediction";
 
 export const TIER_LABEL: Record<Tier, string> = {
-  nasa_table: "nasa table",
+  nasa_table: "recorded value",
   nasa_calibrated: "nasa calibrated",
   human_verified: "human verified",
-  derived_auto: "derived auto",
+  derived_auto: "automated result",
   paper_claim: "paper claim",
   model_prediction: "model prediction",
 };

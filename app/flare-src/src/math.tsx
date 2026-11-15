@@ -25,8 +25,13 @@ export function Tex({ src, display = true, caption }: { src: string; display?: b
 /** "K ≈ 0.111 + 1.8·O2 + 0.611·He" (rumus regresi simbolik) -> LaTeX. */
 export function plainFormulaToTex(s: string) {
   return s
+    .replace(/−/g, "-")
+    .replace(/×/g, "\\times ")
+    .replace(/≤/g, "\\le ")
+    .replace(/≥/g, "\\ge ")
     .replace(/≈/g, "\\approx ")
     .replace(/·/g, "\\,")
+    .replace(/\b([A-Za-z])_([A-Za-z0-9]+)\b/g, "$1_{$2}")
     .replace(/\bO2\b/g, "X_{\\mathrm{O_2}}")
     .replace(/\bHe\b/g, "X_{\\mathrm{He}}")
     .replace(/\bCO2\b/g, "X_{\\mathrm{CO_2}}");

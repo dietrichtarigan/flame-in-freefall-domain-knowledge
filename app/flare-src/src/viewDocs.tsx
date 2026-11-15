@@ -69,15 +69,6 @@ const GUIDE: { view: View; title: string; answers: string; steps: string[] }[] =
   },
 ];
 
-const TIERS: [string, string][] = [
-  ["NASA table", "Recorded by NASA in the PSI test tables."],
-  ["NASA calibrated", "A NASA raw signal converted with a validated NASA formula (e.g. chamber pressure)."],
-  ["Derived automatically", "Produced by our scripts from NASA files (telemetry, video); not yet checked by a person."],
-  ["Human verified", "Checked by a person on the proof sheet or telemetry curve."],
-  ["Paper claim", "A value stated in a publication."],
-  ["Model prediction", "Output of a model; always shown with its range, and refused outside the tested conditions."],
-];
-
 export function Docs() {
   const video = useRef<HTMLVideoElement>(null);
   const [chapters, setChapters] = useState<Chapter[]>([]);
@@ -157,13 +148,11 @@ export function Docs() {
       <div className="doc-grid">
         <Panel title="How to read the numbers" meta="EVIDENCE LEVELS">
           <div className="doc-card">
-            <p>Every number carries the level of evidence behind it. You see it when you open a value’s source (Test Explorer) and in the model cards.</p>
+            <p>Numbers are marked with their source when you open a value in Test Explorer or inspect a model card.</p>
             <ul>
-              {TIERS.map(([k, v]) => (
-                <li key={k}>
-                  <b>{k}:</b> {v}
-                </li>
-              ))}
+              <li><b>Measured:</b> recorded in an experiment or publication.</li>
+              <li><b>Verified:</b> checked against the available source record.</li>
+              <li><b>Model prediction:</b> an estimate with a range, refused outside tested conditions.</li>
             </ul>
             <p>Empty means “not reported”, never zero. Thermocouple telemetry is raw volts, never converted to a temperature.</p>
           </div>

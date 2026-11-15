@@ -42,6 +42,37 @@
 .panel > header > span {
   min-width: 0;
 }
+.workspace,
+.page,
+.panel,
+.panel-body {
+  min-width: 0;
+}
+.panel {
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: hidden;
+}
+.panel-body {
+  width: 100%;
+}
+.table-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+.data-table,
+.cmp2 {
+  min-width: 680px;
+}
+.data-table th,
+.data-table td,
+.cmp2 th,
+.cmp2 td {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
 
 /* label tingkat peringatan tidak lagi menempel ke tepi */
 .alert-list li {
@@ -214,6 +245,9 @@
   color: var(--faint);
   font-style: italic;
 }
+.cmp2 thead th {
+  min-width: 170px;
+}
 .cmp2 .mini-bar {
   display: block;
   height: 4px;
@@ -255,6 +289,15 @@
 .answer-text .katex-display {
   margin: 8px 0;
   overflow-x: auto;
+}
+.answer-text .katex-block {
+  display: block;
+  max-width: 100%;
+  margin: 10px 0;
+  padding: 8px 10px;
+  overflow-x: auto;
+  border-left: 2px solid var(--amber);
+  color: var(--ink);
 }
 
 /* ---------------------------------------------------------------- dokumentasi */
@@ -343,6 +386,77 @@
 }
 .demo-meta code {
   color: var(--cyan, #65c6d1);
+}
+
+/* Keep the research network visually aligned with the citation graph. */
+.net-wrap {
+  min-width: 0;
+}
+.net-toolbar {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.16);
+}
+.net-body {
+  min-width: 0;
+  align-items: start;
+}
+.net-svg {
+  display: block;
+  min-width: 0;
+  min-height: 420px;
+  border-radius: 2px;
+}
+.net-info {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.16);
+  overflow-wrap: anywhere;
+}
+.net-info h3,
+.net-info p,
+.net-info li {
+  overflow-wrap: anywhere;
+}
+.net-links {
+  max-height: 270px;
+  overflow: auto;
+}
+
+/* Long quality labels stay inside their cards instead of colliding with borders. */
+.quality-grid > .panel,
+.quality-grid .model-card,
+.quality-grid .model-card summary,
+.quality-grid .model-card dl,
+.quality-grid .model-card dl div {
+  min-width: 0;
+}
+.quality-grid .model-card summary,
+.quality-grid .model-card dd,
+.quality-grid .model-card p,
+.quality-grid .alert-list b,
+.quality-grid .alert-list small {
+  overflow-wrap: anywhere;
+  line-height: 1.45;
+}
+.quality-grid .model-card summary {
+  align-items: flex-start;
+}
+.quality-grid .model-card summary b {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .net-body {
+    grid-template-columns: 1fr;
+  }
+  .net-svg {
+    min-height: 300px;
+  }
+  .cmp2 {
+    min-width: 620px;
+  }
 }
 .cmp2 tr.group-row th {
   padding: 14px 12px 6px;
