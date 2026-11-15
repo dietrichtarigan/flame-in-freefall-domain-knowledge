@@ -1,26 +1,26 @@
-# Flame in Freefall — domain knowledge
+# FLARE+ (Flame in Freefall) — Domain Knowledge & Analysis Pipeline
 
-Lapisan hasil dari data pembakaran mikrogravitasi NASA (Physical Sciences
-Informatics / PSI, NTRS, dan paper jurnal). Repo ini berisi **data siap analisis
-dan skrip pembuatnya** — bukan arsip mentahnya.
+A derived evidence layer built from NASA's microgravity combustion data (Physical Sciences Informatics / PSI, NASA Technical Reports Server / NTRS, and peer-reviewed journal papers). This repository contains **analysis-ready datasets and the reproducible scripts that built them** — not the raw ~15.6 GB archive.
 
-Lisensi data PSI: **CC0**. Repo ini proyek independen, tidak didukung NASA.
+* **Live Interactive App:** [https://flame-in-freefall-wfbl.onrender.com/insight/](https://flame-in-freefall-wfbl.onrender.com/insight/)
+* **Data License:** PSI source data is **CC0** (Public Domain). This repository is an independent project and is not affiliated with or endorsed by NASA.
 
-## Mulai dari mana
+---
 
-Satu berkas yang paling berguna: **`kb/gold/freefall.sqlite`** (9 tabel).
+## Where to Start
 
-Yang tersimpan di repo adalah versi terkompresi **`freefall.sqlite.gz`** (34 MB),
-karena berkas aslinya 101 MB dan melewati batas keras GitHub (100 MiB).
-Buka dulu satu kali:
+The single most useful file in this repository is **`kb/gold/freefall.sqlite`** (9 tables).
+
+Because the uncompressed database is 101 MB—exceeding GitHub's strict 100 MiB file limit—the repository stores the compressed archive **`freefall.sqlite.gz`** (34 MB). Decompress it once before querying:
 
 ```bash
-gunzip -k kb/gold/freefall.sqlite.gz      # -k menyimpan berkas .gz-nya
-# Windows tanpa gunzip:
+gunzip -k kb/gold/freefall.sqlite.gz      # -k keeps the original .gz file
+
+# On Windows without gunzip:
 python -c "import gzip,shutil; shutil.copyfileobj(gzip.open(r'kb/gold/freefall.sqlite.gz','rb'), open(r'kb/gold/freefall.sqlite','wb'))"
 ```
 
-Setelah itu buka dengan DB Browser for SQLite, DuckDB, atau Python:
+Once extracted, inspect it with DB Browser for SQLite, DuckDB, or Python:
 
 ```python
 import sqlite3, pandas as pd
@@ -28,75 +28,84 @@ con = sqlite3.connect("kb/gold/freefall.sqlite")
 pd.read_sql("SELECT name FROM sqlite_master WHERE type='table'", con)
 ```
 
-| Tabel | Baris | Isi |
-|---|---|---|
-| `tests` | 1.990 | Uji dari tabel PSI, skema seragam lintas 24 investigasi; `raw_json` menyimpan seluruh kolom asli |
-| `telemetry` | 943 | Uji ACME hasil tambang telemetri sensor 125 Hz — **tidak ada di tabel NASA** |
-| `video_episodes` | 139 | Episode nyala BASS/BASS-II hasil analisis video — **tidak ada di tabel NASA** |
-| `investigations` | 24 | Katalog: tujuan, hipotesis, perangkat, DOI |
-| `publications` | 352 | Publikasi yang didaftarkan NASA per investigasi |
-| `papers`, `papers_doi` | 695 / 295 | Dokumen NTRS dan paper ber-DOI |
-| `paper_chunks` + `paper_search` | 7.924 | Teks paper per halaman + indeks pencarian **FTS5** |
-| `files` | 16.372 | Manifest seluruh berkas PSI, checksum sha256 |
+### Database Schema (`freefall.sqlite`)
 
-Contoh pencarian teks penuh:
+| Table | Rows | Contents |
+|---|---|---|
+| `tests` | 1,990 | Standardized test records across 24 PSI investigations; `raw_json` preserves all original columns |
+| `telemetry` | 943 | ACME tests mined from raw 125 Hz sensor telemetry — **not tabulated in NASA's tables** |
+| `video_episodes` | 139 | BASS / BASS-II flame episodes extracted via video analysis — **not tabulated in NASA's tables** |
+| `investigations` | 24 | Catalog of objectives, hypotheses, flight hardware, and DOIs |
+| `publications` | 352 | NASA-indexed publications mapped per investigation |
+| `papers`, `papers_doi` | 695 / 295 | NTRS technical reports and DOI-indexed journal papers |
+| `paper_chunks` + `paper_search` | 7,924 | Page-level extracted paper text + **FTS5** full-text search index |
+| `files` | 16,372 | Complete manifest of all PSI files with SHA-256 checksums |
+
+Example full-text search query:
 
 ```sql
 SELECT paper_uid, page, snippet(paper_search, 2, '[', ']', '...', 12)
 FROM paper_search WHERE paper_search MATCH 'PMMA AND spread' LIMIT 10;
 ```
 
-## Isi folder
+---
 
-| Folder | Isi |
+## Repository Structure
+
+| Folder | Contents |
 |---|---|
-| `kb/gold/` | Basis data + CSV siap pakai + `data_dictionary.md` |
-| `kb/clean/` | Tabel uji per investigasi, kolom asli dipertahankan |
-| `kb/manifest/` | Manifest unduhan + checksum (dipakai untuk mengambil ulang data mentah) |
-| `analysis/telemetry/` | Hasil tambang telemetri ACME + catatan metode |
-| `analysis/video_full/` | Episode nyala dari video + **lembar bukti PNG** |
-| `analysis/saffire/`, `analysis/ml/` | Analisis Saffire dan model |
-| `scripts/` | Seluruh pipeline, dari pengambilan sampai pembangunan basis data |
-| `app/` | Dashboard (buka lewat server lokal, lihat di bawah) |
-| `docs/` | Spesifikasi, termasuk pipeline model 3D |
+| `kb/gold/` | Gold-standard SQLite database, ready-to-use CSVs, and `data_dictionary.md` |
+| `kb/clean/` | Standardized per-investigation test tables preserving original columns |
+| `kb/manifest/` | Download manifests and SHA-256 checksums (used to re-fetch raw data) |
+| `analysis/telemetry/` | Mined ACME sensor telemetry outputs and methodology notes |
+| `analysis/video_full/` | Video-derived flame episodes + **PNG visual proof sheets** |
+| `analysis/saffire/`, `analysis/ml/` | Saffire spacecraft burn analysis and predictive ML models |
+| `scripts/` | End-to-end data pipelines, from ingestion to database construction |
+| `app/` | Interactive web dashboard (run via local server; see below) |
+| `docs/` | Technical specifications, including the 3D visualization pipeline |
 
-## Mengambil ulang data mentah (opsional, ~15,6 GB)
+---
 
-Tidak disertakan di repo. Semua bisa diunduh ulang:
+## Re-Fetching Raw Data (Optional, ~15.6 GB)
+
+Raw files are excluded from Git tracking due to size, but can be fully reproduced from scratch:
 
 ```bash
-python scripts/psi_fetch.py --dry-run   # metadata + manifest dulu
-python scripts/psi_fetch.py             # berkas <= 10 MB (~6,8 GB)
-python scripts/ntrs_fetch.py            # paper NTRS
-python scripts/build_kb.py              # bangun ulang freefall.sqlite
+python scripts/psi_fetch.py --dry-run   # Fetch metadata and manifests first
+python scripts/psi_fetch.py             # Download files <= 10 MB (~6.8 GB)
+python scripts/ntrs_fetch.py            # Fetch NTRS technical reports
+python scripts/build_kb.py              # Rebuild freefall.sqlite from scratch
 ```
 
-Butuh Python 3.9+. `build_kb.py` memakai `pymupdf` bila ada (untuk teks PDF);
-tanpa itu teks paper dilewati dan sisanya tetap jalan.
+Requires **Python 3.9+**. `build_kb.py` uses `pymupdf` when installed to extract PDF text; if omitted, PDF text extraction is skipped and the remaining tables still build cleanly.
 
-## Menjalankan dashboard
+---
 
-Berkas di `app/` memuat `data.json` lewat `fetch`, jadi perlu server lokal:
+## Running the Dashboard Locally
+
+Files inside `app/` load `data.json` via `fetch()`, so they must be served over HTTP rather than opened directly via `file://`:
 
 ```bash
 cd app && python -m http.server 8000
 ```
 
-Lalu buka `http://localhost:8000/insight/index.html`.
+Then open `http://localhost:8000/insight/index.html` in your browser (or visit the live deployment at `https://flame-in-freefall-wfbl.onrender.com/insight/`).
 
-## Yang perlu diketahui sebelum memakai angkanya
+---
 
-1. **Telemetri adalah tegangan mentah, bukan satuan SI.** `tc_burner_rise_v`
-   adalah kenaikan tegangan termokopel dalam **volt**, bukan derajat Celsius.
-   Sah untuk membandingkan antar-uji; tidak sah ditampilkan sebagai suhu.
-2. **Deteksi nyala telemetri tervalidasi 93,8%** terhadap kolom `ignited` NASA
-   pada 320 uji CFI-G (tebak-mayoritas 81,9%). Kolom `signal_strength = lemah`
-   menandai 117 uji bersinyal tipis yang perlu dilihat manual.
-3. **Durasi dari video belum terkuantifikasi ketelitiannya.** Hanya satu uji
-   (T16) yang benar-benar terekam ulang. Periksa `analysis/video_full/proof/`
-   sebelum memakai angkanya.
-4. **Nilai kosong berarti tidak dilaporkan, bukan nol.**
-5. **Semua data mikrogravitasi.** PSI belum memuat data gravitasi parsial.
+## Important Caveats Before Using the Numbers
 
-Rincian metode dan kegagalan yang tercatat ada di `analysis/*/README.md` —
-termasuk pendekatan yang dicoba lalu dibuang beserta alasannya.
+1. **Telemetry values are raw sensor voltages, not SI physical units.** `tc_burner_rise_v` records thermocouple voltage rise in **volts**, not degrees Celsius. It is valid for relative comparisons across tests, but must not be displayed as calibrated temperature.
+2. **Telemetry flame detection is validated at 93.8% accuracy** against NASA's `ignited` label across 320 CFI-G tests (vs. an 81.9% majority-class baseline). Rows flagged with `signal_strength = weak` (117 tests) denote low-amplitude signals that warrant manual review.
+3. **Video-derived flame durations have unquantified timing uncertainty.** Only one test (`T16`) was re-recorded in full. Inspect `analysis/video_full/proof/` before relying on duration figures.
+4. **Null/empty values indicate unreported measurements, not zero.**
+5. **All records represent microgravity (`0g`) conditions.** NASA PSI does not yet contain long-duration partial-gravity (`0.16g` Lunar or `0.38g` Martian) combustion datasets.
+
+Detailed methodologies and documented dead-ends—including approaches we tested and discarded along with the reasons why—are recorded in `analysis/*/README.md`.
+
+---
+
+## Super Intelligence (SI) & AI Disclosure
+
+* **In-Product Models & Assistant:** FLARE+ integrates Gaussian Process boundary modeling, `scikit-learn`/`PyTorch` ignition and extinction classifiers, and an Anthropic Claude-powered conversational assistant ("Ask the data") that grounds responses against the verified SQLite knowledge base.
+* **Development Assistance:** Large Language Models (LLMs) were used during development to assist with code debugging, pipeline refactoring, and cross-referencing NTRS technical documentation.
