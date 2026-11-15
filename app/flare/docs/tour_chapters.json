@@ -4,35 +4,43 @@
   "title": "Overview"
  },
  {
-  "t": 12.4,
+  "t": 13.1,
   "title": "Scenario Explorer"
  },
  {
-  "t": 42.6,
+  "t": 45.4,
   "title": "Gaps"
  },
  {
-  "t": 52.8,
+  "t": 55.8,
   "title": "Investigations"
  },
  {
-  "t": 66.6,
+  "t": 70,
   "title": "Test Explorer"
  },
  {
-  "t": 81.3,
+  "t": 110.1,
   "title": "What-if"
  },
  {
-  "t": 98.1,
+  "t": 146.5,
   "title": "Research Map"
  },
  {
-  "t": 114.1,
+  "t": 164.5,
   "title": "Quality"
  },
  {
-  "t": 127.8,
+  "t": 179.6,
   "title": "AI Assistant"
+ },
+ {
+  "t": 212.1,
+  "title": "Experiment Replay"
+ },
+ {
+  "t": 227.4,
+  "title": "Documentation"
  }
 ]

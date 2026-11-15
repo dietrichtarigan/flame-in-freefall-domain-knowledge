@@ -243,6 +243,23 @@ async function tour() {
   }
   await say("Every number in an answer is checked against the tool output that produced it.");
   await sleep(3000);
+
+  await chapter("Experiment Replay");
+  await run("await __t.view('Replay')");
+  await say("Experiment Replay reconstructs a FLEX droplet burn step by step, with speed controls and transparent provenance.");
+  await sleep(4000);
+  await run("await __t.scrollTo('.replay-toolbar')");
+  await sleep(2500);
+  await say("The replay distinguishes digitized measurements from reconstructed frames, so the visual is never mistaken for a raw camera record.");
+  await sleep(3000);
+
+  await chapter("Documentation");
+  await run("await __t.view('Docs')");
+  await say("Documentation is the final tab: jump to any view, read the evidence rules, and use the chapter buttons to revisit this tour.");
+  await sleep(4500);
+  await run("await __t.scrollTo('.doc-grid')");
+  await sleep(3000);
+
   await say("");
   rec = false;
   await grab;
@@ -260,4 +277,66 @@ async function tour() {
   console.log(`tour: ${n} frames in ${secs.toFixed(0)} s (${fps} fps) -> ${docs}/tour.mp4`);
 }
 
-(mode === "tour" ? tour() : shots()).catch((e) => { console.error(e); process.exit(1); });
+// Sapu bahasa: kumpulkan semua teks yang terlihat (plus title/aria-label/placeholder) di tiap view,
+// setelah membuka tab, segmen, details dan satu dossier uji, lalu tandai kata-kata Indonesia.
+const ID_WORDS = "yang dan tidak dengan untuk dari ini itu pada adalah belum sudah atau uji bahan bakar suhu tekanan nyala padam catatan sumber mentah tanpa lebih kurang hanya bisa akan oleh sebagai dalam karena jika bila gagal berhasil diukur nilai hasil terdeteksi peluang fraksi bukan jawaban pertanyaan perlu saja juga antara setelah sebelum di ke tetes nyala oksigen kadar laju waktu awal akhir rekaman sampel penyebab aturan diturunkan otomatis tabel turunan tercatat diverifikasi verifikasi tinjau kotak dipilih pilih semua lainnya tentang menit detik jam hari tahun kosong ya tidak ada mungkin tinggi rendah besar kecil sedang baru lama skor rentang batas model galat".split(" ");
+const ID_RE = new RegExp("\\b(" + [...new Set(ID_WORDS)].filter(w => !["model","data","skor"].includes(w)).join("|") + ")\\b", "gi");
+async function lang() {
+  const b = await launch();
+  await b.goto(BASE + "#Overview");
+  await b.evaluate("localStorage.setItem('flare.notice','closed'); true");
+  const views = (process.env.VIEWS || "Overview,Map,Gaps,Investigations,Tests,Quality,WhatIf,Scenario,Assistant,Replay,Docs").split(",");
+  const COLLECT = `(() => {
+    const out = [document.body.innerText];
+    document.querySelectorAll('[title],[aria-label],[placeholder],img[alt]').forEach(e => out.push(e.getAttribute('title')||'', e.getAttribute('aria-label')||'', e.getAttribute('placeholder')||'', e.getAttribute('alt')||''));
+    document.querySelectorAll('iframe').forEach(f => { try { out.push(f.contentDocument.body.innerText); } catch {} });
+    return out.join(String.fromCharCode(10));
+  })()`;
+  const hits = {};
+  const dump = [];
+  const note = (v, text) => {
+    dump.push(text);
+    for (const line of text.split(/\n+/)) {
+      const m = line.match(ID_RE);
+      if (m) { (hits[v] ||= new Set()).add(line.trim().slice(0, 200)); }
+    }
+  };
+  for (const v of views) {
+    await b.evaluate(`location.hash='${v}'; window.scrollTo(0,0); true`);
+    await sleep(v === "Replay" ? 9000 : 4000);
+    note(v, await b.evaluate(COLLECT));
+    // buka semua details, klik tiap tombol tab/segmen satu per satu
+    const n = await b.evaluate("document.querySelectorAll('details').forEach(d=>d.open=true); [...document.querySelectorAll('.view-tabs button,.segmented button,.objective-segmented button,.demo-tabs button,.gap-tile,.chip-row button')].filter(e=>e.offsetParent).length");
+    for (let i = 0; i < Math.min(n, 30); i++) {
+      await b.evaluate(`(() => { const el=[...document.querySelectorAll('.view-tabs button,.segmented button,.objective-segmented button,.demo-tabs button,.gap-tile,.chip-row button')].filter(e=>e.offsetParent)[${i}]; el && el.click(); return true })()`);
+      await sleep(900);
+      note(v, await b.evaluate(COLLECT));
+    }
+    if (v === "Tests") {
+      for (const q of ["21106G8", "181F001", "ACME", "BASS"]) {
+        await b.evaluate(`(() => { const el=document.querySelector('.filter-row input'); const set=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set; set.call(el, ${JSON.stringify(q)}); el.dispatchEvent(new Event('input',{bubbles:true})); return true })()`);
+        await sleep(1200);
+        await b.evaluate("(() => { const r=document.querySelector('.tests-table tbody tr'); r && r.click(); return true })()");
+        await sleep(2500);
+        await b.evaluate("document.querySelectorAll('details').forEach(d=>d.open=true); document.querySelectorAll('.measure').forEach((m,i)=>{ if(i<3) m.click() }); true");
+        await sleep(1500);
+        note(v + ":" + q, await b.evaluate(COLLECT));
+      }
+    }
+    if (v === "Investigations") {
+      const k = await b.evaluate("document.querySelectorAll('.inv-main').length");
+      for (let i = 0; i < k; i++) {
+        await b.evaluate(`(() => { const el=document.querySelectorAll('.inv-main')[${i}]; el && el.click(); return true })()`);
+        await sleep(700);
+        note(v, await b.evaluate(COLLECT));
+      }
+    }
+  }
+  b.close();
+  if (process.env.DUMP) fs.writeFileSync(process.env.DUMP, dump.join("\n"));
+  let total = 0;
+  for (const [v, s] of Object.entries(hits)) { console.log("\n== " + v); for (const l of s) { console.log("  " + l); total++; } }
+  console.log("\nlines with Indonesian candidates:", total);
+}
+
+(mode === "tour" ? tour() : mode === "lang" ? lang() : shots()).catch((e) => { console.error(e); process.exit(1); });

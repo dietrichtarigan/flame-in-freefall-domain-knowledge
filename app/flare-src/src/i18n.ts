@@ -123,6 +123,12 @@ const RULES: [RegExp, string][] = [
   [/tidak ada di tabel uji NASA/, "not in the recorded test table"],
   [/\buji\b/g, "tests"],
   [/\bmemang menyala\b/, "did ignite"],
+  [/\b(G\d+) akhir\b/g, "$1 end"],
+  [/\b(G\d+) awal\b/g, "$1 start"],
+  [/\bakhir\b/g, "end"],
+  [/\bawal\b/g, "start"],
+  // koma desimal gaya Indonesia (0,2074) -> titik; ribuan "1,990" tidak disentuh
+  [/(^|[^\d.,])(-?0),(\d+)/g, "$1$2.$3"],
   // aturan umum paling akhir, supaya aturan spesifik di atas tetap cocok
   [/\(tabel NASA\)/g, "(recorded dataset)"],
   [/tabel NASA/g, "recorded dataset"],
