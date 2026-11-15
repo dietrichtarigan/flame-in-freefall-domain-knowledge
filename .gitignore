@@ -72,3 +72,9 @@ node_modules/
 # Folder kerja sementara (tangkapan layar, cadangan)
 .look/
 .bak/
+
+# Cache unduhan graf sitasi (Crossref/OpenAlex); bangun ulang: python scripts/citation_graph.py all
+analysis/citations/crossref/
+analysis/citations/cache/
+analysis/citations/crossref.json
+analysis/citations/*.log

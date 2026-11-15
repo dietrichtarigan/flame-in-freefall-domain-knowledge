@@ -396,7 +396,7 @@ def predict(pts, fuel, d, u):
         flags.append(f"ekstrapolasi: L_SP di atas nyala terpanjang yang teramati ({lmax:.0f} mm); "
                      "nyala sepanjang ini bisa menabrak pelat ujung duct sebelum titik asap (Dotson 2009, metana)")
     return {"status": "ekstrapolasi" if flags else "dalam_rentang", "fuel": fuel, "d_mm": d, "u_air_cm_s": u,
-            "L_sp_mm": round(math.exp(m[0]), 1), "PI90_mm": [round(math.exp(lo[0]), 1), round(math.exp(hi[0]), 1)],
+            "L_sp_mm": round(math.exp(m[0]), 1), "PI90_mm": [round(math.exp(lo[0]), 1), round(math.exp(hi[0]), 1)], "interval_level_pct": 90,
             "tier": "model_prediction", "model": "spice_smoke_point_hybrid", "flags": flags}
 
 

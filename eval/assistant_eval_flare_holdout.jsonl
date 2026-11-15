@@ -1,0 +1,8 @@
+{"id": "g01", "q": "Show a figure of a spherical diffusion flame from ACME.", "expect_tools": ["find_figures"], "expect_media": "figures", "must_cite": "paper"}
+{"id": "g02", "q": "Would cotton-like solids burn on Mars at 21% O2 and normal pressure?", "expect_tools": ["gravity_flammability"], "must_contain": ["model"]}
+{"id": "g03", "q": "Which investigations are best evidence for spacesuit fire safety?", "expect_tools": ["rank_investigations", "scenario_evidence"], "must_cite": "inv"}
+{"id": "g04", "q": "What equation do papers use for the extinction limit of a droplet flame?", "expect_tools": ["find_equations"], "expect_media": "figures", "must_cite": "paper"}
+{"id": "g05", "q": "Plot all tabulated tests by oxygen and pressure for FLEX.", "expect_tools": ["make_plot"], "expect_media": "plots"}
+{"id": "g06", "q": "Apa yang dikatakan paper tentang api di wahana antariksa (spacecraft fire)?", "expect_tools": ["search_papers"], "must_cite": "paper"}
+{"id": "g07", "q": "Compare Saffire-III and BASS for flame spread.", "expect_tools": ["compare_investigations", "get_investigation"], "must_cite": "inv"}
+{"id": "g08", "q": "What was the exact temperature of the ACME flames in Celsius?", "expect_tools": ["get_test", "find_tests", "get_investigation", "search_papers", "explain_test"], "must_not_match": ["\\b\\d{3,4} ?(°C|degrees Celsius)\\b[^\\n]{0,40}(thermocouple|measured by ACME)"]}

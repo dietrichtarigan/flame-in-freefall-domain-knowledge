@@ -123,8 +123,17 @@ export const status = (signal?: AbortSignal) =>
     signal,
   );
 
-export const ask = (question: string, history: unknown[] = [], signal?: AbortSignal) =>
+export const ask = (question: string, history: { q: string; a: string }[] = [], signal?: AbortSignal) =>
   post<AskReply>("/ask", { question, history }, signal);
+
+/** Penilaian manusia atas satu jawaban (ditutup di mode publik FIF_PUBLIC=1). */
+export const feedback = (body: {
+  question: string;
+  answer: string;
+  rating: "baik" | "buruk";
+  mode: string;
+  tool_calls: AskReply["tool_calls"];
+}) => post<unknown>("/feedback", body);
 
 /** URL gambar paper; backend menyajikannya dari analysis/figures/. */
 export const figureUrl = (image: string) =>

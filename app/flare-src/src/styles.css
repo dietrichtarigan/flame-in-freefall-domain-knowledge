@@ -6215,8 +6215,8 @@ select:focus-visible {
 /* ------------------------------------------------ penanda animasi investigasi */
 .study-mark {
   position: relative;
-  width: 54px;
-  height: 40px;
+  width: 96px;
+  height: 68px;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 4px;
@@ -6224,10 +6224,51 @@ select:focus-visible {
   flex: 0 0 auto;
 }
 .study-mark .stage {
-  width: 100%;
-  height: 100%;
-  transform: scale(0.26);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  height: 210px;
+  transform: translate(-50%, -50%) scale(0.33);
   transform-origin: center;
+  pointer-events: none;
+}
+.study-mark.large {
+  width: 150px;
+  height: 105px;
+  margin-bottom: 6px;
+}
+.study-mark.large .stage {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+.headline-with-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: 16px;
+  align-items: center;
+}
+@media (max-width: 760px) {
+  .headline-with-stage {
+    grid-template-columns: 1fr;
+  }
+}
+.study-stage {
+  position: relative;
+  width: 240px;
+  height: 168px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #161713;
+  justify-self: end;
+}
+.study-stage .stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  height: 210px;
+  transform: translate(-50%, -50%) scale(0.8);
   pointer-events: none;
 }
 /* Label "concept" selalu ikut: ilustrasi ini bukan rekaman eksperimen. */
@@ -6243,7 +6284,8 @@ select:focus-visible {
   background: rgba(13, 13, 11, 0.8);
 }
 .rank-card header {
-  grid-template-columns: 30px 54px 1fr auto;
+  grid-template-columns: 30px 96px minmax(0, 1fr) auto;
+  align-items: center;
 }
 @media (prefers-reduced-motion: reduce) {
   .study-mark .stage * {
@@ -6517,4 +6559,619 @@ span.cite-chip.paper::before {
   padding: 8px 10px;
   border: 1px solid var(--line);
   font-size: 9px;
+}
+
+/* ---------------------------------------------------------------------------
+   Jaringan sitasi (src/citationGraph.tsx)
+   ------------------------------------------------------------------------- */
+.cite-panel {
+  margin-bottom: 18px;
+}
+.cite-graph {
+  padding: 4px 0 0;
+}
+.cite-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 18px;
+  margin-bottom: 10px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.cite-toolbar label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cite-toolbar b {
+  color: var(--ink);
+}
+.cite-toolbar input[type="range"] {
+  width: 110px;
+  accent-color: var(--amber);
+}
+.cite-check input {
+  accent-color: var(--amber);
+}
+.cite-search {
+  position: relative;
+  flex: 1 1 180px;
+  max-width: 280px;
+}
+.cite-search input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 9px;
+  border: 1px solid var(--line-strong);
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--ink);
+  font: 11px "Poppins", sans-serif;
+}
+.cite-results {
+  position: absolute;
+  z-index: 5;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 260px;
+  overflow: auto;
+  background: #1a1915;
+  border: 1px solid var(--line-strong);
+}
+.cite-results button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 6px 9px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: none;
+  color: var(--ink);
+  font: 11px/1.35 "Poppins", sans-serif;
+  cursor: pointer;
+}
+.cite-results button:hover {
+  background: rgba(212, 135, 77, 0.15);
+}
+.cite-results small {
+  color: var(--faint);
+}
+.cite-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 14px;
+}
+@media (max-width: 900px) {
+  .cite-body {
+    grid-template-columns: 1fr;
+  }
+}
+.cite-canvas-wrap {
+  position: relative;
+  min-width: 0;
+}
+.cite-canvas {
+  display: block;
+  width: 100%;
+  height: min(68vh, 640px);
+  min-height: 380px;
+  background: radial-gradient(circle at 50% 45%, rgba(40, 36, 30, 0.9), rgba(12, 12, 10, 0.95));
+  border: 1px solid var(--line);
+  cursor: grab;
+  touch-action: none;
+}
+.cite-canvas:active {
+  cursor: grabbing;
+}
+.cite-tip {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px;
+  background: rgba(20, 19, 16, 0.92);
+  border: 1px solid var(--line-strong);
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--muted);
+  pointer-events: none;
+}
+.cite-tip b {
+  color: var(--ink);
+  font-weight: 500;
+}
+.cite-legend-layers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 14px;
+  margin-top: 6px;
+  font-size: 10px;
+  color: var(--muted);
+}
+.cite-legend-layers i {
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+  vertical-align: -1px;
+}
+.cite-legend-layers i.seed {
+  width: 9px;
+  height: 9px;
+  background: #f0a35e;
+  box-shadow: 0 0 0 1px #f6efe2;
+}
+.cite-legend-layers i.ref {
+  width: 5px;
+  height: 5px;
+  background: #6f8f96;
+}
+.cite-legend-layers i.root {
+  width: 7px;
+  height: 7px;
+  background: #8f6a4c;
+}
+.cite-legend-layers small {
+  color: var(--faint);
+}
+.cite-side {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+.cite-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.cite-stats div {
+  border: 1px solid var(--line);
+  padding: 8px 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.cite-stats strong {
+  font: 300 20px "Poppins", sans-serif;
+  color: var(--ink);
+}
+.cite-stats span {
+  font-size: 9.5px;
+  line-height: 1.35;
+}
+.cite-detail {
+  border: 1px solid var(--line-strong);
+  padding: 10px 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.cite-detail h3 {
+  margin: 0;
+  font: 500 12.5px/1.4 "Poppins", sans-serif;
+  color: var(--ink);
+}
+.cite-detail p {
+  margin: 0;
+  line-height: 1.45;
+}
+.cite-detail a {
+  color: var(--amber);
+}
+.cite-layer {
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.cite-swatch {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  margin-right: 6px;
+  vertical-align: -1px;
+}
+.cite-trace {
+  margin: 0;
+  padding-left: 16px;
+  line-height: 1.55;
+}
+.cite-clusters {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 340px;
+  overflow: auto;
+}
+.cite-clusters > span {
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+  margin-bottom: 4px;
+}
+.cite-clusters button {
+  display: grid;
+  grid-template-columns: 12px 1fr auto;
+  gap: 8px;
+  align-items: center;
+  text-align: left;
+  padding: 5px 6px;
+  border: 1px solid transparent;
+  background: none;
+  color: var(--muted);
+  font: 10.5px/1.3 "Poppins", sans-serif;
+  cursor: pointer;
+}
+.cite-clusters button:hover,
+.cite-clusters button.active {
+  border-color: var(--line-strong);
+  color: var(--ink);
+}
+.cite-clusters i {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+.cite-clusters small {
+  color: var(--faint);
+  font-size: 9.5px;
+}
+.feedback-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+.feedback-row span {
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+}
+.feedback-row button {
+  border: 1px solid var(--line);
+  background: none;
+  padding: 2px 7px;
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 4px;
+}
+.feedback-row button:hover {
+  border-color: var(--amber);
+}
+.feedback-note {
+  display: block;
+  margin-top: 8px;
+  color: var(--faint);
+}
+@media (prefers-reduced-motion: reduce) {
+  .study-stage .stage * {
+    animation: none !important;
+  }
+}
+
+/* Bilah status: isinya dulu terbelah di tengah kata ("2026- / 11-14",
+   "FLARE+ · UI / 1.0") karena span boleh membungkus baris. Satu baris saja;
+   yang paling tidak penting (kredit foto) yang mengalah dengan elipsis. */
+.statusbar {
+  white-space: nowrap;
+  min-width: 0;
+}
+.statusbar span,
+.statusbar em {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.statusbar .visual-credit {
+  flex-shrink: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 1280px) {
+  .statusbar .visual-credit {
+    display: none;
+  }
+  .statusbar span {
+    padding: 0 12px;
+  }
+}
+/* Tabel "next tests" di panel sempit (Gaps) meluber 113 px ke luar panel dan
+   kolom terakhir terpotong; kini kolom teks membungkus dan sisanya digulir. */
+.table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.next-tests th,
+.next-tests td {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.next-tests td:nth-child(4) {
+  min-width: 110px;
+}
+
+/* ---------------------------------------------------------------------------
+   Perbaikan teks terpotong (dicek dengan pemindai per kata di 375/1024/1440 px)
+   ------------------------------------------------------------------------- */
+/* Judul panel + label meta: meta tidak boleh meluber keluar panel. */
+.panel > header {
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  min-width: 0;
+}
+.panel > header small {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (max-width: 780px) {
+  /* Menu bawah: aturan desktop yang lebih belakang (kolom 24px 27px 0px)
+     menimpa versi ponsel, jadi kolom label 0 px dan teksnya menimpa ikon. */
+  .sidebar nav button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    grid-template-columns: none;
+    min-width: 0;
+  }
+  .sidebar nav button .nav-number {
+    display: none;
+  }
+  .sidebar nav button .nav-copy {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .sidebar nav button .nav-copy strong {
+    display: block;
+    font-size: 8px;
+    line-height: 1.15;
+    text-align: center;
+    font-size: 7.5px;
+    white-space: normal;      /* bungkus di spasi saja ("Mission / Overview"), */
+    overflow-wrap: normal;    /* jangan di tengah kata ("Compariso / n")      */
+    word-break: normal;
+    letter-spacing: 0;
+  }
+  /* Kartu statistik: angka besar ("1,990") terpotong di kolom sempit;
+     di ponsel label di atas, angka di bawah. */
+  .stat {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+  }
+  .stat strong {
+    font-size: 28px;
+    grid-row: auto;
+    grid-column: 1;
+    line-height: 1.1;
+  }
+  .stat > span,
+  .stat small {
+    grid-column: 1;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Diporting dari referensi mobile nasa3 (frontend-only): reset aksesibel,
+   fokus keyboard, status koneksi/muat, safe-area ponsel, bottom sheet.
+   ------------------------------------------------------------------------- */
+:root {
+  --focus: #9fe7ef;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+img,
+svg {
+  max-width: 100%;
+}
+[hidden] {
+  display: none !important;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* Reliability and accessibility states */
+.skip-link {
+  position: fixed;
+  z-index: 1000;
+  top: max(8px, env(safe-area-inset-top));
+  left: 12px;
+  padding: 10px 14px;
+  color: #171713;
+  background: var(--focus);
+  transform: translateY(-160%);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+.connection-state,
+.connection-notice,
+.view-state {
+  font-family: "IBM Plex Mono", monospace;
+}
+.connection-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+}
+.connection-state i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #87b989;
+}
+.connection-state.offline i {
+  background: var(--amber);
+}
+.connection-notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 0 18px;
+  padding: 11px 14px;
+  border: 1px solid rgba(189, 112, 69, 0.45);
+  color: var(--cream);
+  background: rgba(94, 48, 32, 0.3);
+}
+.view-state {
+  grid-column: 1 / -1;
+  min-height: 140px;
+  display: grid;
+  place-content: center;
+  justify-items: start;
+  gap: 10px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  background: var(--surface-1);
+}
+.view-state p {
+  margin: 0;
+  color: var(--muted);
+}
+.view-state.loading strong::after {
+  content: " …";
+  color: var(--cyan);
+}
+.firewall-layer {
+  margin-top: 14px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+.firewall-layer summary {
+  cursor: pointer;
+  color: var(--cyan);
+  font:
+    500 9px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.12em;
+}
+.firewall-layer ul {
+  margin: 8px 0 0;
+  padding-left: 16px;
+  color: var(--muted);
+  font-size: 9px;
+}
+.claim-class {
+  border-left: 2px solid var(--cyan);
+  padding-left: 9px;
+}
+.claim-prediction {
+  border-color: var(--amber);
+}
+.claim-unsupported {
+  border-color: #d26f5e;
+}
+.message.failed {
+  border-color: rgba(210, 111, 94, 0.45);
+}
+.timeline-ledger {
+  max-height: 300px;
+  overflow: auto;
+}
+.global-disclaimer {
+  width: min(1240px, 100%);
+  margin: 28px auto 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--faint);
+  font:
+    400 9px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.05em;
+}
+.provenance-drawer {
+  max-width: min(520px, 100vw);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.provenance-drawer:focus,
+.demo-panel:focus,
+.assistant-popover:focus {
+  outline: none;
+}
+
+@media (max-width: 780px) {
+  .workspace {
+    padding-bottom: calc(110px + env(safe-area-inset-bottom));
+  }
+  .connection-notice {
+    align-items: flex-start;
+  }
+  .provenance-drawer {
+    inset: auto 0 0;
+    width: 100%;
+    max-width: none;
+    max-height: min(88dvh, 760px);
+    padding-bottom: calc(20px + env(safe-area-inset-bottom));
+  }
+  .assistant-popover {
+    max-height: calc(100dvh - 110px - env(safe-area-inset-top));
+    overflow-y: auto;
+  }
+  .cmp-wrap,
+  .next-tests {
+    max-width: calc(100vw - 32px);
+  }
+  .next-tests {
+    display: block;
+    overflow-x: auto;
+  }
+}
+.statusbar-retry {
+  margin-left: 8px;
+  padding: 1px 6px;
+  border: 1px solid var(--line-strong);
+  background: none;
+  color: var(--amber);
+  font: inherit;
+  letter-spacing: inherit;
 }

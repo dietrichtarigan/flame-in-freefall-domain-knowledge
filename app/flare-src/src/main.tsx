@@ -79,7 +79,7 @@ const navigation: { id: View; label: string; sub: string; icon: IconName }[] = [
   { id: "Scenario", label: "Scenario Explorer", sub: "Mission discovery", icon: "target" },
   { id: "Gaps", label: "Gaps Analysis", sub: "Evidence coverage", icon: "grid" },
   { id: "Compare", label: "Comparison", sub: "Scientific analysis", icon: "compare" },
-  { id: "Map", label: "Research Map", sub: "429 linked papers", icon: "orbit" },
+  { id: "Map", label: "Research Map", sub: "Citation network", icon: "orbit" },
   { id: "Assistant", label: "AI Assistant", sub: "Knowledge query", icon: "spark" },
 ];
 
@@ -129,9 +129,10 @@ const heatmap = [
   [0, 1, 2, 3, 3, 1],
 ];
 
-import { ask as askApi, TIER_LABEL, type AskReply } from "./api";
+import { ask as askApi, feedback as sendFeedback, TIER_LABEL, type AskReply, type RankRow } from "./api";
 import { useInsight, useResearchMap, useStatus, fmt } from "./useData";
 import { AnswerText, ReplyMedia } from "./chatRender";
+import { CitationGraph } from "./citationGraph";
 import { STUDY_BY_ACCESSION, STUDY_HTML } from "./motion";
 
 /** Rute hash sederhana: #Scenario, #Assistant, ... supaya setiap tampilan bisa
@@ -159,12 +160,15 @@ function App() {
   const [chatOpen, setChatOpen] = useState(false);
 
   return (
-    <main className="app-shell">
+    <div className="app-shell">
+      <a className="skip-link" href="#main-content">
+        Skip to research workspace
+      </a>
       <CombustionBackdrop />
       <div className="grain" aria-hidden="true" />
       <Header onDemo={() => setDemoOpen(true)} />
       <Sidebar view={view} setView={setView} />
-      <section className="workspace">
+      <main className="workspace" id="main-content" tabIndex={-1}>
         {noticeOpen && (
           <div className="data-notice">
             <span className="notice-mark">i</span>
@@ -184,7 +188,7 @@ function App() {
         {view === "Compare" && <Comparison />}
         {view === "Map" && <ResearchMap onEvidence={setEvidence} />}
         {view === "Assistant" && <Assistant />}
-      </section>
+      </main>
       <Footer />
       <FloatingAssistant
         open={chatOpen}
@@ -204,7 +208,7 @@ function App() {
           }}
         />
       )}
-    </main>
+    </div>
   );
 }
 
@@ -556,10 +560,10 @@ function Overview({
  *  Skor dan ketiga komponennya ditampilkan apa adanya, lengkap dengan alasannya --
  *  bukan angka "match" tanpa penjelasan seperti di mockup. */
 function Scenario({ onEvidence }: { onEvidence: (record: EvidenceRecord) => void }) {
-  const { data, error } = useInsight();
+  const { data, error, retry } = useInsight();
   const [sid, setSid] = useState<string>("surface");
 
-  if (error) return <ViewError what="scenario ranking" detail={error} />;
+  if (error && !data) return <ViewError what="scenario ranking" detail={error} onRetry={retry} />;
   if (!data) return <ViewLoading />;
 
   const sc: any = data.scenario[sid];
@@ -574,6 +578,7 @@ function Scenario({ onEvidence }: { onEvidence: (record: EvidenceRecord) => void
         title="Scenario Explorer"
         description="Pick where the crew will live. Every investigation is re-ranked for that atmosphere, and each score says why."
       />
+      {error && <ConnectionNotice onRetry={retry} />}
 
       <div className="segmented objective-segmented">
         {data.scenarios.map((id) => (
@@ -585,8 +590,14 @@ function Scenario({ onEvidence }: { onEvidence: (record: EvidenceRecord) => void
 
       {sc?.headline && (
         <Panel title="What the data says" meta="SCENARIO HEADLINE">
-          <p className="score-heading">{sc.headline}</p>
-          <p className="panel-footnote">{sc.basis}</p>
+          <div className="headline-with-stage">
+            <div>
+              <p className="score-heading">{sc.headline}</p>
+              <p className="panel-footnote">{sc.basis}</p>
+            </div>
+            {/* aset motion kit Figma untuk habitat; sebelumnya tidak dipakai sama sekali */}
+            <StudyStage study={SCENARIO_STUDY[sid]} label={(sc.name || sid) + " — conceptual illustration"} />
+          </div>
         </Panel>
       )}
 
@@ -686,13 +697,18 @@ function Scenario({ onEvidence }: { onEvidence: (record: EvidenceRecord) => void
                 <span>{m.what}</span>
                 <EvidenceBadge tier="model_prediction" />
                 {m.valid ? (
-                  <strong className="prediction-value">
-                    {m.p_extinction != null
-                      ? "P(goes out) " + m.p_extinction
-                      : m.p_ignition != null
-                        ? "P(ignites) " + m.p_ignition
-                        : "—"}
-                  </strong>
+                  <>
+                    <strong className="prediction-value">
+                      {/* backend: p_extinction (FLEX) atau p_ignite (CFI-G); sebelumnya dibaca
+                          sebagai p_ignition sehingga semua kartu CFI-G tampil "—" */}
+                      {m.p_extinction != null
+                        ? "P(goes out) " + m.p_extinction
+                        : (m.p_ignite ?? m.p_ignition) != null
+                          ? "P(ignites) " + (m.p_ignite ?? m.p_ignition)
+                          : "—"}
+                    </strong>
+                    {m.K_mm2_s != null && <small>burning-rate constant K {m.K_mm2_s} mm²/s</small>}
+                  </>
                 ) : (
                   <strong className="prediction-value extrapolation-warning">
                     model does not answer - outside the tested range
@@ -714,9 +730,9 @@ function Scenario({ onEvidence }: { onEvidence: (record: EvidenceRecord) => void
 
 /** Celah bukti dan uji berikutnya yang paling informatif, dari data yang sama. */
 function Gaps() {
-  const { data, error } = useInsight();
+  const { data, error, retry } = useInsight();
   const [sid, setSid] = useState<string>("surface");
-  if (error) return <ViewError what="gap analysis" detail={error} />;
+  if (error && !data) return <ViewError what="gap analysis" detail={error} onRetry={retry} />;
   if (!data) return <ViewLoading />;
   const sc: any = data.scenario[sid];
   const gaps = (sc?.gaps ?? []) as { level: string; title: string; text: string }[];
@@ -730,6 +746,7 @@ function Gaps() {
         title="Gaps Analysis"
         description="What the archive cannot answer for this habitat, and which experiment would teach the most."
       />
+      {error && <ConnectionNotice onRetry={retry} />}
       <div className="segmented objective-switch">
         {data.scenarios.map((id) => (
           <button key={id} className={id === sid ? "active" : ""} onClick={() => setSid(id)}>
@@ -752,30 +769,32 @@ function Gaps() {
         </Panel>
 
         <Panel title="Most informative next tests" meta="ACTIVE LEARNING" className="heat-panel">
-          <table className="next-tests">
-            <thead>
-              <tr>
-                <th>Experiment</th>
-                <th>O2</th>
-                <th>kPa</th>
-                <th>Conditions</th>
-                <th>U</th>
-                <th>In band</th>
-              </tr>
-            </thead>
-            <tbody>
-              {next.map((n, i) => (
-                <tr key={i}>
-                  <td>{n.exp}</td>
-                  <td>{(n.o2 * 100).toFixed(1)}%</td>
-                  <td>{n.p_kpa}</td>
-                  <td>{n.detail}</td>
-                  <td>{n.U}</td>
-                  <td>{n.in_band ? "yes" : "no"}</td>
+          <div className="table-scroll">
+            <table className="next-tests">
+              <thead>
+                <tr>
+                  <th>Experiment</th>
+                  <th>O2</th>
+                  <th>kPa</th>
+                  <th>Conditions</th>
+                  <th>U</th>
+                  <th>In band</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {next.map((n, i) => (
+                  <tr key={i}>
+                    <td>{n.exp}</td>
+                    <td>{(n.o2 * 100).toFixed(1)}%</td>
+                    <td>{n.p_kpa}</td>
+                    <td>{n.detail}</td>
+                    <td>{n.U}</td>
+                    <td>{n.in_band ? "yes" : "no"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
           <p className="panel-footnote">
             Ranked by the U-function of a Gaussian-process boundary model: a small U means the model
             is least sure whether the flame ignites there, so one test teaches the most. Candidates
@@ -798,7 +817,14 @@ function Gaps() {
               <article key={i} className="quality-facts">
                 <strong>{e.title || e.name}</strong>
                 <p>{e.text || e.detail}</p>
-                {e.same_pillar && <small>Same pillar in PSI: {e.same_pillar}</small>}
+                {/* dihitung di sini seperti /insight/: backend tidak mengirim same_pillar,
+                    jadi baris ini dulu tidak pernah tampil */}
+                {(() => {
+                  const invs = (data.investigations ?? [])
+                    .filter((c: any) => c.direct >= 0.8 && (c.pillars ?? []).includes(e.pillar))
+                    .map((c: any) => c.name);
+                  return invs.length ? <small>Same pillar in PSI ({e.pillar}): {invs.join(", ")}</small> : null;
+                })()}
               </article>
             ))}
           </div>
@@ -826,32 +852,92 @@ function Bar({ label, value, weight }: { label: string; value: number; weight: n
 
 /** Penanda visual tiap investigasi: animasi konseptual, diberi label "concept"
  *  supaya tidak pernah disalahartikan sebagai rekaman eksperimen atau data. */
-function StudyMark({ accession, title }: { accession: string; title?: string }) {
+/** Habitat per skenario -> animasi motion kit (ilustrasi konseptual, bukan data). */
+const SCENARIO_STUDY: Record<string, string> = {
+  cabin: "iss-study",
+  surface: "lunar-study",
+  suit: "suit-study",
+  earth: "mist-study",
+};
+
+/**
+ * Panggung animasi motion kit dirancang pada ukuran tetap (~300 x 210 px).
+ * Sebelumnya panggung diberi ukuran kotak kecil (54 x 40) LALU diperkecil lagi
+ * scale(0.26), sehingga animasinya tergambar di area ~14 x 10 px dan tampak
+ * sebagai kotak gelap kosong. Kini panggung tetap 300 x 210 dan diperkecil utuh.
+ */
+function StudyMark({ accession, title, size = "small" }: { accession: string; title?: string; size?: "small" | "large" }) {
   const key = STUDY_BY_ACCESSION[accession];
   const markup = key ? STUDY_HTML[key] : undefined;
   if (!markup) return null;
   return (
-    <div className="study-mark" role="img" aria-label={(title || accession) + " — conceptual illustration"}>
+    <div className={`study-mark ${size}`} role="img" aria-label={(title || accession) + " — conceptual illustration"}>
       <div className={"stage " + key} dangerouslySetInnerHTML={{ __html: markup }} />
       <span className="study-tag">concept</span>
     </div>
   );
 }
 
-function ViewLoading() {
+function StudyStage({ study, label }: { study?: string; label: string }) {
+  const markup = study ? STUDY_HTML[study] : undefined;
+  if (!markup) return null;
   return (
-    <div className="page">
-      <p className="stat-error">Reading the knowledge base...</p>
+    <div className="study-stage" role="img" aria-label={label}>
+      <div className={"stage " + study} dangerouslySetInnerHTML={{ __html: markup }} />
+      <span className="study-tag">concept</span>
     </div>
   );
 }
 
-function ViewError({ what, detail }: { what: string; detail: string }) {
+// Status muat/galat/kosong yang konsisten + tombol coba lagi (pola dari referensi mobile nasa3).
+function ViewLoading() {
   return (
     <div className="page">
-      <p className="stat-error">
-        Backend unavailable - {what} is not shown rather than filled with example numbers. ({detail})
-      </p>
+      <InlineState kind="loading" title="Reading the evidence model" />
+    </div>
+  );
+}
+
+function ViewError({ what, detail, onRetry }: { what: string; detail?: string; onRetry?: () => void }) {
+  return (
+    <div className="page">
+      <InlineState
+        kind="error"
+        title={`${what} unavailable`}
+        detail={`No example numbers have been substituted.${detail ? ` (${detail})` : ""}`}
+        onRetry={onRetry}
+      />
+    </div>
+  );
+}
+
+function InlineState({ kind, title, detail, onRetry }: {
+  kind: "loading" | "error" | "empty";
+  title: string;
+  detail?: string;
+  onRetry?: () => void;
+}) {
+  return (
+    <section className={`view-state ${kind}`} role={kind === "error" ? "alert" : "status"} aria-live="polite">
+      <strong>{title}</strong>
+      {detail && <p>{detail}</p>}
+      {onRetry && (
+        <button className="primary-button" onClick={onRetry}>
+          RETRY CONNECTION
+        </button>
+      )}
+    </section>
+  );
+}
+
+/** Koneksi putus SETELAH data termuat: data lama tetap tampil, dengan peringatan + coba lagi. */
+function ConnectionNotice({ onRetry }: { onRetry: () => void }) {
+  return (
+    <div className="connection-notice" role="status">
+      <span>Connection interrupted. Showing the last successfully loaded evidence.</span>
+      <button className="text-button" onClick={onRetry}>
+        RETRY
+      </button>
     </div>
   );
 }
@@ -879,9 +965,9 @@ const varied = (v: any) => {
 };
 
 function Comparison() {
-  const { data, error } = useInsight();
+  const { data, error, retry } = useInsight();
   const [sel, setSel] = useState<string[]>([]);
-  if (error) return <ViewError what="comparison" detail={error} />;
+  if (error && !data) return <ViewError what="comparison" detail={error} onRetry={retry} />;
   if (!data) return <ViewLoading />;
 
   const cards: any[] = data.investigations;
@@ -924,6 +1010,7 @@ function Comparison() {
         title="Comparison"
         description="Put investigations side by side on the attributes the challenge asks about: fuels, conditions, variables and sensors."
       />
+      {error && <ConnectionNotice onRetry={retry} />}
       <Panel title="Pick investigations" meta={`${chosen.length} SELECTED`}>
         <div className="pick-grid">
           {cards.map((c) => (
@@ -945,6 +1032,7 @@ function Comparison() {
                 <th />
                 {chosen.map((c: any) => (
                   <th key={c.accession}>
+                    <StudyMark accession={c.accession} title={c.name} size="large" />
                     {c.name}
                     <small>{c.accession}</small>
                   </th>
@@ -1020,6 +1108,10 @@ function ResearchMap({ onEvidence }: { onEvidence: (record: EvidenceRecord) => v
         title="Research Map"
         description="How investigations, papers and topics connect — and how that connection was established."
       />
+      <Panel title="Citation network" meta="INDEXED PAPERS → WHAT THEY CITE → COMMON ROOTS" className="cite-panel">
+        <CitationGraph />
+      </Panel>
+
       <div className="segmented objective-switch">
         <button className={kind === "all" ? "active" : ""} onClick={() => setKind("all")}>
           all links
@@ -1042,8 +1134,8 @@ function ResearchMap({ onEvidence }: { onEvidence: (record: EvidenceRecord) => v
             ))}
           </div>
           <p className="panel-footnote">
-            Topic similarity is not a citation. No citation network is built because the papers'
-            reference lists are not available to us.
+            Topic similarity is not a citation. Real citations are in the citation network above
+            (reference lists from OpenAlex).
           </p>
         </Panel>
 
@@ -1103,15 +1195,19 @@ function Assistant() {
     setQuestion("");
     setBusy(true);
     setMessages((c) => [...c, { role: "user", text: q }, { role: "assistant", text: "", pending: true }]);
-    const history = messages
-      .filter((m) => !m.pending && !m.failed)
-      .slice(-6)
-      .map((m) => ({ role: m.role, content: m.text }));
+    // Backend (brain.py clean_history) menerima pasangan {q, a}. Sebelumnya dikirim
+    // {role, content}, yang dibuang seluruhnya: pertanyaan lanjutan kehilangan konteks.
+    const history: { q: string; a: string }[] = [];
+    messages.forEach((m, i) => {
+      const next = messages[i + 1];
+      if (m.role === "user" && next?.role === "assistant" && !next.pending && !next.failed)
+        history.push({ q: m.text, a: next.text });
+    });
     try {
       const reply = await askApi(q, history);
       setMessages((c) => [
         ...c.slice(0, -1),
-        { role: "assistant", text: reply.answer, reply },
+        { role: "assistant", text: reply.answer, reply, q },
       ]);
     } catch (e) {
       setMessages((c) => [
@@ -1175,7 +1271,7 @@ function Assistant() {
                 ) : (
                   <p>{m.text}</p>
                 )}
-                {m.reply && <ReplyMeta reply={m.reply} />}
+                {m.reply && <ReplyMeta reply={m.reply} question={m.q} />}
               </div>
             ))}
           </div>
@@ -1214,7 +1310,33 @@ function Assistant() {
 }
 
 /** Grounding, jejak alat, dan gambar asli paper di bawah satu jawaban. */
-function ReplyMeta({ reply }: { reply: AskReply }) {
+type Msg = { role: "user" | "assistant"; text: string; pending?: boolean; failed?: boolean; reply?: AskReply; q?: string };
+
+/** Umpan balik 👍/👎 -> POST /feedback -> kb/gold/cases.jsonl. Jawaban berlabel "baik"
+ *  dipakai asisten sebagai contoh pendekatan untuk pertanyaan serupa (similar_cases). */
+function FeedbackButtons({ reply, question }: { reply: AskReply; question?: string }) {
+  const [sent, setSent] = useState<"up" | "down" | "error" | null>(null);
+  if (!question) return null;
+  const rate = async (r: "up" | "down") => {
+    try {
+      await sendFeedback({ question, answer: reply.answer, rating: r === "up" ? "baik" : "buruk", mode: reply.mode, tool_calls: reply.tool_calls });
+      setSent(r);
+    } catch {
+      setSent("error");
+    }
+  };
+  if (sent === "error") return <small className="feedback-note">Feedback is closed on the public deployment.</small>;
+  if (sent) return <small className="feedback-note">{sent === "up" ? "Thanks: kept as a good example." : "Thanks: noted as a bad answer."}</small>;
+  return (
+    <div className="feedback-row">
+      <span>WAS THIS ANSWER GOOD?</span>
+      <button onClick={() => rate("up")} aria-label="Good answer">👍</button>
+      <button onClick={() => rate("down")} aria-label="Bad answer">👎</button>
+    </div>
+  );
+}
+
+function ReplyMeta({ reply, question }: { reply: AskReply; question?: string }) {
   const g = reply.grounding;
   const bad = g?.ungrounded?.length ?? 0;
   return (
@@ -1235,6 +1357,7 @@ function ReplyMeta({ reply }: { reply: AskReply }) {
         </div>
       )}
       <ReplyMedia reply={reply} />
+      <FeedbackButtons reply={reply} question={question} />
       <small>mode: {reply.mode}</small>
     </div>
   );
@@ -1365,7 +1488,7 @@ function EvidenceBadge({ tier }: { tier: EvidenceTier }) {
 /** Angka ringkas dari backend. Tidak ada nilai cadangan karangan: bila backend
  *  mati, yang tampil "—" dan catatan, bukan angka contoh. */
 function StatStrip({ onEvidence }: { onEvidence: (r: EvidenceRecord) => void }) {
-  const { data, error } = useInsight();
+  const { data, error, retry } = useInsight();
   const totals = data?.totals as
     | { key: string; label: string; note: string; value: number | null; tier: EvidenceTier; path: string; caveat?: string }[]
     | undefined;
@@ -1436,7 +1559,7 @@ const PILLAR_ORDER = ["prevention", "detection", "suppression", "fundamentals"];
 
 /** Jumlah investigasi per pilar dari /insight_data (bukan angka mockup 9/7/8). */
 function PillarDistribution() {
-  const { data, error } = useInsight();
+  const { data, error, retry } = useInsight();
   if (error) return <p className="chart-note">Backend unavailable — distribution not shown.</p>;
   if (!data) return <p className="chart-note">Loading…</p>;
   const inv = data.investigations || [];
@@ -2006,16 +2129,23 @@ function Gauge({ value, label }: { value: number; label: string }) {
 }
 /** Bilah status dari backend sungguhan; sebelumnya "NOMINAL" dan "7,924 CHUNKS" ditulis keras. */
 function Footer() {
-  const { data, error } = useInsight();
+  const { data, error, retry } = useInsight();
   const st = useStatus();
   const backend = error ? "OFFLINE" : data ? "ONLINE" : "CHECKING…";
   const chunks = data?.corpus?.chunks;
   const built = data?.built ? String(data.built).slice(0, 10) : "—";
-  const assistant = !st ? "—" : st.llm ? `${st.provider}${st.model ? " · " + st.model : ""}` : "OFFLINE PLANNER";
+  // hanya penyedia di bilah (nama model panjang membuat bilah meluap); nama model di tooltip
+  const assistant = !st ? "—" : st.llm ? st.provider : "OFFLINE PLANNER";
+  const assistantTitle = st?.llm && st.model ? `${st.provider} · ${st.model}` : undefined;
   return (
     <footer className="statusbar">
       <span>
         <i className={error ? "is-offline" : undefined} /> BACKEND <b>{backend}</b>
+        {error && (
+          <button className="statusbar-retry" onClick={retry}>
+            RETRY
+          </button>
+        )}
       </span>
       <span>
         KB BUILT <b>{built}</b>
@@ -2023,7 +2153,7 @@ function Footer() {
       <span>
         SEARCH INDEX <b>{chunks != null ? `${fmt(chunks)} CHUNKS` : "—"}</b>
       </span>
-      <span>
+      <span title={assistantTitle}>
         ASSISTANT <b>{assistant.toUpperCase()}</b>
       </span>
       <em className="visual-credit">DESERT ANALOG · RYAN GREWELL / UNSPLASH</em>

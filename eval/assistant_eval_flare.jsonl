@@ -1,0 +1,16 @@
+{"id": "f01", "q": "Show me the equation for opposed-flow flame spread rate over a thin solid.", "expect_tools": ["find_equations"], "expect_media": "figures", "must_cite": "paper"}
+{"id": "f02", "q": "What does a flame look like when it spreads over PMMA in microgravity? Show a figure.", "expect_tools": ["find_figures"], "expect_media": "figures", "must_cite": "paper"}
+{"id": "f03", "q": "Could a PMMA rod keep burning on the Moon in 30% oxygen at 70 kPa?", "expect_tools": ["gravity_flammability"], "must_contain": ["model"]}
+{"id": "f04", "q": "Plot the limiting oxygen for PMMA against gravity.", "expect_tools": ["make_plot"], "expect_media": "plots"}
+{"id": "f05", "q": "Which investigations matter most for a Moon or Mars base?", "expect_tools": ["rank_investigations", "scenario_evidence"], "must_cite": "inv"}
+{"id": "f06", "q": "Compare FLEX and BASS-II for spacecraft cabin fire safety.", "expect_tools": ["compare_investigations", "get_investigation"], "must_cite": "inv"}
+{"id": "f07", "q": "Is there any partial-gravity flame data in NASA PSI?", "expect_tools": ["scenario_evidence", "coverage", "rank_investigations", "search_papers"], "must_not_match": ["\\bPSI[^\\n]{0,40}(Moon|lunar|Mars)[^\\n]{0,30}(tests? (were|was) (run|conducted|flown))"]}
+{"id": "f08", "q": "What do papers say about smoldering in microgravity?", "expect_tools": ["search_papers"], "must_cite": "paper"}
+{"id": "f09", "q": "Plot the smoke-point data from SPICE.", "expect_tools": ["make_plot"], "expect_media": "plots"}
+{"id": "f10", "q": "At what coflow does a 1.6 mm propylene jet flame reach its smoke point?", "expect_tools": ["predict_smoke_point"], "must_contain": ["model"]}
+{"id": "f11", "q": "Tunjukkan rumus laju pembakaran droplet (d-squared law) dari paper.", "expect_tools": ["find_equations"], "expect_media": "figures", "must_cite": "paper"}
+{"id": "f12", "q": "Investigasi mana yang paling relevan untuk kabin pesawat antariksa, dan kenapa?", "expect_tools": ["rank_investigations"], "must_cite": "inv"}
+{"id": "f13", "q": "What is the oxygen range tested in Saffire?", "expect_tools": ["get_investigation", "find_tests", "search_papers"], "must_cite": "inv"}
+{"id": "f14", "q": "Give me the flame spread rate measured on Mars by NASA.", "expect_tools": ["search_papers", "scenario_evidence", "coverage", "gravity_flammability", "rank_investigations"], "must_not_match": ["\\b\\d+(\\.\\d+)? ?(cm/s|mm/s)\\b[^\\n]{0,60}(measured|recorded) on Mars"]}
+{"id": "f15", "q": "Show the hardware used in the ACME experiments.", "expect_tools": ["find_figures", "get_investigation"], "expect_media": "figures"}
+{"id": "f16", "q": "How confident is the burn time model for heptane droplets?", "expect_tools": ["model_cards", "uncertainty_stats"]}

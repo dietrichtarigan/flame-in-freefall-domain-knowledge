@@ -1,0 +1,204 @@
+{
+ "deepseek": {
+  "mode": "deepseek",
+  "n": 8,
+  "aggregate": {
+   "pass": 0.875,
+   "tool_ok": 1.0,
+   "contain_ok": 1.0,
+   "forbid_ok": 1.0,
+   "ui_ok": 1.0,
+   "grounded": 0.875,
+   "cites_ok": 1.0,
+   "media_ok": 1.0,
+   "cite_ok": 1.0,
+   "ms_median": 13955
+  },
+  "rows": [
+   {
+    "id": "g01",
+    "q": "Show a figure of a spherical diffusion flame from ACME.",
+    "mode": "deepseek",
+    "ms": 13955,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "find_figures"
+    ],
+    "media_ok": true,
+    "cite_ok": true,
+    "pass": true,
+    "answer": "Here is a figure from the ACME spherical-diffusion-flame work:\n\n**Figure 1** — photograph of the experimental configuration aboard the ISS, from *\"On the existence of steady-state gaseous microgravity spherical diffusion flames in the presence of radiation heat loss\"* [[paper:On the existence of steady-state gaseous microgravity spherical diffusion flames in the presence of radiation heat loss|3]].\n\nFor a hardware view, **Figure 3** in *\"Gaseous Non-Premixed Flame Research Planned for the International Space Station\"* [[paper:Gaseous Non-Premixed Flame Research Planned for the International Space Station|7]] shows the ACME burner types, including the porous spherical burners.",
+    "bad_cites": []
+   },
+   {
+    "id": "g02",
+    "q": "Would cotton-like solids burn on Mars at 21% O2 and normal pressure?",
+    "mode": "deepseek",
+    "ms": 28664,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "gravity_flammability",
+     "get_investigation",
+     "make_plot"
+    ],
+    "media_ok": true,
+    "cite_ok": true,
+    "pass": true,
+    "answer": "Short answer: for the **PMMA rod** model, yes — it predicts burning at Mars gravity, 21% O2, 101.3 kPa. The limiting O2 comes out at **14.54%** with a band of **[13.88, 15.11]%**, so 21% sits above the whole band and the verdict is \"burns (oxygen above the whole limit band)\". This is a **model_prediction** (the gravity-bridge fit to BASS-II), not a measurement.\n\nTwo caveats:\n- The model is for **PMMA (acrylic) rods**, not cotton. Cotton is cellulosic and the tool does not answer for it specifically. BASS-II [[inv:PSI-25]] did test a cotton-blend fabric (SIBAL samples, e.g. \"2 cm SIBAL\" and \"1 cm SIBAL\"), but I have no Mars-gravity limiting-O2 value for cotton from the tools.\n- I read \"normal pressure\" as Earth-normal 101.3 kPa (1 atm). Actual Mars surface pressure is far below that and does not naturally contain 21% O2, so this is a habitat/atmosphere question, not the ambient Martian atmosphere.\n\nFlag returned by the model: **no partial-gravity combustion data exist in PSI; gravity enters only through the buoyant-flow scaling**. The chart shows the trend: limiting O2 is highest in microgravity (17.16% on ISS), drops to **14.54% at Mars**, and rises slightly to 14.98% at Earth gravity.",
+    "bad_cites": []
+   },
+   {
+    "id": "g03",
+    "q": "Which investigations are best evidence for spacesuit fire safety?",
+    "mode": "deepseek",
+    "ms": 10178,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "rank_investigations",
+     "scenario_evidence"
+    ],
+    "media_ok": true,
+    "cite_ok": true,
+    "pass": true,
+    "answer": "For spacesuit fire safety (100% O2, ~29.6 kPa), the ranking model puts **FLEX** first, then the smoke-detection and solid-flammability studies — but with an important caveat: none of them actually tested inside the suit atmosphere band.\n\nTop evidence by score (this is the dashboard's scored ranking, not a NASA judgement; score = 0.40 direct link + 0.35 condition proximity + 0.25 evidence depth):\n\n1. **FLEX [[inv:PSI-69]]** — score 0.623 (direct 1.0, conditions 0.0, evidence 0.893). Suppression study, named in the challenge statement.\n2. **SAME-R [[inv:PSI-101]]** — 0.572 (direct 1.0, conditions 0.0, evidence 0.688). Fire/smoke detection.\n3. **BASS-II [[inv:PSI-25]]** — 0.560 (direct 1.0, conditions 0.0, evidence 0.640). Solid flammability.\n4. **SAFFIRE-II [[inv:PSI-99]]** — 0.495 (direct 1.0, conditions 0.0, evidence 0.379). Large-scale material flammability.\n5. **ACME CFI-G [[inv:PSI-159]]** — 0.490 (direct 0.6, conditions 0.0, evidence 1.0). Highest-oxygen microgravity tests.\n\nWhy the condition proximity is 0 for all of them: the suit band is 85–100% O2 at 20–40 kPa, and the evidence scan found **0 tests with both oxygen and pressure inside that band**. The closest data are well outside it: solids max at 22.2% O2, droplets at 34%, gas at 85% — and in CFI-G that 85% O2 is the burner stream, not the ambient atmosphere. Smoke tests (SAME, SAME-R, DAFT) don't tabulate O2 or pressure at all. So FLEX, SAME-R, BASS-II and the Saffire runs are the best *relevant* evidence, but there is no direct measurement of a pure-oxygen, low-pressure suit atmosphere in PSI.",
+    "bad_cites": []
+   },
+   {
+    "id": "g04",
+    "q": "What equation do papers use for the extinction limit of a droplet flame?",
+    "mode": "deepseek",
+    "ms": 8045,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "find_equations",
+     "search_papers"
+    ],
+    "media_ok": true,
+    "cite_ok": true,
+    "pass": true,
+    "answer": "The paper on quasi-steady n-heptane droplet combustion gives the extinction-limit relation as **Equation (22)**, shown below [[paper:Asymptotic analysis of quasi-steady n-heptane droplet combustion supported by cool-flame chemistry|10]]. It expresses the droplet diameter \\(d_e\\) at which diffusive extinction occurs, in terms of the gas-phase diffusion coefficient \\(D\\), the transfer number \\(B\\), and \\(\\chi\\). The transfer number itself is defined by **Equation (23)** on the same page: in the partial-burning regime, \\(B = c_p[(T_b - T_0) - (T_b - T_1)]/L\\).\n\nNote that the equations are displayed as images because the PDF text extraction scrambles the symbols; refer to the images, not the extracted text. The search also found a companion paper stating that predicted extinction diameters depend on the ambient oxygen concentration and are compared with experiment [[paper:Asymptotic analysis of quasi-steady n-heptane droplet combustion supported by cool-flame chemistry|2]], but that paper's exact equations would need a separate `find_equations` call if you want them.",
+    "bad_cites": []
+   },
+   {
+    "id": "g05",
+    "q": "Plot all tabulated tests by oxygen and pressure for FLEX.",
+    "mode": "deepseek",
+    "ms": 6980,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "make_plot",
+     "ui_action"
+    ],
+    "media_ok": true,
+    "cite_ok": true,
+    "pass": true,
+    "answer": "Plotted all tabulated FLEX tests [[inv:PSI-69]] by oxygen and pressure, and the dashboard is now filtered to FLEX.\n\nWhat the chart shows, from the NASA test-table summary:\n\n- **Extinction**: 185 points, oxygen 12.0–30.0%, pressure 70.2–309.3 kPa\n- **Disruption**: 61 points, oxygen 17.0–34.0%, pressure 70.9–309.3 kPa\n- **Completion**: 27 points, oxygen 14.0–34.0%, pressure 70.8–102.8 kPa\n\nAll points come from PSI test tables (truth tier: nasa_table).",
+    "bad_cites": []
+   },
+   {
+    "id": "g06",
+    "q": "Apa yang dikatakan paper tentang api di wahana antariksa (spacecraft fire)?",
+    "mode": "deepseek",
+    "ms": 12803,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "search_papers",
+     "search_papers"
+    ],
+    "media_ok": true,
+    "cite_ok": true,
+    "pass": true,
+    "answer": "Paper NASA tentang api di wahana antariksa umumnya menekankan beberapa hal berikut:\n\n- **Api adalah bahaya paling ditakuti di wahana antariksa**, sebanding dengan di pesawat terbang dan kapal — [[paper:Fire behavior and risk analysis in spacecraft|-]].\n- **Strategi utamanya adalah pencegahan**: menghilangkan salah satu dari tiga faktor api (bahan bakar, oksigen, sumber nyala). Ini pendekatan utama proteksi kebakaran pada wahana berawak saat ini maupun masa depan — [[paper:Progress in Fire Detection and Suppression Technology for Future Space Missions|-]].\n- **Kondisi mikrogravitasi mengubah perilaku api**: tanpa aliran apung, emisi api tidak naik ke langit-langit; partikel bertahan lebih lama di dalam nyala, menggumpal, dan membesar; material rendah/non-flammable menghasilkan emisi yang berbeda dari material di Bumi — [[paper:Evaluation of gas and particle sensors for detecting spacecraft-relevant fire emissions|2]].\n- **Ada keterbatasan nyata pada sistem deteksi dan pemadaman**: kendala massa dan daya yang ketat, serta kebutuhan pemantauan jangka panjang — [[paper:Progress in Fire Detection and Suppression Technology for Future Space Missions|-]].\n- **Pengujian mudah-terbakar sampel kecil saja dianggap belum cukup**; Spacecraft Fire Safety Demonstration Project dibuat untuk mengatasi kekurangan pemahaman keselamatan api di mikrogravitasi — [[paper:Fire safety in space – beyond flammability testing of small samples|2]].\n- Ada pula dokumen praktik keselamatan api di Shuttle dan Space Station Freedom — [[paper:Fire safety practices in the Shuttle and the Space Station Freedom|-]], serta panduan pengguna fasilitas uji keselamatan api wahana antariksa — [[paper:A User's Guide for the Spacecraft Fire Safety Facility|-]].\n\nJika Anda mau, saya bisa fokus ke satu topik (deteksi, pemadaman, uji Saffire, atau data eksperimen tertentu) dan menampilkan figur atau data terkaitnya di dasbor.",
+    "bad_cites": []
+   },
+   {
+    "id": "g07",
+    "q": "Compare Saffire-III and BASS for flame spread.",
+    "mode": "deepseek",
+    "ms": 22341,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": false,
+    "ungrounded": [
+     "0.33"
+    ],
+    "cites_ok": true,
+    "tools": [
+     "compare_investigations",
+     "get_investigation",
+     "get_investigation"
+    ],
+    "media_ok": true,
+    "cite_ok": true,
+    "pass": false,
+    "answer": "Here's how the two compare for flame spread:\n\n**Saffire-III [[inv:PSI-100]]** — a large-scale solid flammability experiment run in the Saffire enclosure in Cygnus. It used SIBAL Fabric sheets of sample size 0.33 cm × 94 cm × 40.6 cm (2 tests) at a constant air flow of 30.0 cm/s. Its flame-spread evidence is direct: the dashboard has 8 mapped image series with flame tip and char front tracked, plus 5 results (tier mix: 8 nasa_table, 4 derived_auto, 2 paper_claim). Objective: determine how rapidly a large-scale fire grows in low gravity and compare low-g flammability limits to NASA's normal-gravity screening test.\n\n**BASS [[inv:PSI-26]]** — Burning and Suppression of Solids, run in the MSG · SPICE flow duct on the ISS. It has many more tests (122), but they are small samples: 2 cm spheres, PMMA spheres, SIBAL 2 cm, Japan Wax Candle (wake), 1 cm spheres. Critically for flame spread, its flow, oxygen, and pressure are all \"not recorded\" in the table, and it has 0 results / no own-data analysis — so there is no measured spread-rate or flame-front data to compare from BASS in the dashboard. Its recorded columns are Date, GMT, As Run Test #, Test #, Sample #, and Fuel Sample Material (236 nasa_table values).\n\n**What is the same vs different:** both are solid-phase flight investigations, but they differ in facility (Saffire enclosure in Cygnus vs MSG · SPICE flow duct) and pillar (Saffire = prevention only; BASS = prevention + suppression). They share no common fuels in the comparison table.\n\nSo, for flame spread specifically, Saffire-III gives you directly tracked flame-tip/char-front spread on a large fabric sheet at a set 30.0 cm/s flow, while BASS gives many small-sample tests but no recorded flow/O2/pressure and no spread results in the dashboard — the two are not directly comparable on a flame-spread rate from the data currently ingested.",
+    "bad_cites": []
+   },
+   {
+    "id": "g08",
+    "q": "What was the exact temperature of the ACME flames in Celsius?",
+    "mode": "deepseek",
+    "ms": 29051,
+    "tool_ok": true,
+    "contain_ok": true,
+    "forbid_ok": true,
+    "ui_ok": true,
+    "grounded": true,
+    "ungrounded": [],
+    "cites_ok": true,
+    "tools": [
+     "get_investigation",
+     "search_papers",
+     "get_investigation",
+     "find_tests",
+     "find_tests",
+     "get_test",
+     "search_papers"
+    ],
+    "media_ok": true,
+    "cite_ok": true,
+    "pass": true,
+    "answer": "There is no single \"exact temperature of the ACME flames\" in Celsius in the dashboard data. What the ACME CFI-G record [[inv:PSI-159]] actually contains is:\n\n- **Adiabatic flame temperature (Tad) in Kelvin**, per test, recorded by NASA. For example, test 21088A1 [[test:PSI-159:21088A1]] has Tad = 2719.323211 K [[m:PSI-159:21088A1:adiabatic_flame_temperature:nasa_table]]. I can't convert that to Celsius for you — this dashboard treats unit conversion as a computed number, and I'm not allowed to produce it.\n- A NASA-table column named **\"Peak burner Temp (C)\"** (and one in K), but that is the *burner* temperature, not the flame temperature, and no Celsius value was returned in the records I retrieved.\n- Telemetry thermocouple channels are stored as **raw volts, explicitly not temperatures** (e.g. `tc_burner_rise` = 0.010795 V, flagged \"bukan_suhu\") [[m:PSI-159:21088A1:tc_burner_rise:tel]].\n\nSo the honest answer: the flame-temperature quantity in the data is the adiabatic flame temperature in Kelvin, given per test — there is no single Celsius flame temperature recorded, and I won't invent or convert one.",
+    "bad_cites": []
+   }
+  ]
+ }
+}

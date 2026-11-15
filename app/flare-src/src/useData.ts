@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { insight, status, type InsightData } from "./api";
 
 /**
@@ -9,35 +9,54 @@ import { insight, status, type InsightData } from "./api";
  * aslinya menuliskan angka sebagai teks keras -- itu berbahaya untuk dashboard
  * yang dinilai juri, karena angka salah tetap terlihat meyakinkan.
  */
-// Satu permintaan untuk seluruh halaman: beberapa komponen (StatStrip, Overview,
-// footer, view lain) memakai paket yang sama (~360 KB), jadi janji-nya dibagi.
-// Bila gagal, janji dibuang supaya kunjungan view berikutnya mencoba lagi.
-let insightPromise: Promise<InsightData> | null = null;
-function loadInsight() {
-  if (!insightPromise) {
-    insightPromise = insight().catch((e) => {
-      insightPromise = null;
-      throw e;
-    });
-  }
-  return insightPromise;
+// Satu sumber bersama untuk seluruh halaman (pola dari referensi mobile nasa3):
+// beberapa komponen memakai paket yang sama (~360 KB), jadi dimuat sekali dan
+// dibagikan lewat useSyncExternalStore. retry() memuat ulang setelah koneksi
+// putus; data yang sudah termuat tetap tampil selama mencoba lagi.
+type LoadState<T> = { data: T | null; loading: boolean; error: string | null };
+
+function createResource<T>(loader: (signal?: AbortSignal) => Promise<T>) {
+  let state: LoadState<T> = { data: null, loading: false, error: null };
+  let controller: AbortController | null = null;
+  const listeners = new Set<() => void>();
+  const emit = () => listeners.forEach((l) => l());
+  const load = () => {
+    controller?.abort();
+    controller = new AbortController();
+    state = { ...state, loading: true, error: null };
+    emit();
+    loader(controller.signal)
+      .then((data) => {
+        state = { data, loading: false, error: null };
+        emit();
+      })
+      .catch((e: unknown) => {
+        if ((e as Error)?.name === "AbortError") return;
+        state = { ...state, loading: false, error: String(e) };
+        emit();
+      });
+  };
+  return {
+    subscribe: (l: () => void) => {
+      listeners.add(l);
+      return () => {
+        listeners.delete(l);
+      };
+    },
+    snapshot: () => state,
+    load,
+    ensure: () => {
+      if (!state.data && !state.loading && !state.error) load();
+    },
+  };
 }
 
+const insightResource = createResource<InsightData>(insight);
+
 export function useInsight() {
-  const [data, setData] = useState<InsightData | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    let alive = true;
-    loadInsight()
-      .then((d) => alive && setData(d))
-      .catch((e: unknown) => alive && setError(String(e)));
-    return () => {
-      alive = false;
-    };
-  }, []);
-
-  return { data, error, loading: !data && !error };
+  const st = useSyncExternalStore(insightResource.subscribe, insightResource.snapshot, insightResource.snapshot);
+  useEffect(insightResource.ensure, []);
+  return { data: st.data, error: st.error, loading: st.loading || (!st.data && !st.error), retry: insightResource.load };
 }
 
 /** Peta riset statis (scripts/research_map.py), disajikan di samping index.html. */

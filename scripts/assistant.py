@@ -306,7 +306,8 @@ def run_tool(name, args, ctx):
 
 # ================================================================ sitasi & grounding
 CITE = re.compile(r"\[\[(m:[^\]]+|test:[^\]]+|paper:[^\]]+|model:[^\]]+|inv:[^\]]+)\]\]")
-NUM = re.compile(r"(?<![\w.])[-−]?\d+(?:[.,]\d+)?(?![\w])")
+# ".33" (tanpa nol di depan, mis. ukuran sampel Saffire-III) juga angka; dulu tidak dikenali di keluaran alat
+NUM = re.compile(r"(?<![\w.])[-−]?(?:\d+(?:[.,]\d+)?|[.,]\d+)(?![\w])")
 
 
 def _paper_link(title):
@@ -438,6 +439,13 @@ How you work:
 - When the user asks for a formula, correlation or scaling law, call find_equations and refer to the equation IMAGE by its label (e.g. 'Equation (2.5), shown below'). Do not retype a paper's equation from raw_text or from search_papers snippets: PDF text extraction scrambles fractions, sub/superscripts and the order of factors. You may name the variables using the defining sentence. Any algebra you add yourself must be labelled as yours.
 - When the question is about an experiment, its hardware or setup, how a flame looks, or a plotted trend, also call find_figures and name the figures you rely on (label and paper). Never describe a figure you did not get from find_figures.
 - Cite inline with these markers, exactly as the ids appear in tool results: [[m:<measurement id>]] for a value, [[test:<id>]] for a test, [[paper:<title>|<page>]] for a paper, [[model:<card id>]] for a model, [[inv:<PSI accession>]] for an investigation.
+  - Every investigation you name gets its marker the first time it appears, e.g. "FLEX [[inv:PSI-69]]". The reader clicks it to reach NASA's record.
+  - [[paper:...]] takes the paper's TITLE as the tool printed it, never an id such as doi:..., ntrs:... or a URL. Use "-" as the page when none is given.
+  - [[model:<card id>]] only for an id that model_cards returned. gravity_flammability, predict_smoke_point and make_plot are not model cards: name their source in words (e.g. "the gravity-bridge fit to BASS-II") and do not invent a model marker. A plot kind such as gravity_loc is not a citation.
+  - When you rely on find_equations or find_figures, cite the paper they came from with [[paper:<title>|<page>]].
+- Write each number exactly as the tool printed it, with no thousands separator added: 1780, not "1,780" or "1.780" (in Indonesian "1.780" reads as 1.78 to the checker and to readers). Keep the tool's decimal point.
+- Exponents, coefficients and formulas come only from find_equations (shown as images). Never quote an exponent or coefficient from a search_papers snippet ("Vf ~ O2^0.9" etc.): snippets are scrambled PDF text. Say that a correlation exists and point to the equation image instead.
+- Years count as numbers too: mention a publication year only when a tool printed it.
 - For questions about whole investigations or about a habitat (cabin, Moon/Mars base, rover, spacesuit, Earth) use rank_investigations, get_investigation, compare_investigations and scenario_evidence. Explain a ranking through its three score components; never present the score as a NASA judgement.
 - When the user asks to look at, show, open or compare something, also call ui_action so the dashboard moves with you (focus a test, select several, filter, set what-if sliders).
 - You cannot verify or annotate data. If something needs a human decision, say so and point to the review queue.
@@ -900,10 +908,18 @@ def run_eval(mode="offline", path="eval/assistant_eval.jsonl"):
                "ui_ok": (not q.get("expect_ui")) or any(u["action"] == q["expect_ui"] for u in r["ui_actions"]),
                "grounded": r["grounding"]["ok"], "ungrounded": r["grounding"]["ungrounded"],
                "cites_ok": all(c.get("exists", True) for c in r["citations"]), "tools": tools}
-        res["pass"] = all(res[k] for k in ("tool_ok", "contain_ok", "forbid_ok", "ui_ok", "grounded", "cites_ok"))
+        # Set FLARE+ (eval/assistant_eval_flare*.jsonl): media yang harus tampil di bawah jawaban
+        # dan jenis sitasi yang harus ada. Set lama tidak memakai field ini, jadi nilainya tetap True.
+        media = q.get("expect_media")
+        res["media_ok"] = (not media) or bool(r.get(media))
+        cite = q.get("must_cite")
+        res["cite_ok"] = (not cite) or any(c.get("kind") == {"inv": "investigation"}.get(cite, cite) for c in r["citations"])
+        res["pass"] = all(res[k] for k in ("tool_ok", "contain_ok", "forbid_ok", "ui_ok", "grounded", "cites_ok", "media_ok", "cite_ok"))
+        res["answer"] = r["answer"][:4000]                 # untuk mendiagnosis kegagalan, bukan untuk skor
+        res["bad_cites"] = [c["ref"] for c in r["citations"] if c.get("exists") is False]
         rows.append(res)
     n = len(rows)
-    agg = {k: round(sum(r[k] for r in rows) / n, 3) for k in ("pass", "tool_ok", "contain_ok", "forbid_ok", "ui_ok", "grounded", "cites_ok")}
+    agg = {k: round(sum(r[k] for r in rows) / n, 3) for k in ("pass", "tool_ok", "contain_ok", "forbid_ok", "ui_ok", "grounded", "cites_ok", "media_ok", "cite_ok")}
     agg["ms_median"] = sorted(r["ms"] for r in rows)[n // 2]
     return {"mode": mode, "n": n, "aggregate": agg, "rows": rows}
 
@@ -933,15 +949,16 @@ def main(argv):
             out[m] = r
             rep += [f"## mode {m} — {r['n']} pertanyaan", "", "| metrik | nilai |", "|---|---|"]
             rep += [f"| {k} | {v} |" for k, v in r["aggregate"].items()]
-            rep += ["", "| id | lulus | alat | isi | UI | grounded | ms | angka tanpa sumber |", "|---|---|---|---|---|---|---|---|"]
+            rep += ["", "| id | lulus | alat | isi | UI | grounded | media | sitasi | ms | angka tanpa sumber | alat dipakai |", "|---|---|---|---|---|---|---|---|---|---|---|"]
             rep += [f"| {x['id']} | {'✔' if x['pass'] else '✘'} | {'✔' if x['tool_ok'] else '✘'} | "
                     f"{'✔' if x['contain_ok'] and x['forbid_ok'] else '✘'} | {'✔' if x['ui_ok'] else '✘'} | "
-                    f"{'✔' if x['grounded'] else '✘'} | {x['ms']} | {' '.join(x['ungrounded'])} |" for x in r["rows"]]
+                    f"{'✔' if x['grounded'] else '✘'} | {'✔' if x.get('media_ok', True) else '✘'} | {'✔' if x.get('cite_ok', True) else '✘'} | "
+                    f"{x['ms']} | {' '.join(x['ungrounded'])} | {' '.join(x['tools'])} |" for x in r["rows"]]
             rep.append("")
             print(m, json.dumps(r["aggregate"], ensure_ascii=False))
             for x in r["rows"]:
                 if not x["pass"]:
-                    print("  GAGAL", x["id"], {k: x[k] for k in ("tool_ok", "contain_ok", "forbid_ok", "ui_ok", "grounded", "cites_ok")},
+                    print("  GAGAL", x["id"], {k: x[k] for k in ("tool_ok", "contain_ok", "forbid_ok", "ui_ok", "grounded", "cites_ok", "media_ok", "cite_ok") if not x[k]},
                           x["ungrounded"], x["tools"])
         note = ROOT / "eval" / f"{tag}_catatan.md"      # catatan kejujuran (mis. hold-out yang sudah terpakai)
         if note.exists():
