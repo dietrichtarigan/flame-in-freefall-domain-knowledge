@@ -186,6 +186,65 @@ th, td { padding: 7px 9px; border-bottom: 1px solid var(--border); vertical-alig
 #explore-panel table { font-size: .8rem; }
 
 </style>
+
+<style id="flare-skin">
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Poppins:wght@300;400;500;600&display=swap");
+html[data-theme="dark"], html {
+  --bg: #161513; --surface: #1f1e1a; --surface-2: #26241f;
+  --border: rgba(232, 227, 216, 0.14); --border-strong: rgba(232, 227, 216, 0.26);
+  --text: #e8e3d8; --text-muted: rgba(232, 227, 216, 0.66); --text-faint: rgba(232, 227, 216, 0.46);
+  --accent: #d4874d; --accent-weak: rgba(212, 135, 77, 0.14); --link: #e0a26f;
+  --ok: #a6b86a; --ok-bg: rgba(166, 184, 106, 0.12); --warn: #e2b84a; --warn-bg: rgba(226, 184, 74, 0.12);
+  --danger: #e07a6c; --danger-bg: rgba(224, 122, 108, 0.12); --info: #65c6d1; --info-bg: rgba(101, 198, 209, 0.1);
+  --violet: #b38be0; --violet-bg: rgba(179, 139, 224, 0.12);
+  --scene-bg: #12110f; --plot-bg: #1f1e1a; --plot-grid: rgba(232, 227, 216, 0.08); --plot-text: #c9c2b4;
+  --s1: #65c6d1; --s2: #e0894f; --s3: #a6b86a;
+  --radius: 2px; --shadow: none;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+html { font-size: 14px; }
+body { background: transparent; font-family: "Poppins", system-ui, sans-serif; }
+/* kepala Open FLEX: judul, build dan tombol tema sudah tidak perlu di dalam FLARE+ */
+.brand, #btn-theme, .skip-link { display: none !important; }
+.app-header { background: #1a1916; padding: 10px 16px 0; border-bottom: 1px solid var(--border); }
+.header-row { justify-content: flex-start; }
+.test-picker label, .run-meta-box { font: 500 10px "IBM Plex Mono", monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--text-faint); }
+.run-meta-box { text-transform: none; letter-spacing: 0; }
+select, input, textarea {
+  background: rgba(0, 0, 0, 0.3); color: var(--text); border: 1px solid var(--border-strong); border-radius: 2px;
+  font: 13px "Poppins", sans-serif; min-height: 32px;
+}
+.scope-strip { gap: 8px; }
+.badge {
+  background: transparent !important; border: 1px solid var(--border-strong) !important; border-radius: 2px !important;
+  color: var(--text-muted) !important; font: 500 9.5px "IBM Plex Mono", monospace !important; letter-spacing: .08em;
+}
+.badge-danger { border-color: rgba(224, 122, 108, .55) !important; color: #e07a6c !important; }
+.badge-warn { border-color: rgba(226, 184, 74, .55) !important; color: #e2b84a !important; }
+.tab-btn { font: 500 13px "Poppins", sans-serif; color: var(--text-muted); padding: 11px 16px; }
+.tab-btn[aria-selected="true"] { color: var(--text); border-bottom-color: var(--accent); }
+.workspace { padding: 16px 16px 32px; }
+.panel { background: rgba(31, 30, 26, 0.92); border-radius: 2px; box-shadow: none; }
+.panel-header { padding: 0 16px; min-height: 46px; }
+.panel-title { font: 500 13px "Poppins", sans-serif; color: var(--text); display: flex; align-items: center; gap: 8px; }
+.panel-title::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: #65c6d1; flex: 0 0 auto; }
+.panel-body { padding: 16px 18px; }
+th { font: 500 10px "IBM Plex Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: var(--text-faint); }
+td { color: var(--text-muted); }
+.btn, .mode-btn {
+  border-radius: 2px; box-shadow: none; font: 500 11px "Poppins", sans-serif; letter-spacing: .06em; text-transform: uppercase;
+  background: transparent; color: var(--text); border: 1px solid var(--border-strong);
+}
+.btn:hover, .mode-btn:hover { border-color: var(--accent); }
+.btn-primary, .mode-btn.active, .mode-btn[aria-checked="true"] { background: #65c6d1 !important; color: #10201f !important; border-color: #65c6d1 !important; }
+.btn-emerald { background: transparent !important; color: var(--accent) !important; border-color: var(--accent) !important; }
+.alert-box { border-radius: 2px; }
+.stat .num { font-weight: 300; color: var(--text); }
+.app-footer { background: transparent; color: var(--text-faint); border-top: 1px solid var(--border); font-size: 11px; }
+input[type="range"] { accent-color: var(--accent); background: none; border: 0; }
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-thumb { background: rgba(101, 198, 209, 0.34); }
+</style>
 </head>
 <body>
 <!-- Open FLEX — Phase B M5 body. Every data value shown here is filled from the embedded registry/data bundle at runtime. -->
@@ -457,22 +516,7 @@ th, td { padding: 7px 9px; border-bottom: 1px solid var(--border); vertical-alig
         <div class="table-wrap" tabindex="0"><table aria-label="Uncertainty budget for the selected test"><thead><tr><th>ID</th><th>Component</th><th>Status</th><th>Value</th><th>Type and semantics</th><th>Basis</th></tr></thead><tbody id="uq-budget-table"></tbody></table></div>
       </div>
     </section>
-    <section class="panel" aria-labelledby="rm-h">
-      <div class="panel-header"><h2 class="panel-title" id="rm-h">Removed in Phase B and why</h2></div>
-      <div class="panel-body">
-        <div class="table-wrap" tabindex="0"><table data-source="docs/PHASE_B_01_Independent_Assessment_and_Revision_Plan.md">
-          <thead><tr><th>Removed item</th><th>Reason</th><th>Condition to restore</th></tr></thead>
-          <tbody>
-            <tr><td>Monte Carlo 5th–95th percentile range of k̄</td><td>Input σ values were unsourced; NASA's ±50 µm was wrongly treated as 2σ (the TP states no σ); response function was an unsourced correlation.</td><td>Documented input-distribution table and a documented model.</td></tr>
-            <tr><td>Sobol "first-order indices" chart</td><td>Hard-coded numbers summing to 1.14 (impossible for first-order indices of independent inputs); no computation existed.</td><td>Computed with SALib on a declared model: sampler, N, bounds, S1 and ST with confidence intervals, convergence.</td></tr>
-            <tr><td>"Regression RMSE" on replay</td><td>Fit to synthetic points generated from the same constant (circular), with a hard-coded fallback.</td><td>Fit to source or digitized series with N, window, residuals and a stated treatment of frame autocorrelation (done for digitized tests).</td></tr>
-            <tr><td>"CV segmentation threshold" readout</td><td>Rescaled a synthetic radius and printed NASA's ±50 µm beside it as if it were a measurement.</td><td>Real HiBMs frames and a calibration procedure.</td></tr>
-            <tr><td>"Group-split by test ID", conformal-prediction badges</td><td>No ML model or calibration exists in the application.</td><td>A trained model with a whole-test split and empirical coverage report.</td></tr>
-          </tbody>
-        </table></div>
-        <div class="alert-box alert-info" data-interpretive="design rules (Phase B plan)"><strong>Design rules for future ML/UQ (not implemented):</strong> split by whole physical test ID, never by frame; conformal coverage is marginal under exchangeability; sensitivity indices are not prediction intervals; do not assume ±2σ = 95 %.</div>
-      </div>
-    </section>
+    
   </div>
   <section class="panel" aria-labelledby="cov-h">
     <div class="panel-header"><h2 class="panel-title" id="cov-h">Condition coverage of Table IX ("domain status")</h2><span class="badge badge-warn">COVERAGE OF TESTED CONDITIONS — NOT A VALIDATION DOMAIN</span></div>
@@ -492,21 +536,7 @@ th, td { padding: 7px 9px; border-bottom: 1px solid var(--border); vertical-alig
       <div id="plot-coverage" style="min-height:300px" role="img" aria-label="Tested oxygen fraction and pressure for the chosen fuel and diluent, with the query point"></div>
     </div>
   </section>
-  <section class="panel" aria-labelledby="val-h">
-    <div class="panel-header"><h2 class="panel-title" id="val-h">Validation label policy</h2><span class="badge badge-danger">NO LABEL IS CURRENTLY GRANTED TO ANY MODEL</span></div>
-    <div class="panel-body">
-      <div class="table-wrap" tabindex="0"><table data-interpretive="label policy (Phase B plan)">
-        <thead><tr><th>Label</th><th>Required evidence</th><th>Granting authority</th></tr></thead>
-        <tbody>
-          <tr><td>SOURCE-TRACEABLE</td><td>Source ID, exact locator and checksum of the source file.</td><td>Automated schema check.</td></tr>
-          <tr><td>MODEL-VERIFIED</td><td>Code verification tests and solution-verification (grid/time-step, conservation) reports.</td><td>Model maintainer + numerical reviewer.</td></tr>
-          <tr><td>INDEPENDENTLY-REPRODUCED</td><td>An external researcher reruns a released package and reports differences.</td><td>Independent replicator, public report.</td></tr>
-          <tr><td>EXPERT-REVIEWED</td><td>Named reviewer, verified expertise, scope, date, conflicts.</td><td>Verified domain expert.</td></tr>
-          <tr><td>NASA-INSTITUTIONALLY-VALIDATED</td><td>Formal written authorization from an official NASA review process with explicit scope.</td><td><strong>Disabled in software.</strong> A NASA citation is not NASA endorsement.</td></tr>
-        </tbody>
-      </table></div>
-    </div>
-  </section>
+  
 </section>
 
 <!-- 5. EVIDENCE & REPRODUCIBILITY -->
@@ -541,9 +571,9 @@ th, td { padding: 7px 9px; border-bottom: 1px solid var(--border); vertical-alig
   <section class="panel" aria-labelledby="ex-h">
     <div class="panel-header"><h2 class="panel-title" id="ex-h">Export</h2></div>
     <div class="panel-body">
-      <p class="small" data-interpretive="export description">A plain JSON manifest of the selected test record with its SHA-256. It is not an RO-Crate; a validated RO-Crate export is planned for M6.</p>
+      <p class="small" data-interpretive="export description">A plain JSON manifest of the selected test record with its SHA-256. It is not an RO-Crate.</p>
       <button class="btn btn-emerald" id="btn-export" onclick="OF.exportManifest()">Export JSON manifest (not an RO-Crate)</button>
-      <p class="sub-note" data-interpretive="removal note">The earlier "Research Commons" tab was removed: it displayed fabricated posts and saved nothing. It will return only with real persistence and moderation.</p>
+      
     </div>
   </section>
 </section>
@@ -5301,6 +5331,25 @@ window.addEventListener("DOMContentLoaded", function () {
   OF.ready = true;
 });
 
+</script>
+
+<script id="flare-force-dark">
+/* FLARE+ selalu gelap: tema lab dikunci ke "dark" (juga bila browser menyimpan "light"). */
+(function () {
+  function lock() {
+    if (!window.OF || !OF.applyTheme || OF.__flareDark) return false;
+    var apply = OF.applyTheme;
+    OF.applyTheme = function () { apply("dark"); };
+    OF.__flareDark = true;
+    apply("dark");
+    try { localStorage.setItem("openflex-theme", "dark"); } catch (e) {}
+    if (OF.state && OF.state.testId && OF.selectTest) OF.selectTest(OF.state.testId);
+    return true;
+  }
+  document.documentElement.setAttribute("data-theme", "dark");
+  if (!lock()) document.addEventListener("DOMContentLoaded", lock);
+  window.addEventListener("load", function () { lock(); });
+})();
 </script>
 </body>
 </html>
