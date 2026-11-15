@@ -6009,3 +6009,142 @@ select:focus-visible {
   height: 34px;
   object-fit: contain;
 }
+
+
+/* ------------------------------------------- kartu peringkat (data nyata) */
+.rank-card {
+  padding: 14px 16px 12px;
+  border-bottom: 1px solid var(--line);
+}
+.rank-card:last-child {
+  border-bottom: 0;
+}
+.rank-card header {
+  display: grid;
+  grid-template-columns: 30px 1fr auto;
+  align-items: baseline;
+  gap: 12px;
+}
+.rank-no {
+  font: 400 11px "IBM Plex Mono", monospace;
+  color: var(--faint);
+}
+.rank-id strong {
+  font: 500 15px "Poppins", sans-serif;
+  color: var(--ink);
+}
+.rank-id small {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  color: var(--faint);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.rank-score {
+  font: 500 20px "IBM Plex Mono", monospace;
+  color: var(--amber);
+}
+.rank-why {
+  margin: 8px 0 10px 42px;
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.rank-bars {
+  display: grid;
+  gap: 5px;
+  margin-left: 42px;
+}
+.rank-bar {
+  display: grid;
+  grid-template-columns: 92px 1fr 128px;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.rank-bar i {
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(232, 227, 216, 0.12);
+  overflow: hidden;
+}
+.rank-bar i b {
+  display: block;
+  height: 100%;
+  background: var(--amber);
+}
+.rank-bar small {
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--faint);
+  text-align: right;
+}
+.rank-stability {
+  margin: 8px 0 0 42px;
+  font-size: 11px;
+  color: var(--faint);
+}
+.rank-card .text-button {
+  margin: 8px 0 0 42px;
+}
+
+/* tingkat keparahan celah: warna + label teks, tidak mengandalkan warna saja */
+.gap-level {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 3px;
+  font: 500 10px "IBM Plex Mono", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--line-strong);
+  color: var(--muted);
+}
+.gap-level.critical {
+  color: var(--amber);
+  border-color: var(--amber);
+}
+.gap-level.warning {
+  color: var(--cream);
+  border-color: var(--cream);
+}
+.quality-facts {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.quality-facts:last-child {
+  border-bottom: 0;
+}
+.quality-facts strong {
+  display: block;
+  margin: 6px 0 4px;
+  color: var(--ink);
+  font-weight: 500;
+}
+.quality-facts p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.next-tests {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.next-tests th {
+  text-align: left;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--line-strong);
+  font: 500 10px "IBM Plex Mono", monospace;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+  text-transform: uppercase;
+}
+.next-tests td {
+  padding: 7px 8px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}

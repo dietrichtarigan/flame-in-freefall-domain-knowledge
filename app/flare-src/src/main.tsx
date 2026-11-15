@@ -598,381 +598,291 @@ function Overview({
   );
 }
 
+/** Peringkat investigasi per skenario habitat, dari /insight_data.
+ *  Skor dan ketiga komponennya ditampilkan apa adanya, lengkap dengan alasannya --
+ *  bukan angka "match" tanpa penjelasan seperti di mockup. */
 function Scenario({ onEvidence }: { onEvidence: (record: EvidenceRecord) => void }) {
-  const [oxygen, setOxygen] = useState(30);
-  const [pressure, setPressure] = useState(10.2);
-  const [velocity, setVelocity] = useState(10);
-  const [objective, setObjective] = useState("Prevention");
-  const [material, setMaterial] = useState("Any material");
-  const [ran, setRan] = useState(false);
-  const [mission, setMission] = useState("Lunar base");
-  const [gravity, setGravity] = useState("Moon");
-  const [gravityG, setGravityG] = useState(0.166);
-  const [selectedRank, setSelectedRank] = useState("FLEX");
+  const { data, error } = useInsight();
+  const [sid, setSid] = useState<string>("surface");
 
-  const presets = [
-    { name: "Spacecraft cabin", oxygen: 21, pressure: 14.7, gravity: "Microgravity", g: 0 },
-    { name: "Lunar base", oxygen: 30, pressure: 10.2, gravity: "Moon", g: 0.166 },
-    { name: "Mars habitat", oxygen: 32, pressure: 8.2, gravity: "Mars", g: 0.378 },
-    { name: "Pressurized rover", oxygen: 34, pressure: 8.0, gravity: "Moon", g: 0.166 },
-    { name: "Spacesuit", oxygen: 100, pressure: 4.3, gravity: "Microgravity", g: 0 },
-  ];
+  if (error) return <ViewError what="scenario ranking" detail={error} />;
+  if (!data) return <ViewLoading />;
 
-  const applyPreset = (preset: (typeof presets)[number]) => {
-    setMission(preset.name);
-    setOxygen(preset.oxygen);
-    setPressure(preset.pressure);
-    setGravity(preset.gravity);
-    setGravityG(preset.g);
-    setRan(false);
-  };
-
-  const scored = useMemo(
-    () =>
-      investigations
-        .map((item, i) => ({
-          ...item,
-          match: Math.max(48, item.match - Math.abs(oxygen - 30) - i * 2),
-        }))
-        .sort((a, b) => b.match - a.match),
-    [oxygen],
-  );
+  const sc: any = data.scenario[sid];
+  const ranking = (sc?.ranking ?? []) as RankRow[];
+  const phase = (sc?.phase ?? {}) as Record<string, any>;
 
   return (
     <div className="page">
       <PageTitle
         index="02"
-        overline="MISSION-SPECIFIC DISCOVERY"
+        overline="MISSION DISCOVERY"
         title="Scenario Explorer"
-        description="Describe a spacecraft environment and fire-safety objective to find relevant NASA investigations and inspect how closely their test conditions match."
+        description="Pick where the crew will live. Every investigation is re-ranked for that atmosphere, and each score says why."
       />
-      <div className="scenario-layout">
-        <Panel title="Mission parameters" meta="SCENARIO INPUT" className="parameter-panel">
-          <div className="preset-block">
-            <span>Habitat presets</span>
-            <div className="preset-grid">
-              {presets.map((preset) => (
-                <button
-                  key={preset.name}
-                  className={mission === preset.name ? "active" : ""}
-                  onClick={() => applyPreset(preset)}
-                >
-                  <HabitatAsset type={preset.name} />
-                  {preset.name}
-                  <small>
-                    {preset.oxygen}% O₂ · {preset.pressure} psi
-                  </small>
-                </button>
-              ))}
-            </div>
-          </div>
-          <AtmosphereModel
-            oxygen={oxygen}
-            pressure={pressure}
-            velocity={velocity}
-            gravity={gravity}
-            gravityG={gravityG}
-          />
-          <Field label="Mission environment">
-            <select value={mission} onChange={(event) => setMission(event.target.value)}>
-              {presets.map((preset) => (
-                <option key={preset.name}>{preset.name}</option>
-              ))}
-            </select>
-          </Field>
-          <Field label="Gravity condition">
-            <GravitySelector
-              gravity={gravity}
-              gravityG={gravityG}
-              onChange={(name, value) => {
-                setGravity(name);
-                setGravityG(value);
-                setRan(false);
-              }}
-            />
-          </Field>
-          <Range
-            label="Gravity level"
-            value={gravityG}
-            min={0}
-            max={1.5}
-            step={0.01}
-            suffix=" g"
-            onChange={(value) => {
-              setGravityG(value);
-              const exact = [
-                { name: "Microgravity", value: 0 },
-                { name: "Moon", value: 0.166 },
-                { name: "Mars", value: 0.378 },
-                { name: "Earth", value: 1 },
-              ].find((item) => Math.abs(item.value - value) < 0.005);
-              setGravity(exact?.name ?? "Custom");
-              setRan(false);
-            }}
-          />
-          <Range
-            label="Oxygen concentration"
-            value={oxygen}
-            min={15}
-            max={mission === "Spacesuit" ? 100 : 40}
-            step={1}
-            suffix="%"
-            onChange={setOxygen}
-          />
-          <Range
-            label="Ambient pressure"
-            value={pressure}
-            min={4}
-            max={15}
-            step={0.1}
-            suffix=" psi"
-            onChange={setPressure}
-          />
-          <Range
-            label="Ventilation velocity"
-            value={velocity}
-            min={0}
-            max={25}
-            step={1}
-            suffix=" cm/s"
-            onChange={setVelocity}
-          />
-          <Field label="Fuel / material category">
-            <MaterialSelector value={material} onChange={setMaterial} />
-          </Field>
-          <Field label="Fire-safety objective">
-            <div className="segmented objective-segmented">
-              {["Prevention", "Detection", "Suppression"].map((x) => (
-                <button
-                  className={objective === x ? "selected" : ""}
-                  onClick={() => setObjective(x)}
-                  key={x}
-                >
-                  <span className={`objective-glyph ${x.toLowerCase()}`}>
-                    <i />
-                    <i />
-                  </span>
-                  <span>{x}</span>
-                </button>
-              ))}
-            </div>
-          </Field>
-          <button className="run-button" onClick={() => setRan(true)}>
-            FIND RELEVANT INVESTIGATIONS <Icon name="arrow" size={14} />
+
+      <div className="segmented objective-segmented">
+        {data.scenarios.map((id) => (
+          <button key={id} className={id === sid ? "active" : ""} onClick={() => setSid(id)}>
+            {data.scenario[id]?.short || data.scenario[id]?.name || id}
           </button>
+        ))}
+      </div>
+
+      {sc?.headline && (
+        <Panel title="What the data says" meta="SCENARIO HEADLINE">
+          <p className="score-heading">{sc.headline}</p>
+          <p className="panel-footnote">{sc.basis}</p>
+        </Panel>
+      )}
+
+      <div className="scenario-layout">
+        <Panel
+          title="Investigations ranked for this atmosphere"
+          meta={ranking.length + " RANKED"}
+          className="result-panel"
+        >
+          <div className="results-stack">
+            {ranking.slice(0, 10).map((r, i) => (
+              <article key={r.accession} className="rank-card">
+                <header>
+                  <span className="rank-no">{String(i + 1).padStart(2, "0")}</span>
+                  <div className="rank-id">
+                    <strong>{r.name}</strong>
+                    <small>{r.pillars.join(" / ") || "—"}</small>
+                  </div>
+                  <b className="rank-score">{r.score.toFixed(2)}</b>
+                </header>
+                <p className="rank-why">{r.why?.conditions}</p>
+                <div className="rank-bars">
+                  <Bar label="Direct link" value={r.components.direct} weight={data.weights.direct} />
+                  <Bar label="Conditions" value={r.components.conditions} weight={data.weights.conditions} />
+                  <Bar label="Evidence" value={r.components.evidence} weight={data.weights.evidence} />
+                </div>
+                {r.stability && (
+                  <p className="rank-stability">
+                    keeps rank {i + 1} in {Math.round(r.stability.keep * 100)}% of random weightings
+                    {" "}(range {r.stability.lo}-{r.stability.hi})
+                  </p>
+                )}
+                <button
+                  className="text-button"
+                  onClick={() =>
+                    onEvidence({
+                      label: r.name + " score " + r.score.toFixed(2),
+                      value: r.score.toFixed(2),
+                      tier: "derived_auto",
+                      source: "Ranking computed from NASA PSI tables",
+                      path: "insight_data -> scenario." + sid + ".ranking",
+                      note:
+                        (data.method?.score || "") +
+                        " Direct: " + (r.why?.direct || "") +
+                        " Evidence: " + (r.why?.evidence || ""),
+                    })
+                  }
+                >
+                  WHY THIS SCORE
+                </button>
+              </article>
+            ))}
+          </div>
         </Panel>
 
-        <div className="results-stack">
-          <Panel
-            title="Recommended investigations"
-            meta={ran ? `${scored.length} MATCHES` : "AWAITING PARAMETERS"}
-            className="result-panel"
-          >
-            {!ran ? (
-              <div className="empty-state">
-                <Icon name="target" size={34} />
-                <strong>Your research shortlist will appear here</strong>
-                <p>Adjust mission parameters and run the scenario analysis.</p>
-              </div>
-            ) : (
-              scored.map((item, index) => (
-                <button
-                  className={`result-row ${selectedRank === item.name ? "selected" : ""}`}
-                  key={item.name}
-                  onClick={() => setSelectedRank(item.name)}
-                >
-                  <span className="result-rank">0{index + 1}</span>
-                  <span>
-                    <strong>{item.name}</strong>
-                    <small>
-                      {item.objective} · {item.tests} tests
-                    </small>
-                  </span>
-                  <span className="match">
-                    <b>{item.match}%</b>
-                    <i>
-                      <em style={{ width: `${item.match}%` }} />
-                    </i>
-                  </span>
-                  <span className="stability">
-                    {index === 0 ? "80%" : `${66 - index * 9}%`}
-                    <small>stable</small>
-                  </span>
-                  <Icon name="arrow" size={14} />
-                </button>
-              ))
-            )}
-          </Panel>
-          <Panel title="Experimental-condition compatibility" meta="COMPARISON FRAMEWORK">
-            <div className="compatibility">
-              <Compat label="Gravity" value={ran ? "Direct match" : "—"} score={ran ? 96 : 0} />
+        <Panel title="Atmosphere and coverage" meta="SCENARIO BAND" className="parameter-panel">
+          <div className="preset-block">
+            <Field label="Oxygen band">
+              <b>
+                {Math.round((sc.o2?.[0] ?? 0) * 100)}-{Math.round((sc.o2?.[1] ?? 0) * 100)}%
+              </b>
+            </Field>
+            <Field label="Pressure band">
+              <b>
+                {sc.p_kpa?.[0]} - {sc.p_kpa?.[1]} kPa
+              </b>
+            </Field>
+            <Field label="Gravity">
+              <b>{sc.gravity}</b>
+            </Field>
+            <Field label="Tests inside the band">
+              <b>{sc.n_near}</b>
+            </Field>
+          </div>
+          <div className="compatibility">
+            {Object.entries(phase).map(([k, v]: [string, any]) => (
               <Compat
-                label="Oxygen"
-                value={ran ? `Near ${oxygen}% target` : "—"}
-                score={ran ? 82 : 0}
+                key={k}
+                label={k}
+                value={v.n_in_band + " of " + v.n_tests + " in band"}
+                score={v.n_tests ? v.n_in_band / v.n_tests : 0}
               />
-              <Compat label="Pressure" value={ran ? "Partial overlap" : "—"} score={ran ? 64 : 0} />
-              <Compat
-                label="Ventilation"
-                value={ran ? "Reported subset" : "—"}
-                score={ran ? 58 : 0}
-              />
-            </div>
-          </Panel>
-          {ran && (
-            <Panel title="Why this rank" meta="TRANSPARENT SCORE" className="score-panel">
-              <div className="score-heading">
-                <div>
-                  <span>Selected investigation</span>
-                  <strong>{selectedRank}</strong>
-                </div>
-                <EvidenceBadge tier="derived_auto" />
-              </div>
-              <ScoreLine label="Direct relevance" weight=".40" score="1.00" contribution=".400" />
-              <ScoreLine label="Condition proximity" weight=".35" score=".72" contribution=".252" />
-              <ScoreLine label="Evidence depth" weight=".25" score=".86" contribution=".215" />
-              <div className="score-total">
-                <span>Weighted score</span>
-                <strong>0.87</strong>
-              </div>
-              <div className="rank-stability">
-                <span>Rank stability · 2,000 randomized weight sets</span>
-                <strong>80% remain #1</strong>
-                <small>P5–P95 rank range: 1–2 · SMAA methodology</small>
-              </div>
-            </Panel>
-          )}
-          {ran && (
-            <section className="prediction-card">
-              <header>
-                <span>Gravity bridge prediction</span>
-                <EvidenceBadge tier="model_prediction" />
-              </header>
-              <div className="prediction-value">
-                <span>O₂ flammability boundary</span>
-                <strong>14.4%</strong>
-                <b>95% interval · 13.8–14.9%</b>
-              </div>
-              <div className="extrapolation-warning">
-                <strong>EXTRAPOLATION</strong>
-                <p>
-                  Target pressure: 70 kPa · training range: 99–103 kPa. PSI contains no
-                  partial-gravity combustion tests.
-                </p>
-              </div>
-              <button
-                onClick={() =>
-                  onEvidence({
-                    label: "Predicted O₂ flammability boundary",
-                    value: "14.4% [13.8–14.9]",
-                    tier: "model_prediction",
-                    source: "Olson & Ferkul 2017 fit over BASS-II",
-                    path: "scripts/gbridge.py → gravity_flammability",
-                    note: "Extrapolated to lunar gravity and 70 kPa; not an observed NASA measurement.",
-                  })
-                }
-              >
-                Inspect model provenance <Icon name="arrow" size={13} />
-              </button>
-            </section>
-          )}
-        </div>
+            ))}
+          </div>
+          <p className="panel-footnote">
+            Empty means "not reported", never zero. A phase with 0 in band is a gap, not a safe result.
+          </p>
+        </Panel>
       </div>
+
+      {Array.isArray(sc.models) && sc.models.length > 0 && (
+        <Panel title="Model predictions at the band centre" meta="MODEL PREDICTION">
+          <div className="preset-grid">
+            {sc.models.map((m: any, i: number) => (
+              <div key={i} className="prediction-card">
+                <span>{m.what}</span>
+                <EvidenceBadge tier="model_prediction" />
+                {m.valid ? (
+                  <strong className="prediction-value">
+                    {m.p_extinction != null
+                      ? "P(goes out) " + m.p_extinction
+                      : m.p_ignition != null
+                        ? "P(ignites) " + m.p_ignition
+                        : "—"}
+                  </strong>
+                ) : (
+                  <strong className="prediction-value extrapolation-warning">
+                    model does not answer - outside the tested range
+                  </strong>
+                )}
+                <small>{m.input}</small>
+              </div>
+            ))}
+          </div>
+          <p className="panel-footnote">
+            Model output, not a measurement. Models refuse to answer outside the conditions they were
+            fitted on, and PSI holds no partial-gravity data at all.
+          </p>
+        </Panel>
+      )}
     </div>
   );
 }
 
+/** Celah bukti dan uji berikutnya yang paling informatif, dari data yang sama. */
 function Gaps() {
-  const [objective, setObjective] = useState("Prevention");
-  const [selected, setSelected] = useState<{ row: number; col: number } | null>(null);
+  const { data, error } = useInsight();
+  const [sid, setSid] = useState<string>("surface");
+  if (error) return <ViewError what="gap analysis" detail={error} />;
+  if (!data) return <ViewLoading />;
+  const sc: any = data.scenario[sid];
+  const gaps = (sc?.gaps ?? []) as { level: string; title: string; text: string }[];
+  const next = (sc?.next_tests ?? []) as any[];
+
   return (
     <div className="page">
       <PageTitle
         index="03"
         overline="EVIDENCE COVERAGE"
-        title="Investigation & Gaps Analysis"
-        description="See which experimental conditions are represented in indexed research—and distinguish genuine coverage gaps from missing or unreported data."
+        title="Gaps Analysis"
+        description="What the archive cannot answer for this habitat, and which experiment would teach the most."
       />
-      <div className="objective-switch">
-        <span>FIRE-SAFETY OBJECTIVE</span>
-        {["Prevention", "Detection", "Suppression"].map((item) => (
-          <button
-            key={item}
-            onClick={() => setObjective(item)}
-            className={objective === item ? "active" : ""}
-          >
-            {item}
+      <div className="segmented objective-switch">
+        {data.scenarios.map((id) => (
+          <button key={id} className={id === sid ? "active" : ""} onClick={() => setSid(id)}>
+            {data.scenario[id]?.short || id}
           </button>
         ))}
       </div>
+
       <div className="gaps-grid">
-        <Panel
-          title={`Environmental parameter coverage · ${objective}`}
-          meta="TEST RECORD DENSITY"
-          className="heat-panel"
-        >
-          <div className="heat-wrap">
-            <div className="y-label">Pressure →</div>
-            <div className="heatmap">
-              {heatmap.flatMap((row, r) =>
-                row.map((level, c) => (
-                  <button
-                    key={`${r}-${c}`}
-                    className={selected?.row === r && selected?.col === c ? "selected" : ""}
-                    data-level={level}
-                    onClick={() => setSelected({ row: r, col: c })}
-                  >
-                    <span>{level ? level * 6 + r + c : "—"}</span>
-                  </button>
-                )),
-              )}
-            </div>
-            <div className="x-label">Oxygen concentration (%) →</div>
-          </div>
-          <div className="heat-legend">
-            <span>LOWER COVERAGE</span>
-            {[0, 1, 2, 3, 4, 5].map((x) => (
-              <i key={x} data-level={x} />
+        <Panel title="What is not known here" meta={gaps.length + " FINDINGS"} className="quality-panel">
+          <div className="gap-list">
+            {gaps.map((g, i) => (
+              <article key={i} className="quality-facts">
+                <span className={"gap-level " + g.level}>{g.level}</span>
+                <strong>{g.title}</strong>
+                <p>{g.text}</p>
+              </article>
             ))}
-            <span>HIGHER COVERAGE</span>
           </div>
+        </Panel>
+
+        <Panel title="Most informative next tests" meta="ACTIVE LEARNING" className="heat-panel">
+          <table className="next-tests">
+            <thead>
+              <tr>
+                <th>Experiment</th>
+                <th>O2</th>
+                <th>kPa</th>
+                <th>Conditions</th>
+                <th>U</th>
+                <th>In band</th>
+              </tr>
+            </thead>
+            <tbody>
+              {next.map((n, i) => (
+                <tr key={i}>
+                  <td>{n.exp}</td>
+                  <td>{(n.o2 * 100).toFixed(1)}%</td>
+                  <td>{n.p_kpa}</td>
+                  <td>{n.detail}</td>
+                  <td>{n.U}</td>
+                  <td>{n.in_band ? "yes" : "no"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
           <p className="panel-footnote">
-            {selected
-              ? `Selected bin: ${18 + selected.col * 3}% O₂ · ${5 + selected.row * 2} psi. Inspect matching test metadata before interpreting coverage.`
-              : "Select a cell to inspect the query represented by that parameter bin."}
+            Ranked by the U-function of a Gaussian-process boundary model: a small U means the model
+            is least sure whether the flame ignites there, so one test teaches the most. Candidates
+            stay close to conditions that were actually flown.
           </p>
         </Panel>
-        <Panel title="Coverage quality" meta="METADATA COMPLETENESS" className="quality-panel">
-          <Gauge value={74} label="Known experimental conditions" />
-          <Gauge value={38} label="Reported flow parameters" />
-          <Gauge value={62} label="Comparable measurements" />
-          <div className="quality-facts">
-            <span>
-              <b>1,990</b> Distinct tests
-            </span>
-            <span>
-              <b>24</b> Investigations
-            </span>
+      </div>
+
+      <div className="gaps-grid">
+        <Panel title="Gravity" meta="KNOWN LIMIT" className="quality-panel">
+          <ul className="gap-list">
+            {(data.partial_gravity ?? []).map((t: string, i: number) => (
+              <li key={i}>{t}</li>
+            ))}
+          </ul>
+        </Panel>
+        <Panel title="Back on Earth" meta="SPINOFF" className="quality-panel">
+          <div className="gap-list">
+            {(data.earth ?? []).map((e: any, i: number) => (
+              <article key={i} className="quality-facts">
+                <strong>{e.title || e.name}</strong>
+                <p>{e.text || e.detail}</p>
+                {e.same_pillar && <small>Same pillar in PSI: {e.same_pillar}</small>}
+              </article>
+            ))}
           </div>
         </Panel>
-        <Panel title="Potential evidence gaps" meta="INTERPRETATION PROMPTS" className="gap-list">
-          <Watch
-            number="01"
-            title="Experimental coverage gap"
-            text="Target condition has little representation in indexed tests."
-          />
-          <Watch
-            number="02"
-            title="Data availability gap"
-            text="An experiment exists, but a relevant parameter is not reported."
-          />
-          <Watch
-            number="03"
-            title="Scientific validation gap"
-            text="Evidence does not validate transfer to another gravity or habitat."
-          />
-        </Panel>
       </div>
+    </div>
+  );
+}
+
+/** Satu komponen skor: nilai 0-1, lebar bar = nilai, dan sumbangannya ke skor
+ *  akhir (nilai x bobot) -- supaya pembaca melihat dari mana angka total berasal. */
+function Bar({ label, value, weight }: { label: string; value: number; weight: number }) {
+  return (
+    <div className="rank-bar">
+      <span>{label}</span>
+      <i>
+        <b style={{ width: Math.max(2, value * 100) + "%" }} />
+      </i>
+      <small>
+        {value.toFixed(2)} x {weight} = {(value * weight).toFixed(3)}
+      </small>
+    </div>
+  );
+}
+
+function ViewLoading() {
+  return (
+    <div className="page">
+      <p className="stat-error">Reading the knowledge base...</p>
+    </div>
+  );
+}
+
+function ViewError({ what, detail }: { what: string; detail: string }) {
+  return (
+    <div className="page">
+      <p className="stat-error">
+        Backend unavailable - {what} is not shown rather than filled with example numbers. ({detail})
+      </p>
     </div>
   );
 }
