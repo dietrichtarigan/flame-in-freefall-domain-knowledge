@@ -129,8 +129,9 @@ const heatmap = [
   [0, 1, 2, 3, 3, 1],
 ];
 
-import { ask as askApi, figureUrl, TIER_LABEL, type AskReply } from "./api";
+import { ask as askApi, TIER_LABEL, type AskReply } from "./api";
 import { useInsight, useResearchMap, useStatus, fmt } from "./useData";
+import { AnswerText, ReplyMedia } from "./chatRender";
 import { STUDY_BY_ACCESSION, STUDY_HTML } from "./motion";
 
 /** Rute hash sederhana: #Scenario, #Assistant, ... supaya setiap tampilan bisa
@@ -1169,6 +1170,8 @@ function Assistant() {
                 <span>{m.role === "assistant" ? "FI" : "YOU"}</span>
                 {m.pending ? (
                   <p className="thinking">Calling tools…</p>
+                ) : m.role === "assistant" ? (
+                  <AnswerText text={m.text} citations={m.reply?.citations} />
                 ) : (
                   <p>{m.text}</p>
                 )}
@@ -1214,7 +1217,6 @@ function Assistant() {
 function ReplyMeta({ reply }: { reply: AskReply }) {
   const g = reply.grounding;
   const bad = g?.ungrounded?.length ?? 0;
-  const figures = reply.figures ?? [];
   return (
     <div className="grounding-report">
       {g && (
@@ -1232,24 +1234,7 @@ function ReplyMeta({ reply }: { reply: AskReply }) {
           <code>{reply.tool_calls.map((t) => t.name).join(" → ")}</code>
         </div>
       )}
-      {figures.length > 0 && (
-        <div className="figure-strip">
-          {figures.slice(0, 4).map((f) => (
-            <figure key={f.id}>
-              <img src={figureUrl(f.image)} alt={f.caption} loading="lazy" />
-              <figcaption>
-                <b>{f.label}</b> · p. {f.page}
-                <span>{f.paper}</span>
-                {f.doi && (
-                  <a href={`https://doi.org/${f.doi}`} target="_blank" rel="noreferrer">
-                    doi.org/{f.doi}
-                  </a>
-                )}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      )}
+      <ReplyMedia reply={reply} />
       <small>mode: {reply.mode}</small>
     </div>
   );
@@ -1266,7 +1251,7 @@ function FloatingAssistant({
 }) {
   const [question, setQuestion] = useState("");
   const [busy, setBusy] = useState(false);
-  const [exchange, setExchange] = useState<{ question: string; answer: string } | null>(null);
+  const [exchange, setExchange] = useState<{ question: string; answer: string; reply?: AskReply } | null>(null);
 
   // Panel kecil ini memanggil backend yang SAMA dengan asisten penuh; sebelumnya
   // ia selalu membalas kalimat tetap, sehingga terlihat berfungsi padahal tidak.
@@ -1280,7 +1265,7 @@ function FloatingAssistant({
       const r = await askApi(q, []);
       const g = r.grounding;
       const flag = g && g.ungrounded.length ? ` [${g.ungrounded.length} number(s) unsupported]` : "";
-      setExchange({ question: q, answer: (r.answer || "(empty answer)") + flag });
+      setExchange({ question: q, answer: (r.answer || "(empty answer)") + flag, reply: r });
     } catch (e) {
       setExchange({ question: q, answer: "Backend did not answer (" + String(e) + ")." });
     } finally {
@@ -1327,8 +1312,15 @@ function FloatingAssistant({
                 <span>YOU</span>
                 <p>{exchange.question}</p>
                 <span>FLARE+</span>
-                <p>{exchange.answer}</p>
-                <small>Preview response · backend tools connect during integration</small>
+                <div className="mini-answer">
+                  {busy ? <p className="thinking">{exchange.answer}</p> : <AnswerText text={exchange.answer} citations={exchange.reply?.citations} />}
+                  {exchange.reply && <ReplyMedia reply={exchange.reply} compact />}
+                </div>
+                <small>
+                  {exchange.reply
+                    ? `mode: ${exchange.reply.mode} · ${exchange.reply.tool_calls.map((t) => t.name).join(" → ") || "no tools"}`
+                    : ""}
+                </small>
               </div>
             )}
           </div>
