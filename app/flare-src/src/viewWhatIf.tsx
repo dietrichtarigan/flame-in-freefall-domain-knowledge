@@ -87,7 +87,7 @@ export function WhatIf() {
   return (
     <div className="page">
       <PageTitle
-        index="06"
+        index="07"
         overline="PREDICTIVE MODELLING"
         title="What-if Simulator"
         description="Move the conditions and see what models trained on NASA's ISS tests predict, with uncertainty, the tested range, and the real tests closest to your inputs. Outside the tested range the models refuse to answer."

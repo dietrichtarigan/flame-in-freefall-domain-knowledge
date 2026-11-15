@@ -616,7 +616,7 @@ MIME = {".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=ut
         # Tanpa baris ini WebP dan JPEG dikirim berlabel image/png (bawaan _send
         # untuk /figures/). Terdeteksi saat menguji gambar hasil figures_optimize.py.
         ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp",
-        ".mp4": "video/mp4", ".woff2": "font/woff2", ".woff": "font/woff", ".ttf": "font/ttf"}
+        ".mp4": "video/mp4", ".ico": "image/x-icon", ".woff2": "font/woff2", ".woff": "font/woff", ".ttf": "font/ttf"}
 IMG_EXT = {".png", ".jpg", ".jpeg", ".webp", ".svg"}   # yang boleh disajikan lewat /figures/
 
 

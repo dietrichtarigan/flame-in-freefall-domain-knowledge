@@ -7,7 +7,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { API } from "./api";
 import { EvidenceBadge, PageTitle, Panel, displayValue, go, pct, useFocus, useJSON } from "./ui";
-import { FLAG_EN, GRANULARITY_EN, LEVEL_EN, RULE_EN, en } from "./i18n";
+import { FLAG_EN, GRANULARITY_EN, LEVEL_EN, RULE_EN, en, unitEn, valueEn } from "./i18n";
 import { useInsight } from "./useData";
 
 type TestRow = {
@@ -247,7 +247,7 @@ function Dossier({ id, names, onOpen }: { id: string; names: Record<string, stri
                   <button key={m.id} className={`measure ${prov === m.id ? "active" : ""}`} onClick={() => setProv(prov === m.id ? null : m.id)}>
                     <span>{q.replaceAll("_", " ")}</span>
                     <b>
-                      {displayValue(m.value ?? m.value_text)} {m.unit ?? ""}
+                      {m.value != null ? displayValue(m.value) : valueEn(m.value_text)} {unitEn(m.unit)}
                     </b>
                     <EvidenceBadge tier={m.tier} />
                   </button>
@@ -350,7 +350,7 @@ function Provenance({ mid }: { mid: string }) {
       <div>
         <dt>Value</dt>
         <dd>
-          {m.value ?? m.value_text} {m.unit}
+          {m.value != null ? m.value : valueEn(m.value_text)} {unitEn(m.unit)}
           {m.lo != null && m.hi != null ? ` (range ${m.lo}–${m.hi})` : ""}
         </dd>
       </div>

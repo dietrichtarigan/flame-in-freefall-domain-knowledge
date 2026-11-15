@@ -130,7 +130,7 @@ export function Quality() {
   return (
     <div className="page">
       <PageTitle
-        index="08"
+        index="06"
         overline="DATA QUALITY"
         title="Quality & Verification"
         description="Where the numbers might be wrong, what a human still has to check, and how good each model is. Nothing here is hidden from the other views: a flagged test keeps its flag everywhere it appears."

@@ -158,3 +158,23 @@ export function en(text: unknown): string {
 }
 
 export const LEVEL_EN: Record<string, string> = { kritis: "critical", perhatian: "warning", info: "info" };
+
+/** Satuan pengukuran dari backend (brain.sqlite) dalam bahasa Inggris. */
+export const UNIT_EN: Record<string, string> = {
+  "fraksi mol": "mole fraction",
+  "V (mentah, BUKAN suhu)": "V (raw signal, not a temperature)",
+  "V (mentah)": "V (raw signal)",
+  "s sejak awal rekaman": "s from start of recording",
+  "skor |z| robust": "robust |z| score",
+  peluang: "probability",
+};
+export const unitEn = (u: unknown) => (u === null || u === undefined ? "" : UNIT_EN[String(u)] ?? String(u));
+
+/** Nilai teks: ya/tidak -> yes/no; teks lain lewat en(). */
+export const valueEn = (v: unknown) => {
+  if (v === null || v === undefined) return "—";
+  const s = String(v);
+  if (s === "ya") return "yes";
+  if (s === "tidak") return "no";
+  return en(s);
+};

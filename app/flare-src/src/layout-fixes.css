@@ -552,3 +552,92 @@
 .earth-list small { display: block; margin-top: 6px; font-size: 12px; color: var(--faint); }
 .gap-intro { margin: 0 0 12px; font-size: 13px; line-height: 1.6; color: var(--muted); max-width: 900px; }
 .gap-intro b { color: var(--ink); }
+
+/* Test Explorer: kolom dosir dulu dibatasi tinggi layar + bergulir sendiri, sehingga
+   panel di dalamnya menyusut dan isinya terpotong. Sekarang setiap panel setinggi isinya. */
+.dossier-col { position: static; max-height: none; overflow: visible; }
+.dossier-col > .panel { flex: 0 0 auto; }
+.dossier-col .panel-body { overflow: visible; }
+.measure { grid-template-columns: minmax(0, 1fr) auto; }
+.measure b { text-align: right; overflow-wrap: anywhere; }
+/* baris pengukuran: label dan nilai saling membungkus, bukan label yang dipenyet per huruf */
+.measure { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 12px; }
+.measure > span { flex: 1 1 auto; min-width: 8em; }
+.measure > b { flex: 0 1 auto; margin-left: auto; text-align: right; }
+
+/* ---------------------------------------------------------------- sidebar
+   Nomor, ikon dan judul dulu di tiga ketinggian berbeda (nomor dipaksa ke atas,
+   ikon di tengah tombol, judul+subjudul sebagai satu blok). Kini satu baris judul
+   yang sama, subjudul di bawah judul. */
+.sidebar nav { display: flex; flex-direction: column; }
+.sidebar nav button {
+  display: grid;
+  grid-template-columns: 22px 26px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 6px;
+  row-gap: 3px;
+  align-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 56px;
+  padding: 9px 10px;
+}
+.sidebar nav button .nav-number { grid-row: 1; grid-column: 1; align-self: center; padding: 0; font: 500 9px/1 "IBM Plex Mono", monospace; color: var(--faint); }
+.sidebar nav button .nav-icon { grid-row: 1; grid-column: 2; align-self: center; line-height: 0; }
+.sidebar nav button .nav-copy { display: contents; }
+.sidebar nav button .nav-copy strong { grid-row: 1; grid-column: 3; align-self: center; display: flex; align-items: center; gap: 6px; font: 500 12.5px/1.2 "Poppins", sans-serif; }
+.sidebar nav button .nav-copy small { grid-row: 2; grid-column: 3; margin: 0; font-size: 10.5px; line-height: 1.2; color: var(--faint); }
+.nav-group {
+  display: block;
+  margin: 14px 10px 4px;
+  font: 500 9px "IBM Plex Mono", monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(232, 227, 216, 0.36);
+}
+.sidebar nav .nav-group:first-child { margin-top: 2px; }
+/* AI Assistant disorot: fitur andalan */
+.sidebar nav button.nav-feature {
+  margin: 2px 0;
+  border: 1px solid rgba(101, 198, 209, 0.35);
+  background: linear-gradient(90deg, rgba(101, 198, 209, 0.14), rgba(101, 198, 209, 0.03));
+  box-shadow: 0 0 18px rgba(101, 198, 209, 0.12);
+}
+.sidebar nav button.nav-feature .nav-icon { color: #65c6d1; }
+.nav-badge {
+  font: 600 8.5px/1 "IBM Plex Mono", monospace;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  padding: 3px 5px;
+  border-radius: 2px;
+  background: #65c6d1;
+  color: #10201f;
+}
+@media (max-width: 780px) {
+  .nav-group { display: none; }
+  .sidebar nav button { display: flex; flex-direction: column; min-height: 0; padding: 6px 2px; }
+  .sidebar nav button .nav-copy { display: block; }
+  .sidebar nav button .nav-copy strong { font-size: 7.5px; justify-content: center; }
+  .sidebar nav button .nav-copy small, .sidebar nav button .nav-number, .nav-badge { display: none; }
+  .sidebar nav button.nav-feature { margin: 0; }
+}
+
+/* ---------------------------------------------------------------- Experiment Replay */
+.replay-experiments { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin: 18px 0; }
+.replay-exp { display: flex; flex-direction: column; gap: 3px; padding: 11px 13px; border: 1px solid var(--line); background: rgba(31, 30, 26, 0.88); }
+.replay-exp strong { font: 500 14px "Poppins", sans-serif; color: var(--ink); }
+.replay-exp small { font-size: 11px; line-height: 1.4; color: var(--faint); }
+.replay-exp-tag { align-self: flex-start; font: 500 9px "IBM Plex Mono", monospace; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 6px; border: 1px solid var(--line-strong); color: var(--faint); }
+.replay-exp.live { border-color: rgba(101, 198, 209, 0.45); }
+.replay-exp.live .replay-exp-tag { background: #65c6d1; border-color: #65c6d1; color: #10201f; }
+.replay-exp.soon { opacity: 0.62; }
+/* judul menu satu baris: sidebar sedikit lebih lebar, kolom nomor/ikon lebih ramping */
+@media (min-width: 781px) {
+  .sidebar { width: 236px; padding-left: 12px; padding-right: 12px; }
+  .workspace { margin-left: 236px; }
+  .statusbar { padding-left: 250px; }
+}
+.sidebar nav button { grid-template-columns: 18px 22px minmax(0, 1fr); column-gap: 7px; padding: 8px 8px; }
+.sidebar nav button .nav-copy strong { font-size: 12px; white-space: nowrap; }
+.sidebar nav button .nav-copy small { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nav-group { margin-left: 8px; }

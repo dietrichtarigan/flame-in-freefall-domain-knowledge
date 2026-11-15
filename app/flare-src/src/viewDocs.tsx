@@ -16,14 +16,10 @@ const GUIDE: { view: View; title: string; answers: string; steps: string[] }[] =
     steps: ["Click a count to see where it comes from.", "Click a pillar to list its investigations.", "Click a gap to open it in Gaps Analysis."],
   },
   {
-    view: "Scenario",
-    title: "Scenario Explorer",
-    answers: "Which investigations matter for a cabin, a Moon/Mars base or rover, a spacesuit, or Earth?",
-    steps: [
-      "Pick the habitat at the top.",
-      "Move the three weights to see whether the order holds; the stability line says how often each rank survives 2,000 random weightings.",
-      "Open “Why this score” for the arithmetic, and click a dot in the scatter to open that test.",
-    ],
+    view: "Map",
+    title: "Research Map",
+    answers: "Which papers stand behind each investigation, and what are their intellectual roots?",
+    steps: ["In the citation network, search a paper and click it to trace what it cites.", "Isolate a k-means cluster from the list.", "In the network below, click an investigation or topic to light up its papers."],
   },
   {
     view: "Gaps",
@@ -44,38 +40,42 @@ const GUIDE: { view: View; title: string; answers: string; steps: string[] }[] =
     steps: ["Filter by investigation, ignition or flag; search by test id or fuel.", "Open a test, then click any value to see its source file and method.", "Read “Why is it flagged?” and jump to similar tests."],
   },
   {
-    view: "WhatIf",
-    title: "What-if Simulator",
-    answers: "What would happen at conditions NASA did not test exactly?",
-    steps: ["Move the sliders; results update with an uncertainty band.", "Compare with the closest real ISS tests listed underneath.", "Outside the tested range the models refuse to answer instead of guessing."],
-  },
-  {
-    view: "Replay",
-    title: "Burn Replay",
-    answers: "What did a FLEX droplet burn actually look like, second by second?",
-    steps: [
-      "Open it from a FLEX test in Test Explorer (“Replay this burn in 3D”), or pick any of the 276 tests in the lab.",
-      "Press play: the procedure, ignition, burn and extinction run in real time (0.25×–4×).",
-      "Open Transparency to see whether each frame comes from digitized data or is reconstructed from the printed D₀ and K.",
-    ],
-  },
-  {
-    view: "Map",
-    title: "Research Map",
-    answers: "Which papers stand behind each investigation, and what are their intellectual roots?",
-    steps: ["In the citation network, search a paper and click it to trace what it cites.", "Isolate a k-means cluster from the list.", "In the network below, click an investigation or topic to light up its papers."],
-  },
-  {
     view: "Quality",
     title: "Quality & Verification",
     answers: "Where might the numbers be wrong, and how good are the models?",
     steps: ["Switch between critical, warning and info alerts; click a test id to open it.", "Read the verification queue: what a human still has to check.", "Open a model card for its validation metrics and caveats."],
   },
   {
+    view: "WhatIf",
+    title: "What-if Simulator",
+    answers: "What would happen at conditions NASA did not test exactly?",
+    steps: ["Move the sliders; results update with an uncertainty band.", "Compare with the closest real ISS tests listed underneath.", "Outside the tested range the models refuse to answer instead of guessing."],
+  },
+  {
+    view: "Scenario",
+    title: "Scenario Explorer",
+    answers: "Which investigations matter for a cabin, a Moon/Mars base or rover, a spacesuit, or Earth?",
+    steps: [
+      "Pick the habitat at the top.",
+      "Move the three weights to see whether the order holds; the stability line says how often each rank survives 2,000 random weightings.",
+      "Open “Why this score” for the arithmetic, and click a dot in the scatter to open that test.",
+    ],
+  },
+  {
     view: "Assistant",
     title: "AI Assistant",
     answers: "Ask anything in plain language and get an answer built from the data, with sources.",
     steps: ["Browse “See what it can do” for real recorded answers.", "Ask your own question: it searches papers, shows figures and equations, runs the models and plots data.", "Numbers that no tool produced are listed as unsupported."],
+  },
+  {
+    view: "Replay",
+    title: "Experiment Replay",
+    answers: "What did a FLEX droplet burn actually look like, second by second?",
+    steps: [
+      "Open it from a FLEX test in Test Explorer (“Replay this burn in 3D”), or pick any of the 276 tests in the lab.",
+      "Press play: the procedure, ignition, burn and extinction run in real time (0.25×–4×).",
+      "Open Transparency to see whether each frame comes from digitized data or is reconstructed from the printed D₀ and K.",
+    ],
   },
 ];
 
@@ -99,7 +99,7 @@ export function Docs() {
   return (
     <div className="page">
       <PageTitle
-        index="10"
+        index="11"
         overline="DOCUMENTATION"
         title="How to use FLARE+"
         description="A recorded walkthrough of every view, a one-minute guide to each, how to read the numbers, and what the data can and cannot tell you."

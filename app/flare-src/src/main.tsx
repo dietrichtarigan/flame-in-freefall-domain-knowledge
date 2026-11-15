@@ -68,18 +68,19 @@ function Icon({ name, size = 18 }: { name: IconName; size?: number }) {
   );
 }
 
-const navigation: { id: View; label: string; sub: string; icon: IconName }[] = [
-  { id: "Overview", label: "Mission Overview", sub: "Research landscape", icon: "orbit" },
-  { id: "Scenario", label: "Scenario Explorer", sub: "Mission discovery", icon: "target" },
-  { id: "Gaps", label: "Gaps Analysis", sub: "Evidence coverage", icon: "grid" },
-  { id: "Investigations", label: "Investigations", sub: "Catalog & compare", icon: "compare" },
-  { id: "Tests", label: "Test Explorer", sub: "Every test, traced", icon: "list" },
-  { id: "WhatIf", label: "What-if", sub: "Predictive models", icon: "flask" },
-  { id: "Replay", label: "Burn Replay", sub: "FLEX droplets in 3D", icon: "play" },
-  { id: "Map", label: "Research Map", sub: "Citation network", icon: "orbit" },
-  { id: "Quality", label: "Quality", sub: "Alerts & verification", icon: "shield" },
-  { id: "Assistant", label: "AI Assistant", sub: "Knowledge query", icon: "spark" },
-  { id: "Docs", label: "Documentation", sub: "Video & guide", icon: "list" },
+// Urutan bercerita: kenali lanskap -> periksa bukti -> prediksi & putuskan -> tanya -> alami.
+const navigation: { id: View; label: string; sub: string; icon: IconName; group: string; feature?: boolean }[] = [
+  { id: "Overview", label: "Mission Overview", sub: "Research landscape", icon: "orbit", group: "Orient" },
+  { id: "Map", label: "Research Map", sub: "Citation network", icon: "compare", group: "Orient" },
+  { id: "Gaps", label: "Gaps Analysis", sub: "What is not known", icon: "grid", group: "Examine the evidence" },
+  { id: "Investigations", label: "Investigations", sub: "Catalog & compare", icon: "compare", group: "Examine the evidence" },
+  { id: "Tests", label: "Test Explorer", sub: "Every test, traced", icon: "list", group: "Examine the evidence" },
+  { id: "Quality", label: "Quality", sub: "Can we trust it?", icon: "shield", group: "Examine the evidence" },
+  { id: "WhatIf", label: "What-if", sub: "Predictive models", icon: "flask", group: "Predict & decide" },
+  { id: "Scenario", label: "Scenario Explorer", sub: "Rank for a habitat", icon: "target", group: "Predict & decide" },
+  { id: "Assistant", label: "AI Assistant", sub: "Ask the evidence", icon: "spark", group: "Ask", feature: true },
+  { id: "Replay", label: "Experiment Replay", sub: "ISS burns in 3D", icon: "play", group: "Experience" },
+  { id: "Docs", label: "Documentation", sub: "Video & guide", icon: "list", group: "Experience" },
 ];
 
 const heatmap = [
@@ -92,6 +93,7 @@ const heatmap = [
 
 import { ask as askApi, feedback as sendFeedback, type AskReply, type RankRow } from "./api";
 import { useInsight, useResearchMap, useStatus, fmt } from "./useData";
+import { sendChat, useChat, type Msg } from "./chatStore";
 import { AnswerText, ReplyMedia } from "./chatRender";
 import { CitationGraph } from "./citationGraph";
 import { EvidenceMatrix, ResearchNetwork } from "./mapParts";
@@ -108,7 +110,7 @@ import { STUDY_BY_ACCESSION, STUDY_HTML } from "./motion";
 
 /** Rute hash sederhana: #Scenario, #Assistant, ... supaya setiap tampilan bisa
  *  ditautkan langsung (berguna saat demo dan saat juri membuka ulang halaman). */
-const VIEWS: View[] = ["Overview", "Scenario", "Gaps", "Investigations", "Tests", "WhatIf", "Replay", "Map", "Quality", "Assistant", "Docs"];
+const VIEWS: View[] = navigation.map((n) => n.id);
 const viewFromHash = (): View => {
   let raw = "";
   try {
@@ -166,6 +168,7 @@ function App() {
         {view === "Docs" && <Docs />}
       </main>
       <Footer />
+      {view !== "Assistant" && (
       <FloatingAssistant
         open={chatOpen}
         onToggle={() => setChatOpen((current) => !current)}
@@ -174,6 +177,7 @@ function App() {
           setChatOpen(false);
         }}
       />
+      )}
       {evidence && <ProvenanceDrawer record={evidence} onClose={() => setEvidence(null)} />}
     </div>
   );
@@ -365,20 +369,26 @@ function Sidebar({ view, setView }: { view: View; setView: (view: View) => void 
     <aside className="sidebar" aria-label="Research workspace">
       <nav>
         {navigation.map((item, index) => (
-          <button
-            key={item.id}
-            className={view === item.id ? "active" : ""}
-            onClick={() => setView(item.id)}
-          >
-            <span className="nav-number">{String(index + 1).padStart(2, "0")}</span>
-            <span className="nav-icon">
-              <Icon name={item.icon} size={17} />
-            </span>
-            <span className="nav-copy">
-              <strong>{item.label}</strong>
-              <small>{item.sub}</small>
-            </span>
-          </button>
+          <React.Fragment key={item.id}>
+            {(index === 0 || navigation[index - 1].group !== item.group) && <span className="nav-group">{item.group}</span>}
+            <button
+              className={`${view === item.id ? "active" : ""} ${item.feature ? "nav-feature" : ""}`}
+              onClick={() => setView(item.id)}
+              aria-current={view === item.id ? "page" : undefined}
+            >
+              <span className="nav-number">{String(index + 1).padStart(2, "0")}</span>
+              <span className="nav-icon">
+                <Icon name={item.icon} size={17} />
+              </span>
+              <span className="nav-copy">
+                <strong>
+                  {item.label}
+                  {item.feature && <em className="nav-badge">AI</em>}
+                </strong>
+                <small>{item.sub}</small>
+              </span>
+            </button>
+          </React.Fragment>
         ))}
       </nav>
     </aside>
@@ -474,7 +484,7 @@ function Scenario({ onEvidence }: { onEvidence: (record: EvidenceRecord) => void
   return (
     <div className="page">
       <PageTitle
-        index="02"
+        index="08"
         overline="MISSION DISCOVERY"
         title="Scenario Explorer"
         description="Pick where the crew will live. Every investigation is re-ranked for that atmosphere; change the weights to see how robust the order is."
@@ -761,7 +771,7 @@ function ResearchMap({ onEvidence: _onEvidence }: { onEvidence: (record: Evidenc
   return (
     <div className="page">
       <PageTitle
-        index="07"
+        index="02"
         overline="EVIDENCE NETWORK"
         title="Research Map"
         description="Who cites whom, which papers belong to which investigation, and how much evidence each investigation brings to each habitat."
@@ -785,51 +795,14 @@ function ResearchMap({ onEvidence: _onEvidence }: { onEvidence: (record: Evidenc
 
 function Assistant() {
   const [question, setQuestion] = useState("");
-  const [busy, setBusy] = useState(false);
   const { data } = useInsight();
   const st = useStatus();
-  const [messages, setMessages] = useState<Msg[]>([
-    {
-      role: "assistant",
-      text:
-        "Ask about investigations, experimental conditions, publications, or evidence gaps. " +
-        "Every number in my answer is checked against the tool output that produced it.",
-    },
-  ]);
-
-  const send = async (q: string) => {
+  // satu thread bersama dengan bola "Ask FLARE+" (chatStore.ts)
+  const { messages, busy } = useChat();
+  const send = (q: string) => {
     if (!q.trim() || busy) return;
     setQuestion("");
-    setBusy(true);
-    setMessages((c) => [...c, { role: "user", text: q }, { role: "assistant", text: "", pending: true }]);
-    // Backend (brain.py clean_history) menerima pasangan {q, a}. Sebelumnya dikirim
-    // {role, content}, yang dibuang seluruhnya: pertanyaan lanjutan kehilangan konteks.
-    const history: { q: string; a: string }[] = [];
-    messages.forEach((m, i) => {
-      const next = messages[i + 1];
-      if (m.role === "user" && next?.role === "assistant" && !next.pending && !next.failed)
-        history.push({ q: m.text, a: next.text });
-    });
-    try {
-      const reply = await askApi(q, history);
-      setMessages((c) => [
-        ...c.slice(0, -1),
-        { role: "assistant", text: reply.answer, reply, q },
-      ]);
-    } catch (e) {
-      setMessages((c) => [
-        ...c.slice(0, -1),
-        {
-          role: "assistant",
-          text:
-            "The backend did not answer (" + String(e) + "). Nothing is shown rather than a guess; " +
-            "the public deployment also limits questions per visitor.",
-          failed: true,
-        },
-      ]);
-    } finally {
-      setBusy(false);
-    }
+    sendChat(q);
   };
 
   // pertanyaan yang dikirim view lain lewat go("Assistant", pertanyaan)
@@ -846,7 +819,7 @@ function Assistant() {
   return (
     <div className="page assistant-page">
       <PageTitle
-        index="06"
+        index="09"
         overline="KNOWLEDGE QUERY"
         title="Research Assistant"
         description="Interrogate the indexed NASA PSI and NTRS corpus while keeping source level, missing data, and scientific limitations visible."
@@ -918,7 +891,6 @@ function Assistant() {
 }
 
 /** Grounding, jejak alat, dan gambar asli paper di bawah satu jawaban. */
-type Msg = { role: "user" | "assistant"; text: string; pending?: boolean; failed?: boolean; reply?: AskReply; q?: string };
 
 /** Umpan balik 👍/👎 -> POST /feedback -> kb/gold/cases.jsonl. Jawaban berlabel "baik"
  *  dipakai asisten sebagai contoh pendekatan untuk pertanyaan serupa (similar_cases). */
@@ -1019,27 +991,19 @@ function FloatingAssistant({
   onOpenFull: () => void;
 }) {
   const [question, setQuestion] = useState("");
-  const [busy, setBusy] = useState(false);
-  const [exchange, setExchange] = useState<{ question: string; answer: string; reply?: AskReply } | null>(null);
-
-  // Panel kecil ini memanggil backend yang SAMA dengan asisten penuh; sebelumnya
-  // ia selalu membalas kalimat tetap, sehingga terlihat berfungsi padahal tidak.
-  const submit = async () => {
+  // thread yang SAMA dengan halaman AI Assistant: yang ditanyakan di sini tampil di sana
+  const { messages, busy } = useChat();
+  const lastUser = [...messages].reverse().find((m) => m.role === "user");
+  const lastBot = messages[messages.length - 1]?.role === "assistant" && lastUser ? messages[messages.length - 1] : null;
+  const exchange = lastUser
+    ? { question: lastUser.text, answer: lastBot?.pending ? "Calling tools…" : lastBot?.text ?? "", reply: lastBot?.reply }
+    : null;
+  const turns = messages.filter((m) => m.role === "user").length;
+  const submit = () => {
     const q = question.trim();
     if (!q || busy) return;
     setQuestion("");
-    setBusy(true);
-    setExchange({ question: q, answer: "Calling tools…" });
-    try {
-      const r = await askApi(q, []);
-      const g = r.grounding;
-      const flag = g && g.ungrounded.length ? ` [${g.ungrounded.length} number(s) unsupported]` : "";
-      setExchange({ question: q, answer: (r.answer || "(empty answer)") + flag, reply: r });
-    } catch (e) {
-      setExchange({ question: q, answer: "Backend did not answer (" + String(e) + ")." });
-    } finally {
-      setBusy(false);
-    }
+    sendChat(q);
   };
 
   return (
@@ -1054,7 +1018,7 @@ function FloatingAssistant({
             <div>
               <strong>Ask FLARE+</strong>
               <small>
-                <i /> Tool-grounded preview
+                <i /> Same conversation as the AI Assistant page
               </small>
             </div>
             <button onClick={onToggle} aria-label="Close quick assistant">
@@ -1106,7 +1070,8 @@ function FloatingAssistant({
             </button>
           </div>
           <button className="open-full-assistant" onClick={onOpenFull}>
-            Open full research assistant <Icon name="arrow" size={13} />
+            {turns > 0 ? `Continue in the full assistant · ${turns} question${turns > 1 ? "s" : ""}` : "Open the full assistant"}{" "}
+            <Icon name="arrow" size={13} />
           </button>
         </section>
       )}

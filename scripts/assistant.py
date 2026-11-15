@@ -599,12 +599,31 @@ def ask_claude(question, history, state):
             calls.append({"name": u.name, "input": u.input, "ms": int((time.time() - t0) * 1000), "error": err})
             results.append({"type": "tool_result", "tool_use_id": u.id, "content": s, **({"is_error": True} if err else {})})
         messages.append({"role": "user", "content": results})
+    if final is None and calls:
+        # Batas putaran habis (mis. search_papers berulang). Jangan pulang kosong: minta
+        # satu jawaban akhir dari hasil alat yang sudah ada, tanpa memanggil alat lagi.
+        stop = {"type": "text", "text": "Tool budget is used up. Do not call any more tools. Answer the question now, "
+                                        "in English, using only the tool results above; say plainly what they do not cover."}
+        last = messages[-1]
+        if last["role"] == "user" and isinstance(last["content"], list):
+            last["content"] = last["content"] + [stop]
+        else:
+            messages.append({"role": "user", "content": [stop]})
+        try:
+            resp = call(messages)
+            for k in usage:
+                usage[k] += getattr(resp.usage, k, 0) or 0
+            served.add(resp.model)
+            if resp.stop_reason != "refusal":
+                final, note = resp, "answered after the tool budget ran out"
+        except Exception as e:  # noqa: BLE001
+            note = f"tool budget ran out; final answer call failed ({e!r})"
     if final is None:
-        note = "berhenti setelah 10 putaran alat tanpa jawaban akhir"
+        note = note or "stopped after 10 tool rounds without a final answer"
     text = "".join(b.text for b in (final.content if final else []) if b.type == "text")
     if fell_back:
         note = ((note + "; ") if note else "") + f"dijawab model fallback ({', '.join(sorted(served))})"
-    return {"answer": text or "(tidak ada jawaban teks)", "ui_actions": ctx["ui"], "figures": ctx.get("figures", []), "plots": ctx.get("plots", []), "tool_calls": calls,
+    return {"answer": text or "No answer was produced. Try asking more specifically (name the investigation or test).", "ui_actions": ctx["ui"], "figures": ctx.get("figures", []), "plots": ctx.get("plots", []), "tool_calls": calls,
             "outputs": outputs, "model": ", ".join(sorted(served)) or llm_model(), "usage": usage, "note": note}
 
 

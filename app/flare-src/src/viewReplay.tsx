@@ -10,6 +10,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import { PageTitle, Panel, go, useFocus, useJSON } from "./ui";
 
+/** FLEX sudah bisa diputar (Open FLEX); eksperimen lain menyusul. */
+const EXPERIMENTS: { name: string; what: string; live: boolean }[] = [
+  { name: "FLEX", what: "Droplet flames · 276 tests · 13 digitized", live: true },
+  { name: "FLEX-2", what: "Droplet flames, follow-on campaign", live: false },
+  { name: "BASS-II", what: "Flame spread over solid fuels", live: false },
+  { name: "ACME CFI-G", what: "Inside-out gas flames up to 85% O₂", live: false },
+  { name: "Saffire", what: "Large-scale fire on a cargo vehicle", live: false },
+  { name: "SPICE", what: "Smoke point of jet flames", live: false },
+];
+
 export function flexIdFor(testId: string | null, map: Record<string, string> | null): string | null {
   if (!testId || !map) return null;
   if (testId.startsWith("flex:")) return testId.slice(5);
@@ -61,11 +71,20 @@ export function Replay() {
   return (
     <div className="page">
       <PageTitle
-        index="07"
-        overline="FLEX BURN REPLAY"
-        title="Burn Replay"
-        description="Watch any of the 276 FLEX droplet tests burn in 3D, in real time, from NASA's Table IX. Thirteen tests follow droplet and flame sizes digitized from the report's figures; the rest are reconstructed from the printed initial diameter and burning rate, and the lab says which on every frame."
+        index="10"
+        overline="ISS EXPERIMENT REPLAY"
+        title="Experiment Replay"
+        description="Relive real ISS combustion tests in 3D, in real time, rebuilt from NASA's own records. Every frame says whether it comes from digitized data or is reconstructed from printed values."
       />
+      <div className="replay-experiments" role="list" aria-label="Experiments">
+        {EXPERIMENTS.map((x) => (
+          <div key={x.name} role="listitem" className={`replay-exp ${x.live ? "live" : "soon"}`}>
+            <span className="replay-exp-tag">{x.live ? "Live" : "Coming soon"}</span>
+            <strong>{x.name}</strong>
+            <small>{x.what}</small>
+          </div>
+        ))}
+      </div>
       <Panel
         title={shown ? `Open FLEX lab · ${shown}` : "Open FLEX lab"}
         meta="NASA/TP-2015-216046 · TABLE IX"
