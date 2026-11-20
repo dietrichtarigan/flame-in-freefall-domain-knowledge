@@ -253,7 +253,7 @@ export function Quality() {
                 <small>{String(e.t).slice(11, 16)}</small>
                 <span>
                   {e.type === "assistant.answered"
-                    ? `Assistant answered ${e.data?.q ? `“${e.data.q}”` : "a question"} with ${(e.data?.tools ?? []).join(", ") || "no tools"}`
+                    ? `Assistant answered “${e.data?.q ?? ""}” with ${(e.data?.tools ?? []).join(", ") || "no tools"}`
                     : e.type === "annotation.added"
                       ? `Human verdict on ${e.data?.entity ?? ""}`
                       : e.type}

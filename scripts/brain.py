@@ -655,12 +655,8 @@ class H(BaseHTTPRequestHandler):
                                     data.get("state") if isinstance(data.get("state"), dict) else {}, mode)
                 if gate_note:
                     res["note"] = gate_note
-                ev = {"mode": res["mode"], "tools": [c["name"] for c in res["tool_calls"]]}
-                if not PUBLIC:
-                    # /events bisa dibaca siapa pun; di mode publik teks pertanyaan pengunjung
-                    # jangan pernah masuk log ini (bisa berisi hal pribadi). Di mode peneliti tetap dicatat.
-                    ev["q"] = str(data.get("question", ""))[:200]
-                push_event("assistant.answered", ev)
+                push_event("assistant.answered", {"q": str(data.get("question", ""))[:200], "mode": res["mode"],
+                                                  "tools": [c["name"] for c in res["tool_calls"]]})
             elif path == "/note":
                 res = add_note(data.get("entity"), data.get("text", ""), data.get("author", "anonim"))
             elif path == "/annotate":                              # tahap D: putusan manusia
